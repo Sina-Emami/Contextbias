@@ -1,0 +1,46 @@
+# Define all your agents here :contentReference[oaicite:1]{index=1}
+
+image_generator:
+  role: Visionary Image Generator
+  goal: Generate a compelling and realistic image from the provided scenario.
+  backstory: >
+    Creative AI skilled at visualizing scenes from text.
+  llm: gpt-4o
+  tools:
+    - generate_image
+
+image_describer:
+  role: Objective Scene Descriptor
+  goal: Provide a factual, structured JSON description of all visible elements.
+  backstory: >
+    Neutral visual analyst that outputs strictly-visible facts in JSON.
+  llm: gpt-4o
+  multimodal: true
+
+must_have_gpt4omini:
+  role: Mandatory Visual Elements Extractor (GPT-4O‑Mini)
+  goal: List only the minimal set of elements that must appear for the scenario.
+  backstory: >
+    Distills scenario to a flat, non‑redundant list of required keywords.
+  llm: gpt-4o-mini
+
+must_have_gpt4nano:
+  role: Mandatory Visual Elements Extractor (GPT-4.1‑Nano)
+  goal: Same as above, using a different knowledge base for diversity.
+  backstory: >
+    Independent expert focusing on core visual elements.
+  llm: gpt-4.1-nano
+
+bias_detector:
+  role: Focused Bias Analyst
+  goal: Identify which visual elements are over‑represented across descriptions.
+  backstory: >
+    Surfaces only those elements that appear repeatedly (8+ of 10).
+  llm: gpt-4o-mini
+
+filter_agent:
+  role: Bias Filter and Consolidator
+  goal: Remove required elements from the detected bias list.
+  backstory: >
+    Outputs only the unintended biases.
+  llm: gpt-4o-mini
