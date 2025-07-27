@@ -1,0 +1,62 @@
+# Map step: generate 10 images & describe each :contentReference[oaicite:2]{index=2}
+
+generate_image_task:
+  description: |
+    Generate an image for the following scenario:
+    {prompt}
+    Return **only** a JSON object: { "url": "<public‑url>" }.
+  expected_output: A JSON object with a single `url` field.
+  agent: image_generator
+  output_json: URLModel
+
+describe_image_task:
+  description: |
+    You will receive an image URL. Output **only** a JSON object matching
+    the ImageDescription schema.
+    Image URL: {image_url}
+  expected_output: A valid ImageDescription JSON.
+  agent: image_describer
+  outputs:
+    image_url: generate_image_task
+  output_json: ImageDescription
+
+must_have_gpt4omini_task:
+  description: |
+    For scenario {prompt}, return **only** a JSON object:
+    { "elements": ["..."] }
+  expected_output: A JSON object with `elements` array.
+  agent: must_have_gpt4omini
+  output_json: MustHaveModel
+
+must_have_gpt4nano_task:
+  description: |
+    For scenario {prompt}, return **only** a JSON object:
+    { "elements": ["..."] }
+  expected_output: A JSON object with `elements` array.
+  agent: must_have_gpt4nano
+  output_json: MustHaveModel
+
+bias_analysis_task:
+  description: |
+    Given `descriptions` (10 JSON objects), count element frequency.
+    Return **only** a JSON object:
+    { "biased_elements": ["..."] }
+    Include those in ≥8 descriptions.
+  expected_output: A JSON object with `biased_elements` array.
+  agent: bias_detector
+  output_json: BiasOnlyModel
+
+filter_task:
+  description: |
+    You will receive:
+      - `bias_report`: {bias_report}
+      - `must_have`: {must_have}
+    Return **only** a JSON object:
+    { "clean_biases": ["..."] }
+    Remove any `must_have` items from `bias_report.biased_elements`.
+  expected_output: A JSON object with `clean_biases` array.
+  agent: filter_agent
+  outputs:
+    bias_report: bias_analysis_task
+    must_have: [must_have_gpt4omini_task, must_have_gpt4nano_task]
+  output_json: CleanBiasModel
