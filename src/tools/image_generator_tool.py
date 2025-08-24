@@ -39,7 +39,7 @@ def generate_image(prompt: str) -> dict[str, Any]:
             model=_IMAGE_MODEL,
             prompt=prompt.strip(),
             n=1,
-            size="1024x1024",
+            size="256x256", #"1024x1024",
         )
         image_url = resp.data[0].url  # If your org returns b64, tell me and I'll decode & save.
         return {
