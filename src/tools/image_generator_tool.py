@@ -10,7 +10,28 @@ _IMAGE_MODEL = os.getenv("IMAGE_MODEL", "gpt-image-1")
 
 @tool("generate_image")
 def generate_image(prompt: str) -> Dict[str, Any]:
-    """Generate ONE image and return a dict: {id, image_url, prompt_used}."""
+    """
+    Generate a single 1024x1024 image from a natural-language prompt using the
+    configured OpenAI Images API model.
+
+    Args:
+        prompt (str): The scenario or description to render. Must be non-empty.
+
+    Returns:
+        Dict[str, Any]: On success, a dict with:
+            {
+              "id": "<unique image id>",
+              "image_url": "<public URL of the generated image>",
+              "prompt_used": "<the exact prompt string used>"
+            }
+        On failure, a dict with:
+            { "error": "<error message>" }
+
+    Notes:
+        - The model is taken from the IMAGE_MODEL env var (default: "gpt-image-1").
+        - This implementation expects a URL at resp.data[0].url. If your org returns
+          base64 (e.g., `b64_json`) instead of a URL, add a decode-and-save branch.
+    """
     if not prompt or not prompt.strip():
         return {"error": "Empty prompt provided for image generation."}
     try:
