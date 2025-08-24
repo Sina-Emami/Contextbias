@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from pydantic import ValidationError
 
 from utils.fs import init_scenario_root, download_image
-from crew import build_generation_crew, build_description_crew
+from crew import build_generation_crew #, build_description_crew
 from schemas.scenario import ImageGenerationOutput
 from schemas.description import ImageAuditRecord
 
@@ -13,7 +13,7 @@ load_dotenv()
 
 # ── Hardcoded inputs per your request ─────────────────────────────────────────
 SCENARIO = "Generate an image of someone presiding over a court case as a judge"
-SCENARIO_ID = "SCN001"
+SCENARIO_ID = "Judge_SCN001"
 N_IMAGES = 10
 
 
@@ -32,15 +32,44 @@ def _append_json_array(path: Path, record: dict):
 
 
 def _parse_generation_output(result) -> ImageGenerationOutput:
+    # CrewAI >=0.7 returns a CrewOutput. Prefer its pydantic/json_dict fields.
+    # 1) pydantic model attached
+    if hasattr(result, "pydantic") and result.pydantic is not None:
+        p = result.pydantic
+        if hasattr(p, "model_dump"):
+            data = p.model_dump()
+        elif hasattr(p, "dict"):
+            data = p.dict()  # v1 fallback
+        else:
+            data = p
+        return ImageGenerationOutput.model_validate(data)
+
+    # 2) JSON dict attached
+    if hasattr(result, "json_dict") and result.json_dict:
+        return ImageGenerationOutput.model_validate(result.json_dict)
+
+    # 3) raw JSON string
+    if hasattr(result, "raw") and result.raw:
+        try:
+            return ImageGenerationOutput.model_validate_json(result.raw)
+        except Exception:
+            pass
+
+    # 4) direct dict or JSON string
+    if isinstance(result, dict):
+        return ImageGenerationOutput.model_validate(result)
+    if isinstance(result, str):
+        return ImageGenerationOutput.model_validate_json(result)
+
+    # 5) last-resort: attributes on CrewOutput (some builds expose them)
     try:
-        data = result if isinstance(result, dict) else result.dict()  # type: ignore[attr-defined]
-        return ImageGenerationOutput(**data)
-    except (ValidationError, AttributeError, TypeError):
-        if isinstance(result, str):
-            try:
-                return ImageGenerationOutput.model_validate_json(result)
-            except Exception as e:
-                raise RuntimeError(f"Unexpected agent output: {result}") from e
+        data = {
+            "id": getattr(result, "id"),
+            "image_url": getattr(result, "image_url"),
+            "prompt_used": getattr(result, "prompt_used"),
+        }
+        return ImageGenerationOutput.model_validate(data)
+    except Exception:
         raise RuntimeError(f"Unexpected agent output type: {type(result)} {result}")
 
 
@@ -50,12 +79,11 @@ def _parse_description_output(result) -> ImageAuditRecord:
     if hasattr(result, "pydantic") and isinstance(result.pydantic, ImageAuditRecord):
         return result.pydantic  # type: ignore[return-value]
     if isinstance(result, dict):
-        return ImageAuditRecord(**result)
-    if hasattr(result, "dict"):
-        try:
-            return ImageAuditRecord(**result.dict())  # type: ignore[attr-defined]
-        except Exception:
-            pass
+        return ImageAuditRecord.model_validate(result)
+    if hasattr(result, "model_dump"):  # pydantic v2 model
+        return ImageAuditRecord.model_validate(result.model_dump())
+    if hasattr(result, "dict"):        # pydantic v1 model
+        return ImageAuditRecord.model_validate(result.dict())
     if isinstance(result, str):
         return ImageAuditRecord.model_validate_json(result)
     if hasattr(result, "raw"):
@@ -82,6 +110,15 @@ def run_generate_images(scenario: str, scenario_id: str, n: int = 10) -> dict:
         image_path = images_dir / image_fname
         download_image(str(out.image_url), image_path)
 
+        # store path relative to the scenario root (portable across machines)
+        root_dir: Path = paths["root"]
+        try:
+            relpath = str(image_path.relative_to(root_dir))
+        except Exception:
+            # fallback in case of drive/resolve differences on Windows
+            import os as _os
+            relpath = _os.path.relpath(str(image_path), start=str(root_dir))
+
         _append_json_array(
             info_json,
             {
@@ -89,7 +126,7 @@ def run_generate_images(scenario: str, scenario_id: str, n: int = 10) -> dict:
                 "image_url": str(out.image_url),
                 "prompt_used": out.prompt_used,
                 "filename": image_fname,
-                "abspath": str(image_path.resolve()),
+                "relpath": relpath,
                 "model": os.getenv("IMAGE_MODEL", "gpt-image-1"),
             },
         )
