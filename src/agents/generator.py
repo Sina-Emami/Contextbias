@@ -1,6 +1,6 @@
 import os
 from crewai import Agent
-from ..tools.image_generator_tool import generate_image
+from tools.image_generator_tool import generate_image
 
 
 def build_image_generator_agent() -> Agent:

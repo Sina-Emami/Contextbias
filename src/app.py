@@ -4,10 +4,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 from pydantic import ValidationError
 
-from .utils.fs import init_scenario_root, download_image
-from .crew import build_generation_crew, build_description_crew
-from .schemas.scenario import ImageGenerationOutput
-from .schemas.description import ImageAuditRecord
+from utils.fs import init_scenario_root, download_image
+from crew import build_generation_crew, build_description_crew
+from schemas.scenario import ImageGenerationOutput
+from schemas.description import ImageAuditRecord
 
 load_dotenv()
 
@@ -71,10 +71,10 @@ def run_generate_images(scenario: str, scenario_id: str, n: int = 10) -> dict:
     images_dir: Path = paths["images"]
     info_json: Path = paths["images_info_path"]
 
-    crew = build_generation_crew()
-
+    
     for i in range(n):
         print(f"[Step 1] Generating image {i+1}/{n}…")
+        crew = build_generation_crew()
         result = crew.kickoff(inputs={"prompt": scenario})
         out = _parse_generation_output(result)
 
@@ -141,4 +141,4 @@ def run_describe_images(paths: dict) -> None:
 
 if __name__ == "__main__":
     paths = run_generate_images(SCENARIO, SCENARIO_ID, n=N_IMAGES)
-    run_describe_images(paths)
+    # run_describe_images(paths)
