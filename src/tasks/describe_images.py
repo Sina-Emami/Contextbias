@@ -30,7 +30,7 @@ ENUM & FIELD COMPLIANCE
     position_horizontal, position_depth, BoolUnknown, Presence, ColorBasic.
 • Never pass through raw phrases (e.g., number ranges, color shades, colloquialisms).
   Map to the nearest enum; otherwise 'unknown' (or 'ambiguous' for race_ethnicity_label).
-• Skin tone: prefer mst_skin_tone (1..10) when possible; also set the coarse skin_tone_label. If unsure, leave mst_skin_tone unset and use 'unknown' for the label.
+• Skin tone: "very_light","light","medium","tan","brown","dark", and "very_dark" when possible; also set the coarse skin_tone_label. If unsure, leave mst_skin_tone unset and use 'unknown' for the label.
 • Colors: map any shade/synonym to the ColorBasic enum. Unmappable → 'unknown'.
 
 -------------------------------
