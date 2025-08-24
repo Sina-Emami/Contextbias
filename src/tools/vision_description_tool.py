@@ -6,15 +6,16 @@ from schemas.description import file_to_data_url
 
 _client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 _VISION_MODEL = os.getenv("VISION_CHAT_MODEL", "gpt-5-mini")
+#todo add right handed left handed to prompt, some how try to force the model to pick race or religion if there are obvious evidence 
 
 PROMPT = """
 You are a meticulous visual describer. Analyze the image and produce a comprehensive, neutral description. Describe ONLY what is clearly visible. Do NOT guess or infer hidden context, identities, or beliefs. If something is unclear or not in frame, say “unknown” or “not visible”.
 
 Global rules (read carefully):
 - Exhaustive scan: perform a left–center–right × foreground–midground–background sweep before writing. Include small/background items if they are recognizable. If an item is too small to identify, label it generically (e.g., “small unknown object”) with visible attributes (color/material/shape) and its position.
-- Every noun is a multi-word noun phrase with at least one modifier (e.g., “red wooden mug”, “blue-and-white striped flag”, “dark metal railing”). Avoid single-word nouns.
+- Every noun is a multi-word noun phrase with at least one modifier (e.g., “red wooden mug”, “silver laptop”, “dark metal railing”). Avoid single-word nouns.
 - If a modifier is unknown, mark it explicitly (e.g., “unknown-color ceramic mug”, “partially-occluded black jacket”).
-- Do NOT identify real people or assign race/ethnicity/religion. Report only visible evidence (e.g., “light/medium/dark skin tone”, “silver cross pendant”, “black clerical collar”, “patterned headscarf”). Transcribe any legible text/signage verbatim with case preserved.
+- Do NOT identify real people. Report only visible evidence (e.g., “light/medium/dark skin tone”, “silver cross pendant”, “black clerical collar”, “patterned headscarf”). Transcribe any legible text/signage verbatim with case preserved.
 - No speculation. Use “unknown”, “not visible”, “partially occluded”, or approximate counts (e.g., “≈12”) when appropriate.
 
 Structure your output under these headings:
