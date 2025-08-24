@@ -1,7 +1,7 @@
 
 import os
 from crewai import Agent
-from ..tools.vision_description_tool import (
+from tools.vision_description_tool import (
     describe_image_from_file_tool,
     describe_image_from_url_tool,
 )
