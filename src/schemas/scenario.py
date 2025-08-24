@@ -11,7 +11,7 @@ class ImageGenerationOutput(BaseModel):
 class ImageMeta(BaseModel):
     image_id: str
     filename: str
-    abspath: str
+    relpath: str
     prompt_used: str
     model: Optional[str] = None
     seed: Optional[int] = None
