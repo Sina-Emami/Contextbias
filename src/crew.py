@@ -5,6 +5,10 @@ from agents.describer import build_image_describer_agent
 from tasks.describe_images import build_describe_image_task
 from agents.analyzer import build_bias_ingestor_agent, build_bias_reasoner_agent
 from tasks.analyze_bias import make_ingest_tasks, build_reason_over_summary_task
+from agents.question_writer import build_question_writer_agent
+from tasks.write_questions import build_write_questions_task
+from agents.researcher import build_fact_checker_agent
+from tasks.fact_check import build_fact_check_task
 
 def build_generation_crew() -> Crew:
     agent = build_image_generator_agent()
@@ -35,4 +39,14 @@ def build_bias_ingest_crew(description_files, state_path, out_path) -> Crew:
 def build_bias_reasoning_crew() -> Crew:
     agent = build_bias_reasoner_agent()
     task = build_reason_over_summary_task(agent)
+    return Crew(agents=[agent], tasks=[task], process=Process.sequential, verbose=True)
+
+def build_question_writer_crew():
+    agent = build_question_writer_agent()
+    task = build_write_questions_task(agent)
+    return Crew(agents=[agent], tasks=[task], process=Process.sequential, verbose=True)
+
+def build_fact_checker_crew() -> Crew:
+    agent = build_fact_checker_agent()
+    task = build_fact_check_task(agent)
     return Crew(agents=[agent], tasks=[task], process=Process.sequential, verbose=True)
