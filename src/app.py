@@ -2,14 +2,17 @@ import os
 import json
 from pathlib import Path
 from dotenv import load_dotenv
-from pydantic import ValidationError
 
 from utils.fs import init_scenario_root, download_image
 from crew import build_generation_crew, build_description_crew, build_question_writer_crew, build_fact_checker_crew, build_bias_ingest_crew, build_bias_reasoning_crew
+from agents.consensus import replicate_models
 from schemas.scenario import ImageGenerationOutput
 from schemas.description import ImageAuditRecord
 from schemas.bias import BiasReport
 from schemas.questions import QuestionSet, CheckQuestion, FactResult
+from schemas.consensus import ConsensusOutput
+from agents.consensus import replicate_models
+from crew import build_consensus_crew
 
 load_dotenv()
 
@@ -376,10 +379,51 @@ def run_fact_check(paths: dict, questions: list) -> list[FactResult]:
     print(f"🔎 Fact results -> {facts_path}")
     return results
 
+def _parse_consensus_output(result) -> ConsensusOutput:
+    # Prefer pydantic, then json_dict, then raw
+    if hasattr(result, "pydantic") and result.pydantic is not None:
+        p = result.pydantic
+        try:
+            return ConsensusOutput.model_validate(p.model_dump())
+        except Exception:
+            return ConsensusOutput.model_validate(p.dict())
+    if hasattr(result, "json_dict") and result.json_dict:
+        return ConsensusOutput.model_validate(result.json_dict)
+    if hasattr(result, "raw") and result.raw:
+        return ConsensusOutput.model_validate_json(result.raw)
+    if isinstance(result, dict):
+        return ConsensusOutput.model_validate(result)
+    if isinstance(result, str):
+        return ConsensusOutput.model_validate_json(result)
+    raise RuntimeError(f"Unexpected consensus output type: {type(result)} {result}")
+
+def run_consensus(paths: dict, scenario_text: str | None = None) -> None:
+    """Step 5 — get consensus from 5 LLMs and save JSON with real model names."""
+    consensus_dir: Path = paths["consensus"]
+    consensus_dir.mkdir(parents=True, exist_ok=True)
+
+    if scenario_text is None:
+        manifest = json.loads(paths["manifest_path"].read_text(encoding="utf-8"))
+        scenario_text = manifest.get("scenario", "")
+
+    crew = build_consensus_crew()
+    # Pass both prompt and the ordered model names so the consensus task can write model_name correctly
+    result = crew.kickoff(inputs={
+        "prompt": scenario_text,
+        "model_names": json.dumps(replicate_models, ensure_ascii=False)
+    })
+
+    out = _parse_consensus_output(result)
+    out_path = consensus_dir / "consensus_output.json"
+    out_path.write_text(json.dumps(out.model_dump(), indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"🤝 Consensus saved -> {out_path}")
+
+
 if __name__ == "__main__":
     paths = run_generate_images(SCENARIO, SCENARIO_ID, n=N_IMAGES)
-    # paths = {'root': "WindowsPath('data/scenarios/Judge_SCN001')", 'images': "WindowsPath('data/scenarios/Judge_SCN001/images')", 'descriptions': "WindowsPath('data/scenarios/Judge_SCN001/descriptions')", 'questions': "WindowsPath('data/scenarios/Judge_SCN001/questions')", 'biases': "WindowsPath('data/scenarios/Judge_SCN001/biases')", 'manifest_path': "WindowsPath('data/scenarios/Judge_SCN001/manifest.json')", 'images_info_path': "WindowsPath('data/scenarios/Judge_SCN001/images/images_info.json')"}
-    # run_describe_images(paths)
-    # run_analyze_bias(paths)
+    paths = {'root': "WindowsPath('data/scenarios/Judge_SCN001')", 'images': "WindowsPath('data/scenarios/Judge_SCN001/images')", 'descriptions': "WindowsPath('data/scenarios/Judge_SCN001/descriptions')", 'questions': "WindowsPath('data/scenarios/Judge_SCN001/questions')", 'biases': "WindowsPath('data/scenarios/Judge_SCN001/biases')", 'manifest_path': "WindowsPath('data/scenarios/Judge_SCN001/manifest.json')", 'images_info_path': "WindowsPath('data/scenarios/Judge_SCN001/images/images_info.json')"}
+    run_describe_images(paths)
+    run_analyze_bias(paths)
     qs = run_generate_questions(paths)
     run_fact_check(paths, qs)
+    run_consensus(paths)
