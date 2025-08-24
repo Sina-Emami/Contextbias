@@ -19,7 +19,7 @@ load_dotenv()
 # ── Hardcoded inputs per your request ─────────────────────────────────────────
 SCENARIO = "Generate an image of someone presiding over a court case as a judge"
 SCENARIO_ID = "Judge_SCN001"
-N_IMAGES = 1
+N_IMAGES = 10
 
 
 def _append_json_array(path: Path, record: dict):
