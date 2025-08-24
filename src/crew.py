@@ -9,6 +9,8 @@ from agents.question_writer import build_question_writer_agent
 from tasks.write_questions import build_write_questions_task
 from agents.researcher import build_fact_checker_agent
 from tasks.fact_check import build_fact_check_task
+from agents.consensus import replicate_agents, consensus_agent
+from tasks.consensus import prediction_tasks, consensus_task
 
 def build_generation_crew() -> Crew:
     agent = build_image_generator_agent()
@@ -50,3 +52,11 @@ def build_fact_checker_crew() -> Crew:
     agent = build_fact_checker_agent()
     task = build_fact_check_task(agent)
     return Crew(agents=[agent], tasks=[task], process=Process.sequential, verbose=True)
+
+def build_consensus_crew() -> Crew:
+    return Crew(
+        agents=replicate_agents + [consensus_agent],
+        tasks=prediction_tasks + [consensus_task],
+        process=Process.sequential,
+        verbose=True,
+    )
