@@ -1,5 +1,5 @@
 from crewai import Task
-from ..schemas.scenario import ImageGenerationOutput
+from schemas.scenario import ImageGenerationOutput
 
 
 def build_generate_image_task(agent) -> Task:

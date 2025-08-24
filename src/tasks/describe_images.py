@@ -1,5 +1,5 @@
 from crewai import Task
-from ..schemas.description import ImageAuditRecord
+from schemas.description import ImageAuditRecord
 
 # Prompt removed by request — paste your locked guide here
 STRUCTURING_GUIDE = """

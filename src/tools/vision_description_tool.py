@@ -2,7 +2,7 @@ import os
 from typing import Optional
 from openai import OpenAI
 from crewai_tools import tool
-from ..schemas.description import file_to_data_url
+from schemas.description import file_to_data_url
 
 _client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 _VISION_MODEL = os.getenv("VISION_CHAT_MODEL", "gpt-5-mini")
