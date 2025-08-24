@@ -5,7 +5,7 @@ from crewai.tools import tool
 from openai import OpenAI
 
 _client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-_IMAGE_MODEL = os.getenv("IMAGE_MODEL", "dall-e-2")
+_IMAGE_MODEL = os.getenv("IMAGE_MODEL", "dall-e-3")
 
 
 @tool("generate_image")
@@ -36,7 +36,7 @@ def generate_image(prompt: str) -> dict[str, Any]:
         return {"error": "Empty prompt provided for image generation."}
     try:
         resp = _client.images.generate(
-            model="dall-e-2", #_IMAGE_MODEL,
+            model=_IMAGE_MODEL,
             prompt=prompt.strip(),
             n=1,
             size="1024x1024",
