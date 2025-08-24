@@ -1,7 +1,7 @@
 import os
 import uuid
 from typing import Dict, Any
-from crewai_tools import tool
+from crewai.tools import tool
 from openai import OpenAI
 
 _client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
