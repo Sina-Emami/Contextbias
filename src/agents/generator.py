@@ -4,7 +4,7 @@ from tools.image_generator_tool import generate_image
 
 
 def build_image_generator_agent() -> Agent:
-    agent_llm = os.getenv("AGENT_LLM", "gpt-4o-mini")
+    # agent_llm = os.getenv("AGENT_LLM", "gpt-4o-mini")
     return Agent(
         role="Visionary Image Generator",
         goal=(
@@ -13,7 +13,7 @@ def build_image_generator_agent() -> Agent:
         backstory=(
             "Creative AI skilled at visualizing scenes from text. Always use the tool generate_image for image generation."
         ),
-        llm=agent_llm,
+        llm= None, # agent_llm,
         tools=[generate_image],
         verbose=True,
         allow_delegation=False,
