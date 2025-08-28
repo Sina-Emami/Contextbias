@@ -193,3 +193,4 @@ run_consensus(paths)                                          # Step 5 (Replicat
 - I should add metric regarding hallucination rate for the time it is doing the research.
 - Not able to detect the right and left correctly by VLM.
 - Need to make sure about the output of each LLM for the Consensus step, might be a problem with Replicate package and agent hallucinating the output of the merge Consensus.
+- Work more on the categorising the thing in the image for evaluation (src/tool/vision_description_tool.py)
