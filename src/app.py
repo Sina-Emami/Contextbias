@@ -95,16 +95,21 @@ def _parse_description_output(result) -> ImageAuditRecord:
         return ImageAuditRecord.model_validate_json(result.raw)  # type: ignore[attr-defined]
     raise RuntimeError(f"Unexpected description output type: {type(result)} {result}")
 
-
-def run_generate_images(scenario: str, scenario_id: str, n: int = 10) -> dict:
+def setup_scenario(scenario: str, scenario_id: str) -> dict:
+    """Create the scenario root, subfolders, and manifest. Return the paths dict."""
     if not os.getenv("OPENAI_API_KEY"):
         raise RuntimeError("OPENAI_API_KEY is not set. Put it in your environment or .env file.")
-
     paths = init_scenario_root(scenario_id, scenario)
+    print(f"[Init] Scenario folders ready at: {paths['root']}")
+    return paths
+
+
+def generate_images(paths: dict, scenario: str, n: int = 10) -> dict:
+    """Generate n images into an existing scenario (uses provided paths)."""
     images_dir: Path = paths["images"]
     info_json: Path = paths["images_info_path"]
+    root_dir: Path = paths["root"]
 
-    
     for i in range(n):
         print(f"[Step 1] Generating image {i+1}/{n}…")
         crew = build_generation_crew()
@@ -116,11 +121,9 @@ def run_generate_images(scenario: str, scenario_id: str, n: int = 10) -> dict:
         download_image(str(out.image_url), image_path)
 
         # store path relative to the scenario root (portable across machines)
-        root_dir: Path = paths["root"]
         try:
             relpath = str(image_path.relative_to(root_dir))
         except Exception:
-            # fallback in case of drive/resolve differences on Windows
             import os as _os
             relpath = _os.path.relpath(str(image_path), start=str(root_dir))
 
@@ -135,7 +138,7 @@ def run_generate_images(scenario: str, scenario_id: str, n: int = 10) -> dict:
                 "model": os.getenv("IMAGE_MODEL", "gpt-image-1"),
             },
         )
-        print(f"✅ Saved image {out.id} -> {image_path} URL: {out.image_url}")
+        print(f"✅ Saved image {out.id} -> {image_path}  URL: {out.image_url}")
 
     print(f"[Step 1] Done. Images + metadata saved under: {paths['root']}")
     return paths
@@ -420,8 +423,8 @@ def run_consensus(paths: dict, scenario_text: str | None = None) -> None:
 
 
 if __name__ == "__main__":
-    paths = run_generate_images(SCENARIO, SCENARIO_ID, n=N_IMAGES)
-    paths = {'root': "WindowsPath('data/scenarios/Judge_SCN001')", 'images': "WindowsPath('data/scenarios/Judge_SCN001/images')", 'descriptions': "WindowsPath('data/scenarios/Judge_SCN001/descriptions')", 'questions': "WindowsPath('data/scenarios/Judge_SCN001/questions')", 'biases': "WindowsPath('data/scenarios/Judge_SCN001/biases')", 'manifest_path': "WindowsPath('data/scenarios/Judge_SCN001/manifest.json')", 'images_info_path': "WindowsPath('data/scenarios/Judge_SCN001/images/images_info.json')"}
+    paths = setup_scenario(SCENARIO, SCENARIO_ID)
+    generate_images(paths, SCENARIO, n=N_IMAGES)
     run_describe_images(paths)
     run_analyze_bias(paths)
     qs = run_generate_questions(paths)
