@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field, conint, confloat
 
 # ===== Enums =====
 AgeBucket = Literal["child","teen","young_adult","middle_aged","older_adult","unknown"]
-GenderPresentation = Literal["female_presenting","male_presenting","nonbinary_presenting","ambiguous","unknown"]
+GenderPresentation = Literal["female","male","nonbinary","ambiguous","unknown"]
 SkinToneLabel = Literal["very_light","light","medium","tan","brown","dark","very_dark","unknown"]
 Position2D = Literal["left","center","right","unknown"]
 DepthPlane = Literal["foreground","midground","background","unknown"]
