@@ -1,0 +1,1240 @@
+{
+  "doctor": {
+    "ACTION": {
+      "related": [
+        {
+          "item": "examining patient",
+          "rationale": "core activity involving patient diagnosis"
+        },
+        {
+          "item": "writing prescription",
+          "rationale": "common medical task for treatment"
+        },
+        {
+          "item": "performing surgery",
+          "rationale": "surgical procedures typical for doctors"
+        },
+        {
+          "item": "consulting patient",
+          "rationale": "discussions to assess health conditions"
+        },
+        {
+          "item": "checking vital signs",
+          "rationale": "routine health monitoring"
+        },
+        {
+          "item": "reviewing medical charts",
+          "rationale": "analyzing patient data"
+        },
+        {
+          "item": "administering injection",
+          "rationale": "delivering immunizations or meds"
+        },
+        {
+          "item": "ordering lab tests",
+          "rationale": "requesting diagnostics"
+        },
+        {
+          "item": "using stethoscope",
+          "rationale": "listening to heart and lungs"
+        },
+        {
+          "item": "recording symptoms",
+          "rationale": "noting patient health details"
+        },
+        {
+          "item": "discussing treatment plan",
+          "rationale": "planning medical care"
+        },
+        {
+          "item": "performing ultrasound",
+          "rationale": "diagnostic imaging typical for doctors"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "painting canvas",
+          "rationale": "artistic activity unrelated to medicine"
+        },
+        {
+          "item": "playing guitar",
+          "rationale": "musical performance unrelated to role"
+        },
+        {
+          "item": "driving car",
+          "rationale": "transport activity not role-specific"
+        },
+        {
+          "item": "gardening",
+          "rationale": "hobby unrelated to medical duties"
+        },
+        {
+          "item": "cooking food",
+          "rationale": "culinary activity outside professional scope"
+        },
+        {
+          "item": "fixing bicycle",
+          "rationale": "repair work unrelated to healthcare"
+        },
+        {
+          "item": "writing code",
+          "rationale": "software development unrelated to role"
+        },
+        {
+          "item": "teaching classroom",
+          "rationale": "educational task not specific to doctors"
+        },
+        {
+          "item": "playing basketball",
+          "rationale": "sport activity unrelated to job"
+        },
+        {
+          "item": "making coffee",
+          "rationale": "food service unrelated to profession"
+        },
+        {
+          "item": "reading novel",
+          "rationale": "leisure reading unrelated to duties"
+        },
+        {
+          "item": "photographing wildlife",
+          "rationale": "hobby unrelated to medical work"
+        }
+      ]
+    },
+    "LOCATION": {
+      "related": [
+        {
+          "item": "hospital ward",
+          "rationale": "common site for doctors' work"
+        },
+        {
+          "item": "clinic room",
+          "rationale": "standard consultation location"
+        },
+        {
+          "item": "emergency room",
+          "rationale": "critical care environment"
+        },
+        {
+          "item": "operating theater",
+          "rationale": "surgical site within hospital"
+        },
+        {
+          "item": "medical laboratory",
+          "rationale": "diagnostic setting doctors visit"
+        },
+        {
+          "item": "pharmacy counter",
+          "rationale": "place for prescription handling"
+        },
+        {
+          "item": "patient room",
+          "rationale": "location for bedside care"
+        },
+        {
+          "item": "waiting area",
+          "rationale": "common hospital space"
+        },
+        {
+          "item": "radiology department",
+          "rationale": "diagnostic imaging location"
+        },
+        {
+          "item": "intensive care unit",
+          "rationale": "critical patient monitoring site"
+        },
+        {
+          "item": "healthcare conference",
+          "rationale": "professional meeting venue"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "beach",
+          "rationale": "outdoor leisure location unrelated to work"
+        },
+        {
+          "item": "mountain trail",
+          "rationale": "natural setting unrelated to medicine"
+        },
+        {
+          "item": "music concert",
+          "rationale": "entertainment venue unrelated to profession"
+        },
+        {
+          "item": "office cubicle",
+          "rationale": "business setting unrelated to clinical work"
+        },
+        {
+          "item": "supermarket",
+          "rationale": "retail environment unrelated to role"
+        },
+        {
+          "item": "construction site",
+          "rationale": "industrial setting outside medical fields"
+        },
+        {
+          "item": "school classroom",
+          "rationale": "educational space not typical for doctors"
+        },
+        {
+          "item": "restaurant",
+          "rationale": "food service location unrelated to work"
+        },
+        {
+          "item": "sports stadium",
+          "rationale": "athletic venue unrelated to profession"
+        },
+        {
+          "item": "art gallery",
+          "rationale": "cultural environment unrelated to role"
+        },
+        {
+          "item": "factory floor",
+          "rationale": "manufacturing setting outside medical scope"
+        }
+      ]
+    },
+    "SOCIAL": {
+      "related": [
+        {
+          "item": "patient interaction",
+          "rationale": "doctor engages with patients"
+        },
+        {
+          "item": "medical team collaboration",
+          "rationale": "working with colleagues"
+        },
+        {
+          "item": "consultation meeting",
+          "rationale": "discussing cases with peers"
+        },
+        {
+          "item": "patient family counseling",
+          "rationale": "communicating with relatives"
+        },
+        {
+          "item": "training medical students",
+          "rationale": "educational role of doctors"
+        },
+        {
+          "item": "nurse handoff",
+          "rationale": "coordinating care with nurses"
+        },
+        {
+          "item": "case presentation",
+          "rationale": "sharing patient info with team"
+        },
+        {
+          "item": "health seminar",
+          "rationale": "public education activity"
+        },
+        {
+          "item": "emergency response team",
+          "rationale": "collaborative urgent care"
+        },
+        {
+          "item": "ethical discussion",
+          "rationale": "professional decision making with others"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "concert audience",
+          "rationale": "spectating entertainment unrelated to role"
+        },
+        {
+          "item": "political rally",
+          "rationale": "public assembly unrelated to medical work"
+        },
+        {
+          "item": "sports team huddle",
+          "rationale": "athletic team meeting unrelated to profession"
+        },
+        {
+          "item": "party gathering",
+          "rationale": "social event unrelated to workplace"
+        },
+        {
+          "item": "family dinner",
+          "rationale": "private social activity unrelated to work"
+        },
+        {
+          "item": "classroom lecture",
+          "rationale": "educational setting unrelated to doctors' direct duties"
+        },
+        {
+          "item": "market bargaining",
+          "rationale": "commerce unrelated to healthcare"
+        },
+        {
+          "item": "street protest",
+          "rationale": "civic demonstration unrelated to profession"
+        },
+        {
+          "item": "dance performance",
+          "rationale": "artistic event outside role"
+        },
+        {
+          "item": "tourist group",
+          "rationale": "leisure activity unrelated to medical role"
+        }
+      ]
+    },
+    "ATTIRE_PROPS": {
+      "related": [
+        {
+          "item": "white lab coat",
+          "rationale": "standard doctor's apparel"
+        },
+        {
+          "item": "stethoscope",
+          "rationale": "essential diagnostic tool worn"
+        },
+        {
+          "item": "medical scrubs",
+          "rationale": "common clinical clothing"
+        },
+        {
+          "item": "ID badge",
+          "rationale": "identification worn at healthcare facilities"
+        },
+        {
+          "item": "surgical mask",
+          "rationale": "protective gear for sterile environments"
+        },
+        {
+          "item": "latex gloves",
+          "rationale": "infection control equipment"
+        },
+        {
+          "item": "clipboard",
+          "rationale": "used for recording patient information"
+        },
+        {
+          "item": "penlight",
+          "rationale": "tool for physical examinations"
+        },
+        {
+          "item": "face shield",
+          "rationale": "additional protective equipment"
+        },
+        {
+          "item": "surgical cap",
+          "rationale": "worn during operations"
+        },
+        {
+          "item": "medical chart",
+          "rationale": "paperwork carried for patient data"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "baseball cap",
+          "rationale": "casual headwear unrelated to medical role"
+        },
+        {
+          "item": "sunglasses",
+          "rationale": "accessory unrelated to professional attire"
+        },
+        {
+          "item": "tool belt",
+          "rationale": "construction equipment unrelated to doctors"
+        },
+        {
+          "item": "apron",
+          "rationale": "cooking garment unrelated to medical use"
+        },
+        {
+          "item": "sports jersey",
+          "rationale": "athletic wear outside professional context"
+        },
+        {
+          "item": "earrings",
+          "rationale": "personal jewelry unrelated to function"
+        },
+        {
+          "item": "suit and tie",
+          "rationale": "formal business clothing not typical for doctors"
+        },
+        {
+          "item": "backpack",
+          "rationale": "carrying item unrelated to medical work"
+        },
+        {
+          "item": "wet suit",
+          "rationale": "water sports gear unrelated to role"
+        },
+        {
+          "item": "gardening gloves",
+          "rationale": "tool use unrelated to healthcare"
+        },
+        {
+          "item": "ski goggles",
+          "rationale": "winter sports equipment unrelated to profession"
+        }
+      ]
+    }
+  },
+  "software engineer": {
+    "ACTION": {
+      "related": [
+        {
+          "item": "coding",
+          "rationale": "Writing computer programs is a core task"
+        },
+        {
+          "item": "debugging",
+          "rationale": "Fixing code errors is essential"
+        },
+        {
+          "item": "code reviewing",
+          "rationale": "Evaluating peers' code ensures quality"
+        },
+        {
+          "item": "pair programming",
+          "rationale": "Collaborative coding is common practice"
+        },
+        {
+          "item": "testing",
+          "rationale": "Verifying software functionality is necessary"
+        },
+        {
+          "item": "committing code",
+          "rationale": "Saving changes to version control is routine"
+        },
+        {
+          "item": "designing architecture",
+          "rationale": "Planning software structure is a key activity"
+        },
+        {
+          "item": "meeting",
+          "rationale": "Discussing projects with teams happens frequently"
+        },
+        {
+          "item": "documenting",
+          "rationale": "Writing documentation supports maintainability"
+        },
+        {
+          "item": "researching technologies",
+          "rationale": "Learning new tools is common"
+        },
+        {
+          "item": "debug logging",
+          "rationale": "Tracking software behavior helps troubleshoot"
+        },
+        {
+          "item": "deploying software",
+          "rationale": "Releasing code to production is part of the job"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "cooking",
+          "rationale": "Preparing food is unrelated to engineering"
+        },
+        {
+          "item": "gardening",
+          "rationale": "Plant care is unrelated to programming"
+        },
+        {
+          "item": "painting",
+          "rationale": "Creating physical art is orthogonal"
+        },
+        {
+          "item": "driving",
+          "rationale": "Operating vehicles is not typical work"
+        },
+        {
+          "item": "playing sports",
+          "rationale": "Physical athletic activities do not involve coding"
+        },
+        {
+          "item": "shopping",
+          "rationale": "Purchasing goods is unrelated to software tasks"
+        },
+        {
+          "item": "dancing",
+          "rationale": "Expressive movement is not work-related"
+        },
+        {
+          "item": "photography",
+          "rationale": "Taking pictures is a different skill"
+        },
+        {
+          "item": "woodworking",
+          "rationale": "Crafting wood objects differs from software engineering"
+        },
+        {
+          "item": "fishing",
+          "rationale": "Catching fish is unrelated to coding"
+        },
+        {
+          "item": "sculpting",
+          "rationale": "Shaping materials is not typical"
+        },
+        {
+          "item": "writing novels",
+          "rationale": "Creative writing is distinct from technical work"
+        }
+      ]
+    },
+    "LOCATION": {
+      "related": [
+        {
+          "item": "office cubicle",
+          "rationale": "Common workspace environment"
+        },
+        {
+          "item": "home desk",
+          "rationale": "Remote work spot typical for engineers"
+        },
+        {
+          "item": "conference room",
+          "rationale": "Meetings take place here"
+        },
+        {
+          "item": "tech hub",
+          "rationale": "Clustered tech offices are common"
+        },
+        {
+          "item": "co-working space",
+          "rationale": "Alternative workspace often used"
+        },
+        {
+          "item": "data center",
+          "rationale": "Relevant facility for software deployment"
+        },
+        {
+          "item": "startup office",
+          "rationale": "Typical environment for software engineers"
+        },
+        {
+          "item": "cafeteria",
+          "rationale": "Break area in office settings"
+        },
+        {
+          "item": "home office",
+          "rationale": "Dedicated remote work area"
+        },
+        {
+          "item": "library",
+          "rationale": "Quiet study place sometimes used"
+        },
+        {
+          "item": "server room",
+          "rationale": "Location relevant for software operation"
+        },
+        {
+          "item": "meeting room",
+          "rationale": "Space for team discussions"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "construction site",
+          "rationale": "Outdoor manual labor location"
+        },
+        {
+          "item": "beach",
+          "rationale": "Leisure area unrelated to software work"
+        },
+        {
+          "item": "farm",
+          "rationale": "Agricultural environment unrelated"
+        },
+        {
+          "item": "gym",
+          "rationale": "Exercise facility orthogonal to coding"
+        },
+        {
+          "item": "concert hall",
+          "rationale": "Entertainment venue unrelated"
+        },
+        {
+          "item": "hospital ward",
+          "rationale": "Medical environment distinct from office"
+        },
+        {
+          "item": "mountain trail",
+          "rationale": "Outdoor activity location unrelated"
+        },
+        {
+          "item": "restaurant kitchen",
+          "rationale": "Food prep area not typical workplace"
+        },
+        {
+          "item": "car repair shop",
+          "rationale": "Automotive service area unrelated"
+        },
+        {
+          "item": "art gallery",
+          "rationale": "Exhibition space unrelated to tech work"
+        },
+        {
+          "item": "urban street",
+          "rationale": "Public outdoor area distinct"
+        }
+      ]
+    },
+    "SOCIAL": {
+      "related": [
+        {
+          "item": "team meeting",
+          "rationale": "Collaborative gatherings common"
+        },
+        {
+          "item": "code review session",
+          "rationale": "Peer evaluation involves social interaction"
+        },
+        {
+          "item": "brainstorming",
+          "rationale": "Group idea generation is typical"
+        },
+        {
+          "item": "pair programming",
+          "rationale": "Two-person collaboration is frequent"
+        },
+        {
+          "item": "stand-up meeting",
+          "rationale": "Daily team status update"
+        },
+        {
+          "item": "tech talk",
+          "rationale": "Knowledge sharing among peers"
+        },
+        {
+          "item": "mentoring",
+          "rationale": "Guiding junior engineers is social"
+        },
+        {
+          "item": "lunch with colleagues",
+          "rationale": "Informal social bonding"
+        },
+        {
+          "item": "conference attendance",
+          "rationale": "Networking event for professionals"
+        },
+        {
+          "item": "hackathon",
+          "rationale": "Collaborative coding events"
+        },
+        {
+          "item": "pair debugging",
+          "rationale": "Working together on same problem"
+        },
+        {
+          "item": "team building",
+          "rationale": "Activities to improve cohesion"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "solo meditation",
+          "rationale": "Individual activity unrelated to team"
+        },
+        {
+          "item": "family dinner",
+          "rationale": "Personal, not work-related gathering"
+        },
+        {
+          "item": "concert audience",
+          "rationale": "Spectating unrelated social setting"
+        },
+        {
+          "item": "sports game jury",
+          "rationale": "Non-technical group unrelated to role"
+        },
+        {
+          "item": "birthday party",
+          "rationale": "Social event unrelated to software work"
+        },
+        {
+          "item": "book club",
+          "rationale": "Leisure reading group unrelated"
+        },
+        {
+          "item": "religious service",
+          "rationale": "Spiritual gathering not related to work"
+        },
+        {
+          "item": "childcare group",
+          "rationale": "Family oriented meeting unrelated"
+        },
+        {
+          "item": "yoga class",
+          "rationale": "Exercise group not connected to engineer role"
+        },
+        {
+          "item": "charity fundraiser",
+          "rationale": "Social event unrelated to daily tasks"
+        },
+        {
+          "item": "road trip",
+          "rationale": "Travel activity unrelated to professional work"
+        }
+      ]
+    },
+    "ATTIRE_PROPS": {
+      "related": [
+        {
+          "item": "laptop",
+          "rationale": "Primary tool carried and used"
+        },
+        {
+          "item": "notebook",
+          "rationale": "Used for taking notes during tasks"
+        },
+        {
+          "item": "headphones",
+          "rationale": "Common for focus or communication"
+        },
+        {
+          "item": "glasses",
+          "rationale": "Often worn for screen clarity"
+        },
+        {
+          "item": "hoodie",
+          "rationale": "Casual wearable common in tech environments"
+        },
+        {
+          "item": "backpack",
+          "rationale": "Used to carry work belongings"
+        },
+        {
+          "item": "smartwatch",
+          "rationale": "Wearable tech often used"
+        },
+        {
+          "item": "coffee mug",
+          "rationale": "Typical personal item at desk"
+        },
+        {
+          "item": "pen",
+          "rationale": "Common for note-taking"
+        },
+        {
+          "item": "mouse",
+          "rationale": "Input device used with computers"
+        },
+        {
+          "item": "water bottle",
+          "rationale": "Personal hydration item commonly present"
+        },
+        {
+          "item": "ID badge",
+          "rationale": "Workplace identification"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "hard hat",
+          "rationale": "Safety gear for physical labor, not typical"
+        },
+        {
+          "item": "chef apron",
+          "rationale": "Used in cooking, unrelated to engineering"
+        },
+        {
+          "item": "running shoes",
+          "rationale": "Sportswear unrelated to office attire"
+        },
+        {
+          "item": "paintbrush",
+          "rationale": "Tool for artists, orthogonal activity"
+        },
+        {
+          "item": "dumbbell",
+          "rationale": "Fitness equipment irrelevant to work"
+        },
+        {
+          "item": "toolbox",
+          "rationale": "Manual labor prop not typical for engineers"
+        },
+        {
+          "item": "camera",
+          "rationale": "Photography gear unrelated to coding"
+        },
+        {
+          "item": "musical instrument",
+          "rationale": "Not a work-related item"
+        },
+        {
+          "item": "ski goggles",
+          "rationale": "Sport accessory not related to role"
+        },
+        {
+          "item": "safety vest",
+          "rationale": "Construction attire not typical for software engineers"
+        },
+        {
+          "item": "helmet",
+          "rationale": "Protective headgear unrelated to role"
+        }
+      ]
+    }
+  },
+  "teacher": {
+    "ACTION": {
+      "related": [
+        {
+          "item": "grading assignments",
+          "rationale": "Common task of evaluating student work"
+        },
+        {
+          "item": "giving lectures",
+          "rationale": "Primary activity of imparting knowledge"
+        },
+        {
+          "item": "preparing lesson plans",
+          "rationale": "Typical preparation work for classes"
+        },
+        {
+          "item": "leading discussions",
+          "rationale": "Facilitating student engagement"
+        },
+        {
+          "item": "using a whiteboard",
+          "rationale": "Often used for illustrating concepts"
+        },
+        {
+          "item": "answering questions",
+          "rationale": "Interactions to clarify student doubts"
+        },
+        {
+          "item": "supervising exams",
+          "rationale": "Ensuring proper conduct during tests"
+        },
+        {
+          "item": "organizing materials",
+          "rationale": "Managing teaching aids and resources"
+        },
+        {
+          "item": "helping students",
+          "rationale": "Providing academic support"
+        },
+        {
+          "item": "taking attendance",
+          "rationale": "Routine administrative task"
+        },
+        {
+          "item": "assigning homework",
+          "rationale": "Giving out tasks to reinforce learning"
+        },
+        {
+          "item": "grading papers",
+          "rationale": "Reviewing and scoring student work"
+        },
+        {
+          "item": "collaborating with colleagues",
+          "rationale": "Planning and sharing teaching strategies"
+        },
+        {
+          "item": "using a projector",
+          "rationale": "Displaying visual aids during teaching"
+        },
+        {
+          "item": "participating in meetings",
+          "rationale": "Staff collaboration on school matters"
+        },
+        {
+          "item": "setting up classroom",
+          "rationale": "Organizing the physical learning environment"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "cooking meals",
+          "rationale": "Unrelated to educational activities"
+        },
+        {
+          "item": "repairing cars",
+          "rationale": "Automotive maintenance is unrelated"
+        },
+        {
+          "item": "flying airplanes",
+          "rationale": "Piloting is not associated with teaching"
+        },
+        {
+          "item": "gardening",
+          "rationale": "Typically unrelated to classroom roles"
+        },
+        {
+          "item": "painting portraits",
+          "rationale": "Creating art unrelated to teaching duties"
+        },
+        {
+          "item": "designing buildings",
+          "rationale": "Architectural work unrelated to teaching"
+        },
+        {
+          "item": "performing surgery",
+          "rationale": "Medical procedures unrelated to teaching"
+        },
+        {
+          "item": "playing sports",
+          "rationale": "Athletic activity is orthogonal"
+        },
+        {
+          "item": "driving taxis",
+          "rationale": "Transportation work unrelated to teaching"
+        },
+        {
+          "item": "filming movies",
+          "rationale": "Cinematography unrelated to teaching"
+        },
+        {
+          "item": "conducting scientific experiments",
+          "rationale": "Research work mostly separate from teaching"
+        },
+        {
+          "item": "writing novels",
+          "rationale": "Creative writing unrelated to classroom role"
+        },
+        {
+          "item": "selling products",
+          "rationale": "Sales roles unrelated to teaching"
+        },
+        {
+          "item": "hosting events",
+          "rationale": "Event management is distinct from teaching"
+        },
+        {
+          "item": "cleaning houses",
+          "rationale": "Janitorial work unrelated to education"
+        }
+      ]
+    },
+    "LOCATION": {
+      "related": [
+        {
+          "item": "classroom",
+          "rationale": "Primary teaching environment"
+        },
+        {
+          "item": "school library",
+          "rationale": "Common educational resource area"
+        },
+        {
+          "item": "faculty lounge",
+          "rationale": "Staff common area in schools"
+        },
+        {
+          "item": "computer lab",
+          "rationale": "Learning space with technology access"
+        },
+        {
+          "item": "school hallway",
+          "rationale": "Area within school premises"
+        },
+        {
+          "item": "assembly hall",
+          "rationale": "Gathering place for students and staff"
+        },
+        {
+          "item": "teacher's office",
+          "rationale": "Workspace within educational institution"
+        },
+        {
+          "item": "school auditorium",
+          "rationale": "Venue for presentations and lectures"
+        },
+        {
+          "item": "science lab",
+          "rationale": "Specialized teaching environment"
+        },
+        {
+          "item": "playground",
+          "rationale": "School outdoor area for breaks"
+        },
+        {
+          "item": "conference room",
+          "rationale": "Meeting place for staff discussions"
+        },
+        {
+          "item": "school corridor",
+          "rationale": "Passage inside school building"
+        },
+        {
+          "item": "parent-teacher meeting room",
+          "rationale": "Space for teacher-family interactions"
+        },
+        {
+          "item": "examination room",
+          "rationale": "Area designated for testing"
+        },
+        {
+          "item": "resource center",
+          "rationale": "Location with educational materials"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "beach",
+          "rationale": "Recreational outdoor location unrelated to teaching"
+        },
+        {
+          "item": "restaurant",
+          "rationale": "Food service venue distinct from school"
+        },
+        {
+          "item": "construction site",
+          "rationale": "Industrial location unrelated to teaching"
+        },
+        {
+          "item": "hospital",
+          "rationale": "Medical facility unrelated to teaching role"
+        },
+        {
+          "item": "airport terminal",
+          "rationale": "Transportation hub unrelated to education"
+        },
+        {
+          "item": "shopping mall",
+          "rationale": "Retail environment unrelated to schools"
+        },
+        {
+          "item": "mountain trail",
+          "rationale": "Outdoor recreational area unrelated"
+        },
+        {
+          "item": "movie theater",
+          "rationale": "Entertainment venue unrelated to education"
+        },
+        {
+          "item": "factory floor",
+          "rationale": "Industrial worksite unrelated to teaching"
+        },
+        {
+          "item": "sports stadium",
+          "rationale": "Athletic venue distinct from classroom"
+        },
+        {
+          "item": "hotel lobby",
+          "rationale": "Hospitality environment unrelated to schools"
+        },
+        {
+          "item": "farm field",
+          "rationale": "Agricultural setting unrelated to education"
+        },
+        {
+          "item": "police station",
+          "rationale": "Law enforcement environment unrelated"
+        }
+      ]
+    },
+    "SOCIAL": {
+      "related": [
+        {
+          "item": "students",
+          "rationale": "Primary group interacted with"
+        },
+        {
+          "item": "colleagues",
+          "rationale": "Fellow teachers and staff"
+        },
+        {
+          "item": "parents",
+          "rationale": "Family members involved with student's education"
+        },
+        {
+          "item": "administrators",
+          "rationale": "School management personnel"
+        },
+        {
+          "item": "teaching assistants",
+          "rationale": "Supportive classroom staff"
+        },
+        {
+          "item": "school counselors",
+          "rationale": "Provide student support alongside teachers"
+        },
+        {
+          "item": "library staff",
+          "rationale": "Support roles within education context"
+        },
+        {
+          "item": "student groups",
+          "rationale": "Clusters of learners interacting with teacher"
+        },
+        {
+          "item": "mentors",
+          "rationale": "Experienced educators guiding less experienced"
+        },
+        {
+          "item": "club advisors",
+          "rationale": "Teachers supporting student organizations"
+        },
+        {
+          "item": "school nurses",
+          "rationale": "Health professionals collaborating with teachers"
+        },
+        {
+          "item": "special education staff",
+          "rationale": "Support for students with special needs"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "customers",
+          "rationale": "Commercial clients unrelated to education"
+        },
+        {
+          "item": "patients",
+          "rationale": "Medical recipients unrelated to teaching"
+        },
+        {
+          "item": "audience members",
+          "rationale": "Spectators not typical to teaching role"
+        },
+        {
+          "item": "drivers",
+          "rationale": "Transportation professionals unrelated to classroom"
+        },
+        {
+          "item": "factory workers",
+          "rationale": "Industrial employees unrelated to teaching"
+        },
+        {
+          "item": "salespeople",
+          "rationale": "Commerce professionals unrelated to educators"
+        },
+        {
+          "item": "actors",
+          "rationale": "Entertainment professionals unrelated to school roles"
+        },
+        {
+          "item": "mechanics",
+          "rationale": "Technical repair workers unrelated to teaching"
+        },
+        {
+          "item": "tourists",
+          "rationale": "Visitors unrelated to academic settings"
+        },
+        {
+          "item": "chefs",
+          "rationale": "Culinary professionals unrelated to education"
+        },
+        {
+          "item": "journalists",
+          "rationale": "Media professionals distinct from teaching"
+        }
+      ]
+    },
+    "ATTIRE_PROPS": {
+      "related": [
+        {
+          "item": "glasses",
+          "rationale": "Common accessory for reading or vision"
+        },
+        {
+          "item": "clipboard",
+          "rationale": "Used for taking notes or tracking attendance"
+        },
+        {
+          "item": "marker pens",
+          "rationale": "Typical tools for whiteboard writing"
+        },
+        {
+          "item": "laptop",
+          "rationale": "Common device for teaching and grading"
+        },
+        {
+          "item": "notebook",
+          "rationale": "Used for lesson preparation or notes"
+        },
+        {
+          "item": "lanyard with ID badge",
+          "rationale": "Standard identification for school staff"
+        },
+        {
+          "item": "pen",
+          "rationale": "Basic writing tool for marking assignments"
+        },
+        {
+          "item": "book",
+          "rationale": "Essential educational material"
+        },
+        {
+          "item": "scarf",
+          "rationale": "Occasional attire piece"
+        },
+        {
+          "item": "watch",
+          "rationale": "Time management accessory"
+        },
+        {
+          "item": "sensible shoes",
+          "rationale": "Comfort footwear for long standing"
+        },
+        {
+          "item": "tablet",
+          "rationale": "Digital device for teaching aids"
+        },
+        {
+          "item": "coffee mug",
+          "rationale": "Common personal item used during work"
+        },
+        {
+          "item": "suit jacket",
+          "rationale": "Formal attire sometimes worn by teachers"
+        },
+        {
+          "item": "ankle socks",
+          "rationale": "Basic clothing accessory"
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "hiking boots",
+          "rationale": "Outdoor gear not typical for classrooms"
+        },
+        {
+          "item": "construction helmet",
+          "rationale": "Safety gear unrelated to teaching"
+        },
+        {
+          "item": "chef’s apron",
+          "rationale": "Cooking attire not worn by teachers"
+        },
+        {
+          "item": "sports jersey",
+          "rationale": "Athletic wear unrelated to educational role"
+        },
+        {
+          "item": "motorcycle gloves",
+          "rationale": "Riding gear unrelated to classroom"
+        },
+        {
+          "item": "swim goggles",
+          "rationale": "Swimming accessory not related to teaching"
+        },
+        {
+          "item": "sunglasses",
+          "rationale": "Outdoor sun protection unrelated to indoor role"
+        },
+        {
+          "item": "welding mask",
+          "rationale": "Industrial safety equipment unrelated to teaching"
+        },
+        {
+          "item": "ski jacket",
+          "rationale": "Specialized cold weather wear"
+        },
+        {
+          "item": "tool belt",
+          "rationale": "Used in manual trades, not teaching"
+        },
+        {
+          "item": "firefighter helmet",
+          "rationale": "Emergency service attire unrelated to education"
+        },
+        {
+          "item": "running shoes",
+          "rationale": "Athletic footwear not typical for teachers"
+        }
+      ]
+    }
+  }
+}

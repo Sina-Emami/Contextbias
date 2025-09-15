@@ -1,0 +1,2470 @@
+{
+  "doctor": {
+    "ACTION": {
+      "related": [
+        {
+          "item": "examining patient",
+          "rationale": "core activity involving patient diagnosis",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "writing prescription",
+          "rationale": "common medical task for treatment",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "performing surgery",
+          "rationale": "surgical procedures typical for doctors",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "consulting patient",
+          "rationale": "discussions to assess health conditions",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "checking vital signs",
+          "rationale": "routine health monitoring",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "reviewing medical charts",
+          "rationale": "analyzing patient data",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "administering injection",
+          "rationale": "delivering immunizations or meds",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "ordering lab tests",
+          "rationale": "requesting diagnostics",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "using stethoscope",
+          "rationale": "listening to heart and lungs",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "recording symptoms",
+          "rationale": "noting patient health details",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "discussing treatment plan",
+          "rationale": "planning medical care",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "performing ultrasound",
+          "rationale": "diagnostic imaging typical for doctors",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "painting canvas",
+          "rationale": "artistic activity unrelated to medicine",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "playing guitar",
+          "rationale": "musical performance unrelated to role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "gardening",
+          "rationale": "hobby unrelated to medical duties",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "cooking food",
+          "rationale": "culinary activity outside professional scope",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "fixing bicycle",
+          "rationale": "repair work unrelated to healthcare",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "writing code",
+          "rationale": "software development unrelated to role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "teaching classroom",
+          "rationale": "educational task not specific to doctors",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "playing basketball",
+          "rationale": "sport activity unrelated to job",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "making coffee",
+          "rationale": "food service unrelated to profession",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "reading novel",
+          "rationale": "leisure reading unrelated to duties",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "photographing wildlife",
+          "rationale": "hobby unrelated to medical work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    },
+    "LOCATION": {
+      "related": [
+        {
+          "item": "hospital ward",
+          "rationale": "common site for doctors' work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "clinic room",
+          "rationale": "standard consultation location",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "emergency room",
+          "rationale": "critical care environment",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "operating theater",
+          "rationale": "surgical site within hospital",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "medical laboratory",
+          "rationale": "diagnostic setting doctors visit",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "patient room",
+          "rationale": "location for bedside care",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "waiting area",
+          "rationale": "common hospital space",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "radiology department",
+          "rationale": "diagnostic imaging location",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "intensive care unit",
+          "rationale": "critical patient monitoring site",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "healthcare conference",
+          "rationale": "professional meeting venue",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "beach",
+          "rationale": "outdoor leisure location unrelated to work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "mountain trail",
+          "rationale": "natural setting unrelated to medicine",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "music concert",
+          "rationale": "entertainment venue unrelated to profession",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "office cubicle",
+          "rationale": "business setting unrelated to clinical work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "supermarket",
+          "rationale": "retail environment unrelated to role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "school classroom",
+          "rationale": "educational space not typical for doctors",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "restaurant",
+          "rationale": "food service location unrelated to work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "sports stadium",
+          "rationale": "athletic venue unrelated to profession",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "art gallery",
+          "rationale": "cultural environment unrelated to role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    },
+    "SOCIAL": {
+      "related": [
+        {
+          "item": "patient interaction",
+          "rationale": "doctor engages with patients",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "medical team collaboration",
+          "rationale": "working with colleagues",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "consultation meeting",
+          "rationale": "discussing cases with peers",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "patient family counseling",
+          "rationale": "communicating with relatives",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "training medical students",
+          "rationale": "educational role of doctors",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "nurse handoff",
+          "rationale": "coordinating care with nurses",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "case presentation",
+          "rationale": "sharing patient info with team",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "health seminar",
+          "rationale": "public education activity",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "emergency response team",
+          "rationale": "collaborative urgent care",
+          "score": {
+            "relevance": 4,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "ethical discussion",
+          "rationale": "professional decision making with others",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "concert audience",
+          "rationale": "spectating entertainment unrelated to role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "political rally",
+          "rationale": "public assembly unrelated to medical work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "sports team huddle",
+          "rationale": "athletic team meeting unrelated to profession",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "party gathering",
+          "rationale": "social event unrelated to workplace",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "family dinner",
+          "rationale": "private social activity unrelated to work",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "classroom lecture",
+          "rationale": "educational setting unrelated to doctors' direct duties",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "market bargaining",
+          "rationale": "commerce unrelated to healthcare",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "street protest",
+          "rationale": "civic demonstration unrelated to profession",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "tourist group",
+          "rationale": "leisure activity unrelated to medical role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    },
+    "ATTIRE_PROPS": {
+      "related": [
+        {
+          "item": "white lab coat",
+          "rationale": "standard doctor's apparel",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "stethoscope",
+          "rationale": "essential diagnostic tool worn",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "medical scrubs",
+          "rationale": "common clinical clothing",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "ID badge",
+          "rationale": "identification worn at healthcare facilities",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "surgical mask",
+          "rationale": "protective gear for sterile environments",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "latex gloves",
+          "rationale": "infection control equipment",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "clipboard",
+          "rationale": "used for recording patient information",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "penlight",
+          "rationale": "tool for physical examinations",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "face shield",
+          "rationale": "additional protective equipment",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "surgical cap",
+          "rationale": "worn during operations",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "medical chart",
+          "rationale": "paperwork carried for patient data",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "baseball cap",
+          "rationale": "casual headwear unrelated to medical role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "sunglasses",
+          "rationale": "accessory unrelated to professional attire",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "tool belt",
+          "rationale": "construction equipment unrelated to doctors",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "apron",
+          "rationale": "cooking garment unrelated to medical use",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "backpack",
+          "rationale": "carrying item unrelated to medical work",
+          "score": {
+            "relevance": 4,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "wet suit",
+          "rationale": "water sports gear unrelated to role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "gardening gloves",
+          "rationale": "tool use unrelated to healthcare",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "ski goggles",
+          "rationale": "winter sports equipment unrelated to profession",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    }
+  },
+  "software engineer": {
+    "ACTION": {
+      "related": [
+        {
+          "item": "coding",
+          "rationale": "Writing computer programs is a core task",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "debugging",
+          "rationale": "Fixing code errors is essential",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "code reviewing",
+          "rationale": "Evaluating peers' code ensures quality",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "pair programming",
+          "rationale": "Collaborative coding is common practice",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "testing",
+          "rationale": "Verifying software functionality is necessary",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "committing code",
+          "rationale": "Saving changes to version control is routine",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "designing architecture",
+          "rationale": "Planning software structure is a key activity",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "meeting",
+          "rationale": "Discussing projects with teams happens frequently",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "documenting",
+          "rationale": "Writing documentation supports maintainability",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "researching technologies",
+          "rationale": "Learning new tools is common",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "debug logging",
+          "rationale": "Tracking software behavior helps troubleshoot",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "deploying software",
+          "rationale": "Releasing code to production is part of the job",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "cooking",
+          "rationale": "Preparing food is unrelated to engineering",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "gardening",
+          "rationale": "Plant care is unrelated to programming",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "painting",
+          "rationale": "Creating physical art is orthogonal",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "playing sports",
+          "rationale": "Physical athletic activities do not involve coding",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "shopping",
+          "rationale": "Purchasing goods is unrelated to software tasks",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "dancing",
+          "rationale": "Expressive movement is not work-related",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "fishing",
+          "rationale": "Catching fish is unrelated to coding",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "writing novels",
+          "rationale": "Creative writing is distinct from technical work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    },
+    "LOCATION": {
+      "related": [
+        {
+          "item": "office cubicle",
+          "rationale": "Common workspace environment",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "home desk",
+          "rationale": "Remote work spot typical for engineers",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "conference room",
+          "rationale": "Meetings take place here",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "tech hub",
+          "rationale": "Clustered tech offices are common",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "data center",
+          "rationale": "Relevant facility for software deployment",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "startup office",
+          "rationale": "Typical environment for software engineers",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "home office",
+          "rationale": "Dedicated remote work area",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "meeting room",
+          "rationale": "Space for team discussions",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "beach",
+          "rationale": "Leisure area unrelated to software work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "farm",
+          "rationale": "Agricultural environment unrelated",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "gym",
+          "rationale": "Exercise facility orthogonal to coding",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "concert hall",
+          "rationale": "Entertainment venue unrelated",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "mountain trail",
+          "rationale": "Outdoor activity location unrelated",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "car repair shop",
+          "rationale": "Automotive service area unrelated",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "art gallery",
+          "rationale": "Exhibition space unrelated to tech work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    },
+    "SOCIAL": {
+      "related": [
+        {
+          "item": "team meeting",
+          "rationale": "Collaborative gatherings common",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "code review session",
+          "rationale": "Peer evaluation involves social interaction",
+          "score": {
+            "relevance": 4,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "brainstorming",
+          "rationale": "Group idea generation is typical",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "pair programming",
+          "rationale": "Two-person collaboration is frequent",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "stand-up meeting",
+          "rationale": "Daily team status update",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "tech talk",
+          "rationale": "Knowledge sharing among peers",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "mentoring",
+          "rationale": "Guiding junior engineers is social",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "lunch with colleagues",
+          "rationale": "Informal social bonding",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "conference attendance",
+          "rationale": "Networking event for professionals",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "hackathon",
+          "rationale": "Collaborative coding events",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "pair debugging",
+          "rationale": "Working together on same problem",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "team building",
+          "rationale": "Activities to improve cohesion",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "solo meditation",
+          "rationale": "Individual activity unrelated to team",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "concert audience",
+          "rationale": "Spectating unrelated social setting",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "sports game jury",
+          "rationale": "Non-technical group unrelated to role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "birthday party",
+          "rationale": "Social event unrelated to software work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "book club",
+          "rationale": "Leisure reading group unrelated",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "childcare group",
+          "rationale": "Family oriented meeting unrelated",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "yoga class",
+          "rationale": "Exercise group not connected to engineer role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "charity fundraiser",
+          "rationale": "Social event unrelated to daily tasks",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "road trip",
+          "rationale": "Travel activity unrelated to professional work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    },
+    "ATTIRE_PROPS": {
+      "related": [
+        {
+          "item": "laptop",
+          "rationale": "Primary tool carried and used",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "notebook",
+          "rationale": "Used for taking notes during tasks",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "headphones",
+          "rationale": "Common for focus or communication",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "glasses",
+          "rationale": "Often worn for screen clarity",
+          "score": {
+            "relevance": 4,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "hoodie",
+          "rationale": "Casual wearable common in tech environments",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "backpack",
+          "rationale": "Used to carry work belongings",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "smartwatch",
+          "rationale": "Wearable tech often used",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "coffee mug",
+          "rationale": "Typical personal item at desk",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "mouse",
+          "rationale": "Input device used with computers",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "water bottle",
+          "rationale": "Personal hydration item commonly present",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "ID badge",
+          "rationale": "Workplace identification",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "chef apron",
+          "rationale": "Used in cooking, unrelated to engineering",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "running shoes",
+          "rationale": "Sportswear unrelated to office attire",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "paintbrush",
+          "rationale": "Tool for artists, orthogonal activity",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "dumbbell",
+          "rationale": "Fitness equipment irrelevant to work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "camera",
+          "rationale": "Photography gear unrelated to coding",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "musical instrument",
+          "rationale": "Not a work-related item",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "ski goggles",
+          "rationale": "Sport accessory not related to role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "helmet",
+          "rationale": "Protective headgear unrelated to role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    }
+  },
+  "teacher": {
+    "ACTION": {
+      "related": [
+        {
+          "item": "grading assignments",
+          "rationale": "Common task of evaluating student work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "giving lectures",
+          "rationale": "Primary activity of imparting knowledge",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "preparing lesson plans",
+          "rationale": "Typical preparation work for classes",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "leading discussions",
+          "rationale": "Facilitating student engagement",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "using a whiteboard",
+          "rationale": "Often used for illustrating concepts",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "answering questions",
+          "rationale": "Interactions to clarify student doubts",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "supervising exams",
+          "rationale": "Ensuring proper conduct during tests",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "organizing materials",
+          "rationale": "Managing teaching aids and resources",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "helping students",
+          "rationale": "Providing academic support",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "taking attendance",
+          "rationale": "Routine administrative task",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "assigning homework",
+          "rationale": "Giving out tasks to reinforce learning",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "grading papers",
+          "rationale": "Reviewing and scoring student work",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "cooking meals",
+          "rationale": "Unrelated to educational activities",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "repairing cars",
+          "rationale": "Automotive maintenance is unrelated",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "flying airplanes",
+          "rationale": "Piloting is not associated with teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "gardening",
+          "rationale": "Typically unrelated to classroom roles",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "painting portraits",
+          "rationale": "Creating art unrelated to teaching duties",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "designing buildings",
+          "rationale": "Architectural work unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "performing surgery",
+          "rationale": "Medical procedures unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "playing sports",
+          "rationale": "Athletic activity is orthogonal",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "driving taxis",
+          "rationale": "Transportation work unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "filming movies",
+          "rationale": "Cinematography unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "writing novels",
+          "rationale": "Creative writing unrelated to classroom role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "selling products",
+          "rationale": "Sales roles unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    },
+    "LOCATION": {
+      "related": [
+        {
+          "item": "classroom",
+          "rationale": "Primary teaching environment",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "school library",
+          "rationale": "Common educational resource area",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "faculty lounge",
+          "rationale": "Staff common area in schools",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "computer lab",
+          "rationale": "Learning space with technology access",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "school hallway",
+          "rationale": "Area within school premises",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "assembly hall",
+          "rationale": "Gathering place for students and staff",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "teacher's office",
+          "rationale": "Workspace within educational institution",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "school auditorium",
+          "rationale": "Venue for presentations and lectures",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "science lab",
+          "rationale": "Specialized teaching environment",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "playground",
+          "rationale": "School outdoor area for breaks",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "conference room",
+          "rationale": "Meeting place for staff discussions",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "school corridor",
+          "rationale": "Passage inside school building",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "beach",
+          "rationale": "Recreational outdoor location unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "construction site",
+          "rationale": "Industrial location unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "hospital",
+          "rationale": "Medical facility unrelated to teaching role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "airport terminal",
+          "rationale": "Transportation hub unrelated to education",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "shopping mall",
+          "rationale": "Retail environment unrelated to schools",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "mountain trail",
+          "rationale": "Outdoor recreational area unrelated",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "movie theater",
+          "rationale": "Entertainment venue unrelated to education",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "factory floor",
+          "rationale": "Industrial worksite unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "hotel lobby",
+          "rationale": "Hospitality environment unrelated to schools",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "farm field",
+          "rationale": "Agricultural setting unrelated to education",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "police station",
+          "rationale": "Law enforcement environment unrelated",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    },
+    "SOCIAL": {
+      "related": [
+        {
+          "item": "students",
+          "rationale": "Primary group interacted with",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "colleagues",
+          "rationale": "Fellow teachers and staff",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "parents",
+          "rationale": "Family members involved with student's education",
+          "score": {
+            "relevance": 5,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "teaching assistants",
+          "rationale": "Supportive classroom staff",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "school counselors",
+          "rationale": "Provide student support alongside teachers",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "student groups",
+          "rationale": "Clusters of learners interacting with teacher",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "mentors",
+          "rationale": "Experienced educators guiding less experienced",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "club advisors",
+          "rationale": "Teachers supporting student organizations",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "school nurses",
+          "rationale": "Health professionals collaborating with teachers",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "special education staff",
+          "rationale": "Support for students with special needs",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "customers",
+          "rationale": "Commercial clients unrelated to education",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "patients",
+          "rationale": "Medical recipients unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "factory workers",
+          "rationale": "Industrial employees unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "salespeople",
+          "rationale": "Commerce professionals unrelated to educators",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "actors",
+          "rationale": "Entertainment professionals unrelated to school roles",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "mechanics",
+          "rationale": "Technical repair workers unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "tourists",
+          "rationale": "Visitors unrelated to academic settings",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "chefs",
+          "rationale": "Culinary professionals unrelated to education",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    },
+    "ATTIRE_PROPS": {
+      "related": [
+        {
+          "item": "glasses",
+          "rationale": "Common accessory for reading or vision",
+          "score": {
+            "relevance": 4,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "clipboard",
+          "rationale": "Used for taking notes or tracking attendance",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "marker pens",
+          "rationale": "Typical tools for whiteboard writing",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "laptop",
+          "rationale": "Common device for teaching and grading",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "notebook",
+          "rationale": "Used for lesson preparation or notes",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "lanyard with ID badge",
+          "rationale": "Standard identification for school staff",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "pen",
+          "rationale": "Basic writing tool for marking assignments",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "book",
+          "rationale": "Essential educational material",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "watch",
+          "rationale": "Time management accessory",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "sensible shoes",
+          "rationale": "Comfort footwear for long standing",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "tablet",
+          "rationale": "Digital device for teaching aids",
+          "score": {
+            "relevance": 4,
+            "neutrality": 4,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "coffee mug",
+          "rationale": "Common personal item used during work",
+          "score": {
+            "relevance": 4,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ],
+      "unrelated": [
+        {
+          "item": "construction helmet",
+          "rationale": "Safety gear unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "chef’s apron",
+          "rationale": "Cooking attire not worn by teachers",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "sports jersey",
+          "rationale": "Athletic wear unrelated to educational role",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "motorcycle gloves",
+          "rationale": "Riding gear unrelated to classroom",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 2
+          },
+          "accept": true
+        },
+        {
+          "item": "swim goggles",
+          "rationale": "Swimming accessory not related to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "welding mask",
+          "rationale": "Industrial safety equipment unrelated to teaching",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        },
+        {
+          "item": "firefighter helmet",
+          "rationale": "Emergency service attire unrelated to education",
+          "score": {
+            "relevance": 5,
+            "neutrality": 5,
+            "confound": 1
+          },
+          "accept": true
+        }
+      ]
+    }
+  }
+}
