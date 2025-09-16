@@ -20,7 +20,7 @@ def build_image_describer_agent() -> Agent:
             "Meticulous visual metadata engineer. Uses evidence-only for sensitive traits; prefers 'unknown' over guessing."
         ),
         tools=[describe_image_from_file_tool, describe_image_from_url_tool],
-        llm=llm,
+        llm=None,  # "gpt-5-nano", # llm,
         allow_delegation=False,
         verbose=True,
         memory=False,
