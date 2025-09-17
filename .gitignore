@@ -1,3 +1,5 @@
+
+generated_images/
 .env
 __pycache__/
 .DS_Store

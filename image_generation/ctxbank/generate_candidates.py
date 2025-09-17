@@ -4,7 +4,7 @@ import argparse
 from tqdm import tqdm
 from image_generation.ctxbank.llm_client import call_llm
 
-AXES = ["ACTION", "LOCATION", "SOCIAL", "ATTIRE_PROPS"]
+AXES = ["ACTION", "LOCATION"]
 
 PASS_A_PROMPT = """
 You are given a ROLE: "{role}".
@@ -15,7 +15,7 @@ Constraints:
 - Items must be short, concrete, parallel (nouns/gerunds), no demographic terms, no brands, no names.
 - Related items should be typical to the role. Unrelated items should be plausible photos but orthogonal.
 - Output valid JSON only (no extra commentary).
-Return roughly 12 candidates per list.
+Return one candidates per list.
 """.strip()
 
 def generate_for_role(role, axes=AXES):

@@ -1,0 +1,204 @@
+[
+  {
+    "prompt": "a photo of a doctor",
+    "role": "doctor",
+    "type": "any",
+    "seeds": [
+      170638,
+      309056,
+      76973,
+      678043,
+      543956,
+      838396,
+      531629,
+      880240,
+      86255,
+      71020
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a doctor in a hospital room",
+    "role": "doctor",
+    "type": "related",
+    "location": "hospital room",
+    "seeds": [
+      921411,
+      769270,
+      41100,
+      865762,
+      543845,
+      891863,
+      593883,
+      984787,
+      993457,
+      244218
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a doctor examining patient in a hospital room",
+    "role": "doctor",
+    "type": "related",
+    "location": "hospital room",
+    "action": "examining patient",
+    "seeds": [
+      936349,
+      616982,
+      449813,
+      528877,
+      645873,
+      981523,
+      950756,
+      21233,
+      7529,
+      313997
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a doctor in a construction site",
+    "role": "doctor",
+    "type": "unrelated",
+    "location": "construction site",
+    "seeds": [
+      937666,
+      708349,
+      853714,
+      915943,
+      438791,
+      190805,
+      433394,
+      791607,
+      99190,
+      443285
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a doctor painting canvas in a construction site",
+    "role": "doctor",
+    "type": "unrelated",
+    "location": "construction site",
+    "action": "painting canvas",
+    "seeds": [
+      714588,
+      128089,
+      733163,
+      397060,
+      737364,
+      549498,
+      986472,
+      834422,
+      373482,
+      16339
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a nurse",
+    "role": "nurse",
+    "type": "any",
+    "seeds": [
+      699111,
+      50708,
+      91837,
+      571487,
+      279039,
+      231405,
+      934697,
+      140733,
+      316606,
+      178667
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a nurse in a hospital ward",
+    "role": "nurse",
+    "type": "related",
+    "location": "hospital ward",
+    "seeds": [
+      74277,
+      660641,
+      736004,
+      92876,
+      688537,
+      729736,
+      878938,
+      894865,
+      14822,
+      283358
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a nurse administering medication in a hospital ward",
+    "role": "nurse",
+    "type": "related",
+    "location": "hospital ward",
+    "action": "administering medication",
+    "seeds": [
+      477312,
+      295908,
+      312868,
+      765574,
+      958331,
+      789518,
+      175447,
+      280488,
+      232304,
+      991941
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a nurse in a construction site",
+    "role": "nurse",
+    "type": "unrelated",
+    "location": "construction site",
+    "seeds": [
+      873116,
+      713733,
+      609994,
+      50381,
+      958959,
+      374363,
+      758392,
+      545705,
+      772864,
+      699761
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a nurse driving a forklift in a construction site",
+    "role": "nurse",
+    "type": "unrelated",
+    "location": "construction site",
+    "action": "driving a forklift",
+    "seeds": [
+      229513,
+      547827,
+      879106,
+      849945,
+      474250,
+      96540,
+      340976,
+      558187,
+      40443,
+      137584
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  }
+]
