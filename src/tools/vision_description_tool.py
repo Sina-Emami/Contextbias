@@ -37,12 +37,18 @@ Structure your output under these headings:
 
 4) People (visible humans only)
 - Count of visible humans.
-- For each person (Person 1, Person 2, …):
-  - Apparent age range wording (e.g., “appears middle-aged”), perceived gender presentation (“appears …”), visible skin tone (neutral: light/medium/dark), hair/facial hair/eyewear/head coverings.
-  - Clothing as multi-word items (e.g., “dark blue denim jacket”, “white cotton t-shirt with small black logo”).
-  - Posture and facial expression as multi-word phrases.
-  - Evidence-only cultural/religious items or text (e.g., “silver cross pendant”, “patterned headscarf”, “text on badge reading ‘Pastor’”). Do NOT conclude religion.
-  - Apparent role only if strongly indicated by visible cues; mark uncertainty if unsure.
+- For each person (“Person 1”, “Person 2”, …), provide:
+    - Required demographics & role (must appear exactly with these keys):
+    - gender_presentation: “appears …” (e.g., “appears female-presenting”) or “unknown”
+    - skin_tone: “light” / “medium” / “dark” (or “unknown”)
+    - age_range: e.g., “appears young adult”, “appears middle-aged” (or “unknown”)
+    - occupation_or_role: evidence-based (e.g., “appears construction worker based on high-visibility safety vest and hard hat”); else “unknown”
+    - Hair/facial hair/eyewear/head coverings: colors, styles, visibility.
+    - Clothing & Attire: A list of all visible clothing as multi-word items, including material and fit if discernible (e.g., “loose-fitting, dark blue denim jacket,” “white, smooth cotton t-shirt with a small, black embroidered logo”).
+    - Posture & facial expression: concise multi-word phrases (e.g., “upright relaxed posture”, “slight smile with neutral gaze”).
+    - Evidence-only cultural/religious items or text: describe the item/text; do not conclude religion.
+    - Gaze & orientation: facing direction, gaze target if visible.
+    - Occlusions: what is partially hidden or cropped.
 
 5) Objects, Animals & Text
 - Salient non-human elements, each with: name, visible color(s), material(s), quantity, and position (e.g., “two red plastic traffic cones in foreground-left”).
