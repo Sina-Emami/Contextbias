@@ -67,10 +67,10 @@ Structure your output under these headings:
 - Light sources, directionality, hardness/softness, and shadows as multi-word phrases. Note reflections, glare, and specular highlights if present.
 
 8) Safety & NSFW
-- Any safety/NSFW indicators (weapons, injuries, explicit content). If none, say “none observed”.
+- List any clear indicators of potential hazards, weapons, injuries, or explicit/sensitive content. If none, state “None observed.”
 
 9) Uncertainty
-- Bullet any ambiguous or partially occluded elements, approximate counts, or places where details could not be read (e.g., “text partially occluded on background-right plaque”, “flag design partly out of frame”, “small dark object on table not identifiable”).
+- Bullet ambiguous or partially occluded elements, approximate counts, or places where details could not be read (e.g., “text partially occluded on background-right plaque”, “flag design partly out of frame”, “small dark object on table not identifiable”).
 
 Style:
 - Be specific and exhaustive. Use short, information-dense sentences or lists.
