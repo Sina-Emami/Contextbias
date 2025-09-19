@@ -55,9 +55,9 @@ Structure your output under these headings:
 - Perform an object inventory by plane:
   - Foreground inventory (left/center/right): list all recognizable items.
   - Midground inventory (left/center/right): list all recognizable items.
-  - Background inventory (left/center/right): list all recognizable items, including small items (e.g., books, frames, switches, light fixtures, plants, signs).
-- Symbols/emblems/flags/seals: describe their patterns/colors/materials and placement (e.g., “blue field with white stars on vertical flag at background-left”).
-- Transcribe legible text: quote exact text and give location (e.g., “white sans-serif sign reading ‘OPEN’ above center doorway”). If partially legible, mark unclear parts with “(illegible)” or “[?]”.
+  - Background (Left/Center/Right): This section must be exceptionally detailed. Describe all visible background elements, no matter how small. Include furniture, decor (framed pictures, posters), fixtures (light switches, power outlets, thermostats), distant landscape features, items on shelves (provide approximate counts), and any other ambient objects. Describe the arrangement of these items (e.g., "neatly stacked," "randomly scattered").
+- Symbols & Signage: Describe any symbols, emblems, flags, or seals by pattern, color, and placement.
+- Legible Text: Quote all legible text verbatim, preserving case. Describe the font style (e.g., "white sans-serif text") and location. Mark unclear parts with “(illegible)” or “[?]”.
 
 6) Actions & Relationships
 - Ongoing Actions: Describe what each person is actively doing, including gaze direction and interactions with objects or other people (e.g., "Person 1 is looking at a silver laptop screen while typing," "Person 2 is handing a white ceramic mug to Person 3").
