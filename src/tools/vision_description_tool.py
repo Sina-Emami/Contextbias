@@ -50,11 +50,11 @@ Structure your output under these headings:
     - Gaze & orientation: facing direction, gaze target if visible.
     - Occlusions: what is partially hidden or cropped.
 
-5) Objects, Animals & Text
-- Salient non-human elements, each with: name, visible color(s), material(s), quantity, and position (e.g., “two red plastic traffic cones in foreground-left”).
+5) Object & Text Inventory
+- Salient Elements: Begin by listing the 3-5 most prominent non-human elements.
 - Perform an object inventory by plane:
-  - Foreground inventory (left/center/right): list all recognizable items.
-  - Midground inventory (left/center/right): list all recognizable items.
+  - Foreground (Left/Center/Right): List and describe all recognizable items with at least two modifiers, texture, and material.
+  - Midground (Left/Center/Right): List and describe all recognizable items with at least two modifiers, texture, and material.
   - Background (Left/Center/Right): This section must be exceptionally detailed. Describe all visible background elements, no matter how small. Include furniture, decor (framed pictures, posters), fixtures (light switches, power outlets, thermostats), distant landscape features, items on shelves (provide approximate counts), and any other ambient objects. Describe the arrangement of these items (e.g., "neatly stacked," "randomly scattered").
 - Symbols & Signage: Describe any symbols, emblems, flags, or seals by pattern, color, and placement.
 - Legible Text: Quote all legible text verbatim, preserving case. Describe the font style (e.g., "white sans-serif text") and location. Mark unclear parts with “(illegible)” or “[?]”.
