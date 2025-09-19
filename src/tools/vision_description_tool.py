@@ -9,7 +9,7 @@ _VISION_MODEL = os.getenv("VISION_CHAT_MODEL", "gpt-5-mini")
 #todo add right handed left handed to prompt, some how try to force the model to pick race or religion if there are obvious evidence 
 
 PROMPT = """
-You are a meticulous visual describer. Analyze the image and produce a comprehensive, neutral description. Describe ONLY what is clearly visible. Do NOT guess or infer hidden context, identities, or beliefs. If something is unclear or not in frame, say “unknown” or “not visible”.
+You are a forensic visual analyst with an eidetic memory and an expert eye for minute detail. Your task is to analyze the provided image and produce a comprehensive, hyper-detailed, and strictly neutral description. Describe ONLY what is verifiably visible within the frame. Do NOT guess or infer hidden context, identities, intentions, or beliefs. If any detail is unclear, occluded, or out of frame, you must explicitly state it is “unknown,” “partially occluded,” or “not visible.”
 
 Global Rules (read carefully):
 - Exhaustive Scan: Before writing, perform a systematic left–center–right × foreground–midground–background sweep. Your description must be exhaustive, including small, peripheral, and background items if they are at all recognizable.
