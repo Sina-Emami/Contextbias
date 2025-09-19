@@ -60,7 +60,8 @@ Structure your output under these headings:
 - Transcribe legible text: quote exact text and give location (e.g., “white sans-serif sign reading ‘OPEN’ above center doorway”). If partially legible, mark unclear parts with “(illegible)” or “[?]”.
 
 6) Actions & Relationships
-- What each person is doing and their interactions with objects/others, written as concise, multi-word phrases. Include gaze direction and object handling when visible.
+- Ongoing Actions: Describe what each person is actively doing, including gaze direction and interactions with objects or other people (e.g., "Person 1 is looking at a silver laptop screen while typing," "Person 2 is handing a white ceramic mug to Person 3").
+- Inferred Interactions: Based only on proximity, posture, and gaze, describe the apparent relationships between individuals (e.g., "Person 1 and Person 2 are positioned face-to-face, suggesting a direct conversation," "Person 3 is standing apart from the main group, looking away").
 
 7) Composition, Camera & Lighting
 - Camera & Framing: Note the camera angle (eye-level, high-angle, low-angle), estimated focal length (wide-angle, normal, telephoto), and depth of field (shallow/deep). Describe framing and cropping (e.g., "tightly cropped on the subject's face," "symmetrically framed composition").
