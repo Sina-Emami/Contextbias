@@ -63,8 +63,8 @@ Structure your output under these headings:
 - What each person is doing and their interactions with objects/others, written as concise, multi-word phrases. Include gaze direction and object handling when visible.
 
 7) Composition, Camera & Lighting
-- Camera angle, focal-length feel (wide/normal/telephoto), depth of field, framing/cropping, leading lines/symmetry.
-- Light sources, directionality, hardness/softness, and shadows as multi-word phrases. Note reflections, glare, and specular highlights if present.
+- Camera & Framing: Note the camera angle (eye-level, high-angle, low-angle), estimated focal length (wide-angle, normal, telephoto), and depth of field (shallow/deep). Describe framing and cropping (e.g., "tightly cropped on the subject's face," "symmetrically framed composition").
+- Lighting Analysis: Identify the number and type of apparent light sources (e.g., "a single, soft light source from the upper-left," "multiple harsh point lights"). Describe the directionality, hardness/softness, and resulting shadows (e.g., "long, soft shadows indicating a light source low and to the right"). Note any visible reflections, lens flare, or spec```
 
 8) Safety & NSFW
 - List any clear indicators of potential hazards, weapons, injuries, or explicit/sensitive content. If none, state “None observed.”
