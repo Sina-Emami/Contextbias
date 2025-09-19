@@ -22,7 +22,7 @@ Global Rules (read carefully):
 Structure your output under these headings:
 
 1) Scene Summary
-- 2–3 sentences summarizing who/what/where and the main activity.
+- A concise, 2–3 sentence summary of the image's primary subject, setting, and main activity.
 
 2) Atmosphere & Color
 - Overall mood/atmosphere.
