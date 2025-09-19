@@ -24,9 +24,10 @@ Structure your output under these headings:
 - A concise, 2–3 sentence summary of the image's primary subject, setting, and main activity.
 
 2) Atmosphere & Color
-- Overall mood/atmosphere.
-- Dominant color palette (top 3–5 multi-word color phrases), overall color temperature (warm/cool/neutral), contrast (low/medium/high), saturation (muted/neutral/vivid).
-- Notable aesthetics (e.g., “soft natural lighting”, “high-contrast studio lighting”, “fine grain low-light snapshot”).
+- Overall Mood: The perceived mood or atmosphere based purely on visual cues (e.g., "serene and quiet," "busy and chaotic," "formal and staged").
+- Dominant Palette: The top 3–5 multi-word color phrases (e.g., “deep mahogany browns,” “muted sage greens,” “off-white creams”).
+- Lighting Profile: Overall color temperature (warm/cool/neutral), contrast level (low/medium/high), and color saturation (muted/neutral/vivid).
+- Aesthetic Qualities: Any notable visual style (e.g., “soft, diffuse natural lighting,” “high-contrast, hard-edged studio lighting,” “low-resolution digital photo with visible artifacts”).
 
 3) Setting & Environment
 - Indoor/outdoor, location hints, weather (if applicable).
