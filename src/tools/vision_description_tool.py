@@ -30,10 +30,10 @@ Structure your output under these headings:
 - Aesthetic Qualities: Any notable visual style (e.g., “soft, diffuse natural lighting,” “high-contrast, hard-edged studio lighting,” “low-resolution digital photo with visible artifacts”).
 
 3) Setting & Environment
-- Indoor/outdoor, location hints, weather (if applicable).
-- Environment elements as multi-word phrases (e.g., “light gray concrete sidewalk”, “polished wooden table surface”).
-- Spatial layout: explicitly note placements using both plane and side (e.g., “foreground-left”, “midground-center”, “background-right”).
-- If shelves/walls/displays contain many items, provide approximate counts and summaries (e.g., “≈30 assorted hardcover books with multicolor spines on background-left white shelving”).
+- General Location: Indoor/outdoor, time of day hints (e.g., "long shadows suggesting late afternoon"), and weather (if applicable).
+- Environmental Context: Based on visible evidence, describe the likely function of the space (e.g., “appears to be a commercial office space due to cubicles,” “resembles a public library with book stacks”).
+- Architectural & Surface Details: Describe the visible surfaces in detail. For walls, floors, and ceilings, specify their material, texture, color, and condition (e.g., “light-beige painted drywall with a subtle orange-peel texture,” “dark-stained, high-gloss hardwood floor with minor scuff marks,” “white acoustic ceiling tile with a grid pattern”).
+- Spatial Layout: Explicitly note the placement of key elements using plane and side (e.g., “foreground-left,” “midground-center,” “background-right”). Describe the sense of depth and openness (e.g., "cramped and enclosed," "open and expansive").
 
 4) People (visible humans only)
 - Count of visible humans.
