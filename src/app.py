@@ -219,10 +219,20 @@ def run_describe_images(paths: dict) -> None:
             "image_path": str(image_path),
             "description": raw_text,
         }
+        raw_records_path = raw_dir / "raw_descriptions.json"
+        if raw_records_path.exists():
+            try:
+                existing = json.loads(raw_records_path.read_text(encoding="utf-8"))
+                if not isinstance(existing, list):
+                    existing = []
+            except Exception:
+                existing = []
+        else:
+            existing = []
+        existing.append(raw_record)
+        raw_records_path.write_text(json.dumps(existing, indent=2, ensure_ascii=False), encoding="utf-8")
         raw_payload = json.dumps(raw_record, indent=2, ensure_ascii=False)
-        raw_path = raw_dir / f"{image_id}.raw.json"
-        raw_path.write_text(raw_payload, encoding="utf-8")
-        print(f"   -> Raw description saved -> {raw_path}")
+        print(f"   -> Raw description appended -> {raw_records_path}")
 
         # print(f"[Step 2B] Structuring description {idx}/{len(records)} - {image_id}")
         # structured_result = structured_crew.kickoff(inputs={
