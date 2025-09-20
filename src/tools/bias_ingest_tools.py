@@ -23,92 +23,132 @@ def _inc_nested(root: Dict[str, Any], typ: str, attr: str, val: str, by: int = 1
 
 def _extract_per_image(rec: Dict[str, Any]) -> Dict[str, Any]:
     """Deterministically summarize one ImageAuditRecord dict into countable buckets."""
+    scene = rec.get("scene") or {}
     out: Dict[str, Any] = {
         "meta": {"image_id": rec.get("image_id")},
         "objects_by_name": {},
         "environment_by_label": {},
         "object_attribute_counts": {},
         "environment_attribute_counts": {},
-        "people_meta": {"people_in_image": len(rec.get("people", []) or [])},
+        "people_meta": {"people_in_image": len(scene.get("people") or [])},
         "people_attribute_counts": {},
         "people_detail_phrases": {},
         "detail_phrases": {},
     }
 
-    # objects
-    for obj in rec.get("objects", []) or []:
-        typ = _canon(obj.get("name_canonical") or obj.get("name_raw"))
+    objects = scene.get("objects") or []
+    for obj in objects:
+        typ_raw = obj.get("type") or obj.get("subtype") or "unknown"
+        typ = _canon(typ_raw)
         _inc(out["objects_by_name"], typ, 1)
-        for c in set(_canon(c) for c in (obj.get("colors") or []) if c):
+        attrs = obj.get("attributes") or {}
+        for c in set(_canon(c) for c in (attrs.get("colors") or []) if c):
             _inc_nested(out["object_attribute_counts"], typ, "color", c, 1)
-            _inc(out["detail_phrases"], f"{typ}:{c}", 1)
-        for m in set(_canon(m) for m in (obj.get("materials") or []) if m):
+            _inc(out["detail_phrases"], f"{typ}:color:{c}", 1)
+        for m in set(_canon(m) for m in (attrs.get("material") or []) if m):
             _inc_nested(out["object_attribute_counts"], typ, "material", m, 1)
-            _inc(out["detail_phrases"], f"{typ}:{m}", 1)
-        for k, v in (obj.get("attributes") or {}).items():
-            kk, vv = _canon(k), _canon(str(v))
-            _inc_nested(out["object_attribute_counts"], typ, f"attributes:{kk}", vv, 1)
+            _inc(out["detail_phrases"], f"{typ}:material:{m}", 1)
+        for tex in set(_canon(t) for t in (attrs.get("texture") or []) if t):
+            _inc_nested(out["object_attribute_counts"], typ, "texture", tex, 1)
+        for fin in set(_canon(t) for t in (attrs.get("finish") or []) if t):
+            _inc_nested(out["object_attribute_counts"], typ, "finish", fin, 1)
+        size_class = _canon(attrs.get("size_class"))
+        if size_class:
+            _inc_nested(out["object_attribute_counts"], typ, "size_class", size_class, 1)
+        for state in set(_canon(s) for s in (attrs.get("state") or []) if s):
+            _inc_nested(out["object_attribute_counts"], typ, "state", state, 1)
 
-    # environment
-    for e in ((rec.get("setting") or {}).get("environment_elements") or []):
-        lab = _canon(e.get("label_canonical") or e.get("label_raw"))
-        _inc(out["environment_by_label"], lab, 1)
-        for c in set(_canon(c) for c in (e.get("colors") or []) if c):
-            _inc_nested(out["environment_attribute_counts"], lab, "color", c, 1)
-            _inc(out["detail_phrases"], f"{lab}:{c}", 1)
-        for m in set(_canon(m) for m in (e.get("materials") or []) if m):
-            _inc_nested(out["environment_attribute_counts"], lab, "material", m, 1)
-            _inc(out["detail_phrases"], f"{lab}:{m}", 1)
-        for k, v in (e.get("attributes") or {}).items():
-            kk, vv = _canon(k), _canon(str(v))
-            _inc_nested(out["environment_attribute_counts"], lab, f"attributes:{kk}", vv, 1)
+    environment = scene.get("environment") or {}
+    env_label = _canon(environment.get("location_type"))
+    if env_label:
+        _inc(out["environment_by_label"], env_label, 1)
 
-    # people
-    ppl = rec.get("people", []) or []
+    surfaces = environment.get("surfaces") or {}
+    for group_name in ("walls", "floor", "ceiling"):
+        details = surfaces.get(group_name) or []
+        label = _canon(group_name)
+        for detail in details:
+            _inc(out["environment_by_label"], label, 1)
+            for mat in set(_canon(m) for m in (detail.get("material") or []) if m):
+                _inc_nested(out["environment_attribute_counts"], label, "material", mat, 1)
+            for tex in set(_canon(t) for t in (detail.get("texture") or []) if t):
+                _inc_nested(out["environment_attribute_counts"], label, "texture", tex, 1)
+            for col in set(_canon(c) for c in (detail.get("color") or []) if c):
+                _inc_nested(out["environment_attribute_counts"], label, "color", col, 1)
+            for cond in set(_canon(c) for c in (detail.get("condition") or []) if c):
+                _inc_nested(out["environment_attribute_counts"], label, "condition", cond, 1)
+
+    ppl = scene.get("people") or []
     pac = out["people_attribute_counts"]
+    detail = out["people_detail_phrases"]
 
     def bump(group: str, val: str | None):
         if not val:
             return
-        g = pac.setdefault(group, {})
         key = _canon(val)
-        _inc(g, key, 1)
+        if not key:
+            return
+        bucket = pac.setdefault(group, {})
+        _inc(bucket, key, 1)
 
-    for p in ppl:
-        for key in [
-            "gender_presentation", "age_bucket", "orientation", "posture",
-            "position_depth", "position_horizontal", "skin_tone_label",
-            "race_ethnicity_label", "visible_tattoos", "facial_hair", "eyewear",
-        ]:
-            bump(key, p.get(key))
-        for a in set(_canon(a) for a in (p.get("accessories") or []) if a):
-            bump("accessories", a)
-        for c in set(_canon(c) for c in (p.get("clothing_items") or []) if c):
-            bump("clothing_items", c)
+    def bump_detail(tag: str, val: str | None):
+        key = _canon(val)
+        if key:
+            _inc(detail, f"{tag}:{key}", 1)
 
-        def pdp(tag: str, val: str | None):
-            v = _canon(val)
-            if v:
-                _inc(out["people_detail_phrases"], f"{tag}:{v}", 1)
+    for person in ppl:
+        bump("gender_presentation", person.get("gender_presentation"))
+        bump("age_range", person.get("age_range"))
+        bump("orientation", person.get("orientation"))
+        bump("gaze_direction", person.get("gaze_direction"))
+        bump("occlusions", person.get("occlusions"))
+        bump("skin_tone", person.get("skin_tone"))
+        bump_detail("gender", person.get("gender_presentation"))
+        bump_detail("age", person.get("age_range"))
+        bump_detail("orientation", person.get("orientation"))
+        bump_detail("gaze", person.get("gaze_direction"))
+        bump_detail("skin_tone", person.get("skin_tone"))
 
-        pdp("gender", p.get("gender_presentation"))
-        pdp("age", p.get("age_bucket"))
-        pdp("orientation", p.get("orientation"))
-        pdp("posture", p.get("posture"))
-        pdp("position_depth", p.get("position_depth"))
-        pdp("position_horizontal", p.get("position_horizontal"))
-        pdp("skin_tone", p.get("skin_tone_label"))
-        pdp("race_ethnicity", p.get("race_ethnicity_label"))
-        pdp("visible_tattoos", p.get("visible_tattoos"))
-        pdp("facial_hair", p.get("facial_hair"))
-        pdp("eyewear", p.get("eyewear"))
-        for a in set(_canon(a) for a in (p.get("accessories") or []) if a):
-            pdp("accessory", a)
-        for c in set(_canon(c) for c in (p.get("clothing_items") or []) if c):
-            pdp("clothing", c)
+        hair = person.get("hair") or {}
+        bump("hair_present", hair.get("present"))
+        for style in set(_canon(s) for s in (hair.get("style") or []) if s):
+            bump("hair_style", style)
+        for color in set(_canon(c) for c in (hair.get("color") or []) if c):
+            bump("hair_color", color)
+
+        facial = person.get("facial_hair") or {}
+        bump("facial_hair_present", facial.get("present"))
+        for style in set(_canon(s) for s in (facial.get("style") or []) if s):
+            bump("facial_hair_style", style)
+
+        eyewear = person.get("eyewear") or {}
+        bump("eyewear_present", eyewear.get("present"))
+        for typ in set(_canon(t) for t in (eyewear.get("type") or []) if t):
+            bump("eyewear_type", typ)
+
+        head = person.get("head_covering") or {}
+        bump("head_covering_present", head.get("present"))
+        for typ in set(_canon(t) for t in (head.get("type") or []) if t):
+            bump("head_covering_type", typ)
+
+        for pose in set(_canon(pose) for pose in (person.get("pose") or []) if pose):
+            bump("pose", pose)
+        for act in set(_canon(act) for act in (person.get("activities") or []) if act):
+            bump("activities", act)
+
+        clothing_items = person.get("clothing") or []
+        for garment in clothing_items:
+            typ = _canon(garment.get("garment_type"))
+            if typ:
+                bump("clothing_type", typ)
+            for color in set(_canon(c) for c in (garment.get("color") or []) if c):
+                bump("clothing_color", color)
+            for material in set(_canon(m) for m in (garment.get("material") or []) if m):
+                bump("clothing_material", material)
+            for pattern in set(_canon(p) for p in (garment.get("pattern") or []) if p):
+                bump("clothing_pattern", pattern)
 
     return out
-
 def _merge_nested(dst: Dict[str, Any], src: Dict[str, Any]):
     for typ, attrs in (src or {}).items():
         tt = dst.setdefault(typ, {})
