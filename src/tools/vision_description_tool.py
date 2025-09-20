@@ -80,7 +80,7 @@ Style:
 """
 
 
-def _describe_from_url(image_url: str, prompt: Optional[str] = None) -> str:
+def _describe_from_source(image_url: str, prompt: Optional[str] = None) -> str:
     resp = _client.chat.completions.create(
         model=_VISION_MODEL,
         messages=[
@@ -97,14 +97,8 @@ def _describe_from_url(image_url: str, prompt: Optional[str] = None) -> str:
     return resp.choices[0].message.content.strip()
 
 
-@tool("DescribeImageFromURL")
-def describe_image_from_url_tool(image_url: str, prompt: Optional[str] = None) -> str:
-    """Return a detailed, neutral description of the image at the given URL (including data: URLs)."""
-    return _describe_from_url(image_url, prompt)
-
-
 @tool("DescribeImageFromFile")
 def describe_image_from_file_tool(path: str, prompt: Optional[str] = None) -> str:
     """Read a local image file, convert it to a data: URL, and return a detailed, neutral description."""
     data_url = file_to_data_url(path)
-    return _describe_from_url(data_url, prompt)
+    return _describe_from_source(data_url, prompt)
