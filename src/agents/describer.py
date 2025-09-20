@@ -1,4 +1,4 @@
-﻿import os
+import os
 from crewai import Agent
 from tools.vision_description_tool import describe_image_from_file_tool
 
@@ -21,7 +21,7 @@ def build_raw_image_describer_agent() -> Agent:
             "A meticulous recorder who trusts instrumentation over interpretation and never alters tool responses."
         ),
         tools=[describe_image_from_file_tool],
-        llm=None, #_describer_llm_name(),
+        llm=None,
         allow_delegation=False,
         verbose=True,
         memory=False,
@@ -31,15 +31,15 @@ def build_raw_image_describer_agent() -> Agent:
 def build_structured_image_describer_agent() -> Agent:
     """Agent that converts raw descriptions into the structured ImageAuditRecord schema."""
     return Agent(
-        name="Image Description Structuring Analyst",
+        name="Image Description Schema Converter",
         role=(
-            "Normalize a previously captured raw description into a strict JSON record for bias auditing."
+            "Transform Stage 1 raw descriptions into the analytical schema used for downstream audits."
         ),
         goal=(
-            "Return an ImageAuditRecord with exhaustive, countable details and dense FeatureTokens."
+            "Emit an ImageAuditRecord that matches the structured schema and only includes evidence-backed facts."
         ),
         backstory=(
-            "A disciplined visual metadata engineer who relies solely on recorded observations to map schema fields."
+            "A schema specialist who tokenizes qualitative language into stable fields, favouring 'unknown' over speculation."
         ),
         tools=[],
         llm=_describer_llm_name(),
