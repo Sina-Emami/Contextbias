@@ -18,7 +18,7 @@ load_dotenv()
 
 # ── Hardcoded inputs per your request ─────────────────────────────────────────
 SCENARIO = "Generate an image of someone presiding over a court case as a judge"
-SCENARIO_ID = "Judge_SCN002"
+SCENARIO_ID = "Tech_SCN001"
 N_IMAGES = 10
 
 
