@@ -1,4 +1,4 @@
-import os
+﻿import os
 import json
 from pathlib import Path
 from dotenv import load_dotenv
@@ -160,18 +160,31 @@ def generate_images(paths: dict, scenario: str, n: int = 10) -> dict:
     return paths
 
 
-def run_describe_images(paths: dict) -> None:
-    """Reads images_info.json and produces one JSON description per image using a two-stage pipeline."""
+def _load_json_array(path: Path) -> list:
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, list):
+            return data
+    except Exception:
+        pass
+    return []
+
+
+def capture_raw_descriptions(paths: dict) -> list[dict]:
+    """Stage 1: Call the raw description crew for each image and store results."""
     descriptions_dir: Path = paths["descriptions"]
     raw_dir: Path = paths.get("raw_descriptions") or (descriptions_dir / "raw")
     raw_dir.mkdir(parents=True, exist_ok=True)
+
     info_json: Path = paths["images_info_path"]
     images_dir: Path = paths["images"]
     root_dir: Path = paths["root"]
 
     if not info_json.exists():
         print("No images_info.json found - nothing to describe.")
-        return
+        return []
 
     try:
         records = json.loads(info_json.read_text(encoding="utf-8"))
@@ -180,17 +193,32 @@ def run_describe_images(paths: dict) -> None:
 
     if not isinstance(records, list) or not records:
         print("images_info.json is empty - nothing to describe.")
-        return
+        return []
+
+    raw_records_path = raw_dir / "raw_descriptions.json"
+    raw_records: list[dict] = []
+    seen_ids: set[str] = set()
+    for entry in _load_json_array(raw_records_path):
+        if not isinstance(entry, dict):
+            continue
+        image_id = entry.get("image_id")
+        if image_id and image_id in seen_ids:
+            continue
+        if image_id:
+            seen_ids.add(image_id)
+        raw_records.append({
+            "image_id": image_id,
+            "image_path": entry.get("image_path"),
+            "description": entry.get("description"),
+        })
 
     raw_crew = build_raw_description_crew()
-    # structured_crew = build_structured_description_crew()
 
     for idx, rec in enumerate(records, start=1):
         image_id = rec.get("id")
         relpath = rec.get("relpath")
         abspath = rec.get("abspath")
         filename = rec.get("filename")
-        image_url = rec.get("image_url", "")
 
         image_path: Path | None = None
         if relpath:
@@ -207,46 +235,69 @@ def run_describe_images(paths: dict) -> None:
             print(f"Skipping {image_id}: file not found -> {image_path}")
             continue
 
-        print(f"[Step 2A] Capturing raw description {idx}/{len(records)} - {image_id} (local: {image_path})")
+        print(f"[Stage 1] Capturing raw description {idx}/{len(records)} - {image_id} (local: {image_path})")
         raw_result = raw_crew.kickoff(inputs={
             "image_id": image_id,
             "image_path": str(image_path),
-            "image_url": image_url,
         })
         raw_text = _extract_raw_description_output(raw_result)
-        raw_record = {
+        sanitized = {
             "image_id": image_id,
             "image_path": str(image_path),
             "description": raw_text,
         }
-        raw_records_path = raw_dir / "raw_descriptions.json"
-        if raw_records_path.exists():
-            try:
-                existing = json.loads(raw_records_path.read_text(encoding="utf-8"))
-                if not isinstance(existing, list):
-                    existing = []
-            except Exception:
-                existing = []
-        else:
-            existing = []
-        existing.append(raw_record)
-        raw_records_path.write_text(json.dumps(existing, indent=2, ensure_ascii=False), encoding="utf-8")
-        raw_payload = json.dumps(raw_record, indent=2, ensure_ascii=False)
-        print(f"   -> Raw description appended -> {raw_records_path}")
+        raw_records = [entry for entry in raw_records if entry.get("image_id") != image_id]
+        raw_records.append(sanitized)
+        raw_records_path.write_text(json.dumps(raw_records, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"   -> Raw description stored -> {raw_records_path}")
 
-        # print(f"[Step 2B] Structuring description {idx}/{len(records)} - {image_id}")
-        # structured_result = structured_crew.kickoff(inputs={
-        #     "image_id": image_id,
-        #     "image_path": str(image_path),
-        #     "image_url": image_url,
-        #     "raw_description_json": raw_payload,
-        # })
+    return raw_records
 
-        # desc = _parse_description_output(structured_result)
-        # desc.image_id = image_id
-        # out_path = descriptions_dir / f"{image_id}.json"
-        # out_path.write_text(desc.model_dump_json(indent=2), encoding="utf-8")
-        # print(f"   -> Structured description saved -> {out_path}")
+
+def structure_descriptions(paths: dict) -> None:
+    """Stage 2: Convert raw descriptions into structured ImageAuditRecord JSON."""
+    descriptions_dir: Path = paths["descriptions"]
+    descriptions_dir.mkdir(parents=True, exist_ok=True)
+
+    raw_dir: Path = paths.get("raw_descriptions") or (descriptions_dir / "raw")
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    raw_records_path = raw_dir / "raw_descriptions.json"
+
+    raw_records = _load_json_array(raw_records_path)
+    if not raw_records:
+        print("No raw descriptions available - skipping structured conversion.")
+        return
+
+    structured_crew = build_structured_description_crew()
+
+    for idx, entry in enumerate(raw_records, start=1):
+        if not isinstance(entry, dict):
+            continue
+        image_id = entry.get("image_id")
+        image_path = entry.get("image_path")
+        if not image_id or not image_path:
+            print(f"Skipping raw entry missing id/path: {entry}")
+            continue
+
+        print(f"[Stage 2] Structuring description {idx}/{len(raw_records)} - {image_id}")
+        payload = json.dumps({
+            "image_id": image_id,
+            "image_path": image_path,
+            "description": entry.get("description"),
+        }, indent=2, ensure_ascii=False)
+        structured_result = structured_crew.kickoff(inputs={
+            "image_id": image_id,
+            "image_path": image_path,
+            "raw_description_json": payload,
+        })
+        desc = _parse_description_output(structured_result)
+        if getattr(desc, "image_id", None) is None:
+            desc.image_id = image_id
+        if getattr(desc, "image_path", None) is None:
+            desc.image_path = image_path
+        out_path = descriptions_dir / f"{image_id}.json"
+        out_path.write_text(desc.model_dump_json(indent=2), encoding="utf-8")
+        print(f"   -> Structured description saved -> {out_path}")
 
 def _parse_bias_report_output(result) -> BiasReport | dict | str:
     if isinstance(result, BiasReport):
@@ -473,7 +524,8 @@ def run_consensus(paths: dict, scenario_text: str | None = None) -> None:
 if __name__ == "__main__":
     paths = setup_scenario(SCENARIO, SCENARIO_ID)
     # generate_images(paths, SCENARIO, n=N_IMAGES)
-    run_describe_images(paths)
+    # capture_raw_descriptions(paths)
+    structure_descriptions(paths)
     # run_analyze_bias(paths)
     # qs = run_generate_questions(paths)
     # run_fact_check(paths, qs)
