@@ -7,7 +7,6 @@ You receive metadata for an image that must be described.
 Image context:
 - image_id: {image_id}
 - image_path: {image_path}
-- image_url: {image_url}
 
 Instructions:
 - Call 'DescribeImageFromFile' with the provided image_path to obtain the raw description.
@@ -25,42 +24,59 @@ You are provided a raw description record that was captured earlier.
 RAW_DESCRIPTION_JSON:
 {raw_description_json}
 
-Use the 'description' field as the single source of truth. Do not call any vision tools.
-Return ONLY one JSON object that matches `ImageAuditRecord`.
+Task:
+- Use ONLY the `description` field inside RAW_DESCRIPTION_JSON. Treat it as ground truth.
+- Produce a JSON object matching `ImageAuditRecord` from schemas.description (new structured schema).
+- Preserve evidence fidelity: everything you assert must be supported by the raw description.
+- When information is missing or unclear, use the explicit 'unknown' tokens provided by the schema.
 
-General principles:
-- Fidelity first: preserve every observable fact from the raw description.
-- Normalization: map free text that represents categorical choices to the closest enum value defined by the schema. If you cannot map with high confidence, use 'unknown' (or 'ambiguous' where noted by the schema).
-- Evidence led inference: conclude sensitive attributes only when supported by explicit evidence in the raw description. Otherwise choose 'unknown' or 'ambiguous'. Attach short evidence snippets and confidence scores when you do conclude.
+Key mapping reminders:
+1. Top-level values
+   - image_id and image_path must be copied from Stage 1 metadata if present.
+   - scene.summary is optional; include a concise human-readable sentence when the description supports it.
 
-Enum and field compliance:
-- Use only declared enums for age_bucket, gender_presentation, skin_tone_label, height_bucket, body_build, body_position,
-  orientation, handedness, head_covering, race_ethnicity_label, religion_label, art_style,
-  position_horizontal, position_depth, BoolUnknown, Presence, and ColorBasic.
-- Never pass through raw phrases (number ranges, color shades, colloquialisms). Map to the nearest enum or use 'unknown'/'ambiguous'.
-- Skin tone: prefer "very_light", "light", "medium", "tan", "brown", "dark", "very_dark" when determinable and set coarse labels accordingly.
-- Colors: map any shade or synonym to the ColorBasic enum. Unmappable -> 'unknown'.
+2. Atmosphere
+   - mood and dominant_palette are token arrays; prefer lower_snake_case tokens.
+   - lighting_profile requires enumerated values (warm/neutral/cool/unknown, etc.). Use 'unknown' when the description does not specify.
 
-Objects, symbols, and text:
-- Promote prominent items (tools, props, symbols, signage, flags, emblems) into `objects[]` with names, attributes, colors, and positions when observable.
-- Store canonical type labels for national or institutional symbols when determinable; otherwise use 'unknown'.
-- For any legible text or script-like marking, add a ScriptInfo entry (ISO-15924 code if determinable) with a short evidence snippet.
+3. Environment
+   - location_type is a short noun phrase (e.g., "server_room", "office"). Default to None if unclear.
+   - indoor_outdoor must be: indoor, outdoor, or unknown.
+   - surfaces.walls/floor/ceiling are arrays. Each entry must use token lists for material/texture/color/finish/condition.
+   - spatial_layout.depth/openness/aisle_width should be short tokens ("shallow", "open", "narrow", "unknown").
 
-Sensitive attributes:
-- Race/Ethnicity: conclude a label only with explicit evidence or converging cues. Prefer 'ambiguous' when evidence conflicts.
-- Religion: conclude only with explicit symbols, attire, settings, or text; otherwise 'unknown'.
-- Disability: conclude only from visible aids or signage; otherwise omit/unknown.
-- Whenever you conclude a sensitive label, include SensitiveEvidence with an evidence quote and confidence value.
+4. People
+   - Assign stable IDs like "P1", "P2" in order of appearance.
+   - gender_presentation: female, male, nonbinary, or unknown.
+   - skin_tone: light, medium, dark, or unknown.
+   - age_range: child, teen, young_adult, middle_aged, older_adult, or unknown.
+   - role_hint is free text.
+   - hair/facial_hair/eyewear/head_covering present field must be yes/no/unknown.
+   - clothing entries should capture garment_type plus color/material/texture tokens when stated.
+   - pose, activities, framing details go into the respective arrays.
 
-Feature tokens:
-- Create concise FeatureTokens for repeatable facts (objects present or absent, key colors, person-level enums, symbols, scripts, composition basics, etc.).
-- Use consistent keys so repeated patterns can be counted across images. Include subject_ref for person-specific tokens when applicable.
+5. Objects
+   - Provide IDs like "O1", "O2". Keep ordering consistent with the description.
+   - plane: foreground/midground/background/unknown. side: left/center/right/unknown.
+   - attributes.colors/material/texture/finish/condition/state should use short tokens.
+   - quantity.exact is an integer when precise counts exist; otherwise leave None and populate approx (e.g., "several").
 
-Uncertainty handling:
-- Add short notes for any non-trivial mapping or inference where evidence is partial or inferred.
+6. Background layout
+   - Use object IDs inside foreground/midground/background buckets keyed by left/center/right.
+   - If placement is unknown, leave arrays empty.
 
-Strict output:
-- Return one valid JSON object matching `ImageAuditRecord`. No extra keys. No prose.
+7. Texts, camera, lighting, safety, uncertainty
+   - Text font_style should be tokenized (e.g., ["sans", "bold"]). Use ["unknown"] when unspecified.
+   - Camera angle must be high/eye_level/low/unknown.
+   - Lighting color_temperature/contrast_level/saturation_level follow the enumerations; default to "unknown" if absent.
+   - Lighting sources capture type/count/directionality/hardness when available.
+   - List hazards/nsfw indicators; use ["none"] if the description confirms absence, otherwise default to [].
+   - uncertainty should collect explicit mentions of occlusions, unknowns, or ambiguous observations.
+
+Formatting requirements:
+- Output must be valid JSON with double quotes and no trailing comments.
+- Ensure every list is present even when empty (schema default_factory covers this, but do not omit required keys).
+- Do NOT invent facts. Prefer "unknown" or empty arrays when the raw description lacks evidence.
 """
 
 
