@@ -10,6 +10,7 @@ def init_scenario_root(scenario_id: str, scenario_text: str) -> dict:
     root = SCENARIOS_BASE / scenario_id
     subfolders = {
         "images": root / "images",
+        "raw_descriptions": root / "raw_descriptions",
         "descriptions": root / "descriptions",
         "questions": root / "questions",
         "biases": root / "biases",
