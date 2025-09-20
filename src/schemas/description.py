@@ -1,218 +1,215 @@
 import base64
 import mimetypes
-from typing import List, Optional, Dict, Literal
-from pydantic import BaseModel, Field, conint, confloat
+from typing import List, Optional, Literal
+from pydantic import BaseModel, Field
 
-# ===== Enums =====
-AgeBucket = Literal["child","teen","young_adult","middle_aged","older_adult","unknown"]
-GenderPresentation = Literal["female","male","nonbinary","ambiguous","unknown"]
-SkinToneLabel = Literal["very_light","light","medium","tan","brown","dark","very_dark","unknown"]
-Position2D = Literal["left","center","right","unknown"]
-DepthPlane = Literal["foreground","midground","background","unknown"]
-Presence = Literal["present","absent","unknown"]
-BoolUnknown = Literal["yes","no","unknown"]
 
-HeightBucket = Literal["very_short","short","average","tall","very_tall","unknown"]
-BodyBuild = Literal["slender","average","heavyset","muscular","pregnant_presenting","unknown"]
-BodyPosition = Literal["standing","sitting","kneeling","lying","crouching","running","walking","unknown"]
-Orientation = Literal["facing_camera","profile_left","profile_right","back_to_camera","three_quarter_left","three_quarter_right","unknown"]
-Handedness = Literal["left","right","both","unknown"]
-ArtStyle = Literal["photorealistic","illustration","3d_render","cartoon_anime","oil_painting","sketch","other","unknown"]
+ColorTemperature = Literal["warm", "neutral", "cool", "unknown"]
+ContrastLevel = Literal["low", "medium", "high", "unknown"]
+SaturationLevel = Literal["muted", "neutral", "vivid", "unknown"]
+IndoorOutdoor = Literal["indoor", "outdoor", "unknown"]
+GenderPresentation = Literal["female", "male", "nonbinary", "unknown"]
+SkinTone = Literal["light", "medium", "dark", "unknown"]
+AgeRange = Literal["child", "teen", "young_adult", "middle_aged", "older_adult", "unknown"]
+PresenceTernary = Literal["yes", "no", "unknown"]
+GazeDirection = Literal["left", "center", "right", "up", "down", "unknown"]
+OrientationType = Literal["front", "three_quarter", "profile", "back", "unknown"]
+OcclusionState = Literal["none", "partial", "significant", "unknown"]
+PlaneType = Literal["foreground", "midground", "background", "unknown"]
+SideType = Literal["left", "center", "right", "unknown"]
+CameraAngle = Literal["high", "eye_level", "low", "unknown"]
+DepthOfField = Literal["shallow", "moderate", "deep", "unknown"]
+LightingHardness = Literal["soft", "medium", "hard", "unknown"]
 
-RaceEthnicityLabel = Literal[
-    "white","black","east_asian","southeast_asian","indian","middle_eastern","latino_hispanic",
-    "other","ambiguous","unknown"
-]
-ReligionLabel = Literal[
-    "christian","muslim","jewish","hindu","buddhist","sikh","secular_none","other","unknown"
-]
-HeadCovering = Literal["none","hijab","niqab","turban","kippah","headscarf","hat","helmet","other","unknown"]
 
-ColorBasic = Literal[
-    "black","white","gray","red","orange","yellow","green","blue","purple","pink",
-    "brown","beige","tan","navy","maroon","gold","silver","teal","cyan","magenta",
-    "cream","unknown"
-]
+class LightingProfile(BaseModel):
+    color_temperature: ColorTemperature = "unknown"
+    contrast_level: ContrastLevel = "unknown"
+    saturation_level: SaturationLevel = "unknown"
+    aesthetic_qualities: List[str] = Field(default_factory=list)
 
-_ALLOWED = {
-    "black","white","gray","red","orange","yellow","green","blue","purple","pink",
-    "brown","beige","tan","navy","maroon","gold","silver","teal","cyan","magenta","cream"
-}
 
-_SYNONYMS = {
-    "burgundy":"maroon","deep burgundy":"maroon","wine":"maroon",
-    "navy blue":"navy","dark blue":"navy",
-    "sky blue":"blue","royal blue":"blue","midnight blue":"navy",
-    "charcoal":"gray","light gray":"gray","dark gray":"gray","silver gray":"silver",
-    "ivory":"cream","off-white":"cream",
-    "rose":"pink","hot pink":"pink","fuchsia":"magenta",
-    "aqua":"cyan","turquoise":"teal",
-    "olive":"green","lime":"green","forest green":"green",
-    "amber":"yellow","golden":"gold",
-    "tan brown":"tan","khaki":"tan",
-    "beige tan":"beige","sand":"beige",
-    "crimson":"red","scarlet":"red","cherry red":"red",
-    "lavender":"purple","violet":"purple",
-    "bronze":"brown","copper":"brown",
-}
+class AtmosphereInfo(BaseModel):
+    mood: List[str] = Field(default_factory=list)
+    dominant_palette: List[str] = Field(default_factory=list)
+    lighting_profile: LightingProfile = LightingProfile()
 
-def normalize_color(text: Optional[str]) -> ColorBasic:
-    if not text:
-        return "unknown"  # type: ignore[return-value]
-    t = text.strip().lower()
-    if t in _ALLOWED:
-        return t  # type: ignore[return-value]
-    if t in _SYNONYMS:
-        return _SYNONYMS[t]  # type: ignore[return-value]
-    for prefix in ("dark ","light ","deep ","soft ","muted ","bright "):
-        if t.startswith(prefix):
-            base = t[len(prefix):]
-            if base in _ALLOWED:
-                return base  # type: ignore[return-value]
-            if base in _SYNONYMS:
-                return _SYNONYMS[base]  # type: ignore[return-value]
-    return "unknown"  # type: ignore[return-value]
 
-# ===== Schema =====
-class RoleEvidence(BaseModel):
-    role: str
-    confidence: confloat(ge=0, le=1)
-    evidence: List[str] = Field(default_factory=list)
+class SurfaceDetail(BaseModel):
+    material: List[str] = Field(default_factory=list)
+    texture: List[str] = Field(default_factory=list)
+    color: List[str] = Field(default_factory=list)
+    finish: List[str] = Field(default_factory=list)
+    condition: List[str] = Field(default_factory=list)
+    notes: Optional[str] = None
 
-class SensitiveEvidence(BaseModel):
-    label: str
-    confidence: confloat(ge=0, le=1)
-    evidence: List[str] = Field(default_factory=list)
-    policy: str = Field("evidence_only")
 
-class ScriptInfo(BaseModel):
-    iso15924: Optional[str] = None
-    name: Optional[str] = None
-    confidence: confloat(ge=0, le=1) = 0.0
-    evidence: Optional[str] = None
+class SurfaceBundle(BaseModel):
+    walls: List[SurfaceDetail] = Field(default_factory=list)
+    floor: List[SurfaceDetail] = Field(default_factory=list)
+    ceiling: List[SurfaceDetail] = Field(default_factory=list)
 
-class Person(BaseModel):
-    person_id: str
-    age_bucket: AgeBucket
-    gender_presentation: GenderPresentation
-    skin_tone_label: SkinToneLabel = "unknown"
-    mst_skin_tone: Optional[conint(ge=1, le=10)] = None
-    fitzpatrick_type: Optional[conint(ge=1, le=6)] = None
 
-    height_bucket: HeightBucket = "unknown"
-    body_build: BodyBuild = "unknown"
-    body_position: BodyPosition = "unknown"
-    orientation: Orientation = "unknown"
-    handedness: Handedness = "unknown"
+class SpatialLayout(BaseModel):
+    depth: Optional[str] = None
+    openness: Optional[str] = None
+    aisle_width: Optional[str] = None
 
-    hair: Optional[str] = None
-    eyewear: str = "unknown"
-    facial_hair: Optional[str] = None
-    head_covering: HeadCovering = "unknown"
 
-    clothing_items: List[str] = Field(default_factory=list)
-    accessories: List[str] = Field(default_factory=list)
-    visible_tattoos: BoolUnknown = "unknown"
-    jewelry: List[str] = Field(default_factory=list)
+class EnvironmentInfo(BaseModel):
+    location_type: Optional[str] = None
+    indoor_outdoor: IndoorOutdoor = "unknown"
+    time_of_day_hint: Optional[str] = None
+    weather: Optional[str] = None
+    surfaces: SurfaceBundle = SurfaceBundle()
+    spatial_layout: SpatialLayout = SpatialLayout()
 
-    race_ethnicity_label: RaceEthnicityLabel = "unknown"
-    race_ethnicity_evidence: Optional[SensitiveEvidence] = None
-    religion_label: ReligionLabel = "unknown"
-    religion_evidence: Optional[SensitiveEvidence] = None
-    disability_indicators: List[str] = Field(default_factory=list)
-    disability_evidence: Optional[SensitiveEvidence] = None
-    language_script: Optional[ScriptInfo] = None
 
-    position_horizontal: Position2D = "unknown"
-    position_depth: DepthPlane = "unknown"
+class GroomingInfo(BaseModel):
+    present: PresenceTernary = "unknown"
+    style: List[str] = Field(default_factory=list)
+    color: List[str] = Field(default_factory=list)
 
-    posture: Optional[str] = None
-    expression: Optional[str] = None
-    role_inferred: Optional[RoleEvidence] = None
-    skin_tone_notes: Optional[str] = None
 
-class ObjectItem(BaseModel):
-    name_raw: str
-    name_canonical: Optional[str] = None
-    attributes: Dict[str, str] = Field(default_factory=dict)
-    count: int = 1
+class EyewearInfo(BaseModel):
+    present: PresenceTernary = "unknown"
+    type: List[str] = Field(default_factory=list)
+    frame_color: List[str] = Field(default_factory=list)
 
-    colors: List[ColorBasic] = Field(default_factory=list)
-    materials: List[str] = Field(default_factory=list)
-    logo_text: Optional[str] = None
-    brand_name: Optional[str] = None
-    text_scripts: List[ScriptInfo] = Field(default_factory=list)
 
-    position_horizontal: Position2D = "unknown"
-    position_depth: DepthPlane = "unknown"
+class HeadCoveringInfo(BaseModel):
+    present: PresenceTernary = "unknown"
+    type: List[str] = Field(default_factory=list)
+    color: List[str] = Field(default_factory=list)
 
-class EnvironmentElement(BaseModel):
-    label_raw: str
-    label_canonical: Optional[str] = None
-    attributes: Dict[str, str] = Field(default_factory=dict)
-    colors: List[ColorBasic] = Field(default_factory=list)
-    position_horizontal: Position2D = "unknown"
-    position_depth: DepthPlane = "unknown"
 
-class Atmosphere(BaseModel):
-    dominant_colors: List[ColorBasic] = Field(default_factory=list)
-    color_temperature: Optional[str] = None
-    contrast_level: Optional[str] = None
-    saturation_level: Optional[str] = None
-    mood: Optional[str] = None
-    aesthetics: List[str] = Field(default_factory=list)
+class GarmentInfo(BaseModel):
+    garment_type: Optional[str] = None
+    color: List[str] = Field(default_factory=list)
+    material: List[str] = Field(default_factory=list)
+    texture: List[str] = Field(default_factory=list)
+    fit_style: List[str] = Field(default_factory=list)
+    pattern: List[str] = Field(default_factory=list)
+    condition: List[str] = Field(default_factory=list)
+    notes: Optional[str] = None
 
-class CompositionLighting(BaseModel):
-    camera_angle: Optional[str] = None
-    framing: Optional[str] = None
-    focal_length_feel: Optional[str] = None
-    depth_of_field: Optional[str] = None
-    symmetry_or_leading_lines: Optional[str] = None
-    light_sources: Optional[str] = None
-    shadow_characteristics: Optional[str] = None
-    art_style: ArtStyle = "unknown"
 
-class Safety(BaseModel):
-    safety_indicators: List[str] = Field(default_factory=list)
-    nsfw_indicators: List[str] = Field(default_factory=list)
-    watermark_present: BoolUnknown = "unknown"
+class PersonInfo(BaseModel):
+    id: Optional[str] = None
+    gender_presentation: GenderPresentation = "unknown"
+    skin_tone: SkinTone = "unknown"
+    age_range: AgeRange = "unknown"
+    role_hint: Optional[str] = None
+    hair: GroomingInfo = GroomingInfo()
+    facial_hair: GroomingInfo = GroomingInfo()
+    eyewear: EyewearInfo = EyewearInfo()
+    head_covering: HeadCoveringInfo = HeadCoveringInfo()
+    clothing: List[GarmentInfo] = Field(default_factory=list)
+    pose: List[str] = Field(default_factory=list)
+    activities: List[str] = Field(default_factory=list)
+    gaze_direction: GazeDirection = "unknown"
+    orientation: OrientationType = "unknown"
+    occlusions: OcclusionState = "unknown"
+    notes: Optional[str] = None
 
-class Uncertainty(BaseModel):
-    statements: List[str] = Field(default_factory=list)
 
-class Setting(BaseModel):
-    indoor_outdoor: str = "unknown"
-    location_hints: List[str] = Field(default_factory=list)
-    environment_elements: List[EnvironmentElement] = Field(default_factory=list)
+class QuantityInfo(BaseModel):
+    exact: Optional[int] = None
+    approx: Optional[str] = None
 
-class FeatureToken(BaseModel):
-    group: str
-    key: str
-    value: str
-    subject_ref: Optional[str] = None
-    location: Optional[str] = None
-    evidence: Optional[str] = None
+
+class ObjectAttributes(BaseModel):
+    colors: List[str] = Field(default_factory=list)
+    material: List[str] = Field(default_factory=list)
+    texture: List[str] = Field(default_factory=list)
+    finish: List[str] = Field(default_factory=list)
+    condition: List[str] = Field(default_factory=list)
+    state: List[str] = Field(default_factory=list)
+    size_class: Optional[str] = None
+
+
+class ObjectInfo(BaseModel):
+    id: Optional[str] = None
+    type: Optional[str] = None
+    subtype: Optional[str] = None
+    plane: PlaneType = "unknown"
+    side: SideType = "unknown"
+    attributes: ObjectAttributes = ObjectAttributes()
+    quantity: QuantityInfo = QuantityInfo()
+    notes: Optional[str] = None
+
+
+class SideBuckets(BaseModel):
+    left: List[str] = Field(default_factory=list)
+    center: List[str] = Field(default_factory=list)
+    right: List[str] = Field(default_factory=list)
+
+
+class BackgroundLayout(BaseModel):
+    foreground: SideBuckets = SideBuckets()
+    midground: SideBuckets = SideBuckets()
+    background: SideBuckets = SideBuckets()
+
+
+class SceneText(BaseModel):
+    content: Optional[str] = None
+    font_style: List[str] = Field(default_factory=list)
+    plane: PlaneType = "unknown"
+    side: SideType = "unknown"
+    legibility: Optional[str] = None
+    notes: Optional[str] = None
+
+
+class CameraInfo(BaseModel):
+    angle: CameraAngle = "unknown"
+    perspective: Optional[str] = None
+    focal_length: Optional[str] = None
+    depth_of_field: DepthOfField = "unknown"
+    framing: List[str] = Field(default_factory=list)
+    crop: List[str] = Field(default_factory=list)
+
+
+class LightingSourceInfo(BaseModel):
+    type: Optional[str] = None
+    count: Optional[str] = None
+    directionality: List[str] = Field(default_factory=list)
+    hardness: LightingHardness = "unknown"
+
+
+class LightingInfo(BaseModel):
+    color_temperature: ColorTemperature = "unknown"
+    contrast_level: ContrastLevel = "unknown"
+    saturation_level: SaturationLevel = "unknown"
+    sources: List[LightingSourceInfo] = Field(default_factory=list)
+    shadows: List[str] = Field(default_factory=list)
+    artifacts: List[str] = Field(default_factory=list)
+
+
+class SafetyInfo(BaseModel):
+    hazards: List[str] = Field(default_factory=list)
+    nsfw: List[str] = Field(default_factory=list)
+
+
+class SceneInfo(BaseModel):
+    summary: Optional[str] = None
+    atmosphere: AtmosphereInfo = AtmosphereInfo()
+    environment: EnvironmentInfo = EnvironmentInfo()
+    people: List[PersonInfo] = Field(default_factory=list)
+    objects: List[ObjectInfo] = Field(default_factory=list)
+    background: BackgroundLayout = BackgroundLayout()
+    texts: List[SceneText] = Field(default_factory=list)
+    camera: CameraInfo = CameraInfo()
+    lighting: LightingInfo = LightingInfo()
+    safety: SafetyInfo = SafetyInfo()
+    uncertainty: List[str] = Field(default_factory=list)
+
 
 class ImageAuditRecord(BaseModel):
     image_id: Optional[str] = None
-    source: Optional[str] = None
+    image_path: Optional[str] = None
+    scene: SceneInfo = SceneInfo()
 
-    scene_summary: List[str] = Field(default_factory=list)
-    atmosphere: Atmosphere = Atmosphere()
-    setting: Setting = Setting()
-    people: List[Person] = Field(default_factory=list)
-    objects: List[ObjectItem] = Field(default_factory=list)
-    legible_text: List[str] = Field(default_factory=list)
-    scripts_detected: List[ScriptInfo] = Field(default_factory=list)
-    actions_relationships: List[str] = Field(default_factory=list)
-    composition_lighting: CompositionLighting = CompositionLighting()
-    safety: Safety = Safety()
-    uncertainty: Uncertainty = Uncertainty()
 
-    source_model_hint: Optional[str] = None
-    feature_tokens: List[FeatureToken] = Field(default_factory=list)
-
-# Optional helper (used by tool when describing from file)
 def file_to_data_url(path: str) -> str:
     mime, _ = mimetypes.guess_type(path)
     if not mime:
