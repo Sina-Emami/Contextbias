@@ -1,7 +1,6 @@
-from pathlib import Path
+﻿from pathlib import Path
 from datetime import datetime
 import json
-import requests
 
 SCENARIOS_BASE = Path("data/scenarios")
 
@@ -12,10 +11,7 @@ def init_scenario_root(scenario_id: str, scenario_text: str) -> dict:
         "images": root / "images",
         "raw_descriptions": root / "raw_descriptions",
         "descriptions": root / "descriptions",
-        "questions": root / "questions",
         "biases": root / "biases",
-        "research": root / "research",
-        "consensus": root / "consensus",
     }
     for p in [root, *subfolders.values()]:
         p.mkdir(parents=True, exist_ok=True)
@@ -34,9 +30,3 @@ def init_scenario_root(scenario_id: str, scenario_text: str) -> dict:
         "manifest_path": root / "manifest.json",
         "images_info_path": subfolders["images"] / "images_info.json",
     }
-
-
-def download_image(url: str, filepath: Path) -> None:
-    r = requests.get(url, timeout=60)
-    r.raise_for_status()
-    filepath.write_bytes(r.content)
