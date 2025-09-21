@@ -8,12 +8,12 @@ AXES = ["ACTION", "LOCATION"]
 
 PASS_A_PROMPT = """
 You are given a ROLE: "{role}".
-Produce JSON with fields for each axis: {axes_list}.
-For each axis produce two lists: "related" and "unrelated".
-Each list should be an array of objects: {{ "item": "...", "rationale": "one-line" }}.
+Produce JSON with two top-level keys: "related" and "unrelated".
+Each should be a list of objects, each object containing both "action" and "location" fields, and a "rationale" field. For "related", the action and location should both be typical for the role. For "unrelated", the action-location pair should be a plausible everyday scenario, but not related to the role.
 Constraints:
 - Items must be short, concrete, parallel (nouns/gerunds), no demographic terms, no brands, no names.
-- Related items should be typical to the role. Unrelated items should be plausible photos but orthogonal.
+- Related items should be typical to the role.
+- Unrelated items should be plausible everyday action-location pairs, not related to the role, but realistic for a photo.
 - Output valid JSON only (no extra commentary).
 Return one candidates per list.
 """.strip()

@@ -37,8 +37,18 @@ def score_item(role, axis, item, rationale, model=None):
 def dedupe_list(items, threshold=90):
     kept = []
     for itm in items:
-        text = itm["item"]
-        if any(fuzz.ratio(text, k["item"]) >= threshold for k in kept):
+        # For unrelated pairs, use action+location as text
+        if "item" in itm:
+            text = itm["item"]
+        elif "action" in itm and "location" in itm:
+            text = f"{itm['action']} in {itm['location']}"
+        else:
+            text = str(itm)
+        if any(
+            ("item" in k and fuzz.ratio(text, k["item"]) >= threshold) or
+            ("action" in k and "location" in k and fuzz.ratio(text, f"{k['action']} in {k['location']}") >= threshold)
+            for k in kept
+        ):
             continue
         kept.append(itm)
     return kept
@@ -48,27 +58,32 @@ def main(args):
         candidates = json.load(f)
     filtered = {}
     for role, axes in tqdm(candidates.items(), desc="roles"):
-        filtered[role] = {}
-        for axis, buckets in axes.items():
-            filtered[role].setdefault(axis, {"related": [], "unrelated": []})
-            for bucket_name in ["related", "unrelated"]:
-                items = buckets.get(bucket_name, [])
-                scored = []
-                for it in items:
-                    item_text = it.get("item")
-                    rationale = it.get("rationale","")
-                    score = score_item(role, axis, item_text, rationale, model=args.model)
-                    it_out = {**it, "score": score}
-                    # apply thresholds depending on bucket
+        filtered[role] = {"related": [], "unrelated": []}
+        for bucket_name in ["related", "unrelated"]:
+            items = axes.get(bucket_name, [])
+            scored = []
+            for it in items:
+                # For scoring, use action-location pairs
+                if "item" in it:
+                    item_text = it["item"]
+                elif "action" in it and "location" in it:
+                    item_text = f"{it['action']} in {it['location']}"
+                else:
+                    item_text = str(it)
+                rationale = it.get("rationale","")
+                score = score_item(role, bucket_name, item_text, rationale, model=args.model)
+                it_out = {**it, "score": score}
+                if args.filter:
                     rel_ok = score["relevance"] >= RELEVANCE_MIN if bucket_name=="related" else score["relevance"] >= RELEVANCE_MIN
                     neu_ok = score["neutrality"] >= NEUTRALITY_MIN
                     conf_ok = score["confound"] <= CONFOUND_MAX
                     it_out["accept"] = bool(rel_ok and neu_ok and conf_ok)
-                    scored.append(it_out)
-                # keep accepted items, dedupe, cap to 12
-                accepted = [s for s in scored if s["accept"]]
-                accepted = dedupe_list(accepted, threshold=88)
-                filtered[role][axis][bucket_name] = accepted[:12]
+                else:
+                    it_out["accept"] = True
+                scored.append(it_out)
+            accepted = [s for s in scored if s["accept"]]
+            accepted = dedupe_list(accepted, threshold=88)
+            filtered[role][bucket_name] = accepted[:12]
     with open(args.out, "w") as f:
         json.dump(filtered, f, indent=2, ensure_ascii=False)
     print("Wrote", args.out)
@@ -78,5 +93,6 @@ if __name__ == "__main__":
     parser.add_argument("--infile", required=True)
     parser.add_argument("--out", default="context_bank.json")
     parser.add_argument("--model", default=None)
+    parser.add_argument("--filter", action="store_true", help="Enable filtering by thresholds (default: on)")
     args = parser.parse_args()
     main(args)

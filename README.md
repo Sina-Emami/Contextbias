@@ -1,196 +1,127 @@
-# Bias Detection Multimodal (CrewAI)
 
-A step-by-step, **multi-agent** pipeline built with **CrewAI** that:
+## Image generation pipeline
 
-1. **Generates images** from a scenario
-2. **Describes each image** in a structured JSON schema
-3. **Aggregates descriptions** to detect **potential biases** (repetition, roles, attributes, symbols, etc.)
-4. **Writes globally fact-checkable questions** from the bias report (uses **Replicate OSS-20B**)
-5. **Fact-checks** those questions on the web (Serper + scraping, **gpt-5-mini**)
-6. Gets a **5-LLM consensus** (via Replicate) on “what must be in the image”
-7. (Planned) **Filters & scores** biases using fact-check + consensus
+The pipeline consists of the following main Python scripts (see `image_generation/ctxbank/`):
 
-The pipeline is designed to run **incrementally**—you can execute up to any step and verify outputs before wiring the next one.
+### 1. Candidate Generation
+**File:** `generate_candidates.py`
 
----
+**Description:**
+Generates candidate action-location pairs for each role, split into `related` and `unrelated` lists.
 
-**Outputs** are written under: `data/scenarios/<SCENARIO_ID>/`
+**Parameters:**
+- `--roles <roles.json>`: Path to JSON file containing list of roles
+- `--out <candidates.json>`: Output file (default: `candidates.json`)
 
-```
-data/scenarios/<ID>/
-├─ manifest.json
-├─ images/
-│  ├─ image_<8hex>.png
-│  └─ images_info.json
-├─ descriptions/
-│  └─ <image_id>.json
-├─ biases/
-│  ├─ repeat_summary_full.json
-│  └─ bias_report.json
-├─ questions/
-│  └─ questions.json
-├─ research/
-│  ├─ facts.jsonl
-│  └─ summary.txt
-└─ consensus/
-   └─ consensus_output.json
-```
-
----
-
-## Requirements
-
-* Python **3.10+** (tested on 3.12)
-* **CrewAI** ≥ 0.76
-* **OpenAI** Python SDK ≥ 1.35
-* **Pydantic v2**
-* **python-dotenv**
-* **requests**
-* **replicate** (used for OSS-20B + multiple models in consensus)
-* **crewai-tools** (for Serper/Scraper if used)
-
-### Install with `pip`
-
+**Example:**
 ```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-source .venv/bin/activate
-
-pip install -r requirements.txt
+python image_generation/ctxbank/generate_candidates.py --roles roles.json --out candidates.json
 ```
 
-### Install with `uv`
+### 2. Judge and Filter Candidates
+**File:** `judge_and_filter.py`
 
+**Description:**
+Scores and filters candidate action-location pairs for each role, using LLM-based scoring and deduplication.
+
+**Parameters:**
+- `--infile <candidates.json>`: Input file from previous step
+- `--out <context_bank.json>`: Output file (default: `context_bank.json`)
+- `--model <model_name>`: (Optional) Specify LLM model
+- `--filter`: Enable filtering by thresholds
+
+**Example:**
 ```bash
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
+python image_generation/ctxbank/judge_and_filter.py --infile candidates.json --out context_bank.json --filter
 ```
 
-> If you see `ModuleNotFoundError` for `dotenv` or `replicate`, ensure they’re in `requirements.txt`, then reinstall.
+### 3. Combine Prompts
+**File:** `combine_prompts.py`
 
----
+**Description:**
+Generates prompts for image generation from the filtered context bank, using multiple templates and deduplicating prompts by string.
 
-## Environment Variables
+**Parameters:**
+(No parameters; reads `context_bank.json` and writes `prompts_combined.json`)
 
-Create `.env` (copy from `.env.example`) and fill:
-
-```env
-# Required
-# Copy this to .env and fill in your key(s)
-OPENAI_API_KEY="" 
-IMAGE_MODEL=Dall-e3
-AGENT_LLM=gpt-5-mini
-REPLICATE_API_KEY=""
-BIAS_REPLICATE_MODEL=replicate/openai/gpt-oss-20b
-BIAS_REPLICATE_TEMPERATURE=0.0
-SUMMARY_LLM=gpt-5-mini
-SERPER_API_KEY=""
-```
-
-**Replicate model slugs**
-
-* CrewAI/LiteLLM LLM string: `replicate/openai/gpt-oss-20b`
-* Direct `replicate.run()` in tools: `openai/gpt-oss-20b`
-
-If OSS-20B returns “No output.”, verify token & slug match the usage above.
-
----
-
-## Usage
-
-`src/app.py` uses **hardcoded inputs** by design:
-
-```python
-SCENARIO   = "Prompt"
-SCENARIO_ID= "Prompt_id"
-N_IMAGES   = 10   # set 10 for the full run
-```
-
-Run:
-
+**Example:**
 ```bash
-python -m src.app
+python image_generation/ctxbank/combine_prompts.py
 ```
 
-### Step-by-Step (toggle in `__main__`)
+### 4. Image Generation
+**File:** `generate_images_from_prompts.py`
 
-Inside `app.py`, uncomment steps gradually:
+**Description:**
+Generates images using Stable Diffusion XL from the deduplicated prompts.
 
-```python
-paths = run_generate_images(SCENARIO, SCENARIO_ID, n=N_IMAGES)  # Step 1
-run_describe_images(paths)                                      # Step 2
+**Parameters:**
+- `--prompts <prompts_combined.json>`: Path to prompts file (default: `prompts_combined.json`)
+- `--output <output_dir>`: Directory to save images (default: `generated_images`)
+- `--max_images <N>`: Maximum number of images to generate (optional)
 
-run_analyze_bias(paths)                                       # Step 3
-qs = run_generate_questions(paths)                            # Step 4a (OSS-20B)
-run_fact_check(paths, qs)                                     # Step 4b (search + scrape)
-run_consensus(paths)                                          # Step 5 (Replicate multi-model)
+**Example:**
+```bash
+python image_generation/ctxbank/generate_images_from_prompts.py --prompts prompts_combined.json --output generated_images --max_images 100
 ```
-
-**Sanity checks after each step:**
-
-* **Step 1** → `images/` has PNGs and `images_info.json`
-* **Step 2** → `descriptions/` has one `ImageAuditRecord` per image
-* **Step 3** → `biases/` has `repeat_summary_full.json` + `bias_report.json`
-* **Step 4a** → `questions/questions.json`
-* **Step 4b** → `research/facts.jsonl` + `research/summary.txt`
-* **Step 5** → `consensus/consensus_output.json`
 
 ---
 
 ## How the Pipeline Works
 
-1. **Image Generation**
+1. **Candidate Generation**
+   - For each role, generate lists of `related` and `unrelated` action-location pairs using LLM.
+   - Output: `candidates.json`
 
-   * Agent: *Visionary Image Generator*
-   * Tool: `generate_image` (OpenAI Images API)
-   * Output: PNGs + `images_info.json` (stores `filename`, **relative** `relpath` to scenario root)
+2. **Judging and Filtering**
+   - Score each candidate pair for relevance, neutrality, and confound using LLM.
+   - Filter and deduplicate pairs based on thresholds.
+   - Output: `context_bank.json`
 
-2. **Image Description (Structured)**
+3. **Prompt Combination**
+   - For each role, generate prompts using three templates:
+     - T0: "a photo of a {ROLE}"
+     - T1: "a photo of a {ROLE} in a {LOCATION}"
+     - T2: "a photo of a {ROLE} {ACTION} in a {LOCATION}"
+   - Prompts are deduplicated by string.
+   - Output: `prompts_combined.json`
 
-   * Agent: *Image Description Structuring Analyst*
-   * Tools: `DescribeImageFromFile` (data URL) and `DescribeImageFromURL`
-   * Model: **gpt-5-mini** (vision chat)
-   * Output: strict `ImageAuditRecord` JSON per image
-
-3. **Bias Analysis**
-
-   * Deterministic aggregation of people/objects/environment tokens & phrases
-   * Reasoner ( **Replicate OSS-20B** ) produces a **BiasReport** (findings + notes)
-   * Output: `biases/repeat_summary_full.json`, `biases/bias_report.json`
-
-4. **Question Generation & Fact-Checking**
-
-   * **Writer** (OSS-20B): creates **global, atomic, verifiable** questions
-   * **Fact Checker** (**gpt-5-mini** + **Serper** + **Scraper**): answers with % / one-word / YES-NO and a citation
-   * Output: `questions/questions.json`, `research/facts.jsonl`, `research/summary.txt`
-
-5. **5-LLM Consensus**
-
-   * Tool `get_expected_elements_replicate` calls multiple Replicate models to list **required elements**
-   * Aggregator keeps elements appearing in **≥70%** of models
-   * Output: `consensus/consensus_output.json`:
-
-     ```json
-     {
-       "prompt": "...",
-       "consensus_elements": ["..."],
-       "individual_predictions": [
-         {"model_name": "moonshotai/kimi-k2-instruct", "required_elements": [...]},
-         {"model_name": "meta/meta-llama-3-8b-instruct", "required_elements": [...]},
-         {"model_name": "deepseek-ai/deepseek-v3", "required_elements": [...]},
-         {"model_name": "ibm-granite/granite-3.3-8b-instruct", "required_elements": [...]},
-         {"model_name": "microsoft/phi-3-mini-4k-instruct:...", "required_elements": [...]}
-       ]
-     }
-     ```
+4. **Image Generation**
+   - For each prompt, generate images using Stable Diffusion XL.
+   - Images are saved in subfolders per prompt.
+   - Output: `generated_images/`
 
 ---
 
+## Example End-to-End Run
 
-## Things To Keep in Mind
+```bash
+# 1. Generate candidates
+python image_generation/ctxbank/generate_candidates.py --roles roles.json --out candidates.json
 
-- I should add metric regarding hallucination rate for the time it is doing the research.
-- Not able to detect the right and left correctly by VLM.
-- Need to make sure about the output of each LLM for the Consensus step, might be a problem with Replicate package and agent hallucinating the output of the merge Consensus.
-- Work more on the categorising the thing in the image for evaluation (src/tool/vision_description_tool.py)
+# 2. Judge and filter candidates
+python image_generation/ctxbank/judge_and_filter.py --infile candidates.json --out context_bank.json --filter
+
+# 3. Combine prompts
+python image_generation/ctxbank/combine_prompts.py
+
+# 4. Generate images
+python image_generation/ctxbank/generate_images_from_prompts.py --prompts prompts_combined.json --output generated_images --max_images 100
+```
+
+---
+
+## Output Files
+
+- `candidates.json`: Action-location pairs for each role
+- `context_bank.json`: Filtered and scored pairs
+- `prompts_combined.json`: Deduplicated prompts for image generation
+- `generated_images/`: Folders containing generated images
+
+---
+
+## Notes
+
+- All prompts are deduplicated before image generation to avoid redundant outputs.
+- Each image is generated with multiple random seeds for diversity.
+- The pipeline is modular; you can run each step independently and inspect outputs before proceeding.
