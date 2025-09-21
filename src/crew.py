@@ -1,4 +1,6 @@
 from crewai import Crew, Process
+from agents.summary_reporter import build_summary_report_agent
+from tasks.summary_report import build_summary_report_task
 from agents.generator import build_image_generator_agent
 from tasks.generate_images import build_generate_image_task
 from agents.describer import (
@@ -74,6 +76,12 @@ def build_question_writer_crew():
 def build_fact_checker_crew() -> Crew:
     agent = build_fact_checker_agent()
     task = build_fact_check_task(agent)
+    return Crew(agents=[agent], tasks=[task], process=Process.sequential, verbose=True)
+
+
+def build_summary_report_crew(counts_path) -> Crew:
+    agent = build_summary_report_agent()
+    task = build_summary_report_task(agent, counts_path)
     return Crew(agents=[agent], tasks=[task], process=Process.sequential, verbose=True)
 
 
