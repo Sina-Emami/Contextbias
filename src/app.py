@@ -7,6 +7,7 @@ from analysis.schema_counts import FrequencyCounterConfig, run_counts
 
 from utils.fs import init_scenario_root, download_image
 from crew import build_generation_crew, build_raw_description_crew, build_structured_description_crew, build_question_writer_crew, build_fact_checker_crew, build_bias_ingest_crew, build_bias_reasoning_crew
+from crew import build_summary_report_crew
 from agents.consensus import replicate_models
 from schemas.scenario import ImageGenerationOutput
 from schemas.description import ImageAuditRecord
@@ -327,6 +328,63 @@ def summarize_description_counts(paths: dict, output_filename: str = "counts.jso
     return output_path
 
 
+def run_summary_report(paths: dict, counts_path: Path | None = None, output_filename: str = "summary_report.json") -> Path | None:
+    """Use the summary-report crew to turn count aggregates into a structured JSON report."""
+    descriptions_dir: Path = paths["descriptions"]
+    summary_dir = descriptions_dir / "summary"
+    summary_dir.mkdir(parents=True, exist_ok=True)
+
+    target_counts = Path(counts_path) if counts_path else summary_dir / "counts.json"
+    if not target_counts.exists():
+        print(f"Counts JSON missing at {target_counts} - rebuilding counts summary.")
+        regenerated = summarize_description_counts(paths)
+        if regenerated is None:
+            print("Unable to create counts summary; skipping report generation.")
+            return None
+        target_counts = regenerated
+
+    report_path = Path(output_filename) if Path(output_filename).is_absolute() else summary_dir / output_filename
+
+    print(f"[Stage 2.2] Generating summary report -> {report_path}")
+    crew = build_summary_report_crew(target_counts)
+    result = crew.kickoff()
+
+    payload = None
+    if hasattr(result, "json_dict") and result.json_dict:
+        payload = result.json_dict
+    elif hasattr(result, "pydantic") and result.pydantic is not None:
+        candidate = result.pydantic
+        if hasattr(candidate, "model_dump"):
+            payload = candidate.model_dump()
+        elif hasattr(candidate, "dict"):
+            payload = candidate.dict()
+    else:
+        raw_value = getattr(result, "raw", None)
+        if isinstance(raw_value, str) and raw_value.strip():
+            try:
+                payload = json.loads(raw_value)
+            except Exception:
+                payload = raw_value.strip()
+        elif isinstance(result, str):
+            try:
+                payload = json.loads(result)
+            except Exception:
+                payload = result
+
+    if isinstance(payload, str):
+        try:
+            payload = json.loads(payload)
+        except Exception as exc:
+            raise RuntimeError(f"Summary report output was not valid JSON: {payload}") from exc
+
+    if payload is None:
+        raise RuntimeError("Summary report agent returned no usable data.")
+
+    report_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"   -> Summary report saved -> {report_path}")
+    return report_path
+
+
 def _parse_bias_report_output(result) -> BiasReport | dict | str:
     if isinstance(result, BiasReport):
         return result
@@ -554,7 +612,8 @@ if __name__ == "__main__":
     # generate_images(paths, SCENARIO, n=N_IMAGES)
     # capture_raw_descriptions(paths)
     # structure_descriptions(paths)
-    summarize_description_counts(paths)
+    # counts_path = summarize_description_counts(paths)
+    run_summary_report(paths)
     # run_analyze_bias(paths)
     # qs = run_generate_questions(paths)
     # run_fact_check(paths, qs)
