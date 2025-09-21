@@ -19,6 +19,7 @@ from schemas.bias import BiasReport
 load_dotenv()
 
 #  Hardcoded inputs per your request
+SCENARIO = "Technology industry workplace images."
 SCENARIO_ID = "Tech_SCN001"
 
 
@@ -63,6 +64,39 @@ def setup_scenario(scenario: str, scenario_id: str) -> dict:
         raise RuntimeError("OPENAI_API_KEY is not set. Put it in your environment or .env file.")
     paths = init_scenario_root(scenario_id, scenario)
     print(f"[Init] Scenario folders ready at: {paths['root']}")
+    return paths
+
+
+def setup_test_paths(raw_json_path: Path, output_root: Path | None = None) -> dict:
+    """Prepare folders so structuring & reporting can run against a canned raw JSON."""
+    raw_json_path = Path(raw_json_path).resolve()
+    if not raw_json_path.exists():
+        raise FileNotFoundError(f"Raw descriptions file not found: {raw_json_path}")
+    if raw_json_path.is_dir():
+        raise ValueError("Expected a raw descriptions JSON file, received a directory.")
+
+    raw_dir = raw_json_path.parent
+    root = Path(output_root).resolve() if output_root else raw_dir.parent
+    root.mkdir(parents=True, exist_ok=True)
+    descriptions_dir = root / "descriptions"
+    biases_dir = root / "biases"
+    images_dir = root / "images"
+
+    for path in (descriptions_dir, biases_dir, images_dir):
+        path.mkdir(parents=True, exist_ok=True)
+
+    paths = {
+        "root": root,
+        "raw_descriptions": raw_dir,
+        "descriptions": descriptions_dir,
+        "biases": biases_dir,
+        "images": images_dir,
+        "manifest_path": root / "manifest.test.json",
+        "images_info_path": images_dir / "images_info.json",
+    }
+
+    print(f"[Init] Test run configured. Outputs will be stored under: {root}")
+    print(f"       Using raw descriptions from: {raw_json_path}")
     return paths
 
 
@@ -371,9 +405,8 @@ def run_analyze_bias(paths: dict) -> None:
 
 
 if __name__ == "__main__":
-    paths = setup_scenario(SCENARIO, SCENARIO_ID)
-    # capture_raw_descriptions(paths)
-    # structure_descriptions(paths)
-    # counts_path = summarize_description_counts(paths)
-    run_summary_report(paths)
-    # run_analyze_bias(paths)
+    raw_json = Path("test_set/raw_descriptions/raw_descriptions.json")
+    paths = setup_test_paths(raw_json)
+    structure_descriptions(paths)
+    counts_path = summarize_description_counts(paths)
+    run_summary_report(paths, counts_path=counts_path)
