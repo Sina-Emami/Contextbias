@@ -18,10 +18,10 @@ Instructions:
    singular/plural, accent differences). Distinct garments, ages, skin tones, or activities must remain separate.
    Use semantic similarity and context to confirm equivalence; do not rely on hard-coded synonym lists.
 3. Produce database-friendly group keys. Prefer lower_snake_case tokens that reflect the concept, not a raw member.
-   Example pattern: "blue_family" for shades of blue, "upper_body_clothing" for garments covering torso.
+   Example pattern: "blue_palette" for shades of blue, "upper_body_clothing" for garments covering torso.
 4. Attribute handling occurs at the cohort level only. For each cohort, provide distributions for attributes such as
    color, material, pattern, texture, size, finish, or other relevant fields. Do NOT push attribute stats down to individual groups.
-   Group attribute families into generalized tokens (e.g., "blue_family", "organic_materials").
+   Group attribute families into generalized tokens (e.g., "blue_palette", "organic_materials").
 5. Compute normalized shares (0-1 floats) alongside raw counts for both groups and cohort-level attributes.
 6. Remove empty, unknown, or zero-count items from the final JSON.
 7. Document the grouping methodology in metadata so the process is auditable and extensible.
