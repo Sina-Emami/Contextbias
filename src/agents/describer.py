@@ -1,26 +1,48 @@
-
 import os
 from crewai import Agent
-from tools.vision_description_tool import (
-    describe_image_from_file_tool,
-    describe_image_from_url_tool,
-)
+from tools.vision_description_tool import describe_image_from_file_tool
 
 
-def build_image_describer_agent() -> Agent:
-    llm = os.getenv("DESCRIBER_LLM", "gpt-5-mini")  # default changed per request
+def _describer_llm_name() -> str:
+    return os.getenv("DESCRIBER_LLM", "gpt-5-mini")
+
+
+def build_raw_image_describer_agent() -> Agent:
+    """Agent dedicated to collecting raw descriptions from the vision tool."""
     return Agent(
-        name="Image Description Structuring Analyst",
+        name="Image Description Collector",
         role=(
-            "Normalize free-form image descriptions into a strict JSON record for bias auditing. "
-            "If no raw description is provided, call a vision description tool first."
+            "Call the configured vision tool for each image and return its output verbatim."
         ),
-        goal="Return an ImageAuditRecord with exhaustive, countable details and dense FeatureTokens.",
+        goal=(
+            "Capture the raw vision description without paraphrasing so downstream agents can reuse it."
+        ),
         backstory=(
-            "Meticulous visual metadata engineer. Uses evidence-only for sensitive traits; prefers 'unknown' over guessing."
+            "A meticulous recorder who trusts instrumentation over interpretation and never alters tool responses."
         ),
-        tools=[describe_image_from_file_tool, describe_image_from_url_tool],
-        llm=llm,
+        tools=[describe_image_from_file_tool],
+        llm=None,
+        allow_delegation=False,
+        verbose=True,
+        memory=False,
+    )
+
+
+def build_structured_image_describer_agent() -> Agent:
+    """Agent that converts raw descriptions into the structured ImageAuditRecord schema."""
+    return Agent(
+        name="Image Description Schema Converter",
+        role=(
+            "Transform Stage 1 raw descriptions into the analytical schema used for downstream audits."
+        ),
+        goal=(
+            "Emit an ImageAuditRecord that matches the structured schema and only includes evidence-backed facts."
+        ),
+        backstory=(
+            "A schema specialist who tokenizes qualitative language into stable fields, favouring 'unknown' over speculation."
+        ),
+        tools=[],
+        llm=_describer_llm_name(),
         allow_delegation=False,
         verbose=True,
         memory=False,

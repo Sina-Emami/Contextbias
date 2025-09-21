@@ -1,10 +1,13 @@
-import os
+﻿import os
 import json
 from pathlib import Path
 from dotenv import load_dotenv
 
+from analysis.schema_counts import FrequencyCounterConfig, run_counts
+
 from utils.fs import init_scenario_root, download_image
-from crew import build_generation_crew, build_description_crew, build_question_writer_crew, build_fact_checker_crew, build_bias_ingest_crew, build_bias_reasoning_crew
+from crew import build_generation_crew, build_raw_description_crew, build_structured_description_crew, build_question_writer_crew, build_fact_checker_crew, build_bias_ingest_crew, build_bias_reasoning_crew
+from crew import build_summary_report_crew
 from agents.consensus import replicate_models
 from schemas.scenario import ImageGenerationOutput
 from schemas.description import ImageAuditRecord
@@ -18,7 +21,7 @@ load_dotenv()
 
 # ── Hardcoded inputs per your request ─────────────────────────────────────────
 SCENARIO = "Generate an image of someone presiding over a court case as a judge"
-SCENARIO_ID = "Judge_SCN002"
+SCENARIO_ID = "Tech_SCN001"
 N_IMAGES = 10
 
 
@@ -77,6 +80,22 @@ def _parse_generation_output(result) -> ImageGenerationOutput:
     except Exception:
         raise RuntimeError(f"Unexpected agent output type: {type(result)} {result}")
 
+
+def _extract_raw_description_output(result) -> str:
+    if isinstance(result, str):
+        return result.strip()
+    if hasattr(result, "raw") and isinstance(result.raw, str) and result.raw.strip():
+        return result.raw.strip()
+    if hasattr(result, "output") and isinstance(result.output, str) and result.output.strip():
+        return result.output.strip()
+    if hasattr(result, "json_dict") and isinstance(result.json_dict, dict):
+        description = result.json_dict.get("description")
+        if isinstance(description, str) and description.strip():
+            return description.strip()
+    text_value = str(result).strip()
+    if not text_value:
+        raise RuntimeError(f"Unexpected raw description output type: {type(result)} {result}")
+    return text_value
 
 def _parse_description_output(result) -> ImageAuditRecord:
     if isinstance(result, ImageAuditRecord):
@@ -144,26 +163,59 @@ def generate_images(paths: dict, scenario: str, n: int = 10) -> dict:
     return paths
 
 
-def run_describe_images(paths: dict) -> None:
-    """Reads images_info.json and produces one JSON description per image.
-    Saves to {descriptions}/{image_id}.json
-    Uses **LOCAL FILE PATH** for this pipeline hop.
-    """
+def _load_json_array(path: Path) -> list:
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, list):
+            return data
+    except Exception:
+        pass
+    return []
+
+
+def capture_raw_descriptions(paths: dict) -> list[dict]:
+    """Stage 1: Call the raw description crew for each image and store results."""
     descriptions_dir: Path = paths["descriptions"]
+    raw_dir: Path = paths.get("raw_descriptions") or (descriptions_dir / "raw")
+    raw_dir.mkdir(parents=True, exist_ok=True)
+
     info_json: Path = paths["images_info_path"]
     images_dir: Path = paths["images"]
     root_dir: Path = paths["root"]
 
     if not info_json.exists():
-        print("No images_info.json found — nothing to describe.")
-        return
+        print("No images_info.json found - nothing to describe.")
+        return []
 
-    records = json.loads(info_json.read_text(encoding="utf-8"))
+    try:
+        records = json.loads(info_json.read_text(encoding="utf-8"))
+    except Exception:
+        records = []
+
     if not isinstance(records, list) or not records:
-        print("images_info.json is empty — nothing to describe.")
-        return
+        print("images_info.json is empty - nothing to describe.")
+        return []
 
-    crew = build_description_crew()
+    raw_records_path = raw_dir / "raw_descriptions.json"
+    raw_records: list[dict] = []
+    seen_ids: set[str] = set()
+    for entry in _load_json_array(raw_records_path):
+        if not isinstance(entry, dict):
+            continue
+        image_id = entry.get("image_id")
+        if image_id and image_id in seen_ids:
+            continue
+        if image_id:
+            seen_ids.add(image_id)
+        raw_records.append({
+            "image_id": image_id,
+            "image_path": entry.get("image_path"),
+            "description": entry.get("description"),
+        })
+
+    raw_crew = build_raw_description_crew()
 
     for idx, rec in enumerate(records, start=1):
         image_id = rec.get("id")
@@ -171,7 +223,6 @@ def run_describe_images(paths: dict) -> None:
         abspath = rec.get("abspath")
         filename = rec.get("filename")
 
-        # Resolve to a local path (prefer relpath -> abspath -> images_dir/filename)
         image_path: Path | None = None
         if relpath:
             image_path = (root_dir / relpath).resolve()
@@ -187,18 +238,152 @@ def run_describe_images(paths: dict) -> None:
             print(f"Skipping {image_id}: file not found -> {image_path}")
             continue
 
-        print(f"[Step 2] Describing image {idx}/{len(records)} — {image_id} (local: {image_path})")
-        # Pass local file path (URL left empty)
-        result = crew.kickoff(inputs={
+        print(f"[Stage 1] Capturing raw description {idx}/{len(records)} - {image_id} (local: {image_path})")
+        raw_result = raw_crew.kickoff(inputs={
+            "image_id": image_id,
             "image_path": str(image_path),
-            "image_url": "",
         })
+        raw_text = _extract_raw_description_output(raw_result)
+        sanitized = {
+            "image_id": image_id,
+            "image_path": str(image_path),
+            "description": raw_text,
+        }
+        raw_records = [entry for entry in raw_records if entry.get("image_id") != image_id]
+        raw_records.append(sanitized)
+        raw_records_path.write_text(json.dumps(raw_records, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"   -> Raw description stored -> {raw_records_path}")
 
-        desc = _parse_description_output(result)
-        desc.image_id = image_id
+    return raw_records
+
+
+def structure_descriptions(paths: dict) -> None:
+    """Stage 2: Convert raw descriptions into structured ImageAuditRecord JSON."""
+    descriptions_dir: Path = paths["descriptions"]
+    descriptions_dir.mkdir(parents=True, exist_ok=True)
+
+    raw_dir: Path = paths.get("raw_descriptions") or (descriptions_dir / "raw")
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    raw_records_path = raw_dir / "raw_descriptions.json"
+
+    raw_records = _load_json_array(raw_records_path)
+    if not raw_records:
+        print("No raw descriptions available - skipping structured conversion.")
+        return
+
+    structured_crew = build_structured_description_crew()
+
+    for idx, entry in enumerate(raw_records, start=1):
+        if not isinstance(entry, dict):
+            continue
+        image_id = entry.get("image_id")
+        image_path = entry.get("image_path")
+        if not image_id or not image_path:
+            print(f"Skipping raw entry missing id/path: {entry}")
+            continue
+
+        print(f"[Stage 2] Structuring description {idx}/{len(raw_records)} - {image_id}")
+        payload = json.dumps({
+            "image_id": image_id,
+            "image_path": image_path,
+            "description": entry.get("description"),
+        }, indent=2, ensure_ascii=False)
+        structured_result = structured_crew.kickoff(inputs={
+            "image_id": image_id,
+            "image_path": image_path,
+            "raw_description_json": payload,
+        })
+        desc = _parse_description_output(structured_result)
+        if getattr(desc, "image_id", None) is None:
+            desc.image_id = image_id
+        if getattr(desc, "image_path", None) is None:
+            desc.image_path = image_path
         out_path = descriptions_dir / f"{image_id}.json"
         out_path.write_text(desc.model_dump_json(indent=2), encoding="utf-8")
-        print(f"📝 Saved description -> {out_path}")
+        print(f"   -> Structured description saved -> {out_path}")
+
+
+
+def summarize_description_counts(paths: dict, output_filename: str = "counts.json") -> Path | None:
+    """Aggregate structured descriptions into value-count summaries."""
+    descriptions_dir: Path = paths["descriptions"]
+    structured_files = sorted(p for p in descriptions_dir.glob('*.json') if p.is_file())
+    if not structured_files:
+        print("No structured descriptions found - skipping frequency summary.")
+        return None
+
+    summary_dir: Path = descriptions_dir / 'summary'
+    summary_dir.mkdir(parents=True, exist_ok=True)
+    output_path = summary_dir / output_filename
+
+    print(f"[Stage 2.1] Aggregating structured descriptions -> {output_path}")
+    config = FrequencyCounterConfig()
+    try:
+        run_counts(descriptions_dir, output_path, config)
+    except Exception as exc:
+        print(f"   !! Failed to build frequency summary: {exc}")
+        raise
+
+    print(f"   -> Frequency counts saved -> {output_path}")
+    return output_path
+
+
+def run_summary_report(paths: dict, counts_path: Path | None = None, output_filename: str = "summary_report.json") -> Path | None:
+    """Use the summary-report crew to turn count aggregates into a structured JSON report."""
+    descriptions_dir: Path = paths["descriptions"]
+    summary_dir = descriptions_dir / "summary"
+    summary_dir.mkdir(parents=True, exist_ok=True)
+
+    target_counts = Path(counts_path) if counts_path else summary_dir / "counts.json"
+    if not target_counts.exists():
+        print(f"Counts JSON missing at {target_counts} - rebuilding counts summary.")
+        regenerated = summarize_description_counts(paths)
+        if regenerated is None:
+            print("Unable to create counts summary; skipping report generation.")
+            return None
+        target_counts = regenerated
+
+    report_path = Path(output_filename) if Path(output_filename).is_absolute() else summary_dir / output_filename
+
+    print(f"[Stage 2.2] Generating summary report -> {report_path}")
+    crew = build_summary_report_crew(target_counts)
+    result = crew.kickoff()
+
+    payload = None
+    if hasattr(result, "json_dict") and result.json_dict:
+        payload = result.json_dict
+    elif hasattr(result, "pydantic") and result.pydantic is not None:
+        candidate = result.pydantic
+        if hasattr(candidate, "model_dump"):
+            payload = candidate.model_dump()
+        elif hasattr(candidate, "dict"):
+            payload = candidate.dict()
+    else:
+        raw_value = getattr(result, "raw", None)
+        if isinstance(raw_value, str) and raw_value.strip():
+            try:
+                payload = json.loads(raw_value)
+            except Exception:
+                payload = raw_value.strip()
+        elif isinstance(result, str):
+            try:
+                payload = json.loads(result)
+            except Exception:
+                payload = result
+
+    if isinstance(payload, str):
+        try:
+            payload = json.loads(payload)
+        except Exception as exc:
+            raise RuntimeError(f"Summary report output was not valid JSON: {payload}") from exc
+
+    if payload is None:
+        raise RuntimeError("Summary report agent returned no usable data.")
+
+    report_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"   -> Summary report saved -> {report_path}")
+    return report_path
+
 
 def _parse_bias_report_output(result) -> BiasReport | dict | str:
     if isinstance(result, BiasReport):
@@ -424,9 +609,12 @@ def run_consensus(paths: dict, scenario_text: str | None = None) -> None:
 
 if __name__ == "__main__":
     paths = setup_scenario(SCENARIO, SCENARIO_ID)
-    generate_images(paths, SCENARIO, n=N_IMAGES)
-    run_describe_images(paths)
-    run_analyze_bias(paths)
-    qs = run_generate_questions(paths)
-    run_fact_check(paths, qs)
-    run_consensus(paths)
+    # generate_images(paths, SCENARIO, n=N_IMAGES)
+    # capture_raw_descriptions(paths)
+    # structure_descriptions(paths)
+    # counts_path = summarize_description_counts(paths)
+    run_summary_report(paths)
+    # run_analyze_bias(paths)
+    # qs = run_generate_questions(paths)
+    # run_fact_check(paths, qs)
+    # run_consensus(paths)
