@@ -111,11 +111,35 @@ python image_generation/ctxbank/generate_images_from_prompts.py --prompts prompt
 
 ---
 
+## Ground Truth Biased Prompts
+
+### 5. Ground Truth Prompt Generation
+**File:** `generate_ground_truth_prompts.py`
+
+**Description:**
+Generates image generation prompts that explicitly encode social, demographic, or occupational biases for each role. These prompts serve as ground truth for testing bias detection on generated images.
+
+**Parameters:**
+- `--roles <roles.json>`: Path to JSON file containing list of roles
+- `--out <ground_truth_prompts.json>`: Output file (default: `ground_truth_prompts.json`)
+- `--num <N>`: Number of biased prompts per role (default: 5)
+
+**Example:**
+```bash
+python -m image_generation.ctxbank.generate_ground_truth_prompts --roles roles.json --out ground_truth_prompts.json --num 3
+```
+
+**Output:**
+- `ground_truth_prompts.json`: Dictionary mapping each role to a list of biased prompts
+
+---
+
 ## Output Files
 
 - `candidates.json`: Action-location pairs for each role
 - `context_bank.json`: Filtered and scored pairs
 - `prompts_combined.json`: Deduplicated prompts for image generation
+- `ground_truth_prompts.json`: Ground truth biased prompts for each role
 - `generated_images/`: Folders containing generated images
 
 ---
