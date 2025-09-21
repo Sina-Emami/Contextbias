@@ -1,196 +1,119 @@
-# Bias Detection Multimodal (CrewAI)
+﻿# Bias Detection Multimodal (CrewAI)
 
-A step-by-step, **multi-agent** pipeline built with **CrewAI** that:
+This project now focuses on a lean three-stage pipeline built with CrewAI:
 
-1. **Generates images** from a scenario
-2. **Describes each image** in a structured JSON schema
-3. **Aggregates descriptions** to detect **potential biases** (repetition, roles, attributes, symbols, etc.)
-4. **Writes globally fact-checkable questions** from the bias report (uses **Replicate OSS-20B**)
-5. **Fact-checks** those questions on the web (Serper + scraping, **gpt-5-mini**)
-6. Gets a **5-LLM consensus** (via Replicate) on “what must be in the image”
-7. (Planned) **Filters & scores** biases using fact-check + consensus
+1. **Description capture** – call a vision-enabled agent to collect exhaustive raw narratives for each image.
+2. **Structured analysis** – convert those narratives into the `ImageAuditRecord` schema, aggregate repetition statistics, and run the bias reasoning crew.
+3. **Summary reporting** – turn aggregated counts into a structured summary that can feed downstream analytics.
 
-The pipeline is designed to run **incrementally**—you can execute up to any step and verify outputs before wiring the next one.
+The code has been streamlined to keep only this core flow. Image generation, question drafting, fact checking, and multi-LLM consensus have been removed.
 
 ---
 
-**Outputs** are written under: `data/scenarios/<SCENARIO_ID>/`
+## Output Layout
+
+Stage outputs are written under `data/scenarios/<SCENARIO_ID>/`:
 
 ```
 data/scenarios/<ID>/
 ├─ manifest.json
 ├─ images/
-│  ├─ image_<8hex>.png
-│  └─ images_info.json
+│  └─ <image files you provide>
+├─ raw_descriptions/
+│  └─ raw_descriptions.json
 ├─ descriptions/
-│  └─ <image_id>.json
-├─ biases/
-│  ├─ repeat_summary_full.json
-│  └─ bias_report.json
-├─ questions/
-│  └─ questions.json
-├─ research/
-│  ├─ facts.jsonl
-│  └─ summary.txt
-└─ consensus/
-   └─ consensus_output.json
+│  ├─ <image_id>.json
+│  └─ summary/
+│     ├─ counts.json
+│     └─ summary_report.json
+└─ biases/
+   ├─ agg_state.json
+   ├─ repeat_summary_full.json
+   └─ bias_report.json
 ```
+
+You are responsible for supplying the images and a matching `images_info.json` manifest (see Usage below).
 
 ---
 
 ## Requirements
 
-* Python **3.10+** (tested on 3.12)
-* **CrewAI** ≥ 0.76
-* **OpenAI** Python SDK ≥ 1.35
-* **Pydantic v2**
-* **python-dotenv**
-* **requests**
-* **replicate** (used for OSS-20B + multiple models in consensus)
-* **crewai-tools** (for Serper/Scraper if used)
+* Python 3.10+
+* `crewai`
+* `openai`
+* `pydantic` v2
+* `python-dotenv`
+* `replicate`
+* Any additional libraries referenced in `requirements.txt` for analysis (sentence-transformers, hdbscan, etc.)
 
-### Install with `pip`
+### Install
 
 ```bash
 python -m venv .venv
 # Windows: .venv\Scripts\activate
 source .venv/bin/activate
-
 pip install -r requirements.txt
 ```
-
-### Install with `uv`
-
-```bash
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
-```
-
-> If you see `ModuleNotFoundError` for `dotenv` or `replicate`, ensure they’re in `requirements.txt`, then reinstall.
 
 ---
 
 ## Environment Variables
 
-Create `.env` (copy from `.env.example`) and fill:
+Create a `.env` file with at least the following keys:
 
 ```env
-# Required
-# Copy this to .env and fill in your key(s)
-OPENAI_API_KEY="" 
-IMAGE_MODEL=Dall-e3
-AGENT_LLM=gpt-5-mini
-REPLICATE_API_KEY=""
-BIAS_REPLICATE_MODEL=replicate/openai/gpt-oss-20b
+OPENAI_API_KEY=""          # required for the vision description tool
+REPLICATE_API_KEY=""       # required for the bias reasoning agent
+DESCRIBER_LLM=gpt-5-mini    # optional override
+SUMMARY_LLM=gpt-4o-mini     # optional override for the ingest crew
+BIAS_REPLICATE_MODEL=openai/gpt-oss-20b
 BIAS_REPLICATE_TEMPERATURE=0.0
-SUMMARY_LLM=gpt-5-mini
-SERPER_API_KEY=""
+SUMMARY_REPORT_LLM=gpt-5-mini
+VISION_CHAT_MODEL=gpt-5-mini
 ```
 
-**Replicate model slugs**
-
-* CrewAI/LiteLLM LLM string: `replicate/openai/gpt-oss-20b`
-* Direct `replicate.run()` in tools: `openai/gpt-oss-20b`
-
-If OSS-20B returns “No output.”, verify token & slug match the usage above.
+Remove keys that referenced the deprecated features (e.g., image generation, Serper, consensus).
 
 ---
 
 ## Usage
 
-`src/app.py` uses **hardcoded inputs** by design:
+1. **Prepare a scenario folder** – `python -m src.app` will call `setup_scenario`, which creates the directory tree shown above.
+2. **Populate images and metadata** – place your images in `images/` and write `images_info.json` alongside them. Each entry should look like:
+   ```json
+   {
+     "id": "img_001",
+     "filename": "img_001.png",
+     "relpath": "images/img_001.png"
+   }
+   ```
+   You can also include an `abspath` key if the files live elsewhere.
+3. **Capture raw descriptions** – uncomment `capture_raw_descriptions(paths)` in the `__main__` block or call it manually. This uses the vision tool to write `raw_descriptions/raw_descriptions.json`.
+4. **Structure the descriptions** – run `structure_descriptions(paths)` to create one `ImageAuditRecord` per image under `descriptions/`.
+5. **Aggregate counts** – optional helper `summarize_description_counts(paths)` produces `descriptions/summary/counts.json`.
+6. **Analyze bias** – call `run_analyze_bias(paths)` to build `biases/repeat_summary_full.json` and `biases/bias_report.json`.
+7. **Generate the summary report** – `run_summary_report(paths)` reads the counts JSON (regenerating it if missing) and produces `descriptions/summary/summary_report.json`.
 
-```python
-SCENARIO   = "Prompt"
-SCENARIO_ID= "Prompt_id"
-N_IMAGES   = 10   # set 10 for the full run
-```
-
-Run:
+Run the full script directly if you prefer to step through interactively:
 
 ```bash
 python -m src.app
 ```
 
-### Step-by-Step (toggle in `__main__`)
-
-Inside `app.py`, uncomment steps gradually:
-
-```python
-paths = run_generate_images(SCENARIO, SCENARIO_ID, n=N_IMAGES)  # Step 1
-run_describe_images(paths)                                      # Step 2
-
-run_analyze_bias(paths)                                       # Step 3
-qs = run_generate_questions(paths)                            # Step 4a (OSS-20B)
-run_fact_check(paths, qs)                                     # Step 4b (search + scrape)
-run_consensus(paths)                                          # Step 5 (Replicate multi-model)
-```
-
-**Sanity checks after each step:**
-
-* **Step 1** → `images/` has PNGs and `images_info.json`
-* **Step 2** → `descriptions/` has one `ImageAuditRecord` per image
-* **Step 3** → `biases/` has `repeat_summary_full.json` + `bias_report.json`
-* **Step 4a** → `questions/questions.json`
-* **Step 4b** → `research/facts.jsonl` + `research/summary.txt`
-* **Step 5** → `consensus/consensus_output.json`
+Inside `src/app.py` the relevant helper calls are already listed; uncomment the stages you want to execute.
 
 ---
 
-## How the Pipeline Works
+## Pipeline Details
 
-1. **Image Generation**
-
-   * Agent: *Visionary Image Generator*
-   * Tool: `generate_image` (OpenAI Images API)
-   * Output: PNGs + `images_info.json` (stores `filename`, **relative** `relpath` to scenario root)
-
-2. **Image Description (Structured)**
-
-   * Agent: *Image Description Structuring Analyst*
-   * Tools: `DescribeImageFromFile` (local file pipeline)
-   * Model: **gpt-5-mini** (vision chat)
-   * Output: strict `ImageAuditRecord` JSON per image
-
-3. **Bias Analysis**
-
-   * Deterministic aggregation of people/objects/environment tokens & phrases
-   * Reasoner ( **Replicate OSS-20B** ) produces a **BiasReport** (findings + notes)
-   * Output: `biases/repeat_summary_full.json`, `biases/bias_report.json`
-
-4. **Question Generation & Fact-Checking**
-
-   * **Writer** (OSS-20B): creates **global, atomic, verifiable** questions
-   * **Fact Checker** (**gpt-5-mini** + **Serper** + **Scraper**): answers with % / one-word / YES-NO and a citation
-   * Output: `questions/questions.json`, `research/facts.jsonl`, `research/summary.txt`
-
-5. **5-LLM Consensus**
-
-   * Tool `get_expected_elements_replicate` calls multiple Replicate models to list **required elements**
-   * Aggregator keeps elements appearing in **≥70%** of models
-   * Output: `consensus/consensus_output.json`:
-
-     ```json
-     {
-       "prompt": "...",
-       "consensus_elements": ["..."],
-       "individual_predictions": [
-         {"model_name": "moonshotai/kimi-k2-instruct", "required_elements": [...]},
-         {"model_name": "meta/meta-llama-3-8b-instruct", "required_elements": [...]},
-         {"model_name": "deepseek-ai/deepseek-v3", "required_elements": [...]},
-         {"model_name": "ibm-granite/granite-3.3-8b-instruct", "required_elements": [...]},
-         {"model_name": "microsoft/phi-3-mini-4k-instruct:...", "required_elements": [...]}
-       ]
-     }
-     ```
+- **Stage 1: Raw capture** – `build_raw_description_crew` invokes the `DescribeImageFromFile` tool for each entry in `images_info.json` and persists the verbatim response.
+- **Stage 2: Structured schema + counts** – `build_structured_description_crew` converts the raw text into `ImageAuditRecord` JSON. `analysis.schema_counts` then clusters tokens and aggregates repetition signals across the dataset.
+- **Stage 3: Bias reasoning and summary** – the ingest crew writes cumulative repetition state, a Replicate-hosted model converts that state into a `BiasReport`, and the summary reporter agent distills aggregated counts into a final structured report.
 
 ---
 
+## Notes
 
-## Things To Keep in Mind
-
-- I should add metric regarding hallucination rate for the time it is doing the research.
-- Not able to detect the right and left correctly by VLM.
-- Need to make sure about the output of each LLM for the Consensus step, might be a problem with Replicate package and agent hallucinating the output of the merge Consensus.
-- Work more on the categorising the thing in the image for evaluation (src/tool/vision_description_tool.py)
+- Ensure `images_info.json` always uses paths that resolve on the current machine. Relative paths are stored relative to the scenario root.
+- The bias reasoning step depends on Replicate availability; set `REPLICATE_API_KEY` before running `run_analyze_bias`.
+- The summary report agent expects valid JSON counts; if counts are missing it will trigger regeneration automatically.
