@@ -7,7 +7,7 @@ from crewai import Agent
 
 def build_summary_report_agent() -> Agent:
     """Create an agent that groups related concepts and emits a clean JSON report."""
-    llm = os.getenv("SUMMARY_REPORT_LLM", "gpt-4o-mini")
+    llm = os.getenv("SUMMARY_REPORT_LLM", "gpt-5-mini")
     return Agent(
         name="Summary Insights Analyst",
         role="Synthesize count summaries into higher-level patterns and clean JSON findings.",
