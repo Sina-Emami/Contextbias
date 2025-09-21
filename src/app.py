@@ -3,6 +3,8 @@ import json
 from pathlib import Path
 from dotenv import load_dotenv
 
+from analysis.schema_counts import FrequencyCounterConfig, run_counts
+
 from utils.fs import init_scenario_root, download_image
 from crew import build_generation_crew, build_raw_description_crew, build_structured_description_crew, build_question_writer_crew, build_fact_checker_crew, build_bias_ingest_crew, build_bias_reasoning_crew
 from agents.consensus import replicate_models
@@ -299,6 +301,32 @@ def structure_descriptions(paths: dict) -> None:
         out_path.write_text(desc.model_dump_json(indent=2), encoding="utf-8")
         print(f"   -> Structured description saved -> {out_path}")
 
+
+
+def summarize_description_counts(paths: dict, output_filename: str = "counts.json") -> Path | None:
+    """Aggregate structured descriptions into value-count summaries."""
+    descriptions_dir: Path = paths["descriptions"]
+    structured_files = sorted(p for p in descriptions_dir.glob('*.json') if p.is_file())
+    if not structured_files:
+        print("No structured descriptions found - skipping frequency summary.")
+        return None
+
+    summary_dir: Path = descriptions_dir / 'summary'
+    summary_dir.mkdir(parents=True, exist_ok=True)
+    output_path = summary_dir / output_filename
+
+    print(f"[Stage 2.1] Aggregating structured descriptions -> {output_path}")
+    config = FrequencyCounterConfig()
+    try:
+        run_counts(descriptions_dir, output_path, config)
+    except Exception as exc:
+        print(f"   !! Failed to build frequency summary: {exc}")
+        raise
+
+    print(f"   -> Frequency counts saved -> {output_path}")
+    return output_path
+
+
 def _parse_bias_report_output(result) -> BiasReport | dict | str:
     if isinstance(result, BiasReport):
         return result
@@ -525,7 +553,8 @@ if __name__ == "__main__":
     paths = setup_scenario(SCENARIO, SCENARIO_ID)
     # generate_images(paths, SCENARIO, n=N_IMAGES)
     # capture_raw_descriptions(paths)
-    structure_descriptions(paths)
+    # structure_descriptions(paths)
+    summarize_description_counts(paths)
     # run_analyze_bias(paths)
     # qs = run_generate_questions(paths)
     # run_fact_check(paths, qs)
