@@ -1,76 +1,98 @@
 from crewai import Task
 from schemas.description import ImageAuditRecord
 
-# Prompt removed by request — paste your locked guide here
-STRUCTURING_GUIDE = """
-You may receive an image reference.
+RAW_CAPTURE_GUIDE = """
+You receive metadata for an image that must be described.
 
-Inputs:
-- image_path (optional): {image_path}
+Image context:
+- image_id: {image_id}
+- image_path: {image_path}
 
-Tool use:
-- If image_path is provided, call 'DescribeImageFromFile' and treat its output as the single source of truth. Do not drop details.
+Instructions:
+- Call 'DescribeImageFromFile' with the provided image_path to obtain the raw description.
+- Return the tool output exactly as produced. Do not summarize, paraphrase, or wrap it in JSON.
+- Do not add commentary. The orchestrator will persist the response.
 
-Output:
-- Return ONLY a JSON object that matches `ImageAuditRecord` (strict Pydantic). No prose.
-
--------------------------------
-GENERAL PRINCIPLES
--------------------------------
-• Fidelity first: preserve every observable fact from the tool description.
-• Normalization: convert all free text that represents a categorical choice into the closest ENUM value defined by the schema. If you cannot safely map, use 'unknown' (or 'ambiguous' where applicable).
-• Evidence-led inference: conclude sensitive attributes only when supported by direct or converging evidence; otherwise use 'unknown' or 'ambiguous'. Always attach brief evidence snippets and a confidence value when you do conclude.
-
--------------------------------
-ENUM & FIELD COMPLIANCE
--------------------------------
-• Use only declared enums for:
-  - age_bucket, gender_presentation, skin_tone_label, height_bucket, body_build, body_position,
-    orientation, handedness, head_covering, race_ethnicity_label, religion_label, art_style,
-    position_horizontal, position_depth, BoolUnknown, Presence, ColorBasic.
-• Never pass through raw phrases (e.g., number ranges, color shades, colloquialisms).
-  Map to the nearest enum; otherwise 'unknown' (or 'ambiguous' for race_ethnicity_label).
-• Skin tone: "very_light","light","medium","tan","brown","dark", and "very_dark" when possible; also set the coarse skin_tone_label. If unsure, leave mst_skin_tone unset and use 'unknown' for the label.
-• Colors: map any shade/synonym to the ColorBasic enum. Unmappable → 'unknown'.
-
--------------------------------
-OBJECTS, SYMBOLS, TEXT
--------------------------------
-• Promote prominent items (tools, props, symbols, signage, flags/emblems/seals) into `objects[]` with names, attributes, colors, and positions when observable.
-• For national or institutional symbols, store a canonical type label in the object attributes when determinable, otherwise 'unknown'.
-• For any legible text or script-like marking, add a ScriptInfo entry (ISO-15924 code if determinable) with a short evidence snippet.
-
--------------------------------
-SENSITIVE ATTRIBUTES (EVIDENCE-LED)
--------------------------------
-• Race/Ethnicity: conclude a label only when there is explicit text, distinctive context, or multiple converging non-facial cues. If cues are weak or conflicting, prefer 'ambiguous'. You may infer from appearance or skin tone.
-• Religion: conclude only when explicit symbols, attire, settings, or text support it; otherwise 'unknown'.
-• Disability: conclude only from visible aids/signage; otherwise omit/unknown.
-• When you conclude any sensitive label, add SensitiveEvidence with brief quotes/snippets and a reasonable confidence.
-
--------------------------------
-FEATURE TOKENS (COUNTABLE)
--------------------------------
-• Create compact FeatureTokens for small, repeatable facts (objects present/absent, key colors of important items, person-level enums, symbols, scripts, composition basics, etc.).
-• Use consistent keys so repeated patterns can be counted across images.
-• Include subject_ref for person-specific tokens when applicable.
-
--------------------------------
-UNCERTAINTY
--------------------------------
-• Add short notes for any non-trivial mapping or inference, especially where evidence is partial or inferred.
-
--------------------------------
-STRICT OUTPUT
--------------------------------
-Return one valid JSON object matching `ImageAuditRecord`. No extra keys. No commentary.
+Expected output:
+- The unmodified text returned by the vision description tool.
 """
 
 
-def build_describe_image_task(agent) -> Task:
+SCHEMA_CONVERSION_GUIDE = """
+You are provided a raw description record that was captured earlier.
+
+RAW_DESCRIPTION_JSON:
+{raw_description_json}
+
+Task:
+- Use ONLY the `description` field inside RAW_DESCRIPTION_JSON. Treat it as ground truth.
+- Produce a JSON object matching `ImageAuditRecord` from schemas.description (new structured schema).
+- Preserve evidence fidelity: everything you assert must be supported by the raw description.
+- When information is missing or unclear, use the explicit 'unknown' tokens provided by the schema.
+
+Key mapping reminders:
+1. Top-level values
+   - image_id and image_path must be copied from Stage 1 metadata if present.
+   - scene.summary is optional; include a concise human-readable sentence when the description supports it.
+
+2. Atmosphere
+   - mood and dominant_palette are token arrays; prefer lower_snake_case tokens.
+   - lighting_profile requires enumerated values (warm/neutral/cool/unknown, etc.). Use 'unknown' when the description does not specify.
+
+3. Environment
+   - location_type is a short noun phrase (e.g., "server_room", "office"). Default to None if unclear.
+   - indoor_outdoor must be: indoor, outdoor, or unknown.
+   - surfaces.walls/floor/ceiling are arrays. Each entry must use token lists for material/texture/color/finish/condition.
+   - spatial_layout.depth/openness/aisle_width should be short tokens ("shallow", "open", "narrow", "unknown").
+
+4. People
+   - Assign stable IDs like "P1", "P2" in order of appearance.
+   - gender_presentation: female, male, nonbinary, or unknown.
+   - skin_tone: light, medium, dark, or unknown.
+   - age_range: child, teen, young_adult, middle_aged, older_adult, or unknown.
+   - role_hint is free text.
+   - hair/facial_hair/eyewear/head_covering present field must be yes/no/unknown.
+   - clothing entries should capture garment_type plus color/material/texture tokens when stated.
+   - pose, activities, framing details go into the respective arrays.
+
+5. Objects
+   - Provide IDs like "O1", "O2". Keep ordering consistent with the description.
+   - plane: foreground/midground/background/unknown. side: left/center/right/unknown.
+   - attributes.colors/material/texture/finish/condition/state should use short tokens.
+   - quantity.exact is an integer when precise counts exist; otherwise leave None and populate approx (e.g., "several").
+
+6. Background layout
+   - Use object IDs inside foreground/midground/background buckets keyed by left/center/right.
+   - If placement is unknown, leave arrays empty.
+
+7. Texts, camera, lighting, safety, uncertainty
+   - Text font_style should be tokenized (e.g., ["sans", "bold"]). Use ["unknown"] when unspecified.
+   - Camera angle must be high/eye_level/low/unknown.
+   - Lighting color_temperature/contrast_level/saturation_level follow the enumerations; default to "unknown" if absent.
+   - Lighting sources capture type/count/directionality/hardness when available.
+   - List hazards/nsfw indicators; use ["none"] if the description confirms absence, otherwise default to [].
+   - uncertainty should collect explicit mentions of occlusions, unknowns, or ambiguous observations.
+
+Formatting requirements:
+- Output must be valid JSON with double quotes and no trailing comments.
+- Ensure every list is present even when empty (schema default_factory covers this, but do not omit required keys).
+- Do NOT invent facts. Prefer "unknown" or empty arrays when the raw description lacks evidence.
+"""
+
+
+def build_capture_raw_description_task(agent) -> Task:
     return Task(
-        description=STRUCTURING_GUIDE,
+        description=RAW_CAPTURE_GUIDE,
+        agent=agent,
+        expected_output="Raw vision description text for the supplied image.",
+    )
+
+
+def build_structure_image_description_task(agent) -> Task:
+    return Task(
+        description=SCHEMA_CONVERSION_GUIDE,
         agent=agent,
         expected_output="A single valid JSON object matching ImageAuditRecord.",
         output_pydantic=ImageAuditRecord,
     )
+

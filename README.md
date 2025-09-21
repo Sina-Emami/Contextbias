@@ -149,7 +149,7 @@ run_consensus(paths)                                          # Step 5 (Replicat
 2. **Image Description (Structured)**
 
    * Agent: *Image Description Structuring Analyst*
-   * Tools: `DescribeImageFromFile` (data URL) and `DescribeImageFromURL`
+   * Tools: `DescribeImageFromFile` (local file pipeline)
    * Model: **gpt-5-mini** (vision chat)
    * Output: strict `ImageAuditRecord` JSON per image
 
