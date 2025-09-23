@@ -2,7 +2,7 @@
 import json
 import argparse
 from tqdm import tqdm
-from image_generation.ctxbank.llm_client import call_llm
+from llm_client import call_llm
 
 BIAS_PROMPT_TEMPLATE = """
 You are given a ROLE: "{role}".
@@ -13,23 +13,32 @@ Constraints:
 - Output valid JSON only (no extra commentary).
 """.strip()
 
-def generate_biased_prompts(role, num):
+def generate_biased_prompts(role, num, mock_mode=False):
+    if mock_mode:
+        # Return mock biased prompts for testing
+        return [f"Mock biased prompt {i+1} for {role}" for i in range(num)]
+    
     prompt = BIAS_PROMPT_TEMPLATE.format(role=role, num=num)
-    resp = call_llm(prompt, max_tokens=3000)
     try:
-        data = json.loads(resp)
-    except Exception:
-        start = resp.find("[")
-        end = resp.rfind("]") + 1
-        data = json.loads(resp[start:end])
-    return data
+        resp = call_llm(prompt, max_tokens=1000)
+        try:
+            data = json.loads(resp)
+        except Exception:
+            start = resp.find("[")
+            end = resp.rfind("]") + 1
+            data = json.loads(resp[start:end])
+        return data
+    except Exception as e:
+        print(f"Error calling LLM for role '{role}': {e}")
+        # Return default prompts on API failure
+        return [f"Default biased prompt {i+1} for {role}" for i in range(num)]
 
 def main(args):
     with open(args.roles, "r") as f:
         roles = json.load(f)
     out = {}
     for role in tqdm(roles, desc="roles"):
-        out[role] = generate_biased_prompts(role, args.num)
+        out[role] = generate_biased_prompts(role, args.num, mock_mode=args.mock)
     with open(args.out, "w") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
     print(f"Wrote {args.out} with ground truth biased prompts.")
@@ -39,5 +48,6 @@ if __name__ == "__main__":
     parser.add_argument("--roles", type=str, required=True, help="Path to roles.json")
     parser.add_argument("--out", type=str, default="ground_truth_prompts.json", help="Output file")
     parser.add_argument("--num", type=int, default=5, help="Number of biased prompts per role")
+    parser.add_argument("--mock", action="store_true", help="Use mock data instead of calling LLM API")
     args = parser.parse_args()
     main(args)

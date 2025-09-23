@@ -1,5 +1,6 @@
 import json
 import random
+import argparse
 
 NEGATIVE_PROMPT = "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing"
 STYLE = "realistic photo, natural lighting"
@@ -12,7 +13,12 @@ TEMPLATES = [
 ]
 
 def main():
-    with open("context_bank.json", "r") as f:
+    parser = argparse.ArgumentParser(description='Combine context bank into prompts')
+    parser.add_argument('--context_bank', default='context_bank.json', help='Input context bank file')
+    parser.add_argument('--out', default='prompts_combined.json', help='Output prompts file')
+    args = parser.parse_args()
+    
+    with open(args.context_bank, "r") as f:
         context_bank = json.load(f)
     prompts = []
     for role, axes in context_bank.items():
@@ -107,9 +113,9 @@ def main():
         if key not in unique:
             unique[key] = entry
     deduped_prompts = list(unique.values())
-    with open("prompts_combined.json", "w") as f:
+    with open(args.out, "w") as f:
         json.dump(deduped_prompts, f, indent=2, ensure_ascii=False)
-    print(f"Wrote prompts_combined.json with {len(deduped_prompts)} unique prompts.")
+    print(f"Wrote {args.out} with {len(deduped_prompts)} unique prompts.")
 
 if __name__ == "__main__":
     main()

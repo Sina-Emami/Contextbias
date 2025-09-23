@@ -2,7 +2,7 @@
 import json
 import argparse
 from tqdm import tqdm
-from image_generation.ctxbank.llm_client import call_llm
+from llm_client import call_llm
 
 AXES = ["ACTION", "LOCATION"]
 
@@ -18,26 +18,65 @@ Constraints:
 Return one candidates per list.
 """.strip()
 
-def generate_for_role(role, axes=AXES):
+def generate_for_role(role, axes=AXES, mock_mode=False):
+    if mock_mode:
+        # Return mock data for testing when API is not available
+        return {
+            "related": [
+                {
+                    "action": f"working as {role}",
+                    "location": "workplace",
+                    "rationale": f"This is typical work activity for a {role}."
+                }
+            ],
+            "unrelated": [
+                {
+                    "action": "shopping groceries",
+                    "location": "supermarket",
+                    "rationale": "This is a common everyday activity unrelated to the professional role."
+                }
+            ]
+        }
+    
     prompt = PASS_A_PROMPT.format(role=role, axes_list=", ".join(axes))
-    resp = call_llm(prompt, max_tokens=30000)
-    print(f"LLM response for role '{role}':\n{resp}\n")  # Add this line
-    # The model must return JSON. We attempt to parse:
     try:
-        data = json.loads(resp)
+        resp = call_llm(prompt, max_tokens=1000)
+        print(f"LLM response for role '{role}':\n{resp}\n")  # Add this line
+        # The model must return JSON. We attempt to parse:
+        try:
+            data = json.loads(resp)
+        except Exception as e:
+            # If the model returns text around JSON, try to recover substring
+            start = resp.find("{")
+            end = resp.rfind("}") + 1
+            data = json.loads(resp[start:end])
+        return data
     except Exception as e:
-        # If the model returns text around JSON, try to recover substring
-        start = resp.find("{")
-        end = resp.rfind("}") + 1
-        data = json.loads(resp[start:end])
-    return data
+        print(f"Error calling LLM for role '{role}': {e}")
+        # Return default data on API failure
+        return {
+            "related": [
+                {
+                    "action": f"working as {role}",
+                    "location": "workplace",
+                    "rationale": f"Default activity for {role} role."
+                }
+            ],
+            "unrelated": [
+                {
+                    "action": "reading book",
+                    "location": "home",
+                    "rationale": "Common everyday activity unrelated to professional role."
+                }
+            ]
+        }
 
 def main(args):
     with open(args.roles, "r") as f:
         roles = json.load(f)
     out = {}
     for role in tqdm(roles, desc="roles"):
-        out[role] = generate_for_role(role)
+        out[role] = generate_for_role(role, mock_mode=args.mock)
     with open(args.out, "w") as f:
         json.dump(out, f, indent=2, ensure_ascii=False)
     print("Wrote", args.out)
@@ -46,5 +85,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--roles", required=True)
     parser.add_argument("--out", default="candidates.json")
+    parser.add_argument("--mock", action="store_true", help="Use mock data instead of calling LLM API")
     args = parser.parse_args()
     main(args)

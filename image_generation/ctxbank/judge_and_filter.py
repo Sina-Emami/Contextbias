@@ -2,7 +2,7 @@
 import json
 import argparse
 from tqdm import tqdm
-from image_generation.ctxbank.llm_client import call_llm
+from llm_client import call_llm
 from rapidfuzz import fuzz
 
 # thresholds
@@ -22,17 +22,34 @@ Definitions:
 Return JSON only.
 """.strip()
 
-def score_item(role, axis, item, rationale, model=None):
+def score_item(role, axis, item, rationale, model=None, mock_mode=False):
+    if mock_mode:
+        # Return mock scores for testing when API is not available
+        return {
+            "relevance": 4,
+            "neutrality": 4,
+            "confound": 2
+        }
+    
     prompt = JUDGE_PROMPT_TEMPLATE.format(role=role, axis=axis, item=item, rationale=rationale)
-    txt = call_llm(prompt, max_tokens=30000)
     try:
-        out = json.loads(txt)
-    except:
-        # try extract
-        start = txt.find("{")
-        end = txt.rfind("}")+1
-        out = json.loads(txt[start:end])
-    return out
+        txt = call_llm(prompt, max_tokens=500)
+        try:
+            out = json.loads(txt)
+        except:
+            # try extract
+            start = txt.find("{")
+            end = txt.rfind("}")+1
+            out = json.loads(txt[start:end])
+        return out
+    except Exception as e:
+        print(f"Error calling LLM for {role}/{axis}/{item}: {e}")
+        # Return default scores on API failure
+        return {
+            "relevance": 3,
+            "neutrality": 3,
+            "confound": 3
+        }
 
 def dedupe_list(items, threshold=90):
     kept = []
@@ -71,7 +88,7 @@ def main(args):
                 else:
                     item_text = str(it)
                 rationale = it.get("rationale","")
-                score = score_item(role, bucket_name, item_text, rationale, model=args.model)
+                score = score_item(role, bucket_name, item_text, rationale, model=args.model, mock_mode=args.mock)
                 it_out = {**it, "score": score}
                 if args.filter:
                     rel_ok = score["relevance"] >= RELEVANCE_MIN if bucket_name=="related" else score["relevance"] >= RELEVANCE_MIN
@@ -94,5 +111,6 @@ if __name__ == "__main__":
     parser.add_argument("--out", default="context_bank.json")
     parser.add_argument("--model", default=None)
     parser.add_argument("--filter", action="store_true", help="Enable filtering by thresholds (default: on)")
+    parser.add_argument("--mock", action="store_true", help="Use mock scores instead of calling LLM API")
     args = parser.parse_args()
     main(args)

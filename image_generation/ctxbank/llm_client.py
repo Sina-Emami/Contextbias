@@ -3,22 +3,21 @@
 
 import os
 from dotenv import load_dotenv
-from openai import AzureOpenAI
+from openai import OpenAI
 
 load_dotenv()
 
-AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
-AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
-AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT")
-AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")  # Default to cheapest model
 
-if not AZURE_OPENAI_KEY or not AZURE_OPENAI_ENDPOINT or not AZURE_OPENAI_DEPLOYMENT:
-    raise RuntimeError("Set AZURE_OPENAI_KEY, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_DEPLOYMENT in .env")
+if not OPENAI_API_KEY:
+    print("Warning: OpenAI API key not found in .env file")
+    print("Required variable: OPENAI_API_KEY")
+    print("Please update the .env file with your actual OpenAI API key")
+    raise RuntimeError("Set OPENAI_API_KEY in .env")
 
-client = AzureOpenAI(
-    api_key=AZURE_OPENAI_KEY,
-    api_version=AZURE_OPENAI_API_VERSION,
-    azure_endpoint=AZURE_OPENAI_ENDPOINT
+client = OpenAI(
+    api_key=OPENAI_API_KEY
 )
 
 def call_llm(prompt: str, max_tokens=30000):
@@ -27,8 +26,8 @@ def call_llm(prompt: str, max_tokens=30000):
             {"role": "system", "content": "You are a JSON generator. Always output only valid JSON, no explanations."},
             {"role": "user", "content": prompt}
         ],
-        max_completion_tokens=max_tokens,   # Azure variant requires this
-        model=AZURE_OPENAI_DEPLOYMENT
+        max_tokens=max_tokens,  # Standard OpenAI API uses max_tokens
+        model=OPENAI_MODEL
     )
 
     content = response.choices[0].message.content

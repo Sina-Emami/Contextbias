@@ -1,0 +1,2864 @@
+{
+  "doctor": {
+    "related": [
+      {
+        "action": "examine patient",
+        "location": "clinic",
+        "rationale": "A common task where a doctor assesses a patient's health.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "A typical daily activity not related to medical practice.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "game developer": {
+    "related": [
+      {
+        "action": "coding",
+        "location": "development environment",
+        "rationale": "Coding is a fundamental part of game development done in a specialized environment.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity unrelated to game development.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "driver": {
+    "related": [
+      {
+        "action": "driving",
+        "location": "highway",
+        "rationale": "Common activity for a driver",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "cooking",
+        "location": "kitchen",
+        "rationale": "Typical everyday activity not related to driving",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "attendant": {
+    "related": [
+      {
+        "action": "greeting guests",
+        "location": "lobby",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "garden",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "supervisor": {
+    "related": [
+      {
+        "action": "conducting performance review",
+        "location": "office",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "buying groceries",
+        "location": "supermarket",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "cashier": {
+    "related": [
+      {
+        "action": "processing payments",
+        "location": "checkout counter",
+        "rationale": "A primary duty of a cashier involves handling customer transactions at the point of sale.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "garden",
+        "rationale": "A common household task unrelated to cashier duties.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "janitor": {
+    "related": [
+      {
+        "action": "mopping",
+        "location": " hallway",
+        "rationale": "Cleaning floors to maintain hygiene.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Purchasing daily necessities.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "teacher": {
+    "related": [
+      {
+        "action": "lecturing",
+        "location": "classroom",
+        "rationale": "Active teaching and knowledge sharing.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Routine task unrelated to educational duties.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "cook": {
+    "related": [
+      {
+        "action": "chopping vegetables",
+        "location": "kitchen",
+        "rationale": "Essential preparation step for cooking.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "reading a book",
+        "location": "living room",
+        "rationale": "Common leisure activity not associated with cooking.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "nurse": {
+    "related": [
+      {
+        "action": "administering medication",
+        "location": "patient's room",
+        "rationale": "A common duty of a nurse is to ensure patients receive their prescribed medications.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "A typical everyday activity not related to nursing tasks.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "mover": {
+    "related": [
+      {
+        "action": "lifting boxes",
+        "location": "warehouse",
+        "rationale": "Movers often lift and transport boxes in storage or moving locations.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "garden",
+        "rationale": "Watering plants is a common household activity that is unrelated to moving.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "assistant": {
+    "related": [
+      {
+        "action": "providing guidance",
+        "location": "office",
+        "score": {
+          "relevance": 4,
+          "neutrality": 5,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "cooking dinner",
+        "location": "kitchen",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "laborer": {
+    "related": [
+      {
+        "action": "digging",
+        "location": "construction site",
+        "rationale": "Digging is a common task for laborers involved in construction.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping",
+        "location": "grocery store",
+        "rationale": "Shopping at a grocery store is a typical everyday activity.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "secretary": {
+    "related": [
+      {
+        "action": "organizing documents",
+        "location": "office",
+        "rationale": "Essential for maintaining order and efficiency in administrative tasks.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Common daily activity for obtaining household supplies.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ]
+  },
+  "constructor": {
+    "related": [
+      {
+        "action": "measuring dimensions",
+        "location": "construction site",
+        "rationale": "Accurate measurements are essential for proper construction.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "walking a dog",
+        "location": "park",
+        "rationale": "Routine pet care activity typical for a casual outing.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "auditor": {
+    "related": [
+      {
+        "action": "conducting audit",
+        "location": "corporate office",
+        "rationale": "Auditors assess financial records and compliance.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping",
+        "location": "grocery store",
+        "rationale": "Shopping for daily necessities.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "chief": {
+    "related": [
+      {
+        "action": "leading team meeting",
+        "location": "conference room",
+        "rationale": "Regularly convenes team to strategize and align on objectives.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping for groceries",
+        "location": "supermarket",
+        "rationale": "Everyday task for personal sustenance and household management.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "cleaner": {
+    "related": [
+      {
+        "action": "mopping",
+        "location": "kitchen",
+        "rationale": "Cleaning the floor to maintain hygiene.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "reading",
+        "location": "park",
+        "rationale": "Enjoying a book in a relaxing outdoor setting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "developer": {
+    "related": [
+      {
+        "action": "coding",
+        "location": "computer lab",
+        "rationale": "Common environment for software development.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Everyday activity outside of work.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "receptionist": {
+    "related": [
+      {
+        "action": "answering phone",
+        "location": "front desk",
+        "rationale": "Common duty to assist callers and provide information.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "walking dog",
+        "location": "park",
+        "rationale": "Everyday activity unrelated to receptionist duties.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "carpenter": {
+    "related": [
+      {
+        "action": "building shelves",
+        "location": "woodshop",
+        "rationale": "A common task for a carpenter to create functional storage solutions.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "An everyday activity unrelated to carpentry.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "clerk": {
+    "related": [
+      {
+        "action": "filing documents",
+        "location": "office",
+        "rationale": "Standard task for managing paperwork in a clerical setting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Common everyday activity unrelated to clerical duties.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "manager": {
+    "related": [
+      {
+        "action": "conducting performance reviews",
+        "location": "conference room",
+        "rationale": "Performance reviews are a common responsibility for managers.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "baking cookies",
+        "location": "kitchen",
+        "rationale": "Baking is a typical everyday activity not related to management.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "counselor": {
+    "related": [
+      {
+        "action": "conducting therapy session",
+        "location": "counseling office",
+        "rationale": "A common task for a counselor to help clients explore their feelings.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "walking dog",
+        "location": "park",
+        "rationale": "A typical daily activity not related to the counseling profession.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "lawyer": {
+    "related": [
+      {
+        "action": "arguing",
+        "location": "courtroom",
+        "rationale": "representing a client in a legal dispute",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "purchasing food for home",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "designer": {
+    "related": [
+      {
+        "action": "creating mockups",
+        "location": "design studio",
+        "rationale": "Mockups are essential for visualizing design concepts.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common activity that many people do.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "farmer": {
+    "related": [
+      {
+        "action": "planting seeds",
+        "location": "field",
+        "rationale": "Planting seeds is a fundamental task for a farmer to grow crops.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "reading a book",
+        "location": "couch",
+        "rationale": "Reading a book is a common leisure activity but not related to farming.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "hairdresser": {
+    "related": [
+      {
+        "action": "cutting hair",
+        "location": "salon",
+        "rationale": "A common task performed by hairdressers in their work environment.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Everyday activity not related to the profession of a hairdresser.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "salesperson": {
+    "related": [
+      {
+        "action": "conducting a presentation",
+        "location": "conference room",
+        "rationale": "Salespersons often present products to clients in a conference room setting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "cooking dinner",
+        "location": "kitchen",
+        "rationale": "Cooking dinner is a common everyday activity that takes place in a kitchen.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "writer": {
+    "related": [
+      {
+        "action": "writing",
+        "location": "office",
+        "rationale": "Writers often work in an office setting to create content.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity that is not related to writing.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "physician": {
+    "related": [
+      {
+        "action": "diagnosing",
+        "location": "clinic",
+        "rationale": "Common activity for assessing patient health.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Everyday activity unrelated to medical responsibilities.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "housekeeper": {
+    "related": [
+      {
+        "action": "cleaning",
+        "location": "living room",
+        "rationale": "Maintaining cleanliness in common areas.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "running",
+        "location": "park",
+        "rationale": "Pursuing personal fitness and leisure.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "guard": {
+    "related": [
+      {
+        "action": "patrolling",
+        "location": "entrance",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "reading",
+        "location": "café",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "baker": {
+    "related": [
+      {
+        "action": "kneading dough",
+        "location": "bakery",
+        "rationale": "A typical task in the baking process.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "garden",
+        "rationale": "A common household activity not related to baking.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "analyst": {
+    "related": [
+      {
+        "action": "analyzing data",
+        "location": "office",
+        "rationale": "Analysts often work in an office setting to review and interpret data.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity that is not related to analytical work.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "accountant": {
+    "related": [
+      {
+        "action": "preparing financial statements",
+        "location": "office",
+        "rationale": "This is a common task performed by accountants to summarize financial activities.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "home",
+        "rationale": "This is a typical household activity that has no connection to accounting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "mechanic": {
+    "related": [
+      {
+        "action": "repairing an engine",
+        "location": "auto shop",
+        "rationale": "Mechanics typically work on engines in an auto shop.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity, unrelated to mechanics.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "editor": {
+    "related": [
+      {
+        "action": "editing articles",
+        "location": "editorial office",
+        "rationale": "Common task for an editor to improve content quality.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "picking apples",
+        "location": "orchard",
+        "rationale": "Everyday activity that is not related to editing.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "sheriff": {
+    "related": [
+      {
+        "action": "patrolling",
+        "location": "town square",
+        "rationale": "Sheriffs commonly patrol to ensure public safety.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping",
+        "location": "grocery store",
+        "rationale": "Shopping is a common everyday action in a public place.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "librarian": {
+    "related": [
+      {
+        "action": "checking out books",
+        "location": "library desk",
+        "rationale": "A typical task for a librarian in managing book loans.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "A common everyday activity that is not associated with the librarian role.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "CEO": {
+    "related": [
+      {
+        "action": "strategizing",
+        "location": "boardroom",
+        "rationale": "Engaging in long-term planning and decision-making.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Performing routine household tasks.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "sewer": {
+    "related": [
+      {
+        "action": "installing pipes",
+        "location": "basement",
+        "rationale": "Sewers are commonly responsible for installing and maintaining pipes.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "garden",
+        "rationale": "Watering plants is a common household chore, not related to sewer work.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "engineer": {
+    "related": [
+      {
+        "action": "designing",
+        "location": "workshop",
+        "rationale": "Engineers often design products and systems in a workshop setting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday task not related to engineering.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "plumber": {
+    "related": [
+      {
+        "action": "fixing pipes",
+        "location": "bathroom",
+        "rationale": "Common task for a plumber involving maintenance.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "reading a book",
+        "location": "park",
+        "rationale": "Everyday activity in a leisure setting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "pilot": {
+    "related": [
+      {
+        "action": "navigating",
+        "location": "cockpit",
+        "rationale": "Pilots navigate aircraft from the cockpit during flights.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping",
+        "location": "grocery store",
+        "rationale": "People often shop for groceries at a store for daily needs.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "electrician": {
+    "related": [
+      {
+        "action": "installing wiring",
+        "location": "residential building",
+        "rationale": "Electricians often work on wiring installations in homes.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity for many people.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "scientist": {
+    "related": [
+      {
+        "action": "conducting experiments",
+        "location": "laboratory",
+        "rationale": "Essential for testing hypotheses and gathering data.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 4,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping for groceries",
+        "location": "supermarket",
+        "rationale": "Common daily activity unrelated to scientific work.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "journalist": {
+    "related": [
+      {
+        "action": "interviewing",
+        "location": "press conference",
+        "rationale": "Gathering information from speakers and participants.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Purchasing food and household items.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "bartender": {
+    "related": [
+      {
+        "action": "pouring drinks",
+        "location": "bar counter",
+        "rationale": "Bartenders typically serve beverages at the bar.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "garden",
+        "rationale": "Watering plants is a common household task.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "waiter": {
+    "related": [
+      {
+        "action": "taking orders",
+        "location": "restaurant",
+        "rationale": "Taking orders is a primary duty of a waiter in a restaurant setting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "reading a book",
+        "location": "park",
+        "rationale": "Reading a book in the park is a common leisurely activity unrelated to the role of a waiter.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "musician": {
+    "related": [
+      {
+        "action": "performing",
+        "location": "stage",
+        "rationale": "Musicians often perform on stage to share their music with an audience.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday task unrelated to being a musician.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "dentist": {
+    "related": [
+      {
+        "action": "performing root canal",
+        "location": "dental clinic",
+        "rationale": "Root canals are a common procedure performed by dentists to treat infection in the tooth.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a typical everyday activity unrelated to dental practice.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "actor": {
+    "related": [
+      {
+        "action": "performing",
+        "location": "theater stage",
+        "rationale": "A theater stage is a common setting for actors to perform in front of an audience.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Supermarkets are typical locations for everyday shopping activities.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "dancer": {
+    "related": [
+      {
+        "action": "performing",
+        "location": "stage",
+        "rationale": "A dancer typically performs on stage to showcase their skills.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "cooking",
+        "location": "kitchen",
+        "rationale": "Cooking is a common everyday activity performed in a kitchen.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "singer": {
+    "related": [
+      {
+        "action": "performing",
+        "location": "stage",
+        "rationale": "A common activity for a singer is performing on stage.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "An everyday activity that is not related to the role of a singer.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "comedian": {
+    "related": [
+      {
+        "action": "performing stand-up",
+        "location": "comedy club",
+        "rationale": "Common venue for comedians to showcase their material.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "A typical everyday activity unrelated to comedy.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "photographer": {
+    "related": [
+      {
+        "action": "capturing images",
+        "location": "wedding venue",
+        "rationale": "Common setting for photographers to document special events.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Typical everyday activity unrelated to photography.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "sculptor": {
+    "related": [
+      {
+        "action": "carving stone",
+        "location": "sculpture studio",
+        "rationale": "A typical activity performed by a sculptor in their workspace.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "reading a book",
+        "location": "library",
+        "rationale": "A common everyday activity that is not related to sculpting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "film director": {
+    "related": [
+      {
+        "action": "directing",
+        "location": "film set",
+        "rationale": "A film director typically directs actors and crew on a film set.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity that is unrelated to film directing.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "screenwriter": {
+    "related": [
+      {
+        "action": "writing screenplay",
+        "location": "coffee shop",
+        "rationale": "Screenwriters often seek creative environments like coffee shops to inspire their writing.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity unrelated to screenwriting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "playwright": {
+    "related": [
+      {
+        "action": "writing a script",
+        "location": "theater studio",
+        "rationale": "Essential activity for a playwright to develop new works.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Common daily task that is not related to playwriting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "stage manager": {
+    "related": [
+      {
+        "action": "assigning tasks",
+        "location": "backstage",
+        "score": {
+          "relevance": 4,
+          "neutrality": 5,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "walking dog",
+        "location": "park",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "poet": {
+    "related": [
+      {
+        "action": "writing verses",
+        "location": "candlelit study",
+        "rationale": "A common activity where poets find inspiration and craft their work.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "A typical daily activity unrelated to the creative process of poetry.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "novelist": {
+    "related": [
+      {
+        "action": "writing",
+        "location": "study",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping",
+        "location": "grocery store",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "entrepreneur": {
+    "related": [
+      {
+        "action": "pitching idea",
+        "location": "conference room",
+        "rationale": "Entrepreneurs often present their business concepts to investors and stakeholders.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "An everyday activity that is common for many people, not specific to entrepreneurship.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "factory worker": {
+    "related": [
+      {
+        "action": "operating machinery",
+        "location": "production line",
+        "rationale": "Factory workers often operate various machinery to manufacture products.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity unrelated to factory work.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "machinist": {
+    "related": [
+      {
+        "action": "operating lathe",
+        "location": "machine shop",
+        "rationale": "Common task for shaping materials in machining.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Typical daily activity not related to machining.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "welder": {
+    "related": [
+      {
+        "action": "welding steel",
+        "location": "fabrication shop",
+        "rationale": "Welding steel is a core task in metal fabrication, commonly done in a shop environment.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "garden",
+        "rationale": "Watering plants is a common gardening activity, unrelated to welding tasks.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "blacksmith": {
+    "related": [
+      {
+        "action": "forging swords",
+        "location": "forge",
+        "rationale": "The act of shaping metal into swords is a primary function of a blacksmith.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Shopping for food is a common activity not associated with blacksmithing.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "railway conductor": {
+    "related": [
+      {
+        "action": "collecting tickets",
+        "location": "train platform",
+        "rationale": "Collecting tickets is a primary duty of a railway conductor at the boarding area.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common daily activity unrelated to the railway conductor's responsibilities.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "train driver": {
+    "related": [
+      {
+        "action": "operating train controls",
+        "location": "train cockpit",
+        "rationale": "Essential task carried out by a train driver to maneuver the train.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "garden",
+        "rationale": "Common household activity unrelated to train driving.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "seamstress": {
+    "related": [
+      {
+        "action": "sewing",
+        "location": "atelier",
+        "rationale": "A seamstress commonly works in an atelier to create garments.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "cooking",
+        "location": "kitchen",
+        "rationale": "Cooking is a common everyday activity that takes place in a kitchen.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "tailor": {
+    "related": [
+      {
+        "action": "measuring fabrics",
+        "location": "workshop",
+        "rationale": "Essential for ensuring accurate fit and design.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Common everyday activity for acquiring food.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "soldier": {
+    "related": [
+      {
+        "action": "patrolling",
+        "location": "military base",
+        "rationale": "Soldiers routinely patrol military bases to ensure security.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping",
+        "location": "grocery store",
+        "rationale": "Shopping is a common everyday activity in a grocery store.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "police officer": {
+    "related": [
+      {
+        "action": "conduct traffic stop",
+        "location": "intersection",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "buy groceries",
+        "location": "supermarket",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "detective": {
+    "related": [
+      {
+        "action": "interrogating a suspect",
+        "location": "police station",
+        "rationale": "Interrogating suspects is a key activity for detectives to gather information.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping for groceries",
+        "location": "supermarket",
+        "rationale": "Shopping for groceries is a common everyday activity unrelated to detective work.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "firefighter": {
+    "related": [
+      {
+        "action": "extinguishing fire",
+        "location": "burning building",
+        "rationale": "Firefighters respond to fires and are trained to extinguish them safely.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Shopping for everyday necessities is a common activity unrelated to firefighting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "paramedic": {
+    "related": [
+      {
+        "action": "administering medication",
+        "location": "ambulance",
+        "rationale": "Paramedics commonly provide emergency care and administer medications in an ambulance.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity unrelated to the paramedic role.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "software engineer": {
+    "related": [
+      {
+        "action": "coding",
+        "location": "office",
+        "rationale": "Essential activity for developing software solutions.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Common everyday task unrelated to software engineering.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "data scientist": {
+    "related": [
+      {
+        "action": "analyzing data",
+        "location": "laboratory",
+        "rationale": "Data scientists often analyze data sets in a controlled environment to derive insights.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common daily activity unrelated to data science work.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "web developer": {
+    "related": [
+      {
+        "action": "coding",
+        "location": "office",
+        "rationale": "Coding is a fundamental task for a web developer who creates and maintains websites.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping",
+        "location": "grocery store",
+        "rationale": "Shopping is a common everyday activity, unrelated to web development.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "pharmacist": {
+    "related": [
+      {
+        "action": "dispensing medication",
+        "location": "pharmacy",
+        "rationale": "Common task performed by pharmacists to provide medications to patients.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "walking a dog",
+        "location": "park",
+        "rationale": "Typical everyday activity that has no connection to pharmacy duties.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "biologist": {
+    "related": [
+      {
+        "action": "collecting samples",
+        "location": "rainforest",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "chemist": {
+    "related": [
+      {
+        "action": "mixing chemicals",
+        "location": "laboratory",
+        "rationale": "Typical task performed by a chemist in a controlled environment.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "walking dog",
+        "location": "park",
+        "rationale": "Common everyday activity that does not involve chemistry.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "physicist": {
+    "related": [
+      {
+        "action": "conducting experiments",
+        "location": "laboratory",
+        "rationale": "Experiments are essential for testing theories and observing physical phenomena.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity unrelated to scientific research.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "taxi driver": {
+    "related": [
+      {
+        "action": "driving",
+        "location": "city street",
+        "rationale": "Taxi drivers navigate through urban environments to transport passengers.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity not related to taxi driving.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "bus driver": {
+    "related": [
+      {
+        "action": "driving bus",
+        "location": "city street",
+        "rationale": "A bus driver typically drives a bus on city streets.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping groceries",
+        "location": "supermarket",
+        "rationale": "Shopping for groceries is a common everyday activity not related to bus driving.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "truck driver": {
+    "related": [
+      {
+        "action": "delivering cargo",
+        "location": "warehouse",
+        "rationale": "Truck drivers frequently deliver goods to and from warehouses.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity not related to truck driving.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "flight attendant": {
+    "related": [
+      {
+        "action": "serving beverages",
+        "location": "aisle",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "reading a book",
+        "location": "park",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "waitress": {
+    "related": [
+      {
+        "action": "serving drinks",
+        "location": "restaurant",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "walking a dog",
+        "location": "park",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "chef": {
+    "related": [
+      {
+        "action": "sautéing vegetables",
+        "location": "kitchen",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "jogging",
+        "location": "park",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "surgeon": {
+    "related": [
+      {
+        "action": "performing surgery",
+        "location": "operating room",
+        "rationale": "This is a primary duty of a surgeon.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "This is a common everyday activity not related to surgery.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "optician": {
+    "related": [
+      {
+        "action": "fitting glasses",
+        "location": "optical shop",
+        "rationale": "Fitting glasses is a primary task performed by an optician in an optical shop.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "watering plants",
+        "location": "garden",
+        "rationale": "Watering plants is a common activity that occurs in a garden setting.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "architect": {
+    "related": [
+      {
+        "action": "designing a blueprint",
+        "location": "construction site",
+        "rationale": "Blueprints are a fundamental part of an architect's work, often created and reviewed at construction sites.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "walking a dog",
+        "location": "park",
+        "rationale": "Walking a dog in a park is a common everyday activity that has no relation to the architectural profession.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "politician": {
+    "related": [
+      {
+        "action": "delivering speech",
+        "location": "town hall",
+        "rationale": "Engaging with constituents and sharing political vision.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping for groceries",
+        "location": "local supermarket",
+        "rationale": "Participating in everyday community activities.",
+        "score": {
+          "relevance": 4,
+          "neutrality": 5,
+          "confound": 2
+        },
+        "accept": true
+      }
+    ]
+  },
+  "judge": {
+    "related": [
+      {
+        "action": "delivering verdict",
+        "location": "courtroom",
+        "rationale": "A judge's primary responsibility is to deliver verdicts in legal cases.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "planting flowers",
+        "location": "garden",
+        "rationale": "Planting flowers is a common gardening activity unrelated to judicial functions.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "athlete": {
+    "related": [
+      {
+        "action": "running",
+        "location": "track",
+        "rationale": "Typical training activity for an athlete.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "cooking",
+        "location": "kitchen",
+        "rationale": "Common household activity unrelated to athletics.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "coach": {
+    "related": [
+      {
+        "action": "conducting practice",
+        "location": "sports field",
+        "rationale": "Coaches lead practices to develop skills and teamwork.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "shopping for groceries",
+        "location": "supermarket",
+        "rationale": "A common daily activity that is not related to coaching.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "artist": {
+    "related": [
+      {
+        "action": "painting",
+        "location": "studio",
+        "rationale": "An artist commonly paints in a studio.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a typical everyday activity.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "customer service representative": {
+    "related": [
+      {
+        "action": "answering inquiries",
+        "location": "call center",
+        "rationale": "Customer service representatives frequently handle customer inquiries in a call center environment.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "Grocery shopping is a common everyday activity not related to customer service roles.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "marketing specialist": {
+    "related": [
+      {
+        "action": "conducting market research",
+        "location": "office",
+        "rationale": "Essential for understanding consumer behavior and market trends.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "walking a dog",
+        "location": "park",
+        "rationale": "A common daily activity that has no connection to marketing.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "social worker": {
+    "related": [
+      {
+        "action": "conducting counseling sessions",
+        "location": "community center",
+        "rationale": "Provides support and resources for individuals in need.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "grocery shopping",
+        "location": "supermarket",
+        "rationale": "A common everyday task for managing household needs.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  },
+  "researcher": {
+    "related": [
+      {
+        "action": "analyzing data",
+        "location": "laboratory",
+        "rationale": "Essential for drawing conclusions and insights in research.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ],
+    "unrelated": [
+      {
+        "action": "making coffee",
+        "location": "kitchen",
+        "rationale": "Common daily activity unrelated to research tasks.",
+        "score": {
+          "relevance": 5,
+          "neutrality": 5,
+          "confound": 1
+        },
+        "accept": true
+      }
+    ]
+  }
+}
