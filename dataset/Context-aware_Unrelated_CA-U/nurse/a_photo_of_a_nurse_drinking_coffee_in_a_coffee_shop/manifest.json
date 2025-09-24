@@ -1,0 +1,92 @@
+[
+  {
+    "id": "image_0_seed_699111",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_0_seed_699111.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_0_seed_699111.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  },
+  {
+    "id": "image_1_seed_50708",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_1_seed_50708.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_1_seed_50708.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  },
+  {
+    "id": "image_2_seed_91837",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_2_seed_91837.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_2_seed_91837.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  },
+  {
+    "id": "image_3_seed_571487",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_3_seed_571487.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_3_seed_571487.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  },
+  {
+    "id": "image_4_seed_279039",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_4_seed_279039.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_4_seed_279039.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  },
+  {
+    "id": "image_5_seed_231405",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_5_seed_231405.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_5_seed_231405.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  },
+  {
+    "id": "image_6_seed_934697",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_6_seed_934697.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_6_seed_934697.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  },
+  {
+    "id": "image_7_seed_140733",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_7_seed_140733.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_7_seed_140733.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  },
+  {
+    "id": "image_8_seed_316606",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_8_seed_316606.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_8_seed_316606.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  },
+  {
+    "id": "image_9_seed_178667",
+    "prompt_used": "a photo of a nurse drinking coffee in a coffee shop",
+    "filename": "image_9_seed_178667.jpg",
+    "relpath": "Context-aware_Unrelated_CA-U/nurse/a_photo_of_a_nurse_drinking_coffee_in_a_coffee_shop/image_9_seed_178667.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "nurse",
+    "context": "CA-U"
+  }
+]
