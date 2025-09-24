@@ -4,5 +4,4 @@ __pycache__/
 data
 docs
 pyproject.toml
-dataset
 test_set
