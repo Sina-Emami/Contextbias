@@ -1,0 +1,92 @@
+[
+  {
+    "id": "image_0_seed_697730",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_0_seed_697730.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_0_seed_697730.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  },
+  {
+    "id": "image_1_seed_479789",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_1_seed_479789.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_1_seed_479789.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  },
+  {
+    "id": "image_2_seed_974594",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_2_seed_974594.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_2_seed_974594.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  },
+  {
+    "id": "image_3_seed_944448",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_3_seed_944448.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_3_seed_944448.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  },
+  {
+    "id": "image_4_seed_88515",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_4_seed_88515.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_4_seed_88515.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  },
+  {
+    "id": "image_5_seed_160758",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_5_seed_160758.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_5_seed_160758.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  },
+  {
+    "id": "image_6_seed_851859",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_6_seed_851859.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_6_seed_851859.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  },
+  {
+    "id": "image_7_seed_214147",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_7_seed_214147.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_7_seed_214147.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  },
+  {
+    "id": "image_8_seed_331564",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_8_seed_331564.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_8_seed_331564.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  },
+  {
+    "id": "image_9_seed_482926",
+    "prompt_used": "a photo of a doctor in a hospital room",
+    "filename": "image_9_seed_482926.jpg",
+    "relpath": "Context-aware_Related_CA-R/doctor/a_photo_of_a_doctor_in_a_hospital_room/image_9_seed_482926.jpg",
+    "model": "Stable-Diffusion-XL",
+    "role": "doctor",
+    "context": "CA-R"
+  }
+]
