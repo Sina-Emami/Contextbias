@@ -1,6 +1,8 @@
-﻿import os
+﻿import argparse
+import os
 import json
 from pathlib import Path
+from typing import Sequence
 from dotenv import load_dotenv
 
 from analysis.schema_counts import FrequencyCounterConfig, run_counts
@@ -18,7 +20,11 @@ from schemas.bias import BiasReport
 
 load_dotenv()
 
+# Root folder containing the dataset prompt directories
+DEFAULT_DATASET_ROOT = Path(os.getenv("DATASET_ROOT", "dataset")).resolve()
+
 #  Hardcoded inputs per your request
+SCENARIO = "Technology industry workplace images."
 SCENARIO_ID = "Tech_SCN001"
 
 
@@ -65,6 +71,224 @@ def setup_scenario(scenario: str, scenario_id: str) -> dict:
     print(f"[Init] Scenario folders ready at: {paths['root']}")
     return paths
 
+
+def setup_test_paths(raw_json_path: Path, output_root: Path | None = None) -> dict:
+    """Prepare folders so structuring & reporting can run against a canned raw JSON."""
+    raw_json_path = Path(raw_json_path).resolve()
+    if not raw_json_path.exists():
+        raise FileNotFoundError(f"Raw descriptions file not found: {raw_json_path}")
+    if raw_json_path.is_dir():
+        raise ValueError("Expected a raw descriptions JSON file, received a directory.")
+
+    raw_dir = raw_json_path.parent
+    root = Path(output_root).resolve() if output_root else raw_dir.parent
+    root.mkdir(parents=True, exist_ok=True)
+    descriptions_dir = root / "descriptions"
+    biases_dir = root / "biases"
+    images_dir = root / "images"
+
+    for path in (descriptions_dir, biases_dir, images_dir):
+        path.mkdir(parents=True, exist_ok=True)
+
+    paths = {
+        "root": root,
+        "raw_descriptions": raw_dir,
+        "descriptions": descriptions_dir,
+        "biases": biases_dir,
+        "images": images_dir,
+        "manifest_path": root / "manifest.test.json",
+        "images_info_path": images_dir / "images_info.json",
+    }
+
+    print(f"[Init] Test run configured. Outputs will be stored under: {root}")
+    print(f"       Using raw descriptions from: {raw_json_path}")
+    return paths
+
+
+def _find_manifest_file(prompt_dir: Path) -> Path:
+    """Locate the JSON manifest describing images within a prompt directory."""
+    prompt_dir = Path(prompt_dir).resolve()
+    candidates = [
+        prompt_dir / "manifest.json",
+        prompt_dir / "prompt" / "manifest.json",
+        prompt_dir / "prompt" / "images.json",
+    ]
+    for candidate in candidates:
+        if candidate.exists() and candidate.is_file():
+            return candidate
+
+    for candidate in prompt_dir.glob("*.json"):
+        if not candidate.is_file():
+            continue
+        try:
+            data = json.loads(candidate.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        if isinstance(data, list):
+            return candidate
+
+    raise FileNotFoundError(f"No manifest JSON found in {prompt_dir}")
+
+
+def _scenario_slug(parts: Sequence[str]) -> str:
+    tokens: list[str] = []
+    for part in parts:
+        cleaned = "".join(ch if ch.isalnum() else "_" for ch in part)
+        cleaned = cleaned.strip("_")
+        if not cleaned:
+            continue
+        segments = [seg for seg in cleaned.split("_") if seg]
+        if not segments:
+            continue
+        tokens.append("_".join(segment.lower() for segment in segments))
+    return "_".join(tokens) or "scenario"
+
+
+def _derive_scenario_id(dataset_root: Path, prompt_dir: Path) -> str:
+    try:
+        relative = prompt_dir.relative_to(dataset_root)
+    except ValueError:
+        relative = prompt_dir
+    return _scenario_slug(relative.parts)
+
+
+def _resolve_image_path(record: dict, dataset_root: Path, prompt_dir: Path) -> Path | None:
+    """Best-effort resolution of an image file path for a manifest record."""
+    candidates: list[Path] = []
+
+    for key in ("abspath", "absolute_path", "image_path"):
+        value = record.get(key)
+        if isinstance(value, str) and value:
+            candidates.append(Path(value))
+
+    for key in ("relpath", "relative_path"):
+        value = record.get(key)
+        if isinstance(value, str) and value:
+            rel_candidate = Path(value)
+            candidates.append((dataset_root / rel_candidate).resolve())
+            candidates.append((prompt_dir / rel_candidate).resolve())
+            candidates.append((prompt_dir / rel_candidate.name).resolve())
+
+    filename = record.get("filename")
+    if isinstance(filename, str) and filename:
+        candidates.append((prompt_dir / filename).resolve())
+
+    unique_candidates = []
+    seen = set()
+    for candidate in candidates:
+        try:
+            candidate = candidate.resolve()
+        except Exception:
+            continue
+        key = str(candidate).lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        unique_candidates.append(candidate)
+
+    for candidate in unique_candidates:
+        if candidate.exists() and candidate.is_file():
+            return candidate
+
+    return None
+
+
+def setup_prompt_paths(prompt_dir: Path, dataset_root: Path | None = None) -> dict:
+    """Prepare per-prompt folders within the dataset for pipeline outputs."""
+    dataset_root = Path(dataset_root or DEFAULT_DATASET_ROOT).resolve()
+    prompt_dir = Path(prompt_dir).resolve()
+
+    if not dataset_root.exists():
+        raise FileNotFoundError(f"Dataset root does not exist: {dataset_root}")
+    if not prompt_dir.exists() or not prompt_dir.is_dir():
+        raise FileNotFoundError(f"Prompt directory missing: {prompt_dir}")
+
+    manifest_path = _find_manifest_file(prompt_dir)
+    try:
+        manifest_records = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Manifest JSON is invalid: {manifest_path}") from exc
+
+    if not isinstance(manifest_records, list):
+        raise ValueError(f"Expected manifest JSON array at {manifest_path}")
+
+    raw_dir = prompt_dir / "raw_descriptions"
+    descriptions_dir = prompt_dir / "descriptions"
+    biases_dir = prompt_dir / "biases"
+
+    for folder in (raw_dir, descriptions_dir, biases_dir):
+        folder.mkdir(parents=True, exist_ok=True)
+
+    normalized_records: list[dict] = []
+    for entry in manifest_records:
+        if not isinstance(entry, dict):
+            continue
+        normalized = dict(entry)
+        normalized.pop("abspath", None)
+        resolved = _resolve_image_path(normalized, dataset_root, prompt_dir)
+        if resolved:
+            try:
+                normalized["relpath"] = str(resolved.relative_to(dataset_root))
+            except ValueError:
+                pass
+        else:
+            print(f"   !! Unable to resolve image path for record {entry.get('id')} in {prompt_dir}")
+        normalized_records.append(normalized)
+
+    images_info_path = prompt_dir / "images_info.json"
+    images_info_path.write_text(
+        json.dumps(normalized_records, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+    scenario_id = _derive_scenario_id(dataset_root, prompt_dir)
+    try:
+        relative_prompt = prompt_dir.relative_to(dataset_root)
+        scenario_label = f"Dataset prompt: {'/'.join(relative_prompt.parts)}"
+    except ValueError:
+        scenario_label = f"Dataset prompt: {prompt_dir}"
+
+    return {
+        "root": dataset_root,
+        "dataset_root": dataset_root,
+        "prompt_root": prompt_dir,
+        "images": prompt_dir,
+        "raw_descriptions": raw_dir,
+        "descriptions": descriptions_dir,
+        "biases": biases_dir,
+        "images_info_path": images_info_path,
+        "manifest_path": manifest_path,
+        "scenario_id": scenario_id,
+        "scenario_label": scenario_label,
+    }
+
+
+def discover_prompt_directories(dataset_root: Path) -> list[Path]:
+    dataset_root = Path(dataset_root).resolve()
+    if not dataset_root.exists():
+        return []
+    manifests = sorted(dataset_root.rglob("manifest.json"))
+    prompt_dirs = [manifest.parent for manifest in manifests if manifest.parent.is_dir()]
+    return prompt_dirs
+
+
+def process_prompt_directory(prompt_dir: Path, dataset_root: Path) -> None:
+    paths = setup_prompt_paths(prompt_dir, dataset_root)
+
+    label = paths.get("scenario_label") or str(prompt_dir)
+    scenario_id = paths.get("scenario_id")
+    if scenario_id:
+        print(f"\n=== Processing prompt: {label} [{scenario_id}] ===")
+    else:
+        print(f"\n=== Processing prompt: {label} ===")
+
+    raw_records = capture_raw_descriptions(paths)
+    if not raw_records:
+        print("[Stage 1] No raw descriptions captured or available to process.")
+
+    structure_descriptions(paths)
+    counts_path = summarize_description_counts(paths)
+    run_summary_report(paths, counts_path=counts_path)
+    # run_analyze_bias(paths)
 
 def _load_json_array(path: Path) -> list:
     if not path.exists():
@@ -348,9 +572,14 @@ def run_analyze_bias(paths: dict) -> None:
 
     # 3b) Reason to BiasReport (Replicate OSS 20B)
     reason_crew = build_bias_reasoning_crew()
+    scenario_id = paths.get("scenario_id", SCENARIO_ID)
+    scenario_label = paths.get("scenario_label", SCENARIO)
+    extra_context = f"Scenario ID: {scenario_id}"
+    if scenario_label and scenario_label != scenario_id:
+        extra_context = f"{extra_context}; {scenario_label}"
     reason_out = reason_crew.kickoff(inputs={
         "summary_json": json.dumps(rep_summary, ensure_ascii=False),
-        "extra_context": f"Scenario ID: {SCENARIO_ID}",
+        "extra_context": extra_context,
     })
     report = _parse_bias_report_output(reason_out)
 
@@ -370,10 +599,73 @@ def run_analyze_bias(paths: dict) -> None:
     print(f"?? Bias report   -> {biases_dir / 'bias_report.json'} (or bias_report_raw.txt)")
 
 
+def main(argv: Sequence[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(description="Run the bias analysis pipeline across dataset prompts.")
+    parser.add_argument(
+        "--dataset-root",
+        type=Path,
+        default=DEFAULT_DATASET_ROOT,
+        help="Path to the dataset root directory (default: %(default)s)",
+    )
+    parser.add_argument(
+        "--prompt",
+        action="append",
+        default=[],
+        help="Relative or absolute path to a specific prompt directory (repeatable).",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Process at most N prompt directories.",
+    )
+
+    args = parser.parse_args(argv)
+
+    if not os.getenv("OPENAI_API_KEY"):
+        raise RuntimeError("OPENAI_API_KEY is not set. Put it in your environment or .env file.")
+
+    dataset_root = Path(args.dataset_root).resolve()
+    if not dataset_root.exists():
+        raise FileNotFoundError(f"Dataset root not found: {dataset_root}")
+
+    prompt_dirs: list[Path] = []
+
+    if args.prompt:
+        for value in args.prompt:
+            candidate = Path(value)
+            if not candidate.is_absolute():
+                candidate = (dataset_root / candidate).resolve()
+            else:
+                candidate = candidate.resolve()
+            if not candidate.is_dir():
+                print(f"Skipping prompt path (missing directory): {value}")
+                continue
+            prompt_dirs.append(candidate)
+    else:
+        prompt_dirs = discover_prompt_directories(dataset_root)
+
+    if not prompt_dirs:
+        print(f"No prompt directories discovered under {dataset_root}.")
+        return
+
+    seen: set[Path] = set()
+    unique_prompts: list[Path] = []
+    for prompt_dir in prompt_dirs:
+        resolved = prompt_dir.resolve()
+        if resolved in seen:
+            continue
+        seen.add(resolved)
+        unique_prompts.append(resolved)
+
+    prompt_dirs = unique_prompts
+
+    if args.limit is not None and args.limit >= 0:
+        prompt_dirs = prompt_dirs[: args.limit]
+
+    for prompt_dir in prompt_dirs:
+        process_prompt_directory(prompt_dir, dataset_root)
+
+
 if __name__ == "__main__":
-    paths = setup_scenario(SCENARIO, SCENARIO_ID)
-    # capture_raw_descriptions(paths)
-    # structure_descriptions(paths)
-    # counts_path = summarize_description_counts(paths)
-    run_summary_report(paths)
-    # run_analyze_bias(paths)
+    main()
