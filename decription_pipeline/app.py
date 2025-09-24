@@ -11,12 +11,9 @@ from utils.fs import init_scenario_root
 from crew import (
     build_raw_description_crew,
     build_structured_description_crew,
-    build_bias_ingest_crew,
-    build_bias_reasoning_crew,
     build_summary_report_crew,
 )
 from schemas.description import ImageAuditRecord
-from schemas.bias import BiasReport
 
 load_dotenv()
 
@@ -288,7 +285,6 @@ def process_prompt_directory(prompt_dir: Path, dataset_root: Path) -> None:
     structure_descriptions(paths)
     counts_path = summarize_description_counts(paths)
     run_summary_report(paths, counts_path=counts_path)
-    # run_analyze_bias(paths)
 
 def _load_json_array(path: Path) -> list:
     if not path.exists():
@@ -510,93 +506,6 @@ def run_summary_report(paths: dict, counts_path: Path | None = None, output_file
     print(f"   -> Summary report saved -> {report_path}")
     return report_path
 
-
-def _parse_bias_report_output(result) -> BiasReport | dict | str:
-    if isinstance(result, BiasReport):
-        return result
-    if hasattr(result, "pydantic") and isinstance(result.pydantic, BiasReport):
-        return result.pydantic  # type: ignore[return-value]
-    if hasattr(result, "json_dict") and result.json_dict:
-        return result.json_dict  # type: ignore[return-value]
-    if hasattr(result, "raw") and result.raw:
-        try:
-            return json.loads(result.raw)  # type: ignore[attr-defined]
-        except Exception:
-            return result.raw  # type: ignore[attr-defined]
-    if isinstance(result, dict):
-        return result
-    if isinstance(result, str):
-        try:
-            return json.loads(result)
-        except Exception:
-            return result
-    return str(result)
-
-
-def run_analyze_bias(paths: dict) -> None:
-    """Step 3:
-    - Ingest each description JSON one-by-one with a memory-enabled agent (idempotent upsert).
-    - Finalize repetition summary to biases/repeat_summary_full.json
-    - Reason over the summary with Replicate OSS 20B to produce biases/bias_report.json
-    """
-    descriptions_dir: Path = paths["descriptions"]
-    biases_dir: Path = paths["biases"]
-    biases_dir.mkdir(parents=True, exist_ok=True)
-
-    files = sorted(descriptions_dir.glob("*.json"))
-    if not files:
-        print("No descriptions found - skipping bias analysis.")
-        return
-
-    state_path = biases_dir / "agg_state.json"
-    out_path = biases_dir / "repeat_summary_full.json"
-
-    # 3a) Ingest sequentially (agent has memory=True)
-    ingest_crew = build_bias_ingest_crew(files, state_path, out_path)
-    summary_result = ingest_crew.kickoff()
-
-    # Try to load the finalized summary from disk (authoritative)
-    if out_path.exists():
-        rep_summary = json.loads(out_path.read_text(encoding="utf-8"))
-    else:
-        # Fallback to crew output
-        if hasattr(summary_result, "json_dict") and summary_result.json_dict:
-            rep_summary = summary_result.json_dict  # type: ignore[attr-defined]
-        elif hasattr(summary_result, "raw") and summary_result.raw:
-            try:
-                rep_summary = json.loads(summary_result.raw)  # type: ignore[attr-defined]
-            except Exception:
-                rep_summary = {}
-        else:
-            rep_summary = {}
-
-    # 3b) Reason to BiasReport (Replicate OSS 20B)
-    reason_crew = build_bias_reasoning_crew()
-    scenario_id = paths.get("scenario_id", SCENARIO_ID)
-    scenario_label = paths.get("scenario_label", SCENARIO)
-    extra_context = f"Scenario ID: {scenario_id}"
-    if scenario_label and scenario_label != scenario_id:
-        extra_context = f"{extra_context}; {scenario_label}"
-    reason_out = reason_crew.kickoff(inputs={
-        "summary_json": json.dumps(rep_summary, ensure_ascii=False),
-        "extra_context": extra_context,
-    })
-    report = _parse_bias_report_output(reason_out)
-
-    # Save BiasReport
-    if isinstance(report, BiasReport):
-        (biases_dir / "bias_report.json").write_text(
-            report.model_dump_json(indent=2), encoding="utf-8"
-        )
-    elif isinstance(report, dict):
-        (biases_dir / "bias_report.json").write_text(
-            json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8"
-        )
-    else:
-        (biases_dir / "bias_report_raw.txt").write_text(str(report), encoding="utf-8")
-
-    print(f"?? Bias summary  -> {out_path}")
-    print(f"?? Bias report   -> {biases_dir / 'bias_report.json'} (or bias_report_raw.txt)")
 
 
 def main(argv: Sequence[str] | None = None) -> None:
