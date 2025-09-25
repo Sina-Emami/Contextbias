@@ -21,10 +21,6 @@ load_dotenv()
 # Root folder containing the dataset prompt directories
 DEFAULT_DATASET_ROOT = Path(os.getenv("DATASET_ROOT", "dataset")).resolve()
 
-#  Hardcoded inputs per your request
-SCENARIO = "Technology industry workplace images."
-SCENARIO_ID = "Tech_SCN001"
-
 
 @dataclass
 class ResumeState:
