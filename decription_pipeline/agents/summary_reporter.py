@@ -36,6 +36,7 @@ def build_summary_report_agent() -> Agent:
         role=(
             "Interpret aggregated schema counts, preserve category separation, and summarize them"
             " into reliable cohorts with clean statistical metadata."
+            " Always separate distinct enumerated values so downstream statistics stay faithful."
         ),
         goal=(
             "Cluster only tokens that represent the same underlying concept, keep attributes at the"
@@ -43,11 +44,13 @@ def build_summary_report_agent() -> Agent:
         ),
         backstory=(
             "Experienced data modeler who designs fact tables for multimodal bias studies. Skilled at"
-            " spotting near-duplicate terminology without collapsing distinct concepts."
+            " spotting near-duplicate terminology without collapsing distinct concepts, and errs on the"
+            " side of one token per value unless evidence proves equivalence."
         ),
         llm=llm,
         verbose=True,
         allow_delegation=False,
+        max_iter=1,
         memory=False,
         additional_info={
             "cohort_hints": _csv(COHORT_HINTS),
