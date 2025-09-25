@@ -1,6 +1,7 @@
 ﻿import argparse
 import os
 import json
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Sequence
 from dotenv import load_dotenv
@@ -23,6 +24,13 @@ DEFAULT_DATASET_ROOT = Path(os.getenv("DATASET_ROOT", "dataset")).resolve()
 #  Hardcoded inputs per your request
 SCENARIO = "Technology industry workplace images."
 SCENARIO_ID = "Tech_SCN001"
+
+
+@dataclass
+class ResumeState:
+    last_file: Path | None
+    start_prompt: Path | None
+    start_image_id: str | None
 
 
 def _extract_raw_description_output(result) -> str:
@@ -268,7 +276,41 @@ def discover_prompt_directories(dataset_root: Path) -> list[Path]:
     return prompt_dirs
 
 
-def process_prompt_directory(prompt_dir: Path, dataset_root: Path) -> None:
+def determine_resume_state(dataset_root: Path, prompt_dirs: Sequence[Path]) -> ResumeState:
+    dataset_root = Path(dataset_root).resolve()
+    last_file: Path | None = None
+
+    for prompt_dir in sorted({Path(p).resolve() for p in prompt_dirs}):
+        try:
+            manifest_path = _find_manifest_file(prompt_dir)
+        except FileNotFoundError:
+            continue
+
+        try:
+            manifest_records = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+
+        if not isinstance(manifest_records, list):
+            continue
+
+        descriptions_dir = prompt_dir / "descriptions"
+        for record in manifest_records:
+            if not isinstance(record, dict):
+                continue
+            image_id = record.get("id") or record.get("image_id")
+            if not image_id:
+                continue
+            candidate = descriptions_dir / f"{image_id}.json"
+            if candidate.exists():
+                last_file = candidate.resolve()
+                continue
+            return ResumeState(last_file=last_file, start_prompt=prompt_dir, start_image_id=image_id)
+
+    return ResumeState(last_file=last_file, start_prompt=None, start_image_id=None)
+
+
+def process_prompt_directory(prompt_dir: Path, dataset_root: Path, start_image_id: str | None = None) -> None:
     paths = setup_prompt_paths(prompt_dir, dataset_root)
 
     label = paths.get("scenario_label") or str(prompt_dir)
@@ -278,11 +320,11 @@ def process_prompt_directory(prompt_dir: Path, dataset_root: Path) -> None:
     else:
         print(f"\n=== Processing prompt: {label} ===")
 
-    raw_records = capture_raw_descriptions(paths)
+    raw_records = capture_raw_descriptions(paths, start_image_id=start_image_id)
     if not raw_records:
         print("[Stage 1] No raw descriptions captured or available to process.")
 
-    structure_descriptions(paths)
+    structure_descriptions(paths, start_image_id=start_image_id)
     counts_path = summarize_description_counts(paths)
     run_summary_report(paths, counts_path=counts_path)
 
@@ -298,7 +340,7 @@ def _load_json_array(path: Path) -> list:
     return []
 
 
-def capture_raw_descriptions(paths: dict) -> list[dict]:
+def capture_raw_descriptions(paths: dict, start_image_id: str | None = None) -> list[dict]:
     """Stage 1: Call the raw description crew for each image and store results."""
     descriptions_dir: Path = paths["descriptions"]
     raw_dir: Path = paths.get("raw_descriptions") or (descriptions_dir / "raw")
@@ -322,26 +364,50 @@ def capture_raw_descriptions(paths: dict) -> list[dict]:
         return []
 
     raw_records_path = raw_dir / "raw_descriptions.json"
-    raw_records: list[dict] = []
-    seen_ids: set[str] = set()
+
+    ordered_ids: list[str] = []
+    for rec in records:
+        if isinstance(rec, dict):
+            image_id = rec.get("id") or rec.get("image_id")
+            if image_id:
+                ordered_ids.append(image_id)
+
+    existing_entries: dict[str, dict] = {}
     for entry in _load_json_array(raw_records_path):
         if not isinstance(entry, dict):
             continue
         image_id = entry.get("image_id")
-        if image_id and image_id in seen_ids:
-            continue
         if image_id:
-            seen_ids.add(image_id)
-        raw_records.append({
-            "image_id": image_id,
-            "image_path": entry.get("image_path"),
-            "description": entry.get("description"),
-        })
+            existing_entries[image_id] = {
+                "image_id": image_id,
+                "image_path": entry.get("image_path"),
+                "description": entry.get("description"),
+            }
+
+    processed_ids: set[str] = {
+        image_id
+        for image_id, payload in existing_entries.items()
+        if payload.get("description")
+    }
 
     raw_crew = build_raw_description_crew()
+    started = start_image_id is None
 
     for idx, rec in enumerate(records, start=1):
-        image_id = rec.get("id")
+        if not isinstance(rec, dict):
+            continue
+
+        image_id = rec.get("id") or rec.get("image_id")
+        if not image_id:
+            print(f"Skipping record missing id: {rec}")
+            continue
+
+        if not started:
+            if image_id == start_image_id:
+                started = True
+            else:
+                continue
+
         relpath = rec.get("relpath")
         abspath = rec.get("abspath")
         filename = rec.get("filename")
@@ -354,33 +420,58 @@ def capture_raw_descriptions(paths: dict) -> list[dict]:
         elif filename:
             image_path = (images_dir / filename).resolve()
 
-        if not image_id or not image_path:
-            print(f"Skipping record missing id/path: {rec}")
+        if not image_path:
+            print(f"Skipping record missing path: {rec}")
             continue
         if not image_path.exists():
             print(f"Skipping {image_id}: file not found -> {image_path}")
             continue
 
-        print(f"[Stage 1] Capturing raw description {idx}/{len(records)} - {image_id} (local: {image_path})")
-        raw_result = raw_crew.kickoff(inputs={
-            "image_id": image_id,
-            "image_path": str(image_path),
-        })
+        if image_id in existing_entries:
+            existing_entries[image_id]["image_path"] = str(image_path)
+
+        if image_id in processed_ids:
+            print(f"[Stage 1] Skipping raw description (already exists) - {image_id}")
+            continue
+
+        print(
+            f"[Stage 1] Capturing raw description {idx}/{len(records)} - {image_id} (local: {image_path})"
+        )
+        raw_result = raw_crew.kickoff(
+            inputs={
+                "image_id": image_id,
+                "image_path": str(image_path),
+            }
+        )
         raw_text = _extract_raw_description_output(raw_result)
         sanitized = {
             "image_id": image_id,
             "image_path": str(image_path),
             "description": raw_text,
         }
-        raw_records = [entry for entry in raw_records if entry.get("image_id") != image_id]
-        raw_records.append(sanitized)
-        raw_records_path.write_text(json.dumps(raw_records, indent=2, ensure_ascii=False), encoding="utf-8")
+        existing_entries[image_id] = sanitized
+        processed_ids.add(image_id)
+
+        ordered_records = [
+            existing_entries[item_id]
+            for item_id in ordered_ids
+            if item_id in existing_entries
+        ]
+        raw_records_path.write_text(
+            json.dumps(ordered_records, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
         print(f"   -> Raw description stored -> {raw_records_path}")
 
-    return raw_records
+    ordered_records = [
+        existing_entries[item_id]
+        for item_id in ordered_ids
+        if item_id in existing_entries
+    ]
+    return ordered_records
 
 
-def structure_descriptions(paths: dict) -> None:
+def structure_descriptions(paths: dict, start_image_id: str | None = None) -> None:
     """Stage 2: Convert raw descriptions into structured ImageAuditRecord JSON."""
     descriptions_dir: Path = paths["descriptions"]
     descriptions_dir.mkdir(parents=True, exist_ok=True)
@@ -394,34 +485,78 @@ def structure_descriptions(paths: dict) -> None:
         print("No raw descriptions available - skipping structured conversion.")
         return
 
+    raw_map: dict[str, dict] = {}
+    for entry in raw_records:
+        if isinstance(entry, dict):
+            image_id = entry.get("image_id")
+            if image_id:
+                raw_map[image_id] = entry
+
+    images_info_path = Path(paths.get("images_info_path", ""))
+    ordered_ids: list[str] = []
+    if images_info_path.exists():
+        try:
+            info_records = json.loads(images_info_path.read_text(encoding="utf-8"))
+            if isinstance(info_records, list):
+                for rec in info_records:
+                    if isinstance(rec, dict):
+                        image_id = rec.get("id") or rec.get("image_id")
+                        if image_id:
+                            ordered_ids.append(image_id)
+        except json.JSONDecodeError:
+            pass
+
+    if not ordered_ids:
+        ordered_ids = list(raw_map.keys())
+
+    pending_ids = [iid for iid in ordered_ids if iid in raw_map]
+    extras = [iid for iid in raw_map.keys() if iid not in ordered_ids]
+    pending_ids.extend(sorted(extras))
+
+    if start_image_id and start_image_id in pending_ids:
+        start_idx = pending_ids.index(start_image_id)
+        pending_ids = pending_ids[start_idx:]
+
     structured_crew = build_structured_description_crew()
 
-    for idx, entry in enumerate(raw_records, start=1):
-        if not isinstance(entry, dict):
-            continue
-        image_id = entry.get("image_id")
-        image_path = entry.get("image_path")
-        if not image_id or not image_path:
-            print(f"Skipping raw entry missing id/path: {entry}")
+    total = len(pending_ids) if pending_ids else len(raw_map)
+    for idx, image_id in enumerate(pending_ids, start=1):
+        entry = raw_map.get(image_id)
+        if not entry:
             continue
 
-        print(f"[Stage 2] Structuring description {idx}/{len(raw_records)} - {image_id}")
-        payload = json.dumps({
-            "image_id": image_id,
-            "image_path": image_path,
-            "description": entry.get("description"),
-        }, indent=2, ensure_ascii=False)
-        structured_result = structured_crew.kickoff(inputs={
-            "image_id": image_id,
-            "image_path": image_path,
-            "raw_description_json": payload,
-        })
+        image_path = entry.get("image_path")
+        if not image_path:
+            print(f"Skipping raw entry missing path: {entry}")
+            continue
+
+        out_path = descriptions_dir / f"{image_id}.json"
+        if out_path.exists():
+            print(f"[Stage 2] Skipping {image_id}: structured description exists -> {out_path}")
+            continue
+
+        print(f"[Stage 2] Structuring description {idx}/{total} - {image_id}")
+        payload = json.dumps(
+            {
+                "image_id": image_id,
+                "image_path": image_path,
+                "description": entry.get("description"),
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
+        structured_result = structured_crew.kickoff(
+            inputs={
+                "image_id": image_id,
+                "image_path": image_path,
+                "raw_description_json": payload,
+            }
+        )
         desc = _parse_description_output(structured_result)
         if getattr(desc, "image_id", None) is None:
             desc.image_id = image_id
         if getattr(desc, "image_path", None) is None:
             desc.image_path = image_path
-        out_path = descriptions_dir / f"{image_id}.json"
         out_path.write_text(desc.model_dump_json(indent=2), encoding="utf-8")
         print(f"   -> Structured description saved -> {out_path}")
 
@@ -567,13 +702,44 @@ def main(argv: Sequence[str] | None = None) -> None:
         seen.add(resolved)
         unique_prompts.append(resolved)
 
-    prompt_dirs = unique_prompts
+    prompt_dirs = sorted(unique_prompts)
 
     if args.limit is not None and args.limit >= 0:
         prompt_dirs = prompt_dirs[: args.limit]
 
+    resume_state = determine_resume_state(dataset_root, prompt_dirs)
+
+    if resume_state.last_file:
+        try:
+            relative_last = resume_state.last_file.relative_to(dataset_root)
+            print(f"Resuming from last generated file: {relative_last}")
+        except ValueError:
+            print(f"Resuming from last generated file: {resume_state.last_file}")
+    else:
+        print("No previous progress found, starting from the beginning.")
+
+    if resume_state.start_prompt is None:
+        if resume_state.last_file is not None:
+            print("All selected prompts already processed. Nothing new to do.")
+        else:
+            # No prior progress and nothing identified to process (likely empty manifests)
+            print("No actionable items discovered in the selected prompts.")
+        return
+
+    processing_started = False
     for prompt_dir in prompt_dirs:
-        process_prompt_directory(prompt_dir, dataset_root)
+        if not processing_started:
+            if prompt_dir == resume_state.start_prompt:
+                processing_started = True
+                start_image_id = resume_state.start_image_id
+            else:
+                continue
+        else:
+            start_image_id = None
+
+        process_prompt_directory(prompt_dir, dataset_root, start_image_id=start_image_id)
+        # After the first processing iteration, ensure subsequent prompts start fresh
+        resume_state.start_prompt = None
 
 
 if __name__ == "__main__":
