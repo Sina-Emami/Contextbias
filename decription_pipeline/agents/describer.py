@@ -24,6 +24,7 @@ def build_raw_image_describer_agent() -> Agent:
         llm=None,
         allow_delegation=False,
         verbose=True,
+        max_iter=1,
         memory=False,
     )
 
