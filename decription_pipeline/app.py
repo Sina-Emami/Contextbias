@@ -1,4 +1,5 @@
 ﻿import argparse
+import asyncio
 import os
 import json
 from dataclasses import dataclass
@@ -22,11 +23,42 @@ load_dotenv()
 DEFAULT_DATASET_ROOT = Path(os.getenv("DATASET_ROOT", "dataset")).resolve()
 
 
+def _env_int(name: str, default: int) -> int:
+    value = os.getenv(name)
+    if value is None or value.strip() == "":
+        return default
+    try:
+        parsed = int(value)
+        return parsed if parsed >= 1 else default
+    except ValueError:
+        return default
+
+
+RAW_STAGE_CONCURRENCY = _env_int("RAW_STAGE_CONCURRENCY", 10)
+STRUCT_STAGE_CONCURRENCY = _env_int("STRUCT_STAGE_CONCURRENCY", 10)
+
+
 @dataclass
 class ResumeState:
     last_file: Path | None
     start_prompt: Path | None
     start_image_id: str | None
+
+
+@dataclass(frozen=True)
+class RawDescriptionJob:
+    record_index: int
+    image_id: str
+    image_path: Path
+
+
+@dataclass(frozen=True)
+class StructuredDescriptionJob:
+    record_index: int
+    image_id: str
+    image_path: str
+    payload: str
+    output_path: Path
 
 
 def _extract_raw_description_output(result) -> str:
@@ -336,8 +368,11 @@ def _load_json_array(path: Path) -> list:
     return []
 
 
-def capture_raw_descriptions(paths: dict, start_image_id: str | None = None) -> list[dict]:
-    """Stage 1: Call the raw description crew for each image and store results."""
+async def _capture_raw_descriptions_async(
+    paths: dict,
+    start_image_id: str | None = None,
+) -> list[dict]:
+    """Stage 1: Call the raw description crew for each image and store results asynchronously."""
     descriptions_dir: Path = paths["descriptions"]
     raw_dir: Path = paths.get("raw_descriptions") or (descriptions_dir / "raw")
     raw_dir.mkdir(parents=True, exist_ok=True)
@@ -360,7 +395,6 @@ def capture_raw_descriptions(paths: dict, start_image_id: str | None = None) -> 
         return []
 
     raw_records_path = raw_dir / "raw_descriptions.json"
-
     ordered_ids: list[str] = []
     for rec in records:
         if isinstance(rec, dict):
@@ -386,7 +420,8 @@ def capture_raw_descriptions(paths: dict, start_image_id: str | None = None) -> 
         if payload.get("description")
     }
 
-    raw_crew = build_raw_description_crew()
+    total_records = len(records)
+    pending_jobs: list[RawDescriptionJob] = []
     started = start_image_id is None
 
     for idx, rec in enumerate(records, start=1):
@@ -430,45 +465,103 @@ def capture_raw_descriptions(paths: dict, start_image_id: str | None = None) -> 
             print(f"[Stage 1] Skipping raw description (already exists) - {image_id}")
             continue
 
-        print(
-            f"[Stage 1] Capturing raw description {idx}/{len(records)} - {image_id} (local: {image_path})"
+        pending_jobs.append(
+            RawDescriptionJob(
+                record_index=idx,
+                image_id=image_id,
+                image_path=image_path,
+            )
         )
-        raw_result = raw_crew.kickoff(
-            inputs={
-                "image_id": image_id,
-                "image_path": str(image_path),
-            }
-        )
-        raw_text = _extract_raw_description_output(raw_result)
-        sanitized = {
-            "image_id": image_id,
-            "image_path": str(image_path),
-            "description": raw_text,
-        }
-        existing_entries[image_id] = sanitized
-        processed_ids.add(image_id)
 
+    if not pending_jobs:
         ordered_records = [
             existing_entries[item_id]
             for item_id in ordered_ids
             if item_id in existing_entries
         ]
-        raw_records_path.write_text(
-            json.dumps(ordered_records, indent=2, ensure_ascii=False),
-            encoding="utf-8",
+        extra_ids = sorted(
+            iid for iid in existing_entries.keys() if iid not in ordered_ids
         )
-        print(f"   -> Raw description stored -> {raw_records_path}")
+        ordered_records.extend(existing_entries[iid] for iid in extra_ids)
+        return ordered_records
+
+    semaphore = asyncio.Semaphore(RAW_STAGE_CONCURRENCY)
+    write_lock = asyncio.Lock()
+
+    async def process_job(job: RawDescriptionJob) -> None:
+        async with semaphore:
+            print(
+                f"[Stage 1][async start] {job.image_id} (record {job.record_index}/{total_records})"
+            )
+
+            def run_job():
+                crew = build_raw_description_crew()
+                return crew.kickoff(
+                    inputs={
+                        "image_id": job.image_id,
+                        "image_path": str(job.image_path),
+                    }
+                )
+
+            try:
+                raw_result = await asyncio.to_thread(run_job)
+                raw_text = _extract_raw_description_output(raw_result)
+            except Exception as exc:
+                print(f"   !! Stage 1 failed for {job.image_id}: {exc}")
+                raise
+
+            sanitized = {
+                "image_id": job.image_id,
+                "image_path": str(job.image_path),
+                "description": raw_text,
+            }
+
+            print(f"[Stage 1][async done] {job.image_id}")
+            async with write_lock:
+                existing_entries[job.image_id] = sanitized
+                processed_ids.add(job.image_id)
+                ordered_records = [
+                    existing_entries[item_id]
+                    for item_id in ordered_ids
+                    if item_id in existing_entries
+                ]
+                extra_ids = sorted(
+                    iid for iid in existing_entries.keys() if iid not in ordered_ids
+                )
+                ordered_records.extend(existing_entries[iid] for iid in extra_ids)
+                raw_records_path.write_text(
+                    json.dumps(ordered_records, indent=2, ensure_ascii=False),
+                    encoding="utf-8",
+                )
+                print(f"   -> Raw description stored -> {raw_records_path}")
+
+    await asyncio.gather(*(process_job(job) for job in pending_jobs))
 
     ordered_records = [
         existing_entries[item_id]
         for item_id in ordered_ids
         if item_id in existing_entries
     ]
+    extra_ids = sorted(
+        iid for iid in existing_entries.keys() if iid not in ordered_ids
+    )
+    ordered_records.extend(existing_entries[iid] for iid in extra_ids)
     return ordered_records
 
 
-def structure_descriptions(paths: dict, start_image_id: str | None = None) -> None:
-    """Stage 2: Convert raw descriptions into structured ImageAuditRecord JSON."""
+def capture_raw_descriptions(
+    paths: dict,
+    start_image_id: str | None = None,
+) -> list[dict]:
+    return asyncio.run(
+        _capture_raw_descriptions_async(paths, start_image_id=start_image_id)
+    )
+
+
+async def _structure_descriptions_async(
+    paths: dict, start_image_id: str | None = None
+) -> None:
+    """Stage 2: Convert raw descriptions into structured ImageAuditRecord JSON asynchronously."""
     descriptions_dir: Path = paths["descriptions"]
     descriptions_dir.mkdir(parents=True, exist_ok=True)
 
@@ -513,9 +606,9 @@ def structure_descriptions(paths: dict, start_image_id: str | None = None) -> No
         start_idx = pending_ids.index(start_image_id)
         pending_ids = pending_ids[start_idx:]
 
-    structured_crew = build_structured_description_crew()
+    total_pending = len(pending_ids)
+    pending_jobs: list[StructuredDescriptionJob] = []
 
-    total = len(pending_ids) if pending_ids else len(raw_map)
     for idx, image_id in enumerate(pending_ids, start=1):
         entry = raw_map.get(image_id)
         if not entry:
@@ -531,7 +624,6 @@ def structure_descriptions(paths: dict, start_image_id: str | None = None) -> No
             print(f"[Stage 2] Skipping {image_id}: structured description exists -> {out_path}")
             continue
 
-        print(f"[Stage 2] Structuring description {idx}/{total} - {image_id}")
         payload = json.dumps(
             {
                 "image_id": image_id,
@@ -541,20 +633,63 @@ def structure_descriptions(paths: dict, start_image_id: str | None = None) -> No
             indent=2,
             ensure_ascii=False,
         )
-        structured_result = structured_crew.kickoff(
-            inputs={
-                "image_id": image_id,
-                "image_path": image_path,
-                "raw_description_json": payload,
-            }
+
+        pending_jobs.append(
+            StructuredDescriptionJob(
+                record_index=idx,
+                image_id=image_id,
+                image_path=image_path,
+                payload=payload,
+                output_path=out_path,
+            )
         )
-        desc = _parse_description_output(structured_result)
-        if getattr(desc, "image_id", None) is None:
-            desc.image_id = image_id
-        if getattr(desc, "image_path", None) is None:
-            desc.image_path = image_path
-        out_path.write_text(desc.model_dump_json(indent=2), encoding="utf-8")
-        print(f"   -> Structured description saved -> {out_path}")
+
+    if not pending_jobs:
+        return
+
+    semaphore = asyncio.Semaphore(STRUCT_STAGE_CONCURRENCY)
+    write_lock = asyncio.Lock()
+
+    async def process_job(job: StructuredDescriptionJob) -> None:
+        async with semaphore:
+            print(
+                f"[Stage 2][async start] {job.image_id} (record {job.record_index}/{total_pending})"
+            )
+
+            def run_job() -> str:
+                crew = build_structured_description_crew()
+                result = crew.kickoff(
+                    inputs={
+                        "image_id": job.image_id,
+                        "image_path": job.image_path,
+                        "raw_description_json": job.payload,
+                    }
+                )
+                desc = _parse_description_output(result)
+                if getattr(desc, "image_id", None) is None:
+                    desc.image_id = job.image_id
+                if getattr(desc, "image_path", None) is None:
+                    desc.image_path = job.image_path
+                return desc.model_dump_json(indent=2)
+
+            try:
+                desc_json = await asyncio.to_thread(run_job)
+            except Exception as exc:
+                print(f"   !! Stage 2 failed for {job.image_id}: {exc}")
+                raise
+
+            print(f"[Stage 2][async done] {job.image_id}")
+            async with write_lock:
+                job.output_path.write_text(desc_json, encoding="utf-8")
+                print(f"   -> Structured description saved -> {job.output_path}")
+
+    await asyncio.gather(*(process_job(job) for job in pending_jobs))
+
+
+def structure_descriptions(paths: dict, start_image_id: str | None = None) -> None:
+    asyncio.run(
+        _structure_descriptions_async(paths, start_image_id=start_image_id)
+    )
 
 
 def summarize_description_counts(paths: dict, output_filename: str = "counts.json") -> Path | None:
