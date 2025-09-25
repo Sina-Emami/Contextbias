@@ -17,14 +17,12 @@ Instructions:
 1. Treat each top-level category (cohort) independently. Never merge observations across cohorts.
 2. Equivalence-only grouping inside a cohort:
    - Merge tokens only when they clearly represent the same concept (e.g., spelling variants, singular/plural, accents).
-   -Use semantic similarity and context to confirm equivalence; do not rely on hard-coded synonym lists.
    - If two tokens can co-exist in the dataset (e.g., distinct enumerated values), they must be reported as separate groups.
    - Enumerated/categorical dimensions must yield one group per distinct value observed; issue separate groups such as key="gender_presentation", sub_key="male" and key="gender_presentation", sub_key="female".
 3. Database-friendly identifiers:
    - Represent each group with two explicit identifiers: "key" (dimension/schema field) and "sub_key" (canonical value), both lower_snake_case.
    - The members array should normally contain exactly one token (normalized form of sub_key). Only include additional entries when they normalize to the exact same token after removing case/spacing/diacritics.
    - Keep "canonical_label" human-readable but distinct from key/sub_key. Do NOT concatenate them (avoid patterns like "age_child").
-   - Example pattern: "blue_palette" for shades of blue, "upper_body_clothing" for garments covering torso.
 4. Attribute handling occurs at the cohort level only. Provide distributions for attributes such as color, material, pattern, texture, size, finish, etc. When helpful, map shades or variants into generalized tokens (e.g., "blue_palette"). Do not duplicate attribute stats inside groups.
 5. Compute normalized shares (0-1 floats) alongside raw counts for both groups and cohort-level attributes.
 6. Remove empty, unknown, or zero-count items from the final JSON.
@@ -43,7 +41,7 @@ Required JSON structure:
     {{
       "cohort": <identifier>,
       "groups": [
-        {
+        {{
           "key": <dimension token>,
           "sub_key": <canonical value token>,
           "canonical_label": <display label>,
@@ -53,9 +51,9 @@ Required JSON structure:
         }}
       ],
       "attributes": {{
-        "color": {{"value_counts": {{...}}, "normalized": {{...}} }},
-        "material": {{...}},
-        ... (include only attributes that exist for the cohort)
+        "color": {{"value_counts": {{...}}, "normalized": {{...}}}},
+        "material": {{...}}
+        // include only attributes present for this cohort
       }},
       "notes": <optional insight or omit>
     }}
@@ -65,7 +63,7 @@ Required JSON structure:
       "topic": <token>,
       "insight": <summary>,
       "evidence_groups": [<references to cohort/key/sub_key combinations>]
-    }
+    }}
   ]
 }}
 Do not emit markdown. Return JSON only.
