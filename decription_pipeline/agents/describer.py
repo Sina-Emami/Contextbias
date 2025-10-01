@@ -34,7 +34,7 @@ def build_structured_image_describer_agent() -> Agent:
     return Agent(
         name="Image Description Schema Converter",
         role=(
-            "Transform Stage 1 raw descriptions into the analytical schema used for downstream audits."
+            "Transform Stage 1 raw descriptions into the analytical schema used for downstream audits, strictly aligning categorical fields with the defined enumerations."
         ),
         goal=(
             "Emit an ImageAuditRecord that matches the structured schema, mirrors the enumerations exactly, and sets every unevidenced field to \"unknown\" instead of guessing."
@@ -48,3 +48,4 @@ def build_structured_image_describer_agent() -> Agent:
         verbose=True,
         memory=False,
     )
+
