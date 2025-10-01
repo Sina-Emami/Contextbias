@@ -28,6 +28,7 @@ Task:
 - Use ONLY the `description` field inside RAW_DESCRIPTION_JSON. Treat it as ground truth.
 - Produce a JSON object matching `ImageAuditRecord` from schemas.description (new structured schema).
 - Preserve evidence fidelity: everything you assert must be supported by the raw description.
+- Reference the enum literal groups defined in schemas.description (Mood, DominantPalette, LightingColorTemperature, etc.) whenever you populate categorical fields so every value traces back to a declared enumeration.
 - Never hallucinate or infer details. When the description omits a field, output "unknown" (or ["unknown"] for list-based enums) instead of guessing.
 - Always use schema enumerations verbatim; do not invent new tokens or alter casing.
 
@@ -103,4 +104,5 @@ def build_structure_image_description_task(agent) -> Task:
         expected_output="A single valid JSON object matching ImageAuditRecord.",
         output_pydantic=ImageAuditRecord,
     )
+
 
