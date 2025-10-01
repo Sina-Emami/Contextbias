@@ -4,7 +4,7 @@ import os
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Sequence
+from typing import Any, Sequence
 from dotenv import load_dotenv
 
 from analysis.schema_counts import FrequencyCounterConfig, run_counts
@@ -36,15 +36,7 @@ def _env_int(name: str, default: int) -> int:
 
 RAW_STAGE_CONCURRENCY = _env_int("RAW_STAGE_CONCURRENCY", 10)
 STRUCT_STAGE_CONCURRENCY = _env_int("STRUCT_STAGE_CONCURRENCY", 10)
-
-
-@dataclass
-class ResumeState:
-    last_file: Path | None
-    start_prompt: Path | None
-    start_image_id: str | None
-
-
+PROMPT_STAGE_CONCURRENCY = _env_int("PROMPT_STAGE_CONCURRENCY", 3)
 @dataclass(frozen=True)
 class RawDescriptionJob:
     record_index: int
@@ -59,6 +51,17 @@ class StructuredDescriptionJob:
     image_path: str
     payload: str
     output_path: Path
+
+
+@dataclass
+class PromptPlan:
+    prompt_dir: Path
+    role_dir: Path
+    paths: dict[str, Any]
+    status: str
+    start_image_id: str | None
+    reason: str
+    last_completed_file: Path | None
 
 
 def _extract_raw_description_output(result) -> str:
@@ -304,42 +307,165 @@ def discover_prompt_directories(dataset_root: Path) -> list[Path]:
     return prompt_dirs
 
 
-def determine_resume_state(dataset_root: Path, prompt_dirs: Sequence[Path]) -> ResumeState:
-    dataset_root = Path(dataset_root).resolve()
-    last_file: Path | None = None
+def _format_prompt_label(prompt_dir: Path, dataset_root: Path) -> str:
+    try:
+        return str(prompt_dir.relative_to(dataset_root))
+    except ValueError:
+        return str(prompt_dir)
 
-    for prompt_dir in sorted({Path(p).resolve() for p in prompt_dirs}):
-        try:
-            manifest_path = _find_manifest_file(prompt_dir)
-        except FileNotFoundError:
+
+def _load_expected_ids(paths: dict[str, Any]) -> list[str]:
+    info_path = Path(paths["images_info_path"])
+    try:
+        records = json.loads(info_path.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+    expected: list[str] = []
+    seen: set[str] = set()
+    for rec in records:
+        if not isinstance(rec, dict):
             continue
-
-        try:
-            manifest_records = json.loads(manifest_path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            continue
-
-        if not isinstance(manifest_records, list):
-            continue
-
-        descriptions_dir = prompt_dir / "descriptions"
-        for record in manifest_records:
-            if not isinstance(record, dict):
-                continue
-            image_id = record.get("id") or record.get("image_id")
-            if not image_id:
-                continue
-            candidate = descriptions_dir / f"{image_id}.json"
-            if candidate.exists():
-                last_file = candidate.resolve()
-                continue
-            return ResumeState(last_file=last_file, start_prompt=prompt_dir, start_image_id=image_id)
-
-    return ResumeState(last_file=last_file, start_prompt=None, start_image_id=None)
+        image_id = rec.get("id") or rec.get("image_id") or rec.get("filename")
+        if isinstance(image_id, str) and image_id and image_id not in seen:
+            expected.append(image_id)
+            seen.add(image_id)
+    return expected
 
 
-def process_prompt_directory(prompt_dir: Path, dataset_root: Path, start_image_id: str | None = None) -> None:
+def assess_prompt_directory(prompt_dir: Path, dataset_root: Path) -> PromptPlan:
     paths = setup_prompt_paths(prompt_dir, dataset_root)
+    expected_ids = _load_expected_ids(paths)
+    role_dir = prompt_dir.parent
+
+    raw_dir = Path(paths["raw_descriptions"])
+    descriptions_dir = Path(paths["descriptions"])
+    raw_records_path = raw_dir / "raw_descriptions.json"
+    raw_entries = _load_json_array(raw_records_path)
+
+    raw_map: dict[str, dict] = {}
+    for entry in raw_entries:
+        if not isinstance(entry, dict):
+            continue
+        image_id = entry.get("image_id")
+        if isinstance(image_id, str) and image_id:
+            raw_map[image_id] = entry
+
+    def _has_description(image_id: str) -> bool:
+        entry = raw_map.get(image_id)
+        if not entry:
+            return False
+        description = entry.get("description")
+        return isinstance(description, str) and description.strip() != ""
+
+    raw_missing = [image_id for image_id in expected_ids if not _has_description(image_id)]
+    structured_missing = [
+        image_id
+        for image_id in expected_ids
+        if not (descriptions_dir / f"{image_id}.json").exists()
+    ]
+
+    summary_dir = descriptions_dir / "summary"
+    counts_path = summary_dir / "counts.json"
+    summary_path = summary_dir / "summary_report.json"
+
+    raw_complete = not raw_missing and bool(expected_ids)
+    structured_complete = not structured_missing and bool(expected_ids)
+    counts_complete = counts_path.exists()
+    summary_complete = summary_path.exists()
+
+    last_completed_file: Path | None = None
+    for image_id in reversed(expected_ids):
+        candidate = descriptions_dir / f"{image_id}.json"
+        if candidate.exists():
+            last_completed_file = candidate
+            break
+    if last_completed_file is None and raw_map and raw_records_path.exists():
+        last_completed_file = raw_records_path
+
+    if not expected_ids:
+        return PromptPlan(
+            prompt_dir=prompt_dir,
+            role_dir=role_dir,
+            paths=paths,
+            status="complete",
+            start_image_id=None,
+            reason="No images found in manifest; nothing to process.",
+            last_completed_file=None,
+        )
+
+    if raw_complete and structured_complete and counts_complete and summary_complete:
+        return PromptPlan(
+            prompt_dir=prompt_dir,
+            role_dir=role_dir,
+            paths=paths,
+            status="complete",
+            start_image_id=None,
+            reason="All outputs already generated (raw, structured, counts, summary).",
+            last_completed_file=summary_path if summary_path.exists() else last_completed_file,
+        )
+
+    if not raw_map:
+        return PromptPlan(
+            prompt_dir=prompt_dir,
+            role_dir=role_dir,
+            paths=paths,
+            status="pending",
+            start_image_id=expected_ids[0],
+            reason="No raw descriptions captured yet.",
+            last_completed_file=None,
+        )
+
+    if raw_missing:
+        missing_count = len(raw_missing)
+        reason = f"Missing raw descriptions for {missing_count} image(s)."
+        return PromptPlan(
+            prompt_dir=prompt_dir,
+            role_dir=role_dir,
+            paths=paths,
+            status="resume",
+            start_image_id=raw_missing[0],
+            reason=reason,
+            last_completed_file=last_completed_file,
+        )
+
+    if structured_missing:
+        missing_count = len(structured_missing)
+        reason = f"Missing structured descriptions for {missing_count} image(s)."
+        return PromptPlan(
+            prompt_dir=prompt_dir,
+            role_dir=role_dir,
+            paths=paths,
+            status="resume",
+            start_image_id=structured_missing[0],
+            reason=reason,
+            last_completed_file=last_completed_file,
+        )
+
+    missing_artifacts: list[str] = []
+    if not counts_complete:
+        missing_artifacts.append("counts.json")
+    if not summary_complete:
+        missing_artifacts.append("summary report")
+    reason = "Missing " + " and ".join(missing_artifacts)
+    return PromptPlan(
+        prompt_dir=prompt_dir,
+        role_dir=role_dir,
+        paths=paths,
+        status="resume",
+        start_image_id=None,
+        reason=reason + ".",
+        last_completed_file=last_completed_file,
+    )
+
+
+def process_prompt_directory(
+    prompt_dir: Path,
+    dataset_root: Path,
+    start_image_id: str | None = None,
+    precomputed_paths: dict[str, Any] | None = None,
+) -> None:
+    paths = precomputed_paths or setup_prompt_paths(prompt_dir, dataset_root)
 
     label = paths.get("scenario_label") or str(prompt_dir)
     scenario_id = paths.get("scenario_id")
@@ -774,6 +900,41 @@ def run_summary_report(paths: dict, counts_path: Path | None = None, output_file
 
 
 
+async def _execute_prompt_plans(dataset_root: Path, plans: Sequence[PromptPlan]) -> None:
+    if not plans:
+        return
+
+    groups: dict[Path, list[PromptPlan]] = {}
+    for plan in plans:
+        groups.setdefault(plan.role_dir, []).append(plan)
+
+    async def process_role(role_dir: Path, role_plans: list[PromptPlan]) -> None:
+        semaphore = asyncio.Semaphore(PROMPT_STAGE_CONCURRENCY)
+
+        async def run_plan(plan: PromptPlan) -> None:
+            if plan.status == "complete":
+                return
+            label = _format_prompt_label(plan.prompt_dir, dataset_root)
+            async with semaphore:
+                print(f"[Execute] {label} -> starting pipeline ({plan.status}).")
+                if plan.start_image_id:
+                    print(f"           Next pending image id: {plan.start_image_id}")
+                await asyncio.to_thread(
+                    process_prompt_directory,
+                    plan.prompt_dir,
+                    dataset_root,
+                    plan.start_image_id,
+                    plan.paths,
+                )
+
+        ordered = sorted(role_plans, key=lambda p: p.prompt_dir)
+        await asyncio.gather(*(run_plan(plan) for plan in ordered))
+
+    await asyncio.gather(
+        *(process_role(role_dir, role_plans) for role_dir, role_plans in groups.items())
+    )
+
+
 def main(argv: Sequence[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Run the bias analysis pipeline across dataset prompts.")
     parser.add_argument(
@@ -804,15 +965,11 @@ def main(argv: Sequence[str] | None = None) -> None:
     if not dataset_root.exists():
         raise FileNotFoundError(f"Dataset root not found: {dataset_root}")
 
-    prompt_dirs: list[Path] = []
-
     if args.prompt:
+        prompt_dirs = []
         for value in args.prompt:
             candidate = Path(value)
-            if not candidate.is_absolute():
-                candidate = (dataset_root / candidate).resolve()
-            else:
-                candidate = candidate.resolve()
+            candidate = (dataset_root / candidate).resolve() if not candidate.is_absolute() else candidate.resolve()
             if not candidate.is_dir():
                 print(f"Skipping prompt path (missing directory): {value}")
                 continue
@@ -824,8 +981,8 @@ def main(argv: Sequence[str] | None = None) -> None:
         print(f"No prompt directories discovered under {dataset_root}.")
         return
 
-    seen: set[Path] = set()
     unique_prompts: list[Path] = []
+    seen: set[Path] = set()
     for prompt_dir in prompt_dirs:
         resolved = prompt_dir.resolve()
         if resolved in seen:
@@ -838,39 +995,52 @@ def main(argv: Sequence[str] | None = None) -> None:
     if args.limit is not None and args.limit >= 0:
         prompt_dirs = prompt_dirs[: args.limit]
 
-    resume_state = determine_resume_state(dataset_root, prompt_dirs)
-
-    if resume_state.last_file:
+    plans: list[PromptPlan] = []
+    for prompt_dir in prompt_dirs:
         try:
-            relative_last = resume_state.last_file.relative_to(dataset_root)
-            print(f"Resuming from last generated file: {relative_last}")
-        except ValueError:
-            print(f"Resuming from last generated file: {resume_state.last_file}")
-    else:
-        print("No previous progress found, starting from the beginning.")
+            plan = assess_prompt_directory(prompt_dir, dataset_root)
+        except Exception as exc:
+            label = _format_prompt_label(prompt_dir, dataset_root)
+            print(f"[Error] Failed to assess {label}: {exc}")
+            continue
+        plans.append(plan)
 
-    if resume_state.start_prompt is None:
-        if resume_state.last_file is not None:
-            print("All selected prompts already processed. Nothing new to do.")
-        else:
-            # No prior progress and nothing identified to process (likely empty manifests)
-            print("No actionable items discovered in the selected prompts.")
+    if not plans:
+        print("No actionable prompt directories after assessment.")
         return
 
-    processing_started = False
-    for prompt_dir in prompt_dirs:
-        if not processing_started:
-            if prompt_dir == resume_state.start_prompt:
-                processing_started = True
-                start_image_id = resume_state.start_image_id
-            else:
-                continue
+    work_plans: list[PromptPlan] = []
+    for plan in plans:
+        label = _format_prompt_label(plan.prompt_dir, dataset_root)
+        if plan.status == "complete":
+            print(f"[Skip] {label} already fully processed; skipping.")
+            continue
+        if plan.status == "pending":
+            print(f"[Start] {label} -> starting fresh. {plan.reason}")
+            if plan.start_image_id:
+                print(f"         First image id: {plan.start_image_id}")
         else:
-            start_image_id = None
+            resume_msg = plan.reason
+            if plan.last_completed_file:
+                try:
+                    display_file = plan.last_completed_file.relative_to(dataset_root)
+                except ValueError:
+                    display_file = plan.last_completed_file
+                print(
+                    f"[Resume] {label} -> {resume_msg} Resuming from last generated file: {display_file}"
+                )
+            else:
+                print(f"[Resume] {label} -> {resume_msg}")
+            if plan.start_image_id:
+                print(f"         Next image id: {plan.start_image_id}")
+        work_plans.append(plan)
 
-        process_prompt_directory(prompt_dir, dataset_root, start_image_id=start_image_id)
-        # After the first processing iteration, ensure subsequent prompts start fresh
-        resume_state.start_prompt = None
+    if not work_plans:
+        print("All prompt folders are fully processed. Nothing to do.")
+        return
+
+    print(f"Queued {len(work_plans)} prompt folder(s) for processing.")
+    asyncio.run(_execute_prompt_plans(dataset_root, work_plans))
 
 
 if __name__ == "__main__":
