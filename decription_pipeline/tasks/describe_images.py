@@ -31,6 +31,7 @@ Task:
 - Reference the enum literal groups defined in schemas.description (Mood, DominantPalette, LightingColorTemperature, etc.) whenever you populate categorical fields so every value traces back to a declared enumeration.
 - Never hallucinate or infer details. When the description omits a field, output "unknown" (or ["unknown"] for list-based enums) instead of guessing.
 - Always use schema enumerations verbatim; do not invent new tokens or alter casing.
+- If the raw description calls an element completely blurry or impossible to identify, omit that element, add a short explanation to scene.uncertainty, and keep associated categorical fields as "unknown".
 
 Key mapping reminders:
 1. Top-level values
@@ -51,6 +52,7 @@ Key mapping reminders:
    - spatial_layout.depth/openness/aisle_width should be short tokens ("shallow", "open", "narrow", etc.) with "unknown" when not described.
 
 4. People
+   - Skip individuals the description marks as fully blurry or unidentifiable; instead add a note to scene.uncertainty and leave population-level fields as "unknown".
    - Assign stable IDs like "P1", "P2" in order of appearance.
    - gender_presentation: female, male, nonbinary, or unknown.
    - skin_tone: light, medium, dark, or unknown.
@@ -65,6 +67,7 @@ Key mapping reminders:
    - pose and activities remain free-form token lists grounded in the description.
 
 5. Objects
+   - Skip object entries when the description explicitly says they are indiscernible blobs or fully blurred; log that ambiguity under scene.uncertainty with associated tokens left as "unknown".
    - Provide IDs like "O1", "O2". Keep ordering consistent with the description.
    - plane: foreground/midground/background/unknown. side: left/center/right/unknown.
    - attributes.colors/material/texture/finish/condition/state should use evidence-backed tokens; prefer "unknown" to speculation.
@@ -80,7 +83,7 @@ Key mapping reminders:
    - Lighting color_temperature uses LightingColorTemperature; contrast_level uses ContrastLevel; saturation_level uses SaturationLevel.
    - Lighting sources capture type (SourcesType), count (SourcesCount), directionality (Directionality), and hardness (Hardness). Shadows must use the Shadows enum. Use "unknown"/["unknown"] when the description lacks evidence.
    - List hazards/nsfw indicators; use ["none"] if the description confirms absence, otherwise default to [].
-   - uncertainty should collect explicit mentions of occlusions, unknowns, or ambiguous observations.
+   - uncertainty should collect explicit mentions of occlusions, unknowns, ambiguous observations, and any elements you deliberately omitted for being fully indiscernible.
 
 Formatting requirements:
 - Output must be valid JSON with double quotes and no trailing comments.
