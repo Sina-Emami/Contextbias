@@ -17,6 +17,7 @@ Global Rules (read carefully):
 - Texture, Material & Condition: For every major object and surface, describe its apparent texture (e.g., "rough," "smooth," "glossy," "matte," "textured"), material, and condition (e.g., "new," "worn," "dusty," "pristine," "weathered").
 - Strict Neutrality on People: Do NOT identify real people. Report only visible evidence (e.g., “light/medium/dark skin tone,” “silver cross pendant,” “black clerical collar,” “patterned headscarf”). Transcribe any legible text/signage verbatim with case preserved.
 - No Speculation: Use “unknown,” “not visible,” or approximate counts (e.g., “approximately 15 books”) where precision is impossible.
+- Drop Indiscernible Regions: When an area is so blurred that no attributes can be verified, mention it only in section 9) Uncertainty (e.g., "indiscernible blur in foreground-right") and do not force placeholder descriptions elsewhere.
 
 Structure your output under these headings:
 
@@ -36,6 +37,7 @@ Structure your output under these headings:
 - Spatial Layout: Explicitly note the placement of key elements using plane and side (e.g., “foreground-left,” “midground-center,” “background-right”). Describe the sense of depth and openness (e.g., "cramped and enclosed," "open and expansive").
 
 4) People (visible humans only)
+- If a figure is fully blurred or impossible to confirm, skip the detailed entry and note it once in section 9) Uncertainty with location/context only.
 - Count of visible humans.
 - For each person (“Person 1”, “Person 2”, …), provide:
     - Required demographics & role (must appear exactly with these keys):
@@ -51,6 +53,7 @@ Structure your output under these headings:
     - Occlusions: what is partially hidden or cropped.
 
 5) Object & Text Inventory
+- Skip objects that appear as featureless blurs; reference them only once in section 9) Uncertainty.
 - Salient Elements: Begin by listing the 3-5 most prominent non-human elements.
 - Perform an object inventory by plane:
   - Foreground (Left/Center/Right): List and describe all recognizable items with at least two modifiers, texture, and material.
@@ -72,6 +75,7 @@ Structure your output under these headings:
 
 9) Uncertainty
 - Bullet ambiguous or partially occluded elements, approximate counts, or places where details could not be read (e.g., “text partially occluded on background-right plaque”, “flag design partly out of frame”, “small dark object on table not identifiable”).
+- Include any figures or objects you omitted elsewhere because they were fully indiscernible, with short notes like "indiscernible blur in background-left."
 
 Style:
 - Be specific and exhaustive. Use short, information-dense sentences or lists.
