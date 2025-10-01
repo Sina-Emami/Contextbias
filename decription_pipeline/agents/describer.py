@@ -37,10 +37,10 @@ def build_structured_image_describer_agent() -> Agent:
             "Transform Stage 1 raw descriptions into the analytical schema used for downstream audits."
         ),
         goal=(
-            "Emit an ImageAuditRecord that matches the structured schema and only includes evidence-backed facts."
+            "Emit an ImageAuditRecord that matches the structured schema, mirrors the enumerations exactly, and sets every unevidenced field to \"unknown\" instead of guessing."
         ),
         backstory=(
-            "A schema specialist who tokenizes qualitative language into stable fields, favouring 'unknown' over speculation."
+            "A schema specialist who tokenizes qualitative language into stable fields, refuses to hallucinate, and writes \"unknown\" whenever evidence is missing."
         ),
         tools=[],
         llm=_describer_llm_name(),
