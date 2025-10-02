@@ -36,7 +36,7 @@ def _env_int(name: str, default: int) -> int:
 
 RAW_STAGE_CONCURRENCY = _env_int("RAW_STAGE_CONCURRENCY", 10)
 STRUCT_STAGE_CONCURRENCY = _env_int("STRUCT_STAGE_CONCURRENCY", 10)
-PROMPT_STAGE_CONCURRENCY = _env_int("PROMPT_STAGE_CONCURRENCY", 3)
+PROMPT_STAGE_CONCURRENCY = _env_int("PROMPT_STAGE_CONCURRENCY", 2)
 @dataclass(frozen=True)
 class RawDescriptionJob:
     record_index: int
