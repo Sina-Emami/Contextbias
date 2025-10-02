@@ -111,6 +111,25 @@ Successful runs end with `Queued N prompt folder(s) for processing.` followed by
 
 ---
 
+## Dataset Rollup & Visualization
+
+After the per-prompt pipeline finishes, generate aggregated counts and figures across the entire dataset with:
+
+```bash
+python -m decription_pipeline.analysis.dataset_rollup
+```
+
+This utility walks every role/prompt, reads each `summary_report.json`, and emits:
+
+- **Prompt aggregations** (`role/aggregation_counting/<prompt>_counts.json`) summarising all cohort/sub-key counts per prompt, along with `num_images`.
+- **Prompt visuals** (`prompt/visualization_analysis/*.png`) including bar charts for each dimension and a `spatial_heatmap.png` when 3×3 spatial data exist. Filenames are hashed to stay within Windows path limits.
+- **Role rollups** (`role/aggregation_counting/role_counts.json`) consolidating prompts under a role with `total_prompts`, `total_images`, combined counts, and prompt metadata.
+- **Role heatmap** (`role/visualization_analysis/role_spatial_heatmap.png`) whenever any prompt contributes positional counts.
+
+The script reuses the flattening helpers from `context_metrics.py`, so future aggregation tweaks automatically stay in sync. Rerunning the command refreshes existing outputs in place. Warnings about “tight layout not applied” are cosmetic and stem from very long labels.
+
+---
+
 ## Pipeline Details
 
 - **Stage 1: Raw capture** – `_capture_raw_descriptions_async` schedules up to `RAW_STAGE_CONCURRENCY` images in parallel (default 10) via `asyncio.to_thread`, storing incremental results in `raw_descriptions/raw_descriptions.json`.
