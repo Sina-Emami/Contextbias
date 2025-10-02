@@ -904,35 +904,26 @@ async def _execute_prompt_plans(dataset_root: Path, plans: Sequence[PromptPlan])
     if not plans:
         return
 
-    groups: dict[Path, list[PromptPlan]] = {}
-    for plan in plans:
-        groups.setdefault(plan.role_dir, []).append(plan)
+    semaphore = asyncio.Semaphore(PROMPT_STAGE_CONCURRENCY)
 
-    async def process_role(role_dir: Path, role_plans: list[PromptPlan]) -> None:
-        semaphore = asyncio.Semaphore(PROMPT_STAGE_CONCURRENCY)
+    async def run_plan(plan: PromptPlan) -> None:
+        if plan.status == "complete":
+            return
+        label = _format_prompt_label(plan.prompt_dir, dataset_root)
+        async with semaphore:
+            print(f"[Execute] {label} -> starting pipeline ({plan.status}).")
+            if plan.start_image_id:
+                print(f"           Next pending image id: {plan.start_image_id}")
+            await asyncio.to_thread(
+                process_prompt_directory,
+                plan.prompt_dir,
+                dataset_root,
+                plan.start_image_id,
+                plan.paths,
+            )
 
-        async def run_plan(plan: PromptPlan) -> None:
-            if plan.status == "complete":
-                return
-            label = _format_prompt_label(plan.prompt_dir, dataset_root)
-            async with semaphore:
-                print(f"[Execute] {label} -> starting pipeline ({plan.status}).")
-                if plan.start_image_id:
-                    print(f"           Next pending image id: {plan.start_image_id}")
-                await asyncio.to_thread(
-                    process_prompt_directory,
-                    plan.prompt_dir,
-                    dataset_root,
-                    plan.start_image_id,
-                    plan.paths,
-                )
-
-        ordered = sorted(role_plans, key=lambda p: p.prompt_dir)
-        await asyncio.gather(*(run_plan(plan) for plan in ordered))
-
-    await asyncio.gather(
-        *(process_role(role_dir, role_plans) for role_dir, role_plans in groups.items())
-    )
+    ordered = sorted(plans, key=lambda p: (p.role_dir, p.prompt_dir))
+    await asyncio.gather(*(run_plan(plan) for plan in ordered))
 
 
 def main(argv: Sequence[str] | None = None) -> None:
