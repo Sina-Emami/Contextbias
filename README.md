@@ -1,24 +1,38 @@
-﻿# Bias Detection Multimodal (CrewAI)
+# Bias Detection Multimodal (CrewAI)
 
-This project now focuses on a lean three-stage pipeline built with CrewAI:
+This project runs an asynchronous, resume-friendly pipeline that walks a dataset of prompt folders and generates structured bias analyses for every image. The workflow is driven by CrewAI agents and proceeds through three main stages:
 
-1. **Description capture** – call a vision-enabled agent to collect exhaustive raw narratives for each image.
-2. **Structured analysis** – convert those narratives into the `ImageAuditRecord` schema, aggregate repetition statistics, and run the bias reasoning crew.
-3. **Summary reporting** – turn aggregated counts into a structured summary that can feed downstream analytics.
+1. **Raw description capture** – A vision-enabled agent calls `DescribeImageFromFile` for each image referenced in a prompt manifest.
+2. **Structured description + counts** – Raw narratives are converted into the `ImageAuditRecord` schema and frequency statistics are aggregated.
+3. **Bias reasoning + reporting** – Structured outputs feed the bias analysis crew and a summary reporter produces the final dataset roll-up.
 
-The code has been streamlined to keep only this core flow. Image generation, question drafting, fact checking, and multi-LLM consensus have been removed.
+Each prompt directory is processed independently. The runner automatically skips folders that already contain all expected artifacts, resumes partially processed folders from the next missing image, and parallelises work to keep image agents busy.
 
 ---
 
-## Output Layout
+## Dataset Layout
 
-Stage outputs are written under `data/scenarios/<SCENARIO_ID>/`:
+The pipeline expects dataset prompts under `dataset/` (configurable). A typical structure looks like:
 
 ```
-data/scenarios/<ID>/
-├─ manifest.json
-├─ images/
-│  └─ <image files you provide>
+dataset/
+├─ Context-aware_Related_CA-R/
+│  ├─ doctor/
+│  │  ├─ a_photo_of_a_doctor...
+│  │  │  ├─ image_0_seed_....jpg
+│  │  │  ├─ ...
+│  │  │  └─ manifest.json
+│  │  └─ ...
+│  └─ nurse/
+│     └─ ...
+└─ Context-free_CF/
+   └─ ...
+```
+
+Each prompt directory must include a `manifest.json` (an array of image metadata). During processing the runner adds:
+
+```
+<prompt_dir>/
 ├─ raw_descriptions/
 │  └─ raw_descriptions.json
 ├─ descriptions/
@@ -32,7 +46,7 @@ data/scenarios/<ID>/
    └─ bias_report.json
 ```
 
-You are responsible for supplying the images and a matching `images_info.json` manifest (see Usage below).
+If raw descriptions or structured JSON already exist, the resume logic honours them and only fills in missing work.
 
 ---
 
@@ -44,7 +58,7 @@ You are responsible for supplying the images and a matching `images_info.json` m
 * `pydantic` v2
 * `python-dotenv`
 * `replicate`
-* Any additional libraries referenced in `requirements.txt` for analysis (sentence-transformers, hdbscan, etc.)
+* Additional libraries listed in `requirements.txt` (e.g., `sentence-transformers`, `hdbscan`)
 
 ### Install
 
@@ -59,61 +73,63 @@ pip install -r requirements.txt
 
 ## Environment Variables
 
-Create a `.env` file with at least the following keys:
+Create a `.env` with at least:
 
 ```env
 OPENAI_API_KEY=""          # required for the vision description tool
 REPLICATE_API_KEY=""       # required for the bias reasoning agent
 DESCRIBER_LLM=gpt-5-mini    # optional override
-SUMMARY_LLM=gpt-4o-mini     # optional override for the ingest crew
+SUMMARY_LLM=gpt-4o-mini     # optional override for summary crew
 BIAS_REPLICATE_MODEL=openai/gpt-oss-20b
 BIAS_REPLICATE_TEMPERATURE=0.0
 SUMMARY_REPORT_LLM=gpt-5-mini
 VISION_CHAT_MODEL=gpt-5-mini
+PROMPT_STAGE_CONCURRENCY=3   # optional overrides for concurrency
+RAW_STAGE_CONCURRENCY=10
+STRUCT_STAGE_CONCURRENCY=10
 ```
 
-Remove keys that referenced the deprecated features (e.g., image generation, Serper, consensus).
+Remove legacy keys from earlier experiments (image generation, consensus, etc.).
 
 ---
 
 ## Usage
 
-1. **Prepare a scenario folder** – `python -m src.app` will call `setup_scenario`, which creates the directory tree shown above.
-2. **Populate images and metadata** – place your images in `images/` and write `images_info.json` alongside them. Each entry should look like:
-   ```json
-   {
-     "id": "img_001",
-     "filename": "img_001.png",
-     "relpath": "images/img_001.png"
-   }
-   ```
-   You can also include an `abspath` key if the files live elsewhere.
-3. **Capture raw descriptions** – uncomment `capture_raw_descriptions(paths)` in the `__main__` block or call it manually. This uses the vision tool to write `raw_descriptions/raw_descriptions.json`.
-4. **Structure the descriptions** – run `structure_descriptions(paths)` to create one `ImageAuditRecord` per image under `descriptions/`.
-5. **Aggregate counts** – optional helper `summarize_description_counts(paths)` produces `descriptions/summary/counts.json`.
-6. **Analyze bias** – call `run_analyze_bias(paths)` to build `biases/repeat_summary_full.json` and `biases/bias_report.json`.
-7. **Generate the summary report** – `run_summary_report(paths)` reads the counts JSON (regenerating it if missing) and produces `descriptions/summary/summary_report.json`.
-
-Run the full script directly if you prefer to step through interactively:
+Run the orchestrator to process any number of prompt folders:
 
 ```bash
-python -m src.app
+python decription_pipeline/app.py
 ```
 
-Inside `src/app.py` the relevant helper calls are already listed; uncomment the stages you want to execute.
+### Log Messages
+
+* `[Skip] <prompt>` – All expected artifacts exist (`raw_descriptions`, structured JSON, counts, summary report); nothing runs.
+* `[Start] <prompt>` – No prior work detected; the pipeline executes all stages.
+* `[Resume] <prompt>` – Some artifacts are missing; the pipeline resumes from the first missing image (or regenerates counts/summary).
+
+Successful runs end with `Queued N prompt folder(s) for processing.` followed by per-stage progress for each folder. Subsequent reruns pick up from the last incomplete image or skip completed prompts entirely.
 
 ---
 
 ## Pipeline Details
 
-- **Stage 1: Raw capture** – `build_raw_description_crew` invokes the `DescribeImageFromFile` tool for each entry in `images_info.json` and persists the verbatim response.
-- **Stage 2: Structured schema + counts** – `build_structured_description_crew` converts the raw text into `ImageAuditRecord` JSON. `analysis.schema_counts` then clusters tokens and aggregates repetition signals across the dataset.
-- **Stage 3: Bias reasoning and summary** – the ingest crew writes cumulative repetition state, a Replicate-hosted model converts that state into a `BiasReport`, and the summary reporter agent distills aggregated counts into a final structured report.
+- **Stage 1: Raw capture** – `_capture_raw_descriptions_async` schedules up to `RAW_STAGE_CONCURRENCY` images in parallel (default 10) via `asyncio.to_thread`, storing incremental results in `raw_descriptions/raw_descriptions.json`.
+- **Stage 2: Structured schema + counts** – `_structure_descriptions_async` mirrors the map-reduce pattern for structuring; the `analysis.schema_counts` module then aggregates frequency statistics.
+- **Stage 3: Bias reasoning and summary** – `run_analyze_bias` ingests structured descriptions and produces bias artifacts; `run_summary_report` saves `summary_report.json`, rebuilding counts when needed.
+
+### Concurrency & Resume Behaviour
+
+- `PROMPT_STAGE_CONCURRENCY` (default 3) limits how many prompt folders run simultaneously, regardless of role.
+- `RAW_STAGE_CONCURRENCY` and `STRUCT_STAGE_CONCURRENCY` (default 10 each) control image-level fan-out.
+- Manifest discovery is recursive; any `manifest.json` under the dataset root is considered a prompt directory.
+- Resume checkpoints are based on existing raw descriptions, structured files, and report artifacts; only missing work is redone.
 
 ---
 
 ## Notes
 
-- Ensure `images_info.json` always uses paths that resolve on the current machine. Relative paths are stored relative to the scenario root.
-- The bias reasoning step depends on Replicate availability; set `REPLICATE_API_KEY` before running `run_analyze_bias`.
-- The summary report agent expects valid JSON counts; if counts are missing it will trigger regeneration automatically.
+- Relative paths inside manifests are resolved against the dataset root; absolute paths are honoured as-is.
+- Ensure `manifest.json` entries include at least an `id` and `filename` (or `relpath`).
+- The bias reasoning stage requires Replicate access; set `REPLICATE_API_KEY` before running the pipeline.
+- You can override concurrency via environment variables to match your hardware/LLM quota.
+- Summary reporting is idempotent; if counts are missing they are regenerated automatically.
