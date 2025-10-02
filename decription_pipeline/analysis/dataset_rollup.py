@@ -206,13 +206,14 @@ def process_prompt(summary_path: Path, role_dir: Path, prompt_dir: Path):
         ordered = counts_to_ordered_dict(counts)
         df = pd.DataFrame({"label": list(ordered.keys()), "count": list(ordered.values())})
         cohort, subkey = dimension.split(".", 1)
-        file_name = f"{_slugify_limited(cohort, 30)}_{_slugify_limited(subkey, 40)}.png"
+        hash_suffix = hashlib.md5(dimension.encode("utf-8")).hexdigest()[:8]
+        file_name = f"{_slugify_limited(cohort, 6)}_{hash_suffix}.png"
         title = f"{cohort} – {subkey}"
         plot_bar_chart(df, title, viz_dir / file_name)
 
     if spatial_counts:
         heatmap_title = "Object counts by position (3×3)"
-        heatmap_name = "object_counts_by_position_heatmap.png"
+        heatmap_name = "spatial_heatmap.png"
         plot_spatial_heatmap(spatial_counts, heatmap_title, viz_dir / heatmap_name)
 
     return aggregated, spatial_counts, num_images
@@ -304,7 +305,7 @@ def main() -> int:
             plot_spatial_heatmap(
                 data["spatial_counts"],
                 f"{data['role']} – object counts by position (all prompts)",
-                role_viz_dir / "role_object_counts_heatmap.png",
+                role_viz_dir / "role_spatial_heatmap.png",
             )
 
     print("[Done] Aggregations and visualizations generated.")
