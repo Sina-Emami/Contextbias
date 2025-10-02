@@ -98,8 +98,13 @@ def flatten_attributes(report: Mapping[str, Any]) -> pd.DataFrame:
         cohort_name = cohort.get("cohort")
         attrs = cohort.get("attributes") or {}
         for attr_name, payload in attrs.items():
-            vc = (payload or {}).get("value_counts") or {}
-            norm = (payload or {}).get("normalized") or {}
+            if isinstance(payload, dict):
+                vc = payload.get("value_counts") or {}
+                norm = payload.get("normalized") or {}
+            else:
+                # Some reports store attribute content as a raw string; treat it as a single count.
+                vc = {str(payload): 1} if payload not in (None, "") else {}
+                norm = {}
             keys = set(vc.keys()) | set(norm.keys())
             for val in keys:
                 rows.append(
@@ -156,11 +161,12 @@ def extract_spatial_layout(report: Mapping[str, Any]) -> pd.DataFrame:
     for cohort in report.get("cohorts", []):
         attrs = cohort.get("attributes") or {}
         for attr_name, payload in attrs.items():
-            if attr_name not in {"object_density", "object_counts_by_position", "object_counts_by_position_total"}:
-                # Still allow spatial-looking keys under any attribute
-                pass
-            vc = (payload or {}).get("value_counts") or {}
-            nm = (payload or {}).get("normalized") or {}
+            if isinstance(payload, dict):
+                vc = payload.get("value_counts") or {}
+                nm = payload.get("normalized") or {}
+            else:
+                vc = {str(payload): 1} if payload not in (None, "") else {}
+                nm = {}
             for key, v in vc.items():
                 split = _split_plane_side(key)
                 if not split:
