@@ -4,34 +4,232 @@ from typing import List, Optional, Literal
 from pydantic import BaseModel, Field
 
 
-ColorTemperature = Literal["warm", "neutral", "cool", "unknown"]
+OcclusionState = Literal["visible", "partially_occluded", "fully_occluded", "unknown"]
+Mood = Literal[
+    "calm",
+    "tense",
+    "joyful",
+    "melancholic",
+    "mysterious",
+    "romantic",
+    "foreboding",
+    "whimsical",
+    "minimalistic",
+    "dramatic",
+    "unknown",
+]
+LightingColorTemperature = Literal["warm", "neutral", "cool", "unknown"]
+DominantPalette = Literal[
+    "monochrome",
+    "analogous",
+    "complementary",
+    "triadic",
+    "tetradic",
+    "earth_tones",
+    "neon",
+    "pastel",
+    "high_key",
+    "low_key",
+    "unknown",
+]
+AtmosphereContrastLevel = Literal["low", "medium", "high", "unknown"]
+AestheticQualities = Literal[
+    "minimal",
+    "baroque",
+    "retro",
+    "surreal",
+    "abstract",
+    "realistic",
+    "fantasy",
+    "cinematic",
+    "gritty",
+    "dreamy",
+    "unknown",
+]
+SourcesCount = Literal["one", "two", "three", "four_or_more", "unknown"]
+SourcesType = Literal["natural", "artificial", "mixed", "unknown"]
 ContrastLevel = Literal["low", "medium", "high", "unknown"]
-SaturationLevel = Literal["muted", "neutral", "vivid", "unknown"]
+Directionality = Literal[
+    "omnidirectional",
+    "directional",
+    "backlight",
+    "sidelight",
+    "toplight",
+    "underlight",
+    "unknown",
+]
+SaturationLevel = Literal["desaturated", "normal", "vibrant", "oversaturated", "unknown"]
+Shadows = Literal["none", "soft", "medium", "hard", "casting", "unknown"]
+Hardness = Literal["soft", "medium", "hard", "unknown"]
+Perspective = Literal[
+    "first_person",
+    "third_person",
+    "birdseye",
+    "wormseye",
+    "eye_level",
+    "high_angle",
+    "low_angle",
+    "unknown",
+]
+Framing = Literal[
+    "close_up",
+    "medium",
+    "full_body",
+    "extreme_close_up",
+    "headshot",
+    "wide",
+    "establishing",
+    "unknown",
+]
+FocalLength = Literal[
+    "ultra_wide",
+    "wide",
+    "standard",
+    "telephoto",
+    "supertelephoto",
+    "macro",
+    "unknown",
+]
+DepthOfField = Literal["shallow", "medium", "deep", "infinite", "unknown"]
+CameraAngle = Literal[
+    "straight",
+    "tilt_left",
+    "tilt_right",
+    "pan_left",
+    "pan_right",
+    "dolly_in",
+    "dolly_out",
+    "zoom_in",
+    "zoom_out",
+    "unknown",
+]
+Weather = Literal[
+    "clear",
+    "sunny",
+    "cloudy",
+    "overcast",
+    "rain",
+    "drizzle",
+    "storm",
+    "snow",
+    "fog",
+    "mist",
+    "windy",
+    "hail",
+    "unknown",
+]
+TimeOfDayHint = Literal[
+    "dawn",
+    "morning",
+    "noon",
+    "afternoon",
+    "dusk",
+    "evening",
+    "night",
+    "midnight",
+    "unknown",
+]
+Hairstyle = Literal[
+    "short",
+    "long",
+    "bob",
+    "pixie",
+    "ponytail",
+    "braids",
+    "bun",
+    "curly",
+    "wavy",
+    "straight",
+    "updo",
+    "shaved",
+    "unknown",
+]
+HairColor = Literal[
+    "black",
+    "brown",
+    "blonde",
+    "red",
+    "grey",
+    "white",
+    "auburn",
+    "chestnut",
+    "blue",
+    "green",
+    "pink",
+    "purple",
+    "ombre",
+    "highlight",
+    "unknown",
+]
+GazeDirection = Literal[
+    "forward",
+    "left",
+    "right",
+    "up",
+    "down",
+    "away",
+    "toward_camera",
+    "off_center",
+    "unknown",
+]
+FaceEmotion = Literal[
+    "neutral",
+    "happy",
+    "sad",
+    "angry",
+    "surprised",
+    "disgusted",
+    "fearful",
+    "confused",
+    "smirking",
+    "blushing",
+    "frowning",
+    "unknown",
+]
+ClothesColor = Literal[
+    "white",
+    "black",
+    "red",
+    "blue",
+    "green",
+    "yellow",
+    "orange",
+    "purple",
+    "pink",
+    "brown",
+    "grey",
+    "tan",
+    "multi",
+    "patterned",
+    "unknown",
+]
 IndoorOutdoor = Literal["indoor", "outdoor", "unknown"]
 GenderPresentation = Literal["female", "male", "nonbinary", "unknown"]
 SkinTone = Literal["light", "medium", "dark", "unknown"]
-AgeRange = Literal["child", "teen", "young_adult", "middle_aged", "older_adult", "unknown"]
+AgeRange = Literal[
+    "child",
+    "teen",
+    "young_adult",
+    "middle_aged",
+    "older_adult",
+    "unknown",
+]
 PresenceTernary = Literal["yes", "no", "unknown"]
-GazeDirection = Literal["left", "center", "right", "up", "down", "unknown"]
 OrientationType = Literal["front", "three_quarter", "profile", "back", "unknown"]
-OcclusionState = Literal["none", "partial", "significant", "unknown"]
 PlaneType = Literal["foreground", "midground", "background", "unknown"]
 SideType = Literal["left", "center", "right", "unknown"]
-CameraAngle = Literal["high", "eye_level", "low", "unknown"]
-DepthOfField = Literal["shallow", "moderate", "deep", "unknown"]
-LightingHardness = Literal["soft", "medium", "hard", "unknown"]
 
 
 class LightingProfile(BaseModel):
-    color_temperature: ColorTemperature = "unknown"
-    contrast_level: ContrastLevel = "unknown"
+    color_temperature: LightingColorTemperature = "unknown"
+    contrast_level: AtmosphereContrastLevel = "unknown"
     saturation_level: SaturationLevel = "unknown"
-    aesthetic_qualities: List[str] = Field(default_factory=list)
+    aesthetic_qualities: List[AestheticQualities] = Field(default_factory=list)
 
 
 class AtmosphereInfo(BaseModel):
-    mood: List[str] = Field(default_factory=list)
-    dominant_palette: List[str] = Field(default_factory=list)
+    mood: List[Mood] = Field(default_factory=list)
+    dominant_palette: List[DominantPalette] = Field(default_factory=list)
     lighting_profile: LightingProfile = LightingProfile()
 
 
@@ -59,8 +257,8 @@ class SpatialLayout(BaseModel):
 class EnvironmentInfo(BaseModel):
     location_type: Optional[str] = None
     indoor_outdoor: IndoorOutdoor = "unknown"
-    time_of_day_hint: Optional[str] = None
-    weather: Optional[str] = None
+    time_of_day_hint: TimeOfDayHint = "unknown"
+    weather: Weather = "unknown"
     surfaces: SurfaceBundle = SurfaceBundle()
     spatial_layout: SpatialLayout = SpatialLayout()
 
@@ -69,6 +267,12 @@ class GroomingInfo(BaseModel):
     present: PresenceTernary = "unknown"
     style: List[str] = Field(default_factory=list)
     color: List[str] = Field(default_factory=list)
+
+
+class HairInfo(BaseModel):
+    present: PresenceTernary = "unknown"
+    style: List[Hairstyle] = Field(default_factory=list)
+    color: List[HairColor] = Field(default_factory=list)
 
 
 class EyewearInfo(BaseModel):
@@ -85,7 +289,7 @@ class HeadCoveringInfo(BaseModel):
 
 class GarmentInfo(BaseModel):
     garment_type: Optional[str] = None
-    color: List[str] = Field(default_factory=list)
+    color: List[ClothesColor] = Field(default_factory=list)
     material: List[str] = Field(default_factory=list)
     texture: List[str] = Field(default_factory=list)
     fit_style: List[str] = Field(default_factory=list)
@@ -100,7 +304,7 @@ class PersonInfo(BaseModel):
     skin_tone: SkinTone = "unknown"
     age_range: AgeRange = "unknown"
     role_hint: Optional[str] = None
-    hair: GroomingInfo = GroomingInfo()
+    hair: HairInfo = HairInfo()
     facial_hair: GroomingInfo = GroomingInfo()
     eyewear: EyewearInfo = EyewearInfo()
     head_covering: HeadCoveringInfo = HeadCoveringInfo()
@@ -109,6 +313,7 @@ class PersonInfo(BaseModel):
     activities: List[str] = Field(default_factory=list)
     gaze_direction: GazeDirection = "unknown"
     orientation: OrientationType = "unknown"
+    face_emotion: FaceEmotion = "unknown"
     occlusions: OcclusionState = "unknown"
     notes: Optional[str] = None
 
@@ -162,26 +367,26 @@ class SceneText(BaseModel):
 
 class CameraInfo(BaseModel):
     angle: CameraAngle = "unknown"
-    perspective: Optional[str] = None
-    focal_length: Optional[str] = None
+    perspective: Perspective = "unknown"
+    focal_length: FocalLength = "unknown"
     depth_of_field: DepthOfField = "unknown"
-    framing: List[str] = Field(default_factory=list)
+    framing: List[Framing] = Field(default_factory=list)
     crop: List[str] = Field(default_factory=list)
 
 
 class LightingSourceInfo(BaseModel):
-    type: Optional[str] = None
-    count: Optional[str] = None
-    directionality: List[str] = Field(default_factory=list)
-    hardness: LightingHardness = "unknown"
+    type: SourcesType = "unknown"
+    count: SourcesCount = "unknown"
+    directionality: List[Directionality] = Field(default_factory=list)
+    hardness: Hardness = "unknown"
 
 
 class LightingInfo(BaseModel):
-    color_temperature: ColorTemperature = "unknown"
+    color_temperature: LightingColorTemperature = "unknown"
     contrast_level: ContrastLevel = "unknown"
     saturation_level: SaturationLevel = "unknown"
     sources: List[LightingSourceInfo] = Field(default_factory=list)
-    shadows: List[str] = Field(default_factory=list)
+    shadows: List[Shadows] = Field(default_factory=list)
     artifacts: List[str] = Field(default_factory=list)
 
 
