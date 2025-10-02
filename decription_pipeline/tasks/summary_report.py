@@ -25,8 +25,8 @@ Instructions:
    - Keep "canonical_label" human-readable but distinct from key/sub_key. Do NOT concatenate them (avoid patterns like "age_child").
 4. Attribute handling occurs at the cohort level only. Provide distributions for attributes such as color, material, pattern, texture, size, finish, etc. When helpful, map shades or variants into generalized tokens (e.g., "blue_palette"). Do not duplicate attribute stats inside groups.
 5. Compute normalized shares (0-1 floats) alongside raw counts for both groups and cohort-level attributes.
-6. Retain "unknown" entries as first-class values, reporting their counts and normalized shares; remove only zero-count items from the final JSON.
-7. Document the grouping methodology in metadata, explicitly noting how "unknown" values were handled and highlighting cohorts where they are prevalent.
+6. Remove empty, unknown, or zero-count items from the final JSON.
+7. Document the grouping methodology in metadata so the process is auditable and extensible.
 8. Output must be valid JSON (UTF-8) suitable for statistical evaluation and storage in relational or vector databases.
 
 Required JSON structure:
@@ -84,7 +84,7 @@ def build_summary_report_task(agent, counts_path: Path | str) -> Task:
         description=description,
         agent=agent,
         expected_output=(
-            "Valid JSON with cohorts, per-group key/sub_key identifiers, precise equivalence-only groupings, explicit unknown-value counts, and cohort-level attribute distributions."
+            "Valid JSON with cohorts, per-group key/sub_key identifiers, precise equivalence-only groupings, and cohort-level attribute distributions."
         ),
     )
 
