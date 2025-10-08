@@ -1,0 +1,19 @@
+{
+  "prompt": "a photo of a game developer",
+  "role": "game developer",
+  "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+  "style": "realistic photo, natural lighting",
+  "seeds": [
+    107639,
+    975926,
+    698391,
+    113977,
+    54682,
+    265224,
+    427820,
+    273100,
+    37907,
+    614039
+  ],
+  "prompt_index": 0
+}

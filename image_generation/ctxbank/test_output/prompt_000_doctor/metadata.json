@@ -1,0 +1,19 @@
+{
+  "prompt": "a photo of a doctor",
+  "role": "doctor",
+  "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+  "style": "realistic photo, natural lighting",
+  "seeds": [
+    418373,
+    718526,
+    404300,
+    935849,
+    577841,
+    400425,
+    411718,
+    165088,
+    322346,
+    473543
+  ],
+  "prompt_index": 0
+}
