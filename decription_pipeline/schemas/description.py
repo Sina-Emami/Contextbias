@@ -4,7 +4,6 @@ from typing import List, Optional, Literal
 from pydantic import BaseModel, Field
 
 
-OcclusionState = Literal["visible", "partially_occluded", "fully_occluded", "unknown"]
 Mood = Literal[
     "calm",
     "tense",
@@ -314,7 +313,6 @@ class PersonInfo(BaseModel):
     gaze_direction: GazeDirection = "unknown"
     orientation: OrientationType = "unknown"
     face_emotion: FaceEmotion = "unknown"
-    occlusions: OcclusionState = "unknown"
     notes: Optional[str] = None
 
 
