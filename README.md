@@ -152,3 +152,49 @@ The script reuses the flattening helpers from `context_metrics.py`, so future ag
 - The bias reasoning stage requires Replicate access; set `REPLICATE_API_KEY` before running the pipeline.
 - You can override concurrency via environment variables to match your hardware/LLM quota.
 - Summary reporting is idempotent; if counts are missing they are regenerated automatically.
+
+---
+
+## Aggregation Outputs (Standardised)
+
+This repo standardises where aggregated files are written so downstream analysis is predictable:
+
+- Per-prompt (inside each prompt folder)
+  - ggregation_counting/<prompt>_counts.json – normalised counts for that single prompt.
+
+- Per-role, per-context (inside each role folder)
+  - ggregation_counting/role_counts.csv – combined counts for all prompts under that role in the current context.
+  - ggregation_counting/role_counts.json – same data plus metadata (	otal_prompts, 	otal_images, prompt list).
+
+- Per-role, all contexts (at dataset root)
+  - dataset/role_count_aggregation/<role>.csv – merged counts for a role across Context-free and both Context-aware folders. Build with:
+
+    `ash
+    python -m decription_pipeline.analysis.role_rollup
+    `
+
+- General attributes (optional)
+  - dataset/general_attributes_rollup.csv – one file summarising high-level attributes (mood, lighting, camera, demographics, presence flags) aggregated over all roles. Build with:
+
+    `ash
+    python -m decription_pipeline.analysis.role_rollup --general
+    `
+
+### Folder Layout Reference
+
+`
+dataset/
+  Context-free_CF/ | Context-aware_Related_CA-R/ | Context-aware_Unrelated_CA-U/
+    <role>/
+      <prompt>/
+        descriptions/summary/summary_report.json
+        aggregation_counting/<prompt>_counts.json
+      aggregation_counting/
+        role_counts.csv
+        role_counts.json
+  role_count_aggregation/
+    <role>.csv
+  general_attributes_rollup.csv         # optional, if built with --general
+`
+
+All aggregations apply the same normalisation rules for keys and labels (e.g., clothing garment variants, gender presentation, presence flags, spatial plane/side), ensuring counts align across prompts, roles, and contexts.
