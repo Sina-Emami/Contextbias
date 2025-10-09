@@ -185,6 +185,22 @@ FaceEmotion = Literal[
     "frowning",
     "unknown",
 ]
+eyewear_types = Literal["none","eyeglasses","sunglasses","safety_goggles","ski_goggles","swim_goggles","monocle","vr_headset","unknown"]
+clothing_materials = Literal[
+  "cotton","denim","linen","wool","fleece",
+  "silk","velvet","leather","suede","knit",
+  "lace","mesh","corduroy","synthetic","unknown"
+]
+
+clothing_textures = Literal[
+  "smooth","matte","glossy",
+  "ribbed","knit","quilted",
+  "wrinkled","fuzzy",
+  "mesh","lace","sheer",
+  "denim_twill","corduroy_wale",
+  "stripe",
+  "unknown"
+]
 ClothesColor = Literal[
     "white",
     "black",
@@ -217,6 +233,11 @@ PresenceTernary = Literal["yes", "no", "unknown"]
 OrientationType = Literal["front", "three_quarter", "profile", "back", "unknown"]
 PlaneType = Literal["foreground", "midground", "background", "unknown"]
 SideType = Literal["left", "center", "right", "unknown"]
+openness = Literal["enclosed","semi_open","open","vast","unknown"]
+spatial_layout_openness = Literal["cluttered","mixed","open_plan","unknown"]
+spatial_layout_depth = Literal["none","short","medium","long","very_long","unknown"]
+spatial_layout_aisle_width = Literal["none","narrow","standard","wide","extra_wide","unknown"]
+spatial_depth = Literal["shallow","moderate","deep","unknown"]
 
 
 class AtmosphereInfo(BaseModel):
