@@ -21,7 +21,7 @@ import re
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence, Tuple
+from typing import Any, Dict, Iterable, List, Mapping, Optional, Sequence, Tuple, Union
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -98,6 +98,9 @@ def flatten_attributes(report: Mapping[str, Any]) -> pd.DataFrame:
         cohort_name = cohort.get("cohort")
         attrs = cohort.get("attributes") or {}
         for attr_name, payload in attrs.items():
+            if not isinstance(payload, Mapping):
+                # Some summaries store free-form strings (e.g., notes) here; skip those.
+                continue
             vc = (payload or {}).get("value_counts") or {}
             norm = (payload or {}).get("normalized") or {}
             keys = set(vc.keys()) | set(norm.keys())
@@ -156,6 +159,8 @@ def extract_spatial_layout(report: Mapping[str, Any]) -> pd.DataFrame:
     for cohort in report.get("cohorts", []):
         attrs = cohort.get("attributes") or {}
         for attr_name, payload in attrs.items():
+            if not isinstance(payload, Mapping):
+                continue
             if attr_name not in {"object_density", "object_counts_by_position", "object_counts_by_position_total"}:
                 # Still allow spatial-looking keys under any attribute
                 pass
