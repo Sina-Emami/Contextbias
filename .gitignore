@@ -9,3 +9,5 @@ analysis_output
 dataset
 dataset_doctor_nurse
 dataset copy
+analysis_rollup
+dataset copy
