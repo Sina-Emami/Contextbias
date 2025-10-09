@@ -11,7 +11,6 @@ def init_scenario_root(scenario_id: str, scenario_text: str) -> dict:
         "images": root / "images",
         "raw_descriptions": root / "raw_descriptions",
         "descriptions": root / "descriptions",
-        "biases": root / "biases",
     }
     for p in [root, *subfolders.values()]:
         p.mkdir(parents=True, exist_ok=True)
