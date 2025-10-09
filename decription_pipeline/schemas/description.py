@@ -17,7 +17,7 @@ Mood = Literal[
     "dramatic",
     "unknown",
 ]
-LightingColorTemperature = Literal["warm", "neutral", "cool", "unknown"]
+ColorTemperature = Literal["warm", "neutral", "cool", "unknown"]
 DominantPalette = Literal[
     "monochrome",
     "analogous",
@@ -219,17 +219,13 @@ PlaneType = Literal["foreground", "midground", "background", "unknown"]
 SideType = Literal["left", "center", "right", "unknown"]
 
 
-class LightingProfile(BaseModel):
-    color_temperature: LightingColorTemperature = "unknown"
-    contrast_level: AtmosphereContrastLevel = "unknown"
-    saturation_level: SaturationLevel = "unknown"
-    aesthetic_qualities: List[AestheticQualities] = Field(default_factory=list)
-
-
 class AtmosphereInfo(BaseModel):
     mood: List[Mood] = Field(default_factory=list)
     dominant_palette: List[DominantPalette] = Field(default_factory=list)
-    lighting_profile: LightingProfile = LightingProfile()
+    color_temperature: ColorTemperature = "unknown"
+    contrast_level: AtmosphereContrastLevel = "unknown"
+    saturation_level: SaturationLevel = "unknown"
+    aesthetic_qualities: List[AestheticQualities] = Field(default_factory=list)
 
 
 class SurfaceDetail(BaseModel):
@@ -380,9 +376,6 @@ class LightingSourceInfo(BaseModel):
 
 
 class LightingInfo(BaseModel):
-    color_temperature: LightingColorTemperature = "unknown"
-    contrast_level: ContrastLevel = "unknown"
-    saturation_level: SaturationLevel = "unknown"
     sources: List[LightingSourceInfo] = Field(default_factory=list)
     shadows: List[Shadows] = Field(default_factory=list)
     artifacts: List[str] = Field(default_factory=list)
