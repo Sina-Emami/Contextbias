@@ -46,7 +46,7 @@ Structure your output under these headings:
     - age_range (AgeRange): child / teen / young_adult / middle_aged / older_adult / unknown
     - occupation_or_role (RoleHint): evidence-based or “unknown”
     - Hair/facial hair/head coverings: colors, styles, presents.
-    - clothing: list each visible garment using only the exact, simple word for the clothing item (e.g., “shirt,” “pants,” “tie”), giving for each its color (ColorName), material (ClothingMaterial), and texture (ClothingTexture); keep all names simple and singular; if the outfit is a clear work or professional uniform (e.g., lab coat, safety vest, police uniform), explicitly note it.
+    - clothing: list each visible garment using only the exact(ClothingGarment), simple word for the clothing item (e.g., “shirt,” “pants,” “tie”), giving for each its color (ColorName), material (ClothingMaterial), and texture (ClothingTexture); keep all names simple and singular; if the outfit is a clear work or professional uniform (e.g., lab coat, safety vest, police uniform), explicitly note it.
     - eyewear (EyewearType): specify a single, clear type such as “eyeglasses,” “sunglasses,” “safety_goggles,” “vr_headset,” “protective_face_shield,” “none,” or “unknown.”
     - accessories or tools (AccessoryType): choose applicable items such as “bag,” “hat,” “jewelry,” “watch,” “tool,” “none,” or “unknown.”
     - pose_type (PoseType): pick one from the enum, for example “standing,” “sitting,” “walking,” “running,” “leaning,” or “unknown.”
