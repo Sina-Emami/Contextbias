@@ -243,7 +243,6 @@ Directionality = Literal[
 ]
 Hardness = Literal["soft", "medium", "hard", "unknown"]
 Shadows = Literal["none", "soft", "medium", "hard", "casting", "unknown"]
-SourcesCount = Literal["one", "two", "three", "four_or_more", "unknown"]
 SourcesType = Literal["natural", "artificial", "mixed", "unknown"]
 LightingArtifact = Literal[
     "glare",
@@ -525,7 +524,6 @@ class LightingCohort(StrictBaseModel):
     directionality: Directionality = "unknown"
     hardness: Hardness = "unknown"
     shadows: Shadows = "unknown"
-    sources_count: SourcesCount = "unknown"
     sources_type: SourcesType = "unknown"
 
 
