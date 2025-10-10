@@ -26,9 +26,12 @@ Structure your output under these headings:
 
 2) Atmosphere & Color
 - Overall Mood: The perceived mood or atmosphere based purely on visual cues (e.g., "serene and quiet," "busy and chaotic," "formal and staged").
-- Dominant Palette: The top 3 multi-word color phrases (e.g., “deep mahogany browns,” “muted sage greens,” “off-white creams”).
-- Lighting Profile: Overall color temperature (warm/cool/neutral), contrast level (low/medium/high), and color saturation (muted/neutral/vivid).
-- Aesthetic Qualities: Any notable visual style (e.g., “soft, diffuse natural lighting,” “high-contrast, hard-edged studio lighting,” “low-resolution digital photo with visible artifacts”).
+- Dominant Palette: list the top three dominant colors (ColorName) visible in the image based on overall atmosphere and lighting; use only schema color tokens (e.g., "brown", "blue", "beige"), without descriptive phrases or modifiers.
+- Lighting Profile:
+    - Color Temperature: (ColorTemperature) – e.g., warm / cool / neutral / mixed / unknown
+    - Contrast Level: (AtmosphereContrastLevel) – low / medium / high / unknown
+    - Saturation Level: (SaturationLevel) – desaturated / neutral / vibrant / oversaturated / unknown
+- Aesthetic Qualities: (AestheticQuality) – e.g., “cinematic,” “realistic,” “surreal,” “industrial,” or “unknown.”
 
 3) Setting & Environment
 - General Location: Indoor/outdoor, time of day hints (e.g., "long shadows suggesting late afternoon"), and weather (if applicable).
