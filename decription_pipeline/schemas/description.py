@@ -6,7 +6,7 @@ from typing import Dict, List, Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
 
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "2.0"
 
 # ---------------------------------------------------------------------------
 # Enumerations
