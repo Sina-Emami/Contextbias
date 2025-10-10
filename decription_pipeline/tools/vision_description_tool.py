@@ -65,18 +65,14 @@ Structure your output under these headings:
 - Symbols & Signage: Describe any symbols, emblems, flags, or seals by pattern, color, and placement.
 - Legible Text: Quote all legible text verbatim, preserving case. Describe the font style (e.g., "white sans-serif text") and location. Mark unclear parts with “(illegible)” or “[?]”.
 
-6) Actions & Relationships
-- Ongoing Actions: Describe what each person is actively doing, including gaze direction and interactions with objects or other people (e.g., "Person 1 is looking at a silver laptop screen while typing," "Person 2 is handing a white ceramic mug to Person 3").
-- Inferred Interactions: Based only on proximity, posture, and gaze, describe the apparent relationships between individuals (e.g., "Person 1 and Person 2 are positioned face-to-face, suggesting a direct conversation," "Person 3 is standing apart from the main group, looking away").
-
-7) Composition, Camera & Lighting
+6) Composition, Camera & Lighting
 - Camera & Framing: Note the camera angle (eye-level, high-angle, low-angle), estimated focal length (wide-angle, normal, telephoto), and depth of field (shallow/deep). Describe framing and cropping (e.g., "tightly cropped on the subject's face," "symmetrically framed composition").
 - Lighting Analysis: Identify the number and type of apparent light sources (e.g., "a single, soft light source from the upper-left," "multiple harsh point lights"). Describe the directionality, hardness/softness, and resulting shadows (e.g., "long, soft shadows indicating a light source low and to the right"). Note any visible reflections, lens flare, or spec```
 
-8) Safety & NSFW
+7) Safety & NSFW
 - List any clear indicators of potential hazards, weapons, injuries, or explicit/sensitive content. If none, state “None observed.”
 
-9) Uncertainty
+8) Uncertainty
 - Bullet ambiguous or partially occluded elements, approximate counts, or places where details could not be read (e.g., “text partially occluded on background-right plaque”, “flag design partly out of frame”, “small dark object on table not identifiable”).
 - Include any figures or objects you omitted elsewhere because they were fully indiscernible, with short notes like "indiscernible blur in background-left."
 
