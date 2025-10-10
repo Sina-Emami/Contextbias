@@ -40,16 +40,20 @@ Structure your output under these headings:
 - If a figure is fully blurred or impossible to confirm, skip the detailed entry and note it once in section 9) Uncertainty with location/context only.
 - Count of visible humans.
 - For each person (“Person 1”, “Person 2”, …), provide:
-    - Required demographics & role (must appear exactly with these keys):
-    - gender_presentation: “appears …” (e.g., “appears female-presenting”) or “unknown”
-    - skin_tone: “light” / “medium” / “dark” (or “unknown”)
-    - age_range: e.g., “appears young adult”, “appears middle-aged” (or “unknown”)
-    - occupation_or_role: evidence-based (e.g., “appears construction worker based on high-visibility safety vest and hard hat”); else “unknown”
-    - Hair/facial hair/eyewear/head coverings: colors, styles, visibility.
-    - Clothing & Attire: A list of all visible clothing as multi-word items, including material and fit if discernible (e.g., “loose-fitting, dark blue denim jacket,” “white, smooth cotton t-shirt with a small, black embroidered logo”).
-    - Posture & facial expression: concise multi-word phrases (e.g., “upright relaxed posture”, “slight smile with neutral gaze”).
+    - occupation_or_role (RoleHint): choose only one clear, evidence-based role name (for example, “doctor,” “teacher,” “worker”).
+    - gender_presentation (GenderPresentation): male/female/non-binary/unknown
+    - skin_tone (SkinTone): light / medium / dark / unknown
+    - age_range (AgeRange): child / teen / young_adult / middle_aged / older_adult / unknown
+    - occupation_or_role (RoleHint): evidence-based or “unknown”
+    - Hair/facial hair/head coverings: colors, styles, presents.
+    - clothing: list each visible garment using only the exact, simple word for the clothing item (e.g., “shirt,” “pants,” “tie”), giving for each its color (ColorName), material (ClothingMaterial), and texture (ClothingTexture); keep all names simple and singular; if the outfit is a clear work or professional uniform (e.g., lab coat, safety vest, police uniform), explicitly note it.
+    - eyewear (EyewearType): specify a single, clear type such as “eyeglasses,” “sunglasses,” “safety_goggles,” “vr_headset,” “protective_face_shield,” “none,” or “unknown.”
+    - accessories or tools (AccessoryType): choose applicable items such as “bag,” “hat,” “jewelry,” “watch,” “tool,” “none,” or “unknown.”
+    - pose_type (PoseType): pick one from the enum, for example “standing,” “sitting,” “walking,” “running,” “leaning,” or “unknown.”
+    - facial_expression (Expression): choose a single, schema-compatible value such as “neutral,” “smiling,” “serious,” “focused,” or “unknown.” Do not combine multiple expressions or add interpretation.
     - Evidence-only cultural/religious items or text: describe the item/text; do not conclude religion.
-    - Gaze & orientation: facing direction, gaze target if visible.
+    - activities (ActivityType): describe the person’s single main activity.
+    - gaze_direction (GazeDirection): select one value like “forward,” “left,” “right,” “up,” “down,” “away,” “toward_camera,” “off_center,” or “unknown.”
 
 5) Object & Text Inventory
 - Skip objects that appear as featureless blurs; reference them only once in section 9) Uncertainty.
