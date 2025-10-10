@@ -163,26 +163,6 @@ CropType = Literal[
 ]
 
 IndoorOutdoor = Literal["indoor", "outdoor", "unknown"]
-LocationType = Literal[
-    "residential",
-    "office",
-    "hospital",
-    "education",
-    "industrial",
-    "retail",
-    "public_space",
-    "transport",
-    "landscape",
-    "worship",
-    "sports",
-    "laboratory",
-    "studio",
-    "kitchen",
-    "bathroom",
-    "bedroom",
-    "living_room",
-    "unknown",
-]
 Openness = Literal["enclosed", "semi_open", "open", "expansive", "unknown"]
 SpatialDepth = Literal["shallow", "moderate", "deep", "unknown"]
 SpatialAisleWidth = Literal["none", "narrow", "standard", "wide", "extra_wide", "unknown"]
@@ -296,28 +276,6 @@ ObjectState = Literal[
     "inactive",
     "unknown",
 ]
-ObjectType = Literal[
-    "furniture",
-    "appliance",
-    "device",
-    "tool",
-    "decoration",
-    "lighting",
-    "food",
-    "beverage",
-    "container",
-    "vehicle",
-    "textile",
-    "structure",
-    "artwork",
-    "signage",
-    "instrument",
-    "weapon",
-    "document",
-    "equipment",
-    "natural",
-    "unknown",
-]
 
 AccessoryType = Literal[
     "bag",
@@ -325,7 +283,6 @@ AccessoryType = Literal[
     "bracelet",
     "earrings",
     "gloves",
-    "hat",
     "headphones",
     "jewelry",
     "mask",
@@ -338,25 +295,7 @@ AccessoryType = Literal[
     "safety_gear",
     "medical",
     "religious",
-    "eyewear",
     "none",
-    "unknown",
-]
-ActivityType = Literal[
-    "standing",
-    "sitting",
-    "walking",
-    "running",
-    "talking",
-    "working",
-    "reading",
-    "writing",
-    "using_device",
-    "holding_object",
-    "gesturing",
-    "posing",
-    "resting",
-    "observing",
     "unknown",
 ]
 BodyType = Literal["slim", "average", "athletic", "stocky", "curvy", "unknown"]
@@ -447,34 +386,17 @@ HeadCoveringType = Literal[
     "none",
     "unknown",
 ]
-ClothingGarment = Literal[
-    "shirt",
-    "t_shirt",
-    "blouse",
-    "dress",
-    "jacket",
-    "coat",
-    "sweater",
-    "hoodie",
-    "pants",
-    "jeans",
-    "shorts",
-    "skirt",
-    "suit",
-    "tie",
-    "uniform",
-    "scrubs",
-    "lab_coat",
-    "apron",
-    "vest",
-    "hat",
-    "helmet",
-    "gloves",
-    "shoes",
-    "boots",
-    "sneakers",
-    "scarf",
-    "belt",
+Expression = Literal[
+    "neutral",
+    "smiling",
+    "frowning",
+    "serious",
+    "focused",
+    "surprised",
+    "angry",
+    "sad",
+    "happy",
+    "tired",
     "unknown",
 ]
 ClothingMaterial = Literal[
@@ -523,61 +445,6 @@ PoseType = Literal[
     "bending",
     "arms_crossed",
     "hands_on_hips",
-    "unknown",
-]
-RoleHint = Literal[
-    "doctor",
-    "nurse",
-    "patient",
-    "teacher",
-    "student",
-    "athlete",
-    "worker",
-    "manager",
-    "performer",
-    "customer",
-    "driver",
-    "passenger",
-    "parent",
-    "child",
-    "law_enforcement",
-    "military",
-    "scientist",
-    "unknown",
-]
-
-SafetyHazard = Literal[
-    "none",
-    "slip",
-    "trip",
-    "fire",
-    "electrical",
-    "chemical",
-    "biohazard",
-    "sharp_object",
-    "weapon",
-    "crowd",
-    "unknown",
-]
-SafetyNSFW = Literal[
-    "none",
-    "suggestive",
-    "explicit",
-    "gore",
-    "violence",
-    "self_harm",
-    "unknown",
-]
-
-FontStyle = Literal[
-    "serif",
-    "sans_serif",
-    "slab_serif",
-    "script",
-    "decorative",
-    "handwritten",
-    "monospace",
-    "block",
     "unknown",
 ]
 Legibility = Literal["clear", "partial", "poor", "illegible", "unknown"]
@@ -640,7 +507,7 @@ class EnvironmentCohort(StrictBaseModel):
     floor_material: MaterialType = "unknown"
     floor_texture: TextureType = "unknown"
     indoor_outdoor: IndoorOutdoor = "unknown"
-    location_type: LocationType = "unknown"
+    location_type: str = "unknown"
     openness: Openness = "unknown"
     spatial_depth: SpatialDepth = "unknown"
     spatial_layout_aisle_width: SpatialAisleWidth = "unknown"
@@ -670,17 +537,17 @@ class ObjectsCohort(StrictBaseModel):
     size: ObjectSize = "unknown"
     state: List[ObjectState] = Field(default_factory=list)
     texture: List[TextureType] = Field(default_factory=list)
-    type: List[ObjectType] = Field(default_factory=list)
+    type: List[str] = Field(default_factory=list)
 
 
 class PeopleCohort(StrictBaseModel):
     accessories: List[AccessoryType] = Field(default_factory=list)
     accessories_color: List[ColorName] = Field(default_factory=list)
-    activities: List[ActivityType] = Field(default_factory=list)
+    activities: List[str] = Field(default_factory=list)
     age_range: AgeRange = "unknown"
     body_type: BodyType = "unknown"
     clothing_color: List[ColorName] = Field(default_factory=list)
-    clothing_garment: List[ClothingGarment] = Field(default_factory=list)
+    clothing_garment: List[str] = Field(default_factory=list)
     clothing_material: List[ClothingMaterial] = Field(default_factory=list)
     clothing_texture: List[ClothingTexture] = Field(default_factory=list)
     eyewear_present: PresenceValue = "unknown"
@@ -697,17 +564,18 @@ class PeopleCohort(StrictBaseModel):
     head_covering_type: List[HeadCoveringType] = Field(default_factory=list)
     head_covering_color: List[ColorName] = Field(default_factory=list)
     pose: PoseType = "unknown"
-    role_hint: RoleHint = "unknown"
+    expression: Expression = "unknown"
+    role_hint: str = "unknown"
     skin_tone: SkinTone = "unknown"
 
 
 class SafetyCohort(StrictBaseModel):
-    hazards: SafetyHazard = "unknown"
-    nsfw: SafetyNSFW = "unknown"
+    hazards: str = "unknown"
+    nsfw: str = "unknown"
 
 
 class TextsCohort(StrictBaseModel):
-    font_style: FontStyle = "unknown"
+    font_style: str = "unknown"
     legibility: Legibility = "unknown"
     plane: List[ScenePlane] = Field(default_factory=list)
     side: SceneSide = "unknown"
@@ -745,6 +613,7 @@ class CohortBundle(StrictBaseModel):
 
 class ImageInfo(StrictBaseModel):
     image_id: str = Field(..., min_length=1)
+    file_path: str = ""
     source_url: str = ""
     caption: str = ""
     source_metadata: Dict[str, Union[str, int, float, bool]] = Field(default_factory=dict)
