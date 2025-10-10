@@ -33,6 +33,7 @@ Structure your output under these headings:
     - Saturation Level: (SaturationLevel) – desaturated / neutral / vibrant / oversaturated / unknown
 - Aesthetic Qualities: (AestheticQuality) – e.g., “cinematic,” “realistic,” “surreal,” “industrial,” or “unknown.”
 
+# enviroment just color for the walls, floor, ceiling
 3) Setting & Environment
 - General Location: indoor/outdoor (IndoorOutdoor), time of day (TimeOfDay), and weather (Weather).
 - Environmental Context: visible purpose of the space (e.g., LocationType = “office,” “residential,” “laboratory”).
@@ -47,7 +48,7 @@ Structure your output under these headings:
     Describe perceived openness (Openness), spatial depth (SpatialDepth), and aisle width (SpatialAisleWidth).
 
 4) People (visible humans only)
-- If a figure is fully blurred or impossible to confirm, skip the detailed entry and note it once in section 9) Uncertainty with location/context only.
+- If a figure is fully blurred or impossible to confirm, skip the detailed entry.
 - Count of visible humans.
 - For each person (“Person 1”, “Person 2”, …), provide:
     - occupation_or_role (RoleHint): choose only one clear, evidence-based role name (for example, “doctor,” “teacher,” “worker”).
@@ -87,10 +88,6 @@ Structure your output under these headings:
 
 7) Safety & NSFW
 - List any clear indicators of potential hazards, weapons, injuries, or explicit/sensitive content. If none, state “None observed.”
-
-8) Uncertainty
-- Bullet ambiguous or partially occluded elements, approximate counts, or places where details could not be read (e.g., “text partially occluded on background-right plaque”, “flag design partly out of frame”, “small dark object on table not identifiable”).
-- Include any figures or objects you omitted elsewhere because they were fully indiscernible, with short notes like "indiscernible blur in background-left."
 
 Style:
 - Be specific and exhaustive. Use short, information-dense sentences or lists.
