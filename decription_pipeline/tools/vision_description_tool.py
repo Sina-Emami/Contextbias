@@ -1,8 +1,8 @@
 import os
-from typing import Optional
+from typing import Optional, Union
 from openai import OpenAI
 from crewai.tools import tool
-from schemas.description import file_to_data_url
+from schemas.description import ImageAuditRecord, file_to_data_url
 
 _client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 _VISION_MODEL = os.getenv("VISION_CHAT_MODEL", "gpt-5-mini")
@@ -26,7 +26,7 @@ Structure your output under these headings:
 
 2) Atmosphere & Color
 - Overall Mood: The perceived mood or atmosphere based purely on visual cues (e.g., "serene and quiet," "busy and chaotic," "formal and staged").
-- Dominant Palette: The top 3–5 multi-word color phrases (e.g., “deep mahogany browns,” “muted sage greens,” “off-white creams”).
+- Dominant Palette: The top 3 multi-word color phrases (e.g., “deep mahogany browns,” “muted sage greens,” “off-white creams”).
 - Lighting Profile: Overall color temperature (warm/cool/neutral), contrast level (low/medium/high), and color saturation (muted/neutral/vivid).
 - Aesthetic Qualities: Any notable visual style (e.g., “soft, diffuse natural lighting,” “high-contrast, hard-edged studio lighting,” “low-resolution digital photo with visible artifacts”).
 
@@ -50,7 +50,6 @@ Structure your output under these headings:
     - Posture & facial expression: concise multi-word phrases (e.g., “upright relaxed posture”, “slight smile with neutral gaze”).
     - Evidence-only cultural/religious items or text: describe the item/text; do not conclude religion.
     - Gaze & orientation: facing direction, gaze target if visible.
-    - Occlusions: what is partially hidden or cropped.
 
 5) Object & Text Inventory
 - Skip objects that appear as featureless blurs; reference them only once in section 9) Uncertainty.
@@ -84,6 +83,35 @@ Style:
 """
 
 
+def _strip_code_fences(text: str) -> str:
+    stripped = text.strip()
+    if stripped.startswith("```"):
+        lines = stripped.splitlines()
+        if lines and lines[0].startswith("```"):
+            lines = lines[1:]
+        while lines and lines[-1].strip().startswith("```"):
+            lines = lines[:-1]
+        stripped = "\n".join(lines).strip()
+    return stripped
+
+
+def validate_image_audit_record(payload: Union[str, dict, ImageAuditRecord]) -> ImageAuditRecord:
+    """Normalize and validate a payload as an ImageAuditRecord."""
+    if isinstance(payload, ImageAuditRecord):
+        return payload
+    if isinstance(payload, dict):
+        return ImageAuditRecord.model_validate(payload)
+    if isinstance(payload, str):
+        return ImageAuditRecord.model_validate_json(_strip_code_fences(payload))
+    if hasattr(payload, "model_dump"):
+        return ImageAuditRecord.model_validate(payload.model_dump())  # type: ignore[call-arg]
+    if hasattr(payload, "dict"):
+        return ImageAuditRecord.model_validate(payload.dict())  # type: ignore[call-arg]
+    if hasattr(payload, "raw"):
+        return ImageAuditRecord.model_validate_json(_strip_code_fences(payload.raw))  # type: ignore[attr-defined]
+    raise TypeError(f"Unsupported payload type for validation: {type(payload)!r}")
+
+
 def _describe_from_source(image_url: str, prompt: Optional[str] = None) -> str:
     resp = _client.chat.completions.create(
         model=_VISION_MODEL,
@@ -106,3 +134,5 @@ def describe_image_from_file_tool(path: str, prompt: Optional[str] = None) -> st
     """Read a local image file, convert it to a data: URL, and return a detailed, neutral description."""
     data_url = file_to_data_url(path)
     return _describe_from_source(data_url, prompt)
+
+__all__ = ["describe_image_from_file_tool", "validate_image_audit_record"]
