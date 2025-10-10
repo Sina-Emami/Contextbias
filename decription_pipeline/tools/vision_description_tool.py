@@ -34,10 +34,17 @@ Structure your output under these headings:
 - Aesthetic Qualities: (AestheticQuality) – e.g., “cinematic,” “realistic,” “surreal,” “industrial,” or “unknown.”
 
 3) Setting & Environment
-- General Location: Indoor/outdoor, time of day hints (e.g., "long shadows suggesting late afternoon"), and weather (if applicable).
-- Environmental Context: Based on visible evidence, describe the likely function of the space (e.g., “appears to be a commercial office space due to cubicles,” “resembles a public library with book stacks”).
-- Architectural & Surface Details: Describe the visible surfaces in detail. For walls, floors, and ceilings, specify their material, texture, color, and condition (e.g., “light-beige painted drywall with a subtle orange-peel texture,” “dark-stained, high-gloss hardwood floor with minor scuff marks,” “white acoustic ceiling tile with a grid pattern”).
-- Spatial Layout: Explicitly note the placement of key elements using plane and side (e.g., “foreground-left,” “midground-center,” “background-right”). Describe the sense of depth and openness (e.g., "cramped and enclosed," "open and expansive").
+- General Location: indoor/outdoor (IndoorOutdoor), time of day (TimeOfDay), and weather (Weather).
+- Environmental Context: visible purpose of the space (e.g., LocationType = “office,” “residential,” “laboratory”).
+- Architectural & Surface Details:
+    For each visible wall, floor, and ceiling, describe:
+        - Material (MaterialType)
+        - Texture (TextureType)
+        - Color (ColorName)
+        - Condition (ObjectState)
+- Spatial Layout:
+    Include plane and side references using (ScenePlane, SceneSide, or ScenePosition).
+    Describe perceived openness (Openness), spatial depth (SpatialDepth), and aisle width (SpatialAisleWidth).
 
 4) People (visible humans only)
 - If a figure is fully blurred or impossible to confirm, skip the detailed entry and note it once in section 9) Uncertainty with location/context only.
