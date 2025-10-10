@@ -66,14 +66,20 @@ Structure your output under these headings:
     - gaze_direction (GazeDirection): select one value like “forward,” “left,” “right,” “up,” “down,” “away,” “toward_camera,” “off_center,” or “unknown.”
 
 5) Object & Text Inventory
-- Skip objects that appear as featureless blurs; reference them only once in section 9) Uncertainty.
-- Salient Elements: Begin by listing the 3-5 most prominent non-human elements.
-- Perform an object inventory by plane:
-  - Foreground (Left/Center/Right): List and describe all recognizable items with at least two modifiers, texture, and material.
-  - Midground (Left/Center/Right): List and describe all recognizable items with at least two modifiers, texture, and material.
-  - Background (Left/Center/Right): This section must be exceptionally detailed. Describe all visible background elements, no matter how small. Include furniture, decor (framed pictures, posters), fixtures (light switches, power outlets, thermostats), distant landscape features, items on shelves (provide approximate counts), and any other ambient objects. Describe the arrangement of these items (e.g., "neatly stacked," "randomly scattered").
-- Symbols & Signage: Describe any symbols, emblems, flags, or seals by pattern, color, and placement.
-- Legible Text: Quote all legible text verbatim, preserving case. Describe the font style (e.g., "white sans-serif text") and location. Mark unclear parts with “(illegible)” or “[?]”.
+- Skip featureless blurs (put them in section 9).
+- Salient Elements: List the 3–5 most visually dominant non-human items.
+- By Plane and Side:
+    Foreground / Midground / Background × Left / Center / Right — describe each recognizable object.
+    Include:
+        - Material (MaterialType)
+        - Texture (TextureType)
+        - State (ObjectState)
+        - Placement (ObjectPlacement) and Position (ObjectPosition)
+        - Size (ObjectSize)
+        - Type (ObjectType)
+        - Condition and orientation if visible.
+- Symbols & Signage: Describe visible markings, icons, or flags by color and pattern.
+- Legible Text: Quote all text verbatim; specify (FontStyle) and (Legibility).
 
 6) Composition, Camera & Lighting
 - Camera & Framing: Record angle (CameraAngle), perspective (Perspective), focal_length (FocalLength), depth_of_field (DepthOfField), framing (Framing), and crop_type (CropType) using only schema enum tokens.
