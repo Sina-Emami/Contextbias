@@ -33,8 +33,8 @@ def _env_int(name: str, default: int) -> int:
         return default
 
 
-IMAGE_CONCURRENCY = _env_int("IMAGE_CONCURRENCY", 1)
-ROLE_CONCURRENCY = _env_int("ROLE_CONCURRENCY", 1)
+IMAGE_CONCURRENCY = _env_int("IMAGE_CONCURRENCY", 10)
+ROLE_CONCURRENCY = _env_int("ROLE_CONCURRENCY", 2)
 @dataclass(frozen=True)
 class DescriptionJob:
     record_index: int
@@ -530,9 +530,6 @@ async def _describe_images_async(
 
     await asyncio.gather(*(process_job(job) for job in pending_jobs))
 
-
-def describe_images(paths: dict, start_image_id: str | None = None) -> None:
-    asyncio.run(_describe_images_async(paths, start_image_id=start_image_id))
 
 def describe_images(paths: dict, start_image_id: str | None = None) -> None:
     asyncio.run(_describe_images_async(paths, start_image_id=start_image_id))
