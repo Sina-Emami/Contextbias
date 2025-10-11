@@ -469,7 +469,7 @@ def collect_raw_for_clustering(docs: List[Dict[str, Any]]) -> Dict[str, List[str
                         continue
                     for val in _iter_clean(values):
                         add(f"environment.surfaces.{surface}.{key}", val)
-        for person in scene.get("people") or []:
+        for person in (scene.get("people") or {}).get("persons", []):
             if person.get("role_hint"):
                 add("people.demographics.role_hint", person["role_hint"])
             for sub, style_key, color_key in [
@@ -730,7 +730,7 @@ def generate_counts(input_dir: Path, cfg: Optional[FrequencyCounterConfig] = Non
                                 output["environment"]["surfaces"][surface][key],
                                 cluster(f"environment.surfaces.{surface}.{key}", value),
                             )
-        people = scene.get("people") or []
+        people = (scene.get("people") or {}).get("persons", [])
         output["totals"]["people_instances"] += len(people)
         for person in people:
             if person.get("gender_presentation"):
