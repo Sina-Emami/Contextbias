@@ -46,30 +46,22 @@ ColorName = Literal[
     "white",
     "black",
     "gray",
-    "grey",
     "silver",
     "gold",
     "beige",
     "brown",
     "tan",
     "cream",
-    "ivory",
     "red",
     "orange",
     "yellow",
     "green",
     "teal",
-    "turquoise",
     "blue",
     "navy",
     "purple",
     "pink",
-    "magenta",
-    "maroon",
-    "burgundy",
     "olive",
-    "cyan",
-    "multi",
     "unknown",
 ]
 
@@ -124,7 +116,6 @@ GazeDirection = Literal[
     "down",
     "away",
     "toward_camera",
-    "off_center",
     "unknown",
 ]
 
@@ -153,13 +144,10 @@ HairColor = Literal[
     "red",
     "grey",
     "white",
-    "auburn",
-    "chestnut",
     "blue",
     "green",
     "pink",
     "purple",
-    "silver",
     "unknown",
 ]
 
@@ -221,7 +209,6 @@ PoseType = Literal[
     "standing",
     "sitting",
     "walking",
-    "running",
     "kneeling",
     "lying",
     "leaning",
@@ -285,15 +272,11 @@ class StrictBaseModel(BaseModel):
 
 class SceneAppearanceCohort(StrictBaseModel):
     """Overall look and feel of the scene, including ambient colors."""
-
     mood: Mood = "unknown"
     color_temperature: ColorTemperature = "unknown"
     aesthetic_qualities: List[AestheticQuality] = Field(default_factory=list)
     dominant_colors: List[ColorName] = Field(default_factory=list)
     weather: Weather = "unknown"
-    ceiling_color: ColorName = "unknown"
-    floor_color: ColorName = "unknown"
-    wall_color: ColorName = "unknown"
 
 
 class CameraCohort(StrictBaseModel):
