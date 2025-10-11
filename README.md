@@ -116,7 +116,7 @@ Successful runs end with `Queued N prompt folder(s) for processing.` followed by
 After the per-prompt pipeline finishes, generate aggregated counts and figures across the entire dataset with:
 
 ```bash
-python -m decription_pipeline.analysis.dataset_rollup
+python -m decription_pipeline.data_processing.dataset_rollup
 ```
 
 This utility walks every role/prompt, reads each `summary_report.json`, and emits:
@@ -133,7 +133,7 @@ The script reuses the flattening helpers from `context_metrics.py`, so future ag
 ## Pipeline Details
 
 - **Stage 1: Raw capture** – `_capture_raw_descriptions_async` schedules up to `RAW_STAGE_CONCURRENCY` images in parallel (default 10) via `asyncio.to_thread`, storing incremental results in `raw_descriptions/raw_descriptions.json`.
-- **Stage 2: Structured schema + counts** – `_structure_descriptions_async` mirrors the map-reduce pattern for structuring; the `analysis.schema_counts` module then aggregates frequency statistics.
+- **Stage 2: Structured schema + counts** – `_structure_descriptions_async` mirrors the map-reduce pattern for structuring; the `data_processing.schema_counts` module then aggregates frequency statistics.
 - **Stage 3: Bias reasoning and summary** – `run_analyze_bias` ingests structured descriptions and produces bias artifacts; `run_summary_report` saves `summary_report.json`, rebuilding counts when needed.
 
 ### Concurrency & Resume Behaviour
@@ -170,14 +170,14 @@ This repo standardises where aggregated files are written so downstream analysis
   - dataset/role_count_aggregation/<role>.csv � merged counts for a role across Context-free and both Context-aware folders. Build with:
 
     `ash
-    python -m decription_pipeline.analysis.role_rollup
+    python -m decription_pipeline.data_processing.role_rollup
     `
 
 - General attributes (optional)
   - dataset/general_attributes_rollup.csv � one file summarising high-level attributes (mood, lighting, camera, demographics, presence flags) aggregated over all roles. Build with:
 
     `ash
-    python -m decription_pipeline.analysis.role_rollup --general
+    python -m decription_pipeline.data_processing.role_rollup --general
     `
 
 ### Folder Layout Reference
