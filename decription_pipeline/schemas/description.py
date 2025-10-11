@@ -6,7 +6,7 @@ from typing import Dict, List, Literal, Union
 
 from pydantic import BaseModel, ConfigDict, Field
 
-SCHEMA_VERSION = "2.0"
+SCHEMA_VERSION = "1.0"
 
 # ---------------------------------------------------------------------------
 # Enumerations
@@ -295,13 +295,18 @@ class ObjectsCohort(StrictBaseModel):
     items: Dict[str, ObjectAttributes] = Field(default_factory=dict)
 
 
-class PeopleCohort(StrictBaseModel):
+class PersonClothing(StrictBaseModel):
+    clothing_garment: str = "unknown"
+    clothing_color: List[ColorName] = Field(default_factory=list)
+
+
+class PersonAttributes(StrictBaseModel):
+    person_id: str = ""
     accessories: List[AccessoryType] = Field(default_factory=list)
     activities: List[str] = Field(default_factory=list)
     age_range: AgeRange = "unknown"
     body_type: BodyType = "unknown"
-    clothing_color: List[ColorName] = Field(default_factory=list)
-    clothing_garment: List[str] = Field(default_factory=list)
+    clothing: List[PersonClothing] = Field(default_factory=list)
     eyewear_present: PresenceValue = "unknown"
     eyewear_type: List[EyewearType] = Field(default_factory=list)
     facial_hair_present: PresenceValue = "unknown"
@@ -318,6 +323,10 @@ class PeopleCohort(StrictBaseModel):
     expression: Expression = "unknown"
     role_hint: str = "unknown"
     skin_tone: SkinTone = "unknown"
+
+
+class PeopleCohort(StrictBaseModel):
+    persons: List[PersonAttributes] = Field(default_factory=list)
 
 
 class SafetyCohort(StrictBaseModel):
@@ -383,4 +392,5 @@ __all__ = [
     "SafetyCohort",
     "TotalsCohort",
 ]
+
 
