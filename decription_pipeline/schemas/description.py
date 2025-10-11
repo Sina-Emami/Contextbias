@@ -285,11 +285,14 @@ class CameraCohort(StrictBaseModel):
     perspective: Perspective = "unknown"
 
 
-class ObjectsCohort(StrictBaseModel):
-    type: List[str] = Field(default_factory=list)
+class ObjectAttributes(StrictBaseModel):
+    size: ObjectSize = "unknown"
     color: List[ColorName] = Field(default_factory=list)
     material: List[MaterialType] = Field(default_factory=list)
-    size: ObjectSize = "unknown"
+
+
+class ObjectsCohort(StrictBaseModel):
+    items: Dict[str, ObjectAttributes] = Field(default_factory=dict)
 
 
 class PeopleCohort(StrictBaseModel):
