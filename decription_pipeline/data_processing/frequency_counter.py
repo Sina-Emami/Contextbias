@@ -10,13 +10,13 @@ on each run, making repeated invocations incremental.
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import logging
 from collections import defaultdict
 from pathlib import Path
-from tempfile import NamedTemporaryFile
-from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
+from typing import Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple
+
+from .io_utils import write_atomic_csv, write_atomic_text
 
 logger = logging.getLogger(__name__)
 
@@ -119,23 +119,6 @@ def _convert_counts(agg: Dict[str, Any]) -> Dict[str, Any]:
         result[category] = dict(sorted(counter.items()))
     result["totals"] = dict(agg.get("totals", {}))
     return result
-
-
-def _write_atomic(path: Path, data: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as tmp_file:
-        tmp_file.write(data)
-        tmp_path = Path(tmp_file.name)
-    tmp_path.replace(path)
-
-
-def _write_csv(path: Path, rows: List[List[str]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with NamedTemporaryFile("w", encoding="utf-8", newline="", dir=path.parent, delete=False) as tmp_file:
-        writer = csv.writer(tmp_file)
-        writer.writerows(rows)
-        tmp_path = Path(tmp_file.name)
-    tmp_path.replace(path)
 
 
 def _iter_description_dirs(dataset_root: Path) -> List[Path]:
@@ -327,7 +310,7 @@ def _load_prompt_state(freq_dir: Path) -> Tuple[Dict[str, Any], Set[str]]:
 
 def _write_prompt_outputs(freq_dir: Path, aggregator: Dict[str, Any], processed: Set[str]) -> None:
     serialized = _convert_counts(aggregator)
-    _write_atomic(freq_dir / "frequencies.json", json.dumps(serialized, indent=2, sort_keys=True))
+    write_atomic_text(freq_dir / "frequencies.json", json.dumps(serialized, indent=2, sort_keys=True))
 
     rows: List[List[str]] = [["category", "token", "count"]]
     for category in CATEGORIES:
@@ -340,8 +323,8 @@ def _write_prompt_outputs(freq_dir: Path, aggregator: Dict[str, Any], processed:
             ["totals", "object_instances", str(serialized["totals"].get("object_instances", 0))],
         ]
     )
-    _write_csv(freq_dir / "frequencies.csv", rows)
-    _write_atomic(freq_dir / "processed_files.json", json.dumps(sorted(processed), indent=2))
+    write_atomic_csv(freq_dir / "frequencies.csv", rows)
+    write_atomic_text(freq_dir / "processed_files.json", json.dumps(sorted(processed), indent=2))
 
 
 def _process_prompt(
@@ -393,6 +376,44 @@ def _process_prompt(
     return prompt_label, new_count, aggregator["totals"]["images"]
 
 
+class FrequencyCounterResult(NamedTuple):
+    prompts_visited: int
+    prompts_updated: int
+    new_images: int
+    total_images: int
+
+
+def compute_frequencies(dataset_root: Path) -> FrequencyCounterResult:
+    dataset_root = dataset_root.resolve()
+    description_dirs = _iter_description_dirs(dataset_root)
+
+    if not description_dirs:
+        logger.info("No description directories found under %s. Nothing to do.", dataset_root)
+        return FrequencyCounterResult(0, 0, 0, 0)
+
+    total_prompts = len(description_dirs)
+    total_new_images = 0
+    total_images_after = 0
+    prompts_with_updates = 0
+
+    for desc_dir in description_dirs:
+        prompt_label, new_images, total_images = _process_prompt(desc_dir, dataset_root)
+        total_images_after += total_images
+        if new_images:
+            prompts_with_updates += 1
+            total_new_images += new_images
+            logger.info("Processed %d new images for %s", new_images, prompt_label)
+        else:
+            logger.debug("No new images for %s", prompt_label)
+
+    return FrequencyCounterResult(
+        prompts_visited=total_prompts,
+        prompts_updated=prompts_with_updates,
+        new_images=total_new_images,
+        total_images=total_images_after,
+    )
+
+
 def main(argv: Optional[Iterable[str]] = None) -> None:
     parser = argparse.ArgumentParser(
         description="Compute image-level frequency statistics for each prompt."
@@ -412,32 +433,17 @@ def main(argv: Optional[Iterable[str]] = None) -> None:
     args = parser.parse_args(argv)
     logging.basicConfig(level=getattr(logging, args.log_level))
 
-    dataset_root = args.dataset.resolve()
-    description_dirs = _iter_description_dirs(dataset_root)
+    result = compute_frequencies(args.dataset)
 
-    if not description_dirs:
+    dataset_root = args.dataset.resolve()
+    if result.prompts_visited == 0:
         print(f"No description directories found under {dataset_root}. Nothing to do.")
         return
 
-    total_prompts = len(description_dirs)
-    total_new_images = 0
-    total_images_after = 0
-    prompts_with_updates = 0
-
-    for desc_dir in description_dirs:
-        prompt_label, new_images, total_images = _process_prompt(desc_dir, dataset_root)
-        total_images_after += total_images
-        if new_images:
-            prompts_with_updates += 1
-            total_new_images += new_images
-            logger.info("Processed %d new images for %s", new_images, prompt_label)
-        else:
-            logger.debug("No new images for %s", prompt_label)
-
     print(
-        f"Visited {total_prompts} prompt folders. "
-        f"Processed {total_new_images} new images. "
-        f"Totals now cover {total_images_after} images across the dataset. "
+        f"Visited {result.prompts_visited} prompt folders. "
+        f"Processed {result.new_images} new images across {result.prompts_updated} prompt(s). "
+        f"Totals now cover {result.total_images} images across the dataset. "
         f"Frequency outputs are stored in each prompt's frequency/ directory."
     )
 

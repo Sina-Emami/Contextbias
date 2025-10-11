@@ -15,15 +15,14 @@ Usage
 """
 
 import argparse
-import csv
 import json
 import logging
 import re
 from collections import defaultdict
 from pathlib import Path
-from tempfile import NamedTemporaryFile
 from typing import Dict, Iterable, List, Optional, Tuple
 
+from .io_utils import write_atomic_csv, write_atomic_text
 from .semantic_utils import clean_token_counts
 
 logger = logging.getLogger(__name__)
@@ -35,23 +34,6 @@ OUTPUT_DIR_NAME = "role_counting"
 # ---------------------------------------------------------------------------
 # Filesystem helpers
 # ---------------------------------------------------------------------------
-
-def _write_atomic(path: Path, data: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as tmp_file:
-        tmp_file.write(data)
-        tmp_path = Path(tmp_file.name)
-    tmp_path.replace(path)
-
-
-def _write_csv(path: Path, rows: List[List[str]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with NamedTemporaryFile("w", encoding="utf-8", newline="", dir=path.parent, delete=False) as tmp_file:
-        writer = csv.writer(tmp_file)
-        writer.writerows(rows)
-        tmp_path = Path(tmp_file.name)
-    tmp_path.replace(path)
-
 
 def _load_frequency_json(path: Path) -> Optional[Dict[str, object]]:
     try:
@@ -216,8 +198,8 @@ def aggregate_roles(dataset_root: Path, output_dir: Optional[Path] = None) -> Di
         aggregated = _aggregate_role(role, freq_paths)
         aggregated_results[role] = aggregated
         json_path, csv_path = _determine_output_paths(output_dir, role, filename_map)
-        _write_atomic(json_path, json.dumps(aggregated, indent=2, sort_keys=True))
-        _write_csv(csv_path, _build_csv_rows(aggregated))
+        write_atomic_text(json_path, json.dumps(aggregated, indent=2, sort_keys=True))
+        write_atomic_csv(csv_path, _build_csv_rows(aggregated))
         logger.info("Wrote role aggregates for %s to %s", role, json_path)
 
     summary_path = output_dir / "role_summary.json"
@@ -233,7 +215,7 @@ def aggregate_roles(dataset_root: Path, output_dir: Optional[Path] = None) -> Di
             {"role": role, "file_stem": filename_map[role], "prompt_count": prompt_count}
         )
     summary_payload = {"dataset_root": str(dataset_root), "roles": roles_summary}
-    _write_atomic(summary_path, json.dumps(summary_payload, indent=2, sort_keys=True))
+    write_atomic_text(summary_path, json.dumps(summary_payload, indent=2, sort_keys=True))
     return aggregated_results
 
 

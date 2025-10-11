@@ -16,13 +16,12 @@ Usage
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import logging
 from pathlib import Path
-from tempfile import NamedTemporaryFile
 from typing import Dict, Iterable, List, Optional, Set, Tuple
 
+from .io_utils import write_atomic_csv, write_atomic_text
 from .semantic_utils import clean_token_counts
 
 logger = logging.getLogger(__name__)
@@ -30,23 +29,6 @@ logger = logging.getLogger(__name__)
 DATASET_ROOT_DEFAULT = Path("dataset")
 ROLE_COUNTING_DIRNAME = "role_counting"
 OUTPUT_BASENAME = "all_roles"
-
-
-def _write_atomic(path: Path, data: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as tmp_file:
-        tmp_file.write(data)
-        tmp_path = Path(tmp_file.name)
-    tmp_path.replace(path)
-
-
-def _write_csv(path: Path, rows: List[List[str]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with NamedTemporaryFile("w", encoding="utf-8", newline="", dir=path.parent, delete=False) as tmp_file:
-        writer = csv.writer(tmp_file)
-        writer.writerows(rows)
-        tmp_path = Path(tmp_file.name)
-    tmp_path.replace(path)
 
 
 def _iter_role_jsons(role_dir: Path, skip_names: Set[str]) -> Iterable[Path]:
@@ -188,8 +170,8 @@ def aggregate_all_roles(dataset_root: Path, role_dir: Optional[Path] = None, out
 
     json_path = role_dir / f"{output_basename}.json"
     csv_path = role_dir / f"{output_basename}.csv"
-    _write_atomic(json_path, json.dumps(payload, indent=2, sort_keys=True))
-    _write_csv(csv_path, _build_csv_rows(payload))
+    write_atomic_text(json_path, json.dumps(payload, indent=2, sort_keys=True))
+    write_atomic_csv(csv_path, _build_csv_rows(payload))
     logger.info("Wrote global aggregates to %s and %s", json_path, csv_path)
     return payload
 

@@ -9,15 +9,15 @@ preserved.
 """
 
 import argparse
-import csv
 import json
 import logging
 import re
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 from pathlib import Path
-from tempfile import NamedTemporaryFile
-from typing import Any, Dict, Iterable, List, Optional, Set, Tuple
+from typing import Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple
+
+from .io_utils import write_atomic_csv, write_atomic_text
 
 import numpy as np
 
@@ -72,24 +72,6 @@ CATEGORIES = [
     "safety_hazards",
     "safety_nsfw",
 ]
-
-
-def _write_atomic(path: Path, data: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as tmp_file:
-        tmp_file.write(data)
-        tmp_path = Path(tmp_file.name)
-    tmp_path.replace(path)
-
-
-def _write_csv(path: Path, rows: List[List[str]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with NamedTemporaryFile("w", encoding="utf-8", newline="", dir=path.parent, delete=False) as tmp_file:
-        writer = csv.writer(tmp_file)
-        writer.writerows(rows)
-        tmp_path = Path(tmp_file.name)
-    tmp_path.replace(path)
-
 
 
 def _normalise_simple(token: str) -> str:
@@ -328,7 +310,7 @@ def _process_prompt_frequency(freq_dir: Path) -> Optional[Path]:
     clean_dir = freq_dir.parent / "clean_frequency"
     clean_dir.mkdir(parents=True, exist_ok=True)
 
-    _write_atomic(clean_dir / "frequencies.json", json.dumps(cleaned, indent=2, sort_keys=True))
+    write_atomic_text(clean_dir / "frequencies.json", json.dumps(cleaned, indent=2, sort_keys=True))
 
     rows: List[List[str]] = [["category", "token", "count"]]
     for category in CATEGORIES:
@@ -342,7 +324,7 @@ def _process_prompt_frequency(freq_dir: Path) -> Optional[Path]:
     for key, value in totals.items():
         rows.append(["totals", key, str(value)])
 
-    _write_csv(clean_dir / "frequencies.csv", rows)
+    write_atomic_csv(clean_dir / "frequencies.csv", rows)
     return clean_dir
 
 
@@ -350,6 +332,28 @@ def _iter_frequency_dirs(dataset_root: Path) -> List[Path]:
     dataset_root = dataset_root.resolve()
     freq_dirs = [p for p in dataset_root.rglob("frequency") if p.is_dir()]
     return sorted(freq_dirs)
+
+
+class FrequencyCleanResult(NamedTuple):
+    prompts_visited: int
+    prompts_cleaned: int
+
+
+def clean_dataset(dataset_root: Path) -> FrequencyCleanResult:
+    dataset_root = dataset_root.resolve()
+    freq_dirs = _iter_frequency_dirs(dataset_root)
+    if not freq_dirs:
+        logger.info("No frequency directories found under %s. Nothing to clean.", dataset_root)
+        return FrequencyCleanResult(0, 0)
+
+    cleaned = 0
+    for freq_dir in freq_dirs:
+        result = _process_prompt_frequency(freq_dir)
+        if result is not None:
+            cleaned += 1
+            logger.info("Cleaned frequencies for %s", freq_dir.parent)
+
+    return FrequencyCleanResult(len(freq_dirs), cleaned)
 
 
 def main(argv: Optional[Iterable[str]] = None) -> None:
@@ -371,21 +375,15 @@ def main(argv: Optional[Iterable[str]] = None) -> None:
     args = parser.parse_args(argv)
     logging.basicConfig(level=getattr(logging, args.log_level))
 
+    result = clean_dataset(args.dataset)
     dataset_root = args.dataset.resolve()
-    freq_dirs = _iter_frequency_dirs(dataset_root)
-    if not freq_dirs:
+    if result.prompts_visited == 0:
         print(f"No frequency directories found under {dataset_root}. Nothing to clean.")
         return
 
-    processed_prompts = 0
-    for freq_dir in freq_dirs:
-        result = _process_prompt_frequency(freq_dir)
-        if result is not None:
-            processed_prompts += 1
-            logger.info("Cleaned frequencies for %s", freq_dir.parent)
-
     print(
-        f"Cleaned frequency outputs for {processed_prompts} prompt(s). "
+        f"Cleaned frequency outputs for {result.prompts_cleaned} prompt(s). "
+        f"Processed {result.prompts_visited} frequency folder(s) in total. "
         f"Normalised files are stored in each prompt's clean_frequency/ directory."
     )
 
