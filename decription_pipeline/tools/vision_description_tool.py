@@ -33,20 +33,6 @@ Structure your output under these headings:
     - Saturation Level: (SaturationLevel) – desaturated / neutral / vibrant / oversaturated / unknown
 - Aesthetic Qualities: (AestheticQuality) – e.g., “cinematic,” “realistic,” “surreal,” “industrial,” or “unknown.”
 
-# enviroment just color for the walls, floor, ceiling
-3) Setting & Environment
-- General Location: indoor/outdoor (IndoorOutdoor), time of day (TimeOfDay), and weather (Weather).
-- Environmental Context: visible purpose of the space (e.g., LocationType = “office,” “residential,” “laboratory”).
-- Architectural & Surface Details:
-    For each visible wall, floor, and ceiling, describe:
-        - Material (MaterialType)
-        - Texture (TextureType)
-        - Color (ColorName)
-        - Condition (ObjectState)
-- Spatial Layout:
-    Include plane and side references using (ScenePlane, SceneSide, or ScenePosition).
-    Describe perceived openness (Openness), spatial depth (SpatialDepth), and aisle width (SpatialAisleWidth).
-
 4) People (visible humans only)
 - If a figure is fully blurred or impossible to confirm, skip the detailed entry.
 - Count of visible humans.
@@ -73,18 +59,13 @@ Structure your output under these headings:
     Foreground / Midground / Background × Left / Center / Right — describe each recognizable object.
     Include:
         - Material (MaterialType)
-        - Texture (TextureType)
-        - State (ObjectState)
-        - Placement (ObjectPlacement) and Position (ObjectPosition)
         - Size (ObjectSize)
         - Type (ObjectType)
-        - Condition and orientation if visible.
 - Symbols & Signage: Describe visible markings, icons, or flags by color and pattern.
 - Legible Text: Quote all text verbatim; specify (FontStyle) and (Legibility).
 
 6) Composition, Camera & Lighting
 - Camera & Framing: Record angle (CameraAngle), perspective (Perspective), focal_length (FocalLength), depth_of_field (DepthOfField), framing (Framing), and crop_type (CropType) using only schema enum tokens.
-- Lighting Analysis: Record directionality (Directionality), hardness (Hardness), shadows (Shadows), sources_count (SourcesCount), sources_type (SourcesType), and artifacts (LightingArtifact) using only schema enum tokens; represent reflections/glare/other effects via LightingArtifact (else use "none" or "unknown").
 
 7) Safety & NSFW
 - List any clear indicators of potential hazards, weapons, injuries, or explicit/sensitive content. If none, state “None observed.”
