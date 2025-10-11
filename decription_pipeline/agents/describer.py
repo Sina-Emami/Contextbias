@@ -28,6 +28,7 @@ def build_image_describer_agent() -> Agent:
         tools=[describe_image_from_file_tool],
         llm=None,  # _describer_llm_name(),
         allow_delegation=False,
+        force_tool_output=True,
         verbose=True,
         memory=False,
         max_iter=1,
