@@ -14,11 +14,11 @@ Usage
 
 Aggregate per-role counts::
 
-    python -m decription_pipeline.analysis.role_rollup
+    python -m decription_pipeline.data_processing.role_rollup
 
 Aggregate per-role counts and build the general attribute rollup::
 
-    python -m decription_pipeline.analysis.role_rollup --general
+    python -m decription_pipeline.data_processing.role_rollup --general
 """
 import argparse
 import csv
