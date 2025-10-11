@@ -2,9 +2,9 @@
 
 This project runs an asynchronous, resume-friendly pipeline that walks a dataset of prompt folders and generates structured bias analyses for every image. The workflow is driven by CrewAI agents and proceeds through three main stages:
 
-1. **Raw description capture** – A vision-enabled agent calls `DescribeImageFromFile` for each image referenced in a prompt manifest.
-2. **Structured description + counts** – Raw narratives are converted into the `ImageAuditRecord` schema and frequency statistics are aggregated.
-3. **Bias reasoning + reporting** – Structured outputs feed the bias analysis crew and a summary reporter produces the final dataset roll-up.
+1. **Schema-ready description capture** - The `Image Schema Describer` crew invokes the `DescribeImageFromFile` tool for every manifest entry and writes one `descriptions/<image_id>.json` `ImageAuditRecord` per image.
+2. **Frequency counting & cleaning** - Run `python -m decription_pipeline.data_processing.pipeline` to count prompt attributes, normalise tokens, aggregate by role, and publish dataset-level roll-ups.
+3. **Bias reasoning + reporting (optional)** - Once structured descriptions and frequency artifacts exist, downstream crews can generate bias analyses and narrative reports.
 
 Each prompt directory is processed independently. The runner automatically skips folders that already contain all expected artifacts, resumes partially processed folders from the next missing image, and parallelises work to keep image agents busy.
 
@@ -33,20 +33,25 @@ Each prompt directory must include a `manifest.json` (an array of image metadata
 
 ```
 <prompt_dir>/
-├─ raw_descriptions/
-│  └─ raw_descriptions.json
-├─ descriptions/
-│  ├─ <image_id>.json
-│  └─ summary/
-│     ├─ counts.json
-│     └─ summary_report.json
-└─ biases/
-   ├─ agg_state.json
-   ├─ repeat_summary_full.json
-   └─ bias_report.json
+|- images_info.json
+|- descriptions/
+|  - <image_id>.json
+|- frequency/
+|  - frequencies.json
+|  - frequencies.csv
+- clean_frequency/
+   - frequencies.json
+   - frequencies.csv
 ```
 
-If raw descriptions or structured JSON already exist, the resume logic honours them and only fills in missing work.
+The frequency pipeline also writes aggregated files under `dataset/role_counting/` (per role) and `dataset/role_counting/all_roles.*` (global). Resume logic honours existing structured JSON and only fills in missing work.
+
+## Agents, Tasks & Tools
+
+- `decription_pipeline/crew.py` assembles a single CrewAI `Crew` composed of the Image Schema Describer agent and the describe-images task.
+- The agent is defined in `decription_pipeline/agents/describer.py`. It calls the `DescribeImageFromFile` tool (`tools/vision_description_tool.py`) and reformats the evidence into an `ImageAuditRecord`.
+- `decription_pipeline/tasks/describe_images.py` supplies the task prompt. It requires exactly one tool invocation, enforces enum tokens, and demands a single JSON object as output.
+- `decription_pipeline/crew.build_image_description_crew()` wires the agent and task together with `Process.sequential` and `force_tool_output=True`, ensuring the saved JSON mirrors the tool observations.
 
 ---
 
@@ -78,7 +83,7 @@ Create a `.env` with at least:
 ```env
 OPENAI_API_KEY=""          # required for the vision description tool
 REPLICATE_API_KEY=""       # required for the bias reasoning agent
-DESCRIBER_LLM=gpt-5-mini    # optional override
+DESCRIBER_LLM=gpt-5-nano     # optional fallback if you re-enable LLM responses for the describer
 SUMMARY_LLM=gpt-4o-mini     # optional override for summary crew
 BIAS_REPLICATE_MODEL=openai/gpt-oss-20b
 BIAS_REPLICATE_TEMPERATURE=0.0
@@ -103,9 +108,9 @@ python decription_pipeline/app.py
 
 ### Log Messages
 
-* `[Skip] <prompt>` – All expected artifacts exist (`raw_descriptions`, structured JSON, counts, summary report); nothing runs.
+* `[Skip] <prompt>` – All expected artifacts exist (structured JSON, frequency outputs, summary report); nothing runs.
 * `[Start] <prompt>` – No prior work detected; the pipeline executes all stages.
-* `[Resume] <prompt>` – Some artifacts are missing; the pipeline resumes from the first missing image (or regenerates counts/summary).
+* `[Resume] <prompt>` – Some artifacts are missing; the runner resumes from the first missing image and stops once it reaches an existing structured JSON (counts/summary regenerate when requested).
 
 Successful runs end with `Queued N prompt folder(s) for processing.` followed by per-stage progress for each folder. Subsequent reruns pick up from the last incomplete image or skip completed prompts entirely.
 
@@ -116,7 +121,13 @@ Successful runs end with `Queued N prompt folder(s) for processing.` followed by
 After the per-prompt pipeline finishes, generate aggregated counts and figures across the entire dataset with:
 
 ```bash
-python -m decription_pipeline.analysis.dataset_rollup
+python -m decription_pipeline.data_processing.dataset_rollup
+```
+
+To run the entire frequency-processing flow end-to-end (count, clean, role roll-up, global roll-up):
+
+```bash
+python -m decription_pipeline.data_processing.pipeline
 ```
 
 This utility walks every role/prompt, reads each `summary_report.json`, and emits:
@@ -132,16 +143,16 @@ The script reuses the flattening helpers from `context_metrics.py`, so future ag
 
 ## Pipeline Details
 
-- **Stage 1: Raw capture** – `_capture_raw_descriptions_async` schedules up to `RAW_STAGE_CONCURRENCY` images in parallel (default 10) via `asyncio.to_thread`, storing incremental results in `raw_descriptions/raw_descriptions.json`.
-- **Stage 2: Structured schema + counts** – `_structure_descriptions_async` mirrors the map-reduce pattern for structuring; the `analysis.schema_counts` module then aggregates frequency statistics.
-- **Stage 3: Bias reasoning and summary** – `run_analyze_bias` ingests structured descriptions and produces bias artifacts; `run_summary_report` saves `summary_report.json`, rebuilding counts when needed.
+- **Description capture** - `process_prompt_directory()` prepares per-prompt folders, then calls `describe_images()`, which delegates to `_describe_images_async` and the image-description crew. Each run produces one `ImageAuditRecord` JSON per image under `descriptions/`.
+- **Frequency counting & aggregation** - `decription_pipeline.data_processing.pipeline.run_pipeline()` orchestrates frequency counting, cleaning, per-role aggregation, and dataset roll-ups. It combines `frequency_counter.compute_frequencies`, `frequency_cleaner.clean_dataset`, `role_frequency_aggregator.aggregate_roles`, and `global_frequency_aggregator.aggregate_all_roles`.
+- **Optional reporting** - Once structured descriptions and frequency artifacts exist, additional crews (bias analysis, narrative summaries, visualisations) can be executed as needed.
 
 ### Concurrency & Resume Behaviour
 
-- `PROMPT_STAGE_CONCURRENCY` (default 3) limits how many prompt folders run simultaneously, regardless of role.
-- `RAW_STAGE_CONCURRENCY` and `STRUCT_STAGE_CONCURRENCY` (default 10 each) control image-level fan-out.
-- Manifest discovery is recursive; any `manifest.json` under the dataset root is considered a prompt directory.
-- Resume checkpoints are based on existing raw descriptions, structured files, and report artifacts; only missing work is redone.
+- `ROLE_CONCURRENCY` (default 2) bounds how many role directories are processed in parallel.
+- `IMAGE_CONCURRENCY` (default 10) limits concurrent `DescribeImageFromFile` tool invocations inside a prompt.
+- Manifest discovery is recursive; any `manifest.json` under the dataset root is treated as a prompt directory.
+- Resume logic seeks the first missing structured description, restarts from that image, and halts as soon as the next existing JSON is encountered so downstream files remain untouched.
 
 ---
 
@@ -160,24 +171,24 @@ The script reuses the flattening helpers from `context_metrics.py`, so future ag
 This repo standardises where aggregated files are written so downstream analysis is predictable:
 
 - Per-prompt (inside each prompt folder)
-  - ggregation_counting/<prompt>_counts.json � normalised counts for that single prompt.
+  - ggregation_counting/<prompt>_counts.json - normalised counts for that single prompt.
 
 - Per-role, per-context (inside each role folder)
-  - ggregation_counting/role_counts.csv � combined counts for all prompts under that role in the current context.
-  - ggregation_counting/role_counts.json � same data plus metadata (	otal_prompts, 	otal_images, prompt list).
+  - ggregation_counting/role_counts.csv - combined counts for all prompts under that role in the current context.
+  - ggregation_counting/role_counts.json - same data plus metadata (	otal_prompts, 	otal_images, prompt list).
 
 - Per-role, all contexts (at dataset root)
-  - dataset/role_count_aggregation/<role>.csv � merged counts for a role across Context-free and both Context-aware folders. Build with:
+  - dataset/role_count_aggregation/<role>.csv - merged counts for a role across Context-free and both Context-aware folders. Build with:
 
     `ash
-    python -m decription_pipeline.analysis.role_rollup
+    python -m decription_pipeline.data_processing.role_rollup
     `
 
 - General attributes (optional)
-  - dataset/general_attributes_rollup.csv � one file summarising high-level attributes (mood, lighting, camera, demographics, presence flags) aggregated over all roles. Build with:
+  - dataset/general_attributes_rollup.csv - one file summarising high-level attributes (mood, lighting, camera, demographics, presence flags) aggregated over all roles. Build with:
 
     `ash
-    python -m decription_pipeline.analysis.role_rollup --general
+    python -m decription_pipeline.data_processing.role_rollup --general
     `
 
 ### Folder Layout Reference

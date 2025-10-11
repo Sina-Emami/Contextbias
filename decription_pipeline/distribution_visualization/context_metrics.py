@@ -10,7 +10,7 @@ Features
 
 Usage
 - Edit HARDCODED_INPUTS below to point at the summary_report.json file(s) or directories to process.
-- Run `python -m decription_pipeline.analysis.context_metrics` to build the CSVs and figures.
+- Run `python -m decription_pipeline.data_processing.context_metrics` to build the CSVs and figures.
 """
 
 import hashlib

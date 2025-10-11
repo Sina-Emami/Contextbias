@@ -1,20 +1,16 @@
-﻿import argparse
+import argparse
 import asyncio
 import os
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Sequence
+from typing import Any, Dict, Sequence
 from dotenv import load_dotenv
 
-from analysis.schema_counts import FrequencyCounterConfig, run_counts
+from crew import build_image_description_crew
+from tools.vision_description_tool import validate_image_audit_record
+from pydantic import ValidationError
 
-from utils.fs import init_scenario_root
-from crew import (
-    build_raw_description_crew,
-    build_structured_description_crew,
-    build_summary_report_crew,
-)
 from schemas.description import ImageAuditRecord
 
 load_dotenv()
@@ -34,23 +30,17 @@ def _env_int(name: str, default: int) -> int:
         return default
 
 
-RAW_STAGE_CONCURRENCY = _env_int("RAW_STAGE_CONCURRENCY", 10)
-STRUCT_STAGE_CONCURRENCY = _env_int("STRUCT_STAGE_CONCURRENCY", 10)
-PROMPT_STAGE_CONCURRENCY = _env_int("PROMPT_STAGE_CONCURRENCY", 2)
+IMAGE_CONCURRENCY = _env_int("IMAGE_CONCURRENCY", 10)
+ROLE_CONCURRENCY = _env_int("ROLE_CONCURRENCY", 2)
+
+
 @dataclass(frozen=True)
-class RawDescriptionJob:
+class DescriptionJob:
     record_index: int
     image_id: str
     image_path: Path
-
-
-@dataclass(frozen=True)
-class StructuredDescriptionJob:
-    record_index: int
-    image_id: str
-    image_path: str
-    payload: str
     output_path: Path
+    source_model: str
 
 
 @dataclass
@@ -64,81 +54,18 @@ class PromptPlan:
     last_completed_file: Path | None
 
 
-def _extract_raw_description_output(result) -> str:
-    if isinstance(result, str):
-        return result.strip()
-    if hasattr(result, "raw") and isinstance(result.raw, str) and result.raw.strip():
-        return result.raw.strip()
-    if hasattr(result, "output") and isinstance(result.output, str) and result.output.strip():
-        return result.output.strip()
-    if hasattr(result, "json_dict") and isinstance(result.json_dict, dict):
-        description = result.json_dict.get("description")
-        if isinstance(description, str) and description.strip():
-            return description.strip()
-    text_value = str(result).strip()
-    if not text_value:
-        raise RuntimeError(f"Unexpected raw description output type: {type(result)} {result}")
-    return text_value
-
-
 def _parse_description_output(result) -> ImageAuditRecord:
     if isinstance(result, ImageAuditRecord):
         return result
     if hasattr(result, "pydantic") and isinstance(result.pydantic, ImageAuditRecord):
         return result.pydantic  # type: ignore[return-value]
-    if isinstance(result, dict):
-        return ImageAuditRecord.model_validate(result)
-    if hasattr(result, "model_dump"):  # pydantic v2 model
-        return ImageAuditRecord.model_validate(result.model_dump())
-    if hasattr(result, "dict"):        # pydantic v1 model
-        return ImageAuditRecord.model_validate(result.dict())
-    if isinstance(result, str):
-        return ImageAuditRecord.model_validate_json(result)
-    if hasattr(result, "raw"):
-        return ImageAuditRecord.model_validate_json(result.raw)  # type: ignore[attr-defined]
+    try:
+        return validate_image_audit_record(result)
+    except ValidationError:
+        raise
+    except TypeError:
+        pass
     raise RuntimeError(f"Unexpected description output type: {type(result)} {result}")
-
-
-def setup_scenario(scenario: str, scenario_id: str) -> dict:
-    """Create the scenario root, subfolders, and manifest. Return the paths dict."""
-    if not os.getenv("OPENAI_API_KEY"):
-        raise RuntimeError("OPENAI_API_KEY is not set. Put it in your environment or .env file.")
-    paths = init_scenario_root(scenario_id, scenario)
-    print(f"[Init] Scenario folders ready at: {paths['root']}")
-    return paths
-
-
-def setup_test_paths(raw_json_path: Path, output_root: Path | None = None) -> dict:
-    """Prepare folders so structuring & reporting can run against a canned raw JSON."""
-    raw_json_path = Path(raw_json_path).resolve()
-    if not raw_json_path.exists():
-        raise FileNotFoundError(f"Raw descriptions file not found: {raw_json_path}")
-    if raw_json_path.is_dir():
-        raise ValueError("Expected a raw descriptions JSON file, received a directory.")
-
-    raw_dir = raw_json_path.parent
-    root = Path(output_root).resolve() if output_root else raw_dir.parent
-    root.mkdir(parents=True, exist_ok=True)
-    descriptions_dir = root / "descriptions"
-    biases_dir = root / "biases"
-    images_dir = root / "images"
-
-    for path in (descriptions_dir, biases_dir, images_dir):
-        path.mkdir(parents=True, exist_ok=True)
-
-    paths = {
-        "root": root,
-        "raw_descriptions": raw_dir,
-        "descriptions": descriptions_dir,
-        "biases": biases_dir,
-        "images": images_dir,
-        "manifest_path": root / "manifest.test.json",
-        "images_info_path": images_dir / "images_info.json",
-    }
-
-    print(f"[Init] Test run configured. Outputs will be stored under: {root}")
-    print(f"       Using raw descriptions from: {raw_json_path}")
-    return paths
 
 
 def _find_manifest_file(prompt_dir: Path) -> Path:
@@ -248,12 +175,8 @@ def setup_prompt_paths(prompt_dir: Path, dataset_root: Path | None = None) -> di
     if not isinstance(manifest_records, list):
         raise ValueError(f"Expected manifest JSON array at {manifest_path}")
 
-    raw_dir = prompt_dir / "raw_descriptions"
     descriptions_dir = prompt_dir / "descriptions"
-    biases_dir = prompt_dir / "biases"
-
-    for folder in (raw_dir, descriptions_dir, biases_dir):
-        folder.mkdir(parents=True, exist_ok=True)
+    descriptions_dir.mkdir(parents=True, exist_ok=True)
 
     normalized_records: list[dict] = []
     for entry in manifest_records:
@@ -288,9 +211,7 @@ def setup_prompt_paths(prompt_dir: Path, dataset_root: Path | None = None) -> di
         "dataset_root": dataset_root,
         "prompt_root": prompt_dir,
         "images": prompt_dir,
-        "raw_descriptions": raw_dir,
         "descriptions": descriptions_dir,
-        "biases": biases_dir,
         "images_info_path": images_info_path,
         "manifest_path": manifest_path,
         "scenario_id": scenario_id,
@@ -338,50 +259,33 @@ def assess_prompt_directory(prompt_dir: Path, dataset_root: Path) -> PromptPlan:
     expected_ids = _load_expected_ids(paths)
     role_dir = prompt_dir.parent
 
-    raw_dir = Path(paths["raw_descriptions"])
     descriptions_dir = Path(paths["descriptions"])
-    raw_records_path = raw_dir / "raw_descriptions.json"
-    raw_entries = _load_json_array(raw_records_path)
 
-    raw_map: dict[str, dict] = {}
-    for entry in raw_entries:
-        if not isinstance(entry, dict):
-            continue
-        image_id = entry.get("image_id")
-        if isinstance(image_id, str) and image_id:
-            raw_map[image_id] = entry
-
-    def _has_description(image_id: str) -> bool:
-        entry = raw_map.get(image_id)
-        if not entry:
-            return False
-        description = entry.get("description")
-        return isinstance(description, str) and description.strip() != ""
-
-    raw_missing = [image_id for image_id in expected_ids if not _has_description(image_id)]
+    structured_existing = {
+        image_id: descriptions_dir / f"{image_id}.json"
+        for image_id in expected_ids
+        if (descriptions_dir / f"{image_id}.json").exists()
+    }
     structured_missing = [
         image_id
         for image_id in expected_ids
-        if not (descriptions_dir / f"{image_id}.json").exists()
+        if image_id not in structured_existing
     ]
 
     summary_dir = descriptions_dir / "summary"
     counts_path = summary_dir / "counts.json"
     summary_path = summary_dir / "summary_report.json"
 
-    raw_complete = not raw_missing and bool(expected_ids)
     structured_complete = not structured_missing and bool(expected_ids)
     counts_complete = counts_path.exists()
     summary_complete = summary_path.exists()
 
     last_completed_file: Path | None = None
     for image_id in reversed(expected_ids):
-        candidate = descriptions_dir / f"{image_id}.json"
-        if candidate.exists():
+        candidate = structured_existing.get(image_id)
+        if candidate:
             last_completed_file = candidate
             break
-    if last_completed_file is None and raw_map and raw_records_path.exists():
-        last_completed_file = raw_records_path
 
     if not expected_ids:
         return PromptPlan(
@@ -394,49 +298,26 @@ def assess_prompt_directory(prompt_dir: Path, dataset_root: Path) -> PromptPlan:
             last_completed_file=None,
         )
 
-    if raw_complete and structured_complete and counts_complete and summary_complete:
+    if structured_complete and counts_complete and summary_complete:
         return PromptPlan(
             prompt_dir=prompt_dir,
             role_dir=role_dir,
             paths=paths,
             status="complete",
             start_image_id=None,
-            reason="All outputs already generated (raw, structured, counts, summary).",
+            reason="All outputs already generated (structured descriptions, counts, summary).",
             last_completed_file=summary_path if summary_path.exists() else last_completed_file,
-        )
-
-    if not raw_map:
-        return PromptPlan(
-            prompt_dir=prompt_dir,
-            role_dir=role_dir,
-            paths=paths,
-            status="pending",
-            start_image_id=expected_ids[0],
-            reason="No raw descriptions captured yet.",
-            last_completed_file=None,
-        )
-
-    if raw_missing:
-        missing_count = len(raw_missing)
-        reason = f"Missing raw descriptions for {missing_count} image(s)."
-        return PromptPlan(
-            prompt_dir=prompt_dir,
-            role_dir=role_dir,
-            paths=paths,
-            status="resume",
-            start_image_id=raw_missing[0],
-            reason=reason,
-            last_completed_file=last_completed_file,
         )
 
     if structured_missing:
         missing_count = len(structured_missing)
         reason = f"Missing structured descriptions for {missing_count} image(s)."
+        status = "pending" if not structured_existing else "resume"
         return PromptPlan(
             prompt_dir=prompt_dir,
             role_dir=role_dir,
             paths=paths,
-            status="resume",
+            status=status,
             start_image_id=structured_missing[0],
             reason=reason,
             last_completed_file=last_completed_file,
@@ -474,42 +355,21 @@ def process_prompt_directory(
     else:
         print(f"\n=== Processing prompt: {label} ===")
 
-    raw_records = capture_raw_descriptions(paths, start_image_id=start_image_id)
-    if not raw_records:
-        print("[Stage 1] No raw descriptions captured or available to process.")
-
-    structure_descriptions(paths, start_image_id=start_image_id)
-    counts_path = summarize_description_counts(paths)
-    run_summary_report(paths, counts_path=counts_path)
-
-def _load_json_array(path: Path) -> list:
-    if not path.exists():
-        return []
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-        if isinstance(data, list):
-            return data
-    except Exception:
-        pass
-    return []
+    describe_images(paths, start_image_id=start_image_id)
 
 
-async def _capture_raw_descriptions_async(
+async def _describe_images_async(
     paths: dict,
     start_image_id: str | None = None,
-) -> list[dict]:
-    """Stage 1: Call the raw description crew for each image and store results asynchronously."""
+) -> None:
+    """Call the unified image describer crew and persist schema-compliant JSON."""
     descriptions_dir: Path = paths["descriptions"]
-    raw_dir: Path = paths.get("raw_descriptions") or (descriptions_dir / "raw")
-    raw_dir.mkdir(parents=True, exist_ok=True)
+    descriptions_dir.mkdir(parents=True, exist_ok=True)
 
     info_json: Path = paths["images_info_path"]
-    images_dir: Path = paths["images"]
-    root_dir: Path = paths["root"]
-
     if not info_json.exists():
         print("No images_info.json found - nothing to describe.")
-        return []
+        return
 
     try:
         records = json.loads(info_json.read_text(encoding="utf-8"))
@@ -518,36 +378,13 @@ async def _capture_raw_descriptions_async(
 
     if not isinstance(records, list) or not records:
         print("images_info.json is empty - nothing to describe.")
-        return []
+        return
 
-    raw_records_path = raw_dir / "raw_descriptions.json"
-    ordered_ids: list[str] = []
-    for rec in records:
-        if isinstance(rec, dict):
-            image_id = rec.get("id") or rec.get("image_id")
-            if image_id:
-                ordered_ids.append(image_id)
+    dataset_root = Path(paths.get("dataset_root") or paths.get("root") or descriptions_dir.parent)
+    prompt_root = Path(paths.get("prompt_root") or paths.get("images") or descriptions_dir)
+    images_dir = Path(paths.get("images") or prompt_root)
 
-    existing_entries: dict[str, dict] = {}
-    for entry in _load_json_array(raw_records_path):
-        if not isinstance(entry, dict):
-            continue
-        image_id = entry.get("image_id")
-        if image_id:
-            existing_entries[image_id] = {
-                "image_id": image_id,
-                "image_path": entry.get("image_path"),
-                "description": entry.get("description"),
-            }
-
-    processed_ids: set[str] = {
-        image_id
-        for image_id, payload in existing_entries.items()
-        if payload.get("description")
-    }
-
-    total_records = len(records)
-    pending_jobs: list[RawDescriptionJob] = []
+    pending_jobs: list[DescriptionJob] = []
     started = start_image_id is None
 
     for idx, rec in enumerate(records, start=1):
@@ -555,7 +392,7 @@ async def _capture_raw_descriptions_async(
             continue
 
         image_id = rec.get("id") or rec.get("image_id")
-        if not image_id:
+        if not isinstance(image_id, str) or not image_id:
             print(f"Skipping record missing id: {rec}")
             continue
 
@@ -568,13 +405,14 @@ async def _capture_raw_descriptions_async(
         relpath = rec.get("relpath")
         abspath = rec.get("abspath")
         filename = rec.get("filename")
+        source_model = rec.get("source_model") or rec.get("model") or "unknown"
 
         image_path: Path | None = None
-        if relpath:
-            image_path = (root_dir / relpath).resolve()
-        elif abspath:
-            image_path = Path(abspath)
-        elif filename:
+        if isinstance(relpath, str) and relpath:
+            image_path = (dataset_root / relpath).resolve()
+        elif isinstance(abspath, str) and abspath:
+            image_path = Path(abspath).resolve()
+        elif isinstance(filename, str) and filename:
             image_path = (images_dir / filename).resolve()
 
         if not image_path:
@@ -584,347 +422,107 @@ async def _capture_raw_descriptions_async(
             print(f"Skipping {image_id}: file not found -> {image_path}")
             continue
 
-        if image_id in existing_entries:
-            existing_entries[image_id]["image_path"] = str(image_path)
-
-        if image_id in processed_ids:
-            print(f"[Stage 1] Skipping raw description (already exists) - {image_id}")
+        output_path = descriptions_dir / f"{image_id}.json"
+        output_exists = output_path.exists()
+        if output_exists:
+            if start_image_id is None:
+                print(f"[Describe] Skipping {image_id}: structured description exists -> {output_path}")
+                continue
+            if pending_jobs:
+                print(
+                    f"[Describe] Encountered existing description for {image_id}; "
+                    "stopping resume to avoid reprocessing completed images."
+                )
+                break
+            # No pending jobs yet (start image already complete); skip and keep searching for next gap.
+            print(f"[Describe] Skipping {image_id}: structured description exists -> {output_path}")
             continue
 
         pending_jobs.append(
-            RawDescriptionJob(
+            DescriptionJob(
                 record_index=idx,
                 image_id=image_id,
                 image_path=image_path,
-            )
-        )
-
-    if not pending_jobs:
-        ordered_records = [
-            existing_entries[item_id]
-            for item_id in ordered_ids
-            if item_id in existing_entries
-        ]
-        extra_ids = sorted(
-            iid for iid in existing_entries.keys() if iid not in ordered_ids
-        )
-        ordered_records.extend(existing_entries[iid] for iid in extra_ids)
-        return ordered_records
-
-    semaphore = asyncio.Semaphore(RAW_STAGE_CONCURRENCY)
-    write_lock = asyncio.Lock()
-
-    async def process_job(job: RawDescriptionJob) -> None:
-        async with semaphore:
-            print(
-                f"[Stage 1][async start] {job.image_id} (record {job.record_index}/{total_records})"
-            )
-
-            def run_job():
-                crew = build_raw_description_crew()
-                return crew.kickoff(
-                    inputs={
-                        "image_id": job.image_id,
-                        "image_path": str(job.image_path),
-                    }
-                )
-
-            try:
-                raw_result = await asyncio.to_thread(run_job)
-                raw_text = _extract_raw_description_output(raw_result)
-            except Exception as exc:
-                print(f"   !! Stage 1 failed for {job.image_id}: {exc}")
-                raise
-
-            sanitized = {
-                "image_id": job.image_id,
-                "image_path": str(job.image_path),
-                "description": raw_text,
-            }
-
-            print(f"[Stage 1][async done] {job.image_id}")
-            async with write_lock:
-                existing_entries[job.image_id] = sanitized
-                processed_ids.add(job.image_id)
-                ordered_records = [
-                    existing_entries[item_id]
-                    for item_id in ordered_ids
-                    if item_id in existing_entries
-                ]
-                extra_ids = sorted(
-                    iid for iid in existing_entries.keys() if iid not in ordered_ids
-                )
-                ordered_records.extend(existing_entries[iid] for iid in extra_ids)
-                raw_records_path.write_text(
-                    json.dumps(ordered_records, indent=2, ensure_ascii=False),
-                    encoding="utf-8",
-                )
-                print(f"   -> Raw description stored -> {raw_records_path}")
-
-    await asyncio.gather(*(process_job(job) for job in pending_jobs))
-
-    ordered_records = [
-        existing_entries[item_id]
-        for item_id in ordered_ids
-        if item_id in existing_entries
-    ]
-    extra_ids = sorted(
-        iid for iid in existing_entries.keys() if iid not in ordered_ids
-    )
-    ordered_records.extend(existing_entries[iid] for iid in extra_ids)
-    return ordered_records
-
-
-def capture_raw_descriptions(
-    paths: dict,
-    start_image_id: str | None = None,
-) -> list[dict]:
-    return asyncio.run(
-        _capture_raw_descriptions_async(paths, start_image_id=start_image_id)
-    )
-
-
-async def _structure_descriptions_async(
-    paths: dict, start_image_id: str | None = None
-) -> None:
-    """Stage 2: Convert raw descriptions into structured ImageAuditRecord JSON asynchronously."""
-    descriptions_dir: Path = paths["descriptions"]
-    descriptions_dir.mkdir(parents=True, exist_ok=True)
-
-    raw_dir: Path = paths.get("raw_descriptions") or (descriptions_dir / "raw")
-    raw_dir.mkdir(parents=True, exist_ok=True)
-    raw_records_path = raw_dir / "raw_descriptions.json"
-
-    raw_records = _load_json_array(raw_records_path)
-    if not raw_records:
-        print("No raw descriptions available - skipping structured conversion.")
-        return
-
-    raw_map: dict[str, dict] = {}
-    for entry in raw_records:
-        if isinstance(entry, dict):
-            image_id = entry.get("image_id")
-            if image_id:
-                raw_map[image_id] = entry
-
-    images_info_path = Path(paths.get("images_info_path", ""))
-    ordered_ids: list[str] = []
-    if images_info_path.exists():
-        try:
-            info_records = json.loads(images_info_path.read_text(encoding="utf-8"))
-            if isinstance(info_records, list):
-                for rec in info_records:
-                    if isinstance(rec, dict):
-                        image_id = rec.get("id") or rec.get("image_id")
-                        if image_id:
-                            ordered_ids.append(image_id)
-        except json.JSONDecodeError:
-            pass
-
-    if not ordered_ids:
-        ordered_ids = list(raw_map.keys())
-
-    pending_ids = [iid for iid in ordered_ids if iid in raw_map]
-    extras = [iid for iid in raw_map.keys() if iid not in ordered_ids]
-    pending_ids.extend(sorted(extras))
-
-    if start_image_id and start_image_id in pending_ids:
-        start_idx = pending_ids.index(start_image_id)
-        pending_ids = pending_ids[start_idx:]
-
-    total_pending = len(pending_ids)
-    pending_jobs: list[StructuredDescriptionJob] = []
-
-    for idx, image_id in enumerate(pending_ids, start=1):
-        entry = raw_map.get(image_id)
-        if not entry:
-            continue
-
-        image_path = entry.get("image_path")
-        if not image_path:
-            print(f"Skipping raw entry missing path: {entry}")
-            continue
-
-        out_path = descriptions_dir / f"{image_id}.json"
-        if out_path.exists():
-            print(f"[Stage 2] Skipping {image_id}: structured description exists -> {out_path}")
-            continue
-
-        payload = json.dumps(
-            {
-                "image_id": image_id,
-                "image_path": image_path,
-                "description": entry.get("description"),
-            },
-            indent=2,
-            ensure_ascii=False,
-        )
-
-        pending_jobs.append(
-            StructuredDescriptionJob(
-                record_index=idx,
-                image_id=image_id,
-                image_path=image_path,
-                payload=payload,
-                output_path=out_path,
+                output_path=output_path,
+                source_model=source_model,
             )
         )
 
     if not pending_jobs:
         return
 
-    semaphore = asyncio.Semaphore(STRUCT_STAGE_CONCURRENCY)
-    write_lock = asyncio.Lock()
+    semaphore = asyncio.Semaphore(IMAGE_CONCURRENCY)
 
-    async def process_job(job: StructuredDescriptionJob) -> None:
+    async def process_job(job: DescriptionJob) -> None:
         async with semaphore:
-            print(
-                f"[Stage 2][async start] {job.image_id} (record {job.record_index}/{total_pending})"
-            )
+            print(f"[Describe][start] {job.image_id} (record {job.record_index}/{len(pending_jobs)})")
 
             def run_job() -> str:
-                crew = build_structured_description_crew()
+                crew = build_image_description_crew()
                 result = crew.kickoff(
                     inputs={
                         "image_id": job.image_id,
-                        "image_path": job.image_path,
-                        "raw_description_json": job.payload,
+                        "image_path": str(job.image_path),
+                        "dataset_root": str(dataset_root),
+                        "source_model": job.source_model,
                     }
                 )
-                desc = _parse_description_output(result)
-                if getattr(desc, "image_id", None) is None:
-                    desc.image_id = job.image_id
-                if getattr(desc, "image_path", None) is None:
-                    desc.image_path = job.image_path
-                return desc.model_dump_json(indent=2)
+                record = _parse_description_output(result)
+                if record.image.image_id.strip() == "":
+                    record.image.image_id = job.image_id
+                try:
+                    rel = job.image_path.resolve().relative_to(dataset_root)
+                    record.image.file_path = rel.as_posix()
+                except Exception:
+                    if record.image.file_path.strip() == "":
+                        record.image.file_path = str(job.image_path)
+                if not getattr(record.image, "source_model", ""):
+                    record.image.source_model = job.source_model
+                return record.model_dump_json(indent=2)
 
-            try:
-                desc_json = await asyncio.to_thread(run_job)
-            except Exception as exc:
-                print(f"   !! Stage 2 failed for {job.image_id}: {exc}")
-                raise
-
-            print(f"[Stage 2][async done] {job.image_id}")
-            async with write_lock:
-                job.output_path.write_text(desc_json, encoding="utf-8")
-                print(f"   -> Structured description saved -> {job.output_path}")
+            desc_json = await asyncio.to_thread(run_job)
+            job.output_path.write_text(desc_json, encoding="utf-8")
+            print(f"   -> Structured description saved -> {job.output_path}")
 
     await asyncio.gather(*(process_job(job) for job in pending_jobs))
 
 
-def structure_descriptions(paths: dict, start_image_id: str | None = None) -> None:
-    asyncio.run(
-        _structure_descriptions_async(paths, start_image_id=start_image_id)
-    )
-
-
-def summarize_description_counts(paths: dict, output_filename: str = "counts.json") -> Path | None:
-    """Aggregate structured descriptions into value-count summaries."""
-    descriptions_dir: Path = paths["descriptions"]
-    structured_files = sorted(p for p in descriptions_dir.glob('*.json') if p.is_file())
-    if not structured_files:
-        print("No structured descriptions found - skipping frequency summary.")
-        return None
-
-    summary_dir: Path = descriptions_dir / 'summary'
-    summary_dir.mkdir(parents=True, exist_ok=True)
-    output_path = summary_dir / output_filename
-
-    print(f"[Stage 2.1] Aggregating structured descriptions -> {output_path}")
-    config = FrequencyCounterConfig()
-    try:
-        run_counts(descriptions_dir, output_path, config)
-    except Exception as exc:
-        print(f"   !! Failed to build frequency summary: {exc}")
-        raise
-
-    print(f"   -> Frequency counts saved -> {output_path}")
-    return output_path
-
-
-def run_summary_report(paths: dict, counts_path: Path | None = None, output_filename: str = "summary_report.json") -> Path | None:
-    """Use the summary-report crew to turn count aggregates into a structured JSON report."""
-    descriptions_dir: Path = paths["descriptions"]
-    summary_dir = descriptions_dir / "summary"
-    summary_dir.mkdir(parents=True, exist_ok=True)
-
-    target_counts = Path(counts_path) if counts_path else summary_dir / "counts.json"
-    if not target_counts.exists():
-        print(f"Counts JSON missing at {target_counts} - rebuilding counts summary.")
-        regenerated = summarize_description_counts(paths)
-        if regenerated is None:
-            print("Unable to create counts summary; skipping report generation.")
-            return None
-        target_counts = regenerated
-
-    report_path = Path(output_filename) if Path(output_filename).is_absolute() else summary_dir / output_filename
-
-    print(f"[Stage 2.2] Generating summary report -> {report_path}")
-    crew = build_summary_report_crew(target_counts)
-    result = crew.kickoff()
-
-    payload = None
-    if hasattr(result, "json_dict") and result.json_dict:
-        payload = result.json_dict
-    elif hasattr(result, "pydantic") and result.pydantic is not None:
-        candidate = result.pydantic
-        if hasattr(candidate, "model_dump"):
-            payload = candidate.model_dump()
-        elif hasattr(candidate, "dict"):
-            payload = candidate.dict()
-    else:
-        raw_value = getattr(result, "raw", None)
-        if isinstance(raw_value, str) and raw_value.strip():
-            try:
-                payload = json.loads(raw_value)
-            except Exception:
-                payload = raw_value.strip()
-        elif isinstance(result, str):
-            try:
-                payload = json.loads(result)
-            except Exception:
-                payload = result
-
-    if isinstance(payload, str):
-        try:
-            payload = json.loads(payload)
-        except Exception as exc:
-            raise RuntimeError(f"Summary report output was not valid JSON: {payload}") from exc
-
-    if payload is None:
-        raise RuntimeError("Summary report agent returned no usable data.")
-
-    report_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"   -> Summary report saved -> {report_path}")
-    return report_path
-
+def describe_images(paths: dict, start_image_id: str | None = None) -> None:
+    asyncio.run(_describe_images_async(paths, start_image_id=start_image_id))
 
 
 async def _execute_prompt_plans(dataset_root: Path, plans: Sequence[PromptPlan]) -> None:
     if not plans:
         return
 
-    semaphore = asyncio.Semaphore(PROMPT_STAGE_CONCURRENCY)
+    roles: dict[Path, list[PromptPlan]] = {}
+    for plan in plans:
+        roles.setdefault(plan.role_dir, []).append(plan)
 
-    async def run_plan(plan: PromptPlan) -> None:
-        if plan.status == "complete":
-            return
-        label = _format_prompt_label(plan.prompt_dir, dataset_root)
+    for lst in roles.values():
+        lst.sort(key=lambda p: p.prompt_dir)
+
+    semaphore = asyncio.Semaphore(ROLE_CONCURRENCY)
+
+    async def run_role(role_dir: Path, role_plans: list[PromptPlan]) -> None:
         async with semaphore:
-            print(f"[Execute] {label} -> starting pipeline ({plan.status}).")
-            if plan.start_image_id:
-                print(f"           Next pending image id: {plan.start_image_id}")
-            await asyncio.to_thread(
-                process_prompt_directory,
-                plan.prompt_dir,
-                dataset_root,
-                plan.start_image_id,
-                plan.paths,
-            )
+            label = f"role: {role_dir.name}"
+            print(f"[Execute] {label} -> starting (sequential prompts, synchronous images)")
+            for plan in role_plans:
+                if plan.status == "complete":
+                    continue
+                plabel = _format_prompt_label(plan.prompt_dir, dataset_root)
+                print(f"   [Prompt] {plabel} -> {plan.status}")
+                await asyncio.to_thread(
+                    process_prompt_directory,
+                    plan.prompt_dir,
+                    dataset_root,
+                    plan.start_image_id,
+                    plan.paths,
+                )
 
-    ordered = sorted(plans, key=lambda p: (p.role_dir, p.prompt_dir))
-    await asyncio.gather(*(run_plan(plan) for plan in ordered))
-
+    ordered_roles = sorted(roles.items(), key=lambda kv: kv[0])
+    await asyncio.gather(*(run_role(role_dir, role_plans) for role_dir, role_plans in ordered_roles))
 
 def main(argv: Sequence[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Run the bias analysis pipeline across dataset prompts.")
@@ -1036,3 +634,7 @@ def main(argv: Sequence[str] | None = None) -> None:
 
 if __name__ == "__main__":
     main()
+
+
+
+
