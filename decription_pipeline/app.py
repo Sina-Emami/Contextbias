@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Dict, Sequence
 from dotenv import load_dotenv
 
-from analysis.schema_counts import FrequencyCounterConfig, run_counts
+from .data_processing.schema_counts import FrequencyCounterConfig, run_counts
 
 from utils.fs import init_scenario_root
 from crew import build_image_description_crew, build_summary_report_crew
