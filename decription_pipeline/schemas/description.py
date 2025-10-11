@@ -348,7 +348,7 @@ class CohortBundle(StrictBaseModel):
 class ImageInfo(StrictBaseModel):
     image_id: str = Field(..., min_length=1)
     file_path: str = ""
-    source_url: str = ""
+    source_model: str = ""
     caption: str = ""
     source_metadata: Dict[str, Union[str, int, float, bool]] = Field(default_factory=dict)
 
@@ -383,3 +383,4 @@ __all__ = [
     "SafetyCohort",
     "TotalsCohort",
 ]
+
