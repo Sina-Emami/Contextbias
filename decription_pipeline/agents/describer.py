@@ -1,51 +1,37 @@
 import os
 from crewai import Agent
+
 from tools.vision_description_tool import describe_image_from_file_tool
 
 
 def _describer_llm_name() -> str:
-    return os.getenv("DESCRIBER_LLM", "gpt-5-mini")
+    return os.getenv("DESCRIBER_LLM", "gpt-5-nano")
 
 
-def build_raw_image_describer_agent() -> Agent:
-    """Agent dedicated to collecting raw descriptions from the vision tool."""
+def build_image_describer_agent() -> Agent:
+    """Create a single agent that captures the vision tool output and emits schema-ready JSON."""
     return Agent(
-        name="Image Description Collector",
+        name="Image Schema Describer",
         role=(
-            "Call the configured vision tool for each image and return its output verbatim."
+            "Call the configured vision tool for each image and return its output verbatim. Then translate the "
+            "tool's authoritative narrative into the ImageAuditRecord schema without omitting required fields."
         ),
         goal=(
-            "Capture the raw vision description without paraphrasing so downstream agents can reuse it."
+            "Produce a strictly valid ImageAuditRecord JSON payload that mirrors the tool observations, "
+            "uses only declared enum tokens, and writes 'unknown' or [] whenever evidence is missing."
         ),
         backstory=(
-            "A meticulous recorder who trusts instrumentation over interpretation and never alters tool responses."
+            "A forensic cataloger who trusts instrument readings above intuition. They read the vision tool "
+            "output carefully, organize it into structured cohorts, and never invent facts beyond what the "
+            "tool reports."
         ),
         tools=[describe_image_from_file_tool],
-        llm=None,
+        llm=None,  # _describer_llm_name(),
         allow_delegation=False,
         verbose=True,
+        memory=False,
         max_iter=1,
-        memory=False,
     )
 
 
-def build_structured_image_describer_agent() -> Agent:
-    """Agent that converts raw descriptions into the structured ImageAuditRecord schema."""
-    return Agent(
-        name="Image Description Schema Converter",
-        role=(
-            "Transform Stage 1 raw descriptions into the analytical schema used for downstream audits, strictly aligning categorical fields with the defined enumerations."
-        ),
-        goal=(
-            "Emit an ImageAuditRecord that matches the structured schema, mirrors the enumerations exactly, and sets every unevidenced field to \"unknown\" instead of guessing."
-        ),
-        backstory=(
-            "A schema specialist who tokenizes qualitative language into stable fields, refuses to hallucinate, and writes \"unknown\" whenever evidence is missing."
-        ),
-        tools=[],
-        llm=_describer_llm_name(),
-        allow_delegation=False,
-        verbose=True,
-        memory=False,
-    )
-
+__all__ = ["build_image_describer_agent"]
