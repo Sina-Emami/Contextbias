@@ -119,6 +119,12 @@ After the per-prompt pipeline finishes, generate aggregated counts and figures a
 python -m decription_pipeline.data_processing.dataset_rollup
 ```
 
+To run the entire frequency-processing flow end-to-end (count, clean, role roll-up, global roll-up):
+
+```bash
+python -m decription_pipeline.data_processing.pipeline
+```
+
 This utility walks every role/prompt, reads each `summary_report.json`, and emits:
 
 - **Prompt aggregations** (`role/aggregation_counting/<prompt>_counts.json`) summarising all cohort/sub-key counts per prompt, along with `num_images`.
