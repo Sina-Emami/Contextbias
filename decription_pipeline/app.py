@@ -7,10 +7,7 @@ from pathlib import Path
 from typing import Any, Dict, Sequence
 from dotenv import load_dotenv
 
-from .data_processing.schema_counts import FrequencyCounterConfig, run_counts
-
-from utils.fs import init_scenario_root
-from crew import build_image_description_crew, build_summary_report_crew
+from crew import build_image_description_crew
 from tools.vision_description_tool import validate_image_audit_record
 from pydantic import ValidationError
 
@@ -35,6 +32,8 @@ def _env_int(name: str, default: int) -> int:
 
 IMAGE_CONCURRENCY = _env_int("IMAGE_CONCURRENCY", 10)
 ROLE_CONCURRENCY = _env_int("ROLE_CONCURRENCY", 2)
+
+
 @dataclass(frozen=True)
 class DescriptionJob:
     record_index: int
@@ -67,47 +66,6 @@ def _parse_description_output(result) -> ImageAuditRecord:
     except TypeError:
         pass
     raise RuntimeError(f"Unexpected description output type: {type(result)} {result}")
-
-
-def setup_scenario(scenario: str, scenario_id: str) -> dict:
-    """Create the scenario root, subfolders, and manifest. Return the paths dict."""
-    if not os.getenv("OPENAI_API_KEY"):
-        raise RuntimeError("OPENAI_API_KEY is not set. Put it in your environment or .env file.")
-    paths = init_scenario_root(scenario_id, scenario)
-    print(f"[Init] Scenario folders ready at: {paths['root']}")
-    return paths
-
-
-def setup_test_paths(raw_json_path: Path, output_root: Path | None = None) -> dict:
-    """Prepare folders so structuring & reporting can run against a canned raw JSON."""
-    raw_json_path = Path(raw_json_path).resolve()
-    if not raw_json_path.exists():
-        raise FileNotFoundError(f"Raw descriptions file not found: {raw_json_path}")
-    if raw_json_path.is_dir():
-        raise ValueError("Expected a raw descriptions JSON file, received a directory.")
-
-    raw_dir = raw_json_path.parent
-    root = Path(output_root).resolve() if output_root else raw_dir.parent
-    root.mkdir(parents=True, exist_ok=True)
-    descriptions_dir = root / "descriptions"
-    images_dir = root / "images"
-
-    for path in (descriptions_dir, images_dir):
-        path.mkdir(parents=True, exist_ok=True)
-
-    paths = {
-        "root": root,
-        "dataset_root": root,
-        "prompt_root": root,
-        "descriptions": descriptions_dir,
-        "images": images_dir,
-        "manifest_path": root / "manifest.test.json",
-        "images_info_path": images_dir / "images_info.json",
-    }
-
-    print(f"[Init] Test run configured. Outputs will be stored under: {root}")
-    print(f"       Using descriptions source from: {raw_json_path}")
-    return paths
 
 
 def _find_manifest_file(prompt_dir: Path) -> Path:
@@ -399,19 +357,6 @@ def process_prompt_directory(
 
     describe_images(paths, start_image_id=start_image_id)
 
-def _load_json_array(path: Path) -> list:
-    if not path.exists():
-        return []
-    try:
-        data = json.loads(path.read_text(encoding="utf-8"))
-        if isinstance(data, list):
-            return data
-    except Exception:
-        pass
-    return []
-
-
-
 
 async def _describe_images_async(
     paths: dict,
@@ -478,7 +423,18 @@ async def _describe_images_async(
             continue
 
         output_path = descriptions_dir / f"{image_id}.json"
-        if output_path.exists() and start_image_id is None:
+        output_exists = output_path.exists()
+        if output_exists:
+            if start_image_id is None:
+                print(f"[Describe] Skipping {image_id}: structured description exists -> {output_path}")
+                continue
+            if pending_jobs:
+                print(
+                    f"[Describe] Encountered existing description for {image_id}; "
+                    "stopping resume to avoid reprocessing completed images."
+                )
+                break
+            # No pending jobs yet (start image already complete); skip and keep searching for next gap.
             print(f"[Describe] Skipping {image_id}: structured description exists -> {output_path}")
             continue
 
@@ -533,88 +489,6 @@ async def _describe_images_async(
 
 def describe_images(paths: dict, start_image_id: str | None = None) -> None:
     asyncio.run(_describe_images_async(paths, start_image_id=start_image_id))
-
-def summarize_description_counts(paths: dict, output_filename: str = "counts.json") -> Path | None:
-    """Aggregate structured descriptions into value-count summaries."""
-    descriptions_dir: Path = paths["descriptions"]
-    structured_files = sorted(p for p in descriptions_dir.glob('*.json') if p.is_file())
-    if not structured_files:
-        print("No structured descriptions found - skipping frequency summary.")
-        return None
-
-    summary_dir: Path = descriptions_dir / 'summary'
-    summary_dir.mkdir(parents=True, exist_ok=True)
-    output_path = summary_dir / output_filename
-
-    print(f"[Stage 2.1] Aggregating structured descriptions -> {output_path}")
-    config = FrequencyCounterConfig()
-    try:
-        run_counts(descriptions_dir, output_path, config)
-    except Exception as exc:
-        print(f"   !! Failed to build frequency summary: {exc}")
-        raise
-
-    print(f"   -> Frequency counts saved -> {output_path}")
-    return output_path
-
-
-def run_summary_report(paths: dict, counts_path: Path | None = None, output_filename: str = "summary_report.json") -> Path | None:
-    """Use the summary-report crew to turn count aggregates into a structured JSON report."""
-    descriptions_dir: Path = paths["descriptions"]
-    summary_dir = descriptions_dir / "summary"
-    summary_dir.mkdir(parents=True, exist_ok=True)
-
-    target_counts = Path(counts_path) if counts_path else summary_dir / "counts.json"
-    if not target_counts.exists():
-        print(f"Counts JSON missing at {target_counts} - rebuilding counts summary.")
-        regenerated = summarize_description_counts(paths)
-        if regenerated is None:
-            print("Unable to create counts summary; skipping report generation.")
-            return None
-        target_counts = regenerated
-
-    report_path = Path(output_filename) if Path(output_filename).is_absolute() else summary_dir / output_filename
-
-    print(f"[Stage 2.2] Generating summary report -> {report_path}")
-    crew = build_summary_report_crew(target_counts)
-    result = crew.kickoff()
-
-    payload = None
-    if hasattr(result, "json_dict") and result.json_dict:
-        payload = result.json_dict
-    elif hasattr(result, "pydantic") and result.pydantic is not None:
-        candidate = result.pydantic
-        if hasattr(candidate, "model_dump"):
-            payload = candidate.model_dump()
-        elif hasattr(candidate, "dict"):
-            payload = candidate.dict()
-    else:
-        raw_value = getattr(result, "raw", None)
-        if isinstance(raw_value, str) and raw_value.strip():
-            try:
-                payload = json.loads(raw_value)
-            except Exception:
-                payload = raw_value.strip()
-        elif isinstance(result, str):
-            try:
-                payload = json.loads(result)
-            except Exception:
-                payload = result
-
-    if isinstance(payload, str):
-        try:
-            payload = json.loads(payload)
-        except Exception as exc:
-            raise RuntimeError(f"Summary report output was not valid JSON: {payload}") from exc
-
-    if payload is None:
-        raise RuntimeError("Summary report agent returned no usable data.")
-
-    report_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"   -> Summary report saved -> {report_path}")
-    return report_path
-
-
 
 
 async def _execute_prompt_plans(dataset_root: Path, plans: Sequence[PromptPlan]) -> None:
