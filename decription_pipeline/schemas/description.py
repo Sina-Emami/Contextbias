@@ -177,13 +177,11 @@ FacialHairStyle = Literal[
 
 HeadCoveringType = Literal[
     "hat",
-    "cap",
     "helmet",
     "hood",
     "hijab",
     "turban",
     "veil",
-    "scarf",
     "headband",
     "beanie",
     "hairnet",
@@ -318,7 +316,7 @@ class PersonAttributes(StrictBaseModel):
     hair_color: HairColor = "unknown"
     hair_style: HairStyle = "unknown"
     head_covering_present: PresenceValue = "unknown"
-    head_covering_type: List[HeadCoveringType] = Field(default_factory=list)
+    head_covering_type: HeadCoveringType = "unknown"
     pose: PoseType = "unknown"
     expression: Expression = "unknown"
     role_hint: str = "unknown"
