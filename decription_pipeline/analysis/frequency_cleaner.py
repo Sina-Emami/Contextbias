@@ -15,9 +15,28 @@ import re
 from difflib import SequenceMatcher
 from pathlib import Path
 from tempfile import NamedTemporaryFile
-from typing import Any, Dict, Iterable, List, Optional, Set
+from typing import Any, Dict, Iterable, List, Optional
 
 logger = logging.getLogger(__name__)
+
+SYNONYM_GROUPS = {
+    "guitar": {
+        "guitar", "acoustic guitar", "acoustic_guitar", "electric guitar",
+        "electric_guitar", "bass guitar", "bass_guitar"
+    },
+    "drum": {
+        "drum", "drum kit", "drum_kit", "drum set", "drum_set", "drumset"
+    },
+    "shirt": {
+        "shirt", "t shirt", "t-shirt", "t_shirt", "button up shirt",
+        "button-up shirt", "button_down_shirt", "button down shirt",
+        "plaid shirt", "dress shirt"
+    },
+}
+
+SYNONYM_LOOKUP = {alias: canonical for canonical, aliases in SYNONYM_GROUPS.items() for alias in aliases}
+SYNONYM_CANONICALS = set(SYNONYM_GROUPS.keys())
+STRUCTURAL_MARKERS = {"|", "=", ","}
 
 # Categories mirror the output schema from frequency_counter.py
 CATEGORIES = [
@@ -92,27 +111,49 @@ def _normalise_simple(token: str) -> str:
     return token.strip()
 
 
+
 def _canonicalize(value: str) -> str:
-    lowered = value.strip().lower()
-    if not lowered:
-        return ""
+    base = value.strip().lower()
+    base = base.replace('_', ' ').replace('-', ' ')
+    base = re.sub(r'\s+', ' ', base)
+    base = base.strip()
 
-    if "shirt" in lowered:
-        return "shirt"
-    if "drum" in lowered:
-        return "drum"
-    if ("mic" in lowered or "microphone" in lowered) and "stand" in lowered:
-        return "mic_stand"
-    if lowered == "mic" or lowered == "microphone":
-        return "microphone"
-    if "stage" in lowered and "light" in lowered:
-        return "stage_light"
-    if "stage" in lowered and "monitor" in lowered:
-        return "stage_monitor"
-    if lowered.endswith("s") and lowered[:-1] == lowered.rstrip("s"):
-        return lowered[:-1]
+    if not base:
+        return ''
 
-    return lowered
+    if base in SYNONYM_LOOKUP:
+        return SYNONYM_LOOKUP[base]
+    if base in SYNONYM_CANONICALS:
+        return base
+
+    plural_candidates = set()
+    if base.endswith('ies') and len(base) > 4:
+        plural_candidates.add(base[:-3] + 'y')
+    if base.endswith('es') and len(base) > 4:
+        plural_candidates.add(base[:-2])
+    if base.endswith('s') and len(base) > 3 and not base.endswith(('ss', 'us')):
+        plural_candidates.add(base[:-1])
+
+    for candidate in plural_candidates:
+        if candidate in SYNONYM_LOOKUP:
+            return SYNONYM_LOOKUP[candidate]
+        if candidate in SYNONYM_CANONICALS:
+            return candidate
+
+    best_alias = None
+    best_score = 0.0
+    for alias in SYNONYM_LOOKUP:
+        if abs(len(alias) - len(base)) > 2:
+            continue
+        score = SequenceMatcher(None, base, alias).ratio()
+        if score > best_score:
+            best_score = score
+            best_alias = alias
+    if best_alias and best_score >= 0.92:
+        return SYNONYM_LOOKUP[best_alias]
+
+    return base
+
 
 def _normalise_combo(token: str) -> str:
     parts = token.split("|")
@@ -145,47 +186,62 @@ def _normalise_token(token: str, category: str) -> str:
 
 
 
-def _token_to_vector(token: str, dimension: int = 3) -> List[float]:
-    result = [0.0] * dimension
-    if not token:
-        return result
-    for idx, ch in enumerate(token):
-        result[idx % dimension] += (ord(ch) - 96 if ch.isalpha() else ord(ch) % 32) * 0.1
-    # Normalize
-    norm = sum(value * value for value in result) ** 0.5
-    if norm > 0:
-        result = [value / norm for value in result]
-    return result
+def _is_structured_token(token: str) -> bool:
+    return any(marker in token for marker in STRUCTURAL_MARKERS)
 
 
-def _cosine_similarity(vec_a: List[float], vec_b: List[float]) -> float:
-    if not vec_a or not vec_b or len(vec_a) != len(vec_b):
-        return 0.0
-    dot = sum(a * b for a, b in zip(vec_a, vec_b))
-    if not -1.0 <= dot <= 1.0:
-        dot = max(min(dot, 1.0), -1.0)
-    return dot
+def _token_quality(token: str) -> tuple:
+    synonym_rank = 0 if token in SYNONYM_LOOKUP or token in SYNONYM_CANONICALS else 1
+    digit_count = sum(ch.isdigit() for ch in token)
+    underscore_count = token.count("_")
+    return (synonym_rank, digit_count, underscore_count, len(token), token)
 
 
-def _merge_similar(tokens: Dict[str, int], threshold: float = 0.99) -> Dict[str, int]:
+def _should_merge(token: str, candidate: str, ratio: float, threshold: float) -> bool:
+    if ratio < threshold:
+        return False
+    if not token or not candidate:
+        return False
+    if token[0] != candidate[0]:
+        return False
+    if abs(len(token) - len(candidate)) > 2:
+        return False
+    return True
+
+
+def _merge_similar(tokens: Dict[str, int], threshold: float = 0.92) -> Dict[str, int]:
     if not tokens:
         return {}
 
-    vectors: Dict[str, List[float]] = {token: _token_to_vector(token) for token in tokens}
     merged: Dict[str, int] = {}
-    canonical: List[str] = []
+    canonical_simple: List[str] = []
 
+    similarity_threshold = max(0.86, min(threshold, 0.98))
     for token, count in tokens.items():
+        if _is_structured_token(token):
+            merged[token] = merged.get(token, 0) + count
+            continue
+
         matched: Optional[str] = None
-        for canon in canonical:
-            similarity = _cosine_similarity(vectors[token], vectors[canon])
-            if similarity >= threshold:
-                merged[canon] += count
+        best_ratio = 0.0
+        for canon in canonical_simple:
+            ratio = SequenceMatcher(None, token, canon).ratio()
+            if ratio > best_ratio and _should_merge(token, canon, ratio, similarity_threshold):
+                best_ratio = ratio
                 matched = canon
-                break
-        if matched is None:
-            merged[token] = count
-            canonical.append(token)
+
+        if matched is not None:
+            representative = matched
+            if _token_quality(token) < _token_quality(representative):
+                previous = merged.pop(representative)
+                idx = canonical_simple.index(representative)
+                canonical_simple[idx] = token
+                representative = token
+                merged[representative] = previous
+            merged[representative] = merged.get(representative, 0) + count
+        else:
+            merged[token] = merged.get(token, 0) + count
+            canonical_simple.append(token)
 
     return merged
 
