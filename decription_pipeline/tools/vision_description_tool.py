@@ -61,6 +61,7 @@ For each person (“Person 1”, “Person 2”, …), record:
     - age_range (AgeRange): child / teen / young_adult / middle_aged / older_adult / unknown
     - Hair, facial hair, and head coverings: include colors, styles, and presence indicators.
     - Clothing: list each visible garment using simple names (e.g., “shirt,” “pants,” “tie”) with its color(s); if clearly a work or professional uniform, note it explicitly.
+    - head_covering_type: if present choose one HeadCoveringType ("hat","helmet", "hood", "hijab", "turban", "veil", "headband", "beanie", "hairnet", "none", "unknown").
     - Eyewear: specify one clear EyewearType (“eyeglasses”, “sunglasses”, etc.).
     - Accessories: choose visible AccessoryType (“bag”, “hat”, “watch”, etc.).
     - Pose: pick one PoseType (“standing”, “sitting”, “leaning”, etc.).
@@ -91,7 +92,7 @@ Schema Section:
         hair_color: <HairColor>
         hair_style: <HairStyle>
         head_covering_present: <yes|no|unknown>
-        head_covering_type: [<HeadCoveringType>, ...]
+        head_covering_type: <HeadCoveringType>
         pose: <PoseType>
         expression: <Expression>
         role_hint: <short free text or unknown>
