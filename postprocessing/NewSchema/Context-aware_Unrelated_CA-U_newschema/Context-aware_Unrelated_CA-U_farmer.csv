@@ -1,0 +1,108 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,16,6
+scene_appearance,aesthetic_qualities,dreamy,2,6
+scene_appearance,aesthetic_qualities,quality cinematic,6,6
+scene_appearance,aesthetic_qualities,quality dreamy,3,6
+scene_appearance,aesthetic_qualities,quality realistic,8,6
+scene_appearance,aesthetic_qualities,realistic,12,6
+scene_appearance,color_temperature,warm,9,2
+scene_appearance,dominant_colors,brown,20,1
+scene_appearance,mood,calm,30,1
+scene_appearance,color_temperature,neutral,1,2
+scene_appearance,color_temperature,warm,8,2
+camera,depth_of_field,deep,2,2
+camera,depth_of_field,shallow,26,2
+camera,framing,close up,5,4
+camera,framing,headshot,2,4
+camera,framing,medium,26,4
+camera,framing,wide,4,4
+camera,perspective,eye level,24,1
+objects,type,armchair,1,31
+objects,type,book,14,31
+objects,type,bookcase,47,31
+objects,type,bookshelf,3,31
+objects,type,boots,2,31
+objects,type,bowls,1,31
+objects,type,couch,4,31
+objects,type,decorative bowl,1,31
+objects,type,glass jar,2,31
+objects,type,hanging potted plant,1,31
+objects,type,hat,8,31
+objects,type,labeled cylindrical container,1,31
+objects,type,multi pane window,2,31
+objects,type,open storage shelf,1,31
+objects,type,plant,12,31
+objects,type,potted houseplant,1,31
+objects,type,potted leafy plant,1,31
+objects,type,potted plant,9,31
+objects,type,rectangular multi pane,1,31
+objects,type,rubber boots,1,31
+objects,type,shelf,6,31
+objects,type,shoe,1,31
+objects,type,sofa,17,31
+objects,type,straw cowboy hat,1,31
+objects,type,straw hat,2,31
+objects,type,table,4,31
+objects,type,wicker baskets,1,31
+objects,type,window,12,31
+objects,type,window array,1,31
+objects,type,wooden utensils,1,31
+objects,type,woven baskets,2,31
+people,age_range,middle aged,1,2
+people,age_range,older adult,18,2
+people,eyewear_present,no,8,2
+people,eyewear_present,yes,11,2
+people,eyewear_type,eyeglasses,2,5
+people,eyewear_type,reading glasses,4,5
+people,eyewear_type,rectangular,4,5
+people,eyewear_type,rectangular metal rimmed,1,5
+people,eyewear_type,rectangular reading glasses,1,5
+people,hair_color,black,2,4
+people,hair_color,gray,6,4
+people,hair_color,tomato reddish,1,4
+people,hair_color,white,2,4
+people,facial_hair_present,no,4,2
+people,facial_hair_present,yes,12,2
+people,facial_hair_style,beard,3,6
+people,facial_hair_style,full beard,1,6
+people,facial_hair_style,moustache,5,6
+people,facial_hair_style,short beard,1,6
+people,facial_hair_style,sideburns,1,6
+people,facial_hair_style,stubble,2,6
+people,gaze_direction,center,1,4
+people,gaze_direction,down,10,4
+people,gaze_direction,left,2,4
+people,gaze_direction,up,5,4
+people,gender_presentation,male,19,1
+people,hair_color,black,2,4
+people,hair_color,gray,15,4
+people,hair_color,white,4,4
+people,hair_present,yes,17,1
+people,hair_style,shaved,1,2
+people,hair_style,short,17,2
+people,head_covering_type,black,1,16
+people,head_covering_type,brown,1,16
+people,head_covering_type,dark gray,1,16
+people,head_covering_type,dark violet,1,16
+people,head_covering_type,olive drab,2,16
+people,head_covering_type,tan,2,16
+people,head_covering_type,tomato,2,16
+people,head_covering_present,no,2,2
+people,head_covering_present,yes,17,2
+people,head_covering_type,baseball cap,1,16
+people,head_covering_type,cowboy hat,1,16
+people,head_covering_type,fedora,1,16
+people,head_covering_type,felt hat,1,16
+people,head_covering_type,flat cap,1,16
+people,head_covering_type,straw hat,7,16
+people,head_covering_type,wide brim woven hat,1,16
+people,head_covering_type,wide brimmed hat,2,16
+people,head_covering_type,wide brimmed straw hat,1,16
+people,pose,standing,1,4
+people,pose,laying,3,4
+people,pose,standing,4,4
+people,pose,seated,8,4
+people,pose,leaning,5,4
+people,pose,standing,1,4
+people,skin_tone,light,18,2
+people,skin_tone,medium,1,2

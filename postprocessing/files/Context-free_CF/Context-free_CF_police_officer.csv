@@ -1,0 +1,245 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,8
+atmosphere,aesthetic_qualities,dreamy,2
+atmosphere,aesthetic_qualities,realistic,10
+atmosphere,color_temperature,cool,8
+atmosphere,color_temperature,neutral,6
+atmosphere,color_temperature,warm,2
+atmosphere,contrast_level,high,2
+atmosphere,contrast_level,medium,14
+atmosphere,dominant_palette,black,6
+atmosphere,dominant_palette,brown,12
+atmosphere,dominant_palette,medium violet red,1
+atmosphere,dominant_palette,mediumvioletred,1
+atmosphere,mood,calm,4
+atmosphere,mood,tense,1
+atmosphere,saturation_level,neutral,8
+atmosphere,saturation_level,vivid,6
+background,object_counts_by_position,background center,3
+background,object_counts_by_position,background left,2
+background,object_counts_by_position,background right,4
+background,object_counts_by_position,foreground center,14
+background,object_counts_by_position,foreground left,5
+background,object_counts_by_position,foreground right,6
+background,object_counts_by_position,midground center,7
+background,object_counts_by_position,midground left,4
+background,object_counts_by_position,midground right,3
+camera,crop_keys_present,unknown,9
+camera,depth_of_field,deep,4
+camera,depth_of_field,moderate,2
+camera,depth_of_field,shallow,10
+camera,focal_length,normal,2
+camera,focal_length,telephoto,4
+camera,framing,full body,6
+camera,framing,headshot,4
+camera,framing,medium,10
+camera,framing,wide,2
+camera,perspective,eye level,3
+environment,ceiling_color,black,5
+environment,ceiling_color,gray,1
+environment,ceiling_color,mediumvioletred,1
+environment,floor_material,asphalt,4
+environment,floor_material,concrete,5
+environment,floor_material,grass,1
+environment,floor_material,paint,1
+environment,floor_texture,broom finish,1
+environment,floor_texture,flat,1
+environment,floor_texture,matte,2
+environment,floor_texture,short,1
+environment,floor_texture,smooth,4
+environment,floor_texture,smooth textured,1
+environment,floor_texture,textured,3
+environment,indoor_outdoor,unknown,9
+environment,location_type,building entrance,1
+environment,location_type,emergency vehicle scene,1
+environment,location_type,parking structure,1
+environment,location_type,paved parking,1
+environment,location_type,public street or plaza,1
+environment,location_type,suburban roadway,1
+environment,location_type,urban civic,1
+environment,location_type,urban street,2
+environment,spatial_layout_depth,medium,1
+environment,spatial_layout_depth,moderate,5
+environment,spatial_layout_depth,shallow,2
+environment,spatial_layout_depth,shallow moderate,1
+environment,spatial_layout_openness,moderately open,1
+environment,spatial_layout_openness,open,4
+environment,spatial_layout_openness,unknown,1
+environment,time_of_day_hint,afternoon,2
+environment,walls_material,brick,2
+environment,walls_material,cladding,1
+environment,walls_material,concrete,2
+environment,walls_material,glass,3
+environment,walls_material,masonry,1
+environment,walls_material,metal,2
+environment,walls_material,painted plaster,1
+environment,walls_material,precast concrete,1
+environment,walls_material,stone,3
+environment,walls_texture,matte,2
+environment,walls_texture,reflective,1
+environment,walls_texture,rough,1
+environment,walls_texture,slightly dusty,1
+environment,walls_texture,slightly textured,2
+environment,walls_texture,smooth,9
+environment,walls_texture,textured,1
+environment,weather,clear,1
+environment,weather,cloudy,1
+environment,weather,overcast,2
+environment,weather,sunny,1
+lighting,color_temperature,cool,8
+lighting,color_temperature,neutral,6
+lighting,color_temperature,warm,2
+lighting,contrast_level,high,2
+lighting,contrast_level,medium,16
+lighting,directionality,backlight,2
+lighting,directionality,top light,5
+lighting,directionality,unknown,7
+lighting,hardness,hard light,2
+lighting,hardness,soft light,11
+lighting,saturation_level,neutral,10
+lighting,saturation_level,vivid,6
+lighting,shadows,soft,9
+lighting,sources_count,four or more,1
+lighting,sources_count,one source,7
+lighting,sources_count,two,2
+lighting,sources_type,artificial,4
+lighting,sources_type,artificial source,4
+lighting,sources_type,unknown,18
+objects,plane,background,9
+objects,plane,foreground,25
+objects,plane,midground,14
+objects,side,center,24
+objects,side,left,11
+objects,side,right,13
+objects,type,accessory,2
+objects,type,architectural element,1
+objects,type,badge,4
+objects,type,building,4
+objects,type,canopy,1
+objects,type,communication device,2
+objects,type,device,1
+objects,type,emergency light,1
+objects,type,equipment,1
+objects,type,fixture,1
+objects,type,garment,1
+objects,type,headwear,5
+objects,type,light bokeh,1
+objects,type,lightbar,1
+objects,type,patch,1
+objects,type,person,1
+objects,type,plant,1
+objects,type,planter,1
+objects,type,surface,2
+objects,type,surface marking,1
+objects,type,uniform equipment,1
+objects,type,unknown,1
+objects,type,vegetation,2
+objects,type,vehicle,10
+objects,type,vehicle part,1
+people,age_range,middle aged,6
+people,age_range,young adult,3
+people,eyewear_presence,no,8
+people,eyewear_presence,yes,1
+people,eyewear_present,no,8
+people,eyewear_present,yes,1
+people,facial_hair_color,black,2
+people,facial_hair_color,brown,2
+people,facial_hair_color,dark blue,2
+people,facial_hair_presence,no,4
+people,facial_hair_presence,yes,5
+people,facial_hair_present,no,4
+people,facial_hair_present,yes,5
+people,facial_hair_style,mustache,2
+people,facial_hair_style,short stubble,1
+people,facial_hair_style,unknown,1
+people,gender_presentation,male,10
+people,hair_color,black,14
+people,hair_color,brown,6
+people,hair_present,yes,10
+people,hair_style,short,8
+people,head_covering_color,black,3
+people,head_covering_color,blue,6
+people,head_covering_color,darkblue,1
+people,head_covering_color,pink,1
+people,head_covering_color,tan,1
+people,head_covering_color,white,1
+people,head_covering_present,yes,10
+people,head_covering_type,officer cap,1
+people,head_covering_type,peaked cap,3
+people,head_covering_type,peaked service cap,1
+people,head_covering_type,peaked service hat,1
+people,head_covering_type,peaked uniform cap,1
+people,head_covering_type,structured police cap,1
+people,role_hint,appears law enforcement badge visible,1
+people,role_hint,appears law enforcement officer,3
+people,role_hint,police officer,4
+people,role_hint,uniformed law enforcement officer,1
+people,skin_tone,light,4
+people,skin_tone,medium,6
+safety,hazards,active emergency lights,2
+safety,hazards,baton visible,2
+safety,hazards,firearm visible,2
+safety,hazards,no visible hazard,4
+safety,hazards,unknown,4
+safety,hazards,visible holstered firearm,6
+safety,hazards,visible service weapon,2
+texts,content,text pd,1
+texts,content,text pessi fools,1
+texts,content,text police,7
+texts,font_style,bold,4
+texts,font_style,condensed,1
+texts,font_style,embossed,1
+texts,font_style,sans,7
+texts,font_style,serif like,1
+texts,font_style,stylized,1
+texts,font_style,uppercase,4
+texts,legibility,illegible,2
+texts,legibility,legible,5
+texts,legibility,not legible,2
+texts,legibility,partial,1
+texts,legibility,partially legible,3
+texts,plane,background,1
+texts,plane,foreground,8
+texts,plane,midground,4
+texts,side,center,5
+texts,side,left,1
+texts,side,right,7
+uncertainty,uncertainty,age range ambiguity between young adult and middle aged,1
+uncertainty,uncertainty,approximate count of rectangular windows on background left building,1
+uncertainty,uncertainty,background architectural details indiscernible due to shallow focus,1
+uncertainty,uncertainty,background left distant structure partially occluded,1
+uncertainty,uncertainty,background light fixtures suggested by bokeh exact types not visible,1
+uncertainty,uncertainty,background right lower stair detail area not clearly identifiable,1
+uncertainty,uncertainty,background vehicle colors makes approximate due to blur,1
+uncertainty,uncertainty,cap badge text or numerals small and not legible,1
+uncertainty,uncertainty,description contains potentially contradictory orientation phrasing,1
+uncertainty,uncertainty,embroidered wording on right sleeve shoulder patch partially occluded,1
+uncertainty,uncertainty,exact counts of parked vehicles approximate at least two clearly visible,1
+uncertainty,uncertainty,exact number of upper story window panels approximate due to cropping,1
+uncertainty,uncertainty,exact textual details on chest badge illegible,1
+uncertainty,uncertainty,eyes partially occluded by shadow cap visor,1
+uncertainty,uncertainty,fine emblematic details in shoulder patch not legible,1
+uncertainty,uncertainty,foreground left parked vehicle make model not identifiable due to occlusion,1
+uncertainty,uncertainty,gaze direction obscured by sunglasses exact gaze not verifiable,1
+uncertainty,uncertainty,ground surface pavement detail in background right partially occluded blurred,1
+uncertainty,uncertainty,lower body clothing footwear cropped out of frame,1
+uncertainty,uncertainty,lower body duty belt or other equipment out of frame not visible,1
+uncertainty,uncertainty,lower body hands not visible below waist,1
+uncertainty,uncertainty,metallic chest badge stamped text inner medallion not legible,1
+uncertainty,uncertainty,officer shoulder patch lettering illegible,1
+uncertainty,uncertainty,peripheral small objects sidewalks windows indiscernible due to blur,1
+uncertainty,uncertainty,possible faint reflections or motion blur might obscure distant human figures,1
+uncertainty,uncertainty,precise number models of background vehicles approximate due to blur,1
+uncertainty,uncertainty,shoulder patch emblem specifics partially occluded illegible,1
+uncertainty,uncertainty,shoulder patch embroidery text partially occluded out of focus,1
+uncertainty,uncertainty,shoulder patch lower band text partially occluded,1
+uncertainty,uncertainty,small dark handheld object in officer s hands unclear partially occluded,1
+uncertainty,uncertainty,small dashboard instruments blurred indiscernible,1
+uncertainty,uncertainty,small dashboard items visible through windshield partially obscured,1
+uncertainty,uncertainty,small embossed chest badge text not fully legible,1
+uncertainty,uncertainty,small embossed metallic chest badge text not legible,1
+uncertainty,uncertainty,small lettering on left sleeve embroidered patch illegible,1
+uncertainty,uncertainty,some occluded body parts limit detail,1
+uncertainty,uncertainty,unknown,23
+uncertainty,uncertainty,vehicle license plate characters partially occluded not legible,2
+uncertainty,uncertainty,vehicle numeric markings partially visible but characters not legible,1

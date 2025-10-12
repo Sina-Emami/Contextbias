@@ -1,0 +1,212 @@
+cohort,standardized_dimension,standardized_label,count,bins
+atmosphere,aesthetic_qualities,cinematic,7,2
+atmosphere,aesthetic_qualities,realistic,8,2
+atmosphere,color_temperature,warm,9,1
+atmosphere,contrast_level,high,2,2
+atmosphere,contrast_level,medium,7,2
+atmosphere,mood,calm,10,2
+atmosphere,mood,joyful,1,2
+atmosphere,palette_color,brown,10,1
+atmosphere,saturation_level,neutral,8,2
+atmosphere,saturation_level,vivid,1,2
+background,object_counts_by_position,background center,8,9
+background,object_counts_by_position,background left,1,9
+background,object_counts_by_position,background right,4,9
+background,object_counts_by_position,foreground center,14,9
+background,object_counts_by_position,foreground left,4,9
+background,object_counts_by_position,foreground right,2,9
+background,object_counts_by_position,midground center,10,9
+background,object_counts_by_position,midground left,4,9
+background,object_counts_by_position,midground right,4,9
+camera,crop,lower body cropped,2,2
+camera,crop,other variants singles,4,2
+camera,depth_of_field,moderate,1,2
+camera,depth_of_field,shallow,9,2
+camera,focal_length,normal,1,2
+camera,focal_length,telephoto,7,2
+camera,framing,close up,2,4
+camera,framing,establishing,1,4
+camera,framing,headshot,2,4
+camera,framing,medium,9,4
+camera,perspective,eye level,8,2
+camera,perspective,low angle,1,2
+environment,location_type,agricultural field,7,3
+environment,location_type,farmland,2,3
+environment,location_type,farmyard,1,3
+environment,openness,open,10,1
+environment,spatial_layout_depth,compressed,1,4
+environment,spatial_layout_depth,deep,3,4
+environment,spatial_layout_depth,moderate,4,4
+environment,spatial_layout_depth,shallow,2,4
+environment,time_of_day_hint,afternoon,7,3
+environment,time_of_day_hint,dusk,1,3
+environment,time_of_day_hint,evening,1,3
+environment,weather,clear,2,4
+environment,weather,cloudy,4,4
+environment,weather,overcast,1,4
+environment,weather,sunny,2,4
+lighting,artifacts,bokeh,1,3
+lighting,artifacts,rim highlight,1,3
+lighting,artifacts,specular highlights,1,3
+lighting,color_temperature,warm,9,1
+lighting,contrast_level,high,2,2
+lighting,contrast_level,medium,7,2
+lighting,saturation_level,neutral,8,2
+lighting,saturation_level,vivid,1,2
+lighting,shadows,soft,9,1
+lighting,sources_count,one source,10,1
+lighting,sources_directionality,backlight,4,3
+lighting,sources_directionality,sidelight,5,3
+lighting,sources_directionality,toplight,1,3
+lighting,sources_hardness,soft light,10,1
+objects,color,beige,6,12
+objects,color,black,3,12
+objects,color,brown,21,12
+objects,color,darkblue,3,12
+objects,color,darkgreen,6,12
+objects,color,gold,4,12
+objects,color,gray,2,12
+objects,color,green,6,12
+objects,color,red,4,12
+objects,color,tan,4,12
+objects,color,white,1,12
+objects,color,yellow,2,12
+objects,material,cotton,2,9
+objects,material,hay,1,9
+objects,material,metal,5,9
+objects,material,plant,13,9
+objects,material,rubber,3,9
+objects,material,soil,8,9
+objects,material,straw,18,9
+objects,material,wicker,1,9
+objects,material,wood,5,9
+objects,type,agricultural,1,35
+objects,type,agricultural product,3,35
+objects,type,building silhouette,2,35
+objects,type,bundle,1,35
+objects,type,clothing,1,35
+objects,type,container,1,35
+objects,type,crop residue band,1,35
+objects,type,crop rows,2,35
+objects,type,cultivated field,1,35
+objects,type,farm tractor,1,35
+objects,type,fence,2,35
+objects,type,furrow,1,35
+objects,type,garment,1,35
+objects,type,ground,1,35
+objects,type,ground feature,1,35
+objects,type,hand tool,2,35
+objects,type,hat,3,35
+objects,type,head covering,2,35
+objects,type,headwear,2,35
+objects,type,landscape,2,35
+objects,type,livestock,1,35
+objects,type,loose straw,1,35
+objects,type,plant,2,35
+objects,type,plant bundle,1,35
+objects,type,sky,2,35
+objects,type,soil,1,35
+objects,type,soil patch,1,35
+objects,type,straw bales,1,35
+objects,type,straw bundle,1,35
+objects,type,structure,2,35
+objects,type,tilled soil,1,35
+objects,type,tree canopies,1,35
+objects,type,tree line,1,35
+objects,type,vegetation,2,35
+objects,type,vehicle,2,35
+people,activities,hands resting or gathering straw,1,10
+people,activities,holding basket,1,10
+people,activities,holding hand tool,1,10
+people,activities,holding straw bundle,2,10
+people,activities,looking toward camera viewer,3,10
+people,activities,manipulating plants,1,10
+people,activities,resting,1,10
+people,activities,standing still,1,10
+people,activities,supporting produce,1,10
+people,activities,tending crops,1,10
+people,age_range,older adult,10,1
+people,clothing_color,black,4,8
+people,clothing_color,blue,10,8
+people,clothing_color,brown,3,8
+people,clothing_color,gray,1,8
+people,clothing_color,green,1,8
+people,clothing_color,red,1,8
+people,clothing_color,tan,2,8
+people,clothing_color,white,3,8
+people,clothing_garment,apron,1,7
+people,clothing_garment,hat,1,7
+people,clothing_garment,overalls,7,7
+people,clothing_garment,shirt,7,7
+people,clothing_garment,suspenders,2,7
+people,clothing_garment,trousers,2,7
+people,clothing_garment,work boots,1,7
+people,eyewear_present,no,10,1
+people,facial_hair_color,black,4,3
+people,facial_hair_color,gray,12,3
+people,facial_hair_color,white,4,3
+people,facial_hair_present,yes,8,1
+people,facial_hair_style,full beard,1,5
+people,facial_hair_style,mustache,2,5
+people,facial_hair_style,short beard,1,5
+people,facial_hair_style,sideburns,1,5
+people,facial_hair_style,stubble,4,5
+people,gaze_direction,down,2,3
+people,gaze_direction,right,1,3
+people,gaze_direction,up,6,3
+people,gender_presentation,male,10,1
+people,hair_color,black,1,2
+people,hair_color,gray,9,2
+people,hair_present,yes,9,1
+people,hair_style,short,9,1
+people,head_covering_color,beige,2,6
+people,head_covering_color,black,3,6
+people,head_covering_color,brown,1,6
+people,head_covering_color,darkblue,1,6
+people,head_covering_color,tan,3,6
+people,head_covering_color,tomato,3,6
+people,head_covering_present,yes,10,1
+people,head_covering_type,generic hat,1,4
+people,head_covering_type,straw hat merged variants,8,4
+people,head_covering_type,wide brimmed hat unspecified,1,4
+people,head_covering_type,wide brimmed sun hat,1,4
+people,occlusions,partial occlusion,10,1
+people,orientation,front,5,2
+people,orientation,three quarter,3,2
+people,pose,arms crossed,1,18
+people,pose,crouched,1,18
+people,pose,crouching alt token,1,18
+people,pose,forearms resting on knees,1,18
+people,pose,hands loose,1,18
+people,pose,kneeling right knee,1,18
+people,pose,leaning forward,1,18
+people,pose,left knee raised,1,18
+people,pose,low,1,18
+people,pose,relaxed,3,18
+people,pose,seated,1,18
+people,pose,slightly forward leaning,1,18
+people,pose,standing,2,18
+people,pose,steady torso,1,18
+people,pose,three quarter,1,18
+people,pose,upright,6,18
+people,pose,upright kneeling,1,18
+people,pose,upright relaxed,1,18
+people,role_hint,appears agricultural worker,2,3
+people,role_hint,farm worker,3,3
+people,role_hint,farmer,2,3
+people,skin_tone,light,4,2
+people,skin_tone,medium,6,2
+safety,hazards,no detected,8,1
+safety,nsfw,no content,10,1
+texts,legibility,illegible text,1,1
+texts,plane,text in foreground,1,1
+texts,side,text center,1,1
+uncertainty,token,distant round hay bales approximate 3 4,1,9
+uncertainty,token,distant tree line heavily blurred species indiscernible,28,9
+uncertainty,token,exact livestock count approximate dozens,1,9
+uncertainty,token,exact time not precisely known late afternoon early evening suggested,1,9
+uncertainty,token,exact tomato count in basket approximate 25 30,1,9
+uncertainty,token,lower legs footwear out of frame,8,9
+uncertainty,token,number of wooden stake posts approximate 3 4 and partially visible,1,9
+uncertainty,token,out of focus foreground areas may contain blurred straw bundles or small debris indiscernible,1,9
+uncertainty,token,small garment detail strap material partially occluded,1,9

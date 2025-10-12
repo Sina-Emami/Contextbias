@@ -1,0 +1,1347 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,17
+atmosphere,aesthetic_qualities,dreamy,2
+atmosphere,aesthetic_qualities,quality cinematic,4
+atmosphere,aesthetic_qualities,quality dreamy,1
+atmosphere,aesthetic_qualities,quality realistic,6
+atmosphere,aesthetic_qualities,realistic,23
+atmosphere,aesthetic_qualities,unknown,5
+atmosphere,color_temperature,cool,11
+atmosphere,color_temperature,neutral,6
+atmosphere,color_temperature,unknown,4
+atmosphere,color_temperature,warm,13
+atmosphere,contrast_level,high,9
+atmosphere,contrast_level,medium,29
+atmosphere,contrast_level,unknown,4
+atmosphere,dominant_palette,black,17
+atmosphere,dominant_palette,blue,1
+atmosphere,dominant_palette,brown,32
+atmosphere,dominant_palette,cyan,1
+atmosphere,dominant_palette,mediumblue,7
+atmosphere,dominant_palette,mediumvioletred,2
+atmosphere,dominant_palette,unknown,20
+atmosphere,lighting_color_temperature,cool,7
+atmosphere,lighting_color_temperature,neutral,1
+atmosphere,mood,calm,41
+atmosphere,mood,dramatic,1
+atmosphere,mood,melancholic,1
+atmosphere,saturation_level,neutral,17
+atmosphere,saturation_level,unknown,4
+atmosphere,saturation_level,vivid,21
+background,object_counts_by_position,background center,53
+background,object_counts_by_position,background left,35
+background,object_counts_by_position,background right,34
+background,object_counts_by_position,foreground center,50
+background,object_counts_by_position,foreground left,45
+background,object_counts_by_position,foreground right,36
+background,object_counts_by_position,midground center,50
+background,object_counts_by_position,midground left,29
+background,object_counts_by_position,midground right,41
+background,object_counts_by_position,unknown,2
+background,position,background center,2
+background,position,background left,6
+background,position,background right,7
+background,position,foreground center,12
+background,position,foreground left,5
+background,position,foreground right,7
+background,position,midground center,10
+background,position,midground left,9
+background,position,midground right,8
+background,position,unknown,2
+camera,angle,unknown,10
+camera,crop,buildings cropped top sides,1
+camera,crop,bus side sidewalk cropped,1
+camera,crop,centered,1
+camera,crop,centered subject,1
+camera,crop,cropped frame edges,1
+camera,crop,left partial,1
+camera,crop,lower body cropped,4
+camera,crop,lower body out of frame,1
+camera,crop,lower torso legs cropped,1
+camera,crop,mid body,1
+camera,crop,mid torso,1
+camera,crop,midground center subject slightly right pole,1
+camera,crop,peripheral vehicles partially cropped,1
+camera,crop,right extension,1
+camera,crop,rightmost seatback partially cropped,1
+camera,crop,standard,1
+camera,crop,subject center left,1
+camera,crop,subject center right,1
+camera,crop,tight,1
+camera,crop,tight vertical,1
+camera,crop,torso head,1
+camera,crop,unknown,1
+camera,crop,upper torso,1
+camera,depth_of_field,deep,20
+camera,depth_of_field,moderate,11
+camera,depth_of_field,shallow,34
+camera,depth_of_field,unknown,2
+camera,focal_length,normal,13
+camera,focal_length,telephoto,7
+camera,focal_length,unknown,8
+camera,focal_length,wide,5
+camera,framing,close up,3
+camera,framing,establishing,12
+camera,framing,full body,5
+camera,framing,headshot,4
+camera,framing,medium,36
+camera,framing,others,0
+camera,framing,unknown,3
+camera,framing,wide,28
+camera,perspective,eye level,50
+camera,perspective,low angle,4
+camera,perspective,unknown,5
+environment,aisle_width,moderate,1
+environment,aisle_width,unknown,15
+environment,ceiling_color,silver,1
+environment,ceiling_color,white,1
+environment,ceiling_condition,clean,1
+environment,ceiling_condition,minor smudging,1
+environment,ceiling_condition,well maintained,1
+environment,ceiling_finish,glossy,1
+environment,ceiling_finish,reflective,1
+environment,ceiling_finish,slightly glossy,1
+environment,ceiling_material,acoustic panel,4
+environment,ceiling_material,metal,5
+environment,ceiling_material,plastic,1
+environment,ceiling_texture,smooth,2
+environment,color,black,10
+environment,color,blue,5
+environment,color,brown,2
+environment,color,crimson,1
+environment,color,darkblue,5
+environment,color,darkslateblue,1
+environment,color,darkslategrey,1
+environment,color,gray,11
+environment,color,green,3
+environment,color,orange,2
+environment,color,palegreen,1
+environment,color,pink,3
+environment,color,silver,1
+environment,color,skyblue,1
+environment,color,teal,1
+environment,color,violet,1
+environment,color,white,12
+environment,color,yellow,6
+environment,condition,bright,1
+environment,condition,clean,6
+environment,condition,good,4
+environment,condition,intact,14
+environment,condition,legible poorly,1
+environment,condition,lightly aged,1
+environment,condition,maintained,1
+environment,condition,minor discoloration,1
+environment,condition,minor surface marks,1
+environment,condition,minor wear,12
+environment,condition,partially occluded,1
+environment,condition,serviceable,1
+environment,condition,slightly aged,1
+environment,condition,small scuff marks,1
+environment,condition,used,8
+environment,condition,weathered,2
+environment,condition,working appearance,1
+environment,depth,deep,1
+environment,depth,medium,1
+environment,depth,moderate,4
+environment,depth,shallow,3
+environment,depth,shallow moderate,1
+environment,finish,behind clear plastic,1
+environment,finish,clear,1
+environment,finish,glossy,10
+environment,finish,matte,11
+environment,finish,opaque,1
+environment,finish,painted,6
+environment,finish,painted glossy,0
+environment,finish,polished,1
+environment,finish,reflective,5
+environment,finish,reflective interior,1
+environment,finish,satin,1
+environment,finish,semi gloss,1
+environment,finish,slight sheen,1
+environment,finish,slightly glossy,1
+environment,finish,unknown,2
+environment,floor_color,beige,4
+environment,floor_color,black,6
+environment,floor_color,dark blue,2
+environment,floor_color,darkblue,3
+environment,floor_color,darkgreen,1
+environment,floor_color,gray,44
+environment,floor_color,mediumblue,1
+environment,floor_color,tan,1
+environment,floor_color,white,5
+environment,floor_condition,damp,1
+environment,floor_condition,dirty,1
+environment,floor_condition,dry,1
+environment,floor_condition,faint tire scuffing,1
+environment,floor_condition,faint wet sheen,1
+environment,floor_condition,good,1
+environment,floor_condition,intact,12
+environment,floor_condition,light wet look places,1
+environment,floor_condition,lightly soiled,1
+environment,floor_condition,moderate,1
+environment,floor_condition,moderate urban wear,1
+environment,floor_condition,moderate wear,1
+environment,floor_condition,partially eroded paint,1
+environment,floor_condition,partially faded,1
+environment,floor_condition,puddled,2
+environment,floor_condition,reflective,1
+environment,floor_condition,reflective sheen,1
+environment,floor_condition,scuffed,1
+environment,floor_condition,shadowed,1
+environment,floor_condition,slight wear,24
+environment,floor_condition,slightly faded,1
+environment,floor_condition,slightly soiled,1
+environment,floor_condition,slightly weathered,1
+environment,floor_condition,slightly worn,2
+environment,floor_condition,wet,4
+environment,floor_condition,wet looking,1
+environment,floor_condition,worn,3
+environment,floor_condition,worn paint,1
+environment,floor_finish,glossy,4
+environment,floor_finish,glossy reflections,1
+environment,floor_finish,glossy sheen,1
+environment,floor_finish,matte,15
+environment,floor_finish,reflective,3
+environment,floor_finish,reflective sheen,1
+environment,floor_finish,slightly glossy,1
+environment,floor_finish,slightly reflective,3
+environment,floor_finish,slightly weathered,1
+environment,floor_finish,sunlit sheen,1
+environment,floor_material,asphalt,28
+environment,floor_material,ceramic tile,8
+environment,floor_material,concrete,18
+environment,floor_material,linoleum,1
+environment,floor_material,paint,3
+environment,floor_material,painted asphalt,1
+environment,floor_material,paving,1
+environment,floor_material,rubber,1
+environment,floor_material,stone,2
+environment,floor_material,tile,1
+environment,floor_texture,broad white striped,1
+environment,floor_texture,coarse grained,1
+environment,floor_texture,granular,1
+environment,floor_texture,grooved,1
+environment,floor_texture,patterned,1
+environment,floor_texture,paved,1
+environment,floor_texture,paving,1
+environment,floor_texture,reflective,1
+environment,floor_texture,rough,2
+environment,floor_texture,scuffed,2
+environment,floor_texture,slight road sheen,1
+environment,floor_texture,slightly abrasioned painted markings,1
+environment,floor_texture,slightly faded paint,1
+environment,floor_texture,slightly textured,2
+environment,floor_texture,slightly worn,2
+environment,floor_texture,smooth,24
+environment,floor_texture,smooth worn,1
+environment,floor_texture,textured,10
+environment,floor_texture,textured paving,1
+environment,floor_texture,wet,1
+environment,floor_texture,worn,3
+environment,indoor_outdoor,unknown,58
+environment,location_type,bus cabin,1
+environment,location_type,bus interior,1
+environment,location_type,city street,5
+environment,location_type,grocery retail aisle normalized,2
+environment,location_type,grocery store,3
+environment,location_type,grocery store aisle,1
+environment,location_type,passenger bus interior,1
+environment,location_type,produce aisle,1
+environment,location_type,refrigerated grocery aisle,1
+environment,location_type,roadside,1
+environment,location_type,suburban roadway,1
+environment,location_type,supermarket,8
+environment,location_type,supermarket aisle,1
+environment,location_type,supermarket produce aisle,2
+environment,location_type,supermarket produce section,1
+environment,location_type,urban avenue,2
+environment,location_type,urban canyon,1
+environment,location_type,urban street,18
+environment,location_type,vehicle cabin,6
+environment,location_type,vehicle compartment,2
+environment,location_type,vehicle driver compartment,1
+environment,material,acrylic,1
+environment,material,asphalt,3
+environment,material,brick,1
+environment,material,fabric,2
+environment,material,foam,1
+environment,material,glass,13
+environment,material,leatherette,1
+environment,material,masonry,1
+environment,material,metal,7
+environment,material,painted metal,6
+environment,material,paneling,1
+environment,material,paper,1
+environment,material,paved surface,1
+environment,material,plastic,12
+environment,material,rubber,8
+environment,material,stainless steel,1
+environment,material,synthetic,1
+environment,material,unknown,7
+environment,material,vinyl,2
+environment,material,wood,1
+environment,openness,enclosed,5
+environment,openness,open,6
+environment,openness,unknown,9
+environment,spatial_depth,deep,4
+environment,spatial_depth,medium,1
+environment,spatial_depth,moderate,5
+environment,spatial_layout_aisle_width,moderate,2
+environment,spatial_layout_aisle_width,open,2
+environment,spatial_layout_aisle_width,unknown,5
+environment,spatial_layout_depth,deep,13
+environment,spatial_layout_depth,medium,1
+environment,spatial_layout_depth,moderate,12
+environment,spatial_layout_depth,shallow,3
+environment,spatial_layout_openness,moderate,1
+environment,spatial_layout_openness,moderately open,1
+environment,spatial_layout_openness,open,9
+environment,spatial_layout_openness,unknown,13
+environment,texture,blurred,3
+environment,texture,brushed,1
+environment,texture,camouflage patterned,1
+environment,texture,creased,1
+environment,texture,embossed,1
+environment,texture,fine textured,1
+environment,texture,glossy,4
+environment,texture,reflective,5
+environment,texture,ribbed,1
+environment,texture,ridged,1
+environment,texture,scuff marks,1
+environment,texture,slightly textured,3
+environment,texture,smooth,26
+environment,texture,smudged,2
+environment,texture,soft,1
+environment,texture,soft cloud patches,1
+environment,texture,stitched seam,1
+environment,texture,textured,16
+environment,texture,textured anti slip,1
+environment,texture,textured push button face,1
+environment,texture,textured rubber grip,2
+environment,texture,weathered,2
+environment,texture,wet,3
+environment,texture,worn,2
+environment,time_of_day_hint,afternoon,7
+environment,time_of_day_hint,evening,1
+environment,time_of_day_hint,morning,1
+environment,time_of_day_hint,unknown,9
+environment,walls_color,beige,6
+environment,walls_color,black,7
+environment,walls_color,blue,1
+environment,walls_color,brown,14
+environment,walls_color,darkblue,2
+environment,walls_color,darkslategrey,1
+environment,walls_color,gray,8
+environment,walls_color,green,1
+environment,walls_color,lightblue,1
+environment,walls_color,mediumblue,1
+environment,walls_color,mediumpurple,1
+environment,walls_color,orange,1
+environment,walls_color,pink,1
+environment,walls_color,snow,1
+environment,walls_color,steelblue,1
+environment,walls_color,wall beige,4
+environment,walls_color,wall black,2
+environment,walls_color,wall brown,4
+environment,walls_color,wall darkblue,1
+environment,walls_color,wall gray,5
+environment,walls_color,wall green,1
+environment,walls_color,wall mediumblue,1
+environment,walls_color,wall olivedrab,1
+environment,walls_color,wall red,1
+environment,walls_color,wall violet,1
+environment,walls_color,wall white,1
+environment,walls_color,white,1
+environment,walls_condition,aged,8
+environment,walls_condition,aged but intact,2
+environment,walls_condition,clean,1
+environment,walls_condition,generally good,1
+environment,walls_condition,intact,8
+environment,walls_condition,light soiling,1
+environment,walls_condition,moderately worn,1
+environment,walls_condition,modern,1
+environment,walls_condition,modern maintained,1
+environment,walls_condition,slightly dirty,1
+environment,walls_condition,slightly soiled,1
+environment,walls_condition,soiled,1
+environment,walls_condition,urban grime,1
+environment,walls_condition,urban wear,1
+environment,walls_condition,urban weathered,1
+environment,walls_condition,wall aged,4
+environment,walls_condition,wall clean,1
+environment,walls_condition,wall good,2
+environment,walls_condition,wall intact,5
+environment,walls_condition,wall lightly scuffed,1
+environment,walls_condition,wall minor dust,1
+environment,walls_condition,wall pristine,1
+environment,walls_condition,wall slightly soiled,1
+environment,walls_condition,wall slightly weathered,1
+environment,walls_condition,wall weathered,5
+environment,walls_condition,wall well maintained,1
+environment,walls_condition,weathered,12
+environment,walls_condition,worn,1
+environment,walls_finish,glossy,2
+environment,walls_finish,matte,8
+environment,walls_finish,mixed,1
+environment,walls_finish,reflective,6
+environment,walls_finish,smooth,2
+environment,walls_finish,wall aged,1
+environment,walls_finish,wall glossy,2
+environment,walls_finish,wall matte,4
+environment,walls_finish,wall neutral,1
+environment,walls_finish,wall painted,2
+environment,walls_finish,wall pristine,1
+environment,walls_finish,wall reflective,1
+environment,walls_finish,wall rough,1
+environment,walls_finish,wall weathered,2
+environment,walls_finish,weathered,6
+environment,walls_material,brick,4
+environment,walls_material,concrete,10
+environment,walls_material,glass,16
+environment,walls_material,limestone,2
+environment,walls_material,masonry,8
+environment,walls_material,metal,4
+environment,walls_material,painted wall,2
+environment,walls_material,plastic,1
+environment,walls_material,printed panel,1
+environment,walls_material,steel,2
+environment,walls_material,stone,20
+environment,walls_material,wall brick,1
+environment,walls_material,wall glass,2
+environment,walls_material,wall masonry,6
+environment,walls_material,wall metal,3
+environment,walls_material,wall plastic,2
+environment,walls_material,wall steel,1
+environment,walls_material,wall stone,8
+environment,walls_texture,carved,8
+environment,walls_texture,carved detailing,1
+environment,walls_texture,glazed,4
+environment,walls_texture,masonry,1
+environment,walls_texture,reflective,8
+environment,walls_texture,rough,1
+environment,walls_texture,rough textured,1
+environment,walls_texture,smooth,8
+environment,walls_texture,smooth glass panels,1
+environment,walls_texture,smooth glazing,1
+environment,walls_texture,textured,16
+environment,walls_texture,textured masonry,1
+environment,walls_texture,unknown,4
+environment,walls_texture,vertical window grid,1
+environment,walls_texture,wall carved,2
+environment,walls_texture,wall carved masonry,1
+environment,walls_texture,wall hard,1
+environment,walls_texture,wall reflective,1
+environment,walls_texture,wall rough textured,1
+environment,walls_texture,wall smooth,5
+environment,walls_texture,wall textured,8
+environment,walls_texture,wall weathered,4
+environment,walls_texture,weathered,12
+environment,weather,clear,7
+environment,weather,mist,1
+environment,weather,overcast,8
+environment,weather,rain,2
+environment,weather,sunny,3
+environment,weather,unknown,4
+lighting,artifacts,artifact faint window glare,1
+lighting,artifacts,artifact lens bloom,1
+lighting,artifacts,artifact mild reflection eyeglasses,1
+lighting,artifacts,artifact reflections eyeglass lenses,1
+lighting,artifacts,artifact reflections glass,1
+lighting,artifacts,artifact reflections glass metal,1
+lighting,artifacts,artifact reflections windshield,1
+lighting,artifacts,artifact specular highlights paint,1
+lighting,artifacts,artifact specular reflections,1
+lighting,artifacts,artifact specular reflections glossy dashboard trim,1
+lighting,artifacts,artifact starburst sunburst,1
+lighting,artifacts,artifact wet pavement reflections,1
+lighting,artifacts,artifact windshield reflections,1
+lighting,artifacts,bloom,1
+lighting,artifacts,film like diffusion,1
+lighting,artifacts,floor reflections,1
+lighting,artifacts,fluorescent light reflections,1
+lighting,artifacts,halo,2
+lighting,artifacts,layered specular highlights,1
+lighting,artifacts,lens bloom,1
+lighting,artifacts,lens flare,1
+lighting,artifacts,mild specular reflections glossy produce shelf glazing,1
+lighting,artifacts,minor specular highlights metal cart chrome trim,1
+lighting,artifacts,motion blur,6
+lighting,artifacts,motion blur background,1
+lighting,artifacts,motion blur peripheral,1
+lighting,artifacts,motion blur streaking,1
+lighting,artifacts,motion blur variants,0
+lighting,artifacts,no film,1
+lighting,artifacts,no lens flare,3
+lighting,artifacts,no lens flare observed,1
+lighting,artifacts,no obvious digital,1
+lighting,artifacts,no obvious lens flare,1
+lighting,artifacts,others,0
+lighting,artifacts,radial motion blur,1
+lighting,artifacts,reflections eyeglass lenses,1
+lighting,artifacts,reflections glass,4
+lighting,artifacts,reflections glass floor,1
+lighting,artifacts,reflections on eyeglass lenses,2
+lighting,artifacts,reflections on windshield,1
+lighting,artifacts,reflections refrigerated glass,1
+lighting,artifacts,reflections tablet screen,1
+lighting,artifacts,soft reflections glass floor,1
+lighting,artifacts,specular highlights chrome,1
+lighting,artifacts,specular reflection,1
+lighting,artifacts,specular reflections,1
+lighting,artifacts,specular reflections chrome,1
+lighting,artifacts,specular reflections eyeglasses,1
+lighting,artifacts,specular reflections glossy surfaces,1
+lighting,artifacts,specular sheen produce,1
+lighting,artifacts,specular variants,0
+lighting,artifacts,windshield reflections,1
+lighting,color_temperature,cool,28
+lighting,color_temperature,neutral,11
+lighting,color_temperature,unknown,3
+lighting,color_temperature,warm,17
+lighting,contrast_level,high,11
+lighting,contrast_level,medium,45
+lighting,contrast_level,unknown,3
+lighting,directionality,sidelight,4
+lighting,directionality,top,10
+lighting,directionality,top light,4
+lighting,directionality,unknown,33
+lighting,hardness,hard,1
+lighting,hardness,light hard,2
+lighting,hardness,light soft,10
+lighting,hardness,medium,3
+lighting,hardness,soft,7
+lighting,hardness,soft light,12
+lighting,hardness,unknown,3
+lighting,saturation_level,neutral,26
+lighting,saturation_level,unknown,3
+lighting,saturation_level,vivid,29
+lighting,shadows,casting,1
+lighting,shadows,medium,2
+lighting,shadows,soft,45
+lighting,shadows,unknown,2
+lighting,sources_count,four or more,3
+lighting,sources_count,four or more light,9
+lighting,sources_count,light one,6
+lighting,sources_count,light source four or more,10
+lighting,sources_count,light two,2
+lighting,sources_count,one,5
+lighting,sources_count,one source,5
+lighting,sources_count,three light,1
+lighting,sources_count,two light,4
+lighting,sources_count,unknown,8
+lighting,sources_directionality,backlight,3
+lighting,sources_directionality,top light,4
+lighting,sources_directionality,unknown,16
+lighting,sources_hardness,hard,1
+lighting,sources_hardness,medium,2
+lighting,sources_hardness,soft,16
+lighting,sources_type,artificial,11
+lighting,sources_type,artificial source,5
+lighting,sources_type,light source artificial,10
+lighting,sources_type,source artificial,4
+lighting,sources_type,unknown,38
+objects,color,beige,2
+objects,color,black,26
+objects,color,blue,3
+objects,color,brown,8
+objects,color,crimson,8
+objects,color,darkblue,6
+objects,color,darkgreen,1
+objects,color,darkslategrey,1
+objects,color,ghostwhite,2
+objects,color,gray,18
+objects,color,green,29
+objects,color,lightblue,2
+objects,color,lightcyan,1
+objects,color,mediumblue,2
+objects,color,mediumpurple,2
+objects,color,mediumslateblue,1
+objects,color,mediumvioletred,3
+objects,color,orange,18
+objects,color,pink,3
+objects,color,purple,1
+objects,color,red,14
+objects,color,silver,9
+objects,color,skyblue,1
+objects,color,snow,1
+objects,color,steelblue,1
+objects,color,violet,1
+objects,color,white,20
+objects,color,yellow,22
+objects,colors,beige,4
+objects,colors,black,18
+objects,colors,blue,5
+objects,colors,brown,8
+objects,colors,chocolate,1
+objects,colors,crimson,2
+objects,colors,darkblue,6
+objects,colors,darkgreen,2
+objects,colors,gray,12
+objects,colors,green,14
+objects,colors,lightblue,1
+objects,colors,lightgreen,2
+objects,colors,mediumblue,2
+objects,colors,mediumvioletred,1
+objects,colors,olivedrab,3
+objects,colors,orange,13
+objects,colors,others,0
+objects,colors,red,9
+objects,colors,silver,10
+objects,colors,violet,3
+objects,colors,white,19
+objects,colors,yellow,7
+objects,condition,clean,12
+objects,condition,fresh,2
+objects,condition,generally clean,20
+objects,condition,gently worn,1
+objects,condition,good visible,1
+objects,condition,intact,3
+objects,condition,lightly scuffed,6
+objects,condition,lightly scuffed duplicate,0
+objects,condition,lightly scuffed other,0
+objects,condition,minor scuffing,3
+objects,condition,minor surface reflections,1
+objects,condition,moderate clean,18
+objects,condition,moderate clean building specific,10
+objects,condition,motion blurred,1
+objects,condition,orderly,6
+objects,condition,others,0
+objects,condition,packed,1
+objects,condition,pristine,1
+objects,condition,puddled,1
+objects,condition,unknown,9
+objects,condition,used,1
+objects,condition,weathered,4
+objects,condition,well stocked,8
+objects,condition,wet looking,1
+objects,condition,worn edges,1
+objects,finish,chrome edging,1
+objects,finish,clear lens,2
+objects,finish,glossy,61
+objects,finish,glossy painted,1
+objects,finish,glossy trim,1
+objects,finish,high reflective,1
+objects,finish,integrated,1
+objects,finish,lit,1
+objects,finish,matte,21
+objects,finish,matte bumper,1
+objects,finish,matte trim,1
+objects,finish,neutral,1
+objects,finish,others,0
+objects,finish,painted,7
+objects,finish,polished,2
+objects,finish,pristine,1
+objects,finish,reflective,8
+objects,finish,rough,1
+objects,finish,semi gloss,1
+objects,finish,shiny,1
+objects,finish,transparent,1
+objects,finish,unknown,1
+objects,finish,weathered,3
+objects,material,asphalt,5
+objects,material,brick,3
+objects,material,cardboard,13
+objects,material,ceramic,1
+objects,material,chrome,2
+objects,material,chrome trim,1
+objects,material,chromed metal,1
+objects,material,clear plastic,1
+objects,material,cloth,1
+objects,material,concrete,5
+objects,material,cotton,1
+objects,material,curtain wall,1
+objects,material,cut stone,1
+objects,material,fabric,5
+objects,material,fiberglass,1
+objects,material,foliage,1
+objects,material,glass,52
+objects,material,glazed windows,1
+objects,material,leather,3
+objects,material,led,1
+objects,material,led module,1
+objects,material,limestone,1
+objects,material,living plant,1
+objects,material,masonry,9
+objects,material,metal,93
+objects,material,metal embedded,1
+objects,material,metal frame,1
+objects,material,organic,7
+objects,material,paint,9
+objects,material,paint asphalt,2
+objects,material,painted metal,18
+objects,material,paper,1
+objects,material,paper or plastic,2
+objects,material,paperboard,1
+objects,material,plant,1
+objects,material,plastic,60
+objects,material,plastic diffuser,2
+objects,material,plastic or glass,1
+objects,material,plastic trays,1
+objects,material,reflective surface,1
+objects,material,rubber,12
+objects,material,stainless steel,5
+objects,material,steel,2
+objects,material,stone,20
+objects,material,tempered glass,1
+objects,material,unknown,4
+objects,material,vinyl,2
+objects,material,wire,1
+objects,material,wood,4
+objects,material,wool,1
+objects,plane,background,17
+objects,plane,foreground,31
+objects,plane,midground,32
+objects,side,center,30
+objects,side,left,23
+objects,side,right,27
+objects,size_class,compact,1
+objects,size_class,large,32
+objects,size_class,long,4
+objects,size_class,medium,15
+objects,size_class,small,18
+objects,size_class,small medium,2
+objects,size_class,tall,1
+objects,size_class,very tall,1
+objects,state,blurred,1
+objects,state,headlights,1
+objects,state,motion,1
+objects,state,motion blurred,1
+objects,state,moving,9
+objects,state,parked,2
+objects,state,static,1
+objects,state,unknown,7
+objects,texture,carved,2
+objects,texture,carved masonry,1
+objects,texture,coarse grained,1
+objects,texture,crinkled,1
+objects,texture,dense,1
+objects,texture,dimpled,1
+objects,texture,dot matrix,1
+objects,texture,glossy,59
+objects,texture,glossy packaging,1
+objects,texture,glossy windows,2
+objects,texture,grid,1
+objects,texture,grid pattern basket,1
+objects,texture,leafy,3
+objects,texture,leafy textured,0
+objects,texture,matte,10
+objects,texture,matte peel,1
+objects,texture,moist leaf,1
+objects,texture,netted rind,1
+objects,texture,notes,0
+objects,texture,others,0
+objects,texture,patterned,1
+objects,texture,pebbled,1
+objects,texture,polished,3
+objects,texture,reflective,17
+objects,texture,rough textured,1
+objects,texture,rubberized,1
+objects,texture,scuffed,2
+objects,texture,shiny,1
+objects,texture,slightly textured,1
+objects,texture,slightly waxy,1
+objects,texture,slightly weathered,1
+objects,texture,smooth,109
+objects,texture,smooth slightly textured,1
+objects,texture,stacked goods,1
+objects,texture,stiff brim,1
+objects,texture,textured,19
+objects,texture,textured bark,1
+objects,texture,textured fabric,1
+objects,texture,textured leafy,1
+objects,texture,textured painted finish,1
+objects,texture,textured rubber,1
+objects,texture,textured vegetable surfaces,1
+objects,texture,tight bumpy,1
+objects,texture,unknown,4
+objects,texture,vertical masonry,1
+objects,texture,waxy,3
+objects,texture,weathered,3
+objects,texture,wire mesh,4
+objects,texture,woven,1
+objects,type,accessory,6
+objects,type,advertising strip panels,1
+objects,type,aisle,1
+objects,type,architecture,3
+objects,type,architecture road elements,1
+objects,type,bag,1
+objects,type,barrier,1
+objects,type,bench upholstery,1
+objects,type,blurred vehicles,1
+objects,type,building,10
+objects,type,building row,2
+objects,type,bus,28
+objects,type,cart single,1
+objects,type,ceiling panel,1
+objects,type,ceiling panels,1
+objects,type,ceiling sticker panels,1
+objects,type,clock,1
+objects,type,clock tower,1
+objects,type,cloth or glove,1
+objects,type,clothing object level,1
+objects,type,commercial row,1
+objects,type,container,1
+objects,type,control console,1
+objects,type,control knob,1
+objects,type,crossover,1
+objects,type,dashboard,3
+objects,type,decal,1
+objects,type,digital instrument display,1
+objects,type,display,1
+objects,type,distant shopping carts or baskets,1
+objects,type,electronic display,2
+objects,type,exterior panel,1
+objects,type,fabric seat back,1
+objects,type,feature,1
+objects,type,fixture,5
+objects,type,floor,1
+objects,type,floor area,1
+objects,type,fruit grouping,2
+objects,type,fruit single,1
+objects,type,glass steel skyscraper,1
+objects,type,glass tower,1
+objects,type,grab rail,1
+objects,type,handheld electronic device,1
+objects,type,handrail,2
+objects,type,head wear,1
+objects,type,infrastructure,4
+objects,type,instrument dashboard,1
+objects,type,interior component,1
+objects,type,light fixture,1
+objects,type,lights,1
+objects,type,logo,1
+objects,type,mirror,3
+objects,type,mirror assembly,1
+objects,type,object architecture,3
+objects,type,object building,9
+objects,type,object dashboard,1
+objects,type,object dashboard display,1
+objects,type,object furniture,1
+objects,type,object ground marking,1
+objects,type,object handrail,1
+objects,type,object headwear,1
+objects,type,object infrastructure,2
+objects,type,object instrument,1
+objects,type,object misc,3
+objects,type,object person,1
+objects,type,object seat back,1
+objects,type,object sign,1
+objects,type,object steering wheel,1
+objects,type,object street furniture,2
+objects,type,object street infrastructure,1
+objects,type,object surface,1
+objects,type,object surface marking,1
+objects,type,object vehicle,18
+objects,type,object vehicle body,1
+objects,type,object vehicle control,1
+objects,type,overhead electronic panel,1
+objects,type,packaged,1
+objects,type,packaged item single,1
+objects,type,packaged produce,2
+objects,type,packaged produce boxes,1
+objects,type,partition,1
+objects,type,partition frame,1
+objects,type,passenger door,1
+objects,type,peaked cap,1
+objects,type,person partial,1
+objects,type,placards,1
+objects,type,plant,2
+objects,type,produce,1
+objects,type,produce basket,2
+objects,type,produce basket wire cart variant,2
+objects,type,produce bunch,2
+objects,type,produce crates,1
+objects,type,produce display,4
+objects,type,produce generic,7
+objects,type,produce item single,1
+objects,type,produce shelving,3
+objects,type,produce tray,2
+objects,type,radio handset or device,1
+objects,type,reflector lens,1
+objects,type,refrigerated display,2
+objects,type,refrigerated display case,2
+objects,type,refrigerated glass door,1
+objects,type,refrigerated produce shelving,1
+objects,type,refrigerated shelving,2
+objects,type,road feature,1
+objects,type,road marking,1
+objects,type,roadway,2
+objects,type,roadway scene,1
+objects,type,roof sign,1
+objects,type,safety box,1
+objects,type,safety vest,1
+objects,type,seat,31
+objects,type,shelving,31
+objects,type,shirt,1
+objects,type,shopping basket,1
+objects,type,shopping cart,10
+objects,type,sidewalk cafe umbrella,1
+objects,type,step riser,1
+objects,type,sticker decal,1
+objects,type,stone facade right,7
+objects,type,street feature,1
+objects,type,street furniture,4
+objects,type,support pole,1
+objects,type,surface,1
+objects,type,tire,1
+objects,type,unknown,15
+objects,type,vegetation,4
+objects,type,vehicle,31
+objects,type,watch,1
+objects,type,wheel arch,1
+objects,type,window trim,1
+objects,type,wristwatch,1
+people,activities,driving,2
+people,activities,driving operating controls,3
+people,activities,examining item,2
+people,activities,facing camera,1
+people,activities,holding bag,1
+people,activities,holding handheld object,1
+people,activities,holding handheld produce basket,1
+people,activities,holding object,1
+people,activities,holding orange fruit in right hand,1
+people,activities,holding papers,1
+people,activities,holding produce item,4
+people,activities,inspecting packaged produce,1
+people,activities,inspecting produce,2
+people,activities,looking toward camera,3
+people,activities,looking toward dashboard,1
+people,activities,near crosswalk,1
+people,activities,operating vehicle,5
+people,activities,preparing step,1
+people,activities,pushing shopping cart,3
+people,activities,reaching left hand toward left shelf,1
+people,activities,reaching right hand,1
+people,activities,reading or examining papers,1
+people,activities,resting right hand handbrake or lever,1
+people,activities,seated,1
+people,activities,seated driving position,1
+people,activities,shopping,2
+people,activities,standing,8
+people,activities,standing or paused,1
+people,activities,standing still,1
+people,activities,unknown,4
+people,activities,viewing shelves,1
+people,activities,waiting,1
+people,activities,walking,2
+people,activities,walking across pedestrian crossing,1
+people,activities,walking or standing,4
+people,age_range,middle aged,24
+people,age_range,older adult,14
+people,age_range,young adult,4
+people,clothing_color,black,12
+people,clothing_color,blue,4
+people,clothing_color,brown,1
+people,clothing_color,darkblue,1
+people,clothing_color,gray,6
+people,clothing_color,orange,1
+people,clothing_color,tan,3
+people,clothing_color,white,5
+people,clothing_color,yellow,4
+people,clothing_colors,black,22
+people,clothing_colors,blue,27
+people,clothing_colors,brown,6
+people,clothing_colors,crimson,1
+people,clothing_colors,gray,7
+people,clothing_colors,green,7
+people,clothing_colors,orange,1
+people,clothing_colors,silver,1
+people,clothing_colors,tan,1
+people,clothing_colors,white,4
+people,clothing_garment,accessory,1
+people,clothing_garment,bib apron,1
+people,clothing_garment,cap,1
+people,clothing_garment,footwear,1
+people,clothing_garment,handheld object,1
+people,clothing_garment,high visibility reflective safety vest,1
+people,clothing_garment,insulated uniform jacket,1
+people,clothing_garment,jacket,4
+people,clothing_garment,long sleeved jacket,1
+people,clothing_garment,lower,1
+people,clothing_garment,neck tie,3
+people,clothing_garment,necktie,2
+people,clothing_garment,operator uniform top,1
+people,clothing_garment,outer,2
+people,clothing_garment,outer jacket,2
+people,clothing_garment,overcoat,3
+people,clothing_garment,safety vest,1
+people,clothing_garment,shirt,18
+people,clothing_garment,shirt collar,1
+people,clothing_garment,shirt general,2
+people,clothing_garment,shoes,7
+people,clothing_garment,shoulder bag,2
+people,clothing_garment,sweater,1
+people,clothing_garment,trouser singular,1
+people,clothing_garment,trousers,12
+people,clothing_garment,trousers plural,4
+people,clothing_garment,undershirt,1
+people,clothing_garment,undershirt collar,1
+people,clothing_garment,uniform jacket,2
+people,clothing_garment,uniform shirt short sleeve,1
+people,clothing_garment,upper,2
+people,clothing_garment,work jacket,1
+people,clothing_garment,work trousers,2
+people,clothing_garment,wristwatch on person,2
+people,clothing_material,canvas,1
+people,clothing_material,cotton,5
+people,clothing_material,fabric,2
+people,clothing_material,leather,1
+people,clothing_material,polyester,5
+people,clothing_material,silk,1
+people,clothing_material,synthetic,1
+people,clothing_material,twill,1
+people,clothing_material,woven,2
+people,eyewear_frame_color,black,7
+people,eyewear_frame_color,black frames,2
+people,eyewear_frame_color,brown,1
+people,eyewear_frame_color,darkblue,1
+people,eyewear_frame_color,darkcyan,1
+people,eyewear_frame_color,silver,4
+people,eyewear_frame_color,silver frames,4
+people,eyewear_present,no,9
+people,eyewear_present,unknown,1
+people,eyewear_present,yes,22
+people,eyewear_type,eyeglasses,4
+people,eyewear_type,eyeglasses generic,1
+people,eyewear_type,metal rimmed,1
+people,eyewear_type,prescription,1
+people,eyewear_type,rectangular,4
+people,eyewear_type,rectangular frame,4
+people,eyewear_type,rectangular glasses normalized,3
+people,eyewear_type,rimless,1
+people,eyewear_type,thin framed,1
+people,eyewear_type,thin metal framed glasses,1
+people,eyewear_type,unknown,1
+people,facial_hair_color,black,4
+people,facial_hair_color,brown,1
+people,facial_hair_color,gray,2
+people,facial_hair_present,no,9
+people,facial_hair_present,unknown,3
+people,facial_hair_present,yes,12
+people,facial_hair_style,goatee,1
+people,facial_hair_style,mustache,5
+people,facial_hair_style,stubble,3
+people,facial_hair_style,stubble variants,3
+people,facial_hair_style,unknown,2
+people,garment_type,bag,2
+people,garment_type,coat,1
+people,garment_type,crossbody pouch,1
+people,garment_type,face mask,1
+people,garment_type,glove or hand covering,1
+people,garment_type,insulated jacket,1
+people,garment_type,insulated winter coat,1
+people,garment_type,jacket,3
+people,garment_type,midlayer,1
+people,garment_type,neck accessory,1
+people,garment_type,neck scarf,1
+people,garment_type,outer jacket,1
+people,garment_type,outerwear jacket,1
+people,garment_type,pants,1
+people,garment_type,produce bag,1
+people,garment_type,shirt,1
+people,garment_type,shoes,3
+people,garment_type,short sleeved collared shirt,2
+people,garment_type,shoulder bag,1
+people,garment_type,sleeveless uniform vest,1
+people,garment_type,slip shoes,1
+people,garment_type,trousers,8
+people,gaze_direction,down,7
+people,gaze_direction,left,7
+people,gaze_direction,right,3
+people,gaze_direction,unknown,5
+people,gaze_direction,up,10
+people,gender_presentation,male,42
+people,hair_color,black,27
+people,hair_color,brown,6
+people,hair_color,gray,33
+people,hair_present,yes,42
+people,hair_style,short,37
+people,hair_style,straight,1
+people,hair_style,unknown,3
+people,head_covering_color,black,7
+people,head_covering_color,blue,1
+people,head_covering_color,brown,1
+people,head_covering_color,chocolate,1
+people,head_covering_color,dark blue,1
+people,head_covering_color,darkblue,1
+people,head_covering_color,unknown,2
+people,head_covering_present,no,12
+people,head_covering_present,unknown,1
+people,head_covering_present,yes,25
+people,head_covering_type,baseball cap,4
+people,head_covering_type,cap,4
+people,head_covering_type,cap generic,1
+people,head_covering_type,flat cap,3
+people,head_covering_type,peaked cap,7
+people,head_covering_type,peaked officer cap,1
+people,head_covering_type,unknown,1
+people,material,canvas,1
+people,material,cotton,3
+people,material,fabric,5
+people,material,fleece,1
+people,material,insulated fabric,1
+people,material,leather,4
+people,material,nylon,1
+people,material,rubber,1
+people,material,synthetic,10
+people,material,wool blend,1
+people,material,woven,6
+people,occlusions,partial,20
+people,occlusions,partial occlusion,31
+people,occlusions,significant,1
+people,occlusions,unknown,2
+people,orientation,back,1
+people,orientation,front,12
+people,orientation,front oriented,5
+people,orientation,three quarter,14
+people,orientation,unknown,11
+people,pose,both hands on steering wheel,1
+people,pose,crossing,1
+people,pose,driving posture,1
+people,pose,forearms resting on steering wheel,1
+people,pose,forward facing,2
+people,pose,forward leaning,2
+people,pose,forward stepping,1
+people,pose,hands clasped near mid torso,1
+people,pose,hands forward driving posture,1
+people,pose,hands on cart handle,1
+people,pose,hands pockets,1
+people,pose,left hand on steering wheel,1
+people,pose,mid stride,1
+people,pose,relaxed,4
+people,pose,relaxed shoulders,2
+people,pose,relaxed stance,1
+people,pose,relaxed standing,1
+people,pose,relaxed standing variations,5
+people,pose,right arm resting on lap,1
+people,pose,seated,10
+people,pose,slightly forward lean,8
+people,pose,slightly forward leaning,1
+people,pose,squared shoulders,1
+people,pose,standing,6
+people,pose,torso slightly turned,2
+people,pose,upright,41
+people,pose,upright relaxed posture,1
+people,pose,upright seated,1
+people,pose,walking,1
+people,pose,walking or standing,4
+people,role_hint,appears bus driver,1
+people,role_hint,appears transit worker high visibility,1
+people,role_hint,appears uniformed transit or traffic officer,1
+people,role_hint,appears vehicle operator steering wheel visible,1
+people,role_hint,bus driver,1
+people,role_hint,bus operator,3
+people,role_hint,grocery shopper,1
+people,role_hint,grocery staff member,2
+people,role_hint,store employee,1
+people,role_hint,transit vehicle operator,1
+people,role_hint,uniformed retail security officer detailed token,1
+people,role_hint,uniformed security officer,1
+people,role_hint,vehicle operator,7
+people,skin_tone,dark,3
+people,skin_tone,light,21
+people,skin_tone,medium,17
+people,texture,folded,1
+people,texture,heavy duty,1
+people,texture,matte,7
+people,texture,mesh,1
+people,texture,quilted,1
+people,texture,slightly crumpled,1
+people,texture,slightly glossy,1
+people,texture,smooth,11
+people,texture,soft,1
+people,texture,straight cut,1
+people,texture,textured,2
+people,texture,textured knit,1
+people,texture,thin,1
+people,texture,worn,1
+safety,hazards,hazard person standing roadway front bus,1
+safety,hazards,large vehicle obstruction,1
+safety,hazards,no detected,9
+safety,hazards,no noted,8
+safety,hazards,no observed,7
+safety,hazards,unknown,17
+safety,nsfw,no content,20
+safety,nsfw,not,10
+safety,nsfw,unknown,20
+texts,content,2,1
+texts,content,4014 11 4,1
+texts,content,72,1
+texts,content,851 partially illegible,1
+texts,content,din,1
+texts,content,text 181,1
+texts,content,text 2,1
+texts,content,text 4014 11 4,1
+texts,content,text 501,1
+texts,content,text 72,1
+texts,content,text 851 partially illegible,1
+texts,content,text approx 13 third character unclear,1
+texts,content,text approx riaurfo illegible segments possible,1
+texts,content,text believe,1
+texts,content,text din,1
+texts,content,text partial visible,1
+texts,content,text puusnc vie bus rivier,1
+texts,content,unknown,2
+texts,font_style,amber,2
+texts,font_style,bold,2
+texts,font_style,condensed,3
+texts,font_style,digital segment,2
+texts,font_style,dot matrix,2
+texts,font_style,led,2
+texts,font_style,sans,8
+texts,font_style,unknown,18
+texts,legibility,illegible,81
+texts,legibility,legible,6
+texts,legibility,legible text,2
+texts,legibility,mostly illegible,2
+texts,legibility,not legible,13
+texts,legibility,other not legible tokens kept separately where ambiguous,5
+texts,legibility,partial,2
+texts,legibility,partially illegible,7
+texts,legibility,partially legible,15
+texts,legibility,uncertain,1
+texts,legibility,unreadable,4
+texts,plane,background text,6
+texts,plane,foreground text,11
+texts,plane,midground text,10
+texts,plane,text background,15
+texts,plane,text foreground,5
+texts,plane,text in background,8
+texts,plane,text in foreground,5
+texts,plane,text in midground,3
+texts,plane,text midground,14
+texts,plane,text on background,5
+texts,plane,text on foreground,6
+texts,plane,text on midground,9
+texts,plane_distribution,background,6
+texts,plane_distribution,foreground,11
+texts,plane_distribution,midground,10
+texts,side,center text,15
+texts,side,left text,6
+texts,side,right text,6
+texts,side,text center,29
+texts,side,text left,8
+texts,side,text on center,13
+texts,side,text on left,4
+texts,side,text on right,3
+texts,side,text right,13
+texts,side_distribution,center,15
+texts,side_distribution,left,6
+texts,side_distribution,right,6
+texts,text_content,illegible,2
+texts,text_content,ssy,1
+uncertainty,note,advertising strip panel text above windshield largely illegible,1
+uncertainty,note,ambiguous sunrise vs sunset,1
+uncertainty,note,approximate count visible humans 4 small occluded,1
+uncertainty,note,background left building window count estimated 6 10,1
+uncertainty,note,background roadway details blurred vehicles not identifiable,1
+uncertainty,note,blurred pedestrian figures indistinct,1
+uncertainty,note,bus front electronic display partially illegible,24
+uncertainty,note,cap patch details but not legible,1
+uncertainty,note,ceiling stickers text illegible due to distance,1
+uncertainty,note,chest mounted device uncertain radio fare device,1
+uncertainty,note,chest patch text but not legible,1
+uncertainty,note,dashboard control labels instrument readouts not legible,1
+uncertainty,note,distant building details blurred,1
+uncertainty,note,distant vehicle make model license not identifiable,1
+uncertainty,note,embroidered uniform patch lettering not readable,1
+uncertainty,note,enumeration constrained descriptive preserved,1
+uncertainty,note,exact aisle width floor surface details not provided,1
+uncertainty,note,exact vehicle makes models not discernible,1
+uncertainty,note,exterior license plate area not legible,1
+uncertainty,note,exterior scene motion blur making background details indiscernible,1
+uncertainty,note,exterior storefront posters illegible,1
+uncertainty,note,facial not specified,1
+uncertainty,note,faint wetness sheen noted but unconfirmed,1
+uncertainty,note,far background building details motion blurred indiscernible,1
+uncertainty,note,front license plate 501 partially illegible,1
+uncertainty,note,heavily blurred objects marked as indiscernible,1
+uncertainty,note,individual pedestrian finer attributes indiscernible,1
+uncertainty,note,interior passenger figures inside bus indiscernible,4
+uncertainty,note,lower body bag strap partially occluded,1
+uncertainty,note,lower dashboard yellow sticker text partially illegible,1
+uncertainty,note,lower left background indiscernible dark object near wheel arch,1
+uncertainty,note,no confirmed visible humans possible reflections,1
+uncertainty,note,overhead display text blurred illegible,1
+uncertainty,note,overhead electronic panel text partially occluded low resolution,1
+uncertainty,note,overhead sticker text but not legible,1
+uncertainty,note,overhead white placard text illegible,1
+uncertainty,note,overhead yellow sign text illegible,1
+uncertainty,note,parked vehicle background right mostly out of frame,1
+uncertainty,note,passenger area beyond right seat back out of frame,1
+uncertainty,note,people inside vehicles indistinct silhouettes omitted,1
+uncertainty,note,possible small items on dashboard too small to identify,1
+uncertainty,note,possible small objects near lower right dashboard not identifiable,1
+uncertainty,note,precise vehicle registration details not visible,1
+uncertainty,note,rear passenger area partially occluded,1
+uncertainty,note,rear vehicle area indiscernible blur omitted,1
+uncertainty,note,right side window exterior blurred objects indiscernible,1
+uncertainty,note,roof top yellow sign text partially occluded,1
+uncertainty,note,several distant pedestrian figures small partially occluded,12
+uncertainty,note,shoulder patch wording partially occluded not fully legible,1
+uncertainty,note,sidewalk surface right frame partially occluded,1
+uncertainty,note,small chrome grille emblem not legible,1
+uncertainty,note,small dark device near steering column not identifiable,1
+uncertainty,note,small debris or surface blemishes omitted not identifiable,1
+uncertainty,note,small instrument labels illegible,1
+uncertainty,note,small interior items visible through windows blurred,1
+uncertainty,note,small objects near center console partially occluded,1
+uncertainty,note,small objects under driver seat indiscernible blur,1
+uncertainty,note,small red distant vehicle partially occluded,1
+uncertainty,note,small street level fixtures partially occluded blurred,1
+uncertainty,note,small white chest text but not legible,1
+uncertainty,note,some elements motion blurred indistinct,1
+uncertainty,note,time of day not definitive ambient light suggests daytime,1
+uncertainty,note,time of day only labeled daytime no specific hint,1
+uncertainty,note,tokens described qualitatively enum mapping omitted,1
+uncertainty,note,tree species not identifiable,1
+uncertainty,note,unknown,38
+uncertainty,note,upper building facades partially occluded by haze steam,1
+uncertainty,note,yellow ceiling placard texts partially occluded,1
+uncertainty,token,approx count pale orange citrus fruits estimate,1
+uncertainty,token,approximate counts packaged items on background shelves,1
+uncertainty,token,apron text partially occluded illegible,1
+uncertainty,token,embroidered chest patch text partially legible,6
+uncertainty,token,identity or affiliation cap emblem indiscernible,1
+uncertainty,token,other singleton uncertainty tokens,11
+uncertainty,token,small packaged item labels not legible,1
+uncertainty,token,unknown,23
+uncertainty,uncertainty,approx 4 distant pedestrians background right,1
+uncertainty,uncertainty,approx count background right awnings 6 8,1
+uncertainty,uncertainty,approx count distant pedestrians 12,1
+uncertainty,uncertainty,approximate vehicle counts background,1
+uncertainty,uncertainty,background elements blurred,1
+uncertainty,uncertainty,background right small pedestrian blurred omitted,1
+uncertainty,uncertainty,bright yellow handheld object partially occluded,1
+uncertainty,uncertainty,bus interior details obscured by reflections,1
+uncertainty,uncertainty,camera perspective estimations conservative,1
+uncertainty,uncertainty,circular green street sign pictogram unresolved,1
+uncertainty,uncertainty,distant pedestrians indistinct omitted,1
+uncertainty,uncertainty,distant pedestrians not enumerated omitted,1
+uncertainty,uncertainty,facial feature identity not legible,1
+uncertainty,uncertainty,facial occluded,1
+uncertainty,uncertainty,facial stubble uncertain,1
+uncertainty,uncertainty,far background upper left building interior shadowed,1
+uncertainty,uncertainty,far right building facade cropped,1
+uncertainty,uncertainty,focal length unspecified,1
+uncertainty,uncertainty,instrument cluster green characters illegible,1
+uncertainty,uncertainty,instrument cluster numeric like shapes illegible,1
+uncertainty,uncertainty,license plate area illegible,19
+uncertainty,uncertainty,lower body clothing occluded by crop shadow,1
+uncertainty,uncertainty,lower body out of frame,1
+uncertainty,uncertainty,midground right transit sign occluded illegible,1
+uncertainty,uncertainty,multiple distant pedestrians vehicles background left approximate,1
+uncertainty,uncertainty,overhead orange placard illegible,1
+uncertainty,uncertainty,peripheral moving vehicles partially occluded,1
+uncertainty,uncertainty,potential small vertical curb post occluded,1
+uncertainty,uncertainty,rear head partially occluded by seat back,1
+uncertainty,uncertainty,slight motion blur on bus wheel areas,1
+uncertainty,uncertainty,small accessories not clear,1
+uncertainty,uncertainty,small dashboard objects indistinguishable,1
+uncertainty,uncertainty,small objects inside bus visible through windshield not identifiable,1
+uncertainty,uncertainty,small out of focus object dashboard not identifiable,1
+uncertainty,uncertainty,small pedestrian silhouettes partially occluded,1
+uncertainty,uncertainty,small white dashboard label illegible,1
+uncertainty,uncertainty,uniform cap embroidered text not legible,1
+uncertainty,uncertainty,unknown,20
+uncertainty,uncertainty,weather outside not visible,1

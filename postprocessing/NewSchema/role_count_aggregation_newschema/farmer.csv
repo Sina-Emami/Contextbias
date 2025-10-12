@@ -1,0 +1,225 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,38,6
+scene_appearance,aesthetic_qualities,dreamy,3,6
+scene_appearance,aesthetic_qualities,quality cinematic,6,6
+scene_appearance,aesthetic_qualities,quality dreamy,3,6
+scene_appearance,aesthetic_qualities,quality realistic,8,6
+scene_appearance,aesthetic_qualities,realistic,36,6
+scene_appearance,color_temperature,cool,5,3
+scene_appearance,color_temperature,warm,39,3
+scene_appearance,dominant_colors,brown,30,1
+scene_appearance,mood,calm,60,2
+scene_appearance,mood,joyful,1,2
+scene_appearance,wall_color,brown,10,1
+scene_appearance,color_temperature,neutral,1,3
+scene_appearance,color_temperature,warm,8,3
+camera,depth_of_field,deep,4,3
+camera,depth_of_field,moderate,2,3
+camera,depth_of_field,shallow,51,3
+camera,framing,close up,7,6
+camera,framing,establishing,8,6
+camera,framing,full body,3,6
+camera,framing,headshot,4,6
+camera,framing,medium,51,6
+camera,framing,wide,6,6
+camera,perspective,eye level,43,2
+camera,perspective,low angle,5,2
+objects,type,distant trees roofs,1,44
+objects,type,long handled shovel,1,44
+objects,type,planted rows,38,44
+objects,type,straw hat,5,44
+objects,type,work boots,1,44
+objects,type,work gloves,4,44
+objects,type,work pants,1,44
+objects,type,armchair,1,44
+objects,type,book,14,44
+objects,type,bookcase,47,44
+objects,type,bookshelf,3,44
+objects,type,boots,2,44
+objects,type,bowls,1,44
+objects,type,container,1,44
+objects,type,couch,4,44
+objects,type,decorative bowl,1,44
+objects,type,farm tractor,1,44
+objects,type,fence,2,44
+objects,type,glass jars,2,44
+objects,type,hanging potted plant,1,44
+objects,type,hat,13,44
+objects,type,labeled cylindrical container,1,44
+objects,type,multi pane window,2,44
+objects,type,open storage shelf,1,44
+objects,type,plant,14,44
+objects,type,plant bundle,1,44
+objects,type,pole,1,44
+objects,type,potted houseplant,1,44
+objects,type,potted leafy plant,1,44
+objects,type,potted plant,9,44
+objects,type,rectangular multi pane,1,44
+objects,type,rubber boots,1,44
+objects,type,shelf,6,44
+objects,type,shoe,1,44
+objects,type,sofa,17,44
+objects,type,straw cowboy hat,1,44
+objects,type,straw hat,2,44
+objects,type,table,4,44
+objects,type,tree canopies,1,44
+objects,type,tree clump,1,44
+objects,type,wicker baskets,1,44
+objects,type,window,12,44
+objects,type,window array,1,44
+objects,type,wooden utensils,1,44
+objects,type,woven baskets,2,44
+people,activities,gathering soil,1,16
+people,activities,handling soil,1,16
+people,activities,hands resting or gathering straw,1,16
+people,activities,holding bag,1,16
+people,activities,holding tool,1,16
+people,activities,holding soil clump,1,16
+people,activities,holding straw bundle,2,16
+people,activities,inspecting soil,2,16
+people,activities,letting soil fall,1,16
+people,activities,looking toward camera,3,16
+people,activities,manipulating plants,1,16
+people,activities,planting,4,16
+people,activities,resting,1,16
+people,activities,sifting breaking clods,1,16
+people,activities,handling soil,1,16
+people,activities,supporting produce,1,16
+people,activities,tending crops,1,16
+people,age_range,middle aged,13,2
+people,age_range,older adult,36,2
+people,clothing_color,beige,1,12
+people,clothing_color,black,13,12
+people,clothing_color,blue,25,12
+people,clothing_color,brown,14,12
+people,clothing_color,gray,13,12
+people,clothing_color,green,1,12
+people,clothing_color,palegreen,1,12
+people,clothing_color,red,3,12
+people,clothing_color,tan,5,12
+people,clothing_color,tomato,1,12
+people,clothing_color,white,4,12
+people,clothing_color,yellow,1,12
+people,clothing_garment,apron,1,10
+people,clothing_garment,belt,1,10
+people,clothing_garment,boots,2,10
+people,clothing_garment,hat,1,10
+people,clothing_garment,jeans,2,10
+people,clothing_garment,overalls,14,10
+people,clothing_garment,shirt,17,10
+people,clothing_garment,suspenders,4,10
+people,clothing_garment,trousers,4,10
+people,clothing_garment,work boots,1,10
+people,eyewear_present,no,26,2
+people,eyewear_present,yes,18,2
+people,eyewear_type,eyeglasses,2,5
+people,eyewear_type,reading glasses,4,5
+people,eyewear_type,rectangular,4,5
+people,eyewear_type,rectangular metal rimmed,1,5
+people,eyewear_type,rectangular reading glasses,1,5
+people,hair_color,black,14,4
+people,hair_color,gray,24,4
+people,hair_color,tomato reddish,1,4
+people,hair_color,white,10,4
+people,facial_hair_present,no,5,2
+people,facial_hair_present,yes,30,2
+people,facial_hair_style,beard,10,7
+people,facial_hair_style,full beard,2,7
+people,facial_hair_style,moustache,12,7
+people,facial_hair_style,short beard,2,7
+people,facial_hair_style,sideburns,2,7
+people,facial_hair_style,stubbled,6,7
+people,facial_hair_style,trimmed,2,7
+people,gaze_direction,center,1,5
+people,gaze_direction,down,20,5
+people,gaze_direction,left,2,5
+people,gaze_direction,right,1,5
+people,gaze_direction,up,11,5
+people,gender_presentation,male,59,1
+people,hair_color,black,19,4
+people,hair_color,gray,38,4
+people,hair_color,white,6,4
+people,hair_present,yes,39,1
+people,hair_style,shaved,1,2
+people,hair_style,short,37,2
+people,head_covering_type,beige,9,31
+people,head_covering_type,black,6,31
+people,head_covering_type,black coverings,3,31
+people,head_covering_type,brown,2,31
+people,head_covering_type,dark gray,1,31
+people,head_covering_type,dark violet,1,31
+people,head_covering_type,darkblue,1,31
+people,head_covering_type,darkviolet,4,31
+people,head_covering_type,gray,2,31
+people,head_covering_type,green,2,31
+people,head_covering_type,lightyellow,2,31
+people,head_covering_type,olive drab,2,31
+people,head_covering_type,pale green,1,31
+people,head_covering_type,tan,9,31
+people,head_covering_type,tan coverings,3,31
+people,head_covering_type,tomato,7,31
+people,head_covering_type,tomato reddish,1,31
+people,head_covering_type,yellow,3,31
+people,head_covering_present,no,2,2
+people,head_covering_present,yes,47,2
+people,head_covering_type,baseball cap,1,31
+people,head_covering_type,cowboy hat,1,31
+people,head_covering_type,fedora,1,31
+people,head_covering_type,felt hat,1,31
+people,head_covering_type,flat cap,1,31
+people,head_covering_type,generic hat,1,31
+people,head_covering_type,straw hat,7,31
+people,head_covering_type,straw hat merged variants,18,31
+people,head_covering_type,straw hat normalized variants,6,31
+people,head_covering_type,wide brim woven hat,1,31
+people,head_covering_type,wide brimmed hat unspecified,1,31
+people,head_covering_type,wide brimmed straw hat,1,31
+people,head_covering_type,wide brimmed sunhat,3,31
+people,pose,standing,1,4
+people,pose,leaning,2,4
+people,pose,standing,1,4
+people,pose,leaning,5,4
+people,pose,leaning,1,4
+people,pose,leaning,1,4
+people,pose,standing,1,4
+people,pose,leaning,4,4
+people,pose,standing,1,4
+people,pose,leaning,1,4
+people,pose,leaning,7,4
+people,pose,leaning,1,4
+people,pose,leaning,1,4
+people,pose,standing,1,4
+people,pose,standing,2,4
+people,pose,laying,3,4
+people,pose,standing,7,4
+people,pose,seated,9,4
+people,pose,leaning,6,4
+people,pose,standing,2,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,7,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,4,4
+people,pose,standing,10,4
+people,pose,standing,2,4
+people,pose,standing,4,4
+people,pose,standing,4,4
+people,pose,standing,1,4
+people,pose,standing,4,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,leaning,2,4
+people,pose,standing,2,4
+people,pose,standing,1,4
+people,pose,standing,9,4
+people,pose,standing,3,4
+people,skin_tone,light,35,2
+people,skin_tone,medium,13,2

@@ -1,0 +1,106 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,4,3
+scene_appearance,aesthetic_qualities,gritty,1,3
+scene_appearance,aesthetic_qualities,realistic,8,3
+scene_appearance,color_temperature,cool,3,3
+scene_appearance,color_temperature,neutral,3,3
+scene_appearance,color_temperature,warm,4,3
+scene_appearance,dominant_colors,black,9,8
+scene_appearance,dominant_colors,blue,0,8
+scene_appearance,dominant_colors,brown,6,8
+scene_appearance,dominant_colors,cyan,2,8
+scene_appearance,dominant_colors,medium violet red,1,8
+scene_appearance,dominant_colors,mediumblue,1,8
+scene_appearance,dominant_colors,mediumvioletred,2,8
+scene_appearance,dominant_colors,violet,0,8
+scene_appearance,mood,calm,9,3
+scene_appearance,mood,melancholic,1,3
+scene_appearance,mood,tense,8,3
+camera,depth_of_field,deep,3,3
+camera,depth_of_field,moderate,9,3
+camera,depth_of_field,shallow,5,3
+camera,framing,full body,8,3
+camera,framing,medium,10,3
+camera,framing,wide,4,3
+camera,perspective,eye level,11,2
+camera,perspective,third person,1,2
+objects,type,sign,2,4
+objects,type,street furniture,1,4
+objects,type,traffic cone,1,4
+objects,type,traffic sign,2,4
+people,activities,attending vehicle,1,11
+people,activities,attending vehicle,1,11
+people,activities,interacting with vehicle,1,11
+people,activities,holding small device,1,11
+people,activities,interacting with vehicle,1,11
+people,activities,attending vehicle,1,11
+people,activities,observing approaching vehicles,1,11
+people,activities,observing oncoming traffic,1,11
+people,activities,one hand near duty belt,1,11
+people,activities,overseeing traffic,1,11
+people,activities,standing,4,11
+people,activities,standing beside driver side door,1,11
+people,activities,standing or paused,1,11
+people,activities,traffic control inference,1,11
+people,age_range,middle aged,13,2
+people,age_range,young adult,2,2
+people,clothing_color,black,50,7
+people,clothing_color,blue,59,7
+people,clothing_color,brown,3,7
+people,clothing_color,darkblue,3,7
+people,clothing_color,lightcoral,1,7
+people,clothing_color,white,1,7
+people,clothing_color,yellow,2,7
+people,clothing_garment,belt,11,10
+people,clothing_garment,boots,6,10
+people,clothing_garment,cap,7,10
+people,clothing_garment,helmet,1,10
+people,clothing_garment,necktie,1,10
+people,clothing_garment,shirt,20,10
+people,clothing_garment,shoes,5,10
+people,clothing_garment,uniform jacket,3,10
+people,clothing_garment,uniform trousers,19,10
+people,clothing_garment,wristwatch,3,10
+people,eyewear_present,no,9,2
+people,eyewear_present,yes,2,2
+people,eyewear_type,sunglasses,2,1
+people,facial_hair_present,no,9,2
+people,facial_hair_present,yes,1,2
+people,gaze_direction,left,2,1
+people,gender_presentation,male,21,1
+people,hair_color,black,15,2
+people,hair_color,brown,6,2
+people,hair_present,no,1,2
+people,hair_present,yes,19,2
+people,hair_style,short,16,1
+people,head_covering_type,black,4,11
+people,head_covering_type,blue,8,11
+people,head_covering_type,dark blue,5,11
+people,head_covering_type,lightcoral,1,11
+people,head_covering_present,no,1,2
+people,head_covering_present,yes,20,2
+people,head_covering_type,cap,1,11
+people,head_covering_type,duty helmet,1,11
+people,head_covering_type,peaked cap,9,11
+people,head_covering_type,peaked police cap,2,11
+people,head_covering_type,peaked service cap,4,11
+people,head_covering_type,protective helmet,1,11
+people,head_covering_type,service cap,1,11
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,pose,standing,3,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,2,2
+people,pose,leaning,1,2
+people,pose,standing,3,2
+people,pose,standing,9,2
+people,skin_tone,dark,3,3
+people,skin_tone,light,9,3
+people,skin_tone,medium,9,3

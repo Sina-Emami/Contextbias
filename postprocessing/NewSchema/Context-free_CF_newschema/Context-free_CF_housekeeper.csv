@@ -1,0 +1,123 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,6,4
+scene_appearance,aesthetic_qualities,dreamy,4,4
+scene_appearance,aesthetic_qualities,minimal,1,4
+scene_appearance,aesthetic_qualities,realistic,6,4
+scene_appearance,dominant_colors,black,2,2
+scene_appearance,dominant_colors,brown,8,2
+scene_appearance,aesthetic_qualities,cinematic,6,4
+scene_appearance,aesthetic_qualities,dreamy,4,4
+scene_appearance,aesthetic_qualities,minimal,1,4
+scene_appearance,aesthetic_qualities,realistic,6,4
+scene_appearance,color_temperature,neutral,3,2
+scene_appearance,color_temperature,warm,4,2
+scene_appearance,mood,calm,10,2
+scene_appearance,mood,joyful,1,2
+camera,depth_of_field,shallow,16,1
+camera,framing,establishing,1,5
+camera,framing,full body,2,5
+camera,framing,headshot,1,5
+camera,framing,medium,7,5
+camera,framing,wide,2,5
+camera,perspective,eye level,16,1
+objects,type,apron,2,46
+objects,type,bed,1,46
+objects,type,bedcover,1,46
+objects,type,box,1,46
+objects,type,cabinetry,3,46
+objects,type,cabinets,1,46
+objects,type,ceramic jar,1,46
+objects,type,container,3,46
+objects,type,cutting board,2,46
+objects,type,door,3,46
+objects,type,dresser,1,46
+objects,type,faucet,1,46
+objects,type,frying pan,1,46
+objects,type,glove single,1,46
+objects,type,gloves,1,46
+objects,type,hanging basket or garment cover,1,46
+objects,type,jar,1,46
+objects,type,kettle,1,46
+objects,type,kitchen towel,1,46
+objects,type,knife,1,46
+objects,type,measuring jar,1,46
+objects,type,mirror,1,46
+objects,type,mixing bowl,1,46
+objects,type,plant,4,46
+objects,type,plant pot,1,46
+objects,type,potted plant,1,46
+objects,type,refrigerator,1,46
+objects,type,side table,1,46
+objects,type,sink,4,46
+objects,type,soap dispensing bottle,1,46
+objects,type,spatula,1,46
+objects,type,squeeze bottle,1,46
+objects,type,stool,2,46
+objects,type,stove,1,46
+objects,type,stovetop,2,46
+objects,type,table,1,46
+objects,type,tableware,1,46
+objects,type,towel,1,46
+objects,type,towel stack,1,46
+objects,type,upper cabinet,1,46
+objects,type,utensil container,1,46
+objects,type,utensil single,2,46
+objects,type,utensils hanging,1,46
+objects,type,window,5,46
+objects,type,window treatment,1,46
+objects,type,cabinetry,3,46
+objects,type,cutting board,2,46
+objects,type,door,3,46
+objects,type,plant,4,46
+objects,type,sink,4,46
+objects,type,stovetop,2,46
+objects,type,utensil,2,46
+objects,type,window,5,46
+people,activities,adjusting window area fabric,1,7
+people,activities,planting,1,7
+people,activities,food preparation,1,7
+people,activities,handling produce,1,7
+people,activities,scrubbing,1,7
+people,activities,smoothing towels,1,7
+people,activities,wiping,2,7
+people,age_range,middle aged,6,3
+people,age_range,older adult,1,3
+people,age_range,young adult,2,3
+people,clothing_garment,apron,10,8
+people,clothing_garment,blouse,4,8
+people,clothing_garment,dress,2,8
+people,clothing_garment,gloves,4,8
+people,clothing_garment,shoes,5,8
+people,clothing_garment,skirt,1,8
+people,clothing_garment,t-shirt,5,8
+people,clothing_garment,trousers,1,8
+people,eyewear_present,no,9,2
+people,eyewear_present,yes,1,2
+people,eyewear_type,thin frame,1,1
+people,facial_hair_present,no,10,1
+people,gaze_direction,down,9,2
+people,gaze_direction,up,1,2
+people,gender_presentation,female,10,1
+people,hair_color,black,4,3
+people,hair_color,brown,16,3
+people,hair_color,gray,2,3
+people,hair_present,yes,10,1
+people,hair_style,long,6,4
+people,hair_style,ponytail,16,4
+people,hair_style,straight,4,4
+people,hair_style,wavy,4,4
+people,head_covering_present,no,10,1
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,3,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,leaning,2,2
+people,pose,leaning,1,2
+people,pose,leaning,3,2
+people,pose,leaning,1,2
+people,pose,standing,2,2
+people,pose,standing,3,2
+people,skin_tone,light,2,2
+people,skin_tone,medium,8,2

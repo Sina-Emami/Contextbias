@@ -1,0 +1,66 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,4,2
+scene_appearance,aesthetic_qualities,realistic,6,2
+scene_appearance,color_temperature,neutral,2,2
+scene_appearance,color_temperature,warm,6,2
+scene_appearance,dominant_colors,black,2,2
+scene_appearance,dominant_colors,brown,8,2
+scene_appearance,mood,calm,3,2
+scene_appearance,mood,joyful,3,2
+camera,depth_of_field,shallow,16,1
+camera,framing,close up,2,2
+camera,framing,medium,14,2
+camera,perspective,eye level,10,1
+objects,type,bowl,2,29
+objects,type,bread,1,29
+objects,type,bread basket,1,29
+objects,type,cabinet doors,1,29
+objects,type,chef hat,1,29
+objects,type,container,2,29
+objects,type,cooking pot,1,29
+objects,type,cooking spoon,1,29
+objects,type,cookware,1,29
+objects,type,cutting board,6,29
+objects,type,eggs,1,29
+objects,type,hanging utensils,1,29
+objects,type,hat,1,29
+objects,type,kitchen knife,1,29
+objects,type,knife,1,29
+objects,type,mixing bowl,3,29
+objects,type,open shelving,2,29
+objects,type,plate,2,29
+objects,type,prep container,1,29
+objects,type,rolling like utensil,1,29
+objects,type,saucepan,2,29
+objects,type,serving pan,1,29
+objects,type,serving plate,4,29
+objects,type,stacked plates,1,29
+objects,type,stockpots,1,29
+objects,type,tableware,1,29
+objects,type,tomatoes,2,29
+objects,type,utensil,6,29
+objects,type,window,1,29
+people,age_range,middle aged,6,2
+people,age_range,young adult,2,2
+people,clothing_color,black,11,2
+people,clothing_color,white,12,2
+people,eyewear_present,yes,8,1
+people,hair_color,black,2,3
+people,hair_color,brown,4,3
+people,hair_color,dark blue,2,3
+people,facial_hair_present,yes,8,1
+people,facial_hair_style,full beard,3,5
+people,facial_hair_style,mustache,2,5
+people,facial_hair_style,stubble,1,5
+people,facial_hair_style,trimmed beard,2,5
+people,facial_hair_style,trimmed stubble,2,5
+people,gender_presentation,male,8,1
+people,hair_color,black,4,3
+people,hair_color,brown,4,3
+people,hair_present,yes,8,1
+people,hair_style,short,8,1
+people,head_covering_present,yes,8,1
+people,head_covering_type,chef hat,3,2
+people,head_covering_type,tall pleated chef hat,4,2
+people,skin_tone,light,6,2
+people,skin_tone,medium,2,2

@@ -1,0 +1,381 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,8
+atmosphere,aesthetic_qualities,realistic,12
+atmosphere,color,black,2
+atmosphere,color,brown,2
+atmosphere,color,mediumblue,4
+atmosphere,color,orangered,1
+atmosphere,color,per image share,0
+atmosphere,color,within attribute share,0
+atmosphere,contrast_level,high,4
+atmosphere,contrast_level,medium,13
+atmosphere,dominant_palette,black,6
+atmosphere,dominant_palette,medium blue,2
+atmosphere,dominant_palette,orange red,1
+atmosphere,dominant_palette,red,1
+atmosphere,dominant_palette,unknown,9
+atmosphere,color_temperature,cool,12
+atmosphere,color_temperature,neutral,5
+atmosphere,saturation_level,neutral,6
+atmosphere,saturation_level,vivid,2
+atmosphere,mood,calm,16
+atmosphere,mood,joyful,2
+atmosphere,mood,minimalistic,1
+atmosphere,saturation_level,neutral,7
+atmosphere,saturation_level,vivid,1
+background,object_count_by_position_total,background center,16
+background,object_count_by_position_total,background left,4
+background,object_count_by_position_total,background right,5
+background,object_count_by_position_total,foreground center,23
+background,object_count_by_position_total,foreground left,17
+background,object_count_by_position_total,foreground right,17
+background,object_count_by_position_total,midground center,115
+background,object_count_by_position_total,midground left,13
+background,object_count_by_position_total,midground right,17
+background,position,background center,9
+background,position,background left,3
+background,position,background right,1
+background,position,foreground center,15
+background,position,foreground left,8
+background,position,foreground right,8
+background,position,midground center,11
+background,position,midground left,6
+background,position,midground right,7
+background,position,unknown,1
+camera,crop,bottom merged variants,7
+camera,depth_of_field,deep,4
+camera,depth_of_field,deep dof,2
+camera,depth_of_field,moderate,4
+camera,depth_of_field,moderate dof,1
+camera,depth_of_field,per image share,0
+camera,depth_of_field,shallow,8
+camera,depth_of_field,shallow dof,6
+camera,depth_of_field,within attribute share,0
+camera,focal_length,normal,3
+camera,focal_length,per image share,0
+camera,focal_length,telephoto,2
+camera,focal_length,wide,3
+camera,focal_length,within attribute share,0
+camera,framing,establishing,2
+camera,framing,full body,7
+camera,framing,headshot,1
+camera,framing,medium,9
+camera,framing,wide,7
+camera,perspective,eye level,27
+camera,perspective,per image share,0
+camera,perspective,within attribute share,0
+environment,aisle_width,medium,1
+environment,aisle_width,unknown,2
+environment,aisle_width,wide,2
+environment,color,beige,3
+environment,color,black,8
+environment,color,blue,1
+environment,color,ghostwhite,4
+environment,color,gray,5
+environment,color,green,14
+environment,color,orange,15
+environment,color,red,3
+environment,color,silver,7
+environment,color,white,10
+environment,indoor_outdoor,unknown,20
+environment,location_type,grocery store,2
+environment,location_type,grocery supermarket canonical,7
+environment,location_type,supermarket,6
+environment,location_type,supermarket aisle,5
+environment,material,acoustic ceiling tiles,3
+environment,material,cardboard,2
+environment,material,ceramic tile,10
+environment,material,glass,3
+environment,material,metal,7
+environment,material,plastic,3
+environment,openness,contained,1
+environment,openness,corridor like,1
+environment,openness,enclosed,1
+environment,openness,open,4
+environment,openness,unknown,2
+environment,spatial_depth,deep,8
+environment,spatial_depth,moderate,2
+environment,spatial_layout_aisle_width,unknown,5
+environment,spatial_layout_aisle_width,wide,1
+environment,spatial_layout_depth,deep,3
+environment,spatial_layout_depth,moderate,6
+environment,spatial_layout_openness,open,4
+environment,spatial_layout_openness,unknown,5
+environment,surfaces_ceiling_color,black,4
+environment,surfaces_ceiling_finish,matte,6
+environment,surfaces_ceiling_material,acoustic tiles merged variants,3
+environment,surfaces_ceiling_material,metal,5
+environment,surfaces_ceiling_texture,smooth,4
+environment,surfaces_floor_color,beige,4
+environment,surfaces_floor_color,white,2
+environment,surfaces_floor_material,ceramic tile merged variants,10
+environment,surfaces_floor_texture,glossy,2
+environment,surfaces_floor_texture,smooth,8
+environment,surfaces_walls_color,wall black,3
+environment,surfaces_walls_color,wall darkslategrey,1
+environment,surfaces_walls_color,wall green,1
+environment,surfaces_walls_material,wall metal,1
+environment,surfaces_walls_material,wall paint,1
+environment,surfaces_walls_material,wall plastic,1
+environment,surfaces_walls_texture,wall smooth,2
+lighting,artifacts,background bokeh,1
+lighting,artifacts,background bokeh blur,1
+lighting,artifacts,minimal visible,1
+lighting,artifacts,minor specular highlights eyeglasses,1
+lighting,artifacts,motion blur,2
+lighting,artifacts,no lens flare,2
+lighting,artifacts,per image share,0
+lighting,artifacts,specular highlights,1
+lighting,artifacts,specular highlights packaging chrome,1
+lighting,artifacts,specular highlights plastic tile,1
+lighting,artifacts,specular reflections,1
+lighting,artifacts,specular reflections eyeglass lenses,1
+lighting,artifacts,specular reflections floor,1
+lighting,artifacts,specular reflections floor clear plastic packaging,1
+lighting,artifacts,specular reflections floor glass,1
+lighting,artifacts,specular reflections glossy produce packaging,1
+lighting,artifacts,specular reflections tile plastic,1
+lighting,artifacts,unknown,1
+lighting,artifacts,within attribute share,0
+lighting,color_temperature,cool,13
+lighting,color_temperature,neutral,6
+lighting,contrast_level,high,4
+lighting,contrast_level,medium,15
+lighting,directionality,top,10
+lighting,hardness,medium,1
+lighting,hardness,soft,9
+lighting,saturation_level,neutral,15
+lighting,saturation_level,vivid,3
+lighting,shadows,soft,20
+lighting,sources_count,four or more light,19
+lighting,sources_count,three light,1
+lighting,sources_directionality,unknown,12
+lighting,sources_hardness,medium,1
+lighting,sources_hardness,soft,9
+lighting,sources_type,artificial,10
+lighting,sources_type,artificial light,10
+objects,color,beige,4
+objects,color,black,21
+objects,color,blue,8
+objects,color,brown,5
+objects,color,crimson,2
+objects,color,darkblue,2
+objects,color,darkgreen,2
+objects,color,darkslategrey,2
+objects,color,ghostwhite,4
+objects,color,gray,10
+objects,color,green,27
+objects,color,lightgray,1
+objects,color,mediumblue,1
+objects,color,mediumpurple,1
+objects,color,orange,28
+objects,color,palegreen,2
+objects,color,purple,2
+objects,color,red,3
+objects,color,silver,12
+objects,color,tan,1
+objects,color,teal,1
+objects,color,white,13
+objects,color,yellow,3
+objects,condition,clean,9
+objects,condition,orderly,6
+objects,condition,stocked,6
+objects,condition,unknown,0
+objects,condition,well maintained,5
+objects,finish,backlit,1
+objects,finish,brushed,1
+objects,finish,glossy,11
+objects,finish,matte,6
+objects,finish,reflective,5
+objects,finish,unknown,1
+objects,material,acrylic diffuser,1
+objects,material,cardboard,9
+objects,material,ceramic,4
+objects,material,coated metal,4
+objects,material,glass,4
+objects,material,lcd,1
+objects,material,metal,29
+objects,material,organic,7
+objects,material,packaging materials,5
+objects,material,painted metal,2
+objects,material,paper,2
+objects,material,per image share,0
+objects,material,plastic,34
+objects,material,stainless steel,3
+objects,material,unknown,2
+objects,material,vegetation,3
+objects,material,within attribute share,0
+objects,material,wood,2
+objects,texture,brushed metal,1
+objects,texture,clear glass,1
+objects,texture,crinkled,1
+objects,texture,fibrous,1
+objects,texture,glossy,10
+objects,texture,glossy plastic,1
+objects,texture,leafy,1
+objects,texture,matte,3
+objects,texture,matte peel,1
+objects,texture,polished,3
+objects,texture,polished face,1
+objects,texture,reflective,1
+objects,texture,smooth,13
+objects,texture,subtle grout lines,1
+objects,texture,textured,4
+objects,texture,textured rind,1
+objects,type,bakery tray,1
+objects,type,ceiling,1
+objects,type,digital display screens,1
+objects,type,display unit,1
+objects,type,endcap display,1
+objects,type,endcap shelving,1
+objects,type,fixture,7
+objects,type,floor,4
+objects,type,floor area,1
+objects,type,floor surface,1
+objects,type,handheld package,1
+objects,type,hanging sign,1
+objects,type,hvac duct,1
+objects,type,overhead sign,1
+objects,type,packaged box,1
+objects,type,produce,12
+objects,type,produce basket,1
+objects,type,produce crate,2
+objects,type,produce display,5
+objects,type,produce tray,1
+objects,type,refrigerated produce shelf,2
+objects,type,refrigerated shelf,2
+objects,type,refrigerated shelf bank,1
+objects,type,refrigerated shelving,7
+objects,type,retail shelving,2
+objects,type,shelf edge sale tags,1
+objects,type,shelf price strip,1
+objects,type,shelving,24
+objects,type,shelving unit,6
+objects,type,shopping basket,1
+objects,type,shopping cart,9
+objects,type,sign,1
+objects,type,unknown,6
+people,age_range,middle aged,19
+people,age_range,older adult,1
+people,clothing_color,black,26
+people,clothing_color,blue,41
+people,clothing_color,brown,1
+people,clothing_color,gray,7
+people,clothing_color,per image share,0
+people,clothing_color,pink,1
+people,clothing_color,red,3
+people,clothing_color,tan,2
+people,clothing_color,white,14
+people,clothing_color,within attribute share,0
+people,clothing_garment,belt,8
+people,clothing_garment,dress shoes,2
+people,clothing_garment,necktie merged neck tie ne from variants,7
+people,clothing_garment,shirt,9
+people,clothing_garment,shoes,2
+people,clothing_garment,suit jacket,9
+people,clothing_garment,trousers,5
+people,clothing_material,cotton,9
+people,clothing_material,leather,12
+people,clothing_material,silk,7
+people,clothing_material,wool family,12
+people,eyewear_frame_color,black,12
+people,eyewear_frame_color,silver,3
+people,eyewear_present,no,3
+people,eyewear_present,yes,15
+people,eyewear_type,eyeglasses rectangular,10
+people,facial_hair_color,darkblue,1
+people,facial_hair_color,gray,1
+people,facial_hair_present,no,16
+people,facial_hair_present,yes,2
+people,facial_hair_style,stubble beard,1
+people,gender_presentation,male,20
+people,hair_color,black,1
+people,hair_color,brown,2
+people,hair_color,gray,17
+people,hair_present,yes,20
+people,hair_style,shaved,1
+people,hair_style,short,19
+people,hair_style,straight,5
+people,head_covering_present,no,10
+people,pose,forward leaning,1
+people,pose,neutral posture,1
+people,pose,per image share,0
+people,pose,relaxed,2
+people,pose,slight forward lean,1
+people,pose,slightly hunched,1
+people,pose,slightly leaning forward,1
+people,pose,standing,1
+people,pose,upright,8
+people,pose,walking,1
+people,pose,walking forward,1
+people,pose,within attribute share,0
+people,activity_activities,posing for camera,1
+people,activity_activities,smiling,2
+people,activity_activities,standing,8
+people,activity_activities,unknown,3
+people,activity_gaze_direction,up,5
+people,activity_occlusions,partial occlusion,9
+people,activity_occlusions,significant occlusion,1
+people,activity_orientation,front,8
+people,activity_orientation,three quarter,1
+people,activity_pose,arms crossed,1
+people,activity_pose,hands in pockets merged variants,4
+people,activity_pose,relaxed merged variants,7
+people,activity_pose,unknown,8
+people,activity_pose,upright merged variants,10
+people,role_hint,unknown,3
+people,skin_tone,light,16
+people,skin_tone,medium,4
+safety,hazards,no,10
+safety,hazards,no detected,10
+safety,nsfw,no content detected,10
+safety,nsfw,unknown,10
+texts,content,detected text ecooury,1
+texts,font_style,bold,1
+texts,font_style,sans,1
+texts,legibility,illegible,24
+texts,legibility,not legible,14
+texts,legibility,not legible distinct token,3
+texts,legibility,partial,1
+texts,legibility,partially legible,1
+texts,legibility,per image share,0
+texts,legibility,unreadable,2
+texts,legibility,within attribute share,0
+texts,plane,background,8
+texts,plane,foreground,2
+texts,plane,midground,5
+texts,plane,per image share,0
+texts,plane,text background,6
+texts,plane,text foreground,2
+texts,plane,text midground,7
+texts,plane,text on background,8
+texts,plane,text on foreground,2
+texts,plane,text on midground,5
+texts,plane,within attribute share,0
+texts,side,text center,8
+texts,side,text left,13
+texts,side,text right,8
+totals,images,total,10
+totals,object_instances,total,69
+totals,people_instances,total,10
+totals,text_instances,total,15
+uncertainty,note,aesthetic qualities palette mapping enum unspecified,1
+uncertainty,note,approximate counts provided for produce items,1
+uncertainty,note,blurry small package labels on right shelving,39
+uncertainty,note,exact counts of packaged bakery units approx 10,1
+uncertainty,note,exact floor tile material ceramic vs porcelain uncertain,1
+uncertainty,note,exact packaged product identities brands not identifiable,1
+uncertainty,note,exact skin tone shade approximate between light medium,1
+uncertainty,note,heavily blurred distant shelving beyond dof indiscernible,1
+uncertainty,note,possible small handheld items or wrist accessories occluded,1
+uncertainty,note,small fixtures security cameras badges not distinguishable,1
+uncertainty,note,small metallic lapel pin wording not discernible,1
+uncertainty,note,unknown,12
+uncertainty,token,absence of other shoppers beyond central figure uncertain,1
+uncertainty,token,aisle width not specified precisely,1
+uncertainty,token,handheld packaged food label text not legible,1
+uncertainty,token,other single instance uncertainty notes aggregated for brevity,12
+uncertainty,token,overhead aisle signs illegible due to distance blur,7
+uncertainty,token,shelf edge price labels not legible,7
+uncertainty,token,time of day not specified,1
+uncertainty,token,unknown,6

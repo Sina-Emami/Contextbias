@@ -1,0 +1,408 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,10
+atmosphere,aesthetic_qualities,realistic,12
+atmosphere,aesthetic_qualities,unknown,8
+atmosphere,color_temperature,cool,2
+atmosphere,color_temperature,unknown,8
+atmosphere,color_temperature,warm,10
+atmosphere,contrast_level,medium,12
+atmosphere,contrast_level,unknown,8
+atmosphere,dominant_palette,unknown,20
+atmosphere,mood,calm,3
+atmosphere,mood,joyful,1
+atmosphere,mood,unknown,6
+atmosphere,saturation_level,neutral,12
+atmosphere,saturation_level,unknown,8
+background,object_counts_by_position,background center,18
+background,object_counts_by_position,background left,5
+background,object_counts_by_position,background right,12
+background,object_counts_by_position,foreground center,22
+background,object_counts_by_position,foreground left,13
+background,object_counts_by_position,foreground right,17
+background,object_counts_by_position,midground center,17
+background,object_counts_by_position,midground left,16
+background,object_counts_by_position,midground right,13
+background,object_counts_by_position,unknown,1
+camera,angle,unknown,10
+camera,crop,lower body cropped,2
+camera,crop,lower body cropped below waist,1
+camera,crop,lower frame partially occluded,1
+camera,crop,medium tight,1
+camera,crop,partial lower body,1
+camera,crop,upper ventilation hood partially cropped,1
+camera,depth_of_field,moderate,1
+camera,depth_of_field,shallow,8
+camera,depth_of_field,unknown,1
+camera,focal_length,normal,1
+camera,focal_length,telephoto,3
+camera,focal_length,unknown,6
+camera,framing,headshot,3
+camera,framing,medium,9
+camera,framing,unknown,1
+camera,perspective,eye level,6
+camera,perspective,unknown,4
+environment,ceiling_material,metal,1
+environment,ceiling_material,metal ductwork,1
+environment,ceiling_material,plastic,1
+environment,ceiling_material,stainless steel,2
+environment,ceiling_material,unknown,4
+environment,ceiling_material,wood,1
+environment,ceiling_texture,brushed,2
+environment,ceiling_texture,frosted,1
+environment,ceiling_texture,matte,1
+environment,ceiling_texture,smooth,2
+environment,ceiling_texture,unknown,4
+environment,ceiling_texture,varnished,1
+environment,floor_color,black,5
+environment,floor_color,mediumpurple,1
+environment,floor_material,tile,1
+environment,floor_material,unknown,5
+environment,floor_texture,smooth,1
+environment,floor_texture,unknown,5
+environment,indoor_outdoor,unknown,10
+environment,location_type,commercial kitchen,5
+environment,location_type,kitchen unspecified,1
+environment,location_type,unknown,4
+environment,spatial_layout_depth,layered,1
+environment,spatial_layout_depth,moderate,4
+environment,spatial_layout_depth,shallow,1
+environment,spatial_layout_depth,unknown,4
+environment,spatial_layout_openness,moderately open,1
+environment,spatial_layout_openness,open,5
+environment,spatial_layout_openness,unknown,4
+environment,time_of_day_hint,unknown,10
+environment,walls_color,brown,2
+environment,walls_color,gray,3
+environment,walls_color,lightblue,1
+environment,walls_color,mediumpurple,1
+environment,walls_color,silver,3
+environment,walls_color,white,7
+environment,walls_condition,clean,10
+environment,walls_condition,fingerprints,1
+environment,walls_condition,good,4
+environment,walls_condition,maintained,1
+environment,walls_condition,used,1
+environment,walls_finish,brushed,3
+environment,walls_finish,glazed,1
+environment,walls_finish,gloss,1
+environment,walls_finish,glossy,5
+environment,walls_finish,lacquered,1
+environment,walls_finish,matte,1
+environment,walls_finish,polished,1
+environment,walls_finish,smooth,2
+environment,walls_finish,unknown,1
+environment,walls_finish,varnished,1
+environment,walls_material,ceramic,4
+environment,walls_material,ceramic tile,3
+environment,walls_material,glass,1
+environment,walls_material,metal,2
+environment,walls_material,painted plaster,2
+environment,walls_material,stainless steel,3
+environment,walls_material,tile,2
+environment,walls_material,wood,2
+environment,walls_texture,brushed,2
+environment,walls_texture,brushed metal,1
+environment,walls_texture,glazed,1
+environment,walls_texture,glossy,4
+environment,walls_texture,reflective,1
+environment,walls_texture,smooth,11
+environment,weather,unknown,10
+lighting,color_temperature,cool,2
+lighting,color_temperature,unknown,6
+lighting,color_temperature,warm,12
+lighting,contrast_level,medium,6
+lighting,contrast_level,unknown,4
+lighting,saturation_level,neutral,6
+lighting,saturation_level,unknown,4
+lighting,shadows,soft,18
+lighting,shadows,unknown,2
+lighting,sources_count,one light source,4
+lighting,sources_count,two light,2
+lighting,sources_count,unknown,12
+lighting,sources_directionality,backlight,3
+lighting,sources_directionality,side light,4
+lighting,sources_directionality,top light,9
+lighting,sources_directionality,unknown,2
+lighting,sources_hardness,soft,14
+lighting,sources_hardness,unknown,4
+lighting,sources_type,artificial light,9
+lighting,sources_type,unknown,9
+objects,color,black,5
+objects,color,brown,11
+objects,color,crimson,1
+objects,color,darkblue,1
+objects,color,gray,6
+objects,color,green,8
+objects,color,lawngreen,1
+objects,color,lightgreen,1
+objects,color,lightyellow,3
+objects,color,orange,1
+objects,color,pink,1
+objects,color,purple,1
+objects,color,red,6
+objects,color,silver,26
+objects,color,white,5
+objects,color,yellow,1
+objects,condition,clean,13
+objects,condition,fresh,10
+objects,condition,fresh appearing,1
+objects,condition,good,1
+objects,condition,light wear marks,1
+objects,condition,lightly used,2
+objects,condition,maintained,1
+objects,condition,moderate use,1
+objects,condition,neatly positioned,1
+objects,condition,orderly,1
+objects,condition,organized,2
+objects,condition,polished,1
+objects,condition,ripe,1
+objects,condition,sharp,2
+objects,condition,uncut,2
+objects,condition,unknown,1
+objects,condition,use,2
+objects,condition,used,17
+objects,condition,used but well maintained,1
+objects,condition,well maintained,1
+objects,condition,worn,2
+objects,finish,brushed,1
+objects,finish,fresh,1
+objects,finish,glazed,2
+objects,finish,glossy,2
+objects,finish,matte,2
+objects,finish,planed,1
+objects,finish,polished,11
+objects,finish,reflective,2
+objects,finish,shiny,1
+objects,finish,smooth,2
+objects,finish,unknown,12
+objects,finish,used,1
+objects,material,aluminum,1
+objects,material,cast iron,1
+objects,material,cast iron or nonstick,1
+objects,material,ceramic,6
+objects,material,chrome,1
+objects,material,fresh produce,1
+objects,material,metal,11
+objects,material,organic,4
+objects,material,plant,3
+objects,material,plastic,1
+objects,material,produce,2
+objects,material,seafood,1
+objects,material,stainless steel,20
+objects,material,stone,1
+objects,material,wood,15
+objects,size_class,handheld,1
+objects,size_class,large,2
+objects,size_class,medium,14
+objects,size_class,small,12
+objects,size_class,unknown,1
+objects,size_class,varied,1
+objects,size_class,various,1
+objects,state,being handled,1
+objects,state,being prepped,1
+objects,state,containing food,1
+objects,state,contains arranged vegetables,1
+objects,state,contains chopped green herbs,1
+objects,state,contains dark liquid,1
+objects,state,contains food,1
+objects,state,contains produce,1
+objects,state,contains ripe red tomatoes herbs,1
+objects,state,contains sliced vegetables,1
+objects,state,contains whole tomatoes herbs,1
+objects,state,exposed blade,1
+objects,state,flame visible,1
+objects,state,has garlic herbs scattered,1
+objects,state,has sliced vegetables,1
+objects,state,hot,1
+objects,state,hung,1
+objects,state,idle,1
+objects,state,raw,1
+objects,state,sharp,1
+objects,state,stacked,1
+objects,state,static,3
+objects,state,uncut,4
+objects,state,use,2
+objects,state,whole,1
+objects,texture,brushed,7
+objects,texture,brushed metal,2
+objects,texture,crisp,1
+objects,texture,fibrous,1
+objects,texture,fine wood grain,1
+objects,texture,fleshy,1
+objects,texture,fresh,1
+objects,texture,glazed,1
+objects,texture,glazed smooth,1
+objects,texture,glossy,2
+objects,texture,grain visible,1
+objects,texture,knife marks,1
+objects,texture,lacquered,1
+objects,texture,leaf,1
+objects,texture,leafy,4
+objects,texture,matte,5
+objects,texture,metallic,1
+objects,texture,moist,1
+objects,texture,oiled,1
+objects,texture,papery,1
+objects,texture,polished,8
+objects,texture,polished interior,1
+objects,texture,reflective,10
+objects,texture,rough,1
+objects,texture,sanded,1
+objects,texture,seasoned,1
+objects,texture,sharp,1
+objects,texture,shiny,2
+objects,texture,slightly shiny,1
+objects,texture,slightly textured,1
+objects,texture,smooth,26
+objects,texture,textured,2
+objects,texture,textured grain,2
+objects,texture,unknown,1
+objects,texture,waxy,1
+objects,texture,wood grain,2
+objects,texture,worn cutting surface,1
+objects,type,appliance,5
+objects,type,cooking vessel,62
+objects,type,food generic,2
+objects,type,hanging cookware,1
+objects,type,jar,2
+objects,type,metal rail,1
+objects,type,overhead vent hood,1
+objects,type,pendant lamp,1
+objects,type,plates,1
+objects,type,potted plant,1
+objects,type,preparation countertop,1
+objects,type,range,2
+objects,type,range hood,3
+objects,type,shelving,13
+objects,type,small containers,1
+objects,type,utensil holder,1
+objects,type,ventilation hood,3
+objects,type,wall,1
+objects,type,window,4
+objects,type,wooden bowl,1
+objects,type,work surface,2
+people,activities,cooking,2
+people,activities,holding frying pan,1
+people,activities,stirring,1
+people,age_range,middle aged,6
+people,age_range,unknown,1
+people,age_range,young adult,4
+people,clothing_color,black,15
+people,clothing_color,brown,0
+people,clothing_color,gray,1
+people,clothing_color,red,1
+people,clothing_color,white,12
+people,clothing_garment,apron,2
+people,clothing_garment,chef jacket,13
+people,clothing_garment,chef trousers,1
+people,clothing_garment,neckerchief,2
+people,clothing_garment,pants,1
+people,clothing_garment,short sleeved jacket,1
+people,clothing_garment,trousers,1
+people,clothing_garment,waist apron,5
+people,clothing_garment,wrist accessories,1
+people,clothing_material,cotton,9
+people,clothing_material,cotton blend,3
+people,clothing_material,cotton like,1
+people,clothing_material,fabric,2
+people,clothing_material,heavy duty fabric,1
+people,clothing_material,heavy fabric,2
+people,clothing_material,poly cotton,1
+people,clothing_material,rubber,1
+people,clothing_material,synthetic,1
+people,clothing_material,unknown,2
+people,clothing_material,woven fabric,4
+people,eyewear_present,no,9
+people,eyewear_present,unknown,1
+people,eyewear_present,yes,1
+people,facial_hair_color,black,4
+people,facial_hair_color,brown,1
+people,facial_hair_color,dark blue,5
+people,facial_hair_color,gray,1
+people,facial_hair_present,unknown,1
+people,facial_hair_present,yes,10
+people,facial_hair_style,full beard,1
+people,facial_hair_style,mustache,1
+people,facial_hair_style,short,1
+people,facial_hair_style,short beard,2
+people,facial_hair_style,short trimmed beard,1
+people,facial_hair_style,stubble,2
+people,facial_hair_style,trimmed beard,2
+people,facial_hair_style,trimmed mustache,1
+people,facial_hair_style,trimmed stubble,1
+people,gaze_direction,down,6
+people,gaze_direction,unknown,3
+people,gaze_direction,up,2
+people,gender_presentation,male,11
+people,hair_color,black,6
+people,hair_color,brown,5
+people,hair_color,gray,1
+people,hair_present,yes,11
+people,hair_style,short,10
+people,hair_style,unknown,1
+people,head_covering_color,black,1
+people,head_covering_color,white,4
+people,head_covering_present,no,6
+people,head_covering_present,unknown,1
+people,head_covering_present,yes,4
+people,head_covering_type,chef hat,2
+people,head_covering_type,short chef cap,1
+people,head_covering_type,tall pleated chef hat,1
+people,head_covering_type,unknown,1
+people,occlusions,partial occlusion,10
+people,occlusions,unknown,1
+people,orientation,front,5
+people,orientation,three quarter,2
+people,orientation,unknown,4
+people,pose,both hands resting on counter,1
+people,pose,engaged posture,3
+people,pose,focused posture,1
+people,pose,forward leaning,2
+people,pose,hands on countertop,1
+people,pose,leaning forward,1
+people,pose,relaxed torso,1
+people,pose,slight forward lean,2
+people,pose,slightly bent forward,1
+people,pose,slightly forward,1
+people,pose,slightly forward leaning,2
+people,pose,slightly leaned forward,1
+people,pose,slightly leaning,1
+people,pose,standing,1
+people,pose,upright,3
+people,role_hint,chef,3
+people,role_hint,unknown,2
+people,skin_tone,light,3
+people,skin_tone,medium,7
+people,skin_tone,unknown,1
+safety,hazards,exposed knife blade,1
+safety,hazards,hot cookware,1
+safety,hazards,hot pan active cooktop,1
+safety,hazards,hot surface potential,1
+safety,hazards,no,4
+safety,hazards,open flame,1
+safety,hazards,sharp knife,1
+safety,hazards,sharp knife on cutting board,1
+safety,hazards,unknown,1
+safety,nsfw,unknown,10
+texts,content,illegible text,1
+texts,font_style,unknown,13
+texts,legibility,illegible,13
+texts,plane,text on foreground,3
+texts,plane,text on midground,10
+texts,plane_distribution,foreground,3
+texts,plane_distribution,midground,10
+texts,side,text center,10
+texts,side,text left,2
+texts,side,text right,1
+uncertainty,token,contents of small jars not identifiable colors only,1
+uncertainty,token,distant countertop items background left blurred indiscernible,38
+uncertainty,token,exact count of small jars approximate 3 4,1
+uncertainty,token,exact counts of stacked dishes approximate 3 5,1
+uncertainty,token,exact hanging cookware count approximate 6 and partially occluded,1
+uncertainty,token,small embroidered script left chest area illegible,14
+uncertainty,token,small labels printed text not legible,1
+uncertainty,token,steam or motion blur partially occluding midground center,1
+uncertainty,token,time of day beyond daytime unspecified,1
+uncertainty,token,time of day suggested daytime unspecified,1
+uncertainty,token,unknown,7
+uncertainty,token,white flour like powder uncertain substance,1

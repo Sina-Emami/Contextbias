@@ -1,0 +1,108 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,4,2
+scene_appearance,aesthetic_qualities,realistic,7,2
+scene_appearance,dominant_colors,black,6,3
+scene_appearance,dominant_colors,brown,9,3
+scene_appearance,dominant_colors,mediumblue,5,3
+scene_appearance,color_temperature,cool,7,2
+scene_appearance,color_temperature,neutral,1,2
+scene_appearance,mood,calm,20,1
+camera,depth_of_field,deep,6,3
+camera,depth_of_field,moderate,5,3
+camera,depth_of_field,shallow,18,3
+camera,framing,close up,2,7
+camera,framing,establishing,1,7
+camera,framing,full body,3,7
+camera,framing,headshot,1,7
+camera,framing,medium,18,7
+camera,framing,others,0,7
+camera,framing,wide,12,7
+camera,perspective,eye level,16,1
+objects,type,bag,1,11
+objects,type,cart single,1,11
+objects,type,clock,1,11
+objects,type,distant shopping carts or baskets,1,11
+objects,type,fruit single,1,11
+objects,type,packaged produce boxes,3,11
+objects,type,produce basket,2,11
+objects,type,produce basket wire cart variant,2,11
+objects,type,refrigerated glass door,1,11
+objects,type,shopping basket,1,11
+objects,type,shopping cart,10,11
+people,activities,examining item,2,13
+people,activities,holding handheld produce basket,1,13
+people,activities,holding orange fruit in right hand,1,13
+people,activities,handling produce,4,13
+people,activities,inspecting packaged produce,1,13
+people,activities,inspecting soil,2,13
+people,activities,pushing shopping cart,3,13
+people,activities,reaching left hand toward left shelf,1,13
+people,activities,reaching right hand,1,13
+people,activities,mopping,2,13
+people,activities,handling soil,1,13
+people,activities,viewing shelves,1,13
+people,activities,walking,1,13
+people,age_range,middle aged,10,3
+people,age_range,older adult,9,3
+people,age_range,young adult,2,3
+people,clothing_color,black,22,10
+people,clothing_color,blue,27,10
+people,clothing_color,brown,6,10
+people,clothing_color,crimson,1,10
+people,clothing_color,gray,7,10
+people,clothing_color,green,7,10
+people,clothing_color,orange,1,10
+people,clothing_color,silver,1,10
+people,clothing_color,tan,1,10
+people,clothing_color,white,4,10
+people,clothing_garment,bib apron,1,7
+people,clothing_garment,necktie,1,7
+people,clothing_garment,outer jacket,2,7
+people,clothing_garment,shirt,1,7
+people,clothing_garment,shirt,2,7
+people,clothing_garment,shoes,4,7
+people,clothing_garment,trousers,4,7
+people,clothing_garment,work trousers,2,7
+people,eyewear_present,no,5,2
+people,eyewear_present,yes,9,2
+people,eyewear_type,eyeglasses,2,6
+people,eyewear_type,metal rimmed,1,6
+people,eyewear_type,rectangular,2,6
+people,eyewear_type,rectangular glasses normalized,3,6
+people,eyewear_type,rimless,1,6
+people,eyewear_type,thin metal framed glasses,1,6
+people,hair_color,gray,1,3
+people,facial_hair_present,no,5,2
+people,facial_hair_present,yes,4,2
+people,facial_hair_style,mustache,2,3
+people,facial_hair_style,stubble,1,3
+people,facial_hair_style,stubble variants,3,3
+people,gaze_direction,down,5,4
+people,gaze_direction,left,6,4
+people,gaze_direction,right,3,4
+people,gaze_direction,up,3,4
+people,gender_presentation,male,21,1
+people,hair_color,black,7,3
+people,hair_color,brown,4,3
+people,hair_color,gray,23,3
+people,hair_present,yes,22,1
+people,hair_style,short,21,1
+people,head_covering_type,black,1,6
+people,head_covering_type,darkblue,1,6
+people,head_covering_present,no,6,2
+people,head_covering_present,yes,12,2
+people,head_covering_type,baseball cap,3,6
+people,head_covering_type,cap,2,6
+people,head_covering_type,flat cap,1,6
+people,head_covering_type,peaked cap,5,6
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,5,2
+people,pose,leaning,8,2
+people,pose,standing,3,2
+people,pose,standing,18,2
+people,pose,standing,1,2
+people,skin_tone,dark,1,3
+people,skin_tone,light,9,3
+people,skin_tone,medium,11,3

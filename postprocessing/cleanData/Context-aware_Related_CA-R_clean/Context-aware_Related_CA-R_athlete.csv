@@ -1,0 +1,393 @@
+cohort,standardized_dimension,standardized_label,count,bins
+atmosphere,aesthetic_quality,cinematic,9,4
+atmosphere,aesthetic_quality,dreamy,1,4
+atmosphere,aesthetic_quality,gritty,1,4
+atmosphere,aesthetic_quality,realistic,7,4
+atmosphere,color_temperature,cool,2,3
+atmosphere,color_temperature,neutral,3,3
+atmosphere,color_temperature,warm,11,3
+atmosphere,contrast_level,high,9,2
+atmosphere,contrast_level,medium,7,2
+atmosphere,dominant_palette,black,12,7
+atmosphere,dominant_palette,blue,2,7
+atmosphere,dominant_palette,brown,14,7
+atmosphere,dominant_palette,cyan,4,7
+atmosphere,dominant_palette,medium blue,5,7
+atmosphere,dominant_palette,mediumblue,3,7
+atmosphere,dominant_palette,red,2,7
+atmosphere,mood,dramatic,10,2
+atmosphere,mood,tense,9,2
+atmosphere,saturation_level,neutral,13,2
+atmosphere,saturation_level,vivid,3,2
+background,object_counts_by_position_total,background center,20,9
+background,object_counts_by_position_total,background left,13,9
+background,object_counts_by_position_total,background right,12,9
+background,object_counts_by_position_total,foreground center,28,9
+background,object_counts_by_position_total,foreground left,8,9
+background,object_counts_by_position_total,foreground right,3,9
+background,object_counts_by_position_total,midground center,8,9
+background,object_counts_by_position_total,midground left,5,9
+background,object_counts_by_position_total,midground right,2,9
+background,position,background center,9,9
+background,position,background left,4,9
+background,position,background right,5,9
+background,position,foreground center,14,9
+background,position,foreground left,4,9
+background,position,foreground right,2,9
+background,position,midground center,6,9
+background,position,midground left,3,9
+background,position,midground right,1,9
+camera,angle,eye level,2,1
+camera,crop,foot head margin,1,10
+camera,crop,full body equal,1,10
+camera,crop,lower legs cropped,1,10
+camera,crop,lower legs partially cropped,1,10
+camera,crop,lower right leg cropped by edge,1,10
+camera,crop,lower shins cropped,1,10
+camera,crop,minimal lower edge shoe,1,10
+camera,crop,primary runner occupies midground right third,1,10
+camera,crop,right side cropped,1,10
+camera,crop,upper head cropped,1,10
+camera,depth_of_field,deep,1,3
+camera,depth_of_field,moderate,1,3
+camera,depth_of_field,shallow,16,3
+camera,focal_length,normal,1,3
+camera,focal_length,telephoto,4,3
+camera,focal_length,wide,1,3
+camera,framing,full body,8,2
+camera,framing,medium,8,2
+camera,perspective,eye level,7,2
+camera,perspective,low angle,7,2
+environment,location_type,athletic facility,3,12
+environment,location_type,athletics stadium,3,12
+environment,location_type,athletics track,4,12
+environment,location_type,indoor stadium,1,12
+environment,location_type,outdoor athletic facility,1,12
+environment,location_type,outdoor athletic facility merged variants,2,12
+environment,location_type,outdoor sports facility,1,12
+environment,location_type,running track,1,12
+environment,location_type,sports stadium,1,12
+environment,location_type,sports venue,1,12
+environment,location_type,stadium,1,12
+environment,location_type,track stadium,1,12
+environment,openness,moderate,1,2
+environment,openness,open,6,2
+environment,spatial_layout_depth,deep,4,3
+environment,spatial_layout_depth,moderate,2,3
+environment,spatial_layout_depth,shallow,3,3
+environment,surfaces_floor_color,brown,4,7
+environment,surfaces_floor_color,crimson,1,7
+environment,surfaces_floor_color,deeppink,1,7
+environment,surfaces_floor_color,green,2,7
+environment,surfaces_floor_color,red,5,7
+environment,surfaces_floor_color,tomato,1,7
+environment,surfaces_floor_color,white,1,7
+environment,surfaces_floor_material,rubber,3,6
+environment,surfaces_floor_material,rubberized,1,6
+environment,surfaces_floor_material,rubberized track,1,6
+environment,surfaces_floor_material,synthetic,2,6
+environment,surfaces_floor_material,synthetic rubber,3,6
+environment,surfaces_floor_material,turf,1,6
+environment,time_of_day_hint,afternoon,1,2
+environment,time_of_day_hint,evening,1,2
+environment,walls_material,concrete,3,4
+environment,walls_material,metal,3,4
+environment,walls_material,painted wall,1,4
+environment,walls_material,siding,1,4
+environment,weather,clear,1,5
+environment,weather,cloudy,4,5
+environment,weather,overcast,2,5
+environment,weather,storm,1,5
+environment,weather,sunny,5,5
+lighting,artifacts,background blur,1,17
+lighting,artifacts,background bokeh blur,1,17
+lighting,artifacts,bloom,3,17
+lighting,artifacts,camera glare fence edges,1,17
+lighting,artifacts,lens diffusion,1,17
+lighting,artifacts,lens flare,1,17
+lighting,artifacts,minor lens flare,1,17
+lighting,artifacts,motion blur,2,17
+lighting,artifacts,motion blur lower right foot,1,17
+lighting,artifacts,motion blur moving subjects,1,17
+lighting,artifacts,radial motion blur,1,17
+lighting,artifacts,selective sharpness,1,17
+lighting,artifacts,slight veiling around sun disk,1,17
+lighting,artifacts,specular reflections metal rail,1,17
+lighting,artifacts,subtle sheen skin clothing,1,17
+lighting,artifacts,sun flare bloom,1,17
+lighting,artifacts,sun starburst flare,1,17
+lighting,color_temperature,cool,2,3
+lighting,color_temperature,neutral,3,3
+lighting,color_temperature,warm,11,3
+lighting,contrast_level,high,9,2
+lighting,contrast_level,medium,7,2
+lighting,directionality,backlight,6,4
+lighting,directionality,sidelight,2,4
+lighting,directionality,top light,2,4
+lighting,directionality,toplight,2,4
+lighting,hardness,hard,2,5
+lighting,hardness,hard light,2,5
+lighting,hardness,medium,3,5
+lighting,hardness,soft,7,5
+lighting,hardness,soft light,4,5
+lighting,saturation_level,neutral,13,2
+lighting,saturation_level,vivid,3,2
+lighting,shadows,casting,4,3
+lighting,shadows,hard,5,3
+lighting,shadows,soft,19,3
+lighting,sources_count,one source,12,1
+lighting,sources_type,artificial light,1,1
+objects,plane,background,27,6
+objects,plane,foreground,19,6
+objects,plane,midground,5,6
+objects,plane_distribution,background,18,3
+objects,plane_distribution,foreground,20,3
+objects,plane_distribution,midground,10,3
+objects,side,center,27,5
+objects,side,left,15,5
+objects,side,right,9,5
+objects,side_distribution,center,29,3
+objects,side_distribution,left,11,3
+objects,side_distribution,right,8,3
+objects,type,advertising band,1,48
+objects,type,advertising hoardings,1,48
+objects,type,advertising panel,1,48
+objects,type,boundary fence,1,48
+objects,type,building,2,48
+objects,type,canopy overhead structure,8,48
+objects,type,competition bib,1,48
+objects,type,curb,1,48
+objects,type,curbing,1,48
+objects,type,equipment starting wedge,1,48
+objects,type,fence,1,48
+objects,type,field poles,1,48
+objects,type,footwear shoes,2,48
+objects,type,infield,1,48
+objects,type,infield grass,1,48
+objects,type,lane curb,1,48
+objects,type,lane lines,4,48
+objects,type,lane markings,2,48
+objects,type,lane number paint,1,48
+objects,type,light poles,2,48
+objects,type,overhead support columns,1,48
+objects,type,paper bib,1,48
+objects,type,person object level,1,48
+objects,type,race bib,4,48
+objects,type,rail,1,48
+objects,type,railing,4,48
+objects,type,roof structure,1,48
+objects,type,roof truss,1,48
+objects,type,running shoe single,1,48
+objects,type,running track,4,48
+objects,type,seating,3,48
+objects,type,seating structure,1,48
+objects,type,shadow,1,48
+objects,type,shoe,1,48
+objects,type,sky,2,48
+objects,type,sky feature sun disk,1,48
+objects,type,spectator seating,3,48
+objects,type,spectator stands,1,48
+objects,type,stadium seating,1,48
+objects,type,stadium structure,1,48
+objects,type,starting wedge,1,48
+objects,type,sunlight flare,1,48
+objects,type,track generic,1,48
+objects,type,track surface,18,48
+objects,type,treeline,1,48
+objects,type,turf,1,48
+objects,type,vegetation,4,48
+objects,type,watch,1,48
+people,activities,accelerating,1,3
+people,activities,running activity,4,3
+people,activities,sprinting activity,10,3
+people,age_range,young adult,21,1
+people,clothing_color,black,20,10
+people,clothing_color,blue,10,10
+people,clothing_color,brown,1,10
+people,clothing_color,gray,1,10
+people,clothing_color,green,2,10
+people,clothing_color,orange,4,10
+people,clothing_color,pink,1,10
+people,clothing_color,red,4,10
+people,clothing_color,white,10,10
+people,clothing_color,yellow,2,10
+people,clothing_color_aggregated,black,21,9
+people,clothing_color_aggregated,blue,8,9
+people,clothing_color_aggregated,green,1,9
+people,clothing_color_aggregated,mediumblue,2,9
+people,clothing_color_aggregated,orange,5,9
+people,clothing_color_aggregated,pink,1,9
+people,clothing_color_aggregated,red,4,9
+people,clothing_color_aggregated,white,8,9
+people,clothing_color_aggregated,yellow,2,9
+people,clothing_condition,clean,4,12
+people,clothing_condition,even,4,12
+people,clothing_condition,fitted,3,12
+people,clothing_condition,good,3,12
+people,clothing_condition,partially legible,1,12
+people,clothing_condition,partially occluded,1,12
+people,clothing_condition,slight creasing,1,12
+people,clothing_condition,used,1,12
+people,clothing_condition,worn,2,12
+people,clothing_condition,worn but serviceable,1,12
+people,clothing_condition,worn outsole,1,12
+people,clothing_condition,worn sole,1,12
+people,clothing_fit_style,ankle length,1,4
+people,clothing_fit_style,low cut,1,4
+people,clothing_fit_style,regular,1,4
+people,clothing_fit_style,tight,21,4
+people,clothing_garment,competition bib,1,15
+people,clothing_garment,compression shorts,5,15
+people,clothing_garment,race bib,3,15
+people,clothing_garment,racing spike shoes,1,15
+people,clothing_garment,racing spikes variant,1,15
+people,clothing_garment,running shorts,5,15
+people,clothing_garment,running spikes,1,15
+people,clothing_garment,shoes general,3,15
+people,clothing_garment,shorts,4,15
+people,clothing_garment,singlet,8,15
+people,clothing_garment,sleeveless singlet,1,15
+people,clothing_garment,socks,2,15
+people,clothing_garment,tank top,2,15
+people,clothing_garment,wrist watch,1,15
+people,clothing_garment,wristband,1,15
+people,clothing_material,adhesive,1,13
+people,clothing_material,fabric,3,13
+people,clothing_material,knit,3,13
+people,clothing_material,mesh,6,13
+people,clothing_material,metal,1,13
+people,clothing_material,paper,7,13
+people,clothing_material,plastic,2,13
+people,clothing_material,polyester,2,13
+people,clothing_material,rubber,6,13
+people,clothing_material,studded sole,1,13
+people,clothing_material,synthetic,50,13
+people,clothing_material,textile,2,13
+people,clothing_material,woven,1,13
+people,clothing_texture,breathable,1,9
+people,clothing_texture,granular,0,9
+people,clothing_texture,knitted,4,9
+people,clothing_texture,matte,3,9
+people,clothing_texture,mesh,2,9
+people,clothing_texture,shiny,2,9
+people,clothing_texture,smooth,20,9
+people,clothing_texture,textured,3,9
+people,clothing_texture,thin,1,9
+people,eyewear_present,no,20,1
+people,facial_hair_color,black,2,2
+people,facial_hair_color,brown,1,2
+people,facial_hair_present,no,16,2
+people,facial_hair_present,yes,3,2
+people,facial_hair_style,short stubble,1,3
+people,facial_hair_style,stubble,1,3
+people,facial_hair_style,trimmed stubble,1,3
+people,gaze_direction,down,2,3
+people,gaze_direction,left,2,3
+people,gaze_direction,right,1,3
+people,gender_presentation,female,4,2
+people,gender_presentation,male,17,2
+people,hair_color,black,6,3
+people,hair_color,brown,15,3
+people,hair_color,red,1,3
+people,hair_present,yes,21,1
+people,hair_style,bun,2,5
+people,hair_style,curly,1,5
+people,hair_style,ponytail,2,5
+people,hair_style,shorts,16,5
+people,hair_style,updo,2,5
+people,head_covering_present,no,20,1
+people,occlusions,partial occlusion,9,1
+people,orientation,front,8,1
+people,pose,airborne stride,1,7
+people,pose,arms pumping,2,7
+people,pose,explosive sprinting,1,7
+people,pose,forward leaning,10,7
+people,pose,mid stride,6,7
+people,pose,sprinting,3,7
+people,pose,upright sprint posture,1,7
+people,pose_activity,preparing sprint,1,3
+people,pose_activity,running,2,3
+people,pose_activity,sprinting,6,3
+people,role_hint,appears competitive detailed,1,6
+people,role_hint,appears competitive sprinter,6,6
+people,role_hint,athlete generic,2,6
+people,role_hint,competitive athlete,3,6
+people,role_hint,competitive runner,2,6
+people,role_hint,track athlete,1,6
+people,skin_tone,dark,4,3
+people,skin_tone,light,8,3
+people,skin_tone,medium,9,3
+safety,hazards,no detected,8,2
+safety,hazards,no observed,8,2
+safety,nsfw,not,10,1
+texts,content,partial transcription s r dor,1,8
+texts,content,race bib fragment includes 17,1,8
+texts,content,text 136,1,8
+texts,content,text token 049,1,8
+texts,content,text token 197,1,8
+texts,content,text token 45,1,8
+texts,content,text token 9299,1,8
+texts,content,text token surso,1,8
+texts,font_style,bold,10,4
+texts,font_style,condensed,3,4
+texts,font_style,sans,7,4
+texts,font_style,sans serif,5,4
+texts,legibility,legible,4,4
+texts,legibility,legible text,4,4
+texts,legibility,partially legible,4,4
+texts,legibility,unreadable,1,4
+texts,plane,text in background,1,6
+texts,plane,text in foreground,5,6
+texts,plane,text in midground,7,6
+texts,side,text center,5,5
+texts,side,text left,1,5
+uncertainty,note,adjacent lane numbers partially out of frame not legible,1,44
+uncertainty,note,athlete rear torso cropped partially occluded,1,44
+uncertainty,note,athlete s right foot partially out of frame,1,44
+uncertainty,note,background beyond midground blurred small markings illegible,1,44
+uncertainty,note,background spectator faces indistinct blurred,1,44
+uncertainty,note,blurred rectangular object behind canopy not identifiable,1,44
+uncertainty,note,distant bleacher rows heavy blur spectator indiscernible,1,44
+uncertainty,note,distant crowd faces and clothing indistinct due to blur,1,44
+uncertainty,note,distant light pole fixture count approximated 3 4 uncertain,1,44
+uncertainty,note,distant metallic fixtures partially occluded not detailed,1,44
+uncertainty,note,distant small facility objects low detail not identifiable,1,44
+uncertainty,note,distant spectator seating row count approximate,1,44
+uncertainty,note,exact make model of running shoes not identifiable,1,44
+uncertainty,note,exact number of running lanes uncertain,1,44
+uncertainty,note,exact time day unspecified beyond daytime,2,44
+uncertainty,note,facial micro expressions not fully resolvable,1,44
+uncertainty,note,far background peripheral elements not visible,1,44
+uncertainty,note,gaze direction mapping uncertain detailed,1,44
+uncertainty,note,lane number painted markings partially occluded worn,1,44
+uncertainty,note,lower portions of shoes partly occluded by motion blur small distant objects omitted,1,44
+uncertainty,note,midground stacked items count uncertain,1,44
+uncertainty,note,possible small objects on track surface not identifiable,1,44
+uncertainty,note,race bib small text partially illegible detailed,1,44
+uncertainty,note,race bib text smudged partially occluded moderate certainty,1,44
+uncertainty,note,race bib upper letter text partially occluded,1,44
+uncertainty,note,roof truss markings not legible,1,44
+uncertainty,note,shoe brand model text not readable due to motion blur,1,44
+uncertainty,note,shoe branding logos not legible,1,44
+uncertainty,note,slight motion blur reduces detail,1,44
+uncertainty,note,small dark object near athlete toes likely starting wedge but uncertain,1,44
+uncertainty,note,small human shaped figure blurred omitted from people inventory,1,44
+uncertainty,note,small logos or text on apparel watch faces illegible,1,44
+uncertainty,note,small objects along track edge blurred not identifiable,1,44
+uncertainty,note,small printed text above bib 45 illegible,1,44
+uncertainty,note,small seating area background right partial occlusion,1,44
+uncertainty,note,small sponsor text on bib not fully verified,1,44
+uncertainty,note,small text beneath bib number 197 illegible,1,44
+uncertainty,note,small white printed text on rear singlet partially occluded,1,44
+uncertainty,note,smaller sponsor text above bib numerals partially occluded,1,44
+uncertainty,note,starting block fixture reported not visible,1,44
+uncertainty,note,time of day weather not visible,1,44
+uncertainty,note,trailing shoe partially out of frame occluded by shadow,1,44
+uncertainty,note,trailing shoe trailing areas partially occluded by motion blur,1,44
+uncertainty,note,tree species in background not identifiable,1,44
+uncertainty,token,approximate tree count 10 15 uncertain due to blur,1,6
+uncertainty,token,exact number of background poles uncertain approx 6,1,6
+uncertainty,token,large indiscernible motion blur causing omitted details,44,6
+uncertainty,token,race bib text partially illegible partial transcription s r dor,1,6
+uncertainty,token,small embroidered logo on tank top visible but text not legible,1,6
+uncertainty,token,small white marks on track surface material uncertain,1,6

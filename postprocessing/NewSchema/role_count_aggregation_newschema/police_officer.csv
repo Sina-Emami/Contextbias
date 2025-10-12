@@ -1,0 +1,155 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,13,4
+scene_appearance,aesthetic_qualities,dreamy,2,4
+scene_appearance,aesthetic_qualities,gritty,1,4
+scene_appearance,aesthetic_qualities,realistic,22,4
+scene_appearance,color_temperature,cool,17,3
+scene_appearance,color_temperature,neutral,12,3
+scene_appearance,color_temperature,warm,6,3
+scene_appearance,dominant_colors,black,23,8
+scene_appearance,dominant_colors,blue,0,8
+scene_appearance,dominant_colors,brown,19,8
+scene_appearance,dominant_colors,cyan,2,8
+scene_appearance,dominant_colors,mediumblue,1,8
+scene_appearance,dominant_colors,mediumvioletred,3,8
+scene_appearance,dominant_colors,red,3,8
+scene_appearance,dominant_colors,violet,0,8
+scene_appearance,mood,calm,23,3
+scene_appearance,mood,melancholic,1,3
+scene_appearance,mood,tense,9,3
+camera,depth_of_field,deep,11,3
+camera,depth_of_field,moderate,19,3
+camera,depth_of_field,shallow,21,3
+camera,framing,close up,2,6
+camera,framing,establishing,4,6
+camera,framing,full body,16,6
+camera,framing,headshot,6,6
+camera,framing,medium,38,6
+camera,framing,wide,10,6
+camera,perspective,eye level,32,2
+camera,perspective,third person,1,2
+objects,type,bagged produce,1,14
+objects,type,fruit,2,14
+objects,type,grocery bag,2,14
+objects,type,header sign,1,14
+objects,type,holding shopping basket,2,14
+objects,type,overhead sign,1,14
+objects,type,planter,2,14
+objects,type,produce bag,1,14
+objects,type,produce shelf,1,14
+objects,type,shopping cart,4,14
+objects,type,sign,2,14
+objects,type,street furniture,1,14
+objects,type,traffic cone,1,14
+objects,type,traffic sign,2,14
+people,activities,attending vehicle,1,16
+people,activities,attending vehicle,1,16
+people,activities,grasping small red apple right hand,1,16
+people,activities,interacting with vehicle,1,16
+people,activities,holding bag,5,16
+people,activities,holding small device,1,16
+people,activities,interacting with vehicle,1,16
+people,activities,attending vehicle,1,16
+people,activities,observing approaching vehicles,1,16
+people,activities,observing oncoming traffic,1,16
+people,activities,one hand near duty belt,1,16
+people,activities,oriented toward display shelf,4,16
+people,activities,overseeing traffic,1,16
+people,activities,standing,4,16
+people,activities,standing beside driver side door,1,16
+people,activities,standing or paused,1,16
+people,activities,pushing shopping cart,2,16
+people,activities,traffic control inference,1,16
+people,activities,walking down aisle,2,16
+people,age_range,middle aged,20,2
+people,age_range,young adult,15,2
+people,clothing_color,black,75,7
+people,clothing_color,blue,85,7
+people,clothing_color,brown,3,7
+people,clothing_color,darkblue,3,7
+people,clothing_color,lightcoral,1,7
+people,clothing_color,white,2,7
+people,clothing_color,yellow,2,7
+people,clothing_garment,belt,11,10
+people,clothing_garment,boots,6,10
+people,clothing_garment,cap,7,10
+people,clothing_garment,helmet,1,10
+people,clothing_garment,necktie,1,10
+people,clothing_garment,shirt,20,10
+people,clothing_garment,shoes,5,10
+people,clothing_garment,uniform jacket,3,10
+people,clothing_garment,uniform trousers,19,10
+people,clothing_garment,wristwatch,3,10
+people,eyewear_present,no,38,2
+people,eyewear_present,yes,4,2
+people,eyewear_type,sunglasses,2,1
+people,hair_color,black,2,4
+people,hair_color,brown,2,4
+people,hair_color,dark blue,2,4
+people,facial_hair_present,no,29,2
+people,facial_hair_present,yes,11,2
+people,facial_hair_style,mustache,2,2
+people,facial_hair_style,short stubble,1,2
+people,gaze_direction,down,5,3
+people,gaze_direction,left,2,3
+people,gaze_direction,right,2,3
+people,gender_presentation,female,1,2
+people,gender_presentation,male,43,2
+people,hair_color,black,32,4
+people,hair_color,brown,21,4
+people,hair_color,pink,1,4
+people,hair_present,no,1,2
+people,hair_present,yes,42,2
+people,hair_style,short,35,2
+people,hair_style,updo,1,2
+people,head_covering_type,black,8,20
+people,head_covering_type,blue,20,20
+people,head_covering_type,dark blue,5,20
+people,head_covering_type,darkblue,1,20
+people,head_covering_type,lightcoral,1,20
+people,head_covering_type,pink,1,20
+people,head_covering_type,silver,1,20
+people,head_covering_type,tan,1,20
+people,head_covering_type,white,3,20
+people,head_covering_present,no,1,2
+people,head_covering_present,yes,43,2
+people,head_covering_type,cap,1,20
+people,head_covering_type,duty helmet,1,20
+people,head_covering_type,officer cap,1,20
+people,head_covering_type,peaked cap,12,20
+people,head_covering_type,peaked cap variants,9,20
+people,head_covering_type,peaked police cap,2,20
+people,head_covering_type,peaked service cap,6,20
+people,head_covering_type,peaked uniform cap,1,20
+people,head_covering_type,protective helmet,1,20
+people,head_covering_type,service cap,1,20
+people,head_covering_type,structured police cap,1,20
+people,pose,standing,2,2
+people,pose,standing,2,2
+people,pose,standing,3,2
+people,pose,standing,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,5,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,4,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,20,2
+people,pose,standing,3,2
+people,skin_tone,dark,3,3
+people,skin_tone,light,25,3
+people,skin_tone,medium,16,3

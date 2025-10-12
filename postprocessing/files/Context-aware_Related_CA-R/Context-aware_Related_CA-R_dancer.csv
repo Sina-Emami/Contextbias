@@ -1,0 +1,428 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,14
+atmosphere,aesthetic_qualities,dreamy,7
+atmosphere,aesthetic_qualities,realistic,7
+atmosphere,aesthetic_qualities,unknown,7
+atmosphere,color_temperature,unknown,2
+atmosphere,color_temperature,warm,18
+atmosphere,contrast_level,high,16
+atmosphere,contrast_level,low,1
+atmosphere,contrast_level,medium,1
+atmosphere,contrast_level,unknown,2
+atmosphere,dominant_palette,brown,25
+atmosphere,dominant_palette,lightgreen,2
+atmosphere,dominant_palette,medium violet red,5
+atmosphere,dominant_palette,mediumvioletred,11
+atmosphere,mood,calm,9
+atmosphere,mood,dramatic,16
+atmosphere,mood,melancholic,1
+atmosphere,saturation_level,neutral,16
+atmosphere,saturation_level,unknown,2
+atmosphere,saturation_level,vivid,2
+background,object_counts_by_position,background center,21
+background,object_counts_by_position,background left,9
+background,object_counts_by_position,background right,14
+background,object_counts_by_position,foreground center,19
+background,object_counts_by_position,foreground left,2
+background,object_counts_by_position,foreground right,2
+background,object_counts_by_position,midground center,3
+background,object_counts_by_position,midground left,7
+background,object_counts_by_position,midground right,7
+camera,angle,dolly out,1
+camera,angle,unknown,19
+camera,crop,head near upper third,1
+camera,crop,includes floor area,1
+camera,crop,includes full figure,1
+camera,crop,some headspace,1
+camera,depth_of_field,deep,1
+camera,depth_of_field,moderate,1
+camera,depth_of_field,moderate dof,1
+camera,depth_of_field,shallow,4
+camera,depth_of_field,shallow dof,5
+camera,depth_of_field,unknown,8
+camera,focal_length,normal,5
+camera,focal_length,telephoto,3
+camera,focal_length,unknown,12
+camera,framing,establishing shot,1
+camera,framing,full body,14
+camera,framing,medium,2
+camera,framing,unknown,2
+camera,framing,wide,5
+camera,perspective,eye level,6
+camera,perspective,low angle,4
+camera,perspective,third person,1
+camera,perspective,unknown,9
+environment,ceiling_color,black,3
+environment,ceiling_color,darkblue,6
+environment,ceiling_color,snow,1
+environment,ceiling_condition,slight dust,1
+environment,ceiling_condition,unknown,6
+environment,ceiling_condition,weathered,1
+environment,ceiling_condition,well maintained,1
+environment,ceiling_finish,glossy,1
+environment,ceiling_finish,matte,4
+environment,ceiling_finish,polished,1
+environment,ceiling_finish,unknown,3
+environment,ceiling_material,metal,4
+environment,ceiling_material,unknown,5
+environment,ceiling_texture,detailed,1
+environment,ceiling_texture,glossy metal,1
+environment,ceiling_texture,matte,4
+environment,ceiling_texture,truss,1
+environment,ceiling_texture,unknown,3
+environment,floor_color,black,2
+environment,floor_color,brown,5
+environment,floor_color,darkblue,1
+environment,floor_color,honeydew,1
+environment,floor_color,pink,1
+environment,floor_color,white,1
+environment,floor_condition,minimal scuffing,6
+environment,floor_condition,polished,8
+environment,floor_finish,glossy,6
+environment,floor_finish,low reflectance,1
+environment,floor_finish,polished,4
+environment,floor_finish,reflective,3
+environment,floor_finish,satin sheen,1
+environment,floor_finish,soft sheen,1
+environment,floor_material,hardwood,1
+environment,floor_material,unknown,2
+environment,floor_material,varnished wood,1
+environment,floor_material,wood,7
+environment,floor_texture,glossy,1
+environment,floor_texture,glossy reflection,1
+environment,floor_texture,grain,1
+environment,floor_texture,plank,1
+environment,floor_texture,polished,1
+environment,floor_texture,reflective,2
+environment,floor_texture,smooth,9
+environment,floor_texture,woodgrain,1
+environment,indoor_outdoor,unknown,20
+environment,location_type,dance studio,2
+environment,location_type,performance hall,2
+environment,location_type,performance space,2
+environment,location_type,practice room,1
+environment,location_type,rehearsal studio,1
+environment,location_type,stage,3
+environment,location_type,theater,1
+environment,location_type,theatrical performance space,2
+environment,location_type,theatrical stage,6
+environment,spatial_layout_aisle_width,unknown,17
+environment,spatial_layout_depth,deep,4
+environment,spatial_layout_depth,moderate,7
+environment,spatial_layout_depth,open,5
+environment,spatial_layout_depth,shallow,1
+environment,spatial_layout_openness,open,17
+environment,time_of_day_hint,afternoon,1
+environment,time_of_day_hint,unknown,19
+environment,walls_color,black,4
+environment,walls_color,brown,1
+environment,walls_color,cyan,1
+environment,walls_color,darkblue,4
+environment,walls_color,gray,4
+environment,walls_color,mediumpurple,1
+environment,walls_condition,aged,2
+environment,walls_condition,aged but maintained,1
+environment,walls_condition,clean,1
+environment,walls_condition,dust holding shadowed crevices,1
+environment,walls_condition,good,1
+environment,walls_condition,intact,1
+environment,walls_condition,slightly worn,1
+environment,walls_condition,unknown,4
+environment,walls_finish,matte,8
+environment,walls_finish,smooth,1
+environment,walls_finish,unknown,3
+environment,walls_material,fabric,3
+environment,walls_material,metal,1
+environment,walls_material,paint,1
+environment,walls_material,painted surface,2
+environment,walls_material,plaster,1
+environment,walls_material,unknown,4
+environment,walls_material,wood,2
+environment,walls_texture,aged,1
+environment,walls_texture,hazy,1
+environment,walls_texture,matte,2
+environment,walls_texture,mottled,1
+environment,walls_texture,smooth,4
+environment,walls_texture,textured,2
+environment,walls_texture,unknown,2
+environment,walls_texture,vertical folds,1
+environment,walls_texture,weathered,1
+environment,weather,unknown,20
+lighting,artifacts,bloom,3
+lighting,artifacts,bulb halos,1
+lighting,artifacts,gentle bloom,1
+lighting,artifacts,halo,1
+lighting,artifacts,haze,1
+lighting,artifacts,lens flare,2
+lighting,artifacts,light bloom,1
+lighting,artifacts,light rays,1
+lighting,artifacts,low gloss reflections floor,1
+lighting,artifacts,mild bloom,1
+lighting,artifacts,mild glow around fixtures,1
+lighting,artifacts,minor glare,1
+lighting,artifacts,motion blur,1
+lighting,artifacts,motion blur right pointe shoe,1
+lighting,artifacts,no lens flare visible,1
+lighting,artifacts,soft circular flares,1
+lighting,artifacts,soft grid shadows window,1
+lighting,artifacts,soft veiling,1
+lighting,artifacts,specular highlights satin beading,1
+lighting,artifacts,specular reflection floor,1
+lighting,artifacts,visible dust haze beams,1
+lighting,color_temperature,unknown,6
+lighting,color_temperature,warm,24
+lighting,contrast_level,high,21
+lighting,contrast_level,low,2
+lighting,contrast_level,medium,1
+lighting,contrast_level,unknown,6
+lighting,saturation_level,neutral,20
+lighting,saturation_level,unknown,6
+lighting,saturation_level,vivid,4
+lighting,shadows,casting,5
+lighting,shadows,hard,2
+lighting,shadows,medium,1
+lighting,shadows,soft,13
+lighting,shadows,unknown,2
+lighting,sources_count,four or more,7
+lighting,sources_count,one,4
+lighting,sources_count,one source,6
+lighting,sources_count,three,1
+lighting,sources_count,two,1
+lighting,sources_count,unknown,5
+lighting,sources_directionality,backlight,14
+lighting,sources_directionality,sidelight,5
+lighting,sources_directionality,toplight,13
+lighting,sources_directionality,unknown,6
+lighting,sources_hardness,hard,7
+lighting,sources_hardness,medium,3
+lighting,sources_hardness,soft,12
+lighting,sources_hardness,unknown,2
+lighting,sources_type,artificial,17
+lighting,sources_type,unknown,7
+objects,plane,background,44
+objects,plane,foreground,23
+objects,plane,midground,17
+objects,side,center,43
+objects,side,left,18
+objects,side,right,23
+objects,type,architectural element,1
+objects,type,architecture,1
+objects,type,atmosphere elements,2
+objects,type,atmosphere object level,3
+objects,type,atmospheric element,1
+objects,type,audience,1
+objects,type,audience silhouettes,1
+objects,type,barrier,1
+objects,type,bright rectangular highlight,1
+objects,type,clothing,1
+objects,type,curtain,1
+objects,type,curtains,10
+objects,type,dance floor,1
+objects,type,decorative lights,1
+objects,type,effect,1
+objects,type,equipment,1
+objects,type,equipment cases,1
+objects,type,fixture,3
+objects,type,floor,1
+objects,type,furniture,3
+objects,type,furniture candidate,1
+objects,type,garment,1
+objects,type,ledge,1
+objects,type,light beams,1
+objects,type,light shafts dust,1
+objects,type,mark,1
+objects,type,people,1
+objects,type,person figure,1
+objects,type,rig,1
+objects,type,rigging,1
+objects,type,rigging or speaker,1
+objects,type,seating or ledge,1
+objects,type,shadow,2
+objects,type,skirt,1
+objects,type,spotlight,1
+objects,type,spotlight beam,1
+objects,type,spotlight patch,1
+objects,type,spotlights,1
+objects,type,stage edge strip,1
+objects,type,stage fixture,1
+objects,type,stage floor,4
+objects,type,stage truss,1
+objects,type,structural element,1
+objects,type,structure,3
+objects,type,surface,6
+objects,type,theater structure,1
+objects,type,unit,1
+objects,type,unknown,8
+objects,type,wall painting fragment,1
+objects,type,window assembly,1
+people,activities,balancing,2
+people,activities,balancing en pointe,1
+people,activities,balancing on single pointe shoe,1
+people,activities,balancing one pointed shoe,1
+people,activities,ballet pose,19
+people,activities,en pointe extension,1
+people,activities,interacting airflow,1
+people,activities,leaping,1
+people,activities,lifting skirt,1
+people,activities,mid turn,1
+people,activities,performing deep backbend,1
+people,activities,performing under stage lights,1
+people,activities,reaching extended foot,1
+people,activities,rehearsal,1
+people,activities,rehearsal action,1
+people,activities,rotation turn inferred,1
+people,activities,skirt mid motion,1
+people,activities,solo balance,1
+people,activities,solo performance,1
+people,age_range,unknown,6
+people,age_range,young adult,11
+people,clothing_color,black,13
+people,clothing_color,pink,4
+people,clothing_color,red,2
+people,clothing_color,tan,1
+people,clothing_color,white,3
+people,clothing_color,yellow,1
+people,clothing_material,chiffon,1
+people,clothing_material,fabric,4
+people,clothing_material,satin,7
+people,clothing_material,sequined,4
+people,clothing_material,tulle,7
+people,clothing_material,unknown,1
+people,eyewear_present,no,16
+people,eyewear_present,unknown,1
+people,facial_hair_present,no,16
+people,facial_hair_present,unknown,1
+people,gaze_direction,down,1
+people,gaze_direction,left,1
+people,gaze_direction,unknown,4
+people,gaze_direction,up,2
+people,gender_presentation,female,17
+people,hair_color,black,6
+people,hair_color,brown,11
+people,hair_present,yes,17
+people,hair_style,bun,11
+people,hair_style,long,6
+people,hair_style,ponytail,1
+people,hair_style,straight,1
+people,hair_style,unknown,1
+people,hair_style,updo,1
+people,hair_style,wavy,4
+people,head_covering_present,no,15
+people,head_covering_present,unknown,2
+people,occlusions,partial occlusion,8
+people,orientation,back facing,1
+people,orientation,three quarter,1
+people,orientation,unknown,6
+people,pose,airborne leap,1
+people,pose,arabesque,2
+people,pose,arabesque like,3
+people,pose,arched back,1
+people,pose,arms extended,1
+people,pose,arms extended classical,1
+people,pose,arms outstretched,1
+people,pose,balanced pointe,1
+people,pose,balancing one leg,1
+people,pose,balancing single planted foot,1
+people,pose,body rotated stage left,1
+people,pose,deep arched back,4
+people,pose,deeply arched back,1
+people,pose,elevated skirt,1
+people,pose,elongated,1
+people,pose,elongated arched torso,1
+people,pose,elongated posture,1
+people,pose,elongated torso,1
+people,pose,en pointe,4
+people,pose,extended,1
+people,pose,extended leg,2
+people,pose,extended limbs,9
+people,pose,extended midair arabesque en pointe,1
+people,pose,extended rounded arms,1
+people,pose,facing stage right,1
+people,pose,head orientation,1
+people,pose,head tilted back,3
+people,pose,head tilted rearward,1
+people,pose,kneeling,1
+people,pose,left arm curved overhead,1
+people,pose,left arm extended forward,1
+people,pose,left arm lowered,1
+people,pose,left arm raised upper left,1
+people,pose,left foot en pointe,1
+people,pose,left leg bent wide lunge,1
+people,pose,left leg en pointe,1
+people,pose,pirouette like,1
+people,pose,pointe,3
+people,pose,raised arching silhouette,1
+people,pose,raised arms,1
+people,pose,rear foot extended,1
+people,pose,right arm extended lateral,1
+people,pose,right arm extended rearward,1
+people,pose,right arm extended up,1
+people,pose,right leg bent,1
+people,pose,right leg extended rearward,2
+people,pose,skirt fanned,1
+people,pose,torso twisted,1
+people,pose,uplifted,1
+people,pose,upright,5
+people,pose,wide low lunge,1
+people,pose_activity_gaze_direction,left,2
+people,pose_activity_gaze_direction,right,2
+people,pose_activity_gaze_direction,unknown,4
+people,pose_activity_gaze_direction,up,1
+people,pose_activity_occlusions,partial occlusion,8
+people,pose_activity_occlusions,unknown,1
+people,pose_activity_orientation,three quarter,5
+people,pose_activity_orientation,unknown,4
+people,role_hint,appears ballet dancer,1
+people,role_hint,appears dancer,1
+people,role_hint,ballet dancer,1
+people,role_hint,ballet performer,1
+people,role_hint,dancer,3
+people,role_hint,performer,1
+people,role_hint,performer dancer,1
+people,role_hint,unknown,1
+people,skin_tone,light,6
+people,skin_tone,medium,5
+people,skin_tone,unknown,6
+safety,hazards,no detected,14
+safety,nsfw,not,17
+totals,images,total,10
+totals,images,unknown,10
+totals,object_instances,unknown,84
+totals,people_instances,unknown,17
+totals,text_instances,unknown,0
+uncertainty,token,any text might exist in unseen wall areas or out of frame,1
+uncertainty,token,background right structural details of rig partially occluded,1
+uncertainty,token,certain wall material finish described but not precisely identifiable,1
+uncertainty,token,dancer exact shade uncertain,1
+uncertainty,token,exact count overhead circular stage fixtures approximate 8 due to occlusion,1
+uncertainty,token,exact material composition of sparkling bodice not verifiable,1
+uncertainty,token,exact number of active stage lights approximate at least three major shafts,1
+uncertainty,token,exact total count of overhead spotlights uncertain due to framing haze,1
+uncertainty,token,exact type of ballet shoe material satin vs leather not discernible,1
+uncertainty,token,facial features skin tone central dancer obscured by silhouette backlighting,7
+uncertainty,token,identification of small dark wooden bench like object uncertain,1
+uncertainty,token,lower back area partially occluded by skirt translucency,1
+uncertainty,token,no legible text small labels on equipment not readable,1
+uncertainty,token,outside weather conditions beyond window glass not visible,1
+uncertainty,token,precise identification of front back leg partially ambiguous due to motion occlusion,1
+uncertainty,token,precise material embellishment detail of bodice top not fully legible,1
+uncertainty,token,several small suspended fixtures brackets upper right partially occluded,1
+uncertainty,token,small dark shapes background lower right may include handheld devices or cameras,1
+uncertainty,token,small decorative details background right indiscernible due to depth of field blur,1
+uncertainty,token,small details on pointe shoe soles not legible,1
+uncertainty,token,small objects near background left indiscernible omitted,8
+uncertainty,token,small warm toned hanging light fixtures upper left partially occluded,1
+uncertainty,token,spotlight count estimated 4 5 background left exact uncertain,1
+uncertainty,token,unknown,15
+uncertainty,token,upper ceiling structural details partially occluded,1
+uncertainty,token,uppermost light fixtures near top left partially out of frame,1
+uncertainty,token,weather not applicable indoor,1
+uncertainty,uncertainty,background audience details shadowed indistinct,1
+uncertainty,uncertainty,exact costume embellishment detail not fully legible,1
+uncertainty,uncertainty,exact count of stage bulbs approximate uncertain,1
+uncertainty,uncertainty,exact number of vertical window sections approximate,1
+uncertainty,uncertainty,precise curtain shade uncertain,1
+uncertainty,uncertainty,small objects stage edges partially occluded not identifiable,39
+uncertainty,uncertainty,small scuff details pointe shoe toe areas not fully resolvable,1
+uncertainty,uncertainty,time of day ambiguous morning or late afternoon suggested,5
+uncertainty,uncertainty,unknown,6

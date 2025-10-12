@@ -1,0 +1,437 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,3
+atmosphere,aesthetic_qualities,minimal,3
+atmosphere,aesthetic_qualities,realistic,8
+atmosphere,aesthetic_qualities,unknown,11
+atmosphere,color_temperature,cool,1
+atmosphere,color_temperature,neutral,6
+atmosphere,color_temperature,unknown,5
+atmosphere,color_temperature,warm,14
+atmosphere,contrast_level,medium,22
+atmosphere,contrast_level,unknown,10
+atmosphere,dominant_palette,brown,10
+atmosphere,dominant_palette,unknown,11
+atmosphere,mood,calm,20
+atmosphere,palette_color,brown,10
+atmosphere,palette_colors,brown,10
+atmosphere,palette_colors,lightgreen,1
+atmosphere,saturation_level,neutral,5
+atmosphere,saturation_level,unknown,7
+atmosphere,saturation_level,vivid,8
+background,object_counts_by_position,background center,14
+background,object_counts_by_position,background left,5
+background,object_counts_by_position,background right,13
+background,object_counts_by_position,foreground center,18
+background,object_counts_by_position,foreground left,14
+background,object_counts_by_position,foreground right,5
+background,object_counts_by_position,midground center,8
+background,object_counts_by_position,midground left,11
+background,object_counts_by_position,midground right,13
+camera,angle,unknown,20
+camera,crop,right edge cropped,1
+camera,crop,small margin above ceiling,1
+camera,crop,unknown,1
+camera,crop,visible floor foreground,1
+camera,crop_tokens,captures person upper torso feet majority living room area,1
+camera,crop_tokens,toes partially cropped,1
+camera,depth_of_field,deep,7
+camera,depth_of_field,moderate,7
+camera,depth_of_field,shallow,2
+camera,depth_of_field,unknown,4
+camera,focal_length,normal,1
+camera,focal_length,telephoto,1
+camera,focal_length,unknown,18
+camera,framing,establishing,3
+camera,framing,establishing shot,1
+camera,framing,full body,8
+camera,framing,medium,2
+camera,framing,wide,9
+camera,perspective,eye level,16
+camera,perspective,high angle,1
+camera,perspective,unknown,3
+environment,floor_color,beige,3
+environment,floor_color,brown,6
+environment,floor_color,gray,2
+environment,floor_color,lightblue,1
+environment,floor_color,mediumpurple,1
+environment,floor_color,pink,2
+environment,floor_texture,fibrous,1
+environment,floor_texture,low pile,3
+environment,floor_texture,plush,1
+environment,floor_texture,polished,1
+environment,floor_texture,smooth,6
+environment,floor_texture,soft,2
+environment,floor_texture,subtle grain,1
+environment,floor_texture,textured,1
+environment,floor_texture,unknown,1
+environment,floor_texture,visible wood grain,1
+environment,floor_texture,wood grain,1
+environment,floor_texture,woven,1
+environment,indoor_outdoor,unknown,20
+environment,location_type,living room,18
+environment,location_type,residential living room,2
+environment,spatial_layout_aisle_width,unknown,17
+environment,spatial_layout_depth,medium,1
+environment,spatial_layout_depth,moderate,8
+environment,spatial_layout_depth,open,1
+environment,spatial_layout_depth,unknown,7
+environment,spatial_layout_openness,moderate,1
+environment,spatial_layout_openness,moderately open,1
+environment,spatial_layout_openness,open,15
+environment,spatial_layout_openness,unknown,1
+environment,surfaces_ceiling_color,black,1
+environment,surfaces_ceiling_color,white,9
+environment,surfaces_floor_material,hardwood,6
+environment,surfaces_floor_material,textile rug carpet,3
+environment,surfaces_floor_material,wood,2
+environment,surfaces_walls_color,wall beige,2
+environment,surfaces_walls_color,wall gray,2
+environment,surfaces_walls_color,wall pale green,1
+environment,surfaces_walls_color,wall white,5
+environment,surfaces_walls_material,drywall,5
+environment,surfaces_walls_material,painted drywall,2
+environment,surfaces_walls_material,painted paint,6
+environment,surfaces_walls_material,plaster,1
+environment,surfaces_walls_texture,matte,1
+environment,surfaces_walls_texture,smooth,10
+environment,time_of_day_hint,afternoon,1
+environment,time_of_day_hint,morning,1
+environment,time_of_day_hint,noon,1
+environment,time_of_day_hint,unknown,17
+environment,wall_finish,matte,7
+environment,wall_finish,painted,1
+environment,wall_finish,smooth,1
+environment,wall_finish,unknown,1
+environment,weather,sunny,2
+environment,weather,unknown,18
+lighting,artifacts,background bloom artifact,1
+lighting,artifacts,each reported once,0
+lighting,artifacts,gentle vignetting,1
+lighting,artifacts,highlights glossy plant leaves,1
+lighting,artifacts,low visible photographic grain,1
+lighting,artifacts,mild reflection glass sliding door,1
+lighting,artifacts,mild specular reflection television,1
+lighting,artifacts,no lens flare observed,1
+lighting,artifacts,overexposed outside window,1
+lighting,artifacts,reflection tv,1
+lighting,artifacts,reflections,1
+lighting,artifacts,slight photographic softness,1
+lighting,artifacts,soft reflections on glass,1
+lighting,artifacts,specular highlights vacuum,1
+lighting,artifacts,specular reflections floor,1
+lighting,artifacts,specular reflections metal glass,1
+lighting,artifacts,window overexposure,1
+lighting,color_temperature,cool,1
+lighting,color_temperature,neutral,3
+lighting,color_temperature,unknown,8
+lighting,color_temperature,warm,8
+lighting,contrast_level,medium,13
+lighting,contrast_level,unknown,7
+lighting,directionality,backlight,11
+lighting,directionality,sidelight,10
+lighting,directionality,unknown,14
+lighting,hardness,soft light,14
+lighting,hardness,unknown,2
+lighting,saturation_level,neutral,4
+lighting,saturation_level,unknown,8
+lighting,saturation_level,vivid,8
+lighting,shadows,hard,1
+lighting,shadows,soft,19
+lighting,sources_count,one,13
+lighting,sources_count,one light source,8
+lighting,sources_count,two,1
+lighting,sources_count,two light,1
+lighting,sources_count,unknown,10
+lighting,sources_hardness,soft,16
+lighting,sources_hardness,unknown,1
+lighting,sources_type,artificial light,7
+lighting,sources_type,source artificial,7
+lighting,sources_type,unknown,19
+objects,color,beige,35
+objects,color,black,21
+objects,color,blue,2
+objects,color,blue palette,8
+objects,color,brown,14
+objects,color,chocolate,2
+objects,color,darkblue,6
+objects,color,darkgreen,1
+objects,color,darkslategrey,1
+objects,color,darkviolet,1
+objects,color,firebrick,3
+objects,color,gray,24
+objects,color,green,19
+objects,color,green palette,12
+objects,color,lightblue,2
+objects,color,lightgreen,1
+objects,color,lightyellow,2
+objects,color,mediumpurple,7
+objects,color,mediumslateblue,3
+objects,color,orange palette,2
+objects,color,other unique colors,7
+objects,color,palegreen,2
+objects,color,pink,3
+objects,color,purple palette,1
+objects,color,silver,4
+objects,color,snow,1
+objects,color,tan,4
+objects,color,turquoise,1
+objects,color,white,38
+objects,condition,clean,50
+objects,condition,gently used,5
+objects,condition,good,80
+objects,condition,healthy,6
+objects,condition,intact,9
+objects,condition,light use,1
+objects,condition,lightly used,2
+objects,condition,minor wrinkling,1
+objects,condition,neatly stacked,1
+objects,condition,off state,1
+objects,condition,others,0
+objects,condition,plump,2
+objects,condition,slightly indented,1
+objects,condition,tidy,5
+objects,condition,unknown,17
+objects,condition,wear consistent brushing,1
+objects,condition,well maintained,8
+objects,finish,brass,1
+objects,finish,brushed metal,1
+objects,finish,clean,7
+objects,finish,framed,3
+objects,finish,glazed,8
+objects,finish,glossy,17
+objects,finish,lacquered,1
+objects,finish,matte,36
+objects,finish,others,0
+objects,finish,painted,6
+objects,finish,polished,3
+objects,finish,reflective,1
+objects,finish,stained,2
+objects,finish,unknown,37
+objects,finish,varnished,13
+objects,finish,warm metal,1
+objects,material,ceramic,21
+objects,material,clay,1
+objects,material,fabric,30
+objects,material,glass,26
+objects,material,iron,1
+objects,material,leather,1
+objects,material,metal,20
+objects,material,paper,9
+objects,material,plant,17
+objects,material,plastic,28
+objects,material,rattan,1
+objects,material,rattan baskets,1
+objects,material,rubber,6
+objects,material,stone,1
+objects,material,terracotta,1
+objects,material,unknown,3
+objects,material,upholstery,3
+objects,material,upholstery fabric,3
+objects,material,veneer,1
+objects,material,wood frame,42
+objects,material,woven fabric,22
+objects,size_class,large,50
+objects,size_class,long,1
+objects,size_class,low,2
+objects,size_class,medium,70
+objects,size_class,other,0
+objects,size_class,small,70
+objects,size_class,small medium,1
+objects,size_class,tall,9
+objects,size_class,unknown,2
+objects,state,connected hose,1
+objects,state,daylight through,1
+objects,state,idle,1
+objects,state,not legible,1
+objects,state,off,2
+objects,state,parted curtains,1
+objects,state,resting rug,1
+objects,state,sheer curtains,1
+objects,state,static,4
+objects,state,unknown,6
+objects,state,use,10
+objects,texture,brushed,1
+objects,texture,coarse woven,1
+objects,texture,feathery,3
+objects,texture,gloss,1
+objects,texture,glossy,21
+objects,texture,knitted,1
+objects,texture,leafy,2
+objects,texture,low pile,9
+objects,texture,matboard,1
+objects,texture,matte,18
+objects,texture,others,0
+objects,texture,pleated,1
+objects,texture,plush,4
+objects,texture,polished,3
+objects,texture,ribbed,3
+objects,texture,rough,1
+objects,texture,smooth,100
+objects,texture,soft,6
+objects,texture,textured,28
+objects,texture,tight woven,1
+objects,texture,tufted,1
+objects,texture,unknown,1
+objects,texture,visible grain,3
+objects,texture,woven,15
+objects,type,accessory,1
+objects,type,appliance,4
+objects,type,basket tray,1
+objects,type,books,1
+objects,type,cleaning tool,12
+objects,type,decor,45
+objects,type,decoration subtype sofa many occurrences under decor subtype,30
+objects,type,dishware,2
+objects,type,electronics,1
+objects,type,furniture,33
+objects,type,other object types each small count grouped as other for roster clarity,18
+objects,type,plant,15
+objects,type,pouf,1
+objects,type,rug,10
+objects,type,soft furnishing,2
+objects,type,table,7
+objects,type,unknown,2
+objects,type,window,10
+people,activities,cleaning generic,3
+people,activities,handling cleaning tool,1
+people,activities,holding mop,1
+people,activities,holding mop handle,1
+people,activities,holding wand with both hands,1
+people,activities,lifting throw cushion,1
+people,activities,mopping,3
+people,activities,pushing,1
+people,activities,pushing brush across rug,1
+people,activities,pushing guiding vacuum,1
+people,activities,pushing or pulling mop,1
+people,activities,vacuuming,10
+people,age_range,middle aged,4
+people,age_range,unknown,3
+people,age_range,young adult,12
+people,clothing_color,black,16
+people,clothing_color,blue,18
+people,clothing_color,brown,1
+people,clothing_color,gray,3
+people,clothing_color,green,9
+people,clothing_color,mediumpurple,2
+people,clothing_color,pink,1
+people,clothing_color,red,1
+people,clothing_color,tan,3
+people,clothing_color,white,13
+people,clothing_color,yellow,3
+people,clothing_garment,apron,2
+people,clothing_garment,cleaning gloves,1
+people,clothing_garment,cropped straight leg trousers,1
+people,clothing_garment,dress,2
+people,clothing_garment,feet,4
+people,clothing_garment,footwear,2
+people,clothing_garment,gloves,1
+people,clothing_garment,handheld cloth,1
+people,clothing_garment,leggings,2
+people,clothing_garment,pants,1
+people,clothing_garment,scrub pants,1
+people,clothing_garment,scrub top,1
+people,clothing_garment,shirt,4
+people,clothing_garment,skirt,1
+people,clothing_garment,slippers,2
+people,clothing_garment,t-shirt,1
+people,clothing_garment,top,1
+people,clothing_garment,trousers,1
+people,clothing_garment,uniform dress,1
+people,clothing_garment,waist apron,1
+people,clothing_garment,work apron,1
+people,clothing_material,canvas,1
+people,clothing_material,cotton,18
+people,clothing_material,denim,1
+people,clothing_material,fabric,10
+people,clothing_material,knit,6
+people,clothing_material,lightweight,1
+people,clothing_material,nonwoven,1
+people,clothing_material,polyester,4
+people,clothing_material,rubber,4
+people,clothing_material,skin,1
+people,clothing_material,stretch,1
+people,clothing_material,synthetic,2
+people,clothing_material,textile,1
+people,clothing_material,unknown,4
+people,clothing_material,woven,3
+people,eyewear_present,no,9
+people,eyewear_present,yes,10
+people,facial_hair_present,no,19
+people,gaze_direction,down,14
+people,gaze_direction,unknown,5
+people,gender_presentation,female,19
+people,hair_color,black,8
+people,hair_color,brown,13
+people,hair_present,yes,19
+people,hair_style,bun,3
+people,hair_style,long,5
+people,hair_style,ponytail,13
+people,hair_style,straight,4
+people,hair_style,unknown,1
+people,hair_style,updo,2
+people,head_covering_color,green,1
+people,head_covering_present,no,18
+people,head_covering_present,yes,1
+people,head_covering_type,cap,1
+people,occlusions,partial,9
+people,occlusions,partial occlusion,9
+people,occlusions,unknown,1
+people,orientation,front,3
+people,orientation,unknown,6
+people,pose,bent over,1
+people,pose,forward leaning,4
+people,pose,kneeling,1
+people,pose,kneeling one leg,1
+people,pose,leaning forward,8
+people,pose,relaxed standing,1
+people,pose,slight forward bend,1
+people,pose,slight forward lean,1
+people,pose,slightly bent,2
+people,pose,slightly bent forward,2
+people,pose,slightly crouched,1
+people,pose,slightly forward leaning,1
+people,pose,upright,8
+people,role_hint,appears caregiver or home care worker detailed,1
+people,role_hint,appears cleaning personnel,1
+people,role_hint,appears cleaning staff,2
+people,role_hint,appears domestic worker or domestic care provider detailed,1
+people,role_hint,appears household cleaning,1
+people,role_hint,cleaner,2
+people,role_hint,cleaning staff,1
+people,role_hint,cleaning worker,1
+people,role_hint,domestic cleaner,1
+people,role_hint,domestic cleaning worker,1
+people,role_hint,unknown,1
+people,skin_tone,medium,19
+safety,hazards,low trip hazard due to floor tools,1
+safety,hazards,no,8
+safety,hazards,unknown,8
+safety,nsfw,not,9
+safety,nsfw,unknown,10
+texts,font_style,unknown,7
+texts,legibility,text illegible,2
+texts,legibility,text not legible,4
+texts,legibility,text partial,1
+texts,plane,text background,1
+texts,plane,text foreground,2
+texts,plane,text in background,1
+texts,plane,text in midground,1
+texts,plane,text midground,2
+texts,side,text center,1
+texts,side,text left,2
+texts,side,text on left,1
+texts,side,text on right,1
+texts,side,text right,1
+texts,side,unknown,1
+totals,images,unknown,10
+totals,object_instances,unknown,129
+totals,people_instances,unknown,10
+totals,text_instances,unknown,5
+uncertainty,note,age range unresolvable mapped conservatively,1
+uncertainty,note,printed labels or small object text not legible,1
+uncertainty,note,time of day not specified only daylight noted,1
+uncertainty,note,unknown,68
+uncertainty,note,vacuum brand model not legible,1
+uncertainty,uncertainty,other singleton tokens each count 1,19
+uncertainty,uncertainty,token small dark object partially occluded repeated,17
+uncertainty,uncertainty,unknown,4

@@ -1,0 +1,226 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,1
+atmosphere,aesthetic_qualities,minimal,1
+atmosphere,aesthetic_qualities,realistic,8
+atmosphere,aesthetic_qualities,unknown,5
+atmosphere,color_temperature,cool,2
+atmosphere,color_temperature,neutral,4
+atmosphere,color_temperature,unknown,2
+atmosphere,color_temperature,warm,2
+atmosphere,contrast_level,medium,9
+atmosphere,contrast_level,unknown,1
+atmosphere,dominant_palette,black,4
+atmosphere,dominant_palette,brown,6
+atmosphere,dominant_palette,unknown,10
+atmosphere,mood,calm,10
+atmosphere,saturation_level,neutral,3
+atmosphere,saturation_level,unknown,1
+atmosphere,saturation_level,vivid,6
+background,object_counts_by_position,background center,11
+background,object_counts_by_position,background left,4
+background,object_counts_by_position,background right,6
+background,object_counts_by_position,foreground center,22
+background,object_counts_by_position,foreground left,14
+background,object_counts_by_position,foreground right,7
+background,object_counts_by_position,midground center,6
+background,object_counts_by_position,midground left,5
+background,object_counts_by_position,midground right,2
+camera,angle,unknown,10
+camera,crop,immediate tabletop,1
+camera,crop,legs cropped,1
+camera,crop,lower body cropped,1
+camera,crop,lower torso hands cropped,1
+camera,crop,tight,1
+camera,crop,unknown,1
+camera,crop,upper body cropped,1
+camera,crop,upper torso and head,1
+camera,crop,upper torso below waist,1
+camera,depth_of_field,deep,3
+camera,depth_of_field,shallow,7
+camera,focal_length,normal,1
+camera,focal_length,telephoto,2
+camera,focal_length,unknown,7
+camera,framing,close up,1
+camera,framing,full body,1
+camera,framing,headshot,3
+camera,framing,medium,8
+camera,framing,wide,1
+camera,perspective,eye level,8
+camera,perspective,unknown,2
+environment,indoor_outdoor,unknown,10
+environment,location_type,office,10
+environment,spatial_layout_aisle_width,unknown,10
+environment,spatial_layout_depth,deep,2
+environment,spatial_layout_depth,moderate,2
+environment,spatial_layout_depth,moderately deep,1
+environment,spatial_layout_depth,open,2
+environment,spatial_layout_depth,shallow,1
+environment,spatial_layout_depth,unknown,2
+environment,spatial_layout_openness,contained,1
+environment,spatial_layout_openness,open,7
+environment,spatial_layout_openness,unknown,2
+environment,time_of_day_hint,unknown,10
+environment,weather,clear,1
+environment,weather,unknown,9
+lighting,artifacts,background bokeh,1
+lighting,artifacts,no lens flare,1
+lighting,artifacts,reflections on eyeglass lenses artifact,3
+lighting,artifacts,reflections on floor,1
+lighting,artifacts,reflections on polished desk surface,1
+lighting,artifacts,specular highlights various,3
+lighting,color_temperature,cool,2
+lighting,color_temperature,neutral,4
+lighting,color_temperature,unknown,2
+lighting,color_temperature,warm,2
+lighting,contrast_level,medium,9
+lighting,contrast_level,unknown,1
+lighting,directionality,backlight,5
+lighting,directionality,sidelight,6
+lighting,directionality,top light,5
+lighting,directionality,unknown,4
+lighting,hardness,medium,1
+lighting,hardness,soft light,16
+lighting,saturation_level,neutral,3
+lighting,saturation_level,unknown,1
+lighting,saturation_level,vivid,6
+lighting,shadows,soft,10
+lighting,sources_count,four or more,2
+lighting,sources_count,one source,8
+lighting,sources_count,unknown,7
+lighting,sources_type,artificial light source,6
+lighting,sources_type,unknown,11
+objects,plane,background,21
+objects,plane,foreground,43
+objects,plane,midground,13
+objects,side,center,39
+objects,side,left,23
+objects,side,right,15
+objects,subtype_overview,desk,35
+objects,subtype_overview,others,25
+objects,subtype_overview,potted plant,4
+objects,subtype_overview,unknown,2
+objects,subtype_overview,window panels,8
+objects,subtype_overview,wristwatch,3
+objects,type,accessory,3
+objects,type,architectural element,1
+objects,type,architectural feature,1
+objects,type,architecture,2
+objects,type,belt,1
+objects,type,cabinet,1
+objects,type,chair,5
+objects,type,chairs,1
+objects,type,clothing,2
+objects,type,column,1
+objects,type,credenza or cabinet,1
+objects,type,cup,1
+objects,type,decor,1
+objects,type,desk,2
+objects,type,device,9
+objects,type,documents,1
+objects,type,electronic,1
+objects,type,eyeglasses,1
+objects,type,fixture recessed,1
+objects,type,folder,1
+objects,type,furniture,6
+objects,type,glass partition edge,1
+objects,type,lamp,1
+objects,type,light fixture,1
+objects,type,mouse,1
+objects,type,office chairs,1
+objects,type,paper,5
+objects,type,partition,1
+objects,type,plant,4
+objects,type,planters,1
+objects,type,seating,1
+objects,type,shelving,1
+objects,type,shelving with books,1
+objects,type,stationery,1
+objects,type,table,2
+objects,type,tabletop,1
+objects,type,tool,1
+objects,type,unknown,1
+objects,type,vegetation,1
+objects,type,wall cladding,1
+objects,type,watch,1
+objects,type,window,2
+objects,type,window glazing,1
+objects,type,window grid,1
+objects,type,window panel,1
+objects,type,writing instrument,1
+people,age_range,middle aged,10
+people,clothing_colors,black,1
+people,clothing_colors,blue,7
+people,clothing_colors,brown,1
+people,clothing_colors,gray,1
+people,clothing_colors,white,10
+people,clothing_garment,belt,1
+people,clothing_garment,dress shoes,2
+people,clothing_garment,dress trousers,1
+people,clothing_garment,neck tie,4
+people,clothing_garment,necktie,2
+people,clothing_garment,shirt,10
+people,clothing_garment,suit jacket,7
+people,clothing_garment,tie,3
+people,clothing_garment,trousers,1
+people,clothing_garment,two piece suit,1
+people,clothing_garment,watch belt accessory,1
+people,clothing_garment,wristwatch,2
+people,eyewear_frame_color,black,7
+people,eyewear_frame_color,silver,1
+people,eyewear_present,yes,10
+people,eyewear_type,eyeglasses generic,2
+people,eyewear_type,rectangular frame,6
+people,facial_hair_color,brown,1
+people,facial_hair_color,gray,1
+people,facial_hair_color,tomato token,1
+people,facial_hair_present,no,6
+people,facial_hair_present,unknown,1
+people,facial_hair_present,yes,3
+people,facial_hair_style,beard,1
+people,facial_hair_style,closely trimmed full beard,1
+people,facial_hair_style,moustache goatee,1
+people,gaze_direction,left,1
+people,gaze_direction,unknown,2
+people,gaze_direction,up,7
+people,gender_presentation,male,10
+people,hair_color,brown,1
+people,hair_color,gray,10
+people,hair_present,yes,10
+people,hair_style,short,9
+people,hair_style,straight,4
+people,hair_style,unknown,1
+people,head_covering_present,no,10
+people,occlusions,partial occlusion,9
+people,occlusions,unknown,1
+people,orientation,front,4
+people,orientation,three quarter,4
+people,orientation,unknown,2
+people,pose,forearms crossed,1
+people,pose,forearms resting on table,1
+people,pose,hands partially in jacket pockets,1
+people,pose,leaning forward slightly,1
+people,pose,legs crossed at ankles,1
+people,pose,relaxed,6
+people,pose,relaxed torso,1
+people,pose,seated,6
+people,pose,slightly forward leaning,1
+people,pose,slightly turned torso,1
+people,pose,upright,8
+people,pose,upright seated,1
+people,pose,weight shifted,1
+people,role_hint,unknown,4
+people,skin_tone,light,6
+people,skin_tone,medium,4
+safety,hazards,no,9
+safety,nsfw,unknown,10
+texts,font_style,unknown,1
+texts,legibility,text not legible,1
+texts,plane,text on foreground,1
+texts,side,text at center,1
+uncertainty,note,approximate background right bound volumes 70 140 due to blur occlusion,1
+uncertainty,note,background left exterior scene beyond windows overexposed blurred,1
+uncertainty,note,foreground floor material not visible,1
+uncertainty,note,small items background right blurred indiscernible,1
+uncertainty,note,smartphone watch brand model details not legible,1
+uncertainty,note,stack flat documents book text not legible,1
+uncertainty,note,unknown,3

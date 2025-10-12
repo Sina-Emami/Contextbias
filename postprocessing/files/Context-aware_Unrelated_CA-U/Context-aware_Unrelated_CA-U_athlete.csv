@@ -1,0 +1,571 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,6
+atmosphere,aesthetic_qualities,realistic,12
+atmosphere,color_temperature,cool,1
+atmosphere,color_temperature,neutral,4
+atmosphere,color_temperature,warm,7
+atmosphere,contrast_level,medium,14
+atmosphere,dominant_palette,black,8
+atmosphere,dominant_palette,brown,30
+atmosphere,dominant_palette,mediumblue,2
+atmosphere,mood,calm,19
+atmosphere,mood,minimalistic,2
+atmosphere,saturation_level,neutral,13
+atmosphere,saturation_level,vivid,1
+background,object_counts_by_position,background center,30
+background,object_counts_by_position,background left,18
+background,object_counts_by_position,background right,46
+background,object_counts_by_position,foreground center,55
+background,object_counts_by_position,foreground left,46
+background,object_counts_by_position,foreground right,25
+background,object_counts_by_position,midground center,32
+background,object_counts_by_position,midground left,24
+background,object_counts_by_position,midground right,34
+camera,crop,bottom cropped,1
+camera,crop,ceiling floor margins visible,1
+camera,crop,chest upward,1
+camera,crop,feet partially cropped by foreground shadow,1
+camera,crop,full figure,1
+camera,crop,lower body partial,1
+camera,crop,lower legs out frame,1
+camera,crop,lower legs partially cropped,1
+camera,crop,mid thigh,1
+camera,crop,person cropped mid thigh,1
+camera,crop,subject cropped near mid thigh,1
+camera,crop,top head near upper quarter,1
+camera,crop,torso height,1
+camera,crop,torso up,1
+camera,crop,upper thighs upward,1
+camera,crop,upper torso face centered,1
+camera,depth_of_field,deep,2
+camera,depth_of_field,deep dof,1
+camera,depth_of_field,moderate,7
+camera,depth_of_field,moderate dof,4
+camera,depth_of_field,shallow,8
+camera,depth_of_field,shallow dof,4
+camera,focal_length,normal,3
+camera,focal_length,telephoto,1
+camera,focal_length,wide,1
+camera,framing,establishing,4
+camera,framing,full body,6
+camera,framing,medium,19
+camera,framing,wide,4
+camera,perspective,eye level,23
+environment,aisle_width,moderate,1
+environment,aisle_width,unknown,1
+environment,ceiling_color,black,6
+environment,ceiling_color,lightblue,1
+environment,ceiling_color,white,2
+environment,ceiling_condition,good,2
+environment,ceiling_condition,intact,1
+environment,ceiling_finish,matte,1
+environment,ceiling_finish,painted,2
+environment,ceiling_material,black,6
+environment,ceiling_material,drywall,1
+environment,ceiling_material,paint,4
+environment,ceiling_material,painted drywall,1
+environment,ceiling_material,painted panel,1
+environment,ceiling_material,painted surface,2
+environment,ceiling_material,plaster,3
+environment,ceiling_texture,slightly reflective,1
+environment,ceiling_texture,smooth,10
+environment,ceiling_texture,textured,1
+environment,floor_color,black,6
+environment,floor_color,lightgoldenrodyellow,1
+environment,floor_color,mediumvioletred,1
+environment,floor_color,white,1
+environment,floor_condition,good,1
+environment,floor_condition,minimal wear,1
+environment,floor_condition,no visible scuffing,1
+environment,floor_finish,matte,2
+environment,floor_finish,polished,1
+environment,floor_material,ceramic tile,1
+environment,floor_material,hardwood,1
+environment,floor_material,unknown,1
+environment,floor_material,wood,2
+environment,floor_material,wood like plank,1
+environment,floor_material,wood look,1
+environment,floor_material,wood plank,1
+environment,floor_texture,chevron pattern,1
+environment,floor_texture,matte,1
+environment,floor_texture,plank,1
+environment,floor_texture,polished,1
+environment,floor_texture,slightly reflective,1
+environment,floor_texture,smooth,4
+environment,floor_texture,subtle grain,2
+environment,indoor_outdoor,unknown,20
+environment,location_type,kitchen,10
+environment,location_type,residential kitchen,10
+environment,spatial_layout_aisle_width,unknown,3
+environment,spatial_layout_depth,deep,1
+environment,spatial_layout_depth,medium,2
+environment,spatial_layout_depth,medium sized,1
+environment,spatial_layout_depth,moderate,7
+environment,spatial_layout_depth,open,2
+environment,spatial_layout_depth,shallow,3
+environment,spatial_layout_openness,contained,1
+environment,spatial_layout_openness,enclosed,1
+environment,spatial_layout_openness,moderately open,1
+environment,spatial_layout_openness,open,8
+environment,spatial_layout_openness,unknown,4
+environment,time_of_day_hint,afternoon,1
+environment,walls_color,black,1
+environment,walls_color,brown,1
+environment,walls_color,gray,7
+environment,walls_color,lightblue,3
+environment,walls_color,palegreen,1
+environment,walls_color,silver,2
+environment,walls_color,white,20
+environment,walls_condition,clean,11
+environment,walls_condition,good,3
+environment,walls_condition,intact,2
+environment,walls_condition,pristine,4
+environment,walls_condition,well maintained,1
+environment,walls_finish,brushed,1
+environment,walls_finish,clean,1
+environment,walls_finish,glazed,1
+environment,walls_finish,glossy,7
+environment,walls_finish,high gloss,1
+environment,walls_finish,matte,6
+environment,walls_finish,paint,1
+environment,walls_finish,painted,3
+environment,walls_finish,polished,1
+environment,walls_finish,semi matte,1
+environment,walls_material,ceramic,3
+environment,walls_material,ceramic tile,6
+environment,walls_material,drywall,2
+environment,walls_material,glass,1
+environment,walls_material,glazed tile,1
+environment,walls_material,high gloss cabinetry,1
+environment,walls_material,lacquered wood,1
+environment,walls_material,marble effect panel,1
+environment,walls_material,metal frame,1
+environment,walls_material,paint,7
+environment,walls_material,painted drywall,2
+environment,walls_material,painted surface,1
+environment,walls_material,painted wood,4
+environment,walls_material,stainless steel,1
+environment,walls_material,stainless steel tile,1
+environment,walls_material,tile,2
+environment,walls_material,unknown,2
+environment,walls_material,wood,1
+environment,walls_material,wood veneer,1
+environment,walls_texture,glazed,1
+environment,walls_texture,glossy,8
+environment,walls_texture,matte,1
+environment,walls_texture,polished,1
+environment,walls_texture,rectangular tile pattern,1
+environment,walls_texture,reflective,4
+environment,walls_texture,slightly reflective,1
+environment,walls_texture,smooth,24
+environment,walls_texture,textured,1
+environment,walls_texture,woodgrain,1
+environment,weather,sunny,1
+lighting,artifacts,mild glare glass beverage container,1
+lighting,artifacts,mild highlight bloom near window,1
+lighting,artifacts,mild highlight countertop,1
+lighting,artifacts,specular reflections metal surfaces,2
+lighting,artifacts,specular reflections stainless steel,1
+lighting,artifacts,specular reflections stainless steel microwave glass,1
+lighting,artifacts,subtle reflections chrome tiles,1
+lighting,artifacts,subtle specular reflections stainless steel,1
+lighting,color_temperature,cool,2
+lighting,color_temperature,neutral,4
+lighting,color_temperature,warm,10
+lighting,contrast_level,medium,15
+lighting,directionality,backlight,11
+lighting,directionality,sidelight,20
+lighting,directionality,toplight,15
+lighting,directionality,underlight,5
+lighting,directionality,unknown,13
+lighting,hardness,soft light,34
+lighting,saturation_level,neutral,13
+lighting,saturation_level,vivid,2
+lighting,shadows,casting,2
+lighting,shadows,medium,2
+lighting,shadows,soft,30
+lighting,sources_count,four or more,1
+lighting,sources_count,one source,20
+lighting,sources_count,two,3
+lighting,sources_type,artificial,9
+lighting,sources_type,artificial light,5
+lighting,sources_type,artificial light source,9
+lighting,sources_type,unknown,27
+objects,note,subtype counts sum equals total object instances,129
+objects,plane,background,94
+objects,plane,foreground,126
+objects,plane,midground,90
+objects,side,center,117
+objects,side,left,88
+objects,side,right,105
+objects,type,appliance,15
+objects,type,architectural,1
+objects,type,assorted produce,1
+objects,type,assorted vegetables background counter,1
+objects,type,avocado,1
+objects,type,backsplash,2
+objects,type,backsplash panel,1
+objects,type,black framed window,1
+objects,type,bottle,2
+objects,type,bowl,8
+objects,type,bread,1
+objects,type,bread piece,1
+objects,type,brushed stainless steel vent canopy,1
+objects,type,bunch,1
+objects,type,burner unit,1
+objects,type,butcher block wood,1
+objects,type,cabinet,1
+objects,type,cabinetry,4
+objects,type,cabinetry bank,1
+objects,type,celery,1
+objects,type,chef knife,1
+objects,type,chef slicing knife,1
+objects,type,cherry tomatoes,1
+objects,type,chicken egg,1
+objects,type,chimney,1
+objects,type,chopped herbs,1
+objects,type,coffee cup,1
+objects,type,container,7
+objects,type,cooking range,1
+objects,type,cooking vessel,2
+objects,type,cooktop,1
+objects,type,cookware,6
+objects,type,countertop,4
+objects,type,countertop edge,1
+objects,type,countertop microwave,1
+objects,type,countertop pot,1
+objects,type,countertop small appliance,1
+objects,type,crate,1
+objects,type,curtain,1
+objects,type,cutting board,5
+objects,type,cutting boards,1
+objects,type,dark green avocado pair,1
+objects,type,decoration,1
+objects,type,decorative bowl,1
+objects,type,dinnerware,1
+objects,type,dipping dish,1
+objects,type,double basin sink,1
+objects,type,egg,2
+objects,type,electric appliance,1
+objects,type,faucet,4
+objects,type,fixture,4
+objects,type,food,14
+objects,type,framed print,1
+objects,type,fruit,17
+objects,type,fruit tray,1
+objects,type,frying pan,3
+objects,type,furniture,6
+objects,type,furniture surface,1
+objects,type,gas cooktop,29
+objects,type,gas flame,1
+objects,type,glass bowl,1
+objects,type,glass jars,3
+objects,type,glass pitcher,1
+objects,type,handheld device,1
+objects,type,hanging cooking utensil,1
+objects,type,hardware,1
+objects,type,heater,1
+objects,type,herbs,2
+objects,type,holder,2
+objects,type,island countertop,1
+objects,type,jar,2
+objects,type,kettle,1
+objects,type,kitchen island,2
+objects,type,kitchen tool,3
+objects,type,kitchenware,76
+objects,type,knife,1
+objects,type,knife block,1
+objects,type,large rectangular window,1
+objects,type,leafy green bundle,1
+objects,type,leafy greens,1
+objects,type,lemons,1
+objects,type,lettuce,1
+objects,type,lettuce head,1
+objects,type,loaf,1
+objects,type,lower cabinetry,1
+objects,type,matte black fixture,1
+objects,type,metal container,1
+objects,type,metal spatula,1
+objects,type,microwave,2
+objects,type,microwave or compact oven,1
+objects,type,mixing bowl,3
+objects,type,mug,1
+objects,type,multi cooker,1
+objects,type,multi pane window,1
+objects,type,open shelving,1
+objects,type,open wall shelf plates bowls,1
+objects,type,opening,1
+objects,type,oven,1
+objects,type,oven door,1
+objects,type,pantry cabinet,1
+objects,type,partially occluded metallic appliance,1
+objects,type,pendant hood,1
+objects,type,pendant light,2
+objects,type,pitcher,1
+objects,type,plant,3
+objects,type,planter,1
+objects,type,plate or bowl,1
+objects,type,plates,1
+objects,type,plates glassware,1
+objects,type,portable burner,1
+objects,type,potted herb,3
+objects,type,potted plant,1
+objects,type,produce,6
+objects,type,produce assortment,2
+objects,type,produce grouping,1
+objects,type,range hood,9
+objects,type,raw fillet fish,1
+objects,type,round brown food,1
+objects,type,saucer,1
+objects,type,shelf,3
+objects,type,shelf contents,1
+objects,type,shelf dishware,1
+objects,type,shelf jars,1
+objects,type,shoe,1
+objects,type,single tomato,1
+objects,type,sink,3
+objects,type,sink area,1
+objects,type,skillet,1
+objects,type,small black appliance,1
+objects,type,small black metal frying pan,1
+objects,type,small black plate or bowl,1
+objects,type,small container,1
+objects,type,small round metal pan,1
+objects,type,small stainless knife,1
+objects,type,stack ceramic plates,1
+objects,type,stack white ceramic plates,1
+objects,type,stacked plates,1
+objects,type,stainless pot,1
+objects,type,stainless steel,1
+objects,type,stainless steel canopy,1
+objects,type,stainless steel mixing bowl,1
+objects,type,stainless steel rail with hanging utensils,1
+objects,type,stainless steel sink with chrome faucet,1
+objects,type,stool,1
+objects,type,storage bottles,1
+objects,type,stovetop flame,1
+objects,type,surface,1
+objects,type,tabletop,1
+objects,type,textile,2
+objects,type,three legged wood stool,1
+objects,type,tomato cluster cutting board,1
+objects,type,tomatoes,5
+objects,type,tool,1
+objects,type,under cabinet,1
+objects,type,unknown,2
+objects,type,upper cabinet singular,1
+objects,type,upper cabinets,2
+objects,type,utensil,4
+objects,type,utensil holder,4
+objects,type,utensil rail,1
+objects,type,vegetables,1
+objects,type,vent,1
+objects,type,vertical radiator,1
+objects,type,wall,1
+objects,type,wall art,1
+objects,type,wall segment,1
+objects,type,wall surface,1
+objects,type,white framed window,1
+objects,type,whole egg,1
+objects,type,window,9
+objects,type,window assembly,2
+objects,type,wood boards leaning,1
+objects,type,wooden cutting board,7
+objects,type,wooden produce crate,1
+objects,type,wooden shelf containers,1
+objects,type,wooden utensil holder,1
+objects,type,wooden worktop,1
+objects,type,work surface,1
+people,activities,cooking,4
+people,activities,holding mixing bowl,2
+people,activities,holding spatula,3
+people,activities,manipulating cookware,1
+people,activities,preparing food,2
+people,activities,scraping,1
+people,activities,stirring,2
+people,age_range,young adult,19
+people,clothing_color,black,25
+people,clothing_color,blue,6
+people,clothing_color,gray,9
+people,clothing_color,lightyellow,1
+people,clothing_color,pink,2
+people,clothing_color,red,2
+people,clothing_color,white,9
+people,clothing_fit_style,close fitting,2
+people,clothing_fit_style,fitted,3
+people,clothing_fit_style,form fitting,1
+people,clothing_fit_style,snug,1
+people,clothing_fit_style,tied rear,1
+people,clothing_fit_style,tight fitting,4
+people,clothing_material,fabric,6
+people,clothing_material,cotton,9
+people,clothing_material,knit,2
+people,clothing_material,mesh,1
+people,clothing_material,rubber,5
+people,clothing_material,stretch,3
+people,clothing_material,synthetic,13
+people,clothing_material,synthetic blend,1
+people,clothing_material,textile,2
+people,clothing_texture,breathable mesh,1
+people,clothing_texture,cushioned,1
+people,clothing_texture,elastic,1
+people,clothing_texture,fitted,1
+people,clothing_texture,moisture wicking,1
+people,clothing_texture,rubber sole,1
+people,clothing_texture,slightly shiny,1
+people,clothing_texture,smooth,17
+people,clothing_texture,smooth knit,1
+people,clothing_texture,subtle mesh panel,1
+people,clothing_texture,textile upper,1
+people,clothing_texture,textured,2
+people,clothing_texture,textured soles,1
+people,eyewear_frame_color,black,2
+people,eyewear_present,no,19
+people,facial_hair_color,black,1
+people,facial_hair_color,brown,6
+people,facial_hair_color,darkblue,1
+people,facial_hair_present,no,13
+people,facial_hair_present,yes,7
+people,facial_hair_style,full beard,2
+people,facial_hair_style,full trimmed beard,1
+people,facial_hair_style,long,1
+people,facial_hair_style,short beard,1
+people,facial_hair_style,short full beard,1
+people,facial_hair_style,short stubble,1
+people,facial_hair_style,stubble,1
+people,facial_hair_style,thick,1
+people,gaze_direction,looking down,10
+people,gender_presentation,female,4
+people,gender_presentation,male,16
+people,hair_color,black,1
+people,hair_color,brown,19
+people,hair_present,yes,20
+people,hair_style,long,3
+people,hair_style,ponytail,4
+people,hair_style,short,15
+people,hair_style,wavy,1
+people,head_covering_color,black,1
+people,head_covering_present,no,19
+people,occlusions,partially occluded,10
+people,orientation,front,3
+people,orientation,frontal,4
+people,orientation,three quarter,3
+people,orientation,unknown,2
+people,pose,engaged preparation posture,1
+people,pose,forward leaning,3
+people,pose,slightly forward leaning,2
+people,pose,slightly leaned forward,1
+people,pose,slightly leaning,1
+people,pose,slightly leaning forward,3
+people,pose,standing,1
+people,pose,torso oriented toward midground center,1
+people,pose,torso over countertop,1
+people,pose,upright,2
+people,pose_gaze_direction,down,4
+people,pose_gaze_direction,left,1
+people,pose_gaze_direction,right,2
+people,pose_gaze_direction,up,2
+people,pose_occlusions,partial occlusion,9
+people,role_hint,cook,2
+people,role_hint,home cook,1
+people,skin_tone,light,5
+people,skin_tone,medium,14
+safety,hazards,hot steam,1
+safety,hazards,knife hazard,1
+safety,hazards,loose apron hazard,1
+safety,hazards,no hazard observed,3
+safety,hazards,open gas flame,1
+safety,hazards,sharp knife exposed,1
+safety,hazards,sharp object,1
+safety,nsfw,no content,10
+safety,nsfw,shirtless,1
+texts,content,e,1
+texts,content,homemade text,1
+texts,font_style,sans,1
+texts,legibility,illegible,9
+texts,legibility,legible,1
+texts,legibility,not legible,3
+texts,legibility,partially legible,1
+texts,plane,background,3
+texts,plane,midground,3
+texts,plane,text on background,3
+texts,plane,text on foreground,2
+texts,plane,text on midground,2
+texts,side,center,3
+texts,side,left,1
+texts,side,right,2
+texts,side,text center,4
+texts,side,text right,3
+totals,images,unknown,10
+totals,object_instances,unknown,181
+totals,people_instances,unknown,10
+totals,text_instances,unknown,8
+uncertainty,total_uncertainty_instances,unknown,70
+uncertainty,uncertainty,approx counts for assorted fruit and glassware uncertain,1
+uncertainty,uncertainty,approx counts for potted plants fruit bowls uncertain due to occlusion,1
+uncertainty,uncertainty,approximate count small clear glass jars 3,1
+uncertainty,uncertainty,approximate counts for small citrus fruits and hanging utensils,1
+uncertainty,uncertainty,approximate counts on open shelving not exact,1
+uncertainty,uncertainty,approximate counts stacked pans plates due to occlusion,1
+uncertainty,uncertainty,apron text transcription uncertain partially shadowed,1
+uncertainty,uncertainty,background left contains softly blurred indiscernible small items,1
+uncertainty,uncertainty,background left open shelf item identities uncertain,1
+uncertainty,uncertainty,contents of stainless steel mixing bowl not identifiable,1
+uncertainty,uncertainty,countertop appliance identity uncertain coffee maker or blender,1
+uncertainty,uncertainty,digital display characters appliance labels not legible,1
+uncertainty,uncertainty,exact appliance model midground right not identifiable,1
+uncertainty,uncertainty,exact contents of mixing bowl foreground right not identifiable,1
+uncertainty,uncertainty,exact contents precise count of containers approximated,1
+uncertainty,uncertainty,exact count small utensils hanging rail uncertain 4 hooks,1
+uncertainty,uncertainty,exact hand left right holding utensils uncertain,1
+uncertainty,uncertainty,exact number of stacked ceramic dishes approximate 4 6,1
+uncertainty,uncertainty,exact stacked plates bowls counts approximate due to occlusion,1
+uncertainty,uncertainty,exterior scene through window out of focus,1
+uncertainty,uncertainty,exterior view through background left window out of focus,1
+uncertainty,uncertainty,floor ceiling surfaces not described,1
+uncertainty,uncertainty,focal length ambiguous,1
+uncertainty,uncertainty,foreground bowl contents approximate uncertain food type,1
+uncertainty,uncertainty,framed wall art partially out of frame details indiscernible,1
+uncertainty,uncertainty,green leafy vegetable species not identifiable,1
+uncertainty,uncertainty,identity of two medium brown spherical items uncertain,1
+uncertainty,uncertainty,indiscernible blur near wrapped bread,1
+uncertainty,uncertainty,light colored logo on shorts illegible,1
+uncertainty,uncertainty,lower body clothing footwear not visible uncertain,5
+uncertainty,uncertainty,lower left dishwasher front details not visible,1
+uncertainty,uncertainty,lower legs feet cropped out of frame,5
+uncertainty,uncertainty,lower sink area partially occluded,1
+uncertainty,uncertainty,material composition details not independently verified,1
+uncertainty,uncertainty,microwave brand model text illegible,1
+uncertainty,uncertainty,midground left background object ids not fully specified,1
+uncertainty,uncertainty,number of hanging utensils approximated 6,1
+uncertainty,uncertainty,number of sliced cooked protein pieces uncertain 3 4,1
+uncertainty,uncertainty,open shelving jar contents not clear approx 4 6 jars,1
+uncertainty,uncertainty,outdoor details beyond white framed window indistinct,1
+uncertainty,uncertainty,partially occluded metallic appliance identification uncertain,1
+uncertainty,uncertainty,photographic print content background left not legible,1
+uncertainty,uncertainty,potential logo text on t shirt not legible,1
+uncertainty,uncertainty,potted plants approximate count 4,1
+uncertainty,uncertainty,reflective glare on sliding glass door partially occludes exterior,1
+uncertainty,uncertainty,sink area background right partially visible,1
+uncertainty,uncertainty,slight soft focus blur across background left tiles,1
+uncertainty,uncertainty,small clear mixing bowl contents not identifiable due to resolution,1
+uncertainty,uncertainty,small dark logo on range hood not legible,1
+uncertainty,uncertainty,small framed artwork content not legible at current resolution,1
+uncertainty,uncertainty,small glass jar contents not identifiable,1
+uncertainty,uncertainty,small printed container labels illegible,9
+uncertainty,uncertainty,small reflective object near foreground right edge indiscernible,1
+uncertainty,uncertainty,small text brand logos on clothing unreadable,1
+uncertainty,uncertainty,small unidentified dark object foreground left high frequency,18
+uncertainty,uncertainty,small utensils or spice labels partially occluded not legible,14
+uncertainty,uncertainty,small wall note illegible,1
+uncertainty,uncertainty,specific herb types not identifiable,1
+uncertainty,uncertainty,stacked plate glass counts approximate,1
+uncertainty,uncertainty,stacked plates approx count 6 per stack,1
+uncertainty,uncertainty,state of active gas flame beneath mixing bowl uncertain,1
+uncertainty,uncertainty,tank top logo interpreted as e but could be occluded stylized,1
+uncertainty,uncertainty,time of day ambiguous despite sunlight clues,1
+uncertainty,uncertainty,two bright green round fruits type uncertain,1
+uncertainty,uncertainty,unknown,28
+uncertainty,uncertainty,upper cabinet interior contents partially occluded out of focus,1
+uncertainty,uncertainty,weather not visible,1
+uncertainty,uncertainty,windowsill baskets partially occluded,1

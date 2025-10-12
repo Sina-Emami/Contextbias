@@ -1,0 +1,110 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,4,3
+scene_appearance,aesthetic_qualities,minimal,2,3
+scene_appearance,aesthetic_qualities,realistic,12,3
+scene_appearance,color_temperature,cool,10,2
+scene_appearance,color_temperature,neutral,4,2
+scene_appearance,dominant_colors,black,7,4
+scene_appearance,dominant_colors,gray,1,4
+scene_appearance,dominant_colors,mediumblue,1,4
+scene_appearance,dominant_colors,orangered,1,4
+scene_appearance,mood,calm,10,1
+camera,depth_of_field,deep,16,3
+camera,depth_of_field,moderate,2,3
+camera,depth_of_field,shallow,2,3
+camera,framing,establishing,4,4
+camera,framing,full body,12,4
+camera,framing,medium,8,4
+camera,framing,wide,8,4
+camera,perspective,eye level,14,2
+camera,perspective,low angle,2,2
+objects,type,broom,1,28
+objects,type,cabinet,7,28
+objects,type,caution sign,1,28
+objects,type,chair,1,28
+objects,type,cleaning cart,1,28
+objects,type,clear plastic containers,1,28
+objects,type,clock,1,28
+objects,type,container,10,28
+objects,type,dispenser,1,28
+objects,type,electrical plate,1,28
+objects,type,extractor hood,1,28
+objects,type,folded towel or cloth,1,28
+objects,type,folded white textiles or paper goods,1,28
+objects,type,long handle metal pole,1,28
+objects,type,mop bucket,31,28
+objects,type,multi pane windows,11,28
+objects,type,outlet or control plate,1,28
+objects,type,plant,1,28
+objects,type,safety sign,1,28
+objects,type,sign,1,28
+objects,type,sink counter,1,28
+objects,type,small medium bottles canisters shelving,1,28
+objects,type,small potted plant,1,28
+objects,type,stackable plastic chair,1,28
+objects,type,storage bag,1,28
+objects,type,tall open metal storage shelving,1,28
+objects,type,warning sign,1,28
+objects,type,window,3,28
+people,activities,holding mop,1,10
+people,activities,holding bag,1,10
+people,activities,holding tool,1,10
+people,activities,mopping,4,10
+people,activities,operating long handled floor cleaning tool,1,10
+people,activities,positioned near cleaning cart,1,10
+people,activities,holding cleaning cart,1,10
+people,activities,pressing mop head into floor,1,10
+people,activities,pressing mop head into floor,1,10
+people,activities,pushing,2,10
+people,activities,holding mop,1,10
+people,activities,wiping,6,10
+people,age_range,middle aged,6,2
+people,age_range,older adult,4,2
+people,clothing_garment,apron,1,13
+people,clothing_garment,belt,1,13
+people,clothing_garment,bib overalls,6,13
+people,clothing_garment,coverall,2,13
+people,clothing_garment,disposable gloves,1,13
+people,clothing_garment,gloves,3,13
+people,clothing_garment,rubber gloves,2,13
+people,clothing_garment,safety vest,1,13
+people,clothing_garment,shirt,10,13
+people,clothing_garment,shoes,3,13
+people,clothing_garment,trousers,3,13
+people,clothing_garment,work pants,1,13
+people,clothing_garment,work shoes,6,13
+people,eyewear_present,no,18,2
+people,eyewear_present,yes,2,2
+people,hair_color,black,3,4
+people,hair_color,brown,2,4
+people,hair_color,white,1,4
+people,facial_hair_present,no,4,2
+people,facial_hair_present,yes,3,2
+people,facial_hair_style,short,1,3
+people,facial_hair_style,short stubble,1,3
+people,facial_hair_style,stubble,1,3
+people,gaze_direction,down,9,1
+people,gender_presentation,male,10,1
+people,hair_color,black,4,4
+people,hair_color,brown,4,4
+people,hair_color,gray,10,4
+people,hair_color,white,2,4
+people,hair_present,yes,10,1
+people,hair_style,short,9,2
+people,hair_style,straight,1,2
+people,head_covering_type,black,1,4
+people,head_covering_type,blue,5,4
+people,head_covering_present,no,5,2
+people,head_covering_present,yes,5,2
+people,head_covering_type,baseball cap,4,4
+people,head_covering_type,cap generic,1,4
+people,pose,leaning,2,2
+people,pose,leaning,1,2
+people,pose,leaning,7,2
+people,pose,leaning,4,2
+people,pose,standing,3,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,skin_tone,dark,1,3
+people,skin_tone,light,8,3
+people,skin_tone,medium,1,3

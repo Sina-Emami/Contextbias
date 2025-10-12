@@ -1,0 +1,198 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,16,4
+scene_appearance,aesthetic_qualities,dreamy,1,4
+scene_appearance,aesthetic_qualities,minimal,4,4
+scene_appearance,aesthetic_qualities,realistic,43,4
+scene_appearance,color_temperature,cool,33,3
+scene_appearance,color_temperature,neutral,13,3
+scene_appearance,color_temperature,warm,3,3
+scene_appearance,dominant_colors,black,24,8
+scene_appearance,dominant_colors,blue,4,8
+scene_appearance,dominant_colors,brown,7,8
+scene_appearance,dominant_colors,cyan,2,8
+scene_appearance,dominant_colors,gray,1,8
+scene_appearance,dominant_colors,mediumblue,9,8
+scene_appearance,dominant_colors,orangered,1,8
+scene_appearance,dominant_colors,red,2,8
+scene_appearance,mood,calm,45,2
+scene_appearance,mood,minimalistic,6,2
+camera,depth_of_field,deep,24,5
+camera,depth_of_field,moderate,5,5
+camera,depth_of_field,moderate dof,2,5
+camera,depth_of_field,shallow,26,5
+camera,depth_of_field,shallow dof,8,5
+camera,framing,establishing,12,4
+camera,framing,full body,29,4
+camera,framing,medium,21,4
+camera,framing,wide,24,4
+camera,perspective,eye level,52,3
+camera,perspective,low angle,4,3
+camera,perspective,third person,2,3
+objects,type,arched windows series,1,50
+objects,type,bag,2,50
+objects,type,bagged produce,1,50
+objects,type,basket,1,50
+objects,type,box,1,50
+objects,type,broom,2,50
+objects,type,broom head,1,50
+objects,type,cabinet,8,50
+objects,type,caution sign,1,50
+objects,type,chair,1,50
+objects,type,cleaning cart,1,50
+objects,type,clear plastic containers,1,50
+objects,type,clock,1,50
+objects,type,container,11,50
+objects,type,dispenser,1,50
+objects,type,door,4,50
+objects,type,door frames,8,50
+objects,type,electrical plate,1,50
+objects,type,emergency sign,1,50
+objects,type,extractor hood,1,50
+objects,type,folded towel or cloth,1,50
+objects,type,folded white textiles or paper goods,1,50
+objects,type,hand basket,1,50
+objects,type,handrail,3,50
+objects,type,long handle metal pole,1,50
+objects,type,mop,22,50
+objects,type,mop bucket,31,50
+objects,type,multi pane windows,11,50
+objects,type,outlet or control plate,1,50
+objects,type,plant,1,50
+objects,type,produce bags,1,50
+objects,type,produce containers,1,50
+objects,type,push brooming,3,50
+objects,type,safety sign,7,50
+objects,type,shelf,2,50
+objects,type,shoes,4,50
+objects,type,shopping basket,5,50
+objects,type,shopping basket cart configuration,1,50
+objects,type,shopping cart,8,50
+objects,type,sign,2,50
+objects,type,sink counter,1,50
+objects,type,small medium bottles canisters shelving,1,50
+objects,type,small potted plant,1,50
+objects,type,stackable plastic chair,1,50
+objects,type,stainless tubular handrail,2,50
+objects,type,storage bag,1,50
+objects,type,tall open metal storage shelving,1,50
+objects,type,warning sign,1,50
+objects,type,wheeled container,1,50
+objects,type,window,3,50
+people,activities,carrying basket,1,15
+people,activities,gripping shopping cart,1,15
+people,activities,gripping shopping cart duplicate token preserved as single group,1,15
+people,activities,holding mop,1,15
+people,activities,holding bag,1,15
+people,activities,holding bag,3,15
+people,activities,holding tool,1,15
+people,activities,mopping,13,15
+people,activities,operating long handled floor cleaning tool,1,15
+people,activities,placing or adjusting fruit,1,15
+people,activities,positioned near cleaning cart,1,15
+people,activities,holding cleaning cart,1,15
+people,activities,pressing mop head into floor,1,15
+people,activities,pressing mop head into floor,1,15
+people,activities,pushing,1,15
+people,activities,pushing,2,15
+people,activities,pushing cart token,3,15
+people,activities,holding mop,3,15
+people,activities,wiping,6,15
+people,pose,standing,1,2
+people,pose,standing,3,2
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,pose,leaning,6,2
+people,pose,standing,3,2
+people,pose,standing,7,2
+people,age_range,middle aged,38,3
+people,age_range,older adult,10,3
+people,age_range,young adult,1,3
+people,clothing_color,beige,0,11
+people,clothing_color,black,44,11
+people,clothing_color,blue,72,11
+people,clothing_color,brown,2,11
+people,clothing_color,gray,7,11
+people,clothing_color,green,24,11
+people,clothing_color,orange,8,11
+people,clothing_color,pink,1,11
+people,clothing_color,tan,1,11
+people,clothing_color,white,7,11
+people,clothing_color,yellow,10,11
+people,clothing_garment,apron,1,15
+people,clothing_garment,belt,1,15
+people,clothing_garment,disposable gloves,1,15
+people,clothing_garment,face mask,1,15
+people,clothing_garment,gloves,3,15
+people,clothing_garment,high visibility safety vest,2,15
+people,clothing_garment,overalls,12,15
+people,clothing_garment,rubber gloves,2,15
+people,clothing_garment,safety vest,3,15
+people,clothing_garment,shirt,24,15
+people,clothing_garment,shoes,8,15
+people,clothing_garment,trousers,7,15
+people,clothing_garment,work gloves,17,15
+people,clothing_garment,work pants,1,15
+people,clothing_garment,work shoes,6,15
+people,eyewear_present,no,46,2
+people,eyewear_present,yes,5,2
+people,hair_color,black,5,4
+people,hair_color,brown,3,4
+people,hair_color,white,1,4
+people,facial_hair_present,no,17,2
+people,facial_hair_present,yes,12,2
+people,facial_hair_style,short,1,3
+people,facial_hair_style,short stubble,2,3
+people,facial_hair_style,stubble,2,3
+people,gaze_direction,down,31,5
+people,gaze_direction,left,1,5
+people,gaze_direction,right,1,5
+people,gaze_direction,to the right,2,5
+people,gaze_direction,up,6,5
+people,gender_presentation,female,1,2
+people,gender_presentation,male,51,2
+people,hair_color,black,27,4
+people,hair_color,brown,11,4
+people,hair_color,gray,34,4
+people,hair_color,white,2,4
+people,hair_present,yes,48,1
+people,hair_style,curly,1,4
+people,hair_style,shaved,1,4
+people,hair_style,short,44,4
+people,hair_style,straight,1,4
+people,head_covering_type,black,1,9
+people,head_covering_type,blue,9,9
+people,head_covering_type,blue coverings,5,9
+people,head_covering_type,orange,1,9
+people,head_covering_present,no,22,2
+people,head_covering_present,yes,28,2
+people,head_covering_type,baseball cap,10,9
+people,head_covering_type,brimmed cap,1,9
+people,head_covering_type,cap,7,9
+people,head_covering_type,cap generic,4,9
+people,head_covering_type,hard hat,1,9
+people,pose,standing,1,2
+people,pose,leaning,2,2
+people,pose,leaning,8,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,11,2
+people,pose,leaning,7,2
+people,pose,leaning,2,2
+people,pose,leaning,5,2
+people,pose,leaning,4,2
+people,pose,leaning,1,2
+people,pose,leaning,1,2
+people,pose,leaning,1,2
+people,pose,standing,4,2
+people,pose,standing,1,2
+people,pose,standing,13,2
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,skin_tone,dark,3,3
+people,skin_tone,light,24,3
+people,skin_tone,medium,25,3

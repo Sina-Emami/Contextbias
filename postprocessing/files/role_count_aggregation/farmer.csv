@@ -1,0 +1,804 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,38
+atmosphere,aesthetic_qualities,dreamy,3
+atmosphere,aesthetic_qualities,realistic,36
+atmosphere,aesthetic_qualities,unknown,13
+atmosphere,color_temperature,cool,5
+atmosphere,color_temperature,unknown,4
+atmosphere,color_temperature,warm,30
+atmosphere,contrast_level,high,5
+atmosphere,contrast_level,medium,37
+atmosphere,contrast_level,unknown,6
+atmosphere,dominant_palette,brown,30
+atmosphere,dominant_palette,unknown,30
+atmosphere,mood,calm,60
+atmosphere,mood,joyful,1
+atmosphere,palette,brown,10
+atmosphere,palette_color,brown,10
+atmosphere,profile_aesthetic_qualities,quality cinematic,6
+atmosphere,profile_aesthetic_qualities,quality dreamy,3
+atmosphere,profile_aesthetic_qualities,quality realistic,8
+atmosphere,profile_color_temperature,warm,9
+atmosphere,profile_contrast_level,medium,10
+atmosphere,profile_saturation_level,neutral,3
+atmosphere,profile_saturation_level,vivid,6
+atmosphere,saturation_level,neutral,26
+atmosphere,saturation_level,unknown,8
+atmosphere,saturation_level,vivid,13
+atmosphere,temperature,neutral,1
+atmosphere,temperature,warm,8
+background,object_counts_by_position,background center,58
+background,object_counts_by_position,background left,22
+background,object_counts_by_position,background right,26
+background,object_counts_by_position,foreground center,39
+background,object_counts_by_position,foreground left,27
+background,object_counts_by_position,foreground right,12
+background,object_counts_by_position,midground center,35
+background,object_counts_by_position,midground left,13
+background,object_counts_by_position,midground right,19
+background,position,background center,12
+background,position,background left,9
+background,position,background right,19
+background,position,foreground center,23
+background,position,foreground left,19
+background,position,foreground right,14
+background,position,midground center,24
+background,position,midground left,16
+background,position,midground right,20
+camera,angle,unknown,20
+camera,crop,book,1
+camera,crop,bottom cropped,1
+camera,crop,bottom edge crops lower legs,1
+camera,crop,excludes lower legs footwear,1
+camera,crop,hands,1
+camera,crop,includes foreground rug background window,1
+camera,crop,includes torso lap,1
+camera,crop,left forearm partial,1
+camera,crop,lower body cropped,2
+camera,crop,lower lap area cropped,1
+camera,crop,lower legs cropped,3
+camera,crop,lower legs out of frame,1
+camera,crop,lower legs partially out of frame,1
+camera,crop,other variants singles,4
+camera,crop,partial lower legs,1
+camera,crop,partial lower legs out of frame,1
+camera,crop,right boot partial,1
+camera,crop,right cushion area partially cropped,1
+camera,crop,right shoe bottom cropped,1
+camera,crop,right side,1
+camera,crop,subject centered,1
+camera,crop,torso,1
+camera,crop,torso and hands included,1
+camera,depth_of_field,deep,4
+camera,depth_of_field,moderate,2
+camera,depth_of_field,shallow,51
+camera,depth_of_field,unknown,1
+camera,focal_length,normal,10
+camera,focal_length,telephoto,22
+camera,focal_length,unknown,12
+camera,framing,close up,7
+camera,framing,establishing,8
+camera,framing,full body,3
+camera,framing,headshot,4
+camera,framing,medium,51
+camera,framing,unknown,2
+camera,framing,wide,6
+camera,perspective,eye level,43
+camera,perspective,low angle,5
+camera,perspective,unknown,5
+environment,aisle_width,unknown,1
+environment,ceiling_color,gray,6
+environment,ceiling_material,clouds,3
+environment,ceiling_material,sky,3
+environment,ceiling_texture,cloud filled,1
+environment,ceiling_texture,diffuse,1
+environment,ceiling_texture,layered,3
+environment,ceiling_texture,textured,1
+environment,floor_color,brown,21
+environment,floor_color,darkgreen,2
+environment,floor_color,gold,2
+environment,floor_color,green,2
+environment,floor_color,palegreen,1
+environment,floor_color,tan,1
+environment,floor_condition,brittle,3
+environment,floor_condition,compacted,2
+environment,floor_condition,covered by crop,1
+environment,floor_condition,crumbly,1
+environment,floor_condition,cultivated,2
+environment,floor_condition,disturbed,1
+environment,floor_condition,dry,7
+environment,floor_condition,dry appearing,1
+environment,floor_condition,dusty,3
+environment,floor_condition,evenly spaced,1
+environment,floor_condition,freshly disturbed,1
+environment,floor_condition,freshly tilled,4
+environment,floor_condition,harvested,1
+environment,floor_condition,healthy,2
+environment,floor_condition,healthy appearing,1
+environment,floor_condition,loose,1
+environment,floor_condition,loose textured,1
+environment,floor_condition,mature,2
+environment,floor_condition,moist,2
+environment,floor_condition,moist appearing,1
+environment,floor_condition,receding ridges,1
+environment,floor_condition,recently disturbed,1
+environment,floor_condition,recently tilled,1
+environment,floor_condition,recently worked,1
+environment,floor_condition,slightly dry,1
+environment,floor_condition,smooth compacted,1
+environment,floor_condition,tilled,1
+environment,floor_condition,uniform,1
+environment,floor_condition,weathered,1
+environment,floor_condition,well turned,1
+environment,floor_condition,well used,1
+environment,floor_condition,worn,1
+environment,floor_finish,matte,22
+environment,floor_finish,specular highlights,1
+environment,floor_finish,unknown,3
+environment,floor_material,cereal crop,1
+environment,floor_material,compacted soil,1
+environment,floor_material,crop stubble,1
+environment,floor_material,earth,2
+environment,floor_material,grass,1
+environment,floor_material,loam,2
+environment,floor_material,loamy soil,1
+environment,floor_material,organic,1
+environment,floor_material,plant stalks,1
+environment,floor_material,plant stubble,1
+environment,floor_material,soil,19
+environment,floor_material,straw,2
+environment,floor_material,trees,1
+environment,floor_material,vegetation,3
+environment,floor_texture,brittle,1
+environment,floor_texture,clod textured,1
+environment,floor_texture,coarse,1
+environment,floor_texture,coarse crumb,1
+environment,floor_texture,coarse textured,1
+environment,floor_texture,compact,1
+environment,floor_texture,compacted,2
+environment,floor_texture,crumbly,2
+environment,floor_texture,crushed,1
+environment,floor_texture,dense,2
+environment,floor_texture,dry,2
+environment,floor_texture,dry textured,1
+environment,floor_texture,dusty,1
+environment,floor_texture,fibrous,5
+environment,floor_texture,fibrous crop residue,1
+environment,floor_texture,fine crumb,1
+environment,floor_texture,fine granular,1
+environment,floor_texture,finely tilled,1
+environment,floor_texture,furrowed,4
+environment,floor_texture,glossy leaves,1
+environment,floor_texture,granular,7
+environment,floor_texture,leafy,2
+environment,floor_texture,loamy,3
+environment,floor_texture,loose,1
+environment,floor_texture,loose textured,1
+environment,floor_texture,mowed,1
+environment,floor_texture,papery,1
+environment,floor_texture,raked,1
+environment,floor_texture,ridged,9
+environment,floor_texture,rough,2
+environment,floor_texture,slender stalk,1
+environment,floor_texture,smooth,3
+environment,floor_texture,smooth waxy,1
+environment,floor_texture,stubbled,1
+environment,floor_texture,textured,2
+environment,floor_texture,tilled,1
+environment,floor_texture,tilled variant,0
+environment,indoor_outdoor,unknown,60
+environment,location_type,agricultural field,24
+environment,location_type,agricultural planting field,1
+environment,location_type,domestic reading space,1
+environment,location_type,domestic sitting area,2
+environment,location_type,farmland,3
+environment,location_type,farmyard,1
+environment,location_type,living room,15
+environment,location_type,reading nook,1
+environment,location_type,residential living space,2
+environment,location_type,residential sitting area,2
+environment,location_type,rural farmland,1
+environment,location_type,rural living area,2
+environment,location_type,rustic living room,2
+environment,location_type,wooden cabin interior,2
+environment,location_type,wooden cabin reading space,1
+environment,openness,open,10
+environment,spatial_layout_aisle_width,unknown,19
+environment,spatial_layout_depth,compressed,1
+environment,spatial_layout_depth,deep,8
+environment,spatial_layout_depth,moderate,20
+environment,spatial_layout_depth,open,1
+environment,spatial_layout_depth,shallow,15
+environment,spatial_layout_openness,enclosed,6
+environment,spatial_layout_openness,expansive,1
+environment,spatial_layout_openness,moderate,1
+environment,spatial_layout_openness,open,17
+environment,spatial_layout_openness,unknown,1
+environment,time_of_day_hint,afternoon,20
+environment,time_of_day_hint,dusk,2
+environment,time_of_day_hint,evening,4
+environment,time_of_day_hint,noon,2
+environment,time_of_day_hint,unknown,8
+environment,weather,clear,5
+environment,weather,cloudy,11
+environment,weather,overcast,10
+environment,weather,storm,1
+environment,weather,sunny,3
+environment,weather,unknown,2
+lighting,artifacts,artifact faint eyeglass reflection,1
+lighting,artifacts,artifact mild reflection eyeglass lenses,1
+lighting,artifacts,artifact minor specular book edges,1
+lighting,artifacts,artifact minor specular glasses,1
+lighting,artifacts,artifact specular highlights on leather glazed pot,1
+lighting,artifacts,artifact specular reflection eyeglass lenses,1
+lighting,artifacts,artifact subtle reflection eyeglass frames,1
+lighting,artifacts,artifact warm lens glow upper right,1
+lighting,artifacts,bokeh,1
+lighting,artifacts,rim highlight,1
+lighting,artifacts,specular highlights,1
+lighting,color_temperature,cool,5
+lighting,color_temperature,neutral,2
+lighting,color_temperature,unknown,4
+lighting,color_temperature,warm,62
+lighting,contrast_level,high,5
+lighting,contrast_level,medium,58
+lighting,contrast_level,unknown,4
+lighting,directionality,backlight,7
+lighting,directionality,side light,2
+lighting,directionality,sidelight,6
+lighting,directionality,top light,3
+lighting,directionality,unknown,26
+lighting,hardness,medium,1
+lighting,hardness,soft,43
+lighting,saturation_level,neutral,34
+lighting,saturation_level,unknown,6
+lighting,saturation_level,vivid,25
+lighting,shadows,casting,2
+lighting,shadows,medium,1
+lighting,shadows,soft,67
+lighting,shadows,unknown,1
+lighting,sources_count,four or more,1
+lighting,sources_count,one,28
+lighting,sources_count,one source,15
+lighting,sources_count,two,2
+lighting,sources_count,unknown,5
+lighting,sources_directionality,backlight,5
+lighting,sources_directionality,sidelight,5
+lighting,sources_directionality,toplight,3
+lighting,sources_directionality,unknown,12
+lighting,sources_hardness,soft,10
+lighting,sources_hardness,soft light,10
+lighting,sources_type,artificial light,1
+lighting,sources_type,light source artificial,2
+lighting,sources_type,mixed,1
+lighting,sources_type,unknown,52
+objects,color,beige,9
+objects,color,black,4
+objects,color,blue,1
+objects,color,brown,41
+objects,color,crimson,1
+objects,color,darkblue,4
+objects,color,darkgreen,13
+objects,color,darkviolet,1
+objects,color,gold,4
+objects,color,gray,4
+objects,color,green,19
+objects,color,khaki,2
+objects,color,lightyellow,1
+objects,color,orangered,1
+objects,color,palegreen,1
+objects,color,red,5
+objects,color,silver,3
+objects,color,tan,6
+objects,color,white,2
+objects,color,yellow,3
+objects,material,cloud,1
+objects,material,cotton,2
+objects,material,denim,1
+objects,material,hay,1
+objects,material,leather,1
+objects,material,metal,8
+objects,material,painted roof,1
+objects,material,plant,26
+objects,material,rubber,3
+objects,material,soil,23
+objects,material,straw,21
+objects,material,unknown,1
+objects,material,vegetation,3
+objects,material,wicker,1
+objects,material,wood,7
+objects,material,woven straw,2
+objects,object_colors,beige,2
+objects,object_colors,black,2
+objects,object_colors,brown,12
+objects,object_colors,darkgreen,11
+objects,object_colors,gold,11
+objects,object_colors,gray,3
+objects,object_colors,green,14
+objects,object_colors,lightcyan,1
+objects,object_colors,red,3
+objects,object_colors,tan,2
+objects,object_colors,violet,1
+objects,object_materials,cereal crop,6
+objects,object_materials,foliage,6
+objects,object_materials,glass,1
+objects,object_materials,metal,2
+objects,object_materials,painted surface,1
+objects,object_materials,plant,10
+objects,object_materials,plant stalks,4
+objects,object_materials,rubber,2
+objects,object_materials,soil,8
+objects,object_materials,straw,3
+objects,object_materials,wood,1
+objects,object_texture,dense leafy,21
+objects,object_texture,fibrous,12
+objects,object_texture,matte,0
+objects,plane,background,73
+objects,plane,foreground,107
+objects,plane,midground,101
+objects,side,center,120
+objects,side,left,72
+objects,side,right,89
+objects,subtype_counts,blurred treeline band,1
+objects,subtype_counts,clouds,1
+objects,subtype_counts,distant trees roofs,1
+objects,subtype_counts,long handled shovel,1
+objects,subtype_counts,planted rows,38
+objects,subtype_counts,small red structures partial,1
+objects,subtype_counts,straw hat,5
+objects,subtype_counts,unknown,1
+objects,subtype_counts,wide brimmed sunhat,1
+objects,subtype_counts,work boots,1
+objects,subtype_counts,work gloves,4
+objects,subtype_counts,work pants,1
+objects,type,accessory,2
+objects,type,agricultural,1
+objects,type,agricultural product,3
+objects,type,appliance,1
+objects,type,architecture,8
+objects,type,armchair,1
+objects,type,bird shaped,1
+objects,type,blurred exterior vegetation,1
+objects,type,book,14
+objects,type,bookcase,47
+objects,type,bookshelf,3
+objects,type,boots,2
+objects,type,bowls,1
+objects,type,building,1
+objects,type,building silhouette,2
+objects,type,bundle,1
+objects,type,clothing,2
+objects,type,container,1
+objects,type,couch,4
+objects,type,crop residue band,1
+objects,type,crop rows,6
+objects,type,crop strips,1
+objects,type,cultivated field,1
+objects,type,curtain panel,1
+objects,type,cushion,1
+objects,type,decor,4
+objects,type,decorative bowl,1
+objects,type,decorative pillow,1
+objects,type,dirt path,1
+objects,type,farm tractor,1
+objects,type,fence,2
+objects,type,footwear,3
+objects,type,framed artwork,2
+objects,type,furniture,22
+objects,type,furniture sofa subtype mapping exists,13
+objects,type,furrow,1
+objects,type,garment,1
+objects,type,glass jar,1
+objects,type,glass jars,1
+objects,type,ground,2
+objects,type,ground feature,4
+objects,type,hand covering,1
+objects,type,hand held crop fragments,1
+objects,type,hand tool,4
+objects,type,hanging potted plant,1
+objects,type,hat,13
+objects,type,head covering,2
+objects,type,head wear,1
+objects,type,headwear,2
+objects,type,hedgerow,1
+objects,type,indistinct,1
+objects,type,labeled cylindrical container,1
+objects,type,landform,2
+objects,type,landscape,3
+objects,type,leafy bundle,1
+objects,type,livestock,1
+objects,type,loose straw,1
+objects,type,machinery,1
+objects,type,multi pane window,2
+objects,type,object,6
+objects,type,object headwear merged head wear,9
+objects,type,object soil,39
+objects,type,object tree line merged treeline,3
+objects,type,open storage shelf,1
+objects,type,pathway,1
+objects,type,person object annotation,1
+objects,type,plant,14
+objects,type,plant bundle,1
+objects,type,pole,1
+objects,type,potted houseplant,1
+objects,type,potted leafy plant,1
+objects,type,potted plant,9
+objects,type,rectangular multi pane,1
+objects,type,rubber boots,1
+objects,type,sculpture,1
+objects,type,shelf,6
+objects,type,shoe,1
+objects,type,sky,7
+objects,type,sofa,17
+objects,type,soil,1
+objects,type,soil patch,1
+objects,type,storage,4
+objects,type,straw bales,1
+objects,type,straw bundle,2
+objects,type,straw cowboy hat,1
+objects,type,straw hat,2
+objects,type,structure,4
+objects,type,structures treeline,1
+objects,type,table,4
+objects,type,terra cotta pieces,1
+objects,type,textile,14
+objects,type,throw blanket,5
+objects,type,tilled soil,1
+objects,type,tin canisters,1
+objects,type,tree canopies,1
+objects,type,tree clump,1
+objects,type,tree line,2
+objects,type,tree mass,1
+objects,type,unknown,3
+objects,type,vegetation,17
+objects,type,vegetation band,1
+objects,type,vehicle,3
+objects,type,vertical wooden planks,1
+objects,type,wall lamp,1
+objects,type,wallpaper,1
+objects,type,wheat rows,1
+objects,type,wicker baskets,1
+objects,type,window,12
+objects,type,window array,1
+objects,type,wooden utensils,1
+objects,type,woven baskets,2
+people,activities,gathering soil,1
+people,activities,handling soil,1
+people,activities,hands resting or gathering straw,1
+people,activities,holding basket,1
+people,activities,holding hand tool,1
+people,activities,holding soil clump,1
+people,activities,holding straw bundle,2
+people,activities,inspecting soil,1
+people,activities,inspecting soil clump,1
+people,activities,letting soil fall,1
+people,activities,looking toward camera viewer,3
+people,activities,manipulating plants,1
+people,activities,planting,4
+people,activities,resting,1
+people,activities,sifting breaking clods,1
+people,activities,standing still,1
+people,activities,supporting produce,1
+people,activities,tending crops,1
+people,age_range,middle aged,13
+people,age_range,older adult,36
+people,clothing_color,beige,1
+people,clothing_color,black,13
+people,clothing_color,blue,25
+people,clothing_color,brown,14
+people,clothing_color,gray,13
+people,clothing_color,green,1
+people,clothing_color,palegreen,1
+people,clothing_color,red,3
+people,clothing_color,tan,5
+people,clothing_color,tomato,1
+people,clothing_color,white,4
+people,clothing_color,yellow,1
+people,clothing_garment,apron,1
+people,clothing_garment,belt,1
+people,clothing_garment,boots,2
+people,clothing_garment,hat,1
+people,clothing_garment,jeans,2
+people,clothing_garment,overalls,14
+people,clothing_garment,shirt,17
+people,clothing_garment,shoes,1
+people,clothing_garment,suspenders,4
+people,clothing_garment,trousers,4
+people,clothing_garment,work boots,1
+people,eyewear_frame_color,black,8
+people,eyewear_frame_color,dark blue,1
+people,eyewear_frame_color,silver,6
+people,eyewear_present,no,26
+people,eyewear_present,unknown,5
+people,eyewear_present,yes,18
+people,eyewear_type,eyeglasses,2
+people,eyewear_type,reading glasses,4
+people,eyewear_type,rectangular,4
+people,eyewear_type,rectangular metal rimmed,1
+people,eyewear_type,rectangular reading glasses,1
+people,eyewear_type,unknown,3
+people,facial_hair_color,black,14
+people,facial_hair_color,gray,24
+people,facial_hair_color,tomato reddish,1
+people,facial_hair_color,white,10
+people,facial_hair_present,no,5
+people,facial_hair_present,unknown,9
+people,facial_hair_present,yes,30
+people,facial_hair_style,beard,10
+people,facial_hair_style,full beard,2
+people,facial_hair_style,moustache,1
+people,facial_hair_style,mustache,11
+people,facial_hair_style,short beard,2
+people,facial_hair_style,sideburns,2
+people,facial_hair_style,stubble,6
+people,facial_hair_style,trimmed,2
+people,facial_hair_style,unknown,3
+people,gaze_direction,center,1
+people,gaze_direction,down,20
+people,gaze_direction,left,2
+people,gaze_direction,right,1
+people,gaze_direction,unknown,2
+people,gaze_direction,up,11
+people,gender_presentation,male,59
+people,hair_color,black,19
+people,hair_color,gray,38
+people,hair_color,white,6
+people,hair_present,unknown,7
+people,hair_present,yes,39
+people,hair_style,shaved,1
+people,hair_style,short,37
+people,hair_style,unknown,9
+people,head_covering_color,beige,6
+people,head_covering_color,black,5
+people,head_covering_color,black coverings,3
+people,head_covering_color,brown,2
+people,head_covering_color,dark gray,1
+people,head_covering_color,dark violet,1
+people,head_covering_color,darkblue,1
+people,head_covering_color,darkviolet,2
+people,head_covering_color,gray,1
+people,head_covering_color,green,1
+people,head_covering_color,lightyellow,1
+people,head_covering_color,olive drab,2
+people,head_covering_color,pale green,1
+people,head_covering_color,tan,7
+people,head_covering_color,tan coverings,3
+people,head_covering_color,tomato,6
+people,head_covering_color,tomato red,1
+people,head_covering_color,yellow,2
+people,head_covering_colors,beige,3
+people,head_covering_colors,black,1
+people,head_covering_colors,darkviolet,2
+people,head_covering_colors,gray,1
+people,head_covering_colors,green,1
+people,head_covering_colors,lightyellow,1
+people,head_covering_colors,tan,2
+people,head_covering_colors,tomato,1
+people,head_covering_colors,yellow,1
+people,head_covering_present,no,2
+people,head_covering_present,yes,47
+people,head_covering_type,baseball cap,1
+people,head_covering_type,cowboy hat,1
+people,head_covering_type,fedora,1
+people,head_covering_type,felt hat,1
+people,head_covering_type,flat cap,1
+people,head_covering_type,generic hat,1
+people,head_covering_type,straw hat,7
+people,head_covering_type,straw hat merged variants,8
+people,head_covering_type,straw hat normalized variants,6
+people,head_covering_type,wide brim woven hat,1
+people,head_covering_type,wide brimmed hat,2
+people,head_covering_type,wide brimmed hat unspecified,1
+people,head_covering_type,wide brimmed straw hat,1
+people,head_covering_type,wide brimmed straw hat merged variants,10
+people,head_covering_type,wide brimmed sun hat,1
+people,material,canvas,3
+people,material,chambray,1
+people,material,cotton,7
+people,material,denim,9
+people,material,fabric,1
+people,material,leather,4
+people,material,metal,1
+people,material,metal clips,1
+people,occlusions,occlusion partial,17
+people,occlusions,partial occlusion,19
+people,occlusions,unknown,3
+people,orientation,front,12
+people,orientation,three quarter,8
+people,orientation,unknown,7
+people,pattern,checkered,1
+people,pattern,plaid,6
+people,pose,arms crossed,1
+people,pose,bent forward,2
+people,pose,crossed legs,1
+people,pose,crouched,5
+people,pose,crouched kneeling,1
+people,pose,crouching alt token,1
+people,pose,forearms resting on knees,1
+people,pose,forward leaning,3
+people,pose,forward leaning torso,1
+people,pose,hands loose,1
+people,pose,head tilted downward,1
+people,pose,kneeling,7
+people,pose,kneeling right knee,1
+people,pose,leaning forward,1
+people,pose,left knee raised,1
+people,pose,low,2
+people,pose,reclined,3
+people,pose,relaxed,7
+people,pose,seated,9
+people,pose,slightly forward leaning,6
+people,pose,standing,2
+people,pose,steady torso,1
+people,pose,stooped,1
+people,pose,three quarter torso,1
+people,pose,upright,7
+people,pose,upright kneeling,1
+people,pose,upright leaning,1
+people,pose,upright relaxed,1
+people,pose_activity_gaze_direction,center,1
+people,pose_activity_gaze_direction,down,1
+people,pose_activity_gaze_direction,left,1
+people,pose_activity_gaze_direction,right,1
+people,pose_activity_gaze_direction,unknown,2
+people,pose_activity_gaze_direction,up,4
+people,pose_activity_occlusions,partial occlusion,10
+people,pose_activity_orientation,back,2
+people,pose_activity_orientation,front,4
+people,pose_activity_orientation,three quarter,4
+people,pose_activity_pose,arms crossed,1
+people,pose_activity_pose,relaxed,4
+people,pose_activity_pose,relaxed arms,1
+people,pose_activity_pose,relaxed posture,1
+people,pose_activity_pose,relaxed standing,1
+people,pose_activity_pose,slightly forward leaning,2
+people,pose_activity_pose,standing,2
+people,pose_activity_pose,torso turned,1
+people,pose_activity_pose,upright,9
+people,pose_activity_pose,walking,3
+people,pose_reclined,unknown,2
+people,pose_seated,unknown,7
+people,role_hint,appears agricultural worker,2
+people,role_hint,appears to be rural outdoors worker,1
+people,role_hint,farm worker,3
+people,role_hint,farmer,15
+people,skin_tone,light,35
+people,skin_tone,medium,13
+people,skin_tone,unknown,1
+people,texture,coarse,1
+people,texture,denim weave,1
+people,texture,heavy textured,1
+people,texture,heavy woven,3
+people,texture,rugged,1
+people,texture,scuffed,3
+people,texture,smooth,1
+people,texture,soft,2
+people,texture,soft textured,1
+people,texture,soft worn,1
+people,texture,stitched front pocket,1
+people,texture,textured,2
+people,texture,textured weave,1
+people,texture,woven,4
+safety,hazards,no detected,8
+safety,hazards,no observed,8
+safety,hazards,unknown,36
+safety,nsfw,no content,19
+safety,nsfw,unknown,39
+texts,font_style,unknown,1
+texts,legibility,illegible,7
+texts,legibility,illegible text,2
+texts,legibility,not legible,14
+texts,legibility,partially illegible,2
+texts,plane,background,2
+texts,plane,foreground,5
+texts,plane,midground,4
+texts,plane,text foreground,5
+texts,plane,text in foreground,1
+texts,plane,text midground,3
+texts,plane,text on background,2
+texts,plane,text on midground,1
+texts,side,center,7
+texts,side,left,2
+texts,side,right,2
+texts,side,text at center,2
+texts,side,text at right,1
+texts,side,text center,6
+texts,side,text left,2
+texts,side,text right,1
+totals,images,total,10
+totals,images,unknown,10
+totals,object_instances,total,56
+totals,object_instances,unknown,69
+totals,people_instances,total,10
+totals,people_instances,unknown,9
+totals,text_instances,total,0
+totals,text_instances,unknown,3
+uncertainty,note,background left multi pane window with blurred outside objects,1
+uncertainty,note,background right dark vertical area partially occluded indiscernible,1
+uncertainty,note,details of items inside stacked baskets not visible indiscernible,1
+uncertainty,note,distant landscape details not identifiable due to soft focus,1
+uncertainty,note,exact counts of small objects on shelving approximate due to occlusion,1
+uncertainty,note,exact fiber composition of tan wide brimmed hat uncertain,1
+uncertainty,note,exact number of woven baskets approximate 5 6 due to occlusion,1
+uncertainty,note,exact weather outside not visible beyond diffuse light,1
+uncertainty,note,exterior view through window blurred and not identifiable,1
+uncertainty,note,floor behind rug slightly out of focus condition uncertain,1
+uncertainty,note,floor material not visible,1
+uncertainty,note,framed wall artwork text illegible due to glazing soft focus,1
+uncertainty,note,hanging wooden utensils cluster count approximate 2 3,1
+uncertainty,note,labels on shelving containers but not legible,1
+uncertainty,note,left shoe area partly shadowed fine details limited,1
+uncertainty,note,lower body items beyond foreground cushion partially occluded,1
+uncertainty,note,lower left shoe area obscured by deep shadow,1
+uncertainty,note,lower leg area partially out of frame,1
+uncertainty,note,lower legs footwear partially occluded by foreground objects,1
+uncertainty,note,lower limbs boots partially out of frame condition uncertain,1
+uncertainty,note,lower right frame portion of couch cushion cropped not fully visible,1
+uncertainty,note,midground left ceramic dish count approximate three due to occlusion,1
+uncertainty,note,minor marks on window glass uncertain dust condensation smudges,1
+uncertainty,note,no legible printed text found small clothing text details not readable,1
+uncertainty,note,possible small markings or text on lamp jars not readable,1
+uncertainty,note,printed embroidered text on clothing not visible legible,1
+uncertainty,note,small decorative objects in background shelving partially occluded,1
+uncertainty,note,small indistinct blurred region in far background left,1
+uncertainty,note,small items behind baskets partially occluded not identifiable,1
+uncertainty,note,small marks smudges on window glass not classifiable,1
+uncertainty,note,small object near foreground right shoe slightly out of focus,1
+uncertainty,note,small objects on right shelving partially occluded approximate counts,1
+uncertainty,note,small objects on shelving partially occluded or blurred,1
+uncertainty,note,small wooden object foreground left partially occluded,1
+uncertainty,note,text on straw hat partially illegible,1
+uncertainty,note,textile fiber composition of pillows blankets uncertain,1
+uncertainty,note,texture details obscured by bright backlight at windowsill,1
+uncertainty,note,tiny dark object near sofa partially visible and ambiguous,1
+uncertainty,note,unknown,14
+uncertainty,token,distant round hay bales approximate 3 4,1
+uncertainty,token,distant tree line heavily blurred species indiscernible,28
+uncertainty,token,exact livestock count approximate dozens,1
+uncertainty,token,exact skin tone uncertain,1
+uncertainty,token,exact time not precisely known late afternoon early evening suggested,1
+uncertainty,token,exact tomato count in basket approximate 25 30,1
+uncertainty,token,face not visible rear facing,1
+uncertainty,token,facial expression uncertain due to occlusion,1
+uncertainty,token,indiscernible blur patches in far background,1
+uncertainty,token,lower legs footwear out of frame,8
+uncertainty,token,no legible small text observed,1
+uncertainty,token,no legible small text resolution,1
+uncertainty,token,number of wooden stake posts approximate 3 4 and partially visible,1
+uncertainty,token,out of focus foreground areas may contain blurred straw bundles or small debris indiscernible,1
+uncertainty,token,precise occupation not verifiable,1
+uncertainty,token,small garment detail strap material partially occluded,1
+uncertainty,token,small material details uncertain,1
+uncertainty,token,small sprig leaf fragment identity uncertain,1
+uncertainty,token,small tractor implement details indiscernible,4
+uncertainty,token,specific enum mapping uncertain,1
+uncertainty,token,time estimate uncertain,1
+uncertainty,token,uncertainty approximate counts provided for book stacks estimates,1
+uncertainty,token,uncertainty background left shelving details partially occluded by shadow,1
+uncertainty,token,uncertainty background tree line species indiscernible,20
+uncertainty,token,uncertainty book cover text partially occluded blurred,1
+uncertainty,token,uncertainty ceiling surface not visible,1
+uncertainty,token,uncertainty clothing fiber composition inferred cotton or wool,1
+uncertainty,token,uncertainty exact book titles indiscernible approx 60 80,1
+uncertainty,token,uncertainty exact counts on bookshelves are approximate,1
+uncertainty,token,uncertainty exact material of potted plant container partially occluded,1
+uncertainty,token,uncertainty exact number books stacked approx 6 8 uncertain,1
+uncertainty,token,uncertainty exact time of day ambiguous,1
+uncertainty,token,uncertainty floor surface material condition largely out of frame,7
+uncertainty,token,uncertainty framed wall art small printed text illegible,14
+uncertainty,token,uncertainty jewelry accessory details not visible,1
+uncertainty,token,uncertainty lamp details partially occluded not legible,1
+uncertainty,token,uncertainty lower legs feet partially occluded not fully visible,1
+uncertainty,token,uncertainty lower legs footwear out of frame,1
+uncertainty,token,uncertainty lower right corner beyond settee out of frame,1
+uncertainty,token,uncertainty other lower frequency tokens grouped for brevity,32
+uncertainty,token,uncertainty portion lower legs feet cropped out of frame,1
+uncertainty,token,uncertainty small dark object partially occluded not identifiable,13
+uncertainty,token,uncertainty small folded textile partially occluded pattern approximate,1
+uncertainty,token,uncertainty small framed artwork content unclear,1
+uncertainty,token,uncertainty small pottery vessel maker marks not visible,1
+uncertainty,token,uncertainty upholstery pattern indiscernible due to shallow focus blur,1
+uncertainty,token,uncertainty upper facial features obscured by hat shadow,9
+uncertainty,token,uncertainty wall mounted carved plaque partially occluded blurred,1
+uncertainty,token,uncertainty weather outside window not visible,1
+uncertainty,token,unknown,73

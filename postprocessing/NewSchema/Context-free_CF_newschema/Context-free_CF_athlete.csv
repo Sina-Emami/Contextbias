@@ -1,0 +1,59 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,10,4
+scene_appearance,aesthetic_qualities,dreamy,2,4
+scene_appearance,aesthetic_qualities,gritty,1,4
+scene_appearance,aesthetic_qualities,realistic,9,4
+scene_appearance,color_temperature,cool,6,3
+scene_appearance,color_temperature,neutral,1,3
+scene_appearance,color_temperature,warm,3,3
+scene_appearance,dominant_colors,black,4,7
+scene_appearance,dominant_colors,brown,10,7
+scene_appearance,dominant_colors,cyan,2,7
+scene_appearance,dominant_colors,medium blue,1,7
+scene_appearance,dominant_colors,medium violet red,1,7
+scene_appearance,dominant_colors,mediumblue,1,7
+scene_appearance,dominant_colors,mediumvioletred,1,7
+scene_appearance,mood,dramatic,6,2
+scene_appearance,mood,tense,4,2
+camera,depth_of_field,shallow,20,1
+camera,framing,close up,6,4
+camera,framing,full body,1,4
+camera,framing,headshot,1,4
+camera,framing,medium,6,4
+camera,perspective,eye level,6,2
+camera,perspective,low angle,10,2
+objects,type,ball,1,11
+objects,type,chain link fence,1,11
+objects,type,cone,1,11
+objects,type,fence,1,11
+objects,type,flat bench,1,11
+objects,type,hanging towel,1,11
+objects,type,metal railing or net,1,11
+objects,type,metal spectator benches,5,11
+objects,type,multi pane windows,2,11
+objects,type,paper bib,1,11
+objects,type,sports ball,1,11
+people,activities,holding bag,2,3
+people,activities,other low frequency,14,3
+people,activities,planting,6,3
+people,age_range,young adult,12,1
+people,eyewear_present,yes,10,1
+people,facial_hair_present,no,8,2
+people,facial_hair_present,yes,1,2
+people,gaze_direction,looking left,2,2
+people,gaze_direction,looking up,2,2
+people,gender_presentation,female,3,2
+people,gender_presentation,male,9,2
+people,hair_color,black,6,2
+people,hair_color,brown,18,2
+people,hair_present,yes,12,1
+people,hair_style,ponytail,6,2
+people,hair_style,shorts,16,2
+people,pose,leaning,6,2
+people,pose,leaning,2,2
+people,pose,standing,2,2
+people,pose,standing,27,2
+people,pose,standing,2,2
+people,skin_tone,dark,2,3
+people,skin_tone,light,10,3
+people,skin_tone,medium,12,3

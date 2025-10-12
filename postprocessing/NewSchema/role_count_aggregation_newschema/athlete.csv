@@ -1,0 +1,251 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,25,4
+scene_appearance,aesthetic_qualities,dreamy,3,4
+scene_appearance,aesthetic_qualities,gritty,2,4
+scene_appearance,aesthetic_qualities,realistic,28,4
+scene_appearance,color_temperature,cool,9,3
+scene_appearance,color_temperature,neutral,8,3
+scene_appearance,color_temperature,warm,21,3
+scene_appearance,dominant_colors,black,24,7
+scene_appearance,dominant_colors,blue,8,7
+scene_appearance,dominant_colors,brown,54,7
+scene_appearance,dominant_colors,cyan,6,7
+scene_appearance,dominant_colors,mediumblue,6,7
+scene_appearance,dominant_colors,mediumvioletred,1,7
+scene_appearance,dominant_colors,red,3,7
+scene_appearance,mood,calm,19,4
+scene_appearance,mood,dramatic,16,4
+scene_appearance,mood,minimalistic,2,4
+scene_appearance,mood,tense,13,4
+camera,depth_of_field,deep,3,6
+camera,depth_of_field,deep dof,1,6
+camera,depth_of_field,moderate,8,6
+camera,depth_of_field,moderate dof,4,6
+camera,depth_of_field,shallow,44,6
+camera,depth_of_field,shallow dof,4,6
+camera,framing,close up,6,6
+camera,framing,establishing,4,6
+camera,framing,full body,15,6
+camera,framing,headshot,1,6
+camera,framing,medium,33,6
+camera,framing,wide,4,6
+camera,perspective,eye level,36,2
+camera,perspective,low angle,17,2
+objects,type,ball,1,108
+objects,type,black framed window,1,108
+objects,type,bottle,2,108
+objects,type,boundary fence,1,108
+objects,type,bowl,8,108
+objects,type,bread,1,108
+objects,type,bread piece,1,108
+objects,type,cabinet,5,108
+objects,type,cabinetry bank,1,108
+objects,type,chain link fence,1,108
+objects,type,chef knife,1,108
+objects,type,chef slicing knife,1,108
+objects,type,cherry tomatoes,1,108
+objects,type,chicken egg,1,108
+objects,type,coffee cup,1,108
+objects,type,cone,1,108
+objects,type,cookware,6,108
+objects,type,countertop microwave,1,108
+objects,type,countertop pot,1,108
+objects,type,cutting board,6,108
+objects,type,decorative bowl,1,108
+objects,type,double basin sink,1,108
+objects,type,egg,2,108
+objects,type,faucet,4,108
+objects,type,fence,2,108
+objects,type,field poles,1,108
+objects,type,flat bench,1,108
+objects,type,footwear shoes,2,108
+objects,type,fruit,17,108
+objects,type,fruit tray,1,108
+objects,type,frying pan,3,108
+objects,type,glass bowl,1,108
+objects,type,glass jars,3,108
+objects,type,glass pitcher,1,108
+objects,type,hanging cooking utensil,1,108
+objects,type,hanging towel,1,108
+objects,type,jar,2,108
+objects,type,kettle,1,108
+objects,type,knife,1,108
+objects,type,knife block,1,108
+objects,type,large rectangular window,1,108
+objects,type,lettuce,1,108
+objects,type,lettuce head,1,108
+objects,type,lower cabinetry,1,108
+objects,type,metal container,1,108
+objects,type,metal railing or net,1,108
+objects,type,metal spatula,1,108
+objects,type,metal spectator benches,5,108
+objects,type,microwave,2,108
+objects,type,microwave or compact oven,1,108
+objects,type,mixing bowl,3,108
+objects,type,mug,1,108
+objects,type,multi pane windows,3,108
+objects,type,open shelving,1,108
+objects,type,oven,1,108
+objects,type,oven door,1,108
+objects,type,pantry cabinet,1,108
+objects,type,paper bib,2,108
+objects,type,pendant hood,1,108
+objects,type,pitcher,1,108
+objects,type,plant,4,108
+objects,type,plate or bowl,1,108
+objects,type,plates,1,108
+objects,type,plates glassware,1,108
+objects,type,portable burner,1,108
+objects,type,potted herb,3,108
+objects,type,potted plant,1,108
+objects,type,railing,4,108
+objects,type,raw fillet fish,1,108
+objects,type,running shoe single,1,108
+objects,type,saucer,1,108
+objects,type,shelf,3,108
+objects,type,shelf contents,1,108
+objects,type,shelf dishware,1,108
+objects,type,shelf jars,1,108
+objects,type,shoe,2,108
+objects,type,single tomato,1,108
+objects,type,sink,3,108
+objects,type,small black metal frying pan,1,108
+objects,type,small black plate or bowl,1,108
+objects,type,small container,1,108
+objects,type,small round metal pan,1,108
+objects,type,small stainless knife,1,108
+objects,type,sports ball,1,108
+objects,type,stack ceramic plates,2,108
+objects,type,stacked plates,1,108
+objects,type,stainless pot,1,108
+objects,type,stainless steel mixing bowl,1,108
+objects,type,stainless steel rail with hanging utensils,1,108
+objects,type,stainless steel sink with chrome faucet,1,108
+objects,type,storage bottles,1,108
+objects,type,stovetop flame,1,108
+objects,type,tabletop,1,108
+objects,type,three legged wood stool,1,108
+objects,type,tomato,5,108
+objects,type,under cabinet,1,108
+objects,type,upper cabinet singular,1,108
+objects,type,upper cabinets,2,108
+objects,type,utensil,4,108
+objects,type,utensil holder,5,108
+objects,type,utensil rail,1,108
+objects,type,vegetables,1,108
+objects,type,watch,1,108
+objects,type,white framed window,1,108
+objects,type,whole egg,1,108
+objects,type,window,9,108
+objects,type,wooden cutting board,7,108
+objects,type,wooden shelf containers,1,108
+people,activities,accelerating,1,12
+people,activities,cooking,4,12
+people,activities,holding bag,2,12
+people,activities,holding mixing bowl,2,12
+people,activities,holding spatula,3,12
+people,activities,manipulating plants,1,12
+people,activities,other low frequency,14,12
+people,activities,preparing food,2,12
+people,activities,running,4,12
+people,activities,scrubbing,1,12
+people,activities,planting,16,12
+people,activities,stirring,2,12
+people,age_range,young adult,52,1
+people,clothing_color,black,45,12
+people,clothing_color,blue,16,12
+people,clothing_color,brown,1,12
+people,clothing_color,gray,10,12
+people,clothing_color,green,2,12
+people,clothing_color,lightyellow,1,12
+people,clothing_color,orange,4,12
+people,clothing_color,pink,3,12
+people,clothing_color,red,6,12
+people,clothing_color,white,19,12
+people,clothing_color,yellow,2,12
+people,clothing_color,black,21,12
+people,clothing_color,blue,8,12
+people,clothing_color,green,1,12
+people,clothing_color,mediumblue,2,12
+people,clothing_color,orange,5,12
+people,clothing_color,pink,1,12
+people,clothing_color,red,4,12
+people,clothing_color,white,8,12
+people,clothing_color,yellow,2,12
+people,clothing_garment,competition bib,1,15
+people,clothing_garment,compression shorts,5,15
+people,clothing_garment,race bib,3,15
+people,clothing_garment,racing spike shoes,1,15
+people,clothing_garment,racing spikes,1,15
+people,clothing_garment,running shoes,5,15
+people,clothing_garment,running spikes,1,15
+people,clothing_garment,shoes,3,15
+people,clothing_garment,shorts,4,15
+people,clothing_garment,singlet,8,15
+people,clothing_garment,sleeveless t,1,15
+people,clothing_garment,socks,2,15
+people,clothing_garment,tank top,2,15
+people,clothing_garment,wrist watch,1,15
+people,clothing_garment,wristband,1,15
+people,eyewear_present,no,39,2
+people,eyewear_present,yes,10,2
+people,hair_color,black,3,4
+people,hair_color,brown,7,4
+people,hair_color,darkblue,1,4
+people,facial_hair_present,no,37,2
+people,facial_hair_present,yes,11,2
+people,facial_hair_style,full beard,2,9
+people,facial_hair_style,full trimmed beard,1,9
+people,facial_hair_style,long,1,9
+people,facial_hair_style,short beard,1,9
+people,facial_hair_style,short full beard,1,9
+people,facial_hair_style,short stubble,2,9
+people,facial_hair_style,stubble,2,9
+people,facial_hair_style,thick,1,9
+people,facial_hair_style,trimmed stubble,1,9
+people,gaze_direction,down,6,7
+people,gaze_direction,left,3,7
+people,gaze_direction,looking down,10,7
+people,gaze_direction,looking left,2,7
+people,gaze_direction,looking up,2,7
+people,gaze_direction,right,3,7
+people,gaze_direction,up,2,7
+people,gender_presentation,female,11,2
+people,gender_presentation,male,42,2
+people,hair_color,black,13,4
+people,hair_color,brown,52,4
+people,hair_color,red,1,4
+people,hair_present,yes,53,1
+people,hair_style,bun,2,7
+people,hair_style,curly,1,7
+people,hair_style,long,3,7
+people,hair_style,ponytail,12,7
+people,hair_style,shorts,47,7
+people,hair_style,updo,2,7
+people,hair_style,wavy,1,7
+people,head_covering_type,black,1,1
+people,head_covering_present,no,39,1
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,19,2
+people,pose,leaning,2,2
+people,pose,standing,8,2
+people,pose,standing,27,2
+people,pose,leaning,2,2
+people,pose,leaning,4,2
+people,pose,leaning,1,2
+people,pose,standing,3,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,4,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,6,2
+people,pose,standing,9,2
+people,skin_tone,dark,6,3
+people,skin_tone,light,23,3
+people,skin_tone,medium,35,3

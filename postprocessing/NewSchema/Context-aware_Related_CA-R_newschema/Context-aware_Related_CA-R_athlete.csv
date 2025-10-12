@@ -1,0 +1,107 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,9,4
+scene_appearance,aesthetic_qualities,dreamy,1,4
+scene_appearance,aesthetic_qualities,gritty,1,4
+scene_appearance,aesthetic_qualities,realistic,7,4
+scene_appearance,color_temperature,cool,2,3
+scene_appearance,color_temperature,neutral,3,3
+scene_appearance,color_temperature,warm,11,3
+scene_appearance,dominant_colors,black,12,7
+scene_appearance,dominant_colors,blue,2,7
+scene_appearance,dominant_colors,brown,14,7
+scene_appearance,dominant_colors,cyan,4,7
+scene_appearance,dominant_colors,medium blue,5,7
+scene_appearance,dominant_colors,mediumblue,3,7
+scene_appearance,dominant_colors,red,2,7
+scene_appearance,mood,dramatic,10,2
+scene_appearance,mood,tense,9,2
+camera,depth_of_field,deep,1,3
+camera,depth_of_field,moderate,1,3
+camera,depth_of_field,shallow,16,3
+camera,framing,full body,8,2
+camera,framing,medium,8,2
+camera,perspective,eye level,7,2
+camera,perspective,low angle,7,2
+objects,type,boundary fence,1,9
+objects,type,fence,1,9
+objects,type,field poles,1,9
+objects,type,footwear shoes,2,9
+objects,type,paper bib,1,9
+objects,type,railing,4,9
+objects,type,running shoe single,1,9
+objects,type,shoe,1,9
+objects,type,watch,1,9
+people,activities,accelerating,1,2
+people,activities,walking activity,4,2
+people,activities,walking activity,10,2
+people,age_range,young adult,21,1
+people,clothing_color,black,20,11
+people,clothing_color,blue,10,11
+people,clothing_color,brown,1,11
+people,clothing_color,gray,1,11
+people,clothing_color,green,2,11
+people,clothing_color,orange,4,11
+people,clothing_color,pink,1,11
+people,clothing_color,red,4,11
+people,clothing_color,white,10,11
+people,clothing_color,yellow,2,11
+people,clothing_color,black,21,11
+people,clothing_color,blue,8,11
+people,clothing_color,green,1,11
+people,clothing_color,mediumblue,2,11
+people,clothing_color,orange,5,11
+people,clothing_color,pink,1,11
+people,clothing_color,red,4,11
+people,clothing_color,white,8,11
+people,clothing_color,yellow,2,11
+people,clothing_garment,competition bib,1,15
+people,clothing_garment,compression shorts,5,15
+people,clothing_garment,race bib,3,15
+people,clothing_garment,racing spike shoes,1,15
+people,clothing_garment,racing spikes,1,15
+people,clothing_garment,running shorts,5,15
+people,clothing_garment,running spikes,1,15
+people,clothing_garment,shoes,3,15
+people,clothing_garment,shorts,4,15
+people,clothing_garment,singlet,8,15
+people,clothing_garment,sleeveless t,1,15
+people,clothing_garment,socks,2,15
+people,clothing_garment,tank top,2,15
+people,clothing_garment,wrist watch,1,15
+people,clothing_garment,wristband,1,15
+people,eyewear_present,no,20,1
+people,hair_color,black,2,3
+people,hair_color,brown,1,3
+people,facial_hair_present,no,16,2
+people,facial_hair_present,yes,3,2
+people,facial_hair_style,short stubble,1,3
+people,facial_hair_style,stubble,1,3
+people,facial_hair_style,trimmed stubble,1,3
+people,gaze_direction,down,2,3
+people,gaze_direction,left,2,3
+people,gaze_direction,right,1,3
+people,gender_presentation,female,4,2
+people,gender_presentation,male,17,2
+people,hair_color,black,6,3
+people,hair_color,brown,15,3
+people,hair_color,red,1,3
+people,hair_present,yes,21,1
+people,hair_style,bun,2,5
+people,hair_style,curly,1,5
+people,hair_style,ponytail,2,5
+people,hair_style,shorts,16,5
+people,hair_style,updo,2,5
+people,head_covering_present,no,20,1
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,pose,leaning,10,2
+people,pose,standing,6,2
+people,pose,standing,3,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,6,2
+people,skin_tone,dark,4,3
+people,skin_tone,light,8,3
+people,skin_tone,medium,9,3

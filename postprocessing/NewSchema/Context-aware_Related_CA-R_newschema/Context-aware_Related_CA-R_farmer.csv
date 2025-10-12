@@ -1,0 +1,118 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,15,3
+scene_appearance,aesthetic_qualities,dreamy,1,3
+scene_appearance,aesthetic_qualities,realistic,16,3
+scene_appearance,color_temperature,cool,5,2
+scene_appearance,color_temperature,warm,21,2
+scene_appearance,dominant_colors,brown,10,1
+scene_appearance,mood,calm,20,1
+camera,depth_of_field,deep,2,3
+camera,depth_of_field,moderate,1,3
+camera,depth_of_field,shallow,16,3
+camera,framing,establishing,7,4
+camera,framing,full body,3,4
+camera,framing,medium,16,4
+camera,framing,wide,2,4
+camera,perspective,eye level,11,2
+camera,perspective,low angle,4,2
+objects,type,distant trees roofs,1,10
+objects,type,long handled shovel,1,10
+objects,type,planted rows,38,10
+objects,type,straw hat,5,10
+objects,type,work boots,1,10
+objects,type,work gloves,4,10
+objects,type,work pants,1,10
+objects,type,hat,2,10
+objects,type,pole,1,10
+objects,type,tree clump,1,10
+people,activities,gathering soil,1,7
+people,activities,handling soil,1,7
+people,activities,holding soil clump,1,7
+people,activities,inspecting soil,2,7
+people,activities,letting soil fall,1,7
+people,activities,planting,4,7
+people,activities,sifting breaking clods,1,7
+people,age_range,middle aged,12,2
+people,age_range,older adult,8,2
+people,clothing_color,beige,1,11
+people,clothing_color,black,9,11
+people,clothing_color,blue,15,11
+people,clothing_color,brown,11,11
+people,clothing_color,gray,12,11
+people,clothing_color,palegreen,1,11
+people,clothing_color,red,2,11
+people,clothing_color,tan,3,11
+people,clothing_color,tomato,1,11
+people,clothing_color,white,1,11
+people,clothing_color,yellow,1,11
+people,clothing_garment,belt,1,8
+people,clothing_garment,boots,2,8
+people,clothing_garment,jeans,2,8
+people,clothing_garment,overalls,7,8
+people,clothing_garment,shirt,10,8
+people,clothing_garment,shoes,1,8
+people,clothing_garment,suspenders,2,8
+people,clothing_garment,trousers,2,8
+people,eyewear_present,no,8,2
+people,eyewear_present,yes,7,2
+people,hair_color,black,8,3
+people,hair_color,gray,6,3
+people,hair_color,white,4,3
+people,facial_hair_present,no,1,2
+people,facial_hair_present,yes,10,2
+people,facial_hair_style,beard,7,3
+people,facial_hair_style,mustache,5,3
+people,facial_hair_style,trimmed,2,3
+people,gaze_direction,down,8,1
+people,gender_presentation,male,30,1
+people,hair_color,black,16,3
+people,hair_color,gray,14,3
+people,hair_color,white,2,3
+people,hair_present,yes,13,1
+people,hair_style,short,11,1
+people,head_covering_type,beige,7,15
+people,head_covering_type,black,2,15
+people,head_covering_type,black coverings,3,15
+people,head_covering_type,darkviolet,4,15
+people,head_covering_type,gray,2,15
+people,head_covering_type,green,2,15
+people,head_covering_type,lightyellow,2,15
+people,head_covering_type,pale green,1,15
+people,head_covering_type,tan,4,15
+people,head_covering_type,tan coverings,3,15
+people,head_covering_type,tomato,2,15
+people,head_covering_type,tomato red,1,15
+people,head_covering_type,yellow,3,15
+people,head_covering_present,yes,20,1
+people,head_covering_type,straw hat normalized variants,6,15
+people,head_covering_type,wide brimmed straw hat merged variants,10,15
+people,pose,leaning,2,2
+people,pose,leaning,4,2
+people,pose,leaning,1,2
+people,pose,leaning,4,2
+people,pose,leaning,1,2
+people,pose,leaning,7,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,4,2
+people,pose,standing,10,2
+people,pose,standing,2,2
+people,pose,standing,4,2
+people,pose,standing,4,2
+people,pose,standing,1,2
+people,pose,standing,4,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,2,2
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,pose,standing,9,2
+people,pose,standing,3,2
+people,skin_tone,light,13,2
+people,skin_tone,medium,6,2

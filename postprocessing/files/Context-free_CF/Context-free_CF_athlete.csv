@@ -1,0 +1,234 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,10
+atmosphere,aesthetic_qualities,dreamy,2
+atmosphere,aesthetic_qualities,gritty,1
+atmosphere,aesthetic_qualities,realistic,9
+atmosphere,aesthetic_qualities,unknown,2
+atmosphere,color_temperature,cool,6
+atmosphere,color_temperature,neutral,1
+atmosphere,color_temperature,warm,3
+atmosphere,contrast_level,high,7
+atmosphere,contrast_level,medium,3
+atmosphere,dominant_palette,black,4
+atmosphere,dominant_palette,brown,10
+atmosphere,dominant_palette,cyan,2
+atmosphere,dominant_palette,medium blue,1
+atmosphere,dominant_palette,medium violet red,1
+atmosphere,dominant_palette,mediumblue,1
+atmosphere,dominant_palette,mediumvioletred,1
+atmosphere,mood,dramatic,6
+atmosphere,mood,tense,4
+atmosphere,mood,unknown,3
+atmosphere,saturation_level,neutral,6
+atmosphere,saturation_level,vivid,4
+background,object_counts_by_position,background center,9
+background,object_counts_by_position,background left,5
+background,object_counts_by_position,foreground center,14
+background,object_counts_by_position,foreground left,5
+background,object_counts_by_position,foreground right,5
+background,object_counts_by_position,midground center,9
+background,object_counts_by_position,midground left,3
+background,object_counts_by_position,midground right,2
+background,object_counts_by_position,unknown,1
+camera,angle,unknown,10
+camera,depth_of_field,shallow,20
+camera,focal_length,normal,1
+camera,focal_length,telephoto,2
+camera,focal_length,unknown,6
+camera,focal_length,wide,1
+camera,framing,close up,6
+camera,framing,full body,1
+camera,framing,headshot,1
+camera,framing,medium,6
+camera,framing,unknown,2
+camera,perspective,eye level,6
+camera,perspective,low angle,10
+camera,perspective,unknown,4
+environment,aisle_width,unknown,10
+environment,indoor_outdoor,unknown,10
+environment,location_type,athletic stadium interior,1
+environment,location_type,athletics competition area,1
+environment,location_type,gym,2
+environment,location_type,outdoor athletics facility,1
+environment,location_type,outdoor sports facility,1
+environment,location_type,sports stadium,1
+environment,location_type,stadium,3
+environment,openness,enclosed,1
+environment,openness,open,8
+environment,openness,unknown,1
+environment,spatial_layout_depth,deep,5
+environment,spatial_layout_depth,moderate,1
+environment,spatial_layout_depth,shallow,4
+environment,time_of_day_hint,unknown,10
+environment,weather,overcast,1
+environment,weather,sunny,1
+environment,weather,unknown,8
+lighting,artifacts,bloom,1
+lighting,artifacts,bokeh,2
+lighting,artifacts,glare,1
+lighting,artifacts,glare around floodlights,1
+lighting,artifacts,halation,1
+lighting,artifacts,lens bloom,1
+lighting,artifacts,mild window reflection,1
+lighting,artifacts,motion blur,2
+lighting,artifacts,particle spray,1
+lighting,artifacts,small red lens flare lower right foreground,1
+lighting,artifacts,specular highlights,2
+lighting,artifacts,specular sheen skin,1
+lighting,color_temperature,cool,12
+lighting,color_temperature,neutral,2
+lighting,color_temperature,warm,6
+lighting,contrast_level,high,7
+lighting,contrast_level,medium,3
+lighting,directionality,backlight,3
+lighting,directionality,top light,4
+lighting,directionality,unknown,8
+lighting,hardness,hard light,2
+lighting,hardness,medium,4
+lighting,hardness,soft light,4
+lighting,saturation_level,neutral,6
+lighting,saturation_level,vivid,4
+lighting,shadows,casting,2
+lighting,shadows,hard,2
+lighting,shadows,medium,2
+lighting,shadows,soft,5
+lighting,sources_count,four or more,4
+lighting,sources_count,one source,4
+lighting,sources_count,two,1
+lighting,sources_count,unknown,3
+lighting,sources_type,artificial light,8
+lighting,sources_type,unknown,4
+objects,plane,background,15
+objects,plane,foreground,24
+objects,plane,midground,14
+objects,side,center,32
+objects,side,left,13
+objects,side,right,7
+objects,side,unknown,1
+objects,type,accessory,1
+objects,type,apparel detail,1
+objects,type,architectural element,1
+objects,type,architectural feature,1
+objects,type,architecture,2
+objects,type,background,2
+objects,type,ball,1
+objects,type,body part,1
+objects,type,bokeh highlights,1
+objects,type,chain link fence,1
+objects,type,clothing,3
+objects,type,competition bib,1
+objects,type,cone,1
+objects,type,element,1
+objects,type,equipment,1
+objects,type,exercise equipment,3
+objects,type,fence,1
+objects,type,flat bench,1
+objects,type,floor mat,1
+objects,type,footwear,3
+objects,type,free weight rack,1
+objects,type,garment,2
+objects,type,grid truss skylights,1
+objects,type,hand contact,1
+objects,type,hanging towel,1
+objects,type,human face,1
+objects,type,lane area,1
+objects,type,line marking,1
+objects,type,marking,1
+objects,type,metal railing or net,1
+objects,type,metal spectator benches,5
+objects,type,misc,1
+objects,type,multi pane window wall,1
+objects,type,multi pane windows,1
+objects,type,multi station cable machine,1
+objects,type,paper bib,1
+objects,type,particulate,1
+objects,type,roof truss,2
+objects,type,roof trusswork,1
+objects,type,rubberized matting,1
+objects,type,running track,21
+objects,type,seating,4
+objects,type,shorts,2
+objects,type,small white,1
+objects,type,spectator seating,1
+objects,type,spectator seating band,1
+objects,type,sport equipment,1
+objects,type,sports ball,1
+objects,type,sports equipment,1
+objects,type,stadium floodlight tower,1
+objects,type,stadium floodlights,1
+objects,type,structure,2
+objects,type,surface,5
+objects,type,track,1
+objects,type,track dust,1
+objects,type,track surface,1
+objects,type,training aid,1
+objects,type,unknown,2
+objects,type,wristband,1
+people,activities,holding a ball,2
+people,activities,other low frequency,14
+people,activities,sprinting,6
+people,age_range,young adult,12
+people,eyewear_present,unknown,2
+people,eyewear_present,yes,10
+people,facial_hair_present,no,8
+people,facial_hair_present,unknown,3
+people,facial_hair_present,yes,1
+people,gaze_direction,looking left,2
+people,gaze_direction,looking up,2
+people,gaze_direction,unknown,7
+people,gender_presentation,female,3
+people,gender_presentation,male,9
+people,hair_color,black,6
+people,hair_color,brown,18
+people,hair_present,yes,12
+people,hair_style,ponytail,6
+people,hair_style,short,16
+people,hair_style,unknown,2
+people,occlusions,partial occlusion,11
+people,occlusions,unknown,1
+people,orientation,front,3
+people,orientation,three quarter,4
+people,pose,forward leaning,6
+people,pose,low crouched,2
+people,pose,mid stride,2
+people,pose,other descriptors many low frequency tokens aggregated,27
+people,pose,upright,2
+people,role_hint,athlete,3
+people,role_hint,exerciser,1
+people,role_hint,sprinter,2
+people,skin_tone,dark,2
+people,skin_tone,light,10
+people,skin_tone,medium,12
+safety,hazards,no,8
+safety,nsfw,no,9
+safety,nsfw,vulgar text detected,1
+texts,content,315,1
+texts,content,illegible,1
+texts,content,shitter,1
+texts,content,text 315,1
+texts,content,text illegible,1
+texts,content,text shitter vulgar,1
+texts,font_style,bold,4
+texts,font_style,sans,4
+texts,font_style,unknown,12
+texts,legibility,illegible,3
+texts,legibility,legible,2
+texts,legibility,not legible,3
+texts,plane,text on background,1
+texts,plane,text on foreground,4
+texts,plane,text on midground,2
+texts,plane,unknown,1
+uncertainty,token,brand markings not legible,1
+uncertainty,token,camera capture alignment ambiguous,1
+uncertainty,token,competition bib text uncertain possible shitter,1
+uncertainty,token,faint pole element unresolved,1
+uncertainty,token,gaze mapping ambiguous,1
+uncertainty,token,hanging fabric material uncertain,1
+uncertainty,token,items stacked count 1 3 uncertain,1
+uncertainty,token,lower legs feet cropped footwear uncertain,1
+uncertainty,token,lower torso arm positions cropped uncertain,1
+uncertainty,token,precipitation uncertain,1
+uncertainty,token,spectator area silhouettes ambiguous,44
+uncertainty,token,time day weather not verifiable,9
+uncertainty,token,track dust composition uncertain,1
+uncertainty,token,unknown,7

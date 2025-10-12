@@ -1,0 +1,93 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,1,3
+scene_appearance,aesthetic_qualities,minimal,1,3
+scene_appearance,aesthetic_qualities,realistic,8,3
+scene_appearance,color_temperature,cool,2,3
+scene_appearance,color_temperature,neutral,4,3
+scene_appearance,color_temperature,warm,2,3
+scene_appearance,dominant_colors,black,4,2
+scene_appearance,dominant_colors,brown,6,2
+scene_appearance,mood,calm,10,1
+camera,depth_of_field,deep,3,2
+camera,depth_of_field,shallow,7,2
+camera,framing,close up,1,5
+camera,framing,full body,1,5
+camera,framing,headshot,3,5
+camera,framing,medium,8,5
+camera,framing,wide,1,5
+camera,perspective,eye level,8,1
+objects,type,desk,35,22
+objects,type,potted plant,4,22
+objects,type,wristwatch,3,22
+objects,type,belt,1,22
+objects,type,cabinet,1,22
+objects,type,chair,6,22
+objects,type,credenza or cabinet,1,22
+objects,type,cup,1,22
+objects,type,desk,2,22
+objects,type,eyeglasses,1,22
+objects,type,lamp,1,22
+objects,type,mouse,1,22
+objects,type,office chairs,1,22
+objects,type,paper,5,22
+objects,type,plant,4,22
+objects,type,planters,1,22
+objects,type,shelving with books,1,22
+objects,type,table,2,22
+objects,type,tabletop,1,22
+objects,type,watch,1,22
+objects,type,window,2,22
+objects,type,window glazing,1,22
+objects,type,window grid,1,22
+people,age_range,middle aged,10,1
+people,clothing_color,black,1,5
+people,clothing_color,blue,7,5
+people,clothing_color,brown,1,5
+people,clothing_color,gray,1,5
+people,clothing_color,white,10,5
+people,clothing_garment,belt,1,11
+people,clothing_garment,dress shoes,2,11
+people,clothing_garment,dress trousers,1,11
+people,clothing_garment,neck tie,4,11
+people,clothing_garment,necktie,2,11
+people,clothing_garment,shirt,10,11
+people,clothing_garment,suit jacket,7,11
+people,clothing_garment,tie,3,11
+people,clothing_garment,trousers,1,11
+people,clothing_garment,watch belt accessory,1,11
+people,clothing_garment,wristwatch,2,11
+people,eyewear_present,yes,10,1
+people,eyewear_type,eyeglasses generic,2,2
+people,eyewear_type,rectangular frame,6,2
+people,hair_color,brown,1,3
+people,hair_color,gray,1,3
+people,hair_color,tomato token,1,3
+people,facial_hair_present,no,6,2
+people,facial_hair_present,yes,3,2
+people,facial_hair_style,beard,1,3
+people,facial_hair_style,closely trimmed full beard,1,3
+people,facial_hair_style,moustache goatee,1,3
+people,gaze_direction,left,1,2
+people,gaze_direction,up,7,2
+people,gender_presentation,male,10,1
+people,hair_color,brown,1,3
+people,hair_color,gray,10,3
+people,hair_present,yes,10,1
+people,hair_style,short,9,2
+people,hair_style,straight,4,2
+people,head_covering_present,no,10,1
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,hands_pockets,1,4
+people,pose,leaning,1,4
+people,pose,standing,1,4
+people,pose,standing,6,4
+people,pose,standing,1,4
+people,pose,seated,6,4
+people,pose,leaning,1,4
+people,pose,standing,1,4
+people,pose,standing,8,4
+people,pose,seated,1,4
+people,pose,standing,1,4
+people,skin_tone,light,6,2
+people,skin_tone,medium,4,2

@@ -1,0 +1,1013 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,20
+atmosphere,aesthetic_qualities,dreamy,3
+atmosphere,aesthetic_qualities,gritty,1
+atmosphere,aesthetic_qualities,realistic,24
+atmosphere,aesthetic_qualities,unknown,2
+atmosphere,aesthetic_quality,cinematic,5
+atmosphere,aesthetic_quality,gritty,1
+atmosphere,aesthetic_quality,realistic,4
+atmosphere,color_temperature,cool,9
+atmosphere,color_temperature,neutral,8
+atmosphere,color_temperature,warm,21
+atmosphere,contrast_level,high,16
+atmosphere,contrast_level,medium,24
+atmosphere,dominant_palette,black,22
+atmosphere,dominant_palette,blue,6
+atmosphere,dominant_palette,brown,49
+atmosphere,dominant_palette,cyan,4
+atmosphere,dominant_palette,mediumblue,6
+atmosphere,dominant_palette,mediumvioletred,1
+atmosphere,dominant_palette,red,3
+atmosphere,dominant_palette_mapped,black,2
+atmosphere,dominant_palette_mapped,blue,2
+atmosphere,dominant_palette_mapped,brown,5
+atmosphere,dominant_palette_mapped,cyan,2
+atmosphere,mood,calm,19
+atmosphere,mood,dramatic,16
+atmosphere,mood,minimalistic,2
+atmosphere,mood,tense,13
+atmosphere,mood,unknown,3
+atmosphere,saturation_level,neutral,32
+atmosphere,saturation_level,vivid,8
+background,object_counts_by_position,background center,50
+background,object_counts_by_position,background left,32
+background,object_counts_by_position,background right,53
+background,object_counts_by_position,foreground center,83
+background,object_counts_by_position,foreground left,55
+background,object_counts_by_position,foreground right,31
+background,object_counts_by_position,midground center,43
+background,object_counts_by_position,midground left,29
+background,object_counts_by_position,midground right,37
+background,object_counts_by_position,unknown,1
+background,object_counts_by_position_total,background center,9
+background,object_counts_by_position_total,background left,4
+background,object_counts_by_position_total,background right,5
+background,object_counts_by_position_total,foreground center,14
+background,object_counts_by_position_total,foreground left,4
+background,object_counts_by_position_total,foreground right,2
+background,object_counts_by_position_total,midground center,6
+background,object_counts_by_position_total,midground left,3
+background,object_counts_by_position_total,midground right,1
+background,position,background center,9
+background,position,background left,4
+background,position,background right,5
+background,position,foreground center,14
+background,position,foreground left,4
+background,position,foreground right,2
+background,position,midground center,6
+background,position,midground left,3
+background,position,midground right,1
+camera,angle,eye level,2
+camera,angle,unknown,10
+camera,crop,bottom cropped,1
+camera,crop,ceiling floor margins visible,1
+camera,crop,chest upward,1
+camera,crop,feet partially cropped by foreground shadow,1
+camera,crop,foot head margin,1
+camera,crop,full body equal,1
+camera,crop,full figure,1
+camera,crop,lower body partial,1
+camera,crop,lower legs cropped,1
+camera,crop,lower legs out frame,1
+camera,crop,lower legs partially cropped,2
+camera,crop,lower right leg cropped by edge,1
+camera,crop,lower shins cropped,1
+camera,crop,mid thigh,1
+camera,crop,minimal lower edge shoe,1
+camera,crop,person cropped mid thigh,1
+camera,crop,primary runner occupies midground right third,1
+camera,crop,right side cropped,1
+camera,crop,subject cropped near mid thigh,1
+camera,crop,top head near upper quarter,1
+camera,crop,torso height,1
+camera,crop,torso up,1
+camera,crop,upper head cropped,1
+camera,crop,upper thighs upward,1
+camera,crop,upper torso face centered,1
+camera,depth_of_field,deep,3
+camera,depth_of_field,deep dof,1
+camera,depth_of_field,moderate,8
+camera,depth_of_field,moderate dof,4
+camera,depth_of_field,shallow,44
+camera,depth_of_field,shallow dof,4
+camera,focal_length,normal,5
+camera,focal_length,telephoto,7
+camera,focal_length,unknown,6
+camera,focal_length,wide,3
+camera,framing,close up,6
+camera,framing,establishing,4
+camera,framing,full body,15
+camera,framing,headshot,1
+camera,framing,medium,33
+camera,framing,unknown,2
+camera,framing,wide,4
+camera,perspective,eye level,36
+camera,perspective,low angle,17
+camera,perspective,unknown,4
+environment,aisle_width,moderate,1
+environment,aisle_width,unknown,11
+environment,ceiling_color,black,6
+environment,ceiling_color,lightblue,1
+environment,ceiling_color,white,2
+environment,ceiling_condition,good,2
+environment,ceiling_condition,intact,1
+environment,ceiling_finish,matte,1
+environment,ceiling_finish,painted,2
+environment,ceiling_material,black,6
+environment,ceiling_material,drywall,1
+environment,ceiling_material,paint,4
+environment,ceiling_material,painted drywall,1
+environment,ceiling_material,painted panel,1
+environment,ceiling_material,painted surface,2
+environment,ceiling_material,plaster,3
+environment,ceiling_texture,slightly reflective,1
+environment,ceiling_texture,smooth,10
+environment,ceiling_texture,textured,1
+environment,floor_color,black,6
+environment,floor_color,lightgoldenrodyellow,1
+environment,floor_color,mediumvioletred,1
+environment,floor_color,white,1
+environment,floor_condition,good,1
+environment,floor_condition,minimal wear,1
+environment,floor_condition,no visible scuffing,1
+environment,floor_finish,matte,2
+environment,floor_finish,polished,1
+environment,floor_material,ceramic tile,1
+environment,floor_material,hardwood,1
+environment,floor_material,unknown,1
+environment,floor_material,wood,2
+environment,floor_material,wood like plank,1
+environment,floor_material,wood look,1
+environment,floor_material,wood plank,1
+environment,floor_texture,chevron pattern,1
+environment,floor_texture,matte,1
+environment,floor_texture,plank,1
+environment,floor_texture,polished,1
+environment,floor_texture,slightly reflective,1
+environment,floor_texture,smooth,4
+environment,floor_texture,subtle grain,2
+environment,indoor_outdoor,unknown,50
+environment,location_type,athletic facility,3
+environment,location_type,athletic stadium interior,1
+environment,location_type,athletics competition area,1
+environment,location_type,athletics stadium,3
+environment,location_type,athletics track,4
+environment,location_type,gym,2
+environment,location_type,indoor stadium,1
+environment,location_type,kitchen,10
+environment,location_type,outdoor athletic facility,1
+environment,location_type,outdoor athletic facility merged variants,2
+environment,location_type,outdoor athletics facility,1
+environment,location_type,outdoor sports facility,2
+environment,location_type,residential kitchen,10
+environment,location_type,running track,1
+environment,location_type,sports stadium,2
+environment,location_type,sports venue,1
+environment,location_type,stadium,4
+environment,location_type,track stadium,1
+environment,openness,enclosed,1
+environment,openness,moderate,1
+environment,openness,open,14
+environment,openness,unknown,1
+environment,spatial_layout_aisle_width,unknown,3
+environment,spatial_layout_depth,deep,10
+environment,spatial_layout_depth,medium,2
+environment,spatial_layout_depth,medium sized,1
+environment,spatial_layout_depth,moderate,10
+environment,spatial_layout_depth,open,2
+environment,spatial_layout_depth,shallow,10
+environment,spatial_layout_openness,contained,1
+environment,spatial_layout_openness,enclosed,1
+environment,spatial_layout_openness,moderately open,1
+environment,spatial_layout_openness,open,8
+environment,spatial_layout_openness,unknown,4
+environment,surfaces_floor_color,brown,4
+environment,surfaces_floor_color,crimson,1
+environment,surfaces_floor_color,deeppink,1
+environment,surfaces_floor_color,green,2
+environment,surfaces_floor_color,red,5
+environment,surfaces_floor_color,tomato,1
+environment,surfaces_floor_color,white,1
+environment,surfaces_floor_material,rubber,3
+environment,surfaces_floor_material,rubberized,1
+environment,surfaces_floor_material,rubberized track,1
+environment,surfaces_floor_material,synthetic,2
+environment,surfaces_floor_material,synthetic rubber,3
+environment,surfaces_floor_material,turf,1
+environment,surfaces_floor_material,unknown,1
+environment,time_of_day_hint,afternoon,2
+environment,time_of_day_hint,evening,1
+environment,time_of_day_hint,unknown,10
+environment,walls_color,black,1
+environment,walls_color,brown,1
+environment,walls_color,gray,7
+environment,walls_color,lightblue,3
+environment,walls_color,palegreen,1
+environment,walls_color,silver,2
+environment,walls_color,white,20
+environment,walls_condition,clean,11
+environment,walls_condition,good,3
+environment,walls_condition,intact,2
+environment,walls_condition,pristine,4
+environment,walls_condition,well maintained,1
+environment,walls_finish,brushed,1
+environment,walls_finish,clean,1
+environment,walls_finish,glazed,1
+environment,walls_finish,glossy,7
+environment,walls_finish,high gloss,1
+environment,walls_finish,matte,6
+environment,walls_finish,paint,1
+environment,walls_finish,painted,3
+environment,walls_finish,polished,1
+environment,walls_finish,semi matte,1
+environment,walls_material,ceramic,3
+environment,walls_material,ceramic tile,6
+environment,walls_material,concrete,3
+environment,walls_material,drywall,2
+environment,walls_material,glass,1
+environment,walls_material,glazed tile,1
+environment,walls_material,high gloss cabinetry,1
+environment,walls_material,lacquered wood,1
+environment,walls_material,marble effect panel,1
+environment,walls_material,metal,3
+environment,walls_material,metal frame,1
+environment,walls_material,paint,7
+environment,walls_material,painted drywall,2
+environment,walls_material,painted surface,1
+environment,walls_material,painted wall,1
+environment,walls_material,painted wood,4
+environment,walls_material,siding,1
+environment,walls_material,stainless steel,1
+environment,walls_material,stainless steel tile,1
+environment,walls_material,tile,2
+environment,walls_material,unknown,2
+environment,walls_material,wood,1
+environment,walls_material,wood veneer,1
+environment,walls_texture,glazed,1
+environment,walls_texture,glossy,8
+environment,walls_texture,matte,1
+environment,walls_texture,polished,1
+environment,walls_texture,rectangular tile pattern,1
+environment,walls_texture,reflective,4
+environment,walls_texture,slightly reflective,1
+environment,walls_texture,smooth,24
+environment,walls_texture,textured,1
+environment,walls_texture,woodgrain,1
+environment,weather,clear,1
+environment,weather,cloudy,4
+environment,weather,overcast,3
+environment,weather,storm,1
+environment,weather,sunny,7
+environment,weather,unknown,8
+lighting,artifacts,background blur,1
+lighting,artifacts,background bokeh blur,1
+lighting,artifacts,bloom,4
+lighting,artifacts,bokeh,2
+lighting,artifacts,camera glare fence edges,1
+lighting,artifacts,glare,1
+lighting,artifacts,glare around floodlights,1
+lighting,artifacts,halation,1
+lighting,artifacts,lens bloom,1
+lighting,artifacts,lens diffusion,1
+lighting,artifacts,lens flare,1
+lighting,artifacts,mild glare glass beverage container,1
+lighting,artifacts,mild highlight bloom near window,1
+lighting,artifacts,mild highlight countertop,1
+lighting,artifacts,mild window reflection,1
+lighting,artifacts,minor lens flare,1
+lighting,artifacts,motion blur,4
+lighting,artifacts,motion blur lower right foot,1
+lighting,artifacts,motion blur moving subjects,1
+lighting,artifacts,particle spray,1
+lighting,artifacts,radial motion blur,1
+lighting,artifacts,selective sharpness,1
+lighting,artifacts,slight veiling around sun disk,1
+lighting,artifacts,small red lens flare lower right foreground,1
+lighting,artifacts,specular highlights,2
+lighting,artifacts,specular reflections metal rail,1
+lighting,artifacts,specular reflections metal surfaces,2
+lighting,artifacts,specular reflections stainless steel,1
+lighting,artifacts,specular reflections stainless steel microwave glass,1
+lighting,artifacts,specular sheen skin,1
+lighting,artifacts,subtle reflections chrome tiles,1
+lighting,artifacts,subtle sheen skin clothing,1
+lighting,artifacts,subtle specular reflections stainless steel,1
+lighting,artifacts,sun flare bloom,1
+lighting,artifacts,sun starburst flare,1
+lighting,artifacts,unknown,1
+lighting,color_temperature,cool,16
+lighting,color_temperature,neutral,9
+lighting,color_temperature,warm,27
+lighting,contrast_level,high,16
+lighting,contrast_level,medium,25
+lighting,directionality,backlight,20
+lighting,directionality,sidelight,22
+lighting,directionality,top light,6
+lighting,directionality,toplight,17
+lighting,directionality,underlight,5
+lighting,directionality,unknown,34
+lighting,hardness,hard,2
+lighting,hardness,hard light,4
+lighting,hardness,medium,7
+lighting,hardness,soft,7
+lighting,hardness,soft light,42
+lighting,saturation_level,neutral,32
+lighting,saturation_level,vivid,9
+lighting,shadows,casting,8
+lighting,shadows,hard,7
+lighting,shadows,medium,4
+lighting,shadows,soft,54
+lighting,sources_count,four or more,5
+lighting,sources_count,one source,36
+lighting,sources_count,two,4
+lighting,sources_count,unknown,3
+lighting,sources_type,artificial,9
+lighting,sources_type,artificial light,14
+lighting,sources_type,artificial light source,9
+lighting,sources_type,unknown,49
+objects,note,subtype counts sum equals total object instances,129
+objects,plane,background,136
+objects,plane,foreground,169
+objects,plane,midground,109
+objects,plane_distribution,background,18
+objects,plane_distribution,foreground,20
+objects,plane_distribution,midground,10
+objects,side,center,176
+objects,side,left,116
+objects,side,right,121
+objects,side,unknown,1
+objects,side_distribution,center,29
+objects,side_distribution,left,11
+objects,side_distribution,right,8
+objects,type,accessory,1
+objects,type,advertising band,1
+objects,type,advertising hoardings,1
+objects,type,advertising panel,1
+objects,type,apparel detail,1
+objects,type,appliance,15
+objects,type,architectural,1
+objects,type,architectural element,1
+objects,type,architectural feature,1
+objects,type,architecture,2
+objects,type,assorted produce,1
+objects,type,assorted vegetables background counter,1
+objects,type,avocado,1
+objects,type,background,2
+objects,type,backsplash,2
+objects,type,backsplash panel,1
+objects,type,ball,1
+objects,type,black framed window,1
+objects,type,body part,1
+objects,type,bokeh highlights,1
+objects,type,bottle,2
+objects,type,boundary fence,1
+objects,type,bowl,8
+objects,type,bread,1
+objects,type,bread piece,1
+objects,type,brushed stainless steel vent canopy,1
+objects,type,building,2
+objects,type,bunch,1
+objects,type,burner unit,1
+objects,type,butcher block wood,1
+objects,type,cabinet,1
+objects,type,cabinetry,4
+objects,type,cabinetry bank,1
+objects,type,canopy overhead structure,8
+objects,type,celery,1
+objects,type,chain link fence,1
+objects,type,chef knife,1
+objects,type,chef slicing knife,1
+objects,type,cherry tomatoes,1
+objects,type,chicken egg,1
+objects,type,chimney,1
+objects,type,chopped herbs,1
+objects,type,clothing,3
+objects,type,coffee cup,1
+objects,type,competition bib,2
+objects,type,cone,1
+objects,type,container,7
+objects,type,cooking range,1
+objects,type,cooking vessel,2
+objects,type,cooktop,1
+objects,type,cookware,6
+objects,type,countertop,4
+objects,type,countertop edge,1
+objects,type,countertop microwave,1
+objects,type,countertop pot,1
+objects,type,countertop small appliance,1
+objects,type,crate,1
+objects,type,curb,1
+objects,type,curbing,1
+objects,type,curtain,1
+objects,type,cutting board,5
+objects,type,cutting boards,1
+objects,type,dark green avocado pair,1
+objects,type,decoration,1
+objects,type,decorative bowl,1
+objects,type,dinnerware,1
+objects,type,dipping dish,1
+objects,type,double basin sink,1
+objects,type,egg,2
+objects,type,electric appliance,1
+objects,type,element,1
+objects,type,equipment,1
+objects,type,equipment starting wedge,1
+objects,type,exercise equipment,3
+objects,type,faucet,4
+objects,type,fence,2
+objects,type,field poles,1
+objects,type,fixture,4
+objects,type,flat bench,1
+objects,type,floor mat,1
+objects,type,food,14
+objects,type,footwear,3
+objects,type,footwear shoes,2
+objects,type,framed print,1
+objects,type,free weight rack,1
+objects,type,fruit,17
+objects,type,fruit tray,1
+objects,type,frying pan,3
+objects,type,furniture,6
+objects,type,furniture surface,1
+objects,type,garment,2
+objects,type,gas cooktop,29
+objects,type,gas flame,1
+objects,type,glass bowl,1
+objects,type,glass jars,3
+objects,type,glass pitcher,1
+objects,type,grid truss skylights,1
+objects,type,hand contact,1
+objects,type,handheld device,1
+objects,type,hanging cooking utensil,1
+objects,type,hanging towel,1
+objects,type,hardware,1
+objects,type,heater,1
+objects,type,herbs,2
+objects,type,holder,2
+objects,type,human face,1
+objects,type,infield,1
+objects,type,infield grass,1
+objects,type,island countertop,1
+objects,type,jar,2
+objects,type,kettle,1
+objects,type,kitchen island,2
+objects,type,kitchen tool,3
+objects,type,kitchenware,76
+objects,type,knife,1
+objects,type,knife block,1
+objects,type,lane area,1
+objects,type,lane curb,1
+objects,type,lane lines,4
+objects,type,lane markings,2
+objects,type,lane number paint,1
+objects,type,large rectangular window,1
+objects,type,leafy green bundle,1
+objects,type,leafy greens,1
+objects,type,lemons,1
+objects,type,lettuce,1
+objects,type,lettuce head,1
+objects,type,light poles,2
+objects,type,line marking,1
+objects,type,loaf,1
+objects,type,lower cabinetry,1
+objects,type,marking,1
+objects,type,matte black fixture,1
+objects,type,metal container,1
+objects,type,metal railing or net,1
+objects,type,metal spatula,1
+objects,type,metal spectator benches,5
+objects,type,microwave,2
+objects,type,microwave or compact oven,1
+objects,type,misc,1
+objects,type,mixing bowl,3
+objects,type,mug,1
+objects,type,multi cooker,1
+objects,type,multi pane window,1
+objects,type,multi pane window wall,1
+objects,type,multi pane windows,1
+objects,type,multi station cable machine,1
+objects,type,open shelving,1
+objects,type,open wall shelf plates bowls,1
+objects,type,opening,1
+objects,type,oven,1
+objects,type,oven door,1
+objects,type,overhead support columns,1
+objects,type,pantry cabinet,1
+objects,type,paper bib,2
+objects,type,partially occluded metallic appliance,1
+objects,type,particulate,1
+objects,type,pendant hood,1
+objects,type,pendant light,2
+objects,type,person object level,1
+objects,type,pitcher,1
+objects,type,plant,3
+objects,type,planter,1
+objects,type,plate or bowl,1
+objects,type,plates,1
+objects,type,plates glassware,1
+objects,type,portable burner,1
+objects,type,potted herb,3
+objects,type,potted plant,1
+objects,type,produce,6
+objects,type,produce assortment,2
+objects,type,produce grouping,1
+objects,type,race bib,4
+objects,type,rail,1
+objects,type,railing,4
+objects,type,range hood,9
+objects,type,raw fillet fish,1
+objects,type,roof structure,1
+objects,type,roof truss,3
+objects,type,roof trusswork,1
+objects,type,round brown food,1
+objects,type,rubberized matting,1
+objects,type,running shoe single,1
+objects,type,running track,24
+objects,type,running track lane,1
+objects,type,saucer,1
+objects,type,seating,7
+objects,type,seating structure,1
+objects,type,shadow,1
+objects,type,shelf,3
+objects,type,shelf contents,1
+objects,type,shelf dishware,1
+objects,type,shelf jars,1
+objects,type,shoe,2
+objects,type,shorts,2
+objects,type,single tomato,1
+objects,type,sink,3
+objects,type,sink area,1
+objects,type,skillet,1
+objects,type,sky,2
+objects,type,sky feature sun disk,1
+objects,type,small black appliance,1
+objects,type,small black metal frying pan,1
+objects,type,small black plate or bowl,1
+objects,type,small container,1
+objects,type,small round metal pan,1
+objects,type,small stainless knife,1
+objects,type,small white,1
+objects,type,spectator seating,4
+objects,type,spectator seating band,1
+objects,type,spectator stands,1
+objects,type,sport equipment,1
+objects,type,sports ball,1
+objects,type,sports equipment,1
+objects,type,stack ceramic plates,1
+objects,type,stack white ceramic plates,1
+objects,type,stacked plates,1
+objects,type,stadium floodlight tower,1
+objects,type,stadium floodlights,1
+objects,type,stadium seating,1
+objects,type,stadium structure,1
+objects,type,stainless pot,1
+objects,type,stainless steel,1
+objects,type,stainless steel canopy,1
+objects,type,stainless steel mixing bowl,1
+objects,type,stainless steel rail with hanging utensils,1
+objects,type,stainless steel sink with chrome faucet,1
+objects,type,starting wedge,1
+objects,type,stool,1
+objects,type,storage bottles,1
+objects,type,stovetop flame,1
+objects,type,structure,2
+objects,type,sunlight flare,1
+objects,type,surface,6
+objects,type,tabletop,1
+objects,type,textile,2
+objects,type,three legged wood stool,1
+objects,type,tomato cluster cutting board,1
+objects,type,tomatoes,5
+objects,type,tool,1
+objects,type,track,1
+objects,type,track dust,1
+objects,type,track generic,1
+objects,type,track surface,19
+objects,type,training aid,1
+objects,type,treeline,1
+objects,type,turf,1
+objects,type,under cabinet,1
+objects,type,unknown,6
+objects,type,upper cabinet singular,1
+objects,type,upper cabinets,2
+objects,type,utensil,4
+objects,type,utensil holder,4
+objects,type,utensil rail,1
+objects,type,vegetables,1
+objects,type,vegetation,4
+objects,type,vent,1
+objects,type,vertical radiator,1
+objects,type,wall,1
+objects,type,wall art,1
+objects,type,wall segment,1
+objects,type,wall surface,1
+objects,type,watch,1
+objects,type,white framed window,1
+objects,type,whole egg,1
+objects,type,window,9
+objects,type,window assembly,2
+objects,type,wood boards leaning,1
+objects,type,wooden cutting board,7
+objects,type,wooden produce crate,1
+objects,type,wooden shelf containers,1
+objects,type,wooden utensil holder,1
+objects,type,wooden worktop,1
+objects,type,work surface,1
+objects,type,wristband,1
+people,activities,accelerating,1
+people,activities,cooking,4
+people,activities,holding a ball,2
+people,activities,holding mixing bowl,2
+people,activities,holding spatula,3
+people,activities,manipulating cookware,1
+people,activities,other low frequency,14
+people,activities,preparing food,2
+people,activities,running,4
+people,activities,scraping,1
+people,activities,sprinting,16
+people,activities,stirring,2
+people,age_range,young adult,52
+people,clothing_color,black,45
+people,clothing_color,blue,16
+people,clothing_color,brown,1
+people,clothing_color,gray,10
+people,clothing_color,green,2
+people,clothing_color,lightyellow,1
+people,clothing_color,orange,4
+people,clothing_color,pink,3
+people,clothing_color,red,6
+people,clothing_color,white,19
+people,clothing_color,yellow,2
+people,clothing_color_aggregated,black,21
+people,clothing_color_aggregated,blue,8
+people,clothing_color_aggregated,green,1
+people,clothing_color_aggregated,mediumblue,2
+people,clothing_color_aggregated,orange,5
+people,clothing_color_aggregated,pink,1
+people,clothing_color_aggregated,red,4
+people,clothing_color_aggregated,white,8
+people,clothing_color_aggregated,yellow,2
+people,clothing_condition,clean,4
+people,clothing_condition,even,4
+people,clothing_condition,fitted,3
+people,clothing_condition,good,3
+people,clothing_condition,partially legible,1
+people,clothing_condition,partially occluded,1
+people,clothing_condition,slight creasing,1
+people,clothing_condition,used,1
+people,clothing_condition,worn,2
+people,clothing_condition,worn but serviceable,1
+people,clothing_condition,worn outsole,1
+people,clothing_condition,worn sole,1
+people,clothing_fit_style,ankle length,1
+people,clothing_fit_style,close fitting,2
+people,clothing_fit_style,fitted,3
+people,clothing_fit_style,form fitting,1
+people,clothing_fit_style,low cut,1
+people,clothing_fit_style,regular,1
+people,clothing_fit_style,snug,1
+people,clothing_fit_style,tied rear,1
+people,clothing_fit_style,tight,21
+people,clothing_fit_style,tight fitting,4
+people,clothing_garment,competition bib,1
+people,clothing_garment,compression shorts,5
+people,clothing_garment,race bib,3
+people,clothing_garment,racing spike shoes,1
+people,clothing_garment,racing spikes variant,1
+people,clothing_garment,running shoes,3
+people,clothing_garment,running shorts,2
+people,clothing_garment,running spikes,1
+people,clothing_garment,shoes general,3
+people,clothing_garment,shorts,4
+people,clothing_garment,singlet,8
+people,clothing_garment,sleeveless singlet,1
+people,clothing_garment,socks,2
+people,clothing_garment,tank top,2
+people,clothing_garment,wrist watch,1
+people,clothing_garment,wristband,1
+people,clothing_material,adhesive,1
+people,clothing_material,cotton,9
+people,clothing_material,fabric,9
+people,clothing_material,knit,5
+people,clothing_material,mesh,7
+people,clothing_material,metal,1
+people,clothing_material,paper,7
+people,clothing_material,plastic,2
+people,clothing_material,polyester,2
+people,clothing_material,rubber,11
+people,clothing_material,stretch,3
+people,clothing_material,studded sole,1
+people,clothing_material,synthetic,63
+people,clothing_material,synthetic blend,1
+people,clothing_material,textile,4
+people,clothing_material,woven,1
+people,clothing_texture,breathable,1
+people,clothing_texture,breathable mesh,1
+people,clothing_texture,cushioned,1
+people,clothing_texture,elastic,1
+people,clothing_texture,fitted,1
+people,clothing_texture,granular,0
+people,clothing_texture,knitted,4
+people,clothing_texture,matte,3
+people,clothing_texture,mesh,2
+people,clothing_texture,moisture wicking,1
+people,clothing_texture,rubber sole,1
+people,clothing_texture,shiny,2
+people,clothing_texture,slightly shiny,1
+people,clothing_texture,smooth,37
+people,clothing_texture,smooth knit,1
+people,clothing_texture,subtle mesh panel,1
+people,clothing_texture,textile upper,1
+people,clothing_texture,textured,5
+people,clothing_texture,textured soles,1
+people,clothing_texture,thin,1
+people,eyewear_frame_color,black,2
+people,eyewear_present,no,39
+people,eyewear_present,unknown,2
+people,eyewear_present,yes,10
+people,facial_hair_color,black,3
+people,facial_hair_color,brown,7
+people,facial_hair_color,darkblue,1
+people,facial_hair_present,no,37
+people,facial_hair_present,unknown,3
+people,facial_hair_present,yes,11
+people,facial_hair_style,full beard,2
+people,facial_hair_style,full trimmed beard,1
+people,facial_hair_style,long,1
+people,facial_hair_style,short beard,1
+people,facial_hair_style,short full beard,1
+people,facial_hair_style,short stubble,2
+people,facial_hair_style,stubble,2
+people,facial_hair_style,thick,1
+people,facial_hair_style,trimmed stubble,1
+people,gaze_direction,down,2
+people,gaze_direction,left,2
+people,gaze_direction,looking down,10
+people,gaze_direction,looking left,2
+people,gaze_direction,looking up,2
+people,gaze_direction,right,1
+people,gaze_direction,unknown,14
+people,gender_presentation,female,11
+people,gender_presentation,male,42
+people,hair_color,black,13
+people,hair_color,brown,52
+people,hair_color,red,1
+people,hair_present,yes,53
+people,hair_style,bun,2
+people,hair_style,curly,1
+people,hair_style,long,3
+people,hair_style,ponytail,12
+people,hair_style,short,47
+people,hair_style,unknown,2
+people,hair_style,updo,2
+people,hair_style,wavy,1
+people,head_covering_color,black,1
+people,head_covering_present,no,39
+people,occlusions,partial occlusion,20
+people,occlusions,partially occluded,10
+people,occlusions,unknown,1
+people,orientation,front,14
+people,orientation,frontal,4
+people,orientation,three quarter,7
+people,orientation,unknown,2
+people,pose,airborne stride,1
+people,pose,arms pumping,2
+people,pose,engaged preparation posture,1
+people,pose,explosive sprinting,1
+people,pose,forward leaning,19
+people,pose,low crouched,2
+people,pose,mid stride,8
+people,pose,other descriptors many low frequency tokens aggregated,27
+people,pose,slightly forward leaning,2
+people,pose,slightly leaned forward,1
+people,pose,slightly leaning,1
+people,pose,slightly leaning forward,3
+people,pose,sprinting,3
+people,pose,standing,1
+people,pose,torso oriented toward midground center,1
+people,pose,torso over countertop,1
+people,pose,upright,4
+people,pose,upright sprint posture,1
+people,pose_activity,preparing sprint,1
+people,pose_activity,running,2
+people,pose_activity,sprinting,6
+people,pose_gaze_direction,down,4
+people,pose_gaze_direction,left,1
+people,pose_gaze_direction,right,2
+people,pose_gaze_direction,up,2
+people,pose_occlusions,partial occlusion,9
+people,role_hint,appears competitive detailed,1
+people,role_hint,appears competitive sprinter,1
+people,role_hint,athlete,3
+people,role_hint,athlete generic,2
+people,role_hint,competitive athlete,2
+people,role_hint,competitive runner,2
+people,role_hint,competitive sprinter,5
+people,role_hint,competitive track athlete,1
+people,role_hint,cook,2
+people,role_hint,exerciser,1
+people,role_hint,home cook,1
+people,role_hint,sprinter,2
+people,role_hint,track athlete,1
+people,skin_tone,dark,6
+people,skin_tone,light,23
+people,skin_tone,medium,35
+safety,hazards,hot steam,1
+safety,hazards,knife hazard,1
+safety,hazards,loose apron hazard,1
+safety,hazards,no,8
+safety,hazards,no detected,8
+safety,hazards,no hazard observed,3
+safety,hazards,no observed,8
+safety,hazards,open gas flame,1
+safety,hazards,sharp knife exposed,1
+safety,hazards,sharp object,1
+safety,nsfw,no,9
+safety,nsfw,no content,10
+safety,nsfw,not,10
+safety,nsfw,shirtless,1
+safety,nsfw,unknown,10
+safety,nsfw,vulgar text detected,1
+texts,content,315,1
+texts,content,e,1
+texts,content,homemade text,1
+texts,content,illegible,1
+texts,content,partial transcription s r dor,1
+texts,content,race bib fragment includes 17,1
+texts,content,shitter,1
+texts,content,text 136,1
+texts,content,text 315,1
+texts,content,text illegible,1
+texts,content,text shitter vulgar,1
+texts,content,text token 049,1
+texts,content,text token 197,1
+texts,content,text token 45,1
+texts,content,text token 9299,1
+texts,content,text token surso,1
+texts,font_style,bold,14
+texts,font_style,condensed,3
+texts,font_style,sans,12
+texts,font_style,sans serif,5
+texts,font_style,unknown,12
+texts,legibility,illegible,15
+texts,legibility,legible,4
+texts,legibility,legible text,4
+texts,legibility,not legible,6
+texts,legibility,partially illegible,1
+texts,legibility,partially legible,4
+texts,legibility,unreadable,1
+texts,plane,background,3
+texts,plane,midground,3
+texts,plane,text in background,1
+texts,plane,text in foreground,5
+texts,plane,text in midground,7
+texts,plane,text on background,4
+texts,plane,text on foreground,6
+texts,plane,text on midground,4
+texts,plane,unknown,1
+texts,side,center,3
+texts,side,left,1
+texts,side,right,2
+texts,side,text center,9
+texts,side,text left,1
+texts,side,text right,3
+totals,images,unknown,10
+totals,object_instances,unknown,181
+totals,people_instances,unknown,10
+totals,text_instances,unknown,8
+uncertainty,note,adjacent lane numbers partially out of frame not legible,1
+uncertainty,note,athlete rear torso cropped partially occluded,1
+uncertainty,note,athlete s right foot partially out of frame,1
+uncertainty,note,background beyond midground blurred small markings illegible,1
+uncertainty,note,background spectator faces indistinct blurred,1
+uncertainty,note,blurred rectangular object behind canopy not identifiable,1
+uncertainty,note,distant bleacher rows heavy blur spectator indiscernible,1
+uncertainty,note,distant crowd faces and clothing indistinct due to blur,1
+uncertainty,note,distant light pole fixture count approximated 3 4 uncertain,1
+uncertainty,note,distant metallic fixtures partially occluded not detailed,1
+uncertainty,note,distant small facility objects low detail not identifiable,1
+uncertainty,note,distant spectator seating row count approximate,1
+uncertainty,note,exact make model of running shoes not identifiable,1
+uncertainty,note,exact number of running lanes uncertain,1
+uncertainty,note,exact time day unspecified beyond daylight,1
+uncertainty,note,exact time day unspecified beyond daytime,1
+uncertainty,note,facial micro expressions not fully resolvable,1
+uncertainty,note,far background peripheral elements not visible,1
+uncertainty,note,gaze direction mapping uncertain detailed,1
+uncertainty,note,lane number painted markings partially occluded worn,1
+uncertainty,note,lower portions of shoes partly occluded by motion blur small distant objects omitted,1
+uncertainty,note,midground stacked items count uncertain,1
+uncertainty,note,possible small objects on track surface not identifiable,1
+uncertainty,note,race bib small text partially illegible detailed,1
+uncertainty,note,race bib text smudged partially occluded moderate certainty,1
+uncertainty,note,race bib upper letter text partially occluded,1
+uncertainty,note,roof truss markings not legible,1
+uncertainty,note,shoe brand model text not readable due to motion blur,1
+uncertainty,note,shoe branding logos not legible,1
+uncertainty,note,slight motion blur reduces detail,1
+uncertainty,note,small dark object near athlete toes likely starting wedge but uncertain,1
+uncertainty,note,small human shaped figure blurred omitted from people inventory,1
+uncertainty,note,small logos or text on apparel watch faces illegible,1
+uncertainty,note,small objects along track edge blurred not identifiable,1
+uncertainty,note,small printed text above bib 45 illegible,1
+uncertainty,note,small seating area background right partial occlusion,1
+uncertainty,note,small sponsor text on bib not fully verified,1
+uncertainty,note,small text beneath bib number 197 illegible,1
+uncertainty,note,small white printed text on rear singlet partially occluded,1
+uncertainty,note,smaller sponsor text above bib numerals partially occluded,1
+uncertainty,note,starting block fixture reported not visible,1
+uncertainty,note,time of day weather not visible,1
+uncertainty,note,trailing shoe partially out of frame occluded by shadow,1
+uncertainty,note,trailing shoe trailing areas partially occluded by motion blur,1
+uncertainty,note,tree species in background not identifiable,1
+uncertainty,note,unknown,17
+uncertainty,token,approximate tree count 10 15 uncertain due to blur,1
+uncertainty,token,brand markings not legible,1
+uncertainty,token,camera capture alignment ambiguous,1
+uncertainty,token,competition bib text uncertain possible shitter,1
+uncertainty,token,exact number of background poles uncertain approx 6,1
+uncertainty,token,faint pole element unresolved,1
+uncertainty,token,gaze mapping ambiguous,1
+uncertainty,token,hanging fabric material uncertain,1
+uncertainty,token,items stacked count 1 3 uncertain,1
+uncertainty,token,large indiscernible motion blur causing omitted details,44
+uncertainty,token,lower legs feet cropped footwear uncertain,1
+uncertainty,token,lower torso arm positions cropped uncertain,1
+uncertainty,token,precipitation uncertain,1
+uncertainty,token,race bib text partially illegible partial transcription s r dor,1
+uncertainty,token,small embroidered logo on tank top visible but text not legible,1
+uncertainty,token,small white marks on track surface material uncertain,1
+uncertainty,token,spectator area silhouettes ambiguous,44
+uncertainty,token,time day weather not verifiable,9
+uncertainty,token,track dust composition uncertain,1
+uncertainty,token,unknown,17
+uncertainty,total_uncertainty_instances,unknown,70
+uncertainty,uncertainty,approx counts for assorted fruit and glassware uncertain,1
+uncertainty,uncertainty,approx counts for potted plants fruit bowls uncertain due to occlusion,1
+uncertainty,uncertainty,approximate count small clear glass jars 3,1
+uncertainty,uncertainty,approximate counts for small citrus fruits and hanging utensils,1
+uncertainty,uncertainty,approximate counts on open shelving not exact,1
+uncertainty,uncertainty,approximate counts stacked pans plates due to occlusion,1
+uncertainty,uncertainty,apron text transcription uncertain partially shadowed,1
+uncertainty,uncertainty,background left contains softly blurred indiscernible small items,1
+uncertainty,uncertainty,background left open shelf item identities uncertain,1
+uncertainty,uncertainty,contents of stainless steel mixing bowl not identifiable,1
+uncertainty,uncertainty,countertop appliance identity uncertain coffee maker or blender,1
+uncertainty,uncertainty,digital display characters appliance labels not legible,1
+uncertainty,uncertainty,exact appliance model midground right not identifiable,1
+uncertainty,uncertainty,exact contents of mixing bowl foreground right not identifiable,1
+uncertainty,uncertainty,exact contents precise count of containers approximated,1
+uncertainty,uncertainty,exact count small utensils hanging rail uncertain 4 hooks,1
+uncertainty,uncertainty,exact hand left right holding utensils uncertain,1
+uncertainty,uncertainty,exact number of stacked ceramic dishes approximate 4 6,1
+uncertainty,uncertainty,exact stacked plates bowls counts approximate due to occlusion,1
+uncertainty,uncertainty,exterior scene through window out of focus,1
+uncertainty,uncertainty,exterior view through background left window out of focus,1
+uncertainty,uncertainty,floor ceiling surfaces not described,1
+uncertainty,uncertainty,focal length ambiguous,1
+uncertainty,uncertainty,foreground bowl contents approximate uncertain food type,1
+uncertainty,uncertainty,framed wall art partially out of frame details indiscernible,1
+uncertainty,uncertainty,green leafy vegetable species not identifiable,1
+uncertainty,uncertainty,identity of two medium brown spherical items uncertain,1
+uncertainty,uncertainty,indiscernible blur near wrapped bread,1
+uncertainty,uncertainty,light colored logo on shorts illegible,1
+uncertainty,uncertainty,lower body clothing footwear not visible uncertain,5
+uncertainty,uncertainty,lower left dishwasher front details not visible,1
+uncertainty,uncertainty,lower legs feet cropped out of frame,5
+uncertainty,uncertainty,lower sink area partially occluded,1
+uncertainty,uncertainty,material composition details not independently verified,1
+uncertainty,uncertainty,microwave brand model text illegible,1
+uncertainty,uncertainty,midground left background object ids not fully specified,1
+uncertainty,uncertainty,number of hanging utensils approximated 6,1
+uncertainty,uncertainty,number of sliced cooked protein pieces uncertain 3 4,1
+uncertainty,uncertainty,open shelving jar contents not clear approx 4 6 jars,1
+uncertainty,uncertainty,outdoor details beyond white framed window indistinct,1
+uncertainty,uncertainty,partially occluded metallic appliance identification uncertain,1
+uncertainty,uncertainty,photographic print content background left not legible,1
+uncertainty,uncertainty,potential logo text on t shirt not legible,1
+uncertainty,uncertainty,potted plants approximate count 4,1
+uncertainty,uncertainty,reflective glare on sliding glass door partially occludes exterior,1
+uncertainty,uncertainty,sink area background right partially visible,1
+uncertainty,uncertainty,slight soft focus blur across background left tiles,1
+uncertainty,uncertainty,small clear mixing bowl contents not identifiable due to resolution,1
+uncertainty,uncertainty,small dark logo on range hood not legible,1
+uncertainty,uncertainty,small framed artwork content not legible at current resolution,1
+uncertainty,uncertainty,small glass jar contents not identifiable,1
+uncertainty,uncertainty,small printed container labels illegible,9
+uncertainty,uncertainty,small reflective object near foreground right edge indiscernible,1
+uncertainty,uncertainty,small text brand logos on clothing unreadable,1
+uncertainty,uncertainty,small unidentified dark object foreground left high frequency,18
+uncertainty,uncertainty,small utensils or spice labels partially occluded not legible,14
+uncertainty,uncertainty,small wall note illegible,1
+uncertainty,uncertainty,specific herb types not identifiable,1
+uncertainty,uncertainty,stacked plate glass counts approximate,1
+uncertainty,uncertainty,stacked plates approx count 6 per stack,1
+uncertainty,uncertainty,state of active gas flame beneath mixing bowl uncertain,1
+uncertainty,uncertainty,tank top logo interpreted as e but could be occluded stylized,1
+uncertainty,uncertainty,time of day ambiguous despite sunlight clues,1
+uncertainty,uncertainty,two bright green round fruits type uncertain,1
+uncertainty,uncertainty,unknown,28
+uncertainty,uncertainty,upper cabinet interior contents partially occluded out of focus,1
+uncertainty,uncertainty,weather not visible,1
+uncertainty,uncertainty,windowsill baskets partially occluded,1

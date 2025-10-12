@@ -1,0 +1,439 @@
+cohort,standardized_dimension,standardized_label,count,bins
+atmosphere,aesthetic_qualities,cinematic,3,3
+atmosphere,aesthetic_qualities,minimal,2,3
+atmosphere,aesthetic_qualities,realistic,15,3
+atmosphere,color,black,5,26
+atmosphere,color,brown,4,26
+atmosphere,color,mediumblue,1,26
+atmosphere,contrast_level,high,4,2
+atmosphere,contrast_level,medium,11,2
+atmosphere,dominant_palette,black,5,4
+atmosphere,dominant_palette,brown,2,4
+atmosphere,dominant_palette,cyan,1,4
+atmosphere,dominant_palette,medium blue,2,4
+atmosphere,mood,calm,18,2
+atmosphere,mood,minimalistic,5,2
+atmosphere,palette_detail,black,5,4
+atmosphere,palette_detail,brown,2,4
+atmosphere,palette_detail,cyan,1,4
+atmosphere,palette_detail,mediumblue,2,4
+atmosphere,saturation_level,neutral,9,2
+atmosphere,saturation_level,vivid,6,2
+atmosphere,temperature,cool,9,3
+atmosphere,temperature,neutral,5,3
+atmosphere,temperature,warm,2,3
+background,object_counts_background_right,total objects,14,1
+background,object_counts_by_position,background center,9,9
+background,object_counts_by_position,background left,0,9
+background,object_counts_by_position,background right,4,9
+background,object_counts_by_position,foreground center,10,9
+background,object_counts_by_position,foreground left,5,9
+background,object_counts_by_position,foreground right,1,9
+background,object_counts_by_position,midground center,8,9
+background,object_counts_by_position,midground left,7,9
+background,object_counts_by_position,midground right,9,9
+background,object_counts_foreground_right,total objects,32,1
+background,object_counts_midground_left,total objects,14,1
+background,object_counts_summary,background center,9,9
+background,object_counts_summary,background left,3,9
+background,object_counts_summary,background right,2,9
+background,object_counts_summary,foreground center,12,9
+background,object_counts_summary,foreground left,9,9
+background,object_counts_summary,foreground right,4,9
+background,object_counts_summary,midground center,10,9
+background,object_counts_summary,midground left,4,9
+background,object_counts_summary,midground right,7,9
+background,object_totals_by_position,background center,9,9
+background,object_totals_by_position,background left,0,9
+background,object_totals_by_position,background right,4,9
+background,object_totals_by_position,foreground center,10,9
+background,object_totals_by_position,foreground left,5,9
+background,object_totals_by_position,foreground right,1,9
+background,object_totals_by_position,midground center,8,9
+background,object_totals_by_position,midground left,7,9
+background,object_totals_by_position,midground right,9,9
+camera,depth_of_field,deep,6,3
+camera,depth_of_field,moderate,3,3
+camera,depth_of_field,shallow,16,3
+camera,focal_length,normal,2,3
+camera,focal_length,telephoto,1,3
+camera,focal_length,wide,1,3
+camera,framing,establishing shot,5,4
+camera,framing,full body,11,4
+camera,framing,medium,3,4
+camera,framing,wide,10,4
+camera,perspective,eye level,21,3
+camera,perspective,low angle,2,3
+camera,perspective,third person,2,3
+environment,location_type,corridor,7,2
+environment,location_type,hallway,1,2
+environment,spatial_depth,deep,5,2
+environment,spatial_depth,moderate,4,2
+environment,spatial_layout_depth,deep,4,4
+environment,spatial_layout_depth,elongated,1,4
+environment,spatial_layout_depth,long,2,4
+environment,spatial_layout_depth,moderate,1,4
+environment,spatial_layout_openness,enclosed,2,2
+environment,spatial_layout_openness,open,1,2
+environment,surfaces_ceiling_color,white,9,1
+environment,surfaces_ceiling_condition,intact,2,1
+environment,surfaces_ceiling_finish,matte,9,1
+environment,surfaces_ceiling_material,acoustic tiles grouped variants,7,1
+environment,surfaces_color,beige,8,5
+environment,surfaces_color,gray,6,5
+environment,surfaces_color,lightblue,1,5
+environment,surfaces_color,saddlebrown,1,5
+environment,surfaces_color,white,18,5
+environment,surfaces_floor_color,gray,4,1
+environment,surfaces_floor_condition,clean,3,1
+environment,surfaces_floor_finish,high gloss,5,1
+environment,surfaces_floor_material,tile,3,1
+environment,surfaces_floor_texture,smooth,7,1
+environment,surfaces_material,acoustic tile,10,20
+environment,surfaces_material,ceramic tile,5,20
+environment,surfaces_material,cinderblock,2,20
+environment,surfaces_material,glass,1,20
+environment,surfaces_material,linoleum,3,20
+environment,surfaces_material,metal,1,20
+environment,surfaces_material,paint,8,20
+environment,surfaces_material,painted drywall,5,20
+environment,surfaces_material,painted plaster,1,20
+environment,surfaces_material,painted surface variant,2,20
+environment,surfaces_material,plaster,3,20
+environment,surfaces_material,plastic diffuser,1,20
+environment,surfaces_material,polished stone,1,20
+environment,surfaces_material,terrazzo,2,20
+environment,surfaces_material,vinyl,4,20
+environment,surfaces_material,vinyl or linoleum,1,20
+environment,surfaces_material,vinyl or tile,1,20
+environment,surfaces_material,vinyl tile,1,20
+environment,surfaces_material,wood,1,20
+environment,surfaces_material,wood paneling lower section,1,20
+environment,surfaces_walls_color,beige,4,3
+environment,surfaces_walls_color,gray,3,3
+environment,surfaces_walls_color,white,5,3
+environment,surfaces_walls_condition,clean,9,1
+environment,surfaces_walls_texture,smooth,12,1
+environment,time_of_day_hint,afternoon,1,1
+lighting,artifacts,diffuse ceiling reflections,1,11
+lighting,artifacts,each artifact token,0,11
+lighting,artifacts,glossy reflections fixtures objects,1,11
+lighting,artifacts,no chromatic aberration,1,11
+lighting,artifacts,no lens flare,2,11
+lighting,artifacts,reflections,1,11
+lighting,artifacts,reflections floor,1,11
+lighting,artifacts,specular floor reflections,3,11
+lighting,artifacts,specular highlights metal glossy plastic,1,11
+lighting,artifacts,strong floor reflections,1,11
+lighting,artifacts,strong specular reflections floor,1,11
+lighting,color_temperature,cool,9,3
+lighting,color_temperature,neutral,5,3
+lighting,color_temperature,warm,2,3
+lighting,contrast_level,high,4,2
+lighting,contrast_level,medium,11,2
+lighting,saturation_level,neutral,8,2
+lighting,saturation_level,vivid,7,2
+lighting,shadows,casting,2,2
+lighting,shadows,soft,18,2
+lighting,sources_count,four or more,18,3
+lighting,sources_count,one light source,1,3
+lighting,sources_count,one source,2,3
+lighting,sources_directionality,back light,2,3
+lighting,sources_directionality,side light,2,3
+lighting,sources_directionality,top light,19,3
+lighting,sources_hardness,hard light,1,2
+lighting,sources_hardness,soft light,19,2
+lighting,sources_type,artificial light,10,2
+lighting,sources_type,artificial source,9,2
+objects,color,beige,4,26
+objects,color,black,21,26
+objects,color,blue,18,26
+objects,color,blue palette,0,26
+objects,color,brown,8,26
+objects,color,brown beige,0,26
+objects,color,darkblue,9,26
+objects,color,darkolivegreen,1,26
+objects,color,darkslateblue,1,26
+objects,color,darkslategrey,2,26
+objects,color,deepskyblue,1,26
+objects,color,gray,13,26
+objects,color,green,6,26
+objects,color,lightblue,4,26
+objects,color,lightyellow,1,26
+objects,color,mediumblue,1,26
+objects,color,mediumpurple,2,26
+objects,color,mediumslateblue,1,26
+objects,color,orange,8,26
+objects,color,others,0,26
+objects,color,pink,1,26
+objects,color,red,8,26
+objects,color,silver,8,26
+objects,color,teal,1,26
+objects,color,white,16,26
+objects,color,yellow,8,26
+objects,condition,blurred,1,15
+objects,condition,clean,14,15
+objects,condition,good,3,15
+objects,condition,intact,10,15
+objects,condition,maintained,1,15
+objects,condition,mounted,1,15
+objects,condition,partially occluded,1,15
+objects,condition,scuffed,3,15
+objects,condition,slightly worn,1,15
+objects,condition,used,6,15
+objects,condition,used but orderly,1,15
+objects,condition,visibly used,1,15
+objects,condition,well maintained,3,15
+objects,condition,wet,2,15
+objects,condition,worn,5,15
+objects,finish,backlit,1,14
+objects,finish,brushed,2,14
+objects,finish,diffuse,1,14
+objects,finish,glossy,12,14
+objects,finish,high gloss,7,14
+objects,finish,lit,2,14
+objects,finish,matte,16,14
+objects,finish,molded plastic,1,14
+objects,finish,paint,3,14
+objects,finish,polished,3,14
+objects,finish,recessed diffuser panels,1,14
+objects,finish,reflective,6,14
+objects,finish,reflective striping,1,14
+objects,finish,semi gloss,5,14
+objects,material,ceramic,1,20
+objects,material,flat plastic,2,20
+objects,material,glass,9,20
+objects,material,leather,0,20
+objects,material,metal,12,20
+objects,material,metal family,20,20
+objects,material,mineral fiber,1,20
+objects,material,others,0,20
+objects,material,painted drywall,12,20
+objects,material,plastic,58,20
+objects,material,plastic diffuser,1,20
+objects,material,polished stone,1,20
+objects,material,printed,1,20
+objects,material,rubber,10,20
+objects,material,stainless steel,2,20
+objects,material,synthetic bristles,1,20
+objects,material,terrazzo,1,20
+objects,material,translucent panel,1,20
+objects,material,wood family,6,20
+objects,material,wood veneer,1,20
+objects,size_class,compact,2,7
+objects,size_class,large,5,7
+objects,size_class,long,9,7
+objects,size_class,medium,15,7
+objects,size_class,repeating,1,7
+objects,size_class,small,11,7
+objects,size_class,standard,5,7
+objects,state,attached bucket,1,9
+objects,state,being operated,2,9
+objects,state,contact floor,4,9
+objects,state,contains cleaning water,1,9
+objects,state,lit,1,9
+objects,state,use,8,9
+objects,state,wet appearing,1,9
+objects,state,wheels,1,9
+objects,state,worn,1,9
+objects,texture,absorbent,1,22
+objects,texture,brushed,2,22
+objects,texture,bubbly,1,22
+objects,texture,coarse bristles,2,22
+objects,texture,dense bristle,1,22
+objects,texture,durable,1,22
+objects,texture,flat,4,22
+objects,texture,glossy,8,22
+objects,texture,glossy reflections,1,22
+objects,texture,matte,11,22
+objects,texture,molded plastic,1,22
+objects,texture,polished,3,22
+objects,texture,reflective,4,22
+objects,texture,ribbed rubber,1,22
+objects,texture,slightly dulled,1,22
+objects,texture,slightly reflective,1,22
+objects,texture,smooth,32,22
+objects,texture,speckled,1,22
+objects,texture,stiff bristles,1,22
+objects,texture,textured,6,22
+objects,texture,textured plastic,2,22
+objects,texture,wet,4,22
+objects,type,accessory,1,35
+objects,type,arched windows series,1,35
+objects,type,architectural surface,3,35
+objects,type,architecture element,1,35
+objects,type,broom head,1,35
+objects,type,bucket,1,35
+objects,type,cabinet,1,35
+objects,type,ceiling tiles lights,1,35
+objects,type,cleaning tool,20,35
+objects,type,clothing,1,35
+objects,type,corridor wall segment,1,35
+objects,type,distant terminus feature,1,35
+objects,type,door,4,35
+objects,type,door frames,8,35
+objects,type,door panels sequence,1,35
+objects,type,emergency sign,1,35
+objects,type,fixture,3,35
+objects,type,floor patch,1,35
+objects,type,floor protector,1,35
+objects,type,floor reflection band,1,35
+objects,type,framed wall poster,1,35
+objects,type,furniture or equipment,1,35
+objects,type,handrail,3,35
+objects,type,indicator device,1,35
+objects,type,mop,22,35
+objects,type,mop bucket assembly,15,35
+objects,type,push brooming,3,35
+objects,type,safety equipment,1,35
+objects,type,safety sign,6,35
+objects,type,safety vest,1,35
+objects,type,stainless tubular handrail,2,35
+objects,type,wall panel,1,35
+objects,type,wall sign,12,35
+objects,type,wall surface,20,35
+objects,type,wheeled container,1,35
+people,activities,mopping,9,3
+people,activities,push brooming,1,3
+people,activities,pushing mop,2,3
+people,age_range,middle aged,17,3
+people,age_range,older adult,1,3
+people,age_range,young adult,1,3
+people,clothing_color,black,25,9
+people,clothing_color,blue,37,9
+people,clothing_color,brown,1,9
+people,clothing_color,gray,5,9
+people,clothing_color,green,9,9
+people,clothing_color,orange,5,9
+people,clothing_color,tan,1,9
+people,clothing_color,white,4,9
+people,clothing_color,yellow,8,9
+people,clothing_garment,face mask,1,10
+people,clothing_garment,high visibility safety vest,2,10
+people,clothing_garment,overalls,4,10
+people,clothing_garment,safety vest,2,10
+people,clothing_garment,shirt,14,10
+people,clothing_garment,shoes,5,10
+people,clothing_garment,trousers,4,10
+people,clothing_garment,utility pouch,1,10
+people,clothing_garment,work gloves,17,10
+people,clothing_garment,work overall sleeveless,1,10
+people,clothing_material,cotton,9,25
+people,clothing_material,disposable polymer,1,25
+people,clothing_material,disposable surgical fabric,1,25
+people,clothing_material,durable fabric,2,25
+people,clothing_material,durable woven fabric,1,25
+people,clothing_material,heavy duty fabric,2,25
+people,clothing_material,heavy duty textile,1,25
+people,clothing_material,knit,4,25
+people,clothing_material,latex or nitrile,1,25
+people,clothing_material,leather,2,25
+people,clothing_material,mesh or fabric,1,25
+people,clothing_material,others,0,25
+people,clothing_material,poly cotton,1,25
+people,clothing_material,polyester,7,25
+people,clothing_material,polyester cotton,1,25
+people,clothing_material,rubber,10,25
+people,clothing_material,rubber or rubber like,4,25
+people,clothing_material,rubber soled,2,25
+people,clothing_material,rubber synthetic,1,25
+people,clothing_material,synthetic,1,25
+people,clothing_material,synthetic blend,1,25
+people,clothing_material,synthetic fabric,1,25
+people,clothing_material,textile textured grip,1,25
+people,clothing_material,woven,3,25
+people,clothing_material,woven work fabric,1,25
+people,eyewear_present,no,15,2
+people,eyewear_present,yes,1,2
+people,facial_hair_present,no,5,2
+people,facial_hair_present,yes,4,2
+people,gaze_direction,down,15,2
+people,gaze_direction,up,1,2
+people,gender_presentation,female,1,2
+people,gender_presentation,male,21,2
+people,hair_color,black,19,3
+people,hair_color,brown,4,3
+people,hair_color,gray,11,3
+people,hair_present,yes,19,1
+people,hair_style,curly,1,2
+people,hair_style,short,17,2
+people,head_covering_color,blue,4,2
+people,head_covering_color,orange,1,2
+people,head_covering_present,no,8,2
+people,head_covering_present,yes,13,2
+people,head_covering_type,baseball cap,4,4
+people,head_covering_type,brimmed cap,1,4
+people,head_covering_type,cap,7,4
+people,head_covering_type,hard hat,1,4
+people,occlusions,partial occlusion,10,2
+people,occlusions,partially occluded,8,2
+people,orientation,facing front,5,3
+people,orientation,front,4,3
+people,orientation,three quarter,1,3
+people,pose,bent forward general,2,12
+people,pose,forward leaning,5,12
+people,pose,mopping posture,2,12
+people,pose,shoulders squared,1,12
+people,pose,slight forward lean,8,12
+people,pose,slightly bent,2,12
+people,pose,slightly bent forward,4,12
+people,pose,slightly crouched,1,12
+people,pose,standing,1,12
+people,pose,task focused posture,1,12
+people,pose,upright,4,12
+people,pose,upright walking,1,12
+people,role_hint,appears janitorial worker proximity evidence,1,6
+people,role_hint,cleaning staff,3,6
+people,role_hint,cleaning worker,2,6
+people,role_hint,custodial worker,1,6
+people,role_hint,janitorial staff,4,6
+people,role_hint,janitorial worker,5,6
+people,skin_tone,dark,1,3
+people,skin_tone,light,3,3
+people,skin_tone,medium,18,3
+safety,hazards,biohazard waste container,1,8
+safety,hazards,no,6,8
+safety,hazards,no observed,7,8
+safety,hazards,potential slip hazard recently cleaned floor,1,8
+safety,hazards,slip hazard,1,8
+safety,hazards,slip hazard wet floor,2,8
+safety,hazards,wet floor,2,8
+safety,hazards,wet floor slip risk,2,8
+texts,content,caution wet floor,2,4
+texts,content,exit,1,4
+texts,content,text biohazard,1,4
+texts,content,text exit,3,4
+texts,font_style,bold,1,4
+texts,font_style,sans,1,4
+texts,font_style,sans serif,4,4
+texts,font_style,uppercase,1,4
+texts,font_style_summary,sans,4,2
+texts,font_style_summary,uppercase,1,2
+texts,legibility,illegible,30,5
+texts,legibility,not legible,5,5
+texts,legibility,partially legible,1,5
+texts,legibility,partially unreadable,1,5
+texts,legibility,unreadable,5,5
+texts,plane,text in background,12,3
+texts,plane,text in foreground,7,3
+texts,plane,text in midground,12,3
+texts,side,text center,18,3
+texts,side,text left,8,3
+texts,side,text right,5,3
+uncertainty,comment,exact material finish of some garments unspecified,1,6
+uncertainty,comment,facial eyewear not specified,1,6
+uncertainty,comment,precise floor material vinyl vs tile uncertain,1,6
+uncertainty,comment,small black logo text on bucket side not legible,1,6
+uncertainty,comment,text logo on shirt pocket not legible,1,6
+uncertainty,comment,wet floor pictogram partially occluded not fully legible,5,6
+uncertainty,note,approximate counts of ceiling panels door frames wall devices,1,11
+uncertainty,note,background center bright rectangular window area overexposed,1,11
+uncertainty,note,distant corridor terminus ambiguous door or window,1,11
+uncertainty,note,exact count of overhead fixtures not provided,1,11
+uncertainty,note,exact number of doors per corridor side uncertain,1,11
+uncertainty,note,exact number of wall mounted control devices uncertain,1,11
+uncertainty,note,exact time of day ambiguous morning afternoon,1,11
+uncertainty,note,eyewear head covering not specified,1,11
+uncertainty,note,others,6,11
+uncertainty,note,placement of angled push broom not precisely specified,1,11
+uncertainty,note,small accessory utility belt partially occluded unidentified,1,11
