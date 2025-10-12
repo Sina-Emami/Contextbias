@@ -3,8 +3,8 @@ import random
 import argparse
 
 NEGATIVE_PROMPT = "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing"
-STYLE = "realistic photo, natural lighting"
-SEEDS_PER_PROMPT = 10
+STYLE = "realistic photo"
+SEEDS_PER_PROMPT = 20
 
 TEMPLATES = [
     "a photo of a {ROLE}",
