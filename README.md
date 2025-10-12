@@ -44,7 +44,7 @@ Each prompt directory must include a `manifest.json` (an array of image metadata
    - frequencies.csv
 ```
 
-The frequency pipeline also writes aggregated files under `dataset/role_counting/` (per role) and `dataset/role_counting/all_roles.*` (global). Resume logic honours existing structured JSON and only fills in missing work.
+The frequency pipeline also writes aggregated files under `dataset/role_counting/` (per role) and `dataset/role_counting/all_roles.*` (global). Resume logic honours existing structured JSON and only fills in missing work. All frequency CSV outputs share the columns `cohort`, `dimension`, `label`, `count`, and `bin` (the number of unique labels observed for that dimension).
 
 ## Agents, Tasks & Tools
 
