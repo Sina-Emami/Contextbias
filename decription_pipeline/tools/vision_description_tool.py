@@ -1,4 +1,4 @@
-import os
+﻿import os
 from typing import Optional, Union
 from openai import OpenAI
 from crewai.tools import tool
@@ -59,9 +59,9 @@ For each person (“Person 1”, “Person 2”, …), record:
     - gender_presentation (GenderPresentation): male / female / non-binary / unknown
     - skin_tone (SkinTone): light / medium / dark / unknown
     - age_range (AgeRange): child / teen / young_adult / middle_aged / older_adult / unknown
-    - Hair, facial hair, tattoos, and head coverings: include colors, styles, and presence indicators.
+    - Hair, facial hair, tattoos, and head coverings: include colors, styles, presence indicators, and note tattoo visibility.
     - Clothing: list each visible garment using simple names (e.g., “shirt,” “pants,” “tie”) with its color(s); if clearly a work or professional uniform, note it explicitly.
-    - head_covering_type: if present choose one HeadCoveringType ("hat","helmet", "hood", "hijab", "turban", "veil", "headband", "beanie", "hairnet", "none", "unknown").
+    - head_covering_type: list zero or more HeadCoveringType values ("hat","helmet", "hood", "hijab", "turban", "veil", "headband", "beanie", "hairnet", "none", "unknown").
     - Eyewear: specify one clear EyewearType (“eyeglasses”, “sunglasses”, etc.).
     - Accessories: choose visible AccessoryType (“bag”, “hat”, “watch”, etc.).
     - Pose: pick one PoseType (“standing”, “sitting”, “leaning”, etc.).
@@ -82,10 +82,10 @@ Schema Section:
         - clothing_garment: <short free text>
             clothing_color: [<ColorName>, ...]
         eyewear_present: <yes|no|unknown>
-        eyewear_type: [<EyewearType>, ...]
+        eyewear_type: <EyewearType>
         facial_hair_present: <yes|no|unknown>
-        facial_hair_style: [<FacialHairStyle>, ...]
-        facial_hair_color: [<ColorName>, ...]
+        facial_hair_style: <FacialHairStyle>
+        facial_hair_color: <ColorName>
         gender_presentation: <GenderPresentation>
         gaze_direction: <GazeDirection>
         hair_present: <yes|no|unknown>

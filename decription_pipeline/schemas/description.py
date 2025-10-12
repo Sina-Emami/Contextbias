@@ -306,10 +306,10 @@ class PersonAttributes(StrictBaseModel):
     body_type: BodyType = "unknown"
     clothing: List[PersonClothing] = Field(default_factory=list)
     eyewear_present: PresenceValue = "unknown"
-    eyewear_type: List[EyewearType] = Field(default_factory=list)
+    eyewear_type: EyewearType = "unknown"
     facial_hair_present: PresenceValue = "unknown"
-    facial_hair_style: List[FacialHairStyle] = Field(default_factory=list)
-    facial_hair_color: List[ColorName] = Field(default_factory=list)
+    facial_hair_style: FacialHairStyle = "unknown"
+    facial_hair_color: ColorName = "unknown"
     gender_presentation: GenderPresentation = "unknown"
     gaze_direction: GazeDirection = "unknown"
     hair_present: PresenceValue = "unknown"
