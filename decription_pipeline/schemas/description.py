@@ -206,11 +206,9 @@ Expression = Literal[
 PoseType = Literal[
     "standing",
     "sitting",
-    "walking",
     "kneeling",
     "lying",
     "leaning",
-    "reaching",
     "bending",
     "arms_crossed",
     "hands_on_hips",
