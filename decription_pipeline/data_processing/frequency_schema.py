@@ -53,6 +53,7 @@ COHORT_DIMENSIONS: "OrderedDict[str, OrderedDict[str, str]]" = OrderedDict(
                     ("hair_present", "people_hair_present"),
                     ("hair_color", "people_hair_color"),
                     ("hair_style", "people_hair_style"),
+                    ("tattoo_present", "people_tattoo_present"),
                     ("facial_hair_present", "people_facial_hair_present"),
                     ("facial_hair_style", "people_facial_hair_style"),
                     ("facial_hair_color", "people_facial_hair_color"),

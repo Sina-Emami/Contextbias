@@ -315,6 +315,7 @@ class PersonAttributes(StrictBaseModel):
     hair_present: PresenceValue = "unknown"
     hair_color: HairColor = "unknown"
     hair_style: HairStyle = "unknown"
+    tattoo_present: PresenceValue = "unknown"
     head_covering_present: PresenceValue = "unknown"
     head_covering_type: HeadCoveringType = "unknown"
     pose: PoseType = "unknown"
