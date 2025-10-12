@@ -84,14 +84,8 @@ Create a `.env` with at least:
 OPENAI_API_KEY=""          # required for the vision description tool
 REPLICATE_API_KEY=""       # required for the bias reasoning agent
 DESCRIBER_LLM=gpt-5-nano     # optional fallback if you re-enable LLM responses for the describer
-SUMMARY_LLM=gpt-4o-mini     # optional override for summary crew
-BIAS_REPLICATE_MODEL=openai/gpt-oss-20b
 BIAS_REPLICATE_TEMPERATURE=0.0
-SUMMARY_REPORT_LLM=gpt-5-mini
 VISION_CHAT_MODEL=gpt-5-mini
-PROMPT_STAGE_CONCURRENCY=3   # optional overrides for concurrency
-RAW_STAGE_CONCURRENCY=10
-STRUCT_STAGE_CONCURRENCY=10
 ```
 
 Remove legacy keys from earlier experiments (image generation, consensus, etc.).
