@@ -1,4 +1,4 @@
-"""
+﻿"""
 Aggregate cleaned frequency outputs per role.
 
 This script traverses the dataset directory, locates every
@@ -18,10 +18,11 @@ import argparse
 import json
 import logging
 import re
-from collections import defaultdict
+from collections import OrderedDict, defaultdict
 from pathlib import Path
 from typing import Dict, Iterable, List, Optional, Tuple
 
+from .frequency_schema import build_csv_rows, create_counts_structure, normalise_cohort_structure
 from .io_utils import write_atomic_csv, write_atomic_text
 from .semantic_utils import clean_token_counts
 
@@ -80,23 +81,6 @@ def _group_by_role(dataset_root: Path) -> Dict[str, List[Path]]:
     return grouped
 
 
-def _merge_counts(
-    aggregate: Dict[str, Dict[str, int]],
-    category: str,
-    values: Dict[str, object],
-) -> None:
-    counter = aggregate.setdefault(category, {})
-    for token, value in values.items():
-        if not isinstance(token, str):
-            token = str(token)
-        try:
-            numeric = int(round(float(value)))  # type: ignore[arg-type]
-        except (TypeError, ValueError):
-            logger.debug("Ignoring non-numeric value for %s/%s: %r", category, token, value)
-            continue
-        counter[token] = counter.get(token, 0) + numeric
-
-
 def _collect_metadata(role: str, freq_paths: Iterable[Path]) -> Dict[str, object]:
     contexts = set()
     prompt_count = 0
@@ -110,60 +94,46 @@ def _collect_metadata(role: str, freq_paths: Iterable[Path]) -> Dict[str, object
         "contexts": sorted(contexts),
     }
 
-
 def _aggregate_role(role: str, freq_paths: List[Path]) -> Dict[str, object]:
-    aggregate: Dict[str, Dict[str, int]] = {}
-    totals: Dict[str, int] = {}
+    aggregate = create_counts_structure()
 
     for freq_path in freq_paths:
         data = _load_frequency_json(freq_path)
         if not data:
             continue
-        for category, payload in data.items():
-            if category == "totals":
-                if not isinstance(payload, dict):
+        cohorts = normalise_cohort_structure(data.get("cohorts", data))
+        for cohort, dimensions in cohorts.items():
+            if cohort not in aggregate:
+                aggregate[cohort] = OrderedDict()
+            target_dimensions = aggregate[cohort]
+            for dimension, labels in dimensions.items():
+                if dimension not in target_dimensions:
+                    target_dimensions[dimension] = {}
+                target_labels = target_dimensions[dimension]
+                if not isinstance(labels, dict):
                     continue
-                for key, value in payload.items():
-                    if not isinstance(key, str):
-                        key = str(key)
+                for label, value in labels.items():
                     try:
                         numeric = int(round(float(value)))  # type: ignore[arg-type]
                     except (TypeError, ValueError):
+                        logger.debug("Ignoring non-numeric value for %s/%s/%s: %r", cohort, dimension, label, value)
                         continue
-                    totals[key] = totals.get(key, 0) + numeric
-                continue
-            if not isinstance(payload, dict):
-                logger.debug("Skipping non-mapping category %s in %s", category, freq_path)
-                continue
-            _merge_counts(aggregate, category, payload)
+                    label_str = str(label)
+                    target_labels[label_str] = target_labels.get(label_str, 0) + numeric
 
-    cleaned_categories: Dict[str, Dict[str, int]] = {}
-    for category, counts in aggregate.items():
-        cleaned_categories[category] = clean_token_counts(counts)
+    cleaned_cohorts = create_counts_structure()
+    for cohort, dimensions in aggregate.items():
+        if cohort not in cleaned_cohorts:
+            cleaned_cohorts[cohort] = OrderedDict()
+        target_dimensions = cleaned_cohorts[cohort]
+        for dimension, labels in dimensions.items():
+            if cohort == "totals":
+                target_dimensions[dimension] = {label: int(count) for label, count in labels.items()}
+            else:
+                target_dimensions[dimension] = clean_token_counts(labels)
 
     metadata = _collect_metadata(role, freq_paths)
-    if totals:
-        totals = dict(sorted(totals.items()))
-    result: Dict[str, object] = {"_meta": metadata, "totals": totals}
-    for category in sorted(cleaned_categories):
-        result[category] = cleaned_categories[category]
-    return result
-
-
-def _build_csv_rows(aggregated: Dict[str, object]) -> List[List[str]]:
-    rows: List[List[str]] = [["category", "token", "count"]]
-    for category, payload in aggregated.items():
-        if category in {"_meta", "totals"}:
-            continue
-        if not isinstance(payload, dict):
-            continue
-        for token, count in payload.items():
-            rows.append([category, token, str(count)])
-    totals = aggregated.get("totals")
-    if isinstance(totals, dict):
-        for key, value in totals.items():
-            rows.append(["totals", key, str(value)])
-    return rows
+    return {"_meta": metadata, "cohorts": cleaned_cohorts}
 
 
 def _determine_output_paths(output_dir: Path, role: str, existing: Dict[str, str]) -> Tuple[Path, Path]:
@@ -198,8 +168,8 @@ def aggregate_roles(dataset_root: Path, output_dir: Optional[Path] = None) -> Di
         aggregated = _aggregate_role(role, freq_paths)
         aggregated_results[role] = aggregated
         json_path, csv_path = _determine_output_paths(output_dir, role, filename_map)
-        write_atomic_text(json_path, json.dumps(aggregated, indent=2, sort_keys=True))
-        write_atomic_csv(csv_path, _build_csv_rows(aggregated))
+        write_atomic_text(json_path, json.dumps(aggregated, indent=2))
+        write_atomic_csv(csv_path, build_csv_rows(aggregated["cohorts"]))
         logger.info("Wrote role aggregates for %s to %s", role, json_path)
 
     summary_path = output_dir / "role_summary.json"
