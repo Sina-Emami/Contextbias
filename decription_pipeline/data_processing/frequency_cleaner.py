@@ -12,11 +12,13 @@ import argparse
 import json
 import logging
 import re
+from collections import OrderedDict
 from dataclasses import dataclass, field
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple
 
+from .frequency_schema import build_csv_rows, create_counts_structure, normalise_cohort_structure
 from .io_utils import write_atomic_csv, write_atomic_text
 
 import numpy as np
@@ -26,53 +28,6 @@ logger = logging.getLogger(__name__)
 STRUCTURAL_MARKERS = {"|", "=", ","}
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 EMBEDDING_SIMILARITY_THRESHOLD = 0.8
-
-# Categories mirror the output schema from frequency_counter.py
-CATEGORIES = [
-    "scene_mood",
-    "scene_color_temperature",
-    "scene_contrast_level",
-    "scene_aesthetic_qualities",
-    "scene_dominant_colors",
-    "scene_weather",
-    "scene_ceiling_color",
-    "scene_floor_color",
-    "scene_wall_color",
-    "camera_depth_of_field",
-    "camera_framing",
-    "camera_perspective",
-    "people_gender_presentation",
-    "people_skin_tone",
-    "people_age_range",
-    "people_body_type",
-    "people_pose",
-    "people_expression",
-    "people_activities",
-    "people_accessories",
-    "people_eyewear_type",
-    "people_eyewear_present",
-    "people_head_covering_type",
-    "people_head_covering_present",
-    "people_hair_present",
-    "people_hair_color",
-    "people_hair_style",
-    "people_facial_hair_present",
-    "people_facial_hair_style",
-    "people_facial_hair_color",
-    "people_role_hint",
-    "people_clothing_garment",
-    "people_clothing_garment_color",
-    "objects_items",
-    "objects_size",
-    "objects_color",
-    "objects_material",
-    "objects_item_size",
-    "objects_item_color",
-    "objects_item_material",
-    "safety_hazards",
-    "safety_nsfw",
-]
-
 
 def _normalise_simple(token: str) -> str:
     token = token.strip().lower()
@@ -263,7 +218,7 @@ def _load_frequency_json(path: Path) -> Optional[Dict[str, Any]]:
     return data
 
 
-def _clean_category(tokens: Dict[str, int], category: str) -> Dict[str, int]:
+def _clean_dimension(tokens: Dict[str, int]) -> Dict[str, int]:
     normalizer = SemanticNormalizer()
     observed: List[Tuple[str, int]] = []
     for token, count in tokens.items():
@@ -283,18 +238,28 @@ def _clean_category(tokens: Dict[str, int], category: str) -> Dict[str, int]:
         if not norm:
             continue
         cleaned[norm] = cleaned.get(norm, 0) + weight
-    return cleaned
+    return dict(sorted(cleaned.items()))
 
 
 def _clean_frequencies(data: Dict[str, Any]) -> Dict[str, Any]:
-    cleaned: Dict[str, Any] = {"totals": data.get("totals", {})}
-    for category, counts in data.items():
-        if category == "totals":
-            continue
-        if not isinstance(counts, dict):
-            continue
-        cleaned[category] = _clean_category(counts, category)
-    return cleaned
+    raw_cohorts = normalise_cohort_structure(data.get("cohorts", data))
+    cleaned_cohorts = create_counts_structure()
+
+    for cohort, dimensions in raw_cohorts.items():
+        if cohort not in cleaned_cohorts:
+            cleaned_cohorts[cohort] = OrderedDict()
+        target_dimensions = cleaned_cohorts[cohort]
+        for dimension, labels in dimensions.items():
+            if dimension not in target_dimensions:
+                target_dimensions[dimension] = {}
+            if cohort == "totals":
+                target_dimensions[dimension] = {
+                    str(label): int(count) for label, count in labels.items()
+                }
+            else:
+                target_dimensions[dimension] = _clean_dimension(labels)
+
+    return {"cohorts": cleaned_cohorts}
 
 
 def _process_prompt_frequency(freq_dir: Path) -> Optional[Path]:
@@ -310,20 +275,9 @@ def _process_prompt_frequency(freq_dir: Path) -> Optional[Path]:
     clean_dir = freq_dir.parent / "clean_frequency"
     clean_dir.mkdir(parents=True, exist_ok=True)
 
-    write_atomic_text(clean_dir / "frequencies.json", json.dumps(cleaned, indent=2, sort_keys=True))
+    write_atomic_text(clean_dir / "frequencies.json", json.dumps(cleaned, indent=2))
 
-    rows: List[List[str]] = [["category", "token", "count"]]
-    for category in CATEGORIES:
-        counts = cleaned.get(category, {})
-        if not isinstance(counts, dict):
-            continue
-        for token, count in sorted(counts.items()):
-            rows.append([category, token, str(count)])
-
-    totals = cleaned.get("totals", {})
-    for key, value in totals.items():
-        rows.append(["totals", key, str(value)])
-
+    rows = build_csv_rows(cleaned["cohorts"])
     write_atomic_csv(clean_dir / "frequencies.csv", rows)
     return clean_dir
 

@@ -1,4 +1,4 @@
-"""Frequency analysis for each prompt's description files.
+﻿"""Frequency analysis for each prompt's description files.
 
 For every prompt directory that contains a ``descriptions/`` folder, this script
 collects all per-image JSON files, extracts image-level attribute sets, and
@@ -12,58 +12,20 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-from collections import defaultdict
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, NamedTuple, Optional, Set, Tuple
 
+from .frequency_schema import (
+    CATEGORY_TO_COHORT_DIMENSION,
+    build_csv_rows,
+    create_counts_structure,
+    normalise_cohort_structure,
+)
 from .io_utils import write_atomic_csv, write_atomic_text
 
 logger = logging.getLogger(__name__)
 
-CATEGORIES: Tuple[str, ...] = (
-    "scene_mood",
-    "scene_color_temperature",
-    "scene_contrast_level",
-    "scene_aesthetic_qualities",
-    "scene_dominant_colors",
-    "scene_weather",
-    "scene_ceiling_color",
-    "scene_floor_color",
-    "scene_wall_color",
-    "camera_depth_of_field",
-    "camera_framing",
-    "camera_perspective",
-    "people_gender_presentation",
-    "people_skin_tone",
-    "people_age_range",
-    "people_body_type",
-    "people_pose",
-    "people_expression",
-    "people_activities",
-    "people_accessories",
-    "people_eyewear_type",
-    "people_eyewear_present",
-    "people_head_covering_type",
-    "people_head_covering_present",
-    "people_hair_present",
-    "people_hair_color",
-    "people_hair_style",
-    "people_facial_hair_present",
-    "people_facial_hair_style",
-    "people_facial_hair_color",
-    "people_role_hint",
-    "people_clothing_garment",
-    "people_clothing_garment_color",
-    "objects_items",
-    "objects_size",
-    "objects_color",
-    "objects_material",
-    "objects_item_size",
-    "objects_item_color",
-    "objects_item_material",
-    "safety_hazards",
-    "safety_nsfw",
-)
+CATEGORIES: Tuple[str, ...] = tuple(CATEGORY_TO_COHORT_DIMENSION.keys())
 
 
 def _is_token(value: Any) -> bool:
@@ -85,40 +47,25 @@ def _ensure_list(value: Any) -> List[Any]:
     return [value]
 
 
-def _default_counter(initial: Optional[Dict[str, int]] = None) -> defaultdict:
-    counter: defaultdict = defaultdict(int)
-    if initial:
-        for token, count in initial.items():
-            counter[token] = int(count)
-    return counter
-
-
 def _new_aggregator() -> Dict[str, Any]:
-    data: Dict[str, Any] = {category: _default_counter() for category in CATEGORIES}
-    data["totals"] = {"images": 0, "people_instances": 0, "object_instances": 0}
-    return data
+    return {"cohorts": create_counts_structure()}
 
 
 def _make_aggregator_from_serialized(serialized: Dict[str, Any]) -> Dict[str, Any]:
-    agg = _new_aggregator()
-    for category in CATEGORIES:
-        agg[category] = _default_counter(serialized.get(category, {}))
-    totals = serialized.get("totals", {})
-    agg["totals"] = {
-        "images": int(totals.get("images", 0)),
-        "people_instances": int(totals.get("people_instances", 0)),
-        "object_instances": int(totals.get("object_instances", 0)),
-    }
-    return agg
+    cohorts = normalise_cohort_structure(serialized.get("cohorts", serialized))
+    return {"cohorts": cohorts}
 
 
 def _convert_counts(agg: Dict[str, Any]) -> Dict[str, Any]:
-    result: Dict[str, Any] = {}
-    for category in CATEGORIES:
-        counter: Dict[str, int] = agg.get(category, {})
-        result[category] = dict(sorted(counter.items()))
-    result["totals"] = dict(agg.get("totals", {}))
-    return result
+    converted: Dict[str, Any] = {"cohorts": {}}
+    for cohort, dimensions in agg.get("cohorts", {}).items():
+        cohort_block: Dict[str, Dict[str, int]] = {}
+        for dimension, labels in dimensions.items():
+            if not isinstance(labels, dict):
+                continue
+            cohort_block[dimension] = {str(label): int(count) for label, count in sorted(labels.items())}
+        converted["cohorts"][cohort] = cohort_block
+    return converted
 
 
 def _iter_description_dirs(dataset_root: Path) -> List[Path]:
@@ -310,19 +257,9 @@ def _load_prompt_state(freq_dir: Path) -> Tuple[Dict[str, Any], Set[str]]:
 
 def _write_prompt_outputs(freq_dir: Path, aggregator: Dict[str, Any], processed: Set[str]) -> None:
     serialized = _convert_counts(aggregator)
-    write_atomic_text(freq_dir / "frequencies.json", json.dumps(serialized, indent=2, sort_keys=True))
+    write_atomic_text(freq_dir / "frequencies.json", json.dumps(serialized, indent=2))
 
-    rows: List[List[str]] = [["category", "token", "count"]]
-    for category in CATEGORIES:
-        for token, count in serialized[category].items():
-            rows.append([category, token, str(count)])
-    rows.extend(
-        [
-            ["totals", "images", str(serialized["totals"].get("images", 0))],
-            ["totals", "people_instances", str(serialized["totals"].get("people_instances", 0))],
-            ["totals", "object_instances", str(serialized["totals"].get("object_instances", 0))],
-        ]
-    )
+    rows: List[List[str]] = build_csv_rows(serialized["cohorts"])
     write_atomic_csv(freq_dir / "frequencies.csv", rows)
     write_atomic_text(freq_dir / "processed_files.json", json.dumps(sorted(processed), indent=2))
 
@@ -355,7 +292,8 @@ def _process_prompt(
             new_entries.append((json_path, rel))
 
     if not new_entries:
-        return prompt_label, 0, aggregator["totals"]["images"]
+        total_images = aggregator["cohorts"]["totals"]["images"].get("images", 0)
+        return prompt_label, 0, total_images
 
     new_count = 0
     for json_path, rel in new_entries:
@@ -363,17 +301,25 @@ def _process_prompt(
         if not isinstance(data, dict):
             continue
         tokens, people_instances, object_instances = _extract_image_tokens(data)
-        aggregator["totals"]["images"] += 1
-        aggregator["totals"]["people_instances"] += people_instances
-        aggregator["totals"]["object_instances"] += object_instances
+        totals = aggregator["cohorts"]["totals"]
+        totals["images"]["images"] = totals["images"].get("images", 0) + 1
+        totals["people_instances"]["people_instances"] = (
+            totals["people_instances"].get("people_instances", 0) + people_instances
+        )
+        totals["object_instances"]["object_instances"] = (
+            totals["object_instances"].get("object_instances", 0) + object_instances
+        )
         for category in CATEGORIES:
             for token in tokens.get(category, set()):
-                aggregator[category][token] += 1
+                cohort, dimension = CATEGORY_TO_COHORT_DIMENSION[category]
+                labels = aggregator["cohorts"][cohort][dimension]
+                labels[token] = labels.get(token, 0) + 1
         processed.add(rel)
         new_count += 1
 
     _write_prompt_outputs(freq_dir, aggregator, processed)
-    return prompt_label, new_count, aggregator["totals"]["images"]
+    total_images = aggregator["cohorts"]["totals"]["images"].get("images", 0)
+    return prompt_label, new_count, total_images
 
 
 class FrequencyCounterResult(NamedTuple):
