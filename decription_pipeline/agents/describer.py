@@ -26,7 +26,7 @@ def build_image_describer_agent() -> Agent:
             "tool reports."
         ),
         tools=[describe_image_from_file_tool],
-        llm=None,  # _describer_llm_name(),
+        llm=_describer_llm_name(),
         allow_delegation=False,
         force_tool_output=True,
         verbose=True,
