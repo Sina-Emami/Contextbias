@@ -54,6 +54,25 @@ class PromptPlan:
     last_completed_file: Path | None
 
 
+class ColorLiteralValidationError(RuntimeError):
+    """Raised when ImageAuditRecord validation fails due to color literals."""
+
+    def __init__(self, exc: ValidationError):
+        super().__init__(str(exc))
+        self.validation_error = exc
+
+
+def _is_color_literal_error(exc: ValidationError) -> bool:
+    for err in exc.errors():
+        if err.get("type") != "literal_error":
+            continue
+        loc = err.get("loc") or ()
+        for part in loc:
+            if isinstance(part, str) and "color" in part.lower():
+                return True
+    return False
+
+
 def _parse_description_output(result) -> ImageAuditRecord:
     if isinstance(result, ImageAuditRecord):
         return result
@@ -451,40 +470,85 @@ async def _describe_images_async(
     if not pending_jobs:
         return
 
+    total_jobs = len(pending_jobs)
     semaphore = asyncio.Semaphore(IMAGE_CONCURRENCY)
 
-    async def process_job(job: DescriptionJob) -> None:
-        async with semaphore:
-            print(f"[Describe][start] {job.image_id} (record {job.record_index}/{len(pending_jobs)})")
+    async def run_pass(batch: list[DescriptionJob], pass_number: int) -> list[DescriptionJob]:
+        color_failures: list[DescriptionJob] = []
 
-            def run_job() -> str:
-                crew = build_image_description_crew()
-                result = crew.kickoff(
-                    inputs={
-                        "image_id": job.image_id,
-                        "image_path": str(job.image_path),
-                        "dataset_root": str(dataset_root),
-                        "source_model": job.source_model,
-                    }
-                )
-                record = _parse_description_output(result)
-                if record.image.image_id.strip() == "":
-                    record.image.image_id = job.image_id
+        async def process_job(job: DescriptionJob) -> None:
+            async with semaphore:
+                print(f"[Describe][start] {job.image_id} (record {job.record_index}/{total_jobs})")
+
+                def run_job() -> str:
+                    crew = build_image_description_crew()
+                    try:
+                        result = crew.kickoff(
+                            inputs={
+                                "image_id": job.image_id,
+                                "image_path": str(job.image_path),
+                                "dataset_root": str(dataset_root),
+                                "source_model": job.source_model,
+                            }
+                        )
+                        record = _parse_description_output(result)
+                    except ValidationError as exc:
+                        if _is_color_literal_error(exc):
+                            raise ColorLiteralValidationError(exc) from exc
+                        raise
+
+                    if record.image.image_id.strip() == "":
+                        record.image.image_id = job.image_id
+                    try:
+                        rel = job.image_path.resolve().relative_to(dataset_root)
+                        record.image.file_path = rel.as_posix()
+                    except Exception:
+                        if record.image.file_path.strip() == "":
+                            record.image.file_path = str(job.image_path)
+                    if not getattr(record.image, "source_model", ""):
+                        record.image.source_model = job.source_model
+                    return record.model_dump_json(indent=2)
+
                 try:
-                    rel = job.image_path.resolve().relative_to(dataset_root)
-                    record.image.file_path = rel.as_posix()
-                except Exception:
-                    if record.image.file_path.strip() == "":
-                        record.image.file_path = str(job.image_path)
-                if not getattr(record.image, "source_model", ""):
-                    record.image.source_model = job.source_model
-                return record.model_dump_json(indent=2)
+                    desc_json = await asyncio.to_thread(run_job)
+                except ColorLiteralValidationError as exc:
+                    details = exc.validation_error.errors()
+                    bad_value = None
+                    message = str(exc)
+                    if details:
+                        message = details[0].get("msg") or message
+                        bad_value = details[0].get("input")
+                    print(
+                        f"   -> [ColorValidation][pass {pass_number}] {job.image_id}: {message} "
+                        f"(value={bad_value!r}). Skipping for now."
+                    )
+                    color_failures.append(job)
+                    return
 
-            desc_json = await asyncio.to_thread(run_job)
-            job.output_path.write_text(desc_json, encoding="utf-8")
-            print(f"   -> Structured description saved -> {job.output_path}")
+                job.output_path.write_text(desc_json, encoding="utf-8")
+                print(f"   -> Structured description saved -> {job.output_path}")
 
-    await asyncio.gather(*(process_job(job) for job in pending_jobs))
+        await asyncio.gather(*(process_job(job) for job in batch))
+        return color_failures
+
+    remaining_jobs = pending_jobs
+    pass_number = 1
+    while remaining_jobs:
+        if pass_number == 1:
+            print(f"[Describe] Pass {pass_number}: processing {len(remaining_jobs)} image(s).")
+        else:
+            print(
+                f"[Describe] Pass {pass_number}: retrying {len(remaining_jobs)} image(s) "
+                "that previously failed color validation."
+            )
+        failed_jobs = await run_pass(remaining_jobs, pass_number)
+        remaining_jobs = [job for job in failed_jobs if not job.output_path.exists()]
+        if remaining_jobs:
+            print(
+                f"[Describe] {len(remaining_jobs)} image(s) still missing descriptions due to color validation. "
+                "Re-queuing for another attempt."
+            )
+        pass_number += 1
 
 
 def describe_images(paths: dict, start_image_id: str | None = None) -> None:
