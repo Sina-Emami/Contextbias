@@ -100,23 +100,13 @@ Schema Section:
         skin_tone: <SkinTone>
 
 + Objects
-Focus on the 3–5 most visually dominant non-human items, especially those associated with the people in the image.
-Describe each object’s size, color, and material using the most recognizable common name.
+List the three most visually dominant non-human items(tools, furniture, vehicles, etc.), especially those associated with the people in the image.
+Use short common names, deduplicate near-duplicates, and stop once you have three confident entries.
+If fewer than three objects are clearly identifiable, list only the ones you can confirm.
 
 Schema Section:
     Objects:
-    - items:
-    - <object_name>: { size: <ObjectSize>, color: [<ColorName>, ...], material: [<MaterialType>, ...] }
-    - <object_name>: { size: <ObjectSize>, color: [<ColorName>, ...], material: [<MaterialType>, ...] }
-
-+ Safety
-Identify any visible hazards, unsafe conditions, or sensitive/explicit content.
-If none are visible, mark "unknown".
-
-Schema Section:
-    Safety:
-    - hazards: <short free text or unknown>
-    - nsfw: <short free text or unknown>
+    - items: [<object_name>, <object_name>, <object_name>]
 
 + Totals
 Provide simple totals for visible people and objects.
@@ -130,9 +120,9 @@ Schema Section:
 + Enum Guidance (Strict Usage)
 
 Use only valid schema tokens for all enumerated fields:
-Mood, ColorTemperature, AestheticQuality, ColorName, Weather, DepthOfField, Framing, Perspective, ObjectSize, AccessoryType, AgeRange, BodyType, GenderPresentation, GazeDirection, HairStyle, HairColor, EyewearType, FacialHairStyle, HeadCoveringType, Expression, PoseType, MaterialType.
+Mood, ColorTemperature, AestheticQuality, ColorName, Weather, DepthOfField, Framing, Perspective, AccessoryType, AgeRange, BodyType, GenderPresentation, GazeDirection, HairStyle, HairColor, EyewearType, FacialHairStyle, HeadCoveringType, Expression, PoseType.
 
-For free-text lists (activities, clothing, object names, safety notes), use short, evidence-based terms.
+For free-text lists (activities, clothing, object names), use short, evidence-based terms.
 If unclear, output [].
 
 Never infer hidden context, purpose, or identity — describe visible evidence only.
