@@ -196,41 +196,26 @@ def _extract_image_tokens(data: Dict[str, Any]) -> Tuple[Dict[str, Set[str]], in
                     tokens["people_clothing_garment_color"].add(combo)
 
     objects_section = data.get("cohorts", {}).get("objects", {})
-    obj_items = objects_section.get("items") or {}
-    object_instances = 0
-    if isinstance(obj_items, dict):
-        for object_name, attrs in obj_items.items():
-            name_token = str(object_name)
-            if _is_token(object_name):
-                tokens["objects_items"].add(name_token)
-            object_instances += 1
-            if not isinstance(attrs, dict):
-                continue
-            size = attrs.get("size")
-            if _is_token(size):
-                tokens["objects_size"].add(str(size))
-                if _is_token(object_name):
-                    tokens["objects_item_size"].add(f"{name_token}|size={size}")
-            for color in _ensure_list(attrs.get("color")):
-                if _is_token(color):
-                    tokens["objects_color"].add(str(color))
-                    if _is_token(object_name):
-                        tokens["objects_item_color"].add(f"{name_token}|color={color}")
-            for material in _ensure_list(attrs.get("material")):
-                if _is_token(material):
-                    tokens["objects_material"].add(str(material))
-                    if _is_token(object_name):
-                        tokens["objects_item_material"].add(f"{name_token}|material={material}")
+    obj_items = []
+    if isinstance(objects_section, dict):
+        raw_items = objects_section.get("items")
+        if isinstance(raw_items, list):
+            obj_items = raw_items
+        elif isinstance(raw_items, dict):
+            obj_items = list(raw_items.keys())
+    elif isinstance(objects_section, list):
+        obj_items = objects_section
 
-    safety_section = data.get("cohorts", {}).get("safety", {})
-    hazard = safety_section.get("hazards")
-    if _is_token(hazard):
-        tokens["safety_hazards"].add(str(hazard))
-    nsfw = safety_section.get("nsfw")
-    if _is_token(nsfw):
-        tokens["safety_nsfw"].add(str(nsfw))
+    object_instances = 0
+    if isinstance(obj_items, list):
+        object_instances = len(obj_items)
+        for object_name in obj_items:
+            if _is_token(object_name):
+                tokens["objects_items"].add(str(object_name))
 
     return tokens, people_instances, object_instances
+
+
 def _load_prompt_state(freq_dir: Path) -> Tuple[Dict[str, Any], Set[str]]:
     agg = _new_aggregator()
     processed: Set[str] = set()
