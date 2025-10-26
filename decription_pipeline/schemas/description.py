@@ -78,8 +78,6 @@ Perspective = Literal[
 DepthOfField = Literal["shallow", "medium", "deep", "infinite", "unknown"]
 Framing = Literal["tight", "medium", "wide", "balanced", "asymmetric", "unknown"]
 
-ObjectSize = Literal["tiny", "small", "medium", "large", "massive", "unknown"]
-
 AccessoryType = Literal[
     "bag",
     "belt",
@@ -215,27 +213,6 @@ PoseType = Literal[
     "unknown",
 ]
 
-MaterialType = Literal[
-    "wood",
-    "metal",
-    "glass",
-    "fabric",
-    "plastic",
-    "stone",
-    "brick",
-    "concrete",
-    "tile",
-    "carpet",
-    "leather",
-    "paper",
-    "ceramic",
-    "organic",
-    "vegetation",
-    "water",
-    "composite",
-    "unknown",
-]
-
 Weather = Literal[
     "clear",
     "sunny",
@@ -282,7 +259,7 @@ class CameraCohort(StrictBaseModel):
 
 
 class ObjectsCohort(StrictBaseModel):
-    items: Dict[str] = Field(default_factory=dict)
+    items: List[str] = Field(default_factory=list, max_length=3)
 
 
 class PersonClothing(StrictBaseModel):
