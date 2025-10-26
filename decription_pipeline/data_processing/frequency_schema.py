@@ -68,21 +68,6 @@ COHORT_DIMENSIONS: "OrderedDict[str, OrderedDict[str, str]]" = OrderedDict(
             OrderedDict(
                 [
                     ("items", "objects_items"),
-                    ("size", "objects_size"),
-                    ("color", "objects_color"),
-                    ("material", "objects_material"),
-                    ("item_size", "objects_item_size"),
-                    ("item_color", "objects_item_color"),
-                    ("item_material", "objects_item_material"),
-                ]
-            ),
-        ),
-        (
-            "safety",
-            OrderedDict(
-                [
-                    ("hazards", "safety_hazards"),
-                    ("nsfw", "safety_nsfw"),
                 ]
             ),
         ),
