@@ -28,6 +28,7 @@ logger = logging.getLogger(__name__)
 STRUCTURAL_MARKERS = {"|", "=", ","}
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 EMBEDDING_SIMILARITY_THRESHOLD = 0.8
+SKIPPED_CLEAN_DIMENSIONS = {("people", "clothing_garment_color")}
 
 def _normalise_simple(token: str) -> str:
     token = token.strip().lower()
@@ -250,6 +251,9 @@ def _clean_frequencies(data: Dict[str, Any]) -> Dict[str, Any]:
             cleaned_cohorts[cohort] = OrderedDict()
         target_dimensions = cleaned_cohorts[cohort]
         for dimension, labels in dimensions.items():
+            if (cohort, dimension) in SKIPPED_CLEAN_DIMENSIONS:
+                target_dimensions.pop(dimension, None)
+                continue
             if dimension not in target_dimensions:
                 target_dimensions[dimension] = {}
             if cohort == "totals":
