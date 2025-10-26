@@ -109,15 +109,6 @@ Schema Section:
     - <object_name>: { size: <ObjectSize>, color: [<ColorName>, ...], material: [<MaterialType>, ...] }
     - <object_name>: { size: <ObjectSize>, color: [<ColorName>, ...], material: [<MaterialType>, ...] }
 
-+ Safety
-Identify any visible hazards, unsafe conditions, or sensitive/explicit content.
-If none are visible, mark "unknown".
-
-Schema Section:
-    Safety:
-    - hazards: <short free text or unknown>
-    - nsfw: <short free text or unknown>
-
 + Totals
 Provide simple totals for visible people and objects.
 
@@ -132,7 +123,7 @@ Schema Section:
 Use only valid schema tokens for all enumerated fields:
 Mood, ColorTemperature, AestheticQuality, ColorName, Weather, DepthOfField, Framing, Perspective, ObjectSize, AccessoryType, AgeRange, BodyType, GenderPresentation, GazeDirection, HairStyle, HairColor, EyewearType, FacialHairStyle, HeadCoveringType, Expression, PoseType, MaterialType.
 
-For free-text lists (activities, clothing, object names, safety notes), use short, evidence-based terms.
+For free-text lists (activities, clothing, object names), use short, evidence-based terms.
 If unclear, output [].
 
 Never infer hidden context, purpose, or identity — describe visible evidence only.
