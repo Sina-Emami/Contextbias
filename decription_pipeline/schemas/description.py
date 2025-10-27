@@ -206,7 +206,6 @@ PoseType = Literal[
     "sitting",
     "kneeling",
     "lying",
-    "leaning",
     "bending",
     "arms_crossed",
     "hands_on_hips",
