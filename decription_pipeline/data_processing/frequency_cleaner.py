@@ -28,7 +28,10 @@ logger = logging.getLogger(__name__)
 STRUCTURAL_MARKERS = {"|", "=", ","}
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 EMBEDDING_SIMILARITY_THRESHOLD = 0.8
-SKIPPED_CLEAN_DIMENSIONS = {("people", "clothing_garment_color")}
+SKIPPED_CLEAN_DIMENSIONS = {
+    ("people", "clothing_garment_color"),
+    ("people", "role_hint"),
+}
 
 def _normalise_simple(token: str) -> str:
     token = token.strip().lower()
