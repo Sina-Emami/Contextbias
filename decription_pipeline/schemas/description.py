@@ -288,7 +288,6 @@ class PersonAttributes(StrictBaseModel):
     head_covering_type: HeadCoveringType = "unknown"
     pose: PoseType = "unknown"
     expression: Expression = "unknown"
-    role_hint: str = "unknown"
     skin_tone: SkinTone = "unknown"
 
 
