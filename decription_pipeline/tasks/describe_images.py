@@ -24,7 +24,7 @@ Task:
 Cohorts:
 - scene_appearance: mood, color_temperature, contrast_level, aesthetic_qualities[], dominant_colors[], weather.
 - camera: depth_of_field, framing, perspective.
-- people: provide `persons` as an array. Each person entry must include person_id (short token or "unknown"), accessories[], activities[], age_range, body_type, clothing (array of { clothing_garment, clothing_color[] }), eyewear_present, eyewear_type, facial_hair_present, facial_hair_style, facial_hair_color, gender_presentation, gaze_direction, hair_present, hair_color, hair_style, tattoo_present, head_covering_present, head_covering_type, pose, expression, role_hint, skin_tone. Deduplicate list values within each person.
+- people: provide `persons` as an array. Each person entry must include person_id (short token or "unknown"), accessories[], activities[], age_range, body_type, clothing (array of { clothing_garment, clothing_color[] }), eyewear_present, eyewear_type, facial_hair_present, facial_hair_style, facial_hair_color, gender_presentation, gaze_direction, hair_present, hair_color, hair_style, tattoo_present, head_covering_present, head_covering_type, pose, expression, skin_tone. Deduplicate list values within each person.
 - objects: `items` array listing up to three non-person object names ordered by prominence (strings only).
 - totals: images=1, object_instances=len(objects.items) when confidently counted (otherwise "unknown"), people_instances likewise.
 

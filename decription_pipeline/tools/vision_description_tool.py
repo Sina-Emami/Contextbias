@@ -96,7 +96,6 @@ Schema Section:
         head_covering_type: <HeadCoveringType>
         pose: <PoseType>
         expression: <Expression>
-        role_hint: <short free text or unknown>
         skin_tone: <SkinTone>
 
 + Objects
