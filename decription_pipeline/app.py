@@ -73,6 +73,31 @@ def _is_color_literal_error(exc: ValidationError) -> bool:
     return False
 
 
+def _iter_exception_chain(exc: BaseException):
+    seen: set[int] = set()
+    stack = [exc]
+    while stack:
+        current = stack.pop()
+        ident = id(current)
+        if ident in seen:
+            continue
+        seen.add(ident)
+        yield current
+        cause = getattr(current, "__cause__", None)
+        context = getattr(current, "__context__", None)
+        if cause is not None:
+            stack.append(cause)
+        if context is not None:
+            stack.append(context)
+
+
+def _find_color_literal_validation_error(exc: BaseException) -> ValidationError | None:
+    for candidate in _iter_exception_chain(exc):
+        if isinstance(candidate, ValidationError) and _is_color_literal_error(candidate):
+            return candidate
+    return None
+
+
 def _parse_description_output(result) -> ImageAuditRecord:
     if isinstance(result, ImageAuditRecord):
         return result
@@ -491,6 +516,17 @@ async def _describe_images_async(
                                 "source_model": job.source_model,
                             }
                         )
+                    except ValidationError as exc:
+                        if _is_color_literal_error(exc):
+                            raise ColorLiteralValidationError(exc) from exc
+                        raise
+                    except Exception as exc:  # noqa: BLE001
+                        color_error = _find_color_literal_validation_error(exc)
+                        if color_error is not None:
+                            raise ColorLiteralValidationError(color_error) from exc
+                        raise
+
+                    try:
                         record = _parse_description_output(result)
                     except ValidationError as exc:
                         if _is_color_literal_error(exc):
