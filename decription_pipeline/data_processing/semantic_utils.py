@@ -1,7 +1,5 @@
 """Shared helpers for semantic token normalisation and aggregation."""
 
-from __future__ import annotations
-
 from typing import Dict, List, Tuple
 
 from .frequency_cleaner import SemanticNormalizer

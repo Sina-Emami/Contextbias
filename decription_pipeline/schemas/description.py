@@ -78,8 +78,6 @@ Perspective = Literal[
 DepthOfField = Literal["shallow", "medium", "deep", "infinite", "unknown"]
 Framing = Literal["tight", "medium", "wide", "balanced", "asymmetric", "unknown"]
 
-ObjectSize = Literal["tiny", "small", "medium", "large", "massive", "unknown"]
-
 AccessoryType = Literal[
     "bag",
     "belt",
@@ -208,31 +206,9 @@ PoseType = Literal[
     "sitting",
     "kneeling",
     "lying",
-    "leaning",
     "bending",
     "arms_crossed",
     "hands_on_hips",
-    "unknown",
-]
-
-MaterialType = Literal[
-    "wood",
-    "metal",
-    "glass",
-    "fabric",
-    "plastic",
-    "stone",
-    "brick",
-    "concrete",
-    "tile",
-    "carpet",
-    "leather",
-    "paper",
-    "ceramic",
-    "organic",
-    "vegetation",
-    "water",
-    "composite",
     "unknown",
 ]
 
@@ -281,14 +257,8 @@ class CameraCohort(StrictBaseModel):
     perspective: Perspective = "unknown"
 
 
-class ObjectAttributes(StrictBaseModel):
-    size: ObjectSize = "unknown"
-    color: List[ColorName] = Field(default_factory=list)
-    material: List[MaterialType] = Field(default_factory=list)
-
-
 class ObjectsCohort(StrictBaseModel):
-    items: Dict[str, ObjectAttributes] = Field(default_factory=dict)
+    items: List[str] = Field(default_factory=list, max_length=3)
 
 
 class PersonClothing(StrictBaseModel):
@@ -318,17 +288,11 @@ class PersonAttributes(StrictBaseModel):
     head_covering_type: HeadCoveringType = "unknown"
     pose: PoseType = "unknown"
     expression: Expression = "unknown"
-    role_hint: str = "unknown"
     skin_tone: SkinTone = "unknown"
 
 
 class PeopleCohort(StrictBaseModel):
     persons: List[PersonAttributes] = Field(default_factory=list)
-
-
-class SafetyCohort(StrictBaseModel):
-    hazards: str = "unknown"
-    nsfw: str = "unknown"
 
 
 class TotalsCohort(StrictBaseModel):
@@ -342,7 +306,6 @@ class CohortBundle(StrictBaseModel):
     camera: CameraCohort = Field(default_factory=CameraCohort)
     objects: ObjectsCohort = Field(default_factory=ObjectsCohort)
     people: PeopleCohort = Field(default_factory=PeopleCohort)
-    safety: SafetyCohort = Field(default_factory=SafetyCohort)
     totals: TotalsCohort = Field(default_factory=TotalsCohort)
 
 
@@ -386,7 +349,6 @@ __all__ = [
     "CameraCohort",
     "ObjectsCohort",
     "PeopleCohort",
-    "SafetyCohort",
     "TotalsCohort",
 ]
 

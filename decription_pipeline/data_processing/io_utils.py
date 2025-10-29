@@ -1,7 +1,5 @@
 """Shared file I/O helpers for the data processing pipeline."""
 
-from __future__ import annotations
-
 import csv
 from pathlib import Path
 from tempfile import NamedTemporaryFile
