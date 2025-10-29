@@ -1,7 +1,3 @@
-"""Shared helpers for cohort/dimension frequency structures."""
-
-from __future__ import annotations
-
 from collections import OrderedDict
 from typing import Dict, Iterable, Iterator, Tuple
 
@@ -18,9 +14,9 @@ COHORT_DIMENSIONS: "OrderedDict[str, OrderedDict[str, str]]" = OrderedDict(
                     ("aesthetic_qualities", "scene_aesthetic_qualities"),
                     ("dominant_colors", "scene_dominant_colors"),
                     ("weather", "scene_weather"),
-                    ("ceiling_color", "scene_ceiling_color"),
-                    ("floor_color", "scene_floor_color"),
-                    ("wall_color", "scene_wall_color"),
+                    # ("ceiling_color", "scene_ceiling_color"),
+                    # ("floor_color", "scene_floor_color"),
+                    # ("wall_color", "scene_wall_color"),
                 ]
             ),
         ),
@@ -57,9 +53,9 @@ COHORT_DIMENSIONS: "OrderedDict[str, OrderedDict[str, str]]" = OrderedDict(
                     ("facial_hair_present", "people_facial_hair_present"),
                     ("facial_hair_style", "people_facial_hair_style"),
                     ("facial_hair_color", "people_facial_hair_color"),
-                    ("role_hint", "people_role_hint"),
+                    # ("role_hint", "people_role_hint"),
                     ("clothing_garment", "people_clothing_garment"),
-                    ("clothing_garment_color", "people_clothing_garment_color"),
+                    # ("clothing_garment_color", "people_clothing_garment_color"),
                 ]
             ),
         ),

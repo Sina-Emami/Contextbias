@@ -7,8 +7,6 @@ writes frequency summaries (JSON and CSV) into ``frequency/`` located beside
 on each run, making repeated invocations incremental.
 """
 
-from __future__ import annotations
-
 import argparse
 import json
 import logging
