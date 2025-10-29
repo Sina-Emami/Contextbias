@@ -64,7 +64,7 @@ For each person (“Person 1”, “Person 2”, …), record:
     - head_covering_type: list zero or more HeadCoveringType values ("hat","helmet", "hood", "hijab", "turban", "veil", "headband", "beanie", "hairnet", "none", "unknown").
     - Eyewear: specify one clear EyewearType (“eyeglasses”, “sunglasses”, etc.).
     - Accessories: choose visible AccessoryType (“bag”, “hat”, “watch”, etc.).
-    - Pose: pick one PoseType ("standing", "sitting", "kneeling", "lying", "leaning", "bending", "arms_crossed", "hands_on_hips", "unknown").
+    - Pose: pick one PoseType ("standing", "sitting", "kneeling", "lying", "bending", "arms_crossed", "hands_on_hips", "unknown").
     - Expression: choose one Expression (“neutral”, “smiling”, “focused”, etc.).
     - Activity: describe the person’s main visible action in 1–3 words.
     - Gaze Direction: select a GazeDirection (“forward”, “left”, “toward_camera”, etc.).
@@ -96,7 +96,6 @@ Schema Section:
         head_covering_type: <HeadCoveringType>
         pose: <PoseType>
         expression: <Expression>
-        role_hint: <short free text or unknown>
         skin_tone: <SkinTone>
 
 + Objects
