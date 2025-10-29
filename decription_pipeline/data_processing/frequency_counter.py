@@ -7,8 +7,6 @@ writes frequency summaries (JSON and CSV) into ``frequency/`` located beside
 on each run, making repeated invocations incremental.
 """
 
-from __future__ import annotations
-
 import argparse
 import json
 import logging
@@ -144,7 +142,6 @@ def _extract_image_tokens(data: Dict[str, Any]) -> Tuple[Dict[str, Set[str]], in
             ("body_type", "people_body_type"),
             ("pose", "people_pose"),
             ("expression", "people_expression"),
-            ("role_hint", "people_role_hint"),
             ("eyewear_present", "people_eyewear_present"),
             ("head_covering_present", "people_head_covering_present"),
             ("hair_present", "people_hair_present"),
@@ -155,6 +152,8 @@ def _extract_image_tokens(data: Dict[str, Any]) -> Tuple[Dict[str, Set[str]], in
             ("facial_hair_style", "people_facial_hair_style"),
             ("facial_hair_color", "people_facial_hair_color"),
         ):
+            if category not in tokens:
+                continue
             value = person.get(key)
             if isinstance(value, list):
                 for subval in value:
@@ -167,70 +166,50 @@ def _extract_image_tokens(data: Dict[str, Any]) -> Tuple[Dict[str, Set[str]], in
             if _is_token(activity):
                 tokens["people_activities"].add(str(activity))
 
-        for accessory in _ensure_list(person.get("accessories")):
-            if _is_token(accessory):
-                tokens["people_accessories"].add(str(accessory))
+        if "people_accessories" in tokens:
+            for accessory in _ensure_list(person.get("accessories")):
+                if _is_token(accessory):
+                    tokens["people_accessories"].add(str(accessory))
 
-        for eyewear in _ensure_list(person.get("eyewear_type")):
-            if _is_token(eyewear):
-                tokens["people_eyewear_type"].add(str(eyewear))
+        if "people_eyewear_type" in tokens:
+            for eyewear in _ensure_list(person.get("eyewear_type")):
+                if _is_token(eyewear):
+                    tokens["people_eyewear_type"].add(str(eyewear))
 
-        for head_cover in _ensure_list(person.get("head_covering_type")):
-            if _is_token(head_cover):
-                tokens["people_head_covering_type"].add(str(head_cover))
+        if "people_head_covering_type" in tokens:
+            for head_cover in _ensure_list(person.get("head_covering_type")):
+                if _is_token(head_cover):
+                    tokens["people_head_covering_type"].add(str(head_cover))
 
-        for clothing in _ensure_list(person.get("clothing")):
-            if not isinstance(clothing, dict):
-                continue
-            garment = clothing.get("clothing_garment")
-            if _is_token(garment):
-                garment_str = str(garment)
-                tokens["people_clothing_garment"].add(garment_str)
-                color_values = sorted(
-                    str(color)
-                    for color in _ensure_list(clothing.get("clothing_color"))
-                    if _is_token(color)
-                )
-                if color_values:
-                    combo = f"{garment_str}|colors={','.join(color_values)}"
-                    tokens["people_clothing_garment_color"].add(combo)
+        if "people_clothing_garment" in tokens:
+            for clothing in _ensure_list(person.get("clothing")):
+                if not isinstance(clothing, dict):
+                    continue
+                garment = clothing.get("clothing_garment")
+                if _is_token(garment):
+                    tokens["people_clothing_garment"].add(str(garment))
 
     objects_section = data.get("cohorts", {}).get("objects", {})
-    obj_items = objects_section.get("items") or {}
-    object_instances = 0
-    if isinstance(obj_items, dict):
-        for object_name, attrs in obj_items.items():
-            name_token = str(object_name)
-            if _is_token(object_name):
-                tokens["objects_items"].add(name_token)
-            object_instances += 1
-            if not isinstance(attrs, dict):
-                continue
-            size = attrs.get("size")
-            if _is_token(size):
-                tokens["objects_size"].add(str(size))
-                if _is_token(object_name):
-                    tokens["objects_item_size"].add(f"{name_token}|size={size}")
-            for color in _ensure_list(attrs.get("color")):
-                if _is_token(color):
-                    tokens["objects_color"].add(str(color))
-                    if _is_token(object_name):
-                        tokens["objects_item_color"].add(f"{name_token}|color={color}")
-            for material in _ensure_list(attrs.get("material")):
-                if _is_token(material):
-                    tokens["objects_material"].add(str(material))
-                    if _is_token(object_name):
-                        tokens["objects_item_material"].add(f"{name_token}|material={material}")
+    obj_items = []
+    if isinstance(objects_section, dict):
+        raw_items = objects_section.get("items")
+        if isinstance(raw_items, list):
+            obj_items = raw_items
+        elif isinstance(raw_items, dict):
+            obj_items = list(raw_items.keys())
+    elif isinstance(objects_section, list):
+        obj_items = objects_section
 
-    safety_section = data.get("cohorts", {}).get("safety", {})
-    hazard = safety_section.get("hazards")
-    if _is_token(hazard):
-        tokens["safety_hazards"].add(str(hazard))
-    nsfw = safety_section.get("nsfw")
-    if _is_token(nsfw):
-        tokens["safety_nsfw"].add(str(nsfw))
+    object_instances = 0
+    if isinstance(obj_items, list):
+        object_instances = len(obj_items)
+        for object_name in obj_items:
+            if _is_token(object_name):
+                tokens["objects_items"].add(str(object_name))
 
     return tokens, people_instances, object_instances
+
+
 def _load_prompt_state(freq_dir: Path) -> Tuple[Dict[str, Any], Set[str]]:
     agg = _new_aggregator()
     processed: Set[str] = set()
