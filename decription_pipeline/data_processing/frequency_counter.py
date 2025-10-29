@@ -142,7 +142,6 @@ def _extract_image_tokens(data: Dict[str, Any]) -> Tuple[Dict[str, Set[str]], in
             ("body_type", "people_body_type"),
             ("pose", "people_pose"),
             ("expression", "people_expression"),
-            ("role_hint", "people_role_hint"),
             ("eyewear_present", "people_eyewear_present"),
             ("head_covering_present", "people_head_covering_present"),
             ("hair_present", "people_hair_present"),
@@ -153,6 +152,8 @@ def _extract_image_tokens(data: Dict[str, Any]) -> Tuple[Dict[str, Set[str]], in
             ("facial_hair_style", "people_facial_hair_style"),
             ("facial_hair_color", "people_facial_hair_color"),
         ):
+            if category not in tokens:
+                continue
             value = person.get(key)
             if isinstance(value, list):
                 for subval in value:
@@ -165,33 +166,28 @@ def _extract_image_tokens(data: Dict[str, Any]) -> Tuple[Dict[str, Set[str]], in
             if _is_token(activity):
                 tokens["people_activities"].add(str(activity))
 
-        for accessory in _ensure_list(person.get("accessories")):
-            if _is_token(accessory):
-                tokens["people_accessories"].add(str(accessory))
+        if "people_accessories" in tokens:
+            for accessory in _ensure_list(person.get("accessories")):
+                if _is_token(accessory):
+                    tokens["people_accessories"].add(str(accessory))
 
-        for eyewear in _ensure_list(person.get("eyewear_type")):
-            if _is_token(eyewear):
-                tokens["people_eyewear_type"].add(str(eyewear))
+        if "people_eyewear_type" in tokens:
+            for eyewear in _ensure_list(person.get("eyewear_type")):
+                if _is_token(eyewear):
+                    tokens["people_eyewear_type"].add(str(eyewear))
 
-        for head_cover in _ensure_list(person.get("head_covering_type")):
-            if _is_token(head_cover):
-                tokens["people_head_covering_type"].add(str(head_cover))
+        if "people_head_covering_type" in tokens:
+            for head_cover in _ensure_list(person.get("head_covering_type")):
+                if _is_token(head_cover):
+                    tokens["people_head_covering_type"].add(str(head_cover))
 
-        for clothing in _ensure_list(person.get("clothing")):
-            if not isinstance(clothing, dict):
-                continue
-            garment = clothing.get("clothing_garment")
-            if _is_token(garment):
-                garment_str = str(garment)
-                tokens["people_clothing_garment"].add(garment_str)
-                color_values = sorted(
-                    str(color)
-                    for color in _ensure_list(clothing.get("clothing_color"))
-                    if _is_token(color)
-                )
-                if color_values:
-                    combo = f"{garment_str}|colors={','.join(color_values)}"
-                    tokens["people_clothing_garment_color"].add(combo)
+        if "people_clothing_garment" in tokens:
+            for clothing in _ensure_list(person.get("clothing")):
+                if not isinstance(clothing, dict):
+                    continue
+                garment = clothing.get("clothing_garment")
+                if _is_token(garment):
+                    tokens["people_clothing_garment"].add(str(garment))
 
     objects_section = data.get("cohorts", {}).get("objects", {})
     obj_items = []
