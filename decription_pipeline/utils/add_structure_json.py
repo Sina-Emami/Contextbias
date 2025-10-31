@@ -8,7 +8,7 @@ DATASET_ROOT = (Path.cwd() / "dataset")
 if not DATASET_ROOT.exists():
     DATASET_ROOT = Path.cwd()
 
-MODEL_NAME = "Stable-Diffusion-XL"
+MODEL_NAME = "Stable-Diffusion-3.5" # "Stable-Diffusion-XL"
 SUPPORTED_EXTS = {".png", ".jpg", ".jpeg"}  # change if you only want png/jpg
 MANIFEST_FILENAME = "manifest.json"
 # ----------------------------
