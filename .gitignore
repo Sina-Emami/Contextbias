@@ -20,3 +20,5 @@ dataset_SDXL
 dataset_SD3.5
 92_job_description_SDXL
 92_job_description_3.5
+eval_set
+dataset_wont_be_used
