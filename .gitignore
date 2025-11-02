@@ -16,7 +16,9 @@ dataset_copy_20_job
 dataset_20_job
 dataset_50_job
 92_job_description
-sd_xl_dataset
-dataset_3
+dataset_SDXL
+dataset_SD3.5
 92_job_description_SDXL
 92_job_description_3.5
+eval_set
+dataset_wont_be_used

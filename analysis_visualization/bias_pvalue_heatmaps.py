@@ -246,7 +246,7 @@ def create_plot1(bias: pd.DataFrame):
         show_y=True,
         x_tick_fontsize=10,
         y_tick_fontsize=9,
-        annot_fontsize=6,
+        annot_fontsize=4,
         y_label="Dimension (grouped by Cohort)",
         x_tick_rotation=45,
     )
@@ -306,7 +306,7 @@ def create_plot2(bias1: pd.DataFrame, cohort_order: list[str]):
             show_y=(idx == 0),
             x_tick_fontsize=8,
             y_tick_fontsize=7,
-            annot_fontsize=5,
+            annot_fontsize=3,
             y_label="Dimension (grouped by Cohort)" if idx == 0 else "",
             x_tick_rotation=45,
         )
@@ -339,7 +339,7 @@ def draw_heatmap(
     cohort_order=None,
     x_tick_fontsize=8,
     y_tick_fontsize=2,
-    annot_fontsize=3.0,
+    annot_fontsize=2.5,
     y_label="Occupation",
     x_tick_rotation=90,
 ):
