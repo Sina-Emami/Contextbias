@@ -22,3 +22,15 @@ dataset_SD3.5
 92_job_description_3.5
 eval_set
 dataset_wont_be_used
+img_script
+human_study_analysis
+replicate_images
+Qwen
+Flux
+old_datasets
+dataset_Qwen
+dataset_Flux
+92_job_description_Qwen
+92_job_description_Flux
+92_job_description_SDXL_old
+92_job_description_3.5_old
