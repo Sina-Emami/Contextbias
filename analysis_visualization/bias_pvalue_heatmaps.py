@@ -41,11 +41,27 @@ mpl.rcParams.update(
 cb_palette = sns.color_palette("colorblind", n_colors=len(DEFAULT_COHORT_ORDER))
 cohort_colors = dict(zip(DEFAULT_COHORT_ORDER, cb_palette))
 
-# Perceptually uniform, color-blind-safe colormap for p-values
-viridis = mpl.colormaps["viridis"]
-cmap_p = viridis.copy()
+# # Perceptually uniform, color-blind-safe colormap for p-values
+# viridis = mpl.colormaps["viridis"]
+# cmap_p = viridis.copy()
+# cmap_p.set_bad("white")
+# ALPHA = 0.05  # significance threshold (placeholder for downstream usage)
+
+from matplotlib.colors import LinearSegmentedColormap
+
+# Diverging blue↔orange palette
+cmap_p = LinearSegmentedColormap.from_list(
+    "blue_orange_div",
+    [
+    "#275E8C",  # dark blue
+    "#A3C5DF",  # your original blue
+    "#F7F7F7",  # neutral
+    "#FDC27C",  # light orange
+    "#D9791F",  # darker orange
+],
+)
 cmap_p.set_bad("white")
-ALPHA = 0.05  # significance threshold (placeholder for downstream usage)
+ALPHA = 0.05  # keep your threshold
 
 
 def sanitize_filename(value: str) -> str:
@@ -255,11 +271,12 @@ def create_plot1(bias: pd.DataFrame):
     cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
     cbar.set_label("p-value", fontsize=10)
 
-    svg_path = PLOT1_DIR / "plot1_uniformity_test.svg"
-    fig.savefig(svg_path, format="svg", bbox_inches="tight")
+    png_path = PLOT1_DIR / "plot1_uniformity_test.png"
+    fig.savefig(png_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
-    print(f"Saved Plot 1: {svg_path}")
-    return svg_path
+    print(f"Saved Plot 1: {png_path}")
+    return png_path
+
 
 
 def create_plot2(bias1: pd.DataFrame, cohort_order: list[str]):
@@ -324,11 +341,12 @@ def create_plot2(bias1: pd.DataFrame, cohort_order: list[str]):
         cbar = fig.colorbar(last_im, ax=axes.ravel().tolist(), fraction=0.025, pad=0.02)
         cbar.set_label("p-value", fontsize=10)
 
-    svg_path = PLOT2_DIR / "plot2_bias_by_context.svg"
-    fig.savefig(svg_path, format="svg", bbox_inches="tight")
+    png_path = PLOT2_DIR / "plot2_bias_by_context.png"
+    fig.savefig(png_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
-    print(f"Saved Plot 2: {svg_path}")
-    return svg_path
+    print(f"Saved Plot 2: {png_path}")
+    return png_path
+
 
 
 def draw_heatmap(
@@ -370,31 +388,6 @@ def draw_heatmap(
     ax.set_yticks(np.arange(-0.5, pivot_df.shape[0], 1), minor=True)
     ax.grid(which="minor", color="lightgrey", linewidth=0.3)
     ax.tick_params(which="minor", bottom=False, left=False)
-
-    luminance_threshold = 0.25
-    for i, occ in enumerate(pivot_df.index):
-        for j, dim in enumerate(pivot_df.columns):
-            value = pivot_df.iloc[i, j]
-            if np.isnan(value):
-                continue
-            rgb = cmap_p(value)[:3]
-            luminance = 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]
-            if luminance < luminance_threshold:
-                text_color = "white"
-                font_weight = "bold"
-            else:
-                text_color = "black" if value >= ALPHA else "#4C4C4C"
-                font_weight = "bold" if value < ALPHA else "normal"
-            ax.text(
-                j,
-                i,
-                f"{value:.2f}",
-                ha="center",
-                va="center",
-                color=text_color,
-                fontsize=annot_fontsize,
-                fontweight=font_weight,
-            )
 
     return im
 
@@ -445,10 +438,11 @@ def plot_context_svg(df, ctx_name, cohort_order):
 
     context_dir = CONTEXT_HEATMAP_DIR / sanitize_filename(ctx_name)
     context_dir.mkdir(parents=True, exist_ok=True)
-    output_path = context_dir / f"pvalue_heatmap_{sanitize_filename(ctx_name)}.svg"
-    fig.savefig(output_path, format="svg", bbox_inches="tight")
+    output_path = context_dir / f"pvalue_heatmap_{sanitize_filename(ctx_name)}.png"
+    fig.savefig(output_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved: {output_path}")
+
 
 
 def plot_cohort_comparison_svg(df, cohort, contexts, cohort_order):
@@ -498,10 +492,11 @@ def plot_cohort_comparison_svg(df, cohort, contexts, cohort_order):
 
     cohort_dir = COHORT_HEATMAP_DIR / sanitize_filename(cohort)
     cohort_dir.mkdir(parents=True, exist_ok=True)
-    output_path = cohort_dir / f"{sanitize_filename(cohort)}_compare_contexts.svg"
-    fig.savefig(output_path, format="svg", bbox_inches="tight")
+    output_path = cohort_dir / f"{sanitize_filename(cohort)}_compare_contexts.png"
+    fig.savefig(output_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved: {output_path}")
+
 
 
 def generate_plots(data_path: Path = DATA_PATH):
