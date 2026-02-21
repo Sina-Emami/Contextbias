@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import argparse
 import shutil
 from pathlib import Path
@@ -115,8 +113,9 @@ def restructure_dataset(dataset_root: Path, *, dry_run: bool) -> None:
         context_free_dir.mkdir()
         print(f"[create] Created '{context_free_dir}'.")
 
-    remove_longest_sentence_dirs(related_dir, dry_run=dry_run)
-    remove_longest_sentence_dirs(unrelated_dir, dry_run=dry_run)
+    # Deletion step disabled: keep longest sentence directories.
+    # remove_longest_sentence_dirs(related_dir, dry_run=dry_run)
+    # remove_longest_sentence_dirs(unrelated_dir, dry_run=dry_run)
 
     move_smallest_sentences_to_context_free(
         related_dir, context_free_dir, dry_run=dry_run
