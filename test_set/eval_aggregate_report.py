@@ -1,10 +1,11 @@
-# eval_aggregate_report_hardcoded.py
-# Hardcoded version: set GOLD_JSON, PRED_JSON, OUT_JSON below.
+"""Compare gold-standard and predicted summary reports and compute aggregate metrics."""
 
 from __future__ import annotations
-import json, re, sys
+import json
+import re
+import sys
 from collections import defaultdict
-from typing import Dict, Any, Optional, List
+from typing import Any, Dict, List, Optional
 
 # -------------------------
 # 🔧 Hardcoded paths — edit these
