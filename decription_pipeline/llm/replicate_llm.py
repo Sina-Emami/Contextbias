@@ -1,3 +1,5 @@
+"""Thin CrewAI LLM wrapper around Replicate-hosted chat models."""
+
 from crewai import BaseLLM
 import replicate
 

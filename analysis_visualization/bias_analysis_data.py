@@ -1,6 +1,10 @@
+"""Load, process, and compute chi-square bias statistics from clean_frequency CSVs."""
+
+from itertools import product
 from pathlib import Path
-import pandas as pd
+
 import numpy as np
+import pandas as pd
 from scipy.stats import chi2
 
 try:
@@ -160,7 +164,6 @@ def process_data(merged):
         occupations = df['occupation'].unique()
         labels = df['label'].unique()
 
-        from itertools import product
         all_combinations = list(product(contexts, occupations, labels))
         complete_df = pd.DataFrame(all_combinations, columns=['Context', 'occupation', 'label'])
 

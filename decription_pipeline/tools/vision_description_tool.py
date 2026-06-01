@@ -1,4 +1,6 @@
-﻿import os
+﻿"""OpenAI vision tool and ImageAuditRecord validation helper used by the describer agent."""
+
+import os
 from typing import Optional, Union
 from openai import OpenAI
 from crewai.tools import tool

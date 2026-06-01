@@ -1,3 +1,5 @@
+"""Generate p-value heatmaps for bias analysis across cohorts, contexts, and occupations."""
+
 import re
 from pathlib import Path
 
@@ -6,6 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.gridspec import GridSpec
 
 # ---------- configuration ----------
@@ -40,14 +43,6 @@ mpl.rcParams.update(
 # Seaborn colorblind palette for categorical use (available if needed downstream)
 cb_palette = sns.color_palette("colorblind", n_colors=len(DEFAULT_COHORT_ORDER))
 cohort_colors = dict(zip(DEFAULT_COHORT_ORDER, cb_palette))
-
-# # Perceptually uniform, color-blind-safe colormap for p-values
-# viridis = mpl.colormaps["viridis"]
-# cmap_p = viridis.copy()
-# cmap_p.set_bad("white")
-# ALPHA = 0.05  # significance threshold (placeholder for downstream usage)
-
-from matplotlib.colors import LinearSegmentedColormap
 
 # Diverging blue↔orange palette
 cmap_p = LinearSegmentedColormap.from_list(
