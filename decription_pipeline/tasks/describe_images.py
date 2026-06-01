@@ -1,3 +1,5 @@
+"""Factory for the image-description CrewAI task."""
+
 from crewai import Task
 from schemas.description import ImageAuditRecord
 
