@@ -604,7 +604,7 @@ def cluster_strings(values: List[str], cfg: FrequencyCounterConfig) -> Dict[str,
     return output
 
 
-nCOLOR_FIELDS = {
+_COLOR_FIELDS = {
     "atmosphere.dominant_palette",
     "environment.surfaces.walls.color",
     "environment.surfaces.floor.color",
@@ -621,7 +621,7 @@ nCOLOR_FIELDS = {
 def build_cluster_maps(raw: Dict[str, List[str]], cfg: FrequencyCounterConfig) -> Dict[str, Dict[str, str]]:
     maps: Dict[str, Dict[str, str]] = {}
     for field, values in raw.items():
-        if field in nCOLOR_FIELDS or field in ENUM_OPTIONS:
+        if field in _COLOR_FIELDS or field in ENUM_OPTIONS:
             continue
         maps[field] = cluster_strings(values, cfg)
     return maps
