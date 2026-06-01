@@ -1,5 +1,7 @@
+"""Filesystem helpers for scenario directory initialisation."""
+
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 import json
 
 SCENARIOS_BASE = Path("data/scenarios")
@@ -17,7 +19,7 @@ def init_scenario_root(scenario_id: str, scenario_text: str) -> dict:
     manifest = {
         "id": scenario_id,
         "scenario": scenario_text,
-        "created_at": datetime.utcnow().isoformat() + "Z",
+        "created_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "paths": {key: str(value) for key, value in subfolders.items()},
     }
     (root / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
