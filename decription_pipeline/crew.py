@@ -1,4 +1,6 @@
-﻿from crewai import Crew, Process
+﻿"""Assemble the CrewAI image-description crew from agent and task factories."""
+
+from crewai import Crew, Process
 from agents.describer import build_image_describer_agent
 from tasks.describe_images import build_describe_image_task
 

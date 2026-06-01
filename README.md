@@ -1,205 +1,182 @@
-# Bias Detection Multimodal (CrewAI)
+# Bias Detection in Multimodal Image Generation
 
-This project runs an asynchronous, resume-friendly pipeline that walks a dataset of prompt folders and generates structured bias analyses for every image. The workflow is driven by CrewAI agents and proceeds through three main stages:
+A research pipeline that detects and quantifies demographic and visual bias in AI-generated images. The system generates structured descriptions of images using a vision LLM, aggregates attribute frequencies across roles and contexts, runs statistical bias tests, and supports a human-study evaluation workflow.
 
-1. **Schema-ready description capture** - The `Image Schema Describer` crew invokes the `DescribeImageFromFile` tool for every manifest entry and writes one `descriptions/<image_id>.json` `ImageAuditRecord` per image.
-2. **Frequency counting & cleaning** - Run `python -m decription_pipeline.data_processing.pipeline` to count prompt attributes, normalise tokens, aggregate by role, and publish dataset-level roll-ups.
-3. **Bias reasoning + reporting (optional)** - Once structured descriptions and frequency artifacts exist, downstream crews can generate bias analyses and narrative reports.
+---
 
-Each prompt directory is processed independently. The runner automatically skips folders that already contain all expected artifacts, resumes partially processed folders from the next missing image, and parallelises work to keep image agents busy.
+## Overview
 
+The project is split into four main areas:
+
+| Area | Directory | Purpose |
+|---|---|---|
+| Description pipeline | `decription_pipeline/` | Generate structured JSON descriptions for every image via a vision LLM |
+| Bias analysis | `analysis_visualization/` | Chi-square tests and p-value heatmaps across roles and attributes |
 ---
 
 ## Dataset Layout
 
-The pipeline expects dataset prompts under `dataset/` (configurable). A typical structure looks like:
+Images are organised by context type, role, and prompt:
 
 ```
 dataset/
-├─ Context-aware_Related_CA-R/
-│  ├─ doctor/
-│  │  ├─ a_photo_of_a_doctor...
-│  │  │  ├─ image_0_seed_....jpg
-│  │  │  ├─ ...
-│  │  │  └─ manifest.json
-│  │  └─ ...
-│  └─ nurse/
-│     └─ ...
-└─ Context-free_CF/
-   └─ ...
+├── Context-free_CF/
+│   └── <role>/
+│       └── <prompt_folder>/
+│           ├── manifest.json          # list of image metadata entries
+│           ├── descriptions/          # one JSON per image (output)
+│           └── clean_frequency/       # normalised frequency counts (output)
+├── Context-aware_Related_CA-R/
+│   └── <role>/
+│       └── <prompt_folder>/
+└── Context-aware_Unrelated_CA-U/
+    └── <role>/
+        └── <prompt_folder>/
 ```
 
-Each prompt directory must include a `manifest.json` (an array of image metadata). During processing the runner adds:
-
-```
-<prompt_dir>/
-|- images_info.json
-|- descriptions/
-|  - <image_id>.json
-|- frequency/
-|  - frequencies.json
-|  - frequencies.csv
-- clean_frequency/
-   - frequencies.json
-   - frequencies.csv
-```
-
-The frequency pipeline also writes aggregated files under `dataset/role_counting/` (per role) and `dataset/role_counting/all_roles.*` (global). Resume logic honours existing structured JSON and only fills in missing work. All frequency CSV outputs share the columns `cohort`, `dimension`, `label`, `count`, and `bin` (the number of unique labels observed for that dimension).
-
-## Agents, Tasks & Tools
-
-- `decription_pipeline/crew.py` assembles a single CrewAI `Crew` composed of the Image Schema Describer agent and the describe-images task.
-- The agent is defined in `decription_pipeline/agents/describer.py`. It calls the `DescribeImageFromFile` tool (`tools/vision_description_tool.py`) and reformats the evidence into an `ImageAuditRecord`.
-- `decription_pipeline/tasks/describe_images.py` supplies the task prompt. It requires exactly one tool invocation, enforces enum tokens, and demands a single JSON object as output.
-- `decription_pipeline/crew.build_image_description_crew()` wires the agent and task together with `Process.sequential` and `force_tool_output=True`, ensuring the saved JSON mirrors the tool observations.
+Each `manifest.json` is an array of objects with at least `id` and `filename` (or `relpath`). The pipeline creates `descriptions/`, `frequency/`, and `clean_frequency/` under each prompt folder, plus role-level and dataset-level rollup files under `dataset/role_counting/`.
 
 ---
 
-## Requirements
+## Setup
 
-* Python 3.10+
-* `crewai`
-* `openai`
-* `pydantic` v2
-* `python-dotenv`
-* `replicate`
-* Additional libraries listed in `requirements.txt` (e.g., `sentence-transformers`, `hdbscan`)
-
-### Install
+**Requirements:** Python 3.10+
 
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\activate
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
 source .venv/bin/activate
+
 pip install -r requirements.txt
 ```
 
----
-
-## Environment Variables
-
-Create a `.env` with at least:
+**Environment variables** — create a `.env` file in the project root:
 
 ```env
-OPENAI_API_KEY=""          # required for the vision description tool
-REPLICATE_API_KEY=""       # required for the bias reasoning agent
-DESCRIBER_LLM=gpt-5-nano     # optional fallback if you re-enable LLM responses for the describer
+OPENAI_API_KEY=your_key_here          # required for vision descriptions
+REPLICATE_API_KEY=your_key_here       # required for Replicate-hosted LLMs
+VISION_CHAT_MODEL=gpt-4o-mini         # OpenAI model used for image descriptions
+DESCRIBER_LLM=gpt-4o-mini             # optional: LLM for the describer agent
 BIAS_REPLICATE_TEMPERATURE=0.0
-VISION_CHAT_MODEL=gpt-5-mini
 ```
-
-Remove legacy keys from earlier experiments (image generation, consensus, etc.).
 
 ---
 
-## Usage
+## 1. Description Pipeline
 
-Run the orchestrator to process any number of prompt folders:
+The pipeline walks the dataset, sends each image to a vision LLM, and saves a validated `ImageAuditRecord` JSON per image.
+
+### Run
 
 ```bash
 python decription_pipeline/app.py
 ```
 
-### Log Messages
+The runner will print one of:
+- `[Skip] <prompt>` — all artifacts already exist, nothing to do
+- `[Start] <prompt>` — no prior work, full run
+- `[Resume] <prompt>` — partial prior work, resumes from the first missing image
 
-* `[Skip] <prompt>` – All expected artifacts exist (structured JSON, frequency outputs, summary report); nothing runs.
-* `[Start] <prompt>` – No prior work detected; the pipeline executes all stages.
-* `[Resume] <prompt>` – Some artifacts are missing; the runner resumes from the first missing image and stops once it reaches an existing structured JSON (counts/summary regenerate when requested).
+### How it works
 
-Successful runs end with `Queued N prompt folder(s) for processing.` followed by per-stage progress for each folder. Subsequent reruns pick up from the last incomplete image or skip completed prompts entirely.
+1. **`app.py`** — entry point; discovers all `manifest.json` files and queues prompt folders.
+2. **`crew.py`** — assembles a CrewAI `Crew` with the describer agent and describe-images task.
+3. **`agents/describer.py`** — defines the `Image Schema Describer` agent.
+4. **`tools/vision_description_tool.py`** — calls the OpenAI vision API, validates the response against `ImageAuditRecord` (Pydantic v2, `extra="forbid"`), and returns the JSON.
+5. **`schemas/description.py`** — the full schema: all `Literal` enums (mood, skin tone, gender, clothing, etc.) and the `ImageAuditRecord` top-level model.
 
----
+**Concurrency** (configurable via env vars):
+- `ROLE_CONCURRENCY` (default 2) — parallel role directories
+- `IMAGE_CONCURRENCY` (default 10) — parallel image requests within a prompt
 
-## Dataset Rollup & Visualization
+### Frequency counting
 
-After the per-prompt pipeline finishes, generate aggregated counts and figures across the entire dataset with:
-
-```bash
-python -m decription_pipeline.data_processing.dataset_rollup
-```
-
-To run the entire frequency-processing flow end-to-end (count, clean, role roll-up, global roll-up):
+After descriptions are generated, compute attribute frequencies:
 
 ```bash
 python -m decription_pipeline.data_processing.pipeline
 ```
 
-This utility walks every role/prompt, reads each `summary_report.json`, and emits:
+This runs the full chain:
+1. `frequency_counter.py` — counts each label per cohort/dimension for a prompt
+2. `frequency_cleaner.py` — normalises free-text tokens using semantic similarity (sentence-transformers + HDBSCAN clustering)
+3. `role_frequency_aggregator.py` — merges prompts under each role
+4. `global_frequency_aggregator.py` — global rollup across all roles
 
-- **Prompt aggregations** (`role/aggregation_counting/<prompt>_counts.json`) summarising all cohort/sub-key counts per prompt, along with `num_images`.
-- **Prompt visuals** (`prompt/visualization_analysis/*.png`) including bar charts for each dimension and a `spatial_heatmap.png` when 3×3 spatial data exist. Filenames are hashed to stay within Windows path limits.
-- **Role rollups** (`role/aggregation_counting/role_counts.json`) consolidating prompts under a role with `total_prompts`, `total_images`, combined counts, and prompt metadata.
-- **Role heatmap** (`role/visualization_analysis/role_spatial_heatmap.png`) whenever any prompt contributes positional counts.
+Outputs follow the schema: `cohort`, `dimension`, `label`, `count`, `bin`.
 
-The script reuses the flattening helpers from `context_metrics.py`, so future aggregation tweaks automatically stay in sync. Rerunning the command refreshes existing outputs in place. Warnings about “tight layout not applied” are cosmetic and stem from very long labels.
+For role-level aggregation across all context types:
 
----
-
-## Pipeline Details
-
-- **Description capture** - `process_prompt_directory()` prepares per-prompt folders, then calls `describe_images()`, which delegates to `_describe_images_async` and the image-description crew. Each run produces one `ImageAuditRecord` JSON per image under `descriptions/`.
-- **Frequency counting & aggregation** - `decription_pipeline.data_processing.pipeline.run_pipeline()` orchestrates frequency counting, cleaning, per-role aggregation, and dataset roll-ups. It combines `frequency_counter.compute_frequencies`, `frequency_cleaner.clean_dataset`, `role_frequency_aggregator.aggregate_roles`, and `global_frequency_aggregator.aggregate_all_roles`.
-- **Optional reporting** - Once structured descriptions and frequency artifacts exist, additional crews (bias analysis, narrative summaries, visualisations) can be executed as needed.
-
-### Concurrency & Resume Behaviour
-
-- `ROLE_CONCURRENCY` (default 2) bounds how many role directories are processed in parallel.
-- `IMAGE_CONCURRENCY` (default 10) limits concurrent `DescribeImageFromFile` tool invocations inside a prompt.
-- Manifest discovery is recursive; any `manifest.json` under the dataset root is treated as a prompt directory.
-- Resume logic seeks the first missing structured description, restarts from that image, and halts as soon as the next existing JSON is encountered so downstream files remain untouched.
+```bash
+python -m decription_pipeline.data_processing.role_rollup
+# add --general for a high-level attributes summary
+python -m decription_pipeline.data_processing.role_rollup --general
+```
 
 ---
 
-## Notes
+## 2. Bias Analysis & Visualisation
 
-- Relative paths inside manifests are resolved against the dataset root; absolute paths are honoured as-is.
-- Ensure `manifest.json` entries include at least an `id` and `filename` (or `relpath`).
-- The bias reasoning stage requires Replicate access; set `REPLICATE_API_KEY` before running the pipeline.
-- You can override concurrency via environment variables to match your hardware/LLM quota.
-- Summary reporting is idempotent; if counts are missing they are regenerated automatically.
+Statistical tests over the frequency data to detect bias across roles and image contexts.
+
+### Run
+
+```bash
+# Chi-square bias statistics
+python analysis_visualization/bias_analysis_data.py
+
+# P-value heatmaps
+python analysis_visualization/bias_pvalue_heatmaps.py
+```
+
+**`bias_analysis_data.py`** loads `clean_frequency` CSVs, computes chi-square tests for each cohort/dimension pair across roles, and produces bias statistics with p-values.
+
+**`bias_pvalue_heatmaps.py`** renders colour-coded heatmaps (one per cohort) showing which role × dimension combinations have statistically significant bias (p < 0.05). Outputs are saved as `.png` files.
 
 ---
 
-## Aggregation Outputs (Standardised)
+## Aggregation Output Reference
 
-This repo standardises where aggregated files are written so downstream analysis is predictable:
+| Path | Content |
+|---|---|
+| `<prompt>/descriptions/<id>.json` | One `ImageAuditRecord` per image |
+| `<prompt>/frequency/frequencies.csv` | Raw label counts |
+| `<prompt>/clean_frequency/frequencies.csv` | Normalised label counts |
+| `<role>/aggregation_counting/role_counts.csv` | Per-role counts across prompts |
+| `dataset/role_count_aggregation/<role>.csv` | Per-role counts across all contexts |
+| `dataset/general_attributes_rollup.csv` | High-level attribute summary |
 
-- Per-prompt (inside each prompt folder)
-  - ggregation_counting/<prompt>_counts.json - normalised counts for that single prompt.
+---
 
-- Per-role, per-context (inside each role folder)
-  - ggregation_counting/role_counts.csv - combined counts for all prompts under that role in the current context.
-  - ggregation_counting/role_counts.json - same data plus metadata (	otal_prompts, 	otal_images, prompt list).
+## Project Structure
 
-- Per-role, all contexts (at dataset root)
-  - dataset/role_count_aggregation/<role>.csv - merged counts for a role across Context-free and both Context-aware folders. Build with:
+```
+decription_pipeline/
+├── app.py                        # entry point
+├── crew.py                       # CrewAI crew assembly
+├── agents/describer.py           # describer agent
+├── tasks/describe_images.py      # CrewAI task definition
+├── tools/vision_description_tool.py  # OpenAI vision call + validation
+├── schemas/description.py        # ImageAuditRecord schema
+├── llm/replicate_llm.py          # Replicate LLM wrapper
+├── data_processing/              # frequency counting & aggregation
+│   ├── pipeline.py
+│   ├── frequency_counter.py
+│   ├── frequency_cleaner.py
+│   ├── frequency_schema.py
+│   ├── role_frequency_aggregator.py
+│   ├── global_frequency_aggregator.py
+│   └── semantic_utils.py
+├── distribution_visualization/   # schema distribution plots
+└── utils/
+    ├── fs.py                     # directory initialisation helpers
+    ├── add_structure_json.py     # manifest JSON builder
+    └── export_artifacts.py
 
-    `ash
-    python -m decription_pipeline.data_processing.role_rollup
-    `
+analysis_visualization/
+├── bias_analysis_data.py         # chi-square bias statistics
+└── bias_pvalue_heatmaps.py       # p-value heatmap figures
 
-- General attributes (optional)
-  - dataset/general_attributes_rollup.csv - one file summarising high-level attributes (mood, lighting, camera, demographics, presence flags) aggregated over all roles. Build with:
-
-    `ash
-    python -m decription_pipeline.data_processing.role_rollup --general
-    `
-
-### Folder Layout Reference
-
-`
-dataset/
-  Context-free_CF/ | Context-aware_Related_CA-R/ | Context-aware_Unrelated_CA-U/
-    <role>/
-      <prompt>/
-        descriptions/summary/summary_report.json
-        aggregation_counting/<prompt>_counts.json
-      aggregation_counting/
-        role_counts.csv
-        role_counts.json
-  role_count_aggregation/
-    <role>.csv
-  general_attributes_rollup.csv         # optional, if built with --general
-`
-
-All aggregations apply the same normalisation rules for keys and labels (e.g., clothing garment variants, gender presentation, presence flags, spatial plane/side), ensuring counts align across prompts, roles, and contexts.
+```

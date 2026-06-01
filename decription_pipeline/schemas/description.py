@@ -351,5 +351,3 @@ __all__ = [
     "PeopleCohort",
     "TotalsCohort",
 ]
-
-
