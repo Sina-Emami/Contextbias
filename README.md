@@ -72,7 +72,7 @@ ContextBias is organized into four stages that match the code in this repository
 
 1. **Attribute extraction** (`decription_pipeline/app.py`) — walk the dataset, send each generated image to a vision LLM, and save a validated `ImageAuditRecord` JSON per image. The schema (`schemas/description.py`) spans four cohorts — *Scene appearance*, *Camera*, *Objects*, *People* — over 30 attribute dimensions. Most dimensions use closed vocabularies; `items`, `clothing_garment`, and `activities` are open-vocabulary, and insufficient evidence yields `unknown`.
 2. **Frequency counting and normalisation** (`decription_pipeline/data_processing/pipeline.py`) — count each label per cohort/dimension, then normalise open-vocabulary tokens by embedding each term with a sentence encoder and clustering similar terms into canonical labels (e.g. *lab coat* and *white medical coat*).
-3. **Bias quantification** (`results/bias_quantification_pipeline.py`, `results/tb3_pipeline.py`) — compute **Bias Intensity (BI)**, the entropy-based concentration of a label distribution, and the **Context Consistency Score (CCS)**, which balances pooled label prevalence against cross-context variability, together with per-label chi-square homogeneity tests across CF, CA-R, and CA-U.
+3. **Bias quantification** (`bias_quantification/bias_quantification_pipeline.py`, `bias_quantification/tb3_pipeline.py`) — compute **Bias Intensity (BI)**, the entropy-based concentration of a label distribution, and the **Context Consistency Score (CCS)**, which balances pooled label prevalence against cross-context variability, together with per-label chi-square homogeneity tests across CF, CA-R, and CA-U.
 4. **Analysis and visualisation** (`analysis_visualization/`) — chi-square bias statistics across roles and attributes, and colour-coded p-value heatmaps per cohort.
 
 **Concurrency** for stage 1 is configurable via environment variables: `ROLE_CONCURRENCY` (default 2) parallel role directories, `IMAGE_CONCURRENCY` (default 10) parallel image requests within a prompt.
@@ -103,8 +103,8 @@ python -m decription_pipeline.distribution_visualization.role_rollup --general  
 Quantify bias (BI, CCS, paper tables and figure data):
 
 ```bash
-python results/bias_quantification_pipeline.py
-python results/tb3_pipeline.py        # richer Table 3, run after the above
+python bias_quantification/bias_quantification_pipeline.py
+python bias_quantification/tb3_pipeline.py        # richer Table 3, run after the above
 ```
 
 Run the statistical tests and render figures:
@@ -154,10 +154,10 @@ The final dataset has been uploaded to Hugging Face (placeholder): [context-bias
 | `<role>/aggregation_counting/role_counts.csv` | Per-role counts across prompts |
 | `dataset/role_count_aggregation/<role>.csv` | Per-role counts across all contexts |
 | `dataset/general_attributes_rollup.csv` | High-level attribute summary |
-| `results/occ_table_all[_wide].csv` | Per-role, per-model label prevalence |
-| `results/table2_*.csv` | Role–label associations by cue type, prompt robustness |
-| `results/table3_label_persistence.csv` | Label persistence across conditions |
-| `results/fig2_data.csv`, `results/fig3_dim_data.csv` | Figure source data |
+| `bias_quantification/occ_table_all[_wide].csv` | Per-role, per-model label prevalence |
+| `bias_quantification/table2_*.csv` | Role–label associations by cue type, prompt robustness |
+| `bias_quantification/table3_label_persistence.csv` | Label persistence across conditions |
+| `bias_quantification/fig2_data.csv`, `bias_quantification/fig3_dim_data.csv` | Figure source data |
 
 ## Evaluated Models
 

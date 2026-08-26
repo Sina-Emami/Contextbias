@@ -13,10 +13,10 @@ eval_set
 # original R pipeline scripts, raw-data drops, the paper PDF/review docx,
 # and generated artifacts too large for git (occ_table_all.csv > GitHub's
 # 100MB limit; the LaTeX table export).
-results/*.R
-results/*.zip
-results/*.pdf
-results/*.docx
-results/occ_table_all.csv
-results/table3_label_persistence.tex
+bias_quantification/*.R
+bias_quantification/*.zip
+bias_quantification/*.pdf
+bias_quantification/*.docx
+bias_quantification/occ_table_all.csv
+bias_quantification/table3_label_persistence.tex
 paper/
