@@ -1,0 +1,6822 @@
+[
+  {
+    "role": "accountant",
+    "prompt": "a photo of an accountant sitting",
+    "seeds_by_model": {
+      "pipeline_final": [
+        216739,
+        877572,
+        388389,
+        126225,
+        770487
+      ],
+      "pipeline_finalXL": [
+        216739,
+        877572,
+        388389,
+        126225,
+        770487
+      ]
+    },
+    "source_index": 0,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      126225,
+      216739,
+      388389,
+      770487,
+      877572
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "accountant",
+    "prompt": "a photo of an accountant wearing eyeglasses",
+    "seeds_by_model": {
+      "pipeline_final": [
+        334053,
+        246316,
+        207473,
+        356787,
+        872246
+      ],
+      "pipeline_finalXL": [
+        334053,
+        246316,
+        207473,
+        356787,
+        872246
+      ]
+    },
+    "source_index": 1,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      207473,
+      246316,
+      334053,
+      356787,
+      872246
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "accountant",
+    "prompt": "a photo of an accountant wearing eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        809570,
+        876646,
+        719176,
+        671858,
+        191161
+      ],
+      "pipeline_finalXL": [
+        809570,
+        876646,
+        719176,
+        671858,
+        191161
+      ]
+    },
+    "source_index": 2,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      191161,
+      671858,
+      719176,
+      809570,
+      876646
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "actor",
+    "prompt": "a photo of a male actor",
+    "seeds_by_model": {
+      "pipeline_final": [
+        198246,
+        329258,
+        131244,
+        133326,
+        542417
+      ],
+      "pipeline_finalXL": [
+        198246,
+        329258,
+        131244,
+        133326,
+        542417
+      ]
+    },
+    "source_index": 3,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      131244,
+      133326,
+      198246,
+      329258,
+      542417
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "actor",
+    "prompt": "a photo of an actor without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        629903,
+        127824,
+        343962,
+        688508,
+        731262
+      ],
+      "pipeline_finalXL": [
+        629903,
+        127824,
+        343962,
+        688508,
+        731262
+      ]
+    },
+    "source_index": 4,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      127824,
+      343962,
+      629903,
+      688508,
+      731262
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "actor",
+    "prompt": "a photo of an actor with brown hair",
+    "seeds_by_model": {
+      "pipeline_final": [
+        835392,
+        781453,
+        308496,
+        850800,
+        671412
+      ],
+      "pipeline_finalXL": [
+        835392,
+        781453,
+        308496,
+        850800,
+        671412
+      ]
+    },
+    "source_index": 5,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      308496,
+      671412,
+      781453,
+      835392,
+      850800
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "analyst",
+    "prompt": "a photo of a male analyst",
+    "seeds_by_model": {
+      "pipeline_final": [
+        717889,
+        331148,
+        571029,
+        391704,
+        539898
+      ],
+      "pipeline_finalXL": [
+        717889,
+        331148,
+        571029,
+        391704,
+        539898
+      ]
+    },
+    "source_index": 6,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      331148,
+      391704,
+      539898,
+      571029,
+      717889
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "analyst",
+    "prompt": "a photo of an analyst wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        944962,
+        948749,
+        895667,
+        267414,
+        106814
+      ],
+      "pipeline_finalXL": [
+        944962,
+        948749,
+        895667,
+        267414,
+        106814
+      ]
+    },
+    "source_index": 7,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      106814,
+      267414,
+      895667,
+      944962,
+      948749
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "athlete",
+    "prompt": "a photo of an athlete wearing shorts",
+    "seeds_by_model": {
+      "pipeline_final": [
+        543143,
+        391369,
+        456778,
+        832052,
+        263032
+      ],
+      "pipeline_finalXL": [
+        543143,
+        391369,
+        456778,
+        832052,
+        263032
+      ]
+    },
+    "source_index": 8,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      263032,
+      391369,
+      456778,
+      543143,
+      832052
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "athlete",
+    "prompt": "a photo of an athlete with an athletic build",
+    "seeds_by_model": {
+      "pipeline_final": [
+        197251,
+        900581,
+        207175,
+        325772,
+        452944
+      ],
+      "pipeline_finalXL": [
+        197251,
+        900581,
+        207175,
+        325772,
+        452944
+      ]
+    },
+    "source_index": 9,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      197251,
+      207175,
+      325772,
+      452944,
+      900581
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "athlete",
+    "prompt": "a photo of a male athlete",
+    "seeds_by_model": {
+      "pipeline_final": [
+        476417,
+        201414,
+        498382,
+        988662,
+        460663
+      ],
+      "pipeline_finalXL": [
+        476417,
+        201414,
+        498382,
+        988662,
+        460663
+      ]
+    },
+    "source_index": 10,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      201414,
+      460663,
+      476417,
+      498382,
+      988662
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "athlete",
+    "prompt": "a photo of an athlete without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        145561,
+        377370,
+        865179,
+        733052,
+        946335
+      ],
+      "pipeline_finalXL": [
+        145561,
+        377370,
+        865179,
+        733052,
+        946335
+      ]
+    },
+    "source_index": 11,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      145561,
+      377370,
+      733052,
+      865179,
+      946335
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "auditor",
+    "prompt": "a photo of an auditor with a light skin tone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        182627,
+        662275,
+        230889,
+        581741,
+        496922
+      ],
+      "pipeline_finalXL": [
+        182627,
+        662275,
+        230889,
+        581741,
+        496922
+      ]
+    },
+    "source_index": 12,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      182627,
+      230889,
+      496922,
+      581741,
+      662275
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "auditor",
+    "prompt": "a photo of an auditor in a medium framing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        678856,
+        759176,
+        748564,
+        407419,
+        969693
+      ],
+      "pipeline_finalXL": [
+        678856,
+        759176,
+        748564,
+        407419,
+        969693
+      ]
+    },
+    "source_index": 13,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      407419,
+      678856,
+      748564,
+      759176,
+      969693
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "baker",
+    "prompt": "a photo of a baker wearing apron",
+    "seeds_by_model": {
+      "pipeline_final": [
+        479201,
+        172933,
+        838797,
+        705397,
+        301629
+      ],
+      "pipeline_finalXL": [
+        479201,
+        172933,
+        838797,
+        705397,
+        301629
+      ]
+    },
+    "source_index": 14,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      172933,
+      301629,
+      479201,
+      705397,
+      838797
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "baker",
+    "prompt": "a photo of a baker standing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        793384,
+        148050,
+        403445,
+        338968,
+        910620
+      ],
+      "pipeline_finalXL": [
+        793384,
+        148050,
+        403445,
+        338968,
+        910620
+      ]
+    },
+    "source_index": 15,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      148050,
+      338968,
+      403445,
+      793384,
+      910620
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "baker",
+    "prompt": "a photo of a baker in a medium framing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        996865,
+        344098,
+        183667,
+        205907,
+        498591
+      ],
+      "pipeline_finalXL": [
+        996865,
+        344098,
+        183667,
+        205907,
+        498591
+      ]
+    },
+    "source_index": 16,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      183667,
+      205907,
+      344098,
+      498591,
+      996865
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "baker",
+    "prompt": "a photo of a baker without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        766563,
+        974628,
+        575435,
+        391476,
+        482554
+      ],
+      "pipeline_finalXL": [
+        766563,
+        974628,
+        575435,
+        391476,
+        482554
+      ]
+    },
+    "source_index": 17,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      391476,
+      482554,
+      575435,
+      766563,
+      974628
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "baker",
+    "prompt": "a photo of a baker in warm lighting",
+    "seeds_by_model": {
+      "pipeline_final": [
+        488162,
+        319684,
+        802729,
+        472528,
+        270555
+      ],
+      "pipeline_finalXL": [
+        488162,
+        319684,
+        802729,
+        472528,
+        270555
+      ]
+    },
+    "source_index": 18,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      270555,
+      319684,
+      472528,
+      488162,
+      802729
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bartender",
+    "prompt": "a photo of a bartender in warm lighting",
+    "seeds_by_model": {
+      "pipeline_final": [
+        835911,
+        379946,
+        816751,
+        174870,
+        779514
+      ],
+      "pipeline_finalXL": [
+        835911,
+        379946,
+        816751,
+        174870,
+        779514
+      ]
+    },
+    "source_index": 19,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      174870,
+      379946,
+      779514,
+      816751,
+      835911
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bartender",
+    "prompt": "a photo of a male bartender",
+    "seeds_by_model": {
+      "pipeline_final": [
+        738720,
+        864544,
+        660086,
+        279451,
+        765822
+      ],
+      "pipeline_finalXL": [
+        738720,
+        864544,
+        660086,
+        279451,
+        765822
+      ]
+    },
+    "source_index": 20,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      279451,
+      660086,
+      738720,
+      765822,
+      864544
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bartender",
+    "prompt": "a photo of a bartender with bottles",
+    "seeds_by_model": {
+      "pipeline_final": [
+        584714,
+        271339,
+        383060,
+        356702,
+        497887
+      ],
+      "pipeline_finalXL": [
+        584714,
+        271339,
+        383060,
+        356702,
+        497887
+      ]
+    },
+    "source_index": 21,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      271339,
+      356702,
+      383060,
+      497887,
+      584714
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bartender",
+    "prompt": "a photo of a bartender wearing apron",
+    "seeds_by_model": {
+      "pipeline_final": [
+        684004,
+        330283,
+        817870,
+        771088,
+        821590
+      ],
+      "pipeline_finalXL": [
+        684004,
+        330283,
+        817870,
+        771088,
+        821590
+      ]
+    },
+    "source_index": 22,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      330283,
+      684004,
+      771088,
+      817870,
+      821590
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bartender",
+    "prompt": "a photo of a bartender with a bar counter",
+    "seeds_by_model": {
+      "pipeline_final": [
+        440035,
+        905635,
+        983794,
+        913694,
+        158655
+      ],
+      "pipeline_finalXL": [
+        440035,
+        905635,
+        983794,
+        913694,
+        158655
+      ]
+    },
+    "source_index": 23,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      158655,
+      440035,
+      905635,
+      913694,
+      983794
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bartender",
+    "prompt": "a photo of a bartender wearing vest",
+    "seeds_by_model": {
+      "pipeline_final": [
+        340174,
+        944151,
+        430776,
+        961722,
+        133659
+      ],
+      "pipeline_finalXL": [
+        340174,
+        944151,
+        430776,
+        961722,
+        133659
+      ]
+    },
+    "source_index": 24,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      133659,
+      340174,
+      430776,
+      944151,
+      961722
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bartender",
+    "prompt": "a photo of a bartender with a beard",
+    "seeds_by_model": {
+      "pipeline_final": [
+        380746,
+        520651,
+        694731,
+        321231,
+        169403
+      ],
+      "pipeline_finalXL": [
+        380746,
+        520651,
+        694731,
+        321231,
+        169403
+      ]
+    },
+    "source_index": 25,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      169403,
+      321231,
+      380746,
+      520651,
+      694731
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "biologist",
+    "prompt": "a photo of a biologist wearing eyeglasses",
+    "seeds_by_model": {
+      "pipeline_final": [
+        322955,
+        429963,
+        787277,
+        852787,
+        623481
+      ],
+      "pipeline_finalXL": [
+        322955,
+        429963,
+        787277,
+        852787,
+        623481
+      ]
+    },
+    "source_index": 26,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      322955,
+      429963,
+      623481,
+      787277,
+      852787
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "blacksmith",
+    "prompt": "a photo of a blacksmith wearing apron",
+    "seeds_by_model": {
+      "pipeline_final": [
+        514850,
+        377746,
+        249811,
+        581141,
+        774079
+      ],
+      "pipeline_finalXL": [
+        514850,
+        377746,
+        249811,
+        581141,
+        774079
+      ]
+    },
+    "source_index": 27,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      249811,
+      377746,
+      514850,
+      581141,
+      774079
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "blacksmith",
+    "prompt": "a photo of a blacksmith with an anvil",
+    "seeds_by_model": {
+      "pipeline_final": [
+        665158,
+        246413,
+        358607,
+        881177,
+        688637
+      ],
+      "pipeline_finalXL": [
+        665158,
+        246413,
+        358607,
+        881177,
+        688637
+      ]
+    },
+    "source_index": 28,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      246413,
+      358607,
+      665158,
+      688637,
+      881177
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "blacksmith",
+    "prompt": "a photo of a blacksmith in warm lighting",
+    "seeds_by_model": {
+      "pipeline_final": [
+        883300,
+        711878,
+        375504,
+        712982,
+        549245
+      ],
+      "pipeline_finalXL": [
+        883300,
+        711878,
+        375504,
+        712982,
+        549245
+      ]
+    },
+    "source_index": 29,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      375504,
+      549245,
+      711878,
+      712982,
+      883300
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "blacksmith",
+    "prompt": "a photo of a blacksmith looking focused",
+    "seeds_by_model": {
+      "pipeline_final": [
+        634277,
+        518801,
+        329974,
+        245051,
+        479580
+      ],
+      "pipeline_finalXL": [
+        634277,
+        518801,
+        329974,
+        245051,
+        479580
+      ]
+    },
+    "source_index": 30,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      245051,
+      329974,
+      479580,
+      518801,
+      634277
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "blacksmith",
+    "prompt": "a photo of a male blacksmith",
+    "seeds_by_model": {
+      "pipeline_final": [
+        149405,
+        892495,
+        617488,
+        195325,
+        214975
+      ],
+      "pipeline_finalXL": [
+        149405,
+        892495,
+        617488,
+        195325,
+        214975
+      ]
+    },
+    "source_index": 31,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      149405,
+      195325,
+      214975,
+      617488,
+      892495
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "blacksmith",
+    "prompt": "a photo of a blacksmith without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        813536,
+        757924,
+        260265,
+        267753,
+        930555
+      ],
+      "pipeline_finalXL": [
+        813536,
+        757924,
+        260265,
+        267753,
+        930555
+      ]
+    },
+    "source_index": 32,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      260265,
+      267753,
+      757924,
+      813536,
+      930555
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bus_driver",
+    "prompt": "a photo of a bus driver with a steering wheel",
+    "seeds_by_model": {
+      "pipeline_final": [
+        503457,
+        725380,
+        542666,
+        166613,
+        500156
+      ],
+      "pipeline_finalXL": [
+        503457,
+        725380,
+        542666,
+        166613,
+        500156
+      ]
+    },
+    "source_index": 33,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      166613,
+      500156,
+      503457,
+      542666,
+      725380
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bus_driver",
+    "prompt": "a photo of a bus driver with a dashboard",
+    "seeds_by_model": {
+      "pipeline_final": [
+        654816,
+        590785,
+        724834,
+        680099,
+        363626
+      ],
+      "pipeline_finalXL": [
+        654816,
+        590785,
+        724834,
+        680099,
+        363626
+      ]
+    },
+    "source_index": 34,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      363626,
+      590785,
+      654816,
+      680099,
+      724834
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "bus_driver",
+    "prompt": "a photo of a male bus driver",
+    "seeds_by_model": {
+      "pipeline_final": [
+        112038,
+        814825,
+        813328,
+        855731,
+        220116
+      ],
+      "pipeline_finalXL": [
+        112038,
+        814825,
+        813328,
+        855731,
+        220116
+      ]
+    },
+    "source_index": 35,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      112038,
+      220116,
+      813328,
+      814825,
+      855731
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "carpenter",
+    "prompt": "a photo of a carpenter wearing gloves",
+    "seeds_by_model": {
+      "pipeline_final": [
+        772097,
+        379786,
+        905934,
+        663054,
+        887352
+      ],
+      "pipeline_finalXL": [
+        772097,
+        379786,
+        905934,
+        663054,
+        887352
+      ]
+    },
+    "source_index": 36,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      379786,
+      663054,
+      772097,
+      887352,
+      905934
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "carpenter",
+    "prompt": "a photo of a carpenter with a workbench",
+    "seeds_by_model": {
+      "pipeline_final": [
+        216970,
+        555884,
+        407757,
+        265840,
+        456699
+      ],
+      "pipeline_finalXL": [
+        216970,
+        555884,
+        407757,
+        265840,
+        456699
+      ]
+    },
+    "source_index": 37,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      216970,
+      265840,
+      407757,
+      456699,
+      555884
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "carpenter",
+    "prompt": "a photo of a carpenter wearing apron",
+    "seeds_by_model": {
+      "pipeline_final": [
+        103402,
+        854639,
+        857168,
+        575763,
+        376183
+      ],
+      "pipeline_finalXL": [
+        103402,
+        854639,
+        857168,
+        575763,
+        376183
+      ]
+    },
+    "source_index": 38,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      103402,
+      376183,
+      575763,
+      854639,
+      857168
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "carpenter",
+    "prompt": "a photo of a male carpenter",
+    "seeds_by_model": {
+      "pipeline_final": [
+        287330,
+        624902,
+        632342,
+        211579,
+        898975
+      ],
+      "pipeline_finalXL": [
+        287330,
+        624902,
+        632342,
+        211579,
+        898975
+      ]
+    },
+    "source_index": 39,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      211579,
+      287330,
+      624902,
+      632342,
+      898975
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "carpenter",
+    "prompt": "a photo of a carpenter with a beard",
+    "seeds_by_model": {
+      "pipeline_final": [
+        632323,
+        769987,
+        412942,
+        982554,
+        755674
+      ],
+      "pipeline_finalXL": [
+        632323,
+        769987,
+        412942,
+        982554,
+        755674
+      ]
+    },
+    "source_index": 40,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      412942,
+      632323,
+      755674,
+      769987,
+      982554
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cashier",
+    "prompt": "a photo of a cashier standing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        260263,
+        492077,
+        738551,
+        308573,
+        899550
+      ],
+      "pipeline_finalXL": [
+        260263,
+        492077,
+        738551,
+        308573,
+        899550
+      ]
+    },
+    "source_index": 41,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      260263,
+      308573,
+      492077,
+      738551,
+      899550
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cashier",
+    "prompt": "a photo of a cashier wearing apron",
+    "seeds_by_model": {
+      "pipeline_final": [
+        916449,
+        665579,
+        269396,
+        656116,
+        100599
+      ],
+      "pipeline_finalXL": [
+        916449,
+        665579,
+        269396,
+        656116,
+        100599
+      ]
+    },
+    "source_index": 42,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      100599,
+      269396,
+      656116,
+      665579,
+      916449
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cashier",
+    "prompt": "a photo of a cashier in a medium framing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        120422,
+        728038,
+        612340,
+        217301,
+        439902
+      ],
+      "pipeline_finalXL": [
+        120422,
+        728038,
+        612340,
+        217301,
+        439902
+      ]
+    },
+    "source_index": 43,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      120422,
+      217301,
+      439902,
+      612340,
+      728038
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cashier",
+    "prompt": "a photo of a female cashier",
+    "seeds_by_model": {
+      "pipeline_final": [
+        972064,
+        480612,
+        351083,
+        945964,
+        422451
+      ],
+      "pipeline_finalXL": [
+        972064,
+        480612,
+        351083,
+        945964,
+        422451
+      ]
+    },
+    "source_index": 44,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      351083,
+      422451,
+      480612,
+      945964,
+      972064
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "ceo",
+    "prompt": "a photo of a ceo wearing jacket",
+    "seeds_by_model": {
+      "pipeline_final": [
+        160738,
+        694916,
+        189814,
+        182582,
+        352572
+      ],
+      "pipeline_finalXL": [
+        160738,
+        694916,
+        189814,
+        182582,
+        352572
+      ]
+    },
+    "source_index": 45,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      160738,
+      182582,
+      189814,
+      352572,
+      694916
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "ceo",
+    "prompt": "a photo of a ceo wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        867460,
+        897549,
+        955662,
+        609597,
+        172574
+      ],
+      "pipeline_finalXL": [
+        867460,
+        897549,
+        955662,
+        609597,
+        172574
+      ]
+    },
+    "source_index": 46,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      172574,
+      609597,
+      867460,
+      897549,
+      955662
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "ceo",
+    "prompt": "a photo of a male ceo",
+    "seeds_by_model": {
+      "pipeline_final": [
+        234628,
+        791798,
+        658582,
+        903035,
+        231869
+      ],
+      "pipeline_finalXL": [
+        234628,
+        791798,
+        658582,
+        903035,
+        231869
+      ]
+    },
+    "source_index": 47,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      231869,
+      234628,
+      658582,
+      791798,
+      903035
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "chef",
+    "prompt": "a photo of a chef wearing chef hat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        598369,
+        377932,
+        653306,
+        273148,
+        676510
+      ],
+      "pipeline_finalXL": [
+        598369,
+        377932,
+        653306,
+        273148,
+        676510
+      ]
+    },
+    "source_index": 48,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      273148,
+      377932,
+      598369,
+      653306,
+      676510
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "chef",
+    "prompt": "a photo of a chef without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        322086,
+        543692,
+        891952,
+        665492,
+        736059
+      ],
+      "pipeline_finalXL": [
+        322086,
+        543692,
+        891952,
+        665492,
+        736059
+      ]
+    },
+    "source_index": 49,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      322086,
+      543692,
+      665492,
+      736059,
+      891952
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "chef",
+    "prompt": "a photo of a male chef",
+    "seeds_by_model": {
+      "pipeline_final": [
+        426858,
+        310922,
+        865388,
+        823378,
+        847581
+      ],
+      "pipeline_finalXL": [
+        426858,
+        310922,
+        865388,
+        823378,
+        847581
+      ]
+    },
+    "source_index": 50,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      310922,
+      426858,
+      823378,
+      847581,
+      865388
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "chef",
+    "prompt": "a photo of a chef wearing chef coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        518373,
+        781446,
+        491559,
+        559381,
+        804314
+      ],
+      "pipeline_finalXL": [
+        518373,
+        781446,
+        491559,
+        559381,
+        804314
+      ]
+    },
+    "source_index": 51,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      491559,
+      518373,
+      559381,
+      781446,
+      804314
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "chef",
+    "prompt": "a photo of a chef with a cutting board",
+    "seeds_by_model": {
+      "pipeline_final": [
+        226882,
+        573417,
+        359947,
+        335612,
+        642717
+      ],
+      "pipeline_finalXL": [
+        226882,
+        573417,
+        359947,
+        335612,
+        642717
+      ]
+    },
+    "source_index": 52,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      226882,
+      335612,
+      359947,
+      573417,
+      642717
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "chemist",
+    "prompt": "a photo of a chemist in a medium framing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        167136,
+        122056,
+        454508,
+        716886,
+        680828
+      ],
+      "pipeline_finalXL": [
+        167136,
+        122056,
+        454508,
+        716886,
+        680828
+      ]
+    },
+    "source_index": 53,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      122056,
+      167136,
+      454508,
+      680828,
+      716886
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "chemist",
+    "prompt": "a photo of a chemist wearing lab coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        717024,
+        330914,
+        174441,
+        341292,
+        107540
+      ],
+      "pipeline_finalXL": [
+        717024,
+        330914,
+        174441,
+        341292,
+        107540
+      ]
+    },
+    "source_index": 54,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      107540,
+      174441,
+      330914,
+      341292,
+      717024
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "chemist",
+    "prompt": "a photo of a chemist with an erlenmeyer flask",
+    "seeds_by_model": {
+      "pipeline_final": [
+        161733,
+        842225,
+        170674,
+        340062,
+        761759
+      ],
+      "pipeline_finalXL": [
+        161733,
+        842225,
+        170674,
+        340062,
+        761759
+      ]
+    },
+    "source_index": 55,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      161733,
+      170674,
+      340062,
+      761759,
+      842225
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "chemist",
+    "prompt": "a photo of a chemist wearing eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        132938,
+        639131,
+        446479,
+        174299,
+        349565
+      ],
+      "pipeline_finalXL": [
+        132938,
+        639131,
+        446479,
+        174299,
+        349565
+      ]
+    },
+    "source_index": 56,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      132938,
+      174299,
+      349565,
+      446479,
+      639131
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cleaner",
+    "prompt": "a photo of a cleaner wearing apron",
+    "seeds_by_model": {
+      "pipeline_final": [
+        608993,
+        801474,
+        324643,
+        392004,
+        665427
+      ],
+      "pipeline_finalXL": [
+        608993,
+        801474,
+        324643,
+        392004,
+        665427
+      ]
+    },
+    "source_index": 57,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      324643,
+      392004,
+      608993,
+      665427,
+      801474
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cleaner",
+    "prompt": "a photo of a cleaner without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        704201,
+        595631,
+        238739,
+        858490,
+        698782
+      ],
+      "pipeline_finalXL": [
+        704201,
+        595631,
+        238739,
+        858490,
+        698782
+      ]
+    },
+    "source_index": 58,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      238739,
+      595631,
+      698782,
+      704201,
+      858490
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "clerk",
+    "prompt": "a photo of a clerk in a medium framing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        946721,
+        595948,
+        922733,
+        354801,
+        526833
+      ],
+      "pipeline_finalXL": [
+        946721,
+        595948,
+        922733,
+        354801,
+        526833
+      ]
+    },
+    "source_index": 59,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      354801,
+      526833,
+      595948,
+      922733,
+      946721
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "comedian",
+    "prompt": "a photo of a male comedian",
+    "seeds_by_model": {
+      "pipeline_final": [
+        201639,
+        299659,
+        790993,
+        551989,
+        198907
+      ],
+      "pipeline_finalXL": [
+        201639,
+        299659,
+        790993,
+        551989,
+        198907
+      ]
+    },
+    "source_index": 60,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      198907,
+      201639,
+      299659,
+      551989,
+      790993
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "comedian",
+    "prompt": "a photo of a comedian smiling",
+    "seeds_by_model": {
+      "pipeline_final": [
+        864491,
+        589710,
+        471507,
+        544154,
+        531071
+      ],
+      "pipeline_finalXL": [
+        864491,
+        589710,
+        471507,
+        544154,
+        531071
+      ]
+    },
+    "source_index": 61,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      471507,
+      531071,
+      544154,
+      589710,
+      864491
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "constructor",
+    "prompt": "a photo of a constructor wearing a head covering",
+    "seeds_by_model": {
+      "pipeline_final": [
+        777568,
+        156802,
+        785197,
+        806073,
+        203198
+      ],
+      "pipeline_finalXL": [
+        777568,
+        156802,
+        785197,
+        806073,
+        203198
+      ]
+    },
+    "source_index": 62,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      156802,
+      203198,
+      777568,
+      785197,
+      806073
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "constructor",
+    "prompt": "a photo of a male constructor",
+    "seeds_by_model": {
+      "pipeline_final": [
+        863587,
+        522179,
+        163556,
+        455784,
+        939482
+      ],
+      "pipeline_finalXL": [
+        863587,
+        522179,
+        163556,
+        455784,
+        939482
+      ]
+    },
+    "source_index": 63,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      163556,
+      455784,
+      522179,
+      863587,
+      939482
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cook",
+    "prompt": "a photo of a cook standing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        662336,
+        300896,
+        214576,
+        299448,
+        360735
+      ],
+      "pipeline_finalXL": [
+        662336,
+        300896,
+        214576,
+        299448,
+        360735
+      ]
+    },
+    "source_index": 64,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      214576,
+      299448,
+      300896,
+      360735,
+      662336
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cook",
+    "prompt": "a photo of a cook without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        570405,
+        542374,
+        392075,
+        246991,
+        292401
+      ],
+      "pipeline_finalXL": [
+        570405,
+        542374,
+        392075,
+        246991,
+        292401
+      ]
+    },
+    "source_index": 65,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      246991,
+      292401,
+      392075,
+      542374,
+      570405
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cook",
+    "prompt": "a photo of a cook wearing chef coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        179046,
+        947272,
+        585100,
+        564656,
+        361941
+      ],
+      "pipeline_finalXL": [
+        179046,
+        947272,
+        585100,
+        564656,
+        361941
+      ]
+    },
+    "source_index": 66,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      179046,
+      361941,
+      564656,
+      585100,
+      947272
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cook",
+    "prompt": "a photo of a cook wearing apron",
+    "seeds_by_model": {
+      "pipeline_final": [
+        677057,
+        202664,
+        997546,
+        783823,
+        153045
+      ],
+      "pipeline_finalXL": [
+        677057,
+        202664,
+        997546,
+        783823,
+        153045
+      ]
+    },
+    "source_index": 67,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      153045,
+      202664,
+      677057,
+      783823,
+      997546
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "cook",
+    "prompt": "a photo of a cook with a cutting board",
+    "seeds_by_model": {
+      "pipeline_final": [
+        197793,
+        115474,
+        890170,
+        976638,
+        666847
+      ],
+      "pipeline_finalXL": [
+        197793,
+        115474,
+        890170,
+        976638,
+        666847
+      ]
+    },
+    "source_index": 68,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      115474,
+      197793,
+      666847,
+      890170,
+      976638
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "counselor",
+    "prompt": "a photo of a counselor sitting",
+    "seeds_by_model": {
+      "pipeline_final": [
+        989921,
+        526156,
+        609231,
+        274389,
+        347861
+      ],
+      "pipeline_finalXL": [
+        989921,
+        526156,
+        609231,
+        274389,
+        347861
+      ]
+    },
+    "source_index": 69,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      274389,
+      347861,
+      526156,
+      609231,
+      989921
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "counselor",
+    "prompt": "a photo of a counselor without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        324130,
+        604740,
+        520521,
+        161483,
+        272634
+      ],
+      "pipeline_finalXL": [
+        324130,
+        604740,
+        520521,
+        161483,
+        272634
+      ]
+    },
+    "source_index": 70,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      161483,
+      272634,
+      324130,
+      520521,
+      604740
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "customer_service_representative",
+    "prompt": "a photo of a customer service representative with a monitor",
+    "seeds_by_model": {
+      "pipeline_final": [
+        378085,
+        497382,
+        509386,
+        922157,
+        102260
+      ],
+      "pipeline_finalXL": [
+        378085,
+        497382,
+        509386,
+        922157,
+        102260
+      ]
+    },
+    "source_index": 71,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      102260,
+      378085,
+      497382,
+      509386,
+      922157
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "customer_service_representative",
+    "prompt": "a photo of a customer service representative wearing headset",
+    "seeds_by_model": {
+      "pipeline_final": [
+        399105,
+        543555,
+        923267,
+        577110,
+        830429
+      ],
+      "pipeline_finalXL": [
+        399105,
+        543555,
+        923267,
+        577110,
+        830429
+      ]
+    },
+    "source_index": 72,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      399105,
+      543555,
+      577110,
+      830429,
+      923267
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "customer_service_representative",
+    "prompt": "a photo of a customer service representative smiling",
+    "seeds_by_model": {
+      "pipeline_final": [
+        921414,
+        794022,
+        865990,
+        682765,
+        853305
+      ],
+      "pipeline_finalXL": [
+        921414,
+        794022,
+        865990,
+        682765,
+        853305
+      ]
+    },
+    "source_index": 73,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      682765,
+      794022,
+      853305,
+      865990,
+      921414
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "dancer",
+    "prompt": "a photo of a dancer wearing tutu",
+    "seeds_by_model": {
+      "pipeline_final": [
+        610311,
+        262316,
+        411120,
+        299122,
+        328275
+      ],
+      "pipeline_finalXL": [
+        610311,
+        262316,
+        411120,
+        299122,
+        328275
+      ]
+    },
+    "source_index": 74,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      262316,
+      299122,
+      328275,
+      411120,
+      610311
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "dancer",
+    "prompt": "a photo of a dancer wearing leotard",
+    "seeds_by_model": {
+      "pipeline_final": [
+        161324,
+        163918,
+        707314,
+        668532,
+        871476
+      ],
+      "pipeline_finalXL": [
+        161324,
+        163918,
+        707314,
+        668532,
+        871476
+      ]
+    },
+    "source_index": 75,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      161324,
+      163918,
+      668532,
+      707314,
+      871476
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "dancer",
+    "prompt": "a photo of a dancer with a slim build",
+    "seeds_by_model": {
+      "pipeline_final": [
+        152578,
+        159942,
+        428838,
+        712554,
+        884309
+      ],
+      "pipeline_finalXL": [
+        152578,
+        159942,
+        428838,
+        712554,
+        884309
+      ]
+    },
+    "source_index": 76,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      152578,
+      159942,
+      428838,
+      712554,
+      884309
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "dancer",
+    "prompt": "a photo of a dancer without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        599948,
+        627276,
+        265080,
+        994141,
+        656926
+      ],
+      "pipeline_finalXL": [
+        599948,
+        627276,
+        265080,
+        994141,
+        656926
+      ]
+    },
+    "source_index": 77,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      265080,
+      599948,
+      627276,
+      656926,
+      994141
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "dancer",
+    "prompt": "a photo of a female dancer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        184002,
+        294851,
+        632496,
+        992697,
+        159642
+      ],
+      "pipeline_finalXL": [
+        184002,
+        294851,
+        632496,
+        992697,
+        159642
+      ]
+    },
+    "source_index": 78,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      159642,
+      184002,
+      294851,
+      632496,
+      992697
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "designer",
+    "prompt": "a photo of a designer with brown hair",
+    "seeds_by_model": {
+      "pipeline_final": [
+        723939,
+        346629,
+        171849,
+        808011,
+        171262
+      ],
+      "pipeline_finalXL": [
+        723939,
+        346629,
+        171849,
+        808011,
+        171262
+      ]
+    },
+    "source_index": 79,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      171262,
+      171849,
+      346629,
+      723939,
+      808011
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "detective",
+    "prompt": "a photo of a male detective",
+    "seeds_by_model": {
+      "pipeline_final": [
+        707040,
+        697347,
+        225710,
+        523389,
+        358175
+      ],
+      "pipeline_finalXL": [
+        707040,
+        697347,
+        225710,
+        523389,
+        358175
+      ]
+    },
+    "source_index": 80,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      225710,
+      358175,
+      523389,
+      697347,
+      707040
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "detective",
+    "prompt": "a photo of a detective without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        539589,
+        723398,
+        141672,
+        185965,
+        749468
+      ],
+      "pipeline_finalXL": [
+        539589,
+        723398,
+        141672,
+        185965,
+        749468
+      ]
+    },
+    "source_index": 81,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      141672,
+      185965,
+      539589,
+      723398,
+      749468
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "detective",
+    "prompt": "a photo of a detective wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        692683,
+        431737,
+        648177,
+        712024,
+        789305
+      ],
+      "pipeline_finalXL": [
+        692683,
+        431737,
+        648177,
+        712024,
+        789305
+      ]
+    },
+    "source_index": 82,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      431737,
+      648177,
+      692683,
+      712024,
+      789305
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "developer",
+    "prompt": "a photo of a male developer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        850981,
+        314181,
+        429445,
+        802258,
+        373432
+      ],
+      "pipeline_finalXL": [
+        850981,
+        314181,
+        429445,
+        802258,
+        373432
+      ]
+    },
+    "source_index": 83,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      314181,
+      373432,
+      429445,
+      802258,
+      850981
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "doctor",
+    "prompt": "a photo of a doctor wearing lab coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        515011,
+        350280,
+        237235,
+        378517,
+        804318
+      ],
+      "pipeline_finalXL": [
+        515011,
+        350280,
+        237235,
+        378517,
+        804318
+      ]
+    },
+    "source_index": 84,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      237235,
+      350280,
+      378517,
+      515011,
+      804318
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "doctor",
+    "prompt": "a photo of a doctor wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        888387,
+        414569,
+        579434,
+        431535,
+        776856
+      ],
+      "pipeline_finalXL": [
+        888387,
+        414569,
+        579434,
+        431535,
+        776856
+      ]
+    },
+    "source_index": 85,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      414569,
+      431535,
+      579434,
+      776856,
+      888387
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "doctor",
+    "prompt": "a photo of a doctor with a stethoscope",
+    "seeds_by_model": {
+      "pipeline_final": [
+        176066,
+        580547,
+        751332,
+        690341,
+        109767
+      ],
+      "pipeline_finalXL": [
+        176066,
+        580547,
+        751332,
+        690341,
+        109767
+      ]
+    },
+    "source_index": 86,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      109767,
+      176066,
+      580547,
+      690341,
+      751332
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "electrician",
+    "prompt": "a photo of a male electrician",
+    "seeds_by_model": {
+      "pipeline_final": [
+        204837,
+        663750,
+        176819,
+        323508,
+        630458
+      ],
+      "pipeline_finalXL": [
+        204837,
+        663750,
+        176819,
+        323508,
+        630458
+      ]
+    },
+    "source_index": 87,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      176819,
+      204837,
+      323508,
+      630458,
+      663750
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "electrician",
+    "prompt": "a photo of an electrician with brown hair",
+    "seeds_by_model": {
+      "pipeline_final": [
+        378082,
+        172132,
+        465962,
+        238890,
+        356150
+      ],
+      "pipeline_finalXL": [
+        378082,
+        172132,
+        465962,
+        238890,
+        356150
+      ]
+    },
+    "source_index": 88,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      172132,
+      238890,
+      356150,
+      378082,
+      465962
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "engineer",
+    "prompt": "a photo of a male engineer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        265409,
+        974244,
+        559469,
+        398830,
+        487477
+      ],
+      "pipeline_finalXL": [
+        265409,
+        974244,
+        559469,
+        398830,
+        487477
+      ]
+    },
+    "source_index": 89,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      265409,
+      398830,
+      487477,
+      559469,
+      974244
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "entrepreneur",
+    "prompt": "a photo of a male entrepreneur",
+    "seeds_by_model": {
+      "pipeline_final": [
+        946305,
+        669605,
+        741390,
+        837715,
+        417212
+      ],
+      "pipeline_finalXL": [
+        946305,
+        669605,
+        741390,
+        837715,
+        417212
+      ]
+    },
+    "source_index": 90,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      417212,
+      669605,
+      741390,
+      837715,
+      946305
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "factory_worker",
+    "prompt": "a photo of a male factory worker",
+    "seeds_by_model": {
+      "pipeline_final": [
+        654634,
+        108203,
+        785743,
+        800305,
+        956795
+      ],
+      "pipeline_finalXL": [
+        654634,
+        108203,
+        785743,
+        800305,
+        956795
+      ]
+    },
+    "source_index": 91,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      108203,
+      654634,
+      785743,
+      800305,
+      956795
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "factory_worker",
+    "prompt": "a photo of a factory worker wearing a head covering",
+    "seeds_by_model": {
+      "pipeline_final": [
+        413921,
+        681542,
+        208618,
+        240814,
+        795613
+      ],
+      "pipeline_finalXL": [
+        413921,
+        681542,
+        208618,
+        240814,
+        795613
+      ]
+    },
+    "source_index": 92,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      208618,
+      240814,
+      413921,
+      681542,
+      795613
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "farmer",
+    "prompt": "a photo of a farmer wearing a hat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        377312,
+        680097,
+        221035,
+        212235,
+        878480
+      ],
+      "pipeline_finalXL": [
+        377312,
+        680097,
+        221035,
+        212235,
+        878480
+      ]
+    },
+    "source_index": 93,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      212235,
+      221035,
+      377312,
+      680097,
+      878480
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "farmer",
+    "prompt": "a photo of a male farmer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        734210,
+        385577,
+        395442,
+        262998,
+        320861
+      ],
+      "pipeline_finalXL": [
+        734210,
+        385577,
+        395442,
+        262998,
+        320861
+      ]
+    },
+    "source_index": 94,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      262998,
+      320861,
+      385577,
+      395442,
+      734210
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "farmer",
+    "prompt": "a photo of an older adult farmer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        313487,
+        459536,
+        765046,
+        852470,
+        820892
+      ],
+      "pipeline_finalXL": [
+        313487,
+        459536,
+        765046,
+        852470,
+        820892
+      ]
+    },
+    "source_index": 95,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      313487,
+      459536,
+      765046,
+      820892,
+      852470
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "farmer",
+    "prompt": "a photo of a farmer without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        612262,
+        629959,
+        376807,
+        994343,
+        363319
+      ],
+      "pipeline_finalXL": [
+        612262,
+        629959,
+        376807,
+        994343,
+        363319
+      ]
+    },
+    "source_index": 96,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      363319,
+      376807,
+      612262,
+      629959,
+      994343
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "farmer",
+    "prompt": "a photo of a farmer wearing a head covering",
+    "seeds_by_model": {
+      "pipeline_final": [
+        987204,
+        765095,
+        196781,
+        153266,
+        544151
+      ],
+      "pipeline_finalXL": [
+        987204,
+        765095,
+        196781,
+        153266,
+        544151
+      ]
+    },
+    "source_index": 97,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      153266,
+      196781,
+      544151,
+      765095,
+      987204
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "film_director",
+    "prompt": "a photo of a film director with a light skin tone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        969634,
+        103717,
+        390120,
+        146228,
+        449759
+      ],
+      "pipeline_finalXL": [
+        969634,
+        103717,
+        390120,
+        146228,
+        449759
+      ]
+    },
+    "source_index": 98,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      103717,
+      146228,
+      390120,
+      449759,
+      969634
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "film_director",
+    "prompt": "a photo of a male film director",
+    "seeds_by_model": {
+      "pipeline_final": [
+        908577,
+        269430,
+        237174,
+        374680,
+        768061
+      ],
+      "pipeline_finalXL": [
+        908577,
+        269430,
+        237174,
+        374680,
+        768061
+      ]
+    },
+    "source_index": 99,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      237174,
+      269430,
+      374680,
+      768061,
+      908577
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "film_director",
+    "prompt": "a photo of a film director with a camera",
+    "seeds_by_model": {
+      "pipeline_final": [
+        563298,
+        839945,
+        548462,
+        678478,
+        877236
+      ],
+      "pipeline_finalXL": [
+        563298,
+        839945,
+        548462,
+        678478,
+        877236
+      ]
+    },
+    "source_index": 100,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      548462,
+      563298,
+      678478,
+      839945,
+      877236
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "firefighter",
+    "prompt": "a photo of a firefighter wearing a helmet",
+    "seeds_by_model": {
+      "pipeline_final": [
+        824586,
+        178898,
+        688153,
+        110139,
+        217308
+      ],
+      "pipeline_finalXL": [
+        824586,
+        178898,
+        688153,
+        110139,
+        217308
+      ]
+    },
+    "source_index": 101,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      110139,
+      178898,
+      217308,
+      688153,
+      824586
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "firefighter",
+    "prompt": "a photo of a firefighter wearing a head covering",
+    "seeds_by_model": {
+      "pipeline_final": [
+        975136,
+        256294,
+        487151,
+        137778,
+        672092
+      ],
+      "pipeline_finalXL": [
+        975136,
+        256294,
+        487151,
+        137778,
+        672092
+      ]
+    },
+    "source_index": 102,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      137778,
+      256294,
+      487151,
+      672092,
+      975136
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "firefighter",
+    "prompt": "a photo of a firefighter wearing turnout coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        233636,
+        679364,
+        550664,
+        710805,
+        255287
+      ],
+      "pipeline_finalXL": [
+        233636,
+        679364,
+        550664,
+        710805,
+        255287
+      ]
+    },
+    "source_index": 103,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      233636,
+      255287,
+      550664,
+      679364,
+      710805
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "firefighter",
+    "prompt": "a photo of a firefighter without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        423232,
+        141832,
+        934794,
+        143860,
+        482364
+      ],
+      "pipeline_finalXL": [
+        423232,
+        141832,
+        934794,
+        143860,
+        482364
+      ]
+    },
+    "source_index": 104,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      141832,
+      143860,
+      423232,
+      482364,
+      934794
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "flight_attendant",
+    "prompt": "a photo of a female flight attendant",
+    "seeds_by_model": {
+      "pipeline_final": [
+        799330,
+        361650,
+        475190,
+        320281,
+        815198
+      ],
+      "pipeline_finalXL": [
+        799330,
+        361650,
+        475190,
+        320281,
+        815198
+      ]
+    },
+    "source_index": 105,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      320281,
+      361650,
+      475190,
+      799330,
+      815198
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "flight_attendant",
+    "prompt": "a photo of a flight attendant without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        526117,
+        687080,
+        207786,
+        470858,
+        918011
+      ],
+      "pipeline_finalXL": [
+        526117,
+        687080,
+        207786,
+        470858,
+        918011
+      ]
+    },
+    "source_index": 106,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      207786,
+      470858,
+      526117,
+      687080,
+      918011
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "flight_attendant",
+    "prompt": "a photo of a flight attendant smiling",
+    "seeds_by_model": {
+      "pipeline_final": [
+        262060,
+        348237,
+        750810,
+        270395,
+        885884
+      ],
+      "pipeline_finalXL": [
+        262060,
+        348237,
+        750810,
+        270395,
+        885884
+      ]
+    },
+    "source_index": 107,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      262060,
+      270395,
+      348237,
+      750810,
+      885884
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "game_developer",
+    "prompt": "a photo of a male game developer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        532322,
+        125990,
+        950155,
+        285652,
+        938742
+      ],
+      "pipeline_finalXL": [
+        532322,
+        125990,
+        950155,
+        285652,
+        938742
+      ]
+    },
+    "source_index": 108,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      125990,
+      285652,
+      532322,
+      938742,
+      950155
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "game_developer",
+    "prompt": "a photo of a game developer with a monitor",
+    "seeds_by_model": {
+      "pipeline_final": [
+        531712,
+        448321,
+        920391,
+        288073,
+        872343
+      ],
+      "pipeline_finalXL": [
+        531712,
+        448321,
+        920391,
+        288073,
+        872343
+      ]
+    },
+    "source_index": 109,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      288073,
+      448321,
+      531712,
+      872343,
+      920391
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "guard",
+    "prompt": "a photo of a guard wearing a head covering",
+    "seeds_by_model": {
+      "pipeline_final": [
+        870763,
+        802448,
+        941204,
+        950132,
+        360222
+      ],
+      "pipeline_finalXL": [
+        870763,
+        802448,
+        941204,
+        950132,
+        360222
+      ]
+    },
+    "source_index": 110,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      360222,
+      802448,
+      870763,
+      941204,
+      950132
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "guard",
+    "prompt": "a photo of a guard wearing jacket",
+    "seeds_by_model": {
+      "pipeline_final": [
+        213346,
+        835343,
+        266931,
+        925622,
+        379766
+      ],
+      "pipeline_finalXL": [
+        213346,
+        835343,
+        266931,
+        925622,
+        379766
+      ]
+    },
+    "source_index": 111,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      213346,
+      266931,
+      379766,
+      835343,
+      925622
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "guard",
+    "prompt": "a photo of a guard without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        501124,
+        593554,
+        309267,
+        333238,
+        140605
+      ],
+      "pipeline_finalXL": [
+        501124,
+        593554,
+        309267,
+        333238,
+        140605
+      ]
+    },
+    "source_index": 112,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      140605,
+      309267,
+      333238,
+      501124,
+      593554
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "guard",
+    "prompt": "a photo of a guard wearing a hat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        582662,
+        960394,
+        420015,
+        466643,
+        956253
+      ],
+      "pipeline_finalXL": [
+        582662,
+        960394,
+        420015,
+        466643,
+        956253
+      ]
+    },
+    "source_index": 113,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      420015,
+      466643,
+      582662,
+      956253,
+      960394
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "guard",
+    "prompt": "a photo of a male guard",
+    "seeds_by_model": {
+      "pipeline_final": [
+        124813,
+        333752,
+        338651,
+        933980,
+        792094
+      ],
+      "pipeline_finalXL": [
+        124813,
+        333752,
+        338651,
+        933980,
+        792094
+      ]
+    },
+    "source_index": 114,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      124813,
+      333752,
+      338651,
+      792094,
+      933980
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "hairdresser",
+    "prompt": "a photo of a hairdresser with a mirror",
+    "seeds_by_model": {
+      "pipeline_final": [
+        392136,
+        444207,
+        302511,
+        172792,
+        517821
+      ],
+      "pipeline_finalXL": [
+        392136,
+        444207,
+        302511,
+        172792,
+        517821
+      ]
+    },
+    "source_index": 115,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      172792,
+      302511,
+      392136,
+      444207,
+      517821
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "hairdresser",
+    "prompt": "a photo of a hairdresser with a salon chair",
+    "seeds_by_model": {
+      "pipeline_final": [
+        772642,
+        634150,
+        910891,
+        468203,
+        392683
+      ],
+      "pipeline_finalXL": [
+        772642,
+        634150,
+        910891,
+        468203,
+        392683
+      ]
+    },
+    "source_index": 116,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      392683,
+      468203,
+      634150,
+      772642,
+      910891
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "hairdresser",
+    "prompt": "a photo of a hairdresser without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        984642,
+        447235,
+        812526,
+        519093,
+        662262
+      ],
+      "pipeline_finalXL": [
+        984642,
+        447235,
+        812526,
+        519093,
+        662262
+      ]
+    },
+    "source_index": 117,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      447235,
+      519093,
+      662262,
+      812526,
+      984642
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "housekeeper",
+    "prompt": "a photo of a housekeeper wearing apron",
+    "seeds_by_model": {
+      "pipeline_final": [
+        287241,
+        128941,
+        373903,
+        220944,
+        708792
+      ],
+      "pipeline_finalXL": [
+        287241,
+        128941,
+        373903,
+        220944,
+        708792
+      ]
+    },
+    "source_index": 118,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      128941,
+      220944,
+      287241,
+      373903,
+      708792
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "housekeeper",
+    "prompt": "a photo of a housekeeper without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        213668,
+        725550,
+        555673,
+        140115,
+        378361
+      ],
+      "pipeline_finalXL": [
+        213668,
+        725550,
+        555673,
+        140115,
+        378361
+      ]
+    },
+    "source_index": 119,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      140115,
+      213668,
+      378361,
+      555673,
+      725550
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "housekeeper",
+    "prompt": "a photo of a female housekeeper",
+    "seeds_by_model": {
+      "pipeline_final": [
+        462479,
+        428914,
+        924629,
+        557592,
+        863934
+      ],
+      "pipeline_finalXL": [
+        462479,
+        428914,
+        924629,
+        557592,
+        863934
+      ]
+    },
+    "source_index": 120,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      428914,
+      462479,
+      557592,
+      863934,
+      924629
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "janitor",
+    "prompt": "a photo of a janitor standing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        503906,
+        735656,
+        636265,
+        221263,
+        704596
+      ],
+      "pipeline_finalXL": [
+        503906,
+        735656,
+        636265,
+        221263,
+        704596
+      ]
+    },
+    "source_index": 121,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      221263,
+      503906,
+      636265,
+      704596,
+      735656
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "janitor",
+    "prompt": "a photo of a janitor without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        367095,
+        146542,
+        843215,
+        299312,
+        557239
+      ],
+      "pipeline_finalXL": [
+        367095,
+        146542,
+        843215,
+        299312,
+        557239
+      ]
+    },
+    "source_index": 122,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      146542,
+      299312,
+      367095,
+      557239,
+      843215
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "janitor",
+    "prompt": "a photo of a male janitor",
+    "seeds_by_model": {
+      "pipeline_final": [
+        101773,
+        645175,
+        945687,
+        820221,
+        664607
+      ],
+      "pipeline_finalXL": [
+        101773,
+        645175,
+        945687,
+        820221,
+        664607
+      ]
+    },
+    "source_index": 123,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      101773,
+      645175,
+      664607,
+      820221,
+      945687
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "janitor",
+    "prompt": "a photo of a janitor with a bucket",
+    "seeds_by_model": {
+      "pipeline_final": [
+        803204,
+        877991,
+        872840,
+        854377,
+        306606
+      ],
+      "pipeline_finalXL": [
+        803204,
+        877991,
+        872840,
+        854377,
+        306606
+      ]
+    },
+    "source_index": 124,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      306606,
+      803204,
+      854377,
+      872840,
+      877991
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "janitor",
+    "prompt": "a photo of a janitor wearing gloves",
+    "seeds_by_model": {
+      "pipeline_final": [
+        796503,
+        552248,
+        481913,
+        173372,
+        446239
+      ],
+      "pipeline_finalXL": [
+        796503,
+        552248,
+        481913,
+        173372,
+        446239
+      ]
+    },
+    "source_index": 125,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      173372,
+      446239,
+      481913,
+      552248,
+      796503
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "journalist",
+    "prompt": "a photo of a journalist wearing suit jacket",
+    "seeds_by_model": {
+      "pipeline_final": [
+        429164,
+        753425,
+        230679,
+        989208,
+        795612
+      ],
+      "pipeline_finalXL": [
+        429164,
+        753425,
+        230679,
+        989208,
+        795612
+      ]
+    },
+    "source_index": 126,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      230679,
+      429164,
+      753425,
+      795612,
+      989208
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "journalist",
+    "prompt": "a photo of a journalist with a camera",
+    "seeds_by_model": {
+      "pipeline_final": [
+        631756,
+        424308,
+        799287,
+        854717,
+        414910
+      ],
+      "pipeline_finalXL": [
+        631756,
+        424308,
+        799287,
+        854717,
+        414910
+      ]
+    },
+    "source_index": 127,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      414910,
+      424308,
+      631756,
+      799287,
+      854717
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "judge",
+    "prompt": "a photo of a judge wearing robe",
+    "seeds_by_model": {
+      "pipeline_final": [
+        410016,
+        831076,
+        528231,
+        442027,
+        521947
+      ],
+      "pipeline_finalXL": [
+        410016,
+        831076,
+        528231,
+        442027,
+        521947
+      ]
+    },
+    "source_index": 128,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      410016,
+      442027,
+      521947,
+      528231,
+      831076
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "judge",
+    "prompt": "a photo of a male judge",
+    "seeds_by_model": {
+      "pipeline_final": [
+        540869,
+        301158,
+        797229,
+        233470,
+        681343
+      ],
+      "pipeline_finalXL": [
+        540869,
+        301158,
+        797229,
+        233470,
+        681343
+      ]
+    },
+    "source_index": 129,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      233470,
+      301158,
+      540869,
+      681343,
+      797229
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "judge",
+    "prompt": "a photo of a judge in warm lighting",
+    "seeds_by_model": {
+      "pipeline_final": [
+        745414,
+        810219,
+        282480,
+        497562,
+        884475
+      ],
+      "pipeline_finalXL": [
+        745414,
+        810219,
+        282480,
+        497562,
+        884475
+      ]
+    },
+    "source_index": 130,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      282480,
+      497562,
+      745414,
+      810219,
+      884475
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "judge",
+    "prompt": "a photo of a judge wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        525800,
+        696750,
+        415568,
+        974224,
+        674553
+      ],
+      "pipeline_finalXL": [
+        525800,
+        696750,
+        415568,
+        974224,
+        674553
+      ]
+    },
+    "source_index": 131,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      415568,
+      525800,
+      674553,
+      696750,
+      974224
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "laborer",
+    "prompt": "a photo of a laborer with a medium skin tone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        320392,
+        100425,
+        418635,
+        400850,
+        550770
+      ],
+      "pipeline_finalXL": [
+        320392,
+        100425,
+        418635,
+        400850,
+        550770
+      ]
+    },
+    "source_index": 132,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      100425,
+      320392,
+      400850,
+      418635,
+      550770
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "laborer",
+    "prompt": "a photo of a laborer wearing a head covering",
+    "seeds_by_model": {
+      "pipeline_final": [
+        736130,
+        786508,
+        437902,
+        923927,
+        708158
+      ],
+      "pipeline_finalXL": [
+        736130,
+        786508,
+        437902,
+        923927,
+        708158
+      ]
+    },
+    "source_index": 133,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      437902,
+      708158,
+      736130,
+      786508,
+      923927
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "laborer",
+    "prompt": "a photo of a male laborer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        563246,
+        324082,
+        563638,
+        587575,
+        808446
+      ],
+      "pipeline_finalXL": [
+        563246,
+        324082,
+        563638,
+        587575,
+        808446
+      ]
+    },
+    "source_index": 134,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      324082,
+      563246,
+      563638,
+      587575,
+      808446
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "lawyer",
+    "prompt": "a photo of a lawyer wearing jacket",
+    "seeds_by_model": {
+      "pipeline_final": [
+        932291,
+        636004,
+        934692,
+        596171,
+        871711
+      ],
+      "pipeline_finalXL": [
+        932291,
+        636004,
+        934692,
+        596171,
+        871711
+      ]
+    },
+    "source_index": 135,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      596171,
+      636004,
+      871711,
+      932291,
+      934692
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "lawyer",
+    "prompt": "a photo of a lawyer wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        397571,
+        790855,
+        640490,
+        277934,
+        188914
+      ],
+      "pipeline_finalXL": [
+        397571,
+        790855,
+        640490,
+        277934,
+        188914
+      ]
+    },
+    "source_index": 136,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      188914,
+      277934,
+      397571,
+      640490,
+      790855
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "lawyer",
+    "prompt": "a photo of a male lawyer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        197923,
+        796101,
+        763686,
+        451470,
+        749342
+      ],
+      "pipeline_finalXL": [
+        197923,
+        796101,
+        763686,
+        451470,
+        749342
+      ]
+    },
+    "source_index": 137,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      197923,
+      451470,
+      749342,
+      763686,
+      796101
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "librarian",
+    "prompt": "a photo of a librarian with a bookshelf",
+    "seeds_by_model": {
+      "pipeline_final": [
+        958179,
+        805477,
+        346277,
+        887625,
+        425498
+      ],
+      "pipeline_finalXL": [
+        958179,
+        805477,
+        346277,
+        887625,
+        425498
+      ]
+    },
+    "source_index": 138,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      346277,
+      425498,
+      805477,
+      887625,
+      958179
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "librarian",
+    "prompt": "a photo of a librarian wearing eyeglasses",
+    "seeds_by_model": {
+      "pipeline_final": [
+        335552,
+        308802,
+        125611,
+        945742,
+        254511
+      ],
+      "pipeline_finalXL": [
+        335552,
+        308802,
+        125611,
+        945742,
+        254511
+      ]
+    },
+    "source_index": 139,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      125611,
+      254511,
+      308802,
+      335552,
+      945742
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "librarian",
+    "prompt": "a photo of a librarian wearing eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        356736,
+        991014,
+        740967,
+        598216,
+        148458
+      ],
+      "pipeline_finalXL": [
+        356736,
+        991014,
+        740967,
+        598216,
+        148458
+      ]
+    },
+    "source_index": 140,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      148458,
+      356736,
+      598216,
+      740967,
+      991014
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "librarian",
+    "prompt": "a photo of a librarian with a light skin tone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        577538,
+        760356,
+        534572,
+        176365,
+        905819
+      ],
+      "pipeline_finalXL": [
+        577538,
+        760356,
+        534572,
+        176365,
+        905819
+      ]
+    },
+    "source_index": 141,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      176365,
+      534572,
+      577538,
+      760356,
+      905819
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "machinist",
+    "prompt": "a photo of a male machinist",
+    "seeds_by_model": {
+      "pipeline_final": [
+        830180,
+        502630,
+        303880,
+        703634,
+        853240
+      ],
+      "pipeline_finalXL": [
+        830180,
+        502630,
+        303880,
+        703634,
+        853240
+      ]
+    },
+    "source_index": 142,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      303880,
+      502630,
+      703634,
+      830180,
+      853240
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "machinist",
+    "prompt": "a photo of a machinist in a medium framing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        254739,
+        787926,
+        618392,
+        519066,
+        355836
+      ],
+      "pipeline_finalXL": [
+        254739,
+        787926,
+        618392,
+        519066,
+        355836
+      ]
+    },
+    "source_index": 143,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      254739,
+      355836,
+      519066,
+      618392,
+      787926
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "manager",
+    "prompt": "a photo of a male manager",
+    "seeds_by_model": {
+      "pipeline_final": [
+        821024,
+        887443,
+        211764,
+        105814,
+        907451
+      ],
+      "pipeline_finalXL": [
+        821024,
+        887443,
+        211764,
+        105814,
+        907451
+      ]
+    },
+    "source_index": 144,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      105814,
+      211764,
+      821024,
+      887443,
+      907451
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "manager",
+    "prompt": "a photo of a manager wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        943170,
+        545798,
+        916232,
+        284430,
+        329471
+      ],
+      "pipeline_finalXL": [
+        943170,
+        545798,
+        916232,
+        284430,
+        329471
+      ]
+    },
+    "source_index": 145,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      284430,
+      329471,
+      545798,
+      916232,
+      943170
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "marketing_specialist",
+    "prompt": "a photo of a marketing specialist with a light skin tone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        684482,
+        587115,
+        643118,
+        152657,
+        829716
+      ],
+      "pipeline_finalXL": [
+        684482,
+        587115,
+        643118,
+        152657,
+        829716
+      ]
+    },
+    "source_index": 146,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      152657,
+      587115,
+      643118,
+      684482,
+      829716
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "mechanic",
+    "prompt": "a photo of a mechanic without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        239816,
+        989545,
+        578634,
+        227253,
+        361303
+      ],
+      "pipeline_finalXL": [
+        239816,
+        989545,
+        578634,
+        227253,
+        361303
+      ]
+    },
+    "source_index": 147,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      227253,
+      239816,
+      361303,
+      578634,
+      989545
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "mechanic",
+    "prompt": "a photo of a mechanic with brown hair",
+    "seeds_by_model": {
+      "pipeline_final": [
+        656932,
+        800005,
+        587213,
+        940346,
+        686075
+      ],
+      "pipeline_finalXL": [
+        656932,
+        800005,
+        587213,
+        940346,
+        686075
+      ]
+    },
+    "source_index": 148,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      587213,
+      656932,
+      686075,
+      800005,
+      940346
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "mechanic",
+    "prompt": "a photo of a mechanic in cool lighting",
+    "seeds_by_model": {
+      "pipeline_final": [
+        891937,
+        564071,
+        432711,
+        742412,
+        724377
+      ],
+      "pipeline_finalXL": [
+        891937,
+        564071,
+        432711,
+        742412,
+        724377
+      ]
+    },
+    "source_index": 149,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      432711,
+      564071,
+      724377,
+      742412,
+      891937
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "mechanic",
+    "prompt": "a photo of a male mechanic",
+    "seeds_by_model": {
+      "pipeline_final": [
+        970914,
+        954596,
+        854213,
+        547470,
+        629298
+      ],
+      "pipeline_finalXL": [
+        970914,
+        954596,
+        854213,
+        547470,
+        629298
+      ]
+    },
+    "source_index": 150,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      547470,
+      629298,
+      854213,
+      954596,
+      970914
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "mechanic",
+    "prompt": "a photo of a mechanic with an engine",
+    "seeds_by_model": {
+      "pipeline_final": [
+        879779,
+        597732,
+        266889,
+        674485,
+        567574
+      ],
+      "pipeline_finalXL": [
+        879779,
+        597732,
+        266889,
+        674485,
+        567574
+      ]
+    },
+    "source_index": 151,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      266889,
+      567574,
+      597732,
+      674485,
+      879779
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "mover",
+    "prompt": "a photo of a mover without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        371782,
+        888295,
+        359249,
+        980660,
+        571932
+      ],
+      "pipeline_finalXL": [
+        371782,
+        888295,
+        359249,
+        980660,
+        571932
+      ]
+    },
+    "source_index": 152,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      359249,
+      371782,
+      571932,
+      888295,
+      980660
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "mover",
+    "prompt": "a photo of a male mover",
+    "seeds_by_model": {
+      "pipeline_final": [
+        903013,
+        390782,
+        915451,
+        768636,
+        646622
+      ],
+      "pipeline_finalXL": [
+        903013,
+        390782,
+        915451,
+        768636,
+        646622
+      ]
+    },
+    "source_index": 153,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      390782,
+      646622,
+      768636,
+      903013,
+      915451
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "mover",
+    "prompt": "a photo of a mover with a cardboard box",
+    "seeds_by_model": {
+      "pipeline_final": [
+        387936,
+        608136,
+        757193,
+        350867,
+        561239
+      ],
+      "pipeline_finalXL": [
+        387936,
+        608136,
+        757193,
+        350867,
+        561239
+      ]
+    },
+    "source_index": 154,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      350867,
+      387936,
+      561239,
+      608136,
+      757193
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "musician",
+    "prompt": "a photo of a male musician",
+    "seeds_by_model": {
+      "pipeline_final": [
+        848206,
+        384913,
+        399607,
+        345884,
+        181247
+      ],
+      "pipeline_finalXL": [
+        848206,
+        384913,
+        399607,
+        345884,
+        181247
+      ]
+    },
+    "source_index": 155,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      181247,
+      345884,
+      384913,
+      399607,
+      848206
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "musician",
+    "prompt": "a photo of a musician with a guitar",
+    "seeds_by_model": {
+      "pipeline_final": [
+        452161,
+        245095,
+        435239,
+        184491,
+        666390
+      ],
+      "pipeline_finalXL": [
+        452161,
+        245095,
+        435239,
+        184491,
+        666390
+      ]
+    },
+    "source_index": 156,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      184491,
+      245095,
+      435239,
+      452161,
+      666390
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "musician",
+    "prompt": "a photo of a musician wearing jacket",
+    "seeds_by_model": {
+      "pipeline_final": [
+        260227,
+        501641,
+        827659,
+        258157,
+        342495
+      ],
+      "pipeline_finalXL": [
+        260227,
+        501641,
+        827659,
+        258157,
+        342495
+      ]
+    },
+    "source_index": 157,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      258157,
+      260227,
+      342495,
+      501641,
+      827659
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "novelist",
+    "prompt": "a photo of a male novelist",
+    "seeds_by_model": {
+      "pipeline_final": [
+        527398,
+        535020,
+        167348,
+        324345,
+        840734
+      ],
+      "pipeline_finalXL": [
+        527398,
+        535020,
+        167348,
+        324345,
+        840734
+      ]
+    },
+    "source_index": 158,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      167348,
+      324345,
+      527398,
+      535020,
+      840734
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "nurse",
+    "prompt": "a photo of a nurse without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        535970,
+        668969,
+        446954,
+        165290,
+        588557
+      ],
+      "pipeline_finalXL": [
+        535970,
+        668969,
+        446954,
+        165290,
+        588557
+      ]
+    },
+    "source_index": 159,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      165290,
+      446954,
+      535970,
+      588557,
+      668969
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "nurse",
+    "prompt": "a photo of a female nurse",
+    "seeds_by_model": {
+      "pipeline_final": [
+        973349,
+        540552,
+        508396,
+        316881,
+        907189
+      ],
+      "pipeline_finalXL": [
+        973349,
+        540552,
+        508396,
+        316881,
+        907189
+      ]
+    },
+    "source_index": 160,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      316881,
+      508396,
+      540552,
+      907189,
+      973349
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "nurse",
+    "prompt": "a photo of a nurse wearing scrub top",
+    "seeds_by_model": {
+      "pipeline_final": [
+        120480,
+        902784,
+        712451,
+        998348,
+        829308
+      ],
+      "pipeline_finalXL": [
+        120480,
+        902784,
+        712451,
+        998348,
+        829308
+      ]
+    },
+    "source_index": 161,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      120480,
+      712451,
+      829308,
+      902784,
+      998348
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "paramedic",
+    "prompt": "a photo of a paramedic with a light skin tone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        106182,
+        703655,
+        498858,
+        468845,
+        600149
+      ],
+      "pipeline_finalXL": [
+        106182,
+        703655,
+        498858,
+        468845,
+        600149
+      ]
+    },
+    "source_index": 162,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      106182,
+      468845,
+      498858,
+      600149,
+      703655
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "paramedic",
+    "prompt": "a photo of a paramedic without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        508930,
+        976325,
+        994905,
+        890075,
+        413118
+      ],
+      "pipeline_finalXL": [
+        508930,
+        976325,
+        994905,
+        890075,
+        413118
+      ]
+    },
+    "source_index": 163,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      413118,
+      508930,
+      890075,
+      976325,
+      994905
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "pharmacist",
+    "prompt": "a photo of a pharmacist wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        664365,
+        870319,
+        539375,
+        883826,
+        672661
+      ],
+      "pipeline_finalXL": [
+        664365,
+        870319,
+        539375,
+        883826,
+        672661
+      ]
+    },
+    "source_index": 164,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      539375,
+      664365,
+      672661,
+      870319,
+      883826
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "pharmacist",
+    "prompt": "a photo of a pharmacist wearing lab coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        330080,
+        938722,
+        611945,
+        732556,
+        331251
+      ],
+      "pipeline_finalXL": [
+        330080,
+        938722,
+        611945,
+        732556,
+        331251
+      ]
+    },
+    "source_index": 165,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      330080,
+      331251,
+      611945,
+      732556,
+      938722
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "pharmacist",
+    "prompt": "a photo of a pharmacist in a medium framing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        130434,
+        507746,
+        557007,
+        609232,
+        386193
+      ],
+      "pipeline_finalXL": [
+        130434,
+        507746,
+        557007,
+        609232,
+        386193
+      ]
+    },
+    "source_index": 166,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      130434,
+      386193,
+      507746,
+      557007,
+      609232
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "photographer",
+    "prompt": "a photo of a photographer standing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        812131,
+        452457,
+        936912,
+        523956,
+        801364
+      ],
+      "pipeline_finalXL": [
+        812131,
+        452457,
+        936912,
+        523956,
+        801364
+      ]
+    },
+    "source_index": 167,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      452457,
+      523956,
+      801364,
+      812131,
+      936912
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "photographer",
+    "prompt": "a photo of a photographer with a light skin tone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        233827,
+        273061,
+        590094,
+        981334,
+        859359
+      ],
+      "pipeline_finalXL": [
+        233827,
+        273061,
+        590094,
+        981334,
+        859359
+      ]
+    },
+    "source_index": 168,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      233827,
+      273061,
+      590094,
+      859359,
+      981334
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "photographer",
+    "prompt": "a photo of a photographer with a camera",
+    "seeds_by_model": {
+      "pipeline_final": [
+        752483,
+        720644,
+        660069,
+        513160,
+        128276
+      ],
+      "pipeline_finalXL": [
+        752483,
+        720644,
+        660069,
+        513160,
+        128276
+      ]
+    },
+    "source_index": 169,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      128276,
+      513160,
+      660069,
+      720644,
+      752483
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "physician",
+    "prompt": "a photo of a physician wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        128418,
+        795205,
+        773971,
+        188025,
+        691807
+      ],
+      "pipeline_finalXL": [
+        128418,
+        795205,
+        773971,
+        188025,
+        691807
+      ]
+    },
+    "source_index": 170,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      128418,
+      188025,
+      691807,
+      773971,
+      795205
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "physician",
+    "prompt": "a photo of a physician with a stethoscope",
+    "seeds_by_model": {
+      "pipeline_final": [
+        242291,
+        152727,
+        549433,
+        290556,
+        584125
+      ],
+      "pipeline_finalXL": [
+        242291,
+        152727,
+        549433,
+        290556,
+        584125
+      ]
+    },
+    "source_index": 171,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      152727,
+      242291,
+      290556,
+      549433,
+      584125
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "physician",
+    "prompt": "a photo of a physician wearing lab coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        497519,
+        576786,
+        321941,
+        443254,
+        372793
+      ],
+      "pipeline_finalXL": [
+        497519,
+        576786,
+        321941,
+        443254,
+        372793
+      ]
+    },
+    "source_index": 172,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      321941,
+      372793,
+      443254,
+      497519,
+      576786
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "physicist",
+    "prompt": "a photo of a physicist wearing lab coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        442722,
+        497542,
+        453894,
+        391773,
+        898207
+      ],
+      "pipeline_finalXL": [
+        442722,
+        497542,
+        453894,
+        391773,
+        898207
+      ]
+    },
+    "source_index": 173,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      391773,
+      442722,
+      453894,
+      497542,
+      898207
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "physicist",
+    "prompt": "a photo of a physicist wearing eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        975467,
+        364525,
+        972335,
+        542042,
+        888539
+      ],
+      "pipeline_finalXL": [
+        975467,
+        364525,
+        972335,
+        542042,
+        888539
+      ]
+    },
+    "source_index": 174,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      364525,
+      542042,
+      888539,
+      972335,
+      975467
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "physicist",
+    "prompt": "a photo of a physicist wearing eyeglasses",
+    "seeds_by_model": {
+      "pipeline_final": [
+        593152,
+        885408,
+        120324,
+        665621,
+        185884
+      ],
+      "pipeline_finalXL": [
+        593152,
+        885408,
+        120324,
+        665621,
+        185884
+      ]
+    },
+    "source_index": 175,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      120324,
+      185884,
+      593152,
+      665621,
+      885408
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "pilot",
+    "prompt": "a photo of a male pilot",
+    "seeds_by_model": {
+      "pipeline_final": [
+        335113,
+        171951,
+        466960,
+        154615,
+        781725
+      ],
+      "pipeline_finalXL": [
+        335113,
+        171951,
+        466960,
+        154615,
+        781725
+      ]
+    },
+    "source_index": 176,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      154615,
+      171951,
+      335113,
+      466960,
+      781725
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "playwright",
+    "prompt": "a photo of a playwright with a light skin tone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        142213,
+        919182,
+        783414,
+        890870,
+        132537
+      ],
+      "pipeline_finalXL": [
+        142213,
+        919182,
+        783414,
+        890870,
+        132537
+      ]
+    },
+    "source_index": 177,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      132537,
+      142213,
+      783414,
+      890870,
+      919182
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "playwright",
+    "prompt": "a photo of a playwright wearing eyeglasses",
+    "seeds_by_model": {
+      "pipeline_final": [
+        309044,
+        121369,
+        979995,
+        751517,
+        359295
+      ],
+      "pipeline_finalXL": [
+        309044,
+        121369,
+        979995,
+        751517,
+        359295
+      ]
+    },
+    "source_index": 178,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      121369,
+      309044,
+      359295,
+      751517,
+      979995
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "playwright",
+    "prompt": "a photo of a playwright wearing eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        232352,
+        259784,
+        350132,
+        596564,
+        801978
+      ],
+      "pipeline_finalXL": [
+        232352,
+        259784,
+        350132,
+        596564,
+        801978
+      ]
+    },
+    "source_index": 179,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      232352,
+      259784,
+      350132,
+      596564,
+      801978
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "playwright",
+    "prompt": "a photo of a male playwright",
+    "seeds_by_model": {
+      "pipeline_final": [
+        833442,
+        691364,
+        587623,
+        328552,
+        219946
+      ],
+      "pipeline_finalXL": [
+        833442,
+        691364,
+        587623,
+        328552,
+        219946
+      ]
+    },
+    "source_index": 180,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      219946,
+      328552,
+      587623,
+      691364,
+      833442
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "plumber",
+    "prompt": "a photo of a male plumber",
+    "seeds_by_model": {
+      "pipeline_final": [
+        275939,
+        368690,
+        904150,
+        735324,
+        486814
+      ],
+      "pipeline_finalXL": [
+        275939,
+        368690,
+        904150,
+        735324,
+        486814
+      ]
+    },
+    "source_index": 181,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      275939,
+      368690,
+      486814,
+      735324,
+      904150
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "plumber",
+    "prompt": "a photo of a plumber with brown hair",
+    "seeds_by_model": {
+      "pipeline_final": [
+        884256,
+        220096,
+        853252,
+        736745,
+        915573
+      ],
+      "pipeline_finalXL": [
+        884256,
+        220096,
+        853252,
+        736745,
+        915573
+      ]
+    },
+    "source_index": 182,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      220096,
+      736745,
+      853252,
+      884256,
+      915573
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "plumber",
+    "prompt": "a photo of a plumber wearing boots",
+    "seeds_by_model": {
+      "pipeline_final": [
+        426147,
+        213349,
+        271720,
+        706794,
+        959099
+      ],
+      "pipeline_finalXL": [
+        426147,
+        213349,
+        271720,
+        706794,
+        959099
+      ]
+    },
+    "source_index": 183,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      213349,
+      271720,
+      426147,
+      706794,
+      959099
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "plumber",
+    "prompt": "a photo of a plumber with a beard",
+    "seeds_by_model": {
+      "pipeline_final": [
+        493537,
+        427110,
+        810250,
+        126925,
+        703766
+      ],
+      "pipeline_finalXL": [
+        493537,
+        427110,
+        810250,
+        126925,
+        703766
+      ]
+    },
+    "source_index": 184,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      126925,
+      427110,
+      493537,
+      703766,
+      810250
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "poet",
+    "prompt": "a photo of a male poet",
+    "seeds_by_model": {
+      "pipeline_final": [
+        179688,
+        515922,
+        849747,
+        720859,
+        307963
+      ],
+      "pipeline_finalXL": [
+        179688,
+        515922,
+        849747,
+        720859,
+        307963
+      ]
+    },
+    "source_index": 185,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      179688,
+      307963,
+      515922,
+      720859,
+      849747
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "police_officer",
+    "prompt": "a photo of a male police officer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        824161,
+        206851,
+        970917,
+        757711,
+        354646
+      ],
+      "pipeline_finalXL": [
+        824161,
+        206851,
+        970917,
+        757711,
+        354646
+      ]
+    },
+    "source_index": 186,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      206851,
+      354646,
+      757711,
+      824161,
+      970917
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "police_officer",
+    "prompt": "a photo of a police officer without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        416232,
+        991597,
+        831059,
+        910004,
+        817497
+      ],
+      "pipeline_finalXL": [
+        416232,
+        991597,
+        831059,
+        910004,
+        817497
+      ]
+    },
+    "source_index": 187,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      416232,
+      817497,
+      831059,
+      910004,
+      991597
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "police_officer",
+    "prompt": "a photo of a police officer with a neutral expression",
+    "seeds_by_model": {
+      "pipeline_final": [
+        729577,
+        693423,
+        944657,
+        226935,
+        934904
+      ],
+      "pipeline_finalXL": [
+        729577,
+        693423,
+        944657,
+        226935,
+        934904
+      ]
+    },
+    "source_index": 188,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      226935,
+      693423,
+      729577,
+      934904,
+      944657
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "politician",
+    "prompt": "a photo of a politician wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        549186,
+        464069,
+        920652,
+        143064,
+        658623
+      ],
+      "pipeline_finalXL": [
+        549186,
+        464069,
+        920652,
+        143064,
+        658623
+      ]
+    },
+    "source_index": 189,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      143064,
+      464069,
+      549186,
+      658623,
+      920652
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "politician",
+    "prompt": "a photo of a politician wearing jacket",
+    "seeds_by_model": {
+      "pipeline_final": [
+        630538,
+        172306,
+        778998,
+        793655,
+        488571
+      ],
+      "pipeline_finalXL": [
+        630538,
+        172306,
+        778998,
+        793655,
+        488571
+      ]
+    },
+    "source_index": 190,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      172306,
+      488571,
+      630538,
+      778998,
+      793655
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "politician",
+    "prompt": "a photo of a male politician",
+    "seeds_by_model": {
+      "pipeline_final": [
+        962276,
+        457806,
+        540463,
+        113266,
+        990844
+      ],
+      "pipeline_finalXL": [
+        962276,
+        457806,
+        540463,
+        113266,
+        990844
+      ]
+    },
+    "source_index": 191,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      113266,
+      457806,
+      540463,
+      962276,
+      990844
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "railway_conductor",
+    "prompt": "a photo of a male railway conductor",
+    "seeds_by_model": {
+      "pipeline_final": [
+        479781,
+        210665,
+        554582,
+        766459,
+        614013
+      ],
+      "pipeline_finalXL": [
+        479781,
+        210665,
+        554582,
+        766459,
+        614013
+      ]
+    },
+    "source_index": 192,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      210665,
+      479781,
+      554582,
+      614013,
+      766459
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "railway_conductor",
+    "prompt": "a photo of a railway conductor with a train",
+    "seeds_by_model": {
+      "pipeline_final": [
+        556641,
+        841666,
+        968962,
+        260422,
+        582071
+      ],
+      "pipeline_finalXL": [
+        556641,
+        841666,
+        968962,
+        260422,
+        582071
+      ]
+    },
+    "source_index": 193,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      260422,
+      556641,
+      582071,
+      841666,
+      968962
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "railway_conductor",
+    "prompt": "a photo of a railway conductor wearing jacket",
+    "seeds_by_model": {
+      "pipeline_final": [
+        869440,
+        383201,
+        782054,
+        647091,
+        284692
+      ],
+      "pipeline_finalXL": [
+        869440,
+        383201,
+        782054,
+        647091,
+        284692
+      ]
+    },
+    "source_index": 194,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      284692,
+      383201,
+      647091,
+      782054,
+      869440
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "railway_conductor",
+    "prompt": "a photo of a railway conductor wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        947458,
+        745830,
+        606983,
+        912270,
+        664315
+      ],
+      "pipeline_finalXL": [
+        947458,
+        745830,
+        606983,
+        912270,
+        664315
+      ]
+    },
+    "source_index": 195,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      606983,
+      664315,
+      745830,
+      912270,
+      947458
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "receptionist",
+    "prompt": "a photo of a receptionist wearing blazer",
+    "seeds_by_model": {
+      "pipeline_final": [
+        721254,
+        866536,
+        965845,
+        556732,
+        587455
+      ],
+      "pipeline_finalXL": [
+        721254,
+        866536,
+        965845,
+        556732,
+        587455
+      ]
+    },
+    "source_index": 196,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      556732,
+      587455,
+      721254,
+      866536,
+      965845
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "receptionist",
+    "prompt": "a photo of a receptionist without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        437960,
+        357420,
+        971084,
+        381433,
+        993085
+      ],
+      "pipeline_finalXL": [
+        437960,
+        357420,
+        971084,
+        381433,
+        993085
+      ]
+    },
+    "source_index": 197,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      357420,
+      381433,
+      437960,
+      971084,
+      993085
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "receptionist",
+    "prompt": "a photo of a receptionist with brown hair",
+    "seeds_by_model": {
+      "pipeline_final": [
+        886931,
+        190872,
+        392477,
+        572700,
+        355709
+      ],
+      "pipeline_finalXL": [
+        886931,
+        190872,
+        392477,
+        572700,
+        355709
+      ]
+    },
+    "source_index": 198,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      190872,
+      355709,
+      392477,
+      572700,
+      886931
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "receptionist",
+    "prompt": "a photo of a receptionist with a monitor",
+    "seeds_by_model": {
+      "pipeline_final": [
+        800646,
+        739979,
+        587282,
+        497399,
+        697530
+      ],
+      "pipeline_finalXL": [
+        800646,
+        739979,
+        587282,
+        497399,
+        697530
+      ]
+    },
+    "source_index": 199,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      497399,
+      587282,
+      697530,
+      739979,
+      800646
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "receptionist",
+    "prompt": "a photo of a receptionist wearing blouse",
+    "seeds_by_model": {
+      "pipeline_final": [
+        992288,
+        452737,
+        440802,
+        618317,
+        130094
+      ],
+      "pipeline_finalXL": [
+        992288,
+        452737,
+        440802,
+        618317,
+        130094
+      ]
+    },
+    "source_index": 200,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      130094,
+      440802,
+      452737,
+      618317,
+      992288
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "researcher",
+    "prompt": "a photo of a researcher wearing lab coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        611233,
+        936587,
+        290672,
+        322423,
+        472060
+      ],
+      "pipeline_finalXL": [
+        611233,
+        936587,
+        290672,
+        322423,
+        472060
+      ]
+    },
+    "source_index": 201,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      290672,
+      322423,
+      472060,
+      611233,
+      936587
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "researcher",
+    "prompt": "a photo of a researcher in a medium framing",
+    "seeds_by_model": {
+      "pipeline_final": [
+        456871,
+        835244,
+        370902,
+        725113,
+        393243
+      ],
+      "pipeline_finalXL": [
+        456871,
+        835244,
+        370902,
+        725113,
+        393243
+      ]
+    },
+    "source_index": 202,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      370902,
+      393243,
+      456871,
+      725113,
+      835244
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "researcher",
+    "prompt": "a photo of a researcher wearing eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        682789,
+        300337,
+        110644,
+        389688,
+        641722
+      ],
+      "pipeline_finalXL": [
+        682789,
+        300337,
+        110644,
+        389688,
+        641722
+      ]
+    },
+    "source_index": 203,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      110644,
+      300337,
+      389688,
+      641722,
+      682789
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "scientist",
+    "prompt": "a photo of a scientist with a light skin tone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        189771,
+        855053,
+        612311,
+        353080,
+        526170
+      ],
+      "pipeline_finalXL": [
+        189771,
+        855053,
+        612311,
+        353080,
+        526170
+      ]
+    },
+    "source_index": 204,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      189771,
+      353080,
+      526170,
+      612311,
+      855053
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "scientist",
+    "prompt": "a photo of a scientist in cool lighting",
+    "seeds_by_model": {
+      "pipeline_final": [
+        682144,
+        894993,
+        599219,
+        824156,
+        351997
+      ],
+      "pipeline_finalXL": [
+        682144,
+        894993,
+        599219,
+        824156,
+        351997
+      ]
+    },
+    "source_index": 205,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      351997,
+      599219,
+      682144,
+      824156,
+      894993
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "scientist",
+    "prompt": "a photo of a scientist wearing eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        614663,
+        846420,
+        569945,
+        931450,
+        777278
+      ],
+      "pipeline_finalXL": [
+        614663,
+        846420,
+        569945,
+        931450,
+        777278
+      ]
+    },
+    "source_index": 206,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      569945,
+      614663,
+      777278,
+      846420,
+      931450
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "scientist",
+    "prompt": "a photo of a scientist wearing lab coat",
+    "seeds_by_model": {
+      "pipeline_final": [
+        118080,
+        197573,
+        332360,
+        524045,
+        408528
+      ],
+      "pipeline_finalXL": [
+        118080,
+        197573,
+        332360,
+        524045,
+        408528
+      ]
+    },
+    "source_index": 207,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      118080,
+      197573,
+      332360,
+      408528,
+      524045
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "screenwriter",
+    "prompt": "a photo of a screenwriter wearing eyeglasses",
+    "seeds_by_model": {
+      "pipeline_final": [
+        709805,
+        825391,
+        355123,
+        796212,
+        421080
+      ],
+      "pipeline_finalXL": [
+        709805,
+        825391,
+        355123,
+        796212,
+        421080
+      ]
+    },
+    "source_index": 208,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      355123,
+      421080,
+      709805,
+      796212,
+      825391
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "screenwriter",
+    "prompt": "a photo of a screenwriter with brown hair",
+    "seeds_by_model": {
+      "pipeline_final": [
+        486945,
+        680358,
+        460455,
+        656711,
+        596249
+      ],
+      "pipeline_finalXL": [
+        486945,
+        680358,
+        460455,
+        656711,
+        596249
+      ]
+    },
+    "source_index": 209,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      460455,
+      486945,
+      596249,
+      656711,
+      680358
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "seamstress",
+    "prompt": "a photo of a seamstress with a sewing machine",
+    "seeds_by_model": {
+      "pipeline_final": [
+        468900,
+        677124,
+        446859,
+        882169,
+        546173
+      ],
+      "pipeline_finalXL": [
+        468900,
+        677124,
+        446859,
+        882169,
+        546173
+      ]
+    },
+    "source_index": 210,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      446859,
+      468900,
+      546173,
+      677124,
+      882169
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "seamstress",
+    "prompt": "a photo of a seamstress wearing apron",
+    "seeds_by_model": {
+      "pipeline_final": [
+        836996,
+        575786,
+        384076,
+        421517,
+        363615
+      ],
+      "pipeline_finalXL": [
+        836996,
+        575786,
+        384076,
+        421517,
+        363615
+      ]
+    },
+    "source_index": 211,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      363615,
+      384076,
+      421517,
+      575786,
+      836996
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "seamstress",
+    "prompt": "a photo of a female seamstress",
+    "seeds_by_model": {
+      "pipeline_final": [
+        856321,
+        341736,
+        301939,
+        226516,
+        430876
+      ],
+      "pipeline_finalXL": [
+        856321,
+        341736,
+        301939,
+        226516,
+        430876
+      ]
+    },
+    "source_index": 212,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      226516,
+      301939,
+      341736,
+      430876,
+      856321
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "seamstress",
+    "prompt": "a photo of a seamstress in warm lighting",
+    "seeds_by_model": {
+      "pipeline_final": [
+        661894,
+        823688,
+        899213,
+        225362,
+        878967
+      ],
+      "pipeline_finalXL": [
+        661894,
+        823688,
+        899213,
+        225362,
+        878967
+      ]
+    },
+    "source_index": 213,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      225362,
+      661894,
+      823688,
+      878967,
+      899213
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "secretary",
+    "prompt": "a photo of a female secretary",
+    "seeds_by_model": {
+      "pipeline_final": [
+        607719,
+        300845,
+        326895,
+        874483,
+        294143
+      ],
+      "pipeline_finalXL": [
+        607719,
+        300845,
+        326895,
+        874483,
+        294143
+      ]
+    },
+    "source_index": 214,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      294143,
+      300845,
+      326895,
+      607719,
+      874483
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "sheriff",
+    "prompt": "a photo of a middle aged sheriff",
+    "seeds_by_model": {
+      "pipeline_final": [
+        859782,
+        650121,
+        389930,
+        897135,
+        718226
+      ],
+      "pipeline_finalXL": [
+        859782,
+        650121,
+        389930,
+        897135,
+        718226
+      ]
+    },
+    "source_index": 215,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      389930,
+      650121,
+      718226,
+      859782,
+      897135
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "sheriff",
+    "prompt": "a photo of a male sheriff",
+    "seeds_by_model": {
+      "pipeline_final": [
+        205409,
+        396745,
+        973074,
+        725780,
+        303547
+      ],
+      "pipeline_finalXL": [
+        205409,
+        396745,
+        973074,
+        725780,
+        303547
+      ]
+    },
+    "source_index": 216,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      205409,
+      303547,
+      396745,
+      725780,
+      973074
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "sheriff",
+    "prompt": "a photo of a sheriff without any eyewear",
+    "seeds_by_model": {
+      "pipeline_final": [
+        338533,
+        478411,
+        410636,
+        416950,
+        288158
+      ],
+      "pipeline_finalXL": [
+        338533,
+        478411,
+        410636,
+        416950,
+        288158
+      ]
+    },
+    "source_index": 217,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      288158,
+      338533,
+      410636,
+      416950,
+      478411
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "sheriff",
+    "prompt": "a photo of a sheriff wearing tie",
+    "seeds_by_model": {
+      "pipeline_final": [
+        842411,
+        660081,
+        114835,
+        387636,
+        232731
+      ],
+      "pipeline_finalXL": [
+        842411,
+        660081,
+        114835,
+        387636,
+        232731
+      ]
+    },
+    "source_index": 218,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      114835,
+      232731,
+      387636,
+      660081,
+      842411
+    ],
+    "n_seeds_missing": 5
+  },
+  {
+    "role": "singer",
+    "prompt": "a photo of a singer with a microphone",
+    "seeds_by_model": {
+      "pipeline_final": [
+        680238,
+        147726,
+        157174,
+        406327,
+        831295
+      ],
+      "pipeline_finalXL": [
+        680238,
+        147726,
+        157174,
+        406327,
+        831295
+      ]
+    },
+    "source_index": 219,
+    "n_seeds_recovered": 5,
+    "n_seeds_expected": 10,
+    "unique_seeds": [
+      147726,
+      157174,
+      406327,
+      680238,
+      831295
+    ],
+    "n_seeds_missing": 5
+  }
+]

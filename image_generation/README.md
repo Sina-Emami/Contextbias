@@ -61,3 +61,16 @@ This project implements a systematic pipeline for generating, filtering, and sam
 - The pipeline is modular; you can extend it to include more axes or context types.
 - For full orthogonal design, both ACTION and LOCATION are used in each prompt.
 - As a model, I used gpt-4.1-mini
+
+## Data files in `ctxbank/`
+
+- `roles.json` and `prompts_alll.json` have been replaced with the verified reconstruction
+  from `datasets/contextbench/` (92 canonical roles from the paper, 1,659 real prompts with
+  recovered per-model seeds — see that folder's README for full provenance).
+- `candidates_all.json` and `context_bank_all.json` are **left as-is from an earlier
+  exploratory run and are stale/unverified** — they cover a different, larger role set (104
+  roles) than the paper's 92, and their `rationale` text and `score` (relevance/neutrality/
+  confound) fields are original LLM-judgment output that cannot be regenerated from static
+  data. Treat these two files as historical artifacts, not ground truth; re-run
+  `generate_candidates.py` / `judge_and_filter.py` against the corrected `roles.json` if you
+  need current versions.

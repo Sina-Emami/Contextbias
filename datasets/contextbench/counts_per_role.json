@@ -1,0 +1,554 @@
+{
+  "accountant": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "actor": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "analyst": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "artist": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "assistant": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "athlete": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 7,
+    "total": 18
+  },
+  "auditor": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "baker": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "bartender": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "biologist": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "blacksmith": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "bus_driver": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "carpenter": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "cashier": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "ceo": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "chef": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "chemist": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "cleaner": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "clerk": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "comedian": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "constructor": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "cook": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "counselor": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "customer_service_representative": {
+    "CF": 3,
+    "CA-R": 10,
+    "CA-U": 8,
+    "total": 21
+  },
+  "dancer": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 7,
+    "total": 18
+  },
+  "designer": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "detective": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "developer": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "doctor": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "editor": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "electrician": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "engineer": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "entrepreneur": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "factory_worker": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "farmer": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "film_director": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "firefighter": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "flight_attendant": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "game_developer": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "guard": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "hairdresser": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "housekeeper": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "janitor": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "journalist": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "judge": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "laborer": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "lawyer": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "librarian": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "machinist": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "manager": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "marketing_specialist": {
+    "CF": 3,
+    "CA-R": 10,
+    "CA-U": 7,
+    "total": 20
+  },
+  "mechanic": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "mover": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "musician": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "novelist": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 7,
+    "total": 18
+  },
+  "nurse": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "paramedic": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "pharmacist": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "photographer": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "physician": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "physicist": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "pilot": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "playwright": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "plumber": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "poet": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "police_officer": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "politician": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "railway_conductor": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "receptionist": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "researcher": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 7,
+    "total": 18
+  },
+  "salesperson": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "scientist": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "screenwriter": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "seamstress": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "secretary": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "sheriff": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 7,
+    "total": 18
+  },
+  "singer": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "social_worker": {
+    "CF": 3,
+    "CA-R": 6,
+    "CA-U": 8,
+    "total": 17
+  },
+  "software_engineer": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "soldier": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 7,
+    "total": 18
+  },
+  "stage_manager": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "supervisor": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "surgeon": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "tailor": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "taxi_driver": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  },
+  "teacher": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "train_driver": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "waiter": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "waitress": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 7,
+    "total": 17
+  },
+  "web_developer": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 7,
+    "total": 18
+  },
+  "welder": {
+    "CF": 3,
+    "CA-R": 7,
+    "CA-U": 8,
+    "total": 18
+  },
+  "writer": {
+    "CF": 3,
+    "CA-R": 8,
+    "CA-U": 8,
+    "total": 19
+  }
+}
