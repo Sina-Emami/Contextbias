@@ -29,13 +29,14 @@
 
 > Text-to-image models learn associations between concepts and visual attributes that underpin many observed forms of stereotypical bias. A key open question is whether these associations are stable or adapt when roles are placed in different contexts. We introduce **ContextBias**, a controlled evaluation framework, and **ContextBench**, a benchmark spanning 92 roles and 1,656 semantically controlled prompts, designed to isolate the effect of contextual variation on role-linked visual representations. Evaluating four state-of-the-art models on 66,240 generated images, we find that placing a role in a semantically unrelated context does not suppress role-linked attributes; instead, attribute concentration increases (mean BI +0.047). Demographic cues, characteristic garments, and role-specific tools remain highly prevalent across context-free, related, and unrelated conditions, and are robust to semantic prompt reformulation. Scene composition and camera framing show the greatest context-sensitivity. These findings reveal a form of stereotypical persistence that remains largely invisible to context-free evaluations, highlighting the need for controlled contextual variation in bias benchmarking.
 
-![ContextBias pipeline overview](assets/pipeline_overview.png)
+<img width="3780" height="1608" alt="pii" src="https://github.com/user-attachments/assets/a3b11a53-f969-44f9-8ba0-55a749a0335a" />
 
 ContextBias measures the stability of role-linked visual associations under contextual variation. It systematically varies location and activity context while keeping role identity fixed, generates images across three contextual conditions, extracts fine-grained visual attributes through a schema-guided vision-language pipeline, and compares the resulting attribute distributions to quantify how much of a learned association persists or changes.
 
 ### Contextual conditions
 
-![Context-free, context-aware related, context-aware unrelated](assets/context_conditions.jpg)
+<img width="1876" height="1007" alt="sum_fig_22" src="https://github.com/user-attachments/assets/26073598-9faa-445f-92de-0607495c2c39" />
+
 
 | Condition | Template | Purpose |
 |---|---|---|
