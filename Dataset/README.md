@@ -39,10 +39,10 @@ This project implements a systematic pipeline for generating, filtering, and sam
 ## Usage
 1. Prepare a list of roles in `roles.json`.
 2. Run the pipeline scripts in order:
-   - `python -m image_generation.ctxbank.generate_candidates --roles roles.json --out candidates.json`
-   - `python -m image_generation.ctxbank.judge_and_filter --infile candidates.json --out context_bank.json`
-   - `python -m image_generation.ctxbank.make_pairs --context_bank context_bank.json --out pairs.json`
-   - `python -m image_generation.ctxbank.prompt_grid --pairs pairs.json --out prompts_for_generation.json`
+   - `python -m Dataset.ctxbank.generate_candidates --roles roles.json --out candidates.json`
+   - `python -m Dataset.ctxbank.judge_and_filter --infile candidates.json --out context_bank.json`
+   - `python -m Dataset.ctxbank.make_pairs --context_bank context_bank.json --out pairs.json`
+   - `python -m Dataset.ctxbank.prompt_grid --pairs pairs.json --out prompts_for_generation.json`
 
 ## Deliverables
 - **Context Bank:** ACTION/LOCATION/SOCIAL/ATTIRE_PROPS × related/unrelated per role.

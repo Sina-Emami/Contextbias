@@ -175,7 +175,7 @@ A human annotation study over 1,200 images with three independent annotators rep
 
 ## Image generation pipeline
 
-Prompt construction and image generation for ContextBench live under `image_generation/ctxbank/`. The pipeline has four stages, run in order:
+Prompt construction and image generation for ContextBench live under `Dataset/ctxbank/`. The pipeline has four stages, run in order:
 
 | # | Script | Purpose | Output |
 |---|---|---|---|
@@ -187,10 +187,10 @@ Prompt construction and image generation for ContextBench live under `image_gene
 Ground-truth biased prompts (for testing bias detection) are generated separately:
 
 ```bash
-python -m image_generation.ctxbank.generate_ground_truth_prompts --roles roles.json --out ground_truth_prompts.json --num 3
+python -m Dataset.ctxbank.generate_ground_truth_prompts --roles roles.json --out ground_truth_prompts.json --num 3
 ```
 
-All prompts are deduplicated before generation, and each image uses multiple random seeds for diversity. Each stage can be run independently; see `image_generation/README.md` for full parameter documentation.
+All prompts are deduplicated before generation, and each image uses multiple random seeds for diversity. Each stage can be run independently; see `Dataset/README.md` for full parameter documentation.
 
 ## Notes
 
