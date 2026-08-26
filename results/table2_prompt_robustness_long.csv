@@ -1,0 +1,41 @@
+prompt_type_category,table_metric,Model,dimension_family,n_labels_tested,mean_pct,median_pct,pct_invariant,mean_p,median_p,cell
+No type,mean baseline prevalence,XL,People,110491,1.6203129666669698,0,NA,NA,NA,1.6
+No type,mean baseline prevalence,XL,Objects,102073,0.3008631077758075,0,NA,NA,NA,0.3
+No type,mean baseline prevalence,XL,Camera,1339,23.076923076923077,0,NA,NA,NA,23.1
+No type,mean baseline prevalence,XL,All,213903,1.1249959093607855,0,NA,NA,NA,1.1
+No type,mean baseline prevalence,3.5,People,102834,1.6617072174572602,0,NA,NA,NA,1.7
+No type,mean baseline prevalence,3.5,Objects,101661,0.2989838777899096,0,NA,NA,NA,0.3
+No type,mean baseline prevalence,3.5,Camera,1339,23.06572068707991,0,NA,NA,NA,23.1
+No type,mean baseline prevalence,3.5,All,205834,1.1278991808933416,0,NA,NA,NA,1.1
+No type,mean baseline prevalence,Flux,People,95755,1.8684141820270492,0,NA,NA,NA,1.9
+No type,mean baseline prevalence,Flux,Objects,94554,0.32235547940859194,0,NA,NA,NA,0.3
+No type,mean baseline prevalence,Flux,Camera,1339,23.054518297236744,0,NA,NA,NA,23.1
+No type,mean baseline prevalence,Flux,All,191648,1.2536525296376688,0,NA,NA,NA,1.3
+No type,mean baseline prevalence,Qwen,People,94835,1.9826013602572878,0,NA,NA,NA,2.0
+No type,mean baseline prevalence,Qwen,Objects,84975,0.35751691674021774,0,NA,NA,NA,0.4
+No type,mean baseline prevalence,Qwen,Camera,1236,24.995954692556634,0,NA,NA,NA,25.0
+No type,mean baseline prevalence,Qwen,All,181046,1.3769704936866871,0,NA,NA,NA,1.4
+No type,mean baseline prevalence,Total,People,403915,1.774729831771535,0,NA,NA,NA,1.8
+No type,mean baseline prevalence,Total,Objects,383263,0.31822795312879143,0,NA,NA,NA,0.3
+No type,mean baseline prevalence,Total,Camera,5253,23.519893394250904,0,NA,NA,NA,23.5
+No type,mean baseline prevalence,Total,All,792431,1.2144338119028666,0,NA,NA,NA,1.2
+Other type,% invariant / mean p-value,XL,People,112083,NA,NA,92.3931372286609,0.720958037428326,0.8537256298129549,92.4/.72
+Other type,% invariant / mean p-value,XL,Objects,101082,NA,NA,95.23851922201777,0.7371762487264492,0.8483117025202374,95.2/.74
+Other type,% invariant / mean p-value,XL,Camera,1326,NA,NA,61.16138763197587,0.3670201203956628,0.22522358041453328,61.2/.37
+Other type,% invariant / mean p-value,XL,All,214491,NA,NA,93.54098773375107,0.7264130334722233,0.8537256298129549,93.5/.73
+Other type,% invariant / mean p-value,3.5,People,103363,NA,NA,92.09968750906997,0.7092141707942589,0.8477951172352766,92.1/.71
+Other type,% invariant / mean p-value,3.5,Objects,100674,NA,NA,95.11790531815562,0.7279404017260757,0.8455132917669986,95.1/.73
+Other type,% invariant / mean p-value,3.5,Camera,1326,NA,NA,57.84313725490197,0.3342811730632722,0.16510344608008265,57.8/.33
+Other type,% invariant / mean p-value,3.5,All,205363,NA,NA,93.3581024819466,0.7159733407413206,0.844754880999342,93.4/.72
+Other type,% invariant / mean p-value,Flux,People,96156,NA,NA,91.86842214734389,0.7111316690498486,0.8541151106774528,91.9/.71
+Other type,% invariant / mean p-value,Flux,Objects,93636,NA,NA,94.6890085010039,0.7283805405561035,0.8484257866894165,94.7/.73
+Other type,% invariant / mean p-value,Flux,Camera,1326,NA,NA,68.92911010558069,0.38893161793635783,0.3397915340032366,68.9/.39
+Other type,% invariant / mean p-value,Flux,All,191118,NA,NA,93.09117927144487,0.7173470860413574,0.8484257866894165,93.1/.72
+Other type,% invariant / mean p-value,Qwen,People,95441,NA,NA,92.18470049559414,0.6933901637581676,0.83002508524557606,92.2/.69
+Other type,% invariant / mean p-value,Qwen,Objects,84150,NA,NA,94.98158051099227,0.7124681755946515,0.8225638195182241,95.0/.71
+Other type,% invariant / mean p-value,Qwen,Camera,1224,NA,NA,72.22222222222221,0.3717242616443579,0.21154394630472803,72.2/.37
+Other type,% invariant / mean p-value,Qwen,All,180815,NA,NA,93.35121533058651,0.7000914641583159,0.8298963832086543,93.4/.70
+Other type,% invariant / mean p-value,Total,People,407043,NA,NA,92.14579295062192,0.7091906050055806,0.8476796020891619,92.1/.71
+Other type,% invariant / mean p-value,Total,Objects,379542,NA,NA,95.01399054650078,0.7270783176800962,0.8452811194192583,95.0/.73
+Other type,% invariant / mean p-value,Total,Camera,5202,NA,NA,64.89811610918878,0.3653670389778647,0.24075608149779731,64.9/.37
+Other type,% invariant / mean p-value,Total,All,791787,NA,NA,93.34164364911271,0.7155061520572938,0.8452811194192583,93.3/.72
