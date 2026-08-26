@@ -16,3 +16,4 @@ results/*.pdf
 results/*.docx
 results/occ_table_all.csv
 results/table3_label_persistence.tex
+paper/
