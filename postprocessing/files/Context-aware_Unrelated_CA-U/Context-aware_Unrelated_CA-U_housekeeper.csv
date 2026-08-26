@@ -1,0 +1,450 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,6
+atmosphere,aesthetic_qualities,dreamy,8
+atmosphere,aesthetic_qualities,realistic,8
+atmosphere,dominant_palette,black,1
+atmosphere,dominant_palette,brown,19
+atmosphere,dominant_palette,medium blue,1
+atmosphere,dominant_palette,medium violet red,2
+atmosphere,dominant_palette,mediumvioletred,4
+atmosphere,dominant_palette,orange red,2
+atmosphere,dominant_palette,purple,2
+atmosphere,color_temperature,warm,9
+atmosphere,contrast_level,medium,9
+atmosphere,color_temperature,warm,9
+atmosphere,contrast_level,medium,9
+atmosphere,saturation_level,neutral,8
+atmosphere,saturation_level,neutral,8
+atmosphere,mood,calm,17
+atmosphere,mood,joyful,8
+background,object_counts_by_position,background center,17
+background,object_counts_by_position,background left,11
+background,object_counts_by_position,background right,18
+background,object_counts_by_position,foreground center,40
+background,object_counts_by_position,foreground left,23
+background,object_counts_by_position,foreground right,12
+background,object_counts_by_position,midground center,31
+background,object_counts_by_position,midground left,23
+background,object_counts_by_position,midground right,17
+camera,crop,bottom cropped,1
+camera,crop,feet visible,1
+camera,crop,full body vertical,1
+camera,crop,lower body cropped near apron hem,1
+camera,crop,lower leg slightly cropped,1
+camera,crop,skirt hem slightly cropped,1
+camera,crop,some negative space left,1
+camera,crop,subject left center,1
+camera,depth_of_field,deep,6
+camera,depth_of_field,moderate,5
+camera,depth_of_field,shallow,18
+camera,focal_length,normal,9
+camera,focal_length,telephoto,1
+camera,focal_length,wide,1
+camera,framing,close up,1
+camera,framing,establishing,2
+camera,framing,full body,17
+camera,framing,medium,12
+camera,framing,wide,4
+camera,perspective,eye level,16
+camera,perspective,low angle,1
+environment,aisle_width,unknown,2
+environment,floor_material,beach brick or brick,1
+environment,floor_material,brick,1
+environment,floor_material,clay brick,2
+environment,floor_material,compacted soil,1
+environment,floor_material,concrete,1
+environment,floor_material,concrete or asphalt,1
+environment,floor_material,dirt,1
+environment,floor_material,grass,9
+environment,floor_material,gravel,1
+environment,floor_material,paved pathway,1
+environment,floor_material,stone,3
+environment,indoor_outdoor,unknown,20
+environment,location_type,formal park,1
+environment,location_type,park,9
+environment,location_type,park pavilion,1
+environment,location_type,public garden,1
+environment,location_type,public park,5
+environment,location_type,urban park,3
+environment,openness,moderate,2
+environment,openness,open,18
+environment,spatial_layout_depth,deep,5
+environment,spatial_layout_depth,moderate,13
+environment,spatial_layout_depth,open,2
+environment,surface_colors,beige,3
+environment,surface_colors,brown,3
+environment,surface_colors,firebrick,1
+environment,surface_colors,gray,8
+environment,surface_colors,green,10
+environment,surface_colors,lightblue,1
+environment,surface_colors,lightgray,1
+environment,surface_colors,lightgreen,1
+environment,surface_colors,pink,1
+environment,surface_colors,white,3
+environment,surface_materials,brick,1
+environment,surface_materials,cladding,1
+environment,surface_materials,concrete,2
+environment,surface_materials,foliage,1
+environment,surface_materials,masonry,1
+environment,surface_materials,mulch,1
+environment,surface_materials,paint,1
+environment,surface_materials,soil plants,1
+environment,surface_materials,stacked stone,1
+environment,surface_materials,stone,1
+environment,surface_materials,stone or concrete,11
+environment,surface_materials,turf,10
+environment,surface_materials,unknown,1
+environment,time_of_day_hint,afternoon,3
+environment,time_of_day_hint,morning,1
+environment,time_of_day_hint,noon,1
+environment,weather,clear,2
+environment,weather,sunny,17
+lighting,artifacts,background bokeh,3
+lighting,artifacts,bloom,2
+lighting,artifacts,bokeh,1
+lighting,artifacts,dappled highlights,1
+lighting,artifacts,gentle bloom,1
+lighting,artifacts,haze,1
+lighting,artifacts,lens flare,2
+lighting,artifacts,lens flare starburst,1
+lighting,artifacts,lens flare veiling,1
+lighting,artifacts,lens glow,1
+lighting,artifacts,mild bloom overexposed sky,1
+lighting,artifacts,mild highlight bloom,1
+lighting,artifacts,motion blur lower left shoe,1
+lighting,artifacts,slight bloom,1
+lighting,artifacts,slight blooming,1
+lighting,artifacts,soft edge highlights,1
+lighting,artifacts,specular bokeh highlights,1
+lighting,artifacts,starburst,1
+lighting,artifacts,subtle reflective highlights metal,1
+lighting,artifacts,sun flare streaks,1
+lighting,artifacts,sunstar flare,1
+lighting,color_temperature,warm,30
+lighting,contrast_level,high,8
+lighting,contrast_level,medium,21
+lighting,directionality,backlight,10
+lighting,directionality,side light,1
+lighting,directionality,sidelight,1
+lighting,directionality,top light,1
+lighting,directionality,toplight,2
+lighting,directionality,unknown,10
+lighting,hardness,hard light,1
+lighting,hardness,medium,3
+lighting,hardness,soft,10
+lighting,hardness,soft light,6
+lighting,saturation_level,neutral,23
+lighting,saturation_level,vivid,3
+lighting,shadows,casting,4
+lighting,shadows,hard,1
+lighting,shadows,medium,1
+lighting,shadows,soft,20
+lighting,sources_count,one light source,10
+lighting,sources_count,one source,8
+lighting,sources_directionality,backlight,3
+lighting,sources_directionality,sidelight,1
+lighting,sources_directionality,toplight,2
+lighting,sources_directionality,unknown,6
+lighting,sources_type,unknown,20
+objects,color,beige,7
+objects,color,black,17
+objects,color,blue,3
+objects,color,brown,19
+objects,color,chocolate,2
+objects,color,darkblue,11
+objects,color,darkcyan,1
+objects,color,darkgreen,10
+objects,color,darkslategrey,2
+objects,color,forestgreen,2
+objects,color,gold,3
+objects,color,gray,13
+objects,color,green,33
+objects,color,lightblue,4
+objects,color,lightgreen,1
+objects,color,linen,1
+objects,color,magenta,1
+objects,color,orange,2
+objects,color,palegreen,2
+objects,color,pink,1
+objects,color,purple,1
+objects,color,red,2
+objects,color,snow,1
+objects,color,tomato,1
+objects,color,white,9
+objects,color,yellow,2
+objects,condition,appears maintained,1
+objects,condition,clean,8
+objects,condition,intact,6
+objects,condition,loose,1
+objects,condition,mature,2
+objects,condition,minor mossy dusty,1
+objects,condition,minor soiling,1
+objects,condition,pristine,1
+objects,condition,serviceable,1
+objects,condition,slightly worn,2
+objects,condition,sun dappled,1
+objects,condition,unknown,1
+objects,condition,used,1
+objects,condition,weathered,6
+objects,condition,well maintained,6
+objects,condition,wet,1
+objects,material,brick,1
+objects,material,canvas,1
+objects,material,clay,1
+objects,material,clay brick,2
+objects,material,concrete,5
+objects,material,concrete or asphalt,1
+objects,material,fabric,4
+objects,material,fiber,1
+objects,material,foliage,10
+objects,material,grass,12
+objects,material,gravel,1
+objects,material,leaf plant,1
+objects,material,leather,1
+objects,material,metal,25
+objects,material,metal pole,1
+objects,material,microfiber,1
+objects,material,mulch,1
+objects,material,organic,1
+objects,material,paint,2
+objects,material,painted metal,4
+objects,material,paving,3
+objects,material,plant,9
+objects,material,plastic,7
+objects,material,soil,2
+objects,material,stone,9
+objects,material,stone or concrete,1
+objects,material,stone paver,1
+objects,material,synthetic,1
+objects,material,unknown,2
+objects,material,wood,25
+objects,type,bench,7
+objects,type,cleaning cart,1
+objects,type,cleaning equipment,1
+objects,type,cleaning tool mop handles etc,5
+objects,type,column,2
+objects,type,container,1
+objects,type,device,1
+objects,type,fence,2
+objects,type,fixture,3
+objects,type,foliage,2
+objects,type,fountain,1
+objects,type,furniture,4
+objects,type,ground cover,3
+objects,type,ground surface,3
+objects,type,handheld,2
+objects,type,hedgerow,3
+objects,type,implement,1
+objects,type,lawn,7
+objects,type,lawn patch,1
+objects,type,mop head,1
+objects,type,path,2
+objects,type,pathway,10
+objects,type,paved walkway,1
+objects,type,plant,2
+objects,type,plant container,1
+objects,type,planter,7
+objects,type,planting,2
+objects,type,railing,1
+objects,type,soil patch,1
+objects,type,surface,4
+objects,type,tool handle,1
+objects,type,tree canopy,2
+objects,type,unknown,7
+objects,type,vegetation,10
+objects,type,walkway,2
+objects,type,bag,1
+objects,type,bollard,1
+objects,type,building,2
+objects,type,fence like structure,1
+objects,type,lamp,1
+objects,type,lamp post,4
+objects,type,lamppost,2
+objects,type,light artifact,1
+objects,type,light source,1
+objects,type,shrub,1
+objects,type,stone edging,1
+objects,type,structure,2
+objects,type,topiary,1
+objects,type,tree,8
+objects,type,tree canopy grouping,1
+objects,type,tree line,1
+objects,type,trees plural token,1
+objects,type,twig,1
+objects,type,umbrella,1
+objects,texture,dense fiber,1
+objects,texture,fine textured,1
+objects,texture,frayed,1
+objects,texture,glossy leaves,2
+objects,texture,heavy fiber,1
+objects,texture,interlocking pattern,1
+objects,texture,layered,1
+objects,texture,leafy,1
+objects,texture,looped fabric,1
+objects,texture,rough,9
+objects,texture,slatted,1
+objects,texture,smooth,30
+objects,texture,tasseled,1
+objects,texture,textured,7
+people,activities,holding cleaning cart,1
+people,activities,holding object,1
+people,activities,inspecting object,1
+people,activities,jogging,1
+people,activities,mopping,2
+people,activities,running,9
+people,activities,running toward camera,1
+people,activities,unknown,1
+people,age_range,middle aged,4
+people,age_range,older adult,1
+people,age_range,young adult,15
+people,clothing_color,black,6
+people,clothing_color,blue,7
+people,clothing_color,gray,5
+people,clothing_color,pink,2
+people,clothing_color,tan,1
+people,clothing_color,white,11
+people,clothing_garment,apron,14
+people,clothing_garment,athletic pants,1
+people,clothing_garment,blouse,3
+people,clothing_garment,dress,4
+people,clothing_garment,full length apron,1
+people,clothing_garment,gloves pair,1
+people,clothing_garment,lower,1
+people,clothing_garment,nurse dress,1
+people,clothing_garment,polo dress,1
+people,clothing_garment,running shoes,2
+people,clothing_garment,shirt,13
+people,clothing_garment,shoes,11
+people,clothing_garment,shorts,2
+people,clothing_garment,single glove,1
+people,clothing_garment,skirt,2
+people,clothing_garment,sneakers,2
+people,clothing_garment,socks,2
+people,clothing_garment,top,1
+people,clothing_garment,unknown,2
+people,clothing_garment,work gloves,1
+people,clothing_garment,wrist accessory,1
+people,clothing_color,black,9
+people,clothing_color,blue,7
+people,clothing_color,brown,7
+people,clothing_color,gray,5
+people,clothing_color,green,1
+people,clothing_color,tan,2
+people,clothing_color,white,19
+people,eyewear_present,no,21
+people,facial_hair_present,no,21
+people,gaze_direction,down,7
+people,gaze_direction,left,1
+people,gaze_direction,right,3
+people,gaze_direction,up,1
+people,gender_presentation,female,20
+people,gender_presentation,male,1
+people,hair_color,black,6
+people,hair_color,brown,27
+people,hair_color,gray,1
+people,hair_color,pink,2
+people,hair_present,yes,21
+people,hair_style,bun,6
+people,hair_style,long,13
+people,hair_style,ponytail,17
+people,hair_style,short,3
+people,hair_style,straight,4
+people,hair_style,updo,5
+people,hair_style,wavy,6
+people,head_covering_color,white,4
+people,head_covering_present,no,17
+people,head_covering_present,yes,4
+people,head_covering_type,cap,2
+people,head_covering_type,nurse cap,1
+people,head_covering_type,nursing cap,1
+people,clothing_material,cotton,11
+people,clothing_material,cotton blend,1
+people,clothing_material,fabric,1
+people,clothing_material,leather,1
+people,clothing_material,matte fabric,1
+people,clothing_material,nitrile,1
+people,clothing_material,rubber,2
+people,clothing_material,smooth fabric,1
+people,clothing_material,soft fabric,1
+people,clothing_material,sturdy fabric,2
+people,clothing_material,synthetic,1
+people,clothing_material,synthetic fabric,1
+people,clothing_material,woven,1
+people,occlusions,partial occlusion,21
+people,occlusions,significant occlusion,1
+people,orientation,back facing,1
+people,orientation,front,4
+people,orientation,three quarter,7
+people,orientation,unknown,8
+people,pose,engaged sweeping posture,1
+people,pose,forward leaning,1
+people,pose,relaxed,1
+people,pose,relaxed standing,2
+people,pose,slight forward lean,3
+people,pose,slightly bent forward,1
+people,pose,slightly forward leaning,2
+people,pose,standing,1
+people,pose,upright,6
+people,activity_pose,airborne,1
+people,activity_pose,arm swing,1
+people,activity_pose,arms bent,1
+people,activity_pose,arms extended,1
+people,activity_pose,bent knees,1
+people,activity_pose,both feet airborne,1
+people,activity_pose,brisk running,1
+people,activity_pose,forward leaning,9
+people,activity_pose,left foot trailing,1
+people,activity_pose,mid stride,6
+people,activity_pose,right knee raised,1
+people,activity_pose,running,4
+people,activity_pose,unknown,3
+people,activity_pose,upright,6
+people,role_hint,appears cleaner,1
+people,role_hint,appears healthcare or service worker,1
+people,role_hint,appears healthcare worker nursing cap blue dress,1
+people,role_hint,appears nurse,1
+people,role_hint,cleaning staff,1
+people,role_hint,groundskeeper gardener,1
+people,role_hint,groundskeeping worker,1
+people,role_hint,unknown,4
+people,skin_tone,light,5
+people,skin_tone,medium,16
+safety,hazards,no,10
+safety,hazards,no flagged,6
+safety,hazards,unknown,6
+safety,nsfw,no,10
+safety,nsfw,not,10
+safety,nsfw,unknown,10
+texts,legibility,illegible,1
+texts,plane,midground text,1
+texts,side,center text,1
+uncertainty,note,aesthetic quality tokens mapping partially unspecified,1
+uncertainty,note,background center building facade details partially occluded,1
+uncertainty,note,background center pale masonry facade partially occluded by canopy,1
+uncertainty,note,background right bright sky slightly overexposed,1
+uncertainty,note,distant bench details approximated,1
+uncertainty,note,distant lounge chair upholstery condition partially occluded,1
+uncertainty,note,exact plant species within planted bed behind railing not identifiable,1
+uncertainty,note,facial features gaze not visible due to back facing orientation cap occlusion,1
+uncertainty,note,long straight metal hand tool type not identifiable,1
+uncertainty,note,low light gray horizontal structure background center right unclear,1
+uncertainty,note,lower leg footwear details partly occluded by apron,1
+uncertainty,note,lower legs person 1 partially occluded shadow railing,4
+uncertainty,note,precise model function of portable cleaning canister not identifiable,1
+uncertainty,note,small distant objects background right partly occluded not identifiable,29
+uncertainty,note,small label on portable cleaning cart illegible,1
+uncertainty,note,small objects plant species in low stone planters uncertain,1
+uncertainty,note,small white handheld object hands not identifiable,1
+uncertainty,note,texture detail of cleaning tool head partly occluded,1
+uncertainty,note,time day ambiguous duplicate variant,1
+uncertainty,note,time of day ambiguous morning late afternoon,1
+uncertainty,note,unknown,9
+uncertainty,token,camera focal length angle ambiguous eye level slightly low telephoto normal uncertain,1
+uncertainty,token,distant left frame pathway landscape features strongly blurred indiscernible,1
+uncertainty,token,embroidered chest patch text emblem details illegible due to scale blur,1
+uncertainty,token,foreground center dirt track composition uncertain compacted soil or shallow rutting,1
+uncertainty,token,handbag contents hardware details not visible,1
+uncertainty,token,lamppost count described as least two exact count uncertain,1
+uncertainty,token,midground center low round concrete stone pedestal feature exact function table birdbath planter not resolvable,1
+uncertainty,token,precise fabric composition of person 1 s clothing ambiguous appears synthetic lightweight origin not verifiable,1
+uncertainty,token,unknown,57

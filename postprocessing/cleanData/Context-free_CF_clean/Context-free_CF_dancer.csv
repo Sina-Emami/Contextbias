@@ -1,0 +1,222 @@
+cohort,standardized_dimension,standardized_label,count,bins
+atmosphere,aesthetic_quality,cinematic,12,4
+atmosphere,aesthetic_quality,dreamy,14,4
+atmosphere,aesthetic_quality,minimal,2,4
+atmosphere,aesthetic_quality,realistic,10,4
+atmosphere,color_temperature,warm,7,2
+atmosphere,contrast_level,medium,7,2
+atmosphere,dominant_palette,black,1,3
+atmosphere,dominant_palette,brown,6,3
+atmosphere,dominant_palette,lightgreen,6,3
+atmosphere,mood,calm,10,3
+atmosphere,mood,dramatic,2,3
+atmosphere,mood,minimalistic,1,3
+atmosphere,saturation_level,vivid,6,2
+background,object_counts_by_position,background center,5,9
+background,object_counts_by_position,background left,9,9
+background,object_counts_by_position,background right,9,9
+background,object_counts_by_position,foreground center,8,9
+background,object_counts_by_position,foreground left,5,9
+background,object_counts_by_position,foreground right,2,9
+background,object_counts_by_position,midground center,4,9
+background,object_counts_by_position,midground left,3,9
+background,object_counts_by_position,midground right,1,9
+camera,crop,full torso legs,1,7
+camera,crop,head near upper third,1,7
+camera,crop,lower skirt partially cropped,1,7
+camera,crop,lower tip supporting foot cropped,1,7
+camera,crop,mid torso,1,7
+camera,crop,space above skirt near left light source,1,7
+camera,crop,upper arms partially cropped,1,7
+camera,depth_of_field,shallow,10,1
+camera,focal_length,normal,1,2
+camera,focal_length,telephoto,2,2
+camera,framing,full body,4,3
+camera,framing,medium,3,3
+camera,framing,wide,1,3
+camera,perspective,eye level,6,2
+camera,perspective,low angle,1,2
+environment,location_type,dance practice room,1,8
+environment,location_type,dance studio,3,8
+environment,location_type,landscaped area,1,8
+environment,location_type,outdoor space,1,8
+environment,location_type,portrait studio,1,8
+environment,location_type,practice space,1,8
+environment,location_type,rehearsal studio,1,8
+environment,location_type,studio,1,8
+environment,openness,enclosed,1,2
+environment,openness,open,9,2
+environment,spatial_depth,moderate,6,2
+environment,spatial_depth,shallow,2,2
+environment,time_of_day_hint,afternoon,3,1
+environment,weather,mist,1,2
+environment,weather,sunny,2,2
+lighting,artifacts,bloom,1,7
+lighting,artifacts,bokeh,3,7
+lighting,artifacts,glow halo,1,7
+lighting,artifacts,highlight bloom,2,7
+lighting,artifacts,motion blur,1,7
+lighting,artifacts,slight bloom around highlights,1,7
+lighting,artifacts,soft reflection floor,1,7
+lighting,color_temperature,neutral,1,2
+lighting,color_temperature,warm,7,2
+lighting,contrast_level,high,1,2
+lighting,contrast_level,medium,7,2
+lighting,directionality,backlight,7,3
+lighting,directionality,sidelight,3,3
+lighting,directionality,top light,1,3
+lighting,hardness,soft,11,1
+lighting,saturation_level,neutral,2,2
+lighting,saturation_level,vivid,6,2
+lighting,shadows,medium,1,2
+lighting,shadows,soft,8,2
+lighting,source_count,one light,10,1
+lighting,source_type,artificial light,3,1
+objects,plane,background,24,3
+objects,plane,foreground,15,3
+objects,plane,midground,8,3
+objects,side,center,17,3
+objects,side,left,17,3
+objects,side,right,12,3
+objects,type,angular shadow pattern,1,52
+objects,type,architectural element,1,52
+objects,type,architectural feature,1,52
+objects,type,architectural structure,1,52
+objects,type,atmospheric haze,1,52
+objects,type,backdrop,1,52
+objects,type,ballet barre,1,52
+objects,type,bench,1,52
+objects,type,bokeh,1,52
+objects,type,bright backlight,1,52
+objects,type,bright circular bokeh patches,1,52
+objects,type,ceiling beams,1,52
+objects,type,clothing,2,52
+objects,type,clothing detail,1,52
+objects,type,clothing object level,1,52
+objects,type,concrete floor,2,52
+objects,type,curtain,1,52
+objects,type,dense haze,1,52
+objects,type,door assembly,1,52
+objects,type,doorway,1,52
+objects,type,dress,1,52
+objects,type,effect,1,52
+objects,type,fabric blur,1,52
+objects,type,fabric edge,1,52
+objects,type,floor,7,52
+objects,type,floor area,1,52
+objects,type,floor length drapery,1,52
+objects,type,floor mark,1,52
+objects,type,foreground fabric blur,1,52
+objects,type,furniture,1,52
+objects,type,leotard,1,52
+objects,type,leotard object level,1,52
+objects,type,light source,1,52
+objects,type,low horizontal edge,1,52
+objects,type,plaster wall,1,52
+objects,type,rafters truss,1,52
+objects,type,rectangular silhouette,1,52
+objects,type,scuff mark,1,52
+objects,type,seating frame,1,52
+objects,type,shadow,1,52
+objects,type,sunbeam,1,52
+objects,type,surface,1,52
+objects,type,translucent fabric backdrop,1,52
+objects,type,tree,2,52
+objects,type,tulle skirt,7,52
+objects,type,tutu object level,1,52
+objects,type,wall,1,52
+objects,type,wall fixture,1,52
+objects,type,window,4,52
+objects,type,window assembly,2,52
+objects,type,window mullion,1,52
+objects,type,wooden frame,18,52
+people,age_range,teen,1,2
+people,age_range,young adult,9,2
+people,clothing_color,black,9,6
+people,clothing_color,gray,3,6
+people,clothing_color,mediumblue,1,6
+people,clothing_color,pink,9,6
+people,clothing_color,tan,3,6
+people,clothing_color,white,7,6
+people,clothing_material,beaded,1,10
+people,clothing_material,fabric,3,10
+people,clothing_material,knit,1,10
+people,clothing_material,lace,3,10
+people,clothing_material,mesh,1,10
+people,clothing_material,netting,1,10
+people,clothing_material,satin,8,10
+people,clothing_material,sequin,1,10
+people,clothing_material,skin,1,10
+people,clothing_material,tulle,10,10
+people,eyewear_present,no,10,1
+people,facial_hair_present,no,10,1
+people,gaze_direction,down,3,2
+people,gaze_direction,up,3,2
+people,gender_presentation,female,10,1
+people,hair_color,black,2,3
+people,hair_color,brown,7,3
+people,hair_color,pink,1,3
+people,hair_present,yes,10,1
+people,hair_style,bun,3,7
+people,hair_style,curly,2,7
+people,hair_style,long,4,7
+people,hair_style,ponytail,1,7
+people,hair_style,straight,2,7
+people,hair_style,updo,1,7
+people,hair_style,wavy,2,7
+people,head_covering_present,no,10,1
+people,occlusions,partial occlusion,9,1
+people,orientation,three quarter,3,1
+people,pose,arabesque,1,13
+people,pose,backbend,1,13
+people,pose,balancing pointe,1,13
+people,pose,elongated neck,1,13
+people,pose,en pointe,1,13
+people,pose,extended lunge,1,13
+people,pose,head tilted upward,5,13
+people,pose,kneeling,1,13
+people,pose,left arm extended,27,13
+people,pose,left leg weight ball,1,13
+people,pose,skirt airborne trailing,1,13
+people,pose,supporting limb en pointe,1,13
+people,pose,upright,3,13
+people,role_hint,ballet dancer,1,2
+people,role_hint,dancer,5,2
+people,skin_tone,light,7,2
+people,skin_tone,medium,2,2
+safety,hazards,no observed,5,1
+safety,nsfw,no content,10,1
+uncertainty,note,background bright bokeh patches source ambiguous studio lights vs sunlight,1,34
+uncertainty,note,camera focal length exact values not specified,1,34
+uncertainty,note,exact count of window panes not precise due to perspective brightness,1,34
+uncertainty,note,exact ground material identification not conclusive pale gray concrete possibility,1,34
+uncertainty,note,exact material composition of reflective leotard uncertain sequins vs metallic,1,34
+uncertainty,note,exact number of window muntins approximate due to blur,1,34
+uncertainty,note,exact skin tone nuance approximate,1,34
+uncertainty,note,exact skin undertone borderline between light and medium,1,34
+uncertainty,note,exact skirt fabric uncertain tulle vs chiffon,1,34
+uncertainty,note,facial expression details partially occluded by shadow rim,2,34
+uncertainty,note,fine facial feature details partially occluded by silhouette backlight,1,34
+uncertainty,note,fine stitch level bodice details partially occluded,1,34
+uncertainty,note,floor scuff details uncertain due to reflective sheen,1,34
+uncertainty,note,heavily blurred rectangular shapes background right omitted,10,34
+uncertainty,note,left hand partially occluded by depth of field blur,1,34
+uncertainty,note,long angular shadow patterns foreground left not fully visible,1,34
+uncertainty,note,low angle light suggests early late sun but not definitive,1,34
+uncertainty,note,low horizontal midground edge appears stone concrete but exact material uncertain,1,34
+uncertainty,note,lower most tip supporting foot partially cropped and motion blurred details indiscernible,5,34
+uncertainty,note,lower right arm partially occluded by blur limiting hand detail,1,34
+uncertainty,note,no architectural details visible outside frame,1,34
+uncertainty,note,outside view weather through glazing not visible,1,34
+uncertainty,note,precise age classification uncertain appears adolescent,1,34
+uncertainty,note,precise beadwork material details beyond reflective quality not legible,1,34
+uncertainty,note,precise material composition of sleeveless top uncertain satin like vs synthetic,1,34
+uncertainty,note,rear dancer torso area partially occluded by layered skirt fabric,1,34
+uncertainty,note,seating elements background left blurred approximate count two,1,34
+uncertainty,note,skirt layer count approximate not precisely countable,1,34
+uncertainty,note,small details ear lower skirt partially occluded by foreground blur,1,34
+uncertainty,note,small items on window sill not discernible,1,34
+uncertainty,note,some enumerations not mapped to schema enums preserved as descriptive notes,1,34
+uncertainty,note,supporting left foot footwear ambiguous appears bare vs thin covering,1,34
+uncertainty,note,time of day ambiguous morning or afternoon,1,34
+uncertainty,note,wall treatment painted brick plaster not definitive,1,34

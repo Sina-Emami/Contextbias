@@ -1,0 +1,210 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,7,4
+scene_appearance,aesthetic_qualities,dreamy,3,4
+scene_appearance,aesthetic_qualities,realistic,5,4
+scene_appearance,color_temperature,warm,9,3
+scene_appearance,dominant_colors,black,2,3
+scene_appearance,dominant_colors,brown,8,3
+scene_appearance,dominant_colors,black,4,3
+scene_appearance,dominant_colors,brown,34,3
+scene_appearance,dominant_colors,mediumblue,2,3
+scene_appearance,aesthetic_qualities,cinematic,13,4
+scene_appearance,aesthetic_qualities,dreamy,3,4
+scene_appearance,aesthetic_qualities,minimal,2,4
+scene_appearance,aesthetic_qualities,realistic,17,4
+scene_appearance,color_temperature,cool,14,3
+scene_appearance,color_temperature,neutral,5,3
+scene_appearance,color_temperature,warm,2,3
+scene_appearance,mood,calm,36,3
+scene_appearance,mood,joyful,2,3
+scene_appearance,mood,romantic,4,3
+scene_appearance,mood,calm,10,3
+scene_appearance,mood,joyful,2,3
+camera,depth_of_field,moderate,8,2
+camera,depth_of_field,shallow,52,2
+camera,framing,close up,8,6
+camera,framing,establishing,2,6
+camera,framing,full body,4,6
+camera,framing,headshot,4,6
+camera,framing,medium,44,6
+camera,framing,wide,10,6
+camera,perspective,eye level,44,1
+objects,dominant_colors,beige,2,30
+objects,dominant_colors,black,23,30
+objects,dominant_colors,blue,2,30
+objects,dominant_colors,brown,24,30
+objects,dominant_colors,crimson,7,30
+objects,dominant_colors,darkblue,6,30
+objects,dominant_colors,darkgreen,1,30
+objects,dominant_colors,darkred,1,30
+objects,dominant_colors,darkslategrey,1,30
+objects,dominant_colors,glass like,6,30
+objects,dominant_colors,gray,12,30
+objects,dominant_colors,green,16,30
+objects,dominant_colors,honeydew,1,30
+objects,dominant_colors,ivory,1,30
+objects,dominant_colors,lightblue,3,30
+objects,dominant_colors,lightgoldenrodyellow,1,30
+objects,dominant_colors,mediumblue,4,30
+objects,dominant_colors,mediumseagreen,1,30
+objects,dominant_colors,mediumvioletred,1,30
+objects,dominant_colors,olive,1,30
+objects,dominant_colors,orange,9,30
+objects,dominant_colors,palevioletred,1,30
+objects,dominant_colors,pink,2,30
+objects,dominant_colors,purple,1,30
+objects,dominant_colors,red,10,30
+objects,dominant_colors,seashell,1,30
+objects,dominant_colors,silver,14,30
+objects,dominant_colors,violet,1,30
+objects,dominant_colors,white,14,30
+objects,dominant_colors,yellow,7,30
+objects,type,acoustic guitar,8,29
+objects,type,amplifier cabinet,1,29
+objects,type,amplifier cabinet duplicate entry handled once,1,29
+objects,type,bag,1,29
+objects,type,basket,1,29
+objects,type,bench,1,29
+objects,type,cap,1,29
+objects,type,citrus fruits,2,29
+objects,type,container,1,29
+objects,type,drum cymbal,1,29
+objects,type,eyeglasses,1,29
+objects,type,furniture or plant,1,29
+objects,type,guitar neck,19,29
+objects,type,guitar stand,2,29
+objects,type,guitar strap,2,29
+objects,type,microphone stand,4,29
+objects,type,potted houseplant,1,29
+objects,type,produce bag,2,29
+objects,type,saxophone,2,29
+objects,type,shelf display,4,29
+objects,type,shelf edge,1,29
+objects,type,shopping cart,13,29
+objects,type,sign,1,29
+objects,type,stand mounted metal microphone,1,29
+objects,type,stool,2,29
+objects,type,storage bench,1,29
+objects,type,straw hat,2,29
+objects,type,violin like,1,29
+objects,type,window,10,29
+people,activities,appears singing producing music,1,10
+people,activities,resting,3,10
+people,activities,holding bag,1,10
+people,activities,holding double bass,1,10
+people,activities,holding guitar,8,10
+people,activities,holding mop,1,10
+people,activities,holding guitar,4,10
+people,activities,plucking strings,2,10
+people,activities,singing,2,10
+people,activities,stirring,4,10
+people,activities,strumming guitar,2,10
+people,age_range,middle aged,1,2
+people,age_range,young adult,28,2
+people,clothing_color,black,9,8
+people,clothing_color,blue,6,8
+people,clothing_color,brown,4,8
+people,clothing_color,gray,2,8
+people,clothing_color,green,2,8
+people,clothing_color,pink,1,8
+people,clothing_color,tan,1,8
+people,clothing_color,white,3,8
+people,clothing_garment,ankle boots,1,21
+people,clothing_garment,backpack,1,21
+people,clothing_garment,blazer,2,21
+people,clothing_garment,boots,1,21
+people,clothing_garment,denim jacket,4,21
+people,clothing_garment,guitar strap,6,21
+people,clothing_garment,hat,1,21
+people,clothing_garment,jacket,4,21
+people,clothing_garment,jeans,7,21
+people,clothing_garment,necklace,2,21
+people,clothing_garment,pants,1,21
+people,clothing_garment,shirt,19,21
+people,clothing_garment,shoes,3,21
+people,clothing_garment,sleeveless top,1,21
+people,clothing_garment,socks,1,21
+people,clothing_garment,trousers,3,21
+people,clothing_garment,turtleneck,1,21
+people,clothing_garment,undershirt,3,21
+people,clothing_garment,vest,2,21
+people,clothing_garment,wristband,1,21
+people,clothing_garment,zip front vest,1,21
+people,eyewear_present,no,25,2
+people,eyewear_present,yes,4,2
+people,eyewear_type,prescription glasses,1,4
+people,eyewear_type,rectangular frames,1,4
+people,eyewear_type,sunglasses,2,4
+people,eyewear_type,thin rimmed metal eyeglasses,1,4
+people,hair_color,black,2,8
+people,hair_color,brown,20,8
+people,hair_color,dark blue,3,8
+people,hair_color,dark blue annotated,6,8
+people,hair_color,darkblue,4,8
+people,hair_color,darkblue recorded token,4,8
+people,hair_color,maroon,1,8
+people,facial_hair_present,no,1,2
+people,facial_hair_present,yes,29,2
+people,facial_hair_style,beard,3,16
+people,facial_hair_style,close trimmed beard,1,16
+people,facial_hair_style,closely trimmed,1,16
+people,facial_hair_style,full beard,6,16
+people,facial_hair_style,long,1,16
+people,facial_hair_style,neatly trimmed,1,16
+people,facial_hair_style,short ambiguous,2,16
+people,facial_hair_style,short beard,2,16
+people,facial_hair_style,short jawline beard,1,16
+people,facial_hair_style,short stubble,1,16
+people,facial_hair_style,short trimmed beard,1,16
+people,facial_hair_style,short well trimmed,1,16
+people,facial_hair_style,stubble,5,16
+people,facial_hair_style,trimmed,1,16
+people,facial_hair_style,trimmed beard,3,16
+people,facial_hair_style,trimmed stubble,1,16
+people,gaze_direction,down,10,4
+people,gaze_direction,left,3,4
+people,gaze_direction,right,2,4
+people,gaze_direction,to right,2,4
+people,gender_presentation,female,1,2
+people,gender_presentation,male,29,2
+people,hair_color,black,12,8
+people,hair_color,brown,28,8
+people,hair_color,maroon,1,8
+people,hair_color,olive,1,8
+people,hair_present,yes,31,1
+people,hair_style,curly,13,5
+people,hair_style,long,4,5
+people,hair_style,ponytail,1,5
+people,hair_style,short,14,5
+people,hair_style,wavy,8,5
+people,head_covering_type,black,5,9
+people,head_covering_type,brown,1,9
+people,head_covering_type,tan,1,9
+people,head_covering_present,no,24,2
+people,head_covering_present,yes,6,2
+people,head_covering_type,beanie,1,9
+people,head_covering_type,fedora,1,9
+people,head_covering_type,felt hat,1,9
+people,head_covering_type,structured cap leather like brim,1,9
+people,head_covering_type,wide brim hat merged variant,2,9
+people,head_covering_type,wide brimmed hat,1,9
+people,pose,standing,1,4
+people,pose,leaning,1,4
+people,pose,leaning,3,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,laying,1,4
+people,pose,standing,10,4
+people,pose,laying,1,4
+people,pose,seated,8,4
+people,pose,leaning,5,4
+people,pose,standing,2,4
+people,pose,leaning,1,4
+people,pose,leaning,2,4
+people,pose,leaning,1,4
+people,pose,standing,2,4
+people,pose,standing,9,4
+people,pose,standing,8,4
+people,skin_tone,dark,2,3
+people,skin_tone,light,14,3
+people,skin_tone,medium,22,3

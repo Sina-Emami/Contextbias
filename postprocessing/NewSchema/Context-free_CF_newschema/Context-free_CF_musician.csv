@@ -1,0 +1,127 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,7,3
+scene_appearance,aesthetic_qualities,dreamy,3,3
+scene_appearance,aesthetic_qualities,realistic,5,3
+scene_appearance,color_temperature,warm,9,1
+scene_appearance,dominant_colors,brown,10,1
+scene_appearance,mood,calm,16,2
+scene_appearance,mood,romantic,4,2
+camera,depth_of_field,shallow,20,1
+camera,framing,close up,6,3
+camera,framing,headshot,2,3
+camera,framing,medium,14,3
+camera,perspective,eye level,14,1
+objects,dominant_colors,black,16,22
+objects,dominant_colors,brown,17,22
+objects,dominant_colors,crimson,1,22
+objects,dominant_colors,darkblue,3,22
+objects,dominant_colors,darkgreen,1,22
+objects,dominant_colors,darkred,1,22
+objects,dominant_colors,darkslategrey,1,22
+objects,dominant_colors,glass like,6,22
+objects,dominant_colors,gray,3,22
+objects,dominant_colors,green,2,22
+objects,dominant_colors,honeydew,1,22
+objects,dominant_colors,ivory,1,22
+objects,dominant_colors,lightblue,2,22
+objects,dominant_colors,lightgoldenrodyellow,1,22
+objects,dominant_colors,mediumseagreen,1,22
+objects,dominant_colors,olive,1,22
+objects,dominant_colors,orange,1,22
+objects,dominant_colors,palevioletred,1,22
+objects,dominant_colors,seashell,1,22
+objects,dominant_colors,silver,8,22
+objects,dominant_colors,violet,1,22
+objects,dominant_colors,white,5,22
+objects,type,amplifier cabinet,1,15
+objects,type,amplifier cabinet duplicate entry handled once,1,15
+objects,type,bench,1,15
+objects,type,cap,1,15
+objects,type,drum cymbal,1,15
+objects,type,eyeglasses,1,15
+objects,type,furniture or plant,1,15
+objects,type,guitar neck,19,15
+objects,type,microphone stand,4,15
+objects,type,potted houseplant,1,15
+objects,type,stand mounted metal microphone,1,15
+objects,type,storage bench,1,15
+objects,type,straw hat,2,15
+objects,type,violin like,1,15
+objects,type,window,10,15
+people,activities,resting,2,5
+people,activities,holding guitar,2,5
+people,activities,holding guitar,3,5
+people,activities,plucking strings,2,5
+people,activities,singing,2,5
+people,activities,strumming guitar,2,5
+people,age_range,young adult,10,1
+people,clothing_garment,ankle boots,1,15
+people,clothing_garment,blazer,2,15
+people,clothing_garment,boots,1,15
+people,clothing_garment,denim jacket,2,15
+people,clothing_garment,guitar strap,3,15
+people,clothing_garment,jeans,2,15
+people,clothing_garment,necklace,2,15
+people,clothing_garment,sleeveless top,1,15
+people,clothing_garment,socks,1,15
+people,clothing_garment,t-shirt,9,15
+people,clothing_garment,trousers,1,15
+people,clothing_garment,turtleneck,1,15
+people,clothing_garment,undershirt,3,15
+people,clothing_garment,vest,2,15
+people,clothing_garment,wristband,1,15
+people,eyewear_present,no,7,2
+people,eyewear_present,yes,3,2
+people,eyewear_type,rectangular frames,1,3
+people,eyewear_type,sunglasses,2,3
+people,eyewear_type,thin rimmed metal eyeglasses,1,3
+people,hair_color,black,1,4
+people,hair_color,brown,3,4
+people,hair_color,dark blue annotated,6,4
+people,facial_hair_present,no,1,2
+people,facial_hair_present,yes,9,2
+people,facial_hair_style,beard,1,7
+people,facial_hair_style,closely trimmed,1,7
+people,facial_hair_style,full beard,1,7
+people,facial_hair_style,short jawline beard,1,7
+people,facial_hair_style,stubble,3,7
+people,facial_hair_style,trimmed,1,7
+people,facial_hair_style,trimmed beard,2,7
+people,gaze_direction,down,6,3
+people,gaze_direction,left,2,3
+people,gaze_direction,right,2,3
+people,gender_presentation,female,1,2
+people,gender_presentation,male,9,2
+people,hair_color,black,6,4
+people,hair_color,brown,5,4
+people,hair_color,olive,1,4
+people,hair_present,yes,11,1
+people,hair_style,curly,3,5
+people,hair_style,long,2,5
+people,hair_style,ponytail,1,5
+people,hair_style,short,5,5
+people,hair_style,wavy,3,5
+people,head_covering_type,black,5,5
+people,head_covering_type,brown,1,5
+people,head_covering_present,no,6,2
+people,head_covering_present,yes,4,2
+people,head_covering_type,beanie,1,5
+people,head_covering_type,structured cap leather like brim,1,5
+people,head_covering_type,wide brim hat merged variant,2,5
+people,pose,standing,1,4
+people,pose,leaning,1,4
+people,pose,leaning,3,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,5,4
+people,pose,laying,1,4
+people,pose,seated,6,4
+people,pose,leaning,2,4
+people,pose,standing,2,4
+people,pose,leaning,1,4
+people,pose,leaning,1,4
+people,pose,standing,9,4
+people,pose,standing,3,4
+people,skin_tone,dark,2,3
+people,skin_tone,light,2,3
+people,skin_tone,medium,6,3

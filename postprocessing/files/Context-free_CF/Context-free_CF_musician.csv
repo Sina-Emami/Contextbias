@@ -1,0 +1,322 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,7
+atmosphere,aesthetic_qualities,dreamy,3
+atmosphere,aesthetic_qualities,realistic,5
+atmosphere,color_temperature,warm,9
+atmosphere,contrast_level,high,1
+atmosphere,contrast_level,medium,8
+atmosphere,dominant_palette,brown,10
+atmosphere,dominant_palette,unknown,10
+atmosphere,mood,calm,16
+atmosphere,mood,romantic,4
+atmosphere,saturation_level,neutral,6
+atmosphere,saturation_level,vivid,3
+background,object_counts_by_position,background center,5
+background,object_counts_by_position,background left,5
+background,object_counts_by_position,background right,5
+background,object_counts_by_position,foreground center,10
+background,object_counts_by_position,foreground left,11
+background,object_counts_by_position,foreground right,7
+background,object_counts_by_position,midground center,14
+background,object_counts_by_position,midground left,4
+background,object_counts_by_position,midground right,6
+camera,crop,bottom feet,1
+camera,crop,center left subject,1
+camera,crop,centered,1
+camera,crop,face centered,1
+camera,crop,instrument right,1
+camera,crop,lower body out frame,1
+camera,crop,near portrait,1
+camera,crop,peripheral elements cropped,1
+camera,crop,right edge partial,1
+camera,crop,right side cropped headstock,1
+camera,crop,slightly right center,1
+camera,crop,square,1
+camera,crop,tight,1
+camera,depth_of_field,shallow,20
+camera,focal_length,normal,4
+camera,focal_length,telephoto,6
+camera,framing,close up,6
+camera,framing,headshot,2
+camera,framing,medium,14
+camera,perspective,eye level,14
+environment,aisle_width,unknown,1
+environment,indoor_outdoor,unknown,20
+environment,location_type,courtyard,2
+environment,location_type,covered deck,2
+environment,location_type,living space,2
+environment,location_type,outdoor,2
+environment,location_type,outdoor performance,2
+environment,location_type,performance space,4
+environment,location_type,residential interior music practice,2
+environment,location_type,residential room,2
+environment,openness,enclosed,3
+environment,openness,open,1
+environment,openness,unknown,2
+environment,spatial_layout_depth,deep,1
+environment,spatial_layout_depth,shallow,8
+environment,spatial_layout_depth,shallow moderate,1
+environment,time_of_day_hint,afternoon,8
+environment,time_of_day_hint,evening,4
+environment,weather,clear,1
+environment,weather,sunny,1
+lighting,artifacts,bokeh,3
+lighting,artifacts,bokeh highlights,1
+lighting,artifacts,circular bokeh highlights,1
+lighting,artifacts,filmic grain,1
+lighting,artifacts,glare sunglasses,1
+lighting,artifacts,highlight bloom,1
+lighting,artifacts,lens bloom,1
+lighting,artifacts,lens glare,1
+lighting,artifacts,mild glow,1
+lighting,artifacts,motion blur,1
+lighting,artifacts,specular highlights,2
+lighting,artifacts,specular highlights microphone grille,1
+lighting,artifacts,specular reflection guitar,2
+lighting,artifacts,specular reflections guitar tuning pegs,1
+lighting,artifacts,volumetric rays,1
+lighting,color_temperature,warm,18
+lighting,contrast_level,high,2
+lighting,contrast_level,medium,16
+lighting,directionality,backlight,6
+lighting,directionality,sidelight,7
+lighting,directionality,top light,1
+lighting,directionality,unknown,4
+lighting,hardness,soft light,14
+lighting,saturation_level,neutral,12
+lighting,saturation_level,vivid,6
+lighting,shadows,casting,1
+lighting,shadows,soft,10
+lighting,sources_count,four or more,2
+lighting,sources_count,one source,8
+lighting,sources_type,artificial source,4
+lighting,sources_type,unknown,10
+objects,colors,black,16
+objects,colors,brown,17
+objects,colors,crimson,1
+objects,colors,darkblue,3
+objects,colors,darkgreen,1
+objects,colors,darkred,1
+objects,colors,darkslategrey,1
+objects,colors,glass like,6
+objects,colors,gray,3
+objects,colors,green,2
+objects,colors,honeydew,1
+objects,colors,ivory,1
+objects,colors,lightblue,2
+objects,colors,lightgoldenrodyellow,1
+objects,colors,mediumseagreen,1
+objects,colors,mediumseagreen dup,0
+objects,colors,olive,1
+objects,colors,orange,1
+objects,colors,palevioletred,1
+objects,colors,seashell,1
+objects,colors,silver,8
+objects,colors,violet,1
+objects,colors,white,5
+objects,material,acetate,1
+objects,material,brick,2
+objects,material,carved wood,1
+objects,material,ceramic planter,1
+objects,material,denim,0
+objects,material,felt,1
+objects,material,glass,6
+objects,material,leather,1
+objects,material,leather like brim,1
+objects,material,marble,1
+objects,material,metal,19
+objects,material,paper or canvas,1
+objects,material,plant,1
+objects,material,plastic,4
+objects,material,rubber,1
+objects,material,rubber insulation,2
+objects,material,straw,1
+objects,material,stucco,1
+objects,material,varnished wood,1
+objects,material,wood,17
+objects,material,wood frame,1
+objects,material,wood veneer,1
+objects,material,woven,1
+objects,material,woven straw,1
+objects,plane,background,15
+objects,plane,foreground,28
+objects,plane,midground,24
+objects,plane_side_counts,background center,5
+objects,plane_side_counts,background left,5
+objects,plane_side_counts,background right,5
+objects,plane_side_counts,foreground center,10
+objects,plane_side_counts,foreground left,11
+objects,plane_side_counts,foreground right,7
+objects,plane_side_counts,midground center,14
+objects,plane_side_counts,midground left,4
+objects,plane_side_counts,midground right,6
+objects,side,center,29
+objects,side,left,20
+objects,side,right,18
+objects,type,accessory,1
+objects,type,amplifier cabinet,1
+objects,type,amplifier cabinet duplicate entry handled once,1
+objects,type,architectural,10
+objects,type,barrier,1
+objects,type,bench,1
+objects,type,bokeh highlight,1
+objects,type,bokeh lights,1
+objects,type,bracelet,1
+objects,type,brick wall,1
+objects,type,cable,1
+objects,type,cap,1
+objects,type,chrome bridge tuning mechanism,1
+objects,type,clothing,1
+objects,type,clothing object annotations,3
+objects,type,deck planks,1
+objects,type,drum cymbal,1
+objects,type,drum kit partial,1
+objects,type,eyeglasses,1
+objects,type,eyewear,1
+objects,type,foliage,1
+objects,type,framed portrait,1
+objects,type,furnishing,1
+objects,type,furniture,3
+objects,type,furniture or plant,1
+objects,type,guitar neck,19
+objects,type,instrument,37
+objects,type,landform,1
+objects,type,marble steps,1
+objects,type,mass,1
+objects,type,microphone stand,4
+objects,type,mountain silhouette,1
+objects,type,musical instrument,1
+objects,type,potted houseplant,1
+objects,type,reflective plane,1
+objects,type,stand mounted metal microphone,1
+objects,type,storage bench,1
+objects,type,straw hat,2
+objects,type,stucco wall,1
+objects,type,surface,2
+objects,type,unknown,1
+objects,type,vegetation,1
+objects,type,violin like,1
+objects,type,visual element,1
+objects,type,window,10
+people,activities,fretting,2
+people,activities,holding guitar,2
+people,activities,playing guitar,3
+people,activities,plucking strings,2
+people,activities,singing,2
+people,activities,strumming guitar,2
+people,age_range,young adult,10
+people,clothing_garment,ankle boots,1
+people,clothing_garment,blazer,2
+people,clothing_garment,boots,1
+people,clothing_garment,denim jacket,2
+people,clothing_garment,guitar strap,3
+people,clothing_garment,jeans,2
+people,clothing_garment,necklace,2
+people,clothing_garment,shirt,6
+people,clothing_garment,sleeveless top,1
+people,clothing_garment,socks,1
+people,clothing_garment,t-shirt,3
+people,clothing_garment,trousers,1
+people,clothing_garment,turtleneck,1
+people,clothing_garment,undershirt,3
+people,clothing_garment,vest,2
+people,clothing_garment,wristband,1
+people,eyewear_frame_color,black frames,3
+people,eyewear_frame_color,seashell colored frames,1
+people,eyewear_frame_color,silver frames,1
+people,eyewear_present,no,7
+people,eyewear_present,yes,3
+people,eyewear_type,rectangular frames,1
+people,eyewear_type,sunglasses,2
+people,eyewear_type,thin rimmed metal eyeglasses,1
+people,facial_hair_color,black,1
+people,facial_hair_color,brown,3
+people,facial_hair_color,dark blue annotated,6
+people,facial_hair_present,no,1
+people,facial_hair_present,yes,9
+people,facial_hair_style,beard,1
+people,facial_hair_style,closely trimmed,1
+people,facial_hair_style,full beard,1
+people,facial_hair_style,short jawline beard,1
+people,facial_hair_style,stubble,3
+people,facial_hair_style,trimmed,1
+people,facial_hair_style,trimmed beard,2
+people,gaze_direction,down,6
+people,gaze_direction,left,2
+people,gaze_direction,right,2
+people,gender_presentation,female,1
+people,gender_presentation,male,9
+people,hair_color,black,6
+people,hair_color,brown,5
+people,hair_color,olive,1
+people,hair_present,yes,11
+people,hair_style,curly,3
+people,hair_style,long,2
+people,hair_style,ponytail,1
+people,hair_style,short,5
+people,hair_style,wavy,3
+people,head_covering_color,black,5
+people,head_covering_color,brown,1
+people,head_covering_present,no,6
+people,head_covering_present,yes,4
+people,head_covering_type,beanie,1
+people,head_covering_type,structured cap leather like brim,1
+people,head_covering_type,wide brim hat merged variant,2
+people,occlusions,partial occlusion,12
+people,orientation,front,2
+people,orientation,three quarter,9
+people,pose,active strumming,1
+people,pose,angled toward center,1
+people,pose,forward leaning,3
+people,pose,head tilt,1
+people,pose,partially occluded,1
+people,pose,relaxed,5
+people,pose,relaxed playing posture,1
+people,pose,seated,6
+people,pose,slight forward lean,2
+people,pose,slightly forward,2
+people,pose,slightly leaning,1
+people,pose,slightly tilted relaxed posture,1
+people,pose,three quarter orientation,9
+people,pose,upright,3
+people,role_hint,musician,3
+people,skin_tone,dark,2
+people,skin_tone,light,2
+people,skin_tone,medium,6
+safety,hazards,no flagged,8
+safety,hazards,unknown,8
+safety,nsfw,not,10
+safety,nsfw,unknown,10
+uncertainty,reason,amplifier keyboard small labels not legible,1
+uncertainty,reason,arched window glass frame material unclear due to backlighting,1
+uncertainty,reason,background exterior beyond windowpane out of focus,1
+uncertainty,reason,background foliage mostly out of frame shadow shapes visible,1
+uncertainty,reason,background shelving items blurred approximate count uncertain,1
+uncertainty,reason,dark strap material leather vs woven fabric ambiguous,1
+uncertainty,reason,exact fabric composition approximate appears cotton like,1
+uncertainty,reason,exact number type of background light fixtures approximate due to blur,1
+uncertainty,reason,exact time day not verifiable strong backlight suggests late day,1
+uncertainty,reason,facial micro expressions indiscernible due to resolution,1
+uncertainty,reason,floor ceiling not described source left empty,1
+uncertainty,reason,floor ceiling not visible left blank,1
+uncertainty,reason,floor lower body seating surface out of frame or occluded,1
+uncertainty,reason,garment vest vs suspenders ambiguous due to occlusion,1
+uncertainty,reason,guitar brand model markings not legible headstock,5
+uncertainty,reason,lower body seating structure out of frame or occluded,1
+uncertainty,reason,lower extremities footwear largely out of frame,1
+uncertainty,reason,lower instrument body area partially out of frame cropped,1
+uncertainty,reason,lower stage floor details occluded by performer crop,1
+uncertainty,reason,many small distant decorative objects in blurred background omitted specifics,18
+uncertainty,reason,microphone brand label partly visible but illegible,1
+uncertainty,reason,person 2 details largely indiscernible due to blur cropping,1
+uncertainty,reason,printed labels small text on instrument hardware not legible,1
+uncertainty,reason,right hand fingertip details occluded by motion blur,1
+uncertainty,reason,seating surface lower body support out of frame,1
+uncertainty,reason,several foreground right metallic elements motion blurred and indiscernible,1
+uncertainty,reason,small dark cable connector type not identifiable,1
+uncertainty,reason,small immediate surroundings pocket contents not visible,1
+uncertainty,reason,small items beneath keyboard floor cables pedals partially occluded,1
+uncertainty,reason,small items on deck bench not visible or indiscernible,1
+uncertainty,reason,small metallic emblem on blazer lapel partially occluded,1
+uncertainty,reason,time of day uncertain warm window light suggests daytime,1
+uncertainty,reason,unknown,14

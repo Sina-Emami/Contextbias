@@ -1,0 +1,1031 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,16
+atmosphere,aesthetic_qualities,dreamy,1
+atmosphere,aesthetic_qualities,minimal,4
+atmosphere,aesthetic_qualities,realistic,43
+atmosphere,aesthetic_qualities,unknown,7
+atmosphere,color,black,9
+atmosphere,color,brown,5
+atmosphere,color,cyan,1
+atmosphere,color,mediumblue,3
+atmosphere,color,mediumvioletred,1
+atmosphere,color,red,1
+atmosphere,color_temperature,cool,24
+atmosphere,color_temperature,neutral,8
+atmosphere,color_temperature,warm,1
+atmosphere,contrast_level,high,6
+atmosphere,contrast_level,medium,44
+atmosphere,contrast_level,unknown,5
+atmosphere,dominant_palette,black,24
+atmosphere,dominant_palette,blue,4
+atmosphere,dominant_palette,brown,7
+atmosphere,dominant_palette,cyan,2
+atmosphere,dominant_palette,gray,1
+atmosphere,dominant_palette,mediumblue,9
+atmosphere,dominant_palette,orangered,1
+atmosphere,dominant_palette,red,2
+atmosphere,dominant_palette,unknown,20
+atmosphere,mood,calm,45
+atmosphere,mood,minimalistic,6
+atmosphere,mood,unknown,1
+atmosphere,palette_detail,black,5
+atmosphere,palette_detail,brown,2
+atmosphere,palette_detail,cyan,1
+atmosphere,palette_detail,mediumblue,2
+atmosphere,saturation_level,neutral,35
+atmosphere,saturation_level,unknown,5
+atmosphere,saturation_level,vivid,13
+atmosphere,temperature,cool,9
+atmosphere,temperature,neutral,5
+atmosphere,temperature,unknown,4
+atmosphere,temperature,warm,2
+background,object_counts_background_center,total objects,9
+background,object_counts_background_left,total objects,3
+background,object_counts_background_right,total objects,2
+background,object_counts_by_position,background center,24
+background,object_counts_by_position,background left,10
+background,object_counts_by_position,background right,15
+background,object_counts_by_position,foreground center,32
+background,object_counts_by_position,foreground left,23
+background,object_counts_by_position,foreground right,17
+background,object_counts_by_position,midground center,24
+background,object_counts_by_position,midground left,21
+background,object_counts_by_position,midground right,21
+background,object_counts_by_position,unknown,1
+background,object_counts_foreground_center,total objects,12
+background,object_counts_foreground_left,total objects,9
+background,object_counts_foreground_right,total objects,4
+background,object_counts_midground_center,total objects,10
+background,object_counts_midground_left,total objects,4
+background,object_counts_midground_right,total objects,7
+background,object_counts_summary,background center,9
+background,object_counts_summary,background left,3
+background,object_counts_summary,background right,2
+background,object_counts_summary,foreground center,12
+background,object_counts_summary,foreground left,9
+background,object_counts_summary,foreground right,4
+background,object_counts_summary,midground center,10
+background,object_counts_summary,midground left,4
+background,object_counts_summary,midground right,7
+background,object_totals_by_position,background center,9
+background,object_totals_by_position,background left,0
+background,object_totals_by_position,background right,4
+background,object_totals_by_position,foreground center,10
+background,object_totals_by_position,foreground left,5
+background,object_totals_by_position,foreground right,1
+background,object_totals_by_position,midground center,8
+background,object_totals_by_position,midground left,7
+background,object_totals_by_position,midground right,9
+background,object_totals_by_position,unknown,1
+background,position,background center,10
+background,position,background left,9
+background,position,background right,11
+background,position,foreground center,10
+background,position,foreground left,10
+background,position,foreground right,9
+background,position,midground center,4
+background,position,midground left,9
+background,position,midground right,7
+camera,angle,unknown,20
+camera,crop,full upper body with cart visible,1
+camera,crop,head to toe,1
+camera,crop,lower legs cropped,1
+camera,crop,lower legs partially cropped,1
+camera,crop,mid thigh,1
+camera,crop,peripheral shelving cropped left right,1
+camera,crop,slight lower right caster,1
+camera,depth_of_field,deep,24
+camera,depth_of_field,moderate,5
+camera,depth_of_field,moderate dof,2
+camera,depth_of_field,shallow,26
+camera,depth_of_field,shallow dof,8
+camera,depth_of_field,unknown,4
+camera,focal_length,normal,8
+camera,focal_length,telephoto,5
+camera,focal_length,unknown,6
+camera,focal_length,wide,4
+camera,framing,establishing,5
+camera,framing,establishing shot,7
+camera,framing,full body,29
+camera,framing,medium,21
+camera,framing,unknown,1
+camera,framing,wide,24
+camera,perspective,eye level,52
+camera,perspective,low angle,4
+camera,perspective,third person,2
+camera,perspective,unknown,5
+environment,aisle_width,medium,2
+environment,aisle_width,moderately wide,1
+environment,aisle_width,open very wide,1
+environment,aisle_width,unknown,22
+environment,aisle_width,wide,1
+environment,ceiling_color,black,4
+environment,ceiling_color,gray,5
+environment,ceiling_color,palegreen,1
+environment,ceiling_color,white,21
+environment,ceiling_material,acoustic,1
+environment,ceiling_material,acoustic grid panels,1
+environment,ceiling_material,acoustic panels,2
+environment,ceiling_material,acoustic tile,2
+environment,ceiling_material,composite,1
+environment,ceiling_material,drop tiles,1
+environment,ceiling_material,metal,1
+environment,ceiling_material,metal grid,1
+environment,ceiling_material,panel,1
+environment,ceiling_material,plastic diffusers,1
+environment,ceiling_material,suspended,1
+environment,ceiling_texture,grid,2
+environment,ceiling_texture,grid patterned,1
+environment,ceiling_texture,matte,1
+environment,ceiling_texture,ribbed,1
+environment,ceiling_texture,smooth,3
+environment,ceiling_texture,textured,2
+environment,floor_color,beige,13
+environment,floor_color,chocolate,1
+environment,floor_color,gray,14
+environment,floor_color,light gray,1
+environment,floor_color,white,5
+environment,floor_material,ceramic,5
+environment,floor_material,ceramic look tile,1
+environment,floor_material,ceramic tile,4
+environment,floor_material,ceramic tile merged tokens,10
+environment,floor_material,glazed tile,1
+environment,floor_material,vinyl,1
+environment,floor_texture,glazed,2
+environment,floor_texture,glossy,2
+environment,floor_texture,grout lines,1
+environment,floor_texture,polished,2
+environment,floor_texture,slightly reflective,1
+environment,floor_texture,smooth,17
+environment,floor_texture,tiled,1
+environment,floor_texture,unknown,1
+environment,indoor_outdoor,unknown,50
+environment,location_type,commercial cleaning workspace,1
+environment,location_type,commercial kitchen,3
+environment,location_type,corridor,9
+environment,location_type,grocery aisle,1
+environment,location_type,grocery store,2
+environment,location_type,grocery store aisle,1
+environment,location_type,hallway,1
+environment,location_type,retail grocery aisle,1
+environment,location_type,supermarket,10
+environment,location_type,supermarket aisle,1
+environment,location_type,supermarket produce aisle,2
+environment,location_type,unknown,16
+environment,location_type,utility corridor,1
+environment,location_type,utility room,1
+environment,openness,moderate,2
+environment,openness,open,4
+environment,openness,unknown,13
+environment,spatial_depth,deep,5
+environment,spatial_depth,moderate,4
+environment,spatial_depth,unknown,1
+environment,spatial_layout_aisle_width,unknown,3
+environment,spatial_layout_aisle_width,wide,2
+environment,spatial_layout_depth,deep,13
+environment,spatial_layout_depth,elongated,1
+environment,spatial_layout_depth,long,2
+environment,spatial_layout_depth,medium,3
+environment,spatial_layout_depth,medium deep,1
+environment,spatial_layout_depth,medium long,1
+environment,spatial_layout_depth,moderate,10
+environment,spatial_layout_depth,open,1
+environment,spatial_layout_depth,shallow,1
+environment,spatial_layout_depth,unknown,1
+environment,spatial_layout_openness,enclosed,3
+environment,spatial_layout_openness,moderate,1
+environment,spatial_layout_openness,open,12
+environment,spatial_layout_openness,unknown,8
+environment,surfaces_ceiling_color,white,9
+environment,surfaces_ceiling_condition,intact,2
+environment,surfaces_ceiling_finish,matte,9
+environment,surfaces_ceiling_material,acoustic tiles grouped variants,7
+environment,surfaces_color,beige,8
+environment,surfaces_color,gray,6
+environment,surfaces_color,lightblue,1
+environment,surfaces_color,saddlebrown,1
+environment,surfaces_color,white,18
+environment,surfaces_floor_color,gray,4
+environment,surfaces_floor_condition,clean,3
+environment,surfaces_floor_finish,high gloss,5
+environment,surfaces_floor_material,tile,3
+environment,surfaces_floor_texture,smooth,7
+environment,surfaces_material,acoustic tile,10
+environment,surfaces_material,ceramic tile,2
+environment,surfaces_material,cinderblock,2
+environment,surfaces_material,linoleum,3
+environment,surfaces_material,metal,1
+environment,surfaces_material,paint,4
+environment,surfaces_material,painted drywall,2
+environment,surfaces_material,painted plaster,1
+environment,surfaces_material,plaster,1
+environment,surfaces_material,plastic diffuser,1
+environment,surfaces_material,polished stone,1
+environment,surfaces_material,terrazzo,2
+environment,surfaces_material,vinyl,4
+environment,surfaces_material,vinyl or linoleum,1
+environment,surfaces_material,vinyl or tile,1
+environment,surfaces_material,vinyl tile,1
+environment,surfaces_material,wood paneling lower section,1
+environment,surfaces_walls_color,beige,4
+environment,surfaces_walls_color,gray,3
+environment,surfaces_walls_color,white,5
+environment,surfaces_walls_condition,clean,9
+environment,surfaces_walls_material,ceramic tile,3
+environment,surfaces_walls_material,glass,1
+environment,surfaces_walls_material,paint,4
+environment,surfaces_walls_material,painted drywall,3
+environment,surfaces_walls_material,painted surface variant,2
+environment,surfaces_walls_material,plaster,2
+environment,surfaces_walls_material,wood,1
+environment,surfaces_walls_texture,smooth,12
+environment,time_of_day_hint,afternoon,1
+environment,time_of_day_hint,noon,1
+environment,time_of_day_hint,unknown,19
+environment,walls_color,beige,2
+environment,walls_color,black,5
+environment,walls_color,black feature,1
+environment,walls_color,gray,6
+environment,walls_color,green,2
+environment,walls_color,lightblue,1
+environment,walls_color,mediumseagreen,1
+environment,walls_color,mediumvioletred graphic,1
+environment,walls_color,silver,2
+environment,walls_color,white,11
+environment,walls_condition,clean,2
+environment,walls_condition,good,1
+environment,walls_condition,maintained,1
+environment,walls_condition,partially illegible text,1
+environment,walls_condition,tidy,1
+environment,walls_finish,matte,3
+environment,walls_finish,painted,2
+environment,walls_material,glossy plastic,1
+environment,walls_material,metal,1
+environment,walls_material,paint,3
+environment,walls_material,painted metal or panel,1
+environment,walls_material,painted metal paneling,1
+environment,walls_material,painted metal shelving,1
+environment,walls_material,panel,1
+environment,walls_material,paper covered wall graphic,1
+environment,walls_material,plastic shelf edge,1
+environment,walls_material,printed matte,1
+environment,walls_material,shelving or fitted panels,1
+environment,walls_material,wood,1
+environment,walls_texture,matte,3
+environment,walls_texture,reflective,1
+environment,walls_texture,smooth,5
+environment,weather,unknown,20
+lighting,artifacts,bokeh,1
+lighting,artifacts,bokeh around ceiling lights,1
+lighting,artifacts,diffuse ceiling reflections,1
+lighting,artifacts,each artifact token,0
+lighting,artifacts,floor reflections,2
+lighting,artifacts,glossy reflections fixtures objects,1
+lighting,artifacts,mild lens blur periphery,1
+lighting,artifacts,mild reflections glossy floor,1
+lighting,artifacts,mild reflections on glossy floor,1
+lighting,artifacts,mild specular highlights tiles,1
+lighting,artifacts,mild specular packages,1
+lighting,artifacts,mild vignette,1
+lighting,artifacts,minimal lens flare,1
+lighting,artifacts,minor glare glass fronted refrigerated bays,1
+lighting,artifacts,minor reflective highlights glass,1
+lighting,artifacts,minor specular highlights metal cart glossy produce,1
+lighting,artifacts,minor specular reflections glossy packaging glass,1
+lighting,artifacts,motion blur,1
+lighting,artifacts,no chromatic aberration,1
+lighting,artifacts,no lens flare,2
+lighting,artifacts,no notable,1
+lighting,artifacts,other,0
+lighting,artifacts,peripheral blur,2
+lighting,artifacts,pronounced specular floor reflections,1
+lighting,artifacts,reflections,1
+lighting,artifacts,reflections floor,3
+lighting,artifacts,sheen plastic packaging,1
+lighting,artifacts,slight bloom,1
+lighting,artifacts,specular floor reflections,3
+lighting,artifacts,specular floor reflections from window panes,1
+lighting,artifacts,specular floor reflections window panes,1
+lighting,artifacts,specular highlights metal glossy plastic,1
+lighting,artifacts,specular reflection floor,1
+lighting,artifacts,specular reflections chrome stainless steel,1
+lighting,artifacts,specular reflections floor cart,1
+lighting,artifacts,specular reflections glass,1
+lighting,artifacts,specular reflections on stainless surfaces,1
+lighting,artifacts,specular reflections stainless surfaces,1
+lighting,artifacts,strong floor reflections,1
+lighting,artifacts,strong specular reflections floor,1
+lighting,artifacts,subtle specular highlights glossy packaging,1
+lighting,artifacts,unknown,1
+lighting,color_temperature,cool,33
+lighting,color_temperature,neutral,15
+lighting,color_temperature,unknown,3
+lighting,color_temperature,warm,3
+lighting,contrast_level,high,6
+lighting,contrast_level,medium,44
+lighting,contrast_level,unknown,4
+lighting,directionality,back light,4
+lighting,directionality,side light,5
+lighting,directionality,top light,8
+lighting,directionality,unknown,2
+lighting,hardness,soft,16
+lighting,saturation_level,neutral,34
+lighting,saturation_level,unknown,4
+lighting,saturation_level,vivid,14
+lighting,shadows,casting,2
+lighting,shadows,soft,58
+lighting,shadows,unknown,1
+lighting,sources_count,four or more,9
+lighting,sources_count,four or more light,29
+lighting,sources_count,one light source,8
+lighting,sources_count,one source,2
+lighting,sources_directionality,back light,2
+lighting,sources_directionality,side light,2
+lighting,sources_directionality,top light,29
+lighting,sources_directionality,unknown,14
+lighting,sources_hardness,hard light,1
+lighting,sources_hardness,medium,1
+lighting,sources_hardness,soft,19
+lighting,sources_hardness,soft light,19
+lighting,sources_hardness,unknown,1
+lighting,sources_type,artificial,10
+lighting,sources_type,artificial light,20
+lighting,sources_type,artificial light source,7
+lighting,sources_type,artificial source,9
+lighting,sources_type,unknown,13
+objects,color,beige,7
+objects,color,black,44
+objects,color,blue,22
+objects,color,blue palette,0
+objects,color,brown,12
+objects,color,brown beige,0
+objects,color,chocolate,1
+objects,color,crimson,4
+objects,color,darkblue,9
+objects,color,darkcyan,1
+objects,color,darkgreen,1
+objects,color,darkolivegreen,1
+objects,color,darkslateblue,1
+objects,color,darkslategrey,2
+objects,color,deepskyblue,1
+objects,color,gray,37
+objects,color,green,20
+objects,color,lightblue,4
+objects,color,lightgreen,1
+objects,color,lightyellow,1
+objects,color,mediumblue,4
+objects,color,mediumpurple,3
+objects,color,mediumslateblue,1
+objects,color,mediumvioletred,2
+objects,color,orange,20
+objects,color,other,0
+objects,color,pink,1
+objects,color,red,14
+objects,color,royalblue,1
+objects,color,silver,24
+objects,color,silver alt,0
+objects,color,teal,1
+objects,color,white,29
+objects,color,yellow,12
+objects,color,yellowgreen,1
+objects,condition,blurred,1
+objects,condition,clean,27
+objects,condition,faint scuff reflections,1
+objects,condition,faint scuffing,1
+objects,condition,good,14
+objects,condition,intact,13
+objects,condition,lightly used,1
+objects,condition,maintained,1
+objects,condition,moderate wear,1
+objects,condition,mounted,1
+objects,condition,neat,1
+objects,condition,orderly,10
+objects,condition,organized,6
+objects,condition,partially occluded,1
+objects,condition,reflective,1
+objects,condition,scuffed,4
+objects,condition,slightly crumpled,1
+objects,condition,slightly worn,1
+objects,condition,stocked,12
+objects,condition,unknown,7
+objects,condition,used,12
+objects,condition,used but intact,1
+objects,condition,used but orderly,1
+objects,condition,visibly used,1
+objects,condition,well maintained,8
+objects,condition,well stocked,3
+objects,condition,wet,2
+objects,condition,worn,5
+objects,finish,backlit,2
+objects,finish,brushed,2
+objects,finish,chrome,6
+objects,finish,coated,1
+objects,finish,diffuse,2
+objects,finish,galvanized,1
+objects,finish,glossy,36
+objects,finish,high gloss,7
+objects,finish,lit,2
+objects,finish,matte,28
+objects,finish,metallic,2
+objects,finish,molded plastic,1
+objects,finish,other,0
+objects,finish,painted,8
+objects,finish,painted gloss,1
+objects,finish,polished,3
+objects,finish,recessed diffuser panels,1
+objects,finish,reflective,15
+objects,finish,reflective striping,1
+objects,finish,semi gloss,5
+objects,finish,superficially clean,1
+objects,finish,transparent front,1
+objects,material,acrylic,2
+objects,material,cardboard,5
+objects,material,ceramic,4
+objects,material,chrome,1
+objects,material,flat plastic,2
+objects,material,fluorescent panel,1
+objects,material,foam,1
+objects,material,glass,24
+objects,material,leather,0
+objects,material,metal,71
+objects,material,metal family,20
+objects,material,metal wire,1
+objects,material,mineral fiber,1
+objects,material,molded plastic,1
+objects,material,organic,2
+objects,material,other,0
+objects,material,others,0
+objects,material,painted drywall,12
+objects,material,painted metal,5
+objects,material,paper,1
+objects,material,plastic,94
+objects,material,plastic bags,1
+objects,material,polished stone,1
+objects,material,printed,1
+objects,material,rigid plastic diffusers,1
+objects,material,rubber,11
+objects,material,stainless steel,6
+objects,material,synthetic bristles,1
+objects,material,terrazzo,1
+objects,material,translucent panel,1
+objects,material,unknown,12
+objects,material,wood,2
+objects,material,wood family,6
+objects,material,wood veneer,1
+objects,plane,background,30
+objects,plane,foreground,29
+objects,plane,midground,20
+objects,side,center,24
+objects,side,left,28
+objects,side,right,27
+objects,size_class,compact,2
+objects,size_class,large,22
+objects,size_class,long,9
+objects,size_class,medium,24
+objects,size_class,repeating,1
+objects,size_class,small,17
+objects,size_class,standard,5
+objects,size_class,unknown,4
+objects,state,attached bucket,1
+objects,state,attached shelving,1
+objects,state,being operated,2
+objects,state,closed sliding panels,1
+objects,state,contact floor,4
+objects,state,contains cleaning water,1
+objects,state,contains groceries,1
+objects,state,contains leafy greens,1
+objects,state,contains produce packaged items,1
+objects,state,contains products,3
+objects,state,lit,1
+objects,state,loaded,1
+objects,state,mounted,1
+objects,state,mounted cart,1
+objects,state,other states,0
+objects,state,static,2
+objects,state,stocked,10
+objects,state,suspended,1
+objects,state,unknown,11
+objects,state,use,8
+objects,state,wet appearing,1
+objects,state,wheels,1
+objects,state,worn,1
+objects,texture,absorbent,1
+objects,texture,bristled,1
+objects,texture,brushed,2
+objects,texture,bubbly,1
+objects,texture,coarse bristles,2
+objects,texture,dense bristle,1
+objects,texture,durable,1
+objects,texture,flat,4
+objects,texture,glass front,1
+objects,texture,glossy,26
+objects,texture,glossy reflections,1
+objects,texture,grid pattern,1
+objects,texture,hard plastic,2
+objects,texture,matte,15
+objects,texture,mixed,1
+objects,texture,molded plastic,1
+objects,texture,other,0
+objects,texture,polished,3
+objects,texture,reflective,11
+objects,texture,ribbed interior,1
+objects,texture,ribbed rubber,1
+objects,texture,rigid wire,1
+objects,texture,shiny,1
+objects,texture,slightly dulled,1
+objects,texture,slightly reflective,1
+objects,texture,smooth,78
+objects,texture,smooth plastic handle,1
+objects,texture,speckled,1
+objects,texture,stiff bristles,2
+objects,texture,textured,13
+objects,texture,textured plastic,2
+objects,texture,thin metal,1
+objects,texture,wet,4
+objects,texture,wire,2
+objects,texture,wire mesh,2
+objects,texture,wireframe,1
+objects,texture,wrapped,1
+objects,type,accessory,1
+objects,type,appliance,1
+objects,type,arched windows series,1
+objects,type,architectural element,2
+objects,type,architectural surface,3
+objects,type,architecture,4
+objects,type,architecture element,1
+objects,type,bag,2
+objects,type,bagged produce,1
+objects,type,banner,1
+objects,type,baseboard molding,1
+objects,type,basket,1
+objects,type,black flexible rubber hose,1
+objects,type,box,1
+objects,type,broccoli,1
+objects,type,broom,2
+objects,type,broom head,1
+objects,type,bucket,1
+objects,type,cabinet,4
+objects,type,cabinetry,4
+objects,type,caution sign,1
+objects,type,caution wet floor sign,1
+objects,type,ceiling tiles lights,1
+objects,type,chair,1
+objects,type,cleaning bucket,1
+objects,type,cleaning cart,1
+objects,type,cleaning tool,46
+objects,type,cleaning tool head,1
+objects,type,clear plastic containers,1
+objects,type,clock,1
+objects,type,cloth,1
+objects,type,clothing,1
+objects,type,container,11
+objects,type,corridor wall segment,1
+objects,type,dark colored trim,1
+objects,type,dispenser,1
+objects,type,display,2
+objects,type,display shelving,2
+objects,type,distant terminus feature,1
+objects,type,door,4
+objects,type,door frames,8
+objects,type,door panels sequence,1
+objects,type,electrical plate,1
+objects,type,emergency sign,1
+objects,type,extractor hood,1
+objects,type,fixture,10
+objects,type,fixture appliance,1
+objects,type,floor,2
+objects,type,floor object level,2
+objects,type,floor patch,1
+objects,type,floor protector,1
+objects,type,floor reflection band,1
+objects,type,floor surface,1
+objects,type,floor tiles,2
+objects,type,fluorescent fixture,1
+objects,type,folded towel or cloth,1
+objects,type,folded white textiles or paper goods,1
+objects,type,framed wall poster,1
+objects,type,freestanding display,1
+objects,type,furniture,3
+objects,type,furniture or equipment,1
+objects,type,hand basket,1
+objects,type,handheld tool,1
+objects,type,handrail,3
+objects,type,heating or ventilation grille,1
+objects,type,hose,1
+objects,type,indicator device,1
+objects,type,light panels,1
+objects,type,long handle metal pole,1
+objects,type,melon,1
+objects,type,mop,22
+objects,type,mop bucket,31
+objects,type,mop bucket assembly,15
+objects,type,multi pane windows,11
+objects,type,outlet or control plate,1
+objects,type,packaged goods,1
+objects,type,partially transparent plastic bags,1
+objects,type,plant,1
+objects,type,price display unit,1
+objects,type,produce,3
+objects,type,produce bags,1
+objects,type,produce containers,1
+objects,type,produce display,1
+objects,type,produce generic,2
+objects,type,produce shelving,2
+objects,type,produce wire rack,1
+objects,type,push broom,3
+objects,type,refrigerated case variant token,1
+objects,type,refrigerated display,2
+objects,type,refrigerated display case,1
+objects,type,refrigerated shelves,2
+objects,type,refrigerated shelving,1
+objects,type,refrigerated unit,1
+objects,type,refrigeration unit,2
+objects,type,retail fixtures,1
+objects,type,retail shelving,1
+objects,type,safety equipment,1
+objects,type,safety sign,7
+objects,type,safety vest,1
+objects,type,service counter panel,1
+objects,type,shelf,2
+objects,type,shelf face,2
+objects,type,shelving,18
+objects,type,shelving rows,1
+objects,type,shelving unit,6
+objects,type,shoes,4
+objects,type,shopping basket,5
+objects,type,shopping basket cart configuration,1
+objects,type,shopping cart,8
+objects,type,sign,2
+objects,type,sink counter,1
+objects,type,small medium bottles canisters shelving,1
+objects,type,small potted plant,1
+objects,type,stack,1
+objects,type,stackable plastic chair,1
+objects,type,stainless steel paneled lower cabinetry,13
+objects,type,stainless tubular handrail,2
+objects,type,storage bag,1
+objects,type,surface,1
+objects,type,tall open metal storage shelving,1
+objects,type,tool,2
+objects,type,unknown,15
+objects,type,vacuum hose,1
+objects,type,valve handle,1
+objects,type,vent,1
+objects,type,ventilation hood,1
+objects,type,wall panel,1
+objects,type,wall sign,12
+objects,type,wall surface,20
+objects,type,warning sign,1
+objects,type,waste receptacle,1
+objects,type,wet floor folding sign,1
+objects,type,wheeled container,1
+objects,type,window,3
+objects,type,window assembly,1
+objects,type,window wall,1
+objects,type,work shirt,3
+objects,type,work trousers,5
+people,activities,carrying basket,1
+people,activities,gripping shopping cart,1
+people,activities,gripping shopping cart duplicate token preserved as single group,1
+people,activities,holding broom,1
+people,activities,holding hose,1
+people,activities,holding shopping basket,3
+people,activities,holding tool,1
+people,activities,mopping,13
+people,activities,operating long handled floor cleaning tool,1
+people,activities,placing or adjusting fruit,1
+people,activities,positioned near cleaning cart,1
+people,activities,preparing cleaning tools,1
+people,activities,pressing cleaning head against floor,1
+people,activities,pressing mop head into floor,1
+people,activities,push brooming,1
+people,activities,pushing broom,2
+people,activities,pushing cart token,3
+people,activities,pushing mop,3
+people,activities,sweeping,6
+people,activities,unknown,2
+people,activity_pose,mid stride,1
+people,activity_pose,relaxed,3
+people,activity_pose,relaxed standing,2
+people,activity_pose,relaxed upright torso,1
+people,activity_pose,slight forward lean,6
+people,activity_pose,standing,3
+people,activity_pose,upright,7
+people,age_range,middle aged,38
+people,age_range,older adult,10
+people,age_range,unknown,3
+people,age_range,young adult,1
+people,clothing_color,beige,0
+people,clothing_color,black,44
+people,clothing_color,blue,72
+people,clothing_color,brown,2
+people,clothing_color,gray,7
+people,clothing_color,green,24
+people,clothing_color,orange,8
+people,clothing_color,pink,1
+people,clothing_color,tan,1
+people,clothing_color,white,7
+people,clothing_color,yellow,10
+people,clothing_condition,clean,1
+people,clothing_condition,good,4
+people,clothing_condition,intact,1
+people,clothing_condition,tidy,1
+people,clothing_condition,used,1
+people,clothing_condition,worn,2
+people,clothing_condition,worn but serviceable,1
+people,clothing_condition,worn good,1
+people,clothing_garment,apron,1
+people,clothing_garment,belt,1
+people,clothing_garment,coverall,2
+people,clothing_garment,disposable gloves,1
+people,clothing_garment,face mask,1
+people,clothing_garment,footwear,1
+people,clothing_garment,gloves,3
+people,clothing_garment,high visibility safety vest,2
+people,clothing_garment,overalls,10
+people,clothing_garment,rubber gloves,2
+people,clothing_garment,safety vest,3
+people,clothing_garment,shirt,22
+people,clothing_garment,shoes,8
+people,clothing_garment,t-shirt,2
+people,clothing_garment,trousers,7
+people,clothing_garment,utility pouch,1
+people,clothing_garment,work gloves,17
+people,clothing_garment,work overall sleeveless,1
+people,clothing_garment,work pants,1
+people,clothing_garment,work shoes,6
+people,clothing_material,cotton,11
+people,clothing_material,disposable polymer,1
+people,clothing_material,disposable surgical fabric,1
+people,clothing_material,durable fabric,2
+people,clothing_material,durable woven fabric,1
+people,clothing_material,fabric,4
+people,clothing_material,heavy duty fabric,2
+people,clothing_material,heavy duty textile,1
+people,clothing_material,knit,4
+people,clothing_material,latex,1
+people,clothing_material,latex or nitrile,1
+people,clothing_material,leather,2
+people,clothing_material,leather like,1
+people,clothing_material,mesh or fabric,1
+people,clothing_material,others,0
+people,clothing_material,poly cotton,1
+people,clothing_material,polyester,10
+people,clothing_material,polyester cotton,1
+people,clothing_material,rubber,12
+people,clothing_material,rubber or rubber like,4
+people,clothing_material,rubber sol,1
+people,clothing_material,rubber soled,1
+people,clothing_material,rubber synthetic,1
+people,clothing_material,synthetic,2
+people,clothing_material,synthetic blend,1
+people,clothing_material,synthetic fabric,1
+people,clothing_material,textile textured grip,1
+people,clothing_material,unknown,15
+people,clothing_material,woven,3
+people,clothing_material,woven fabric,3
+people,clothing_material,woven work fabric,1
+people,eyewear_frame_color,black,1
+people,eyewear_present,no,46
+people,eyewear_present,unknown,6
+people,eyewear_present,yes,5
+people,facial_hair_color,black,5
+people,facial_hair_color,brown,3
+people,facial_hair_color,white,1
+people,facial_hair_present,no,17
+people,facial_hair_present,unknown,13
+people,facial_hair_present,yes,12
+people,facial_hair_style,short,1
+people,facial_hair_style,short stubble,2
+people,facial_hair_style,stubble,2
+people,gaze_direction,down,31
+people,gaze_direction,left,1
+people,gaze_direction,right,1
+people,gaze_direction,to the right,2
+people,gaze_direction,unknown,6
+people,gaze_direction,up,6
+people,gender_presentation,female,1
+people,gender_presentation,male,51
+people,hair_color,black,27
+people,hair_color,brown,11
+people,hair_color,gray,34
+people,hair_color,white,2
+people,hair_present,unknown,3
+people,hair_present,yes,48
+people,hair_style,curly,1
+people,hair_style,shaved,1
+people,hair_style,short,44
+people,hair_style,straight,1
+people,hair_style,unknown,5
+people,head_covering_color,black,1
+people,head_covering_color,blue,9
+people,head_covering_color,blue coverings,5
+people,head_covering_color,orange,1
+people,head_covering_color,unknown,1
+people,head_covering_present,no,22
+people,head_covering_present,unknown,1
+people,head_covering_present,yes,28
+people,head_covering_type,baseball cap,10
+people,head_covering_type,brimmed cap,1
+people,head_covering_type,cap,7
+people,head_covering_type,cap generic,4
+people,head_covering_type,hard hat,1
+people,occlusions,partial occlusion,19
+people,occlusions,partially occluded,27
+people,occlusions,unknown,4
+people,orientation,back facing,3
+people,orientation,facing front,10
+people,orientation,front,6
+people,orientation,front facing,2
+people,orientation,three quarter,7
+people,orientation,unknown,18
+people,pose,back orientation,1
+people,pose,bent forward general,2
+people,pose,forward leaning,7
+people,pose,forward leaning torso,1
+people,pose,head tilted down,1
+people,pose,head turned right,1
+people,pose,mid step,1
+people,pose,mopping posture,2
+people,pose,relaxed,1
+people,pose,shoulders squared,1
+people,pose,slight forward lean,3
+people,pose,slight forward leaning merged variants,7
+people,pose,slightly bent,2
+people,pose,slightly bent forward,4
+people,pose,slightly bent merged variants,4
+people,pose,slightly crouched,1
+people,pose,slightly forward,1
+people,pose,slightly forward leaning,8
+people,pose,slightly forward leaning inspection posture,1
+people,pose,slightly leaning,1
+people,pose,standing,4
+people,pose,task focused posture,1
+people,pose,unknown,1
+people,pose,upright,13
+people,pose,upright walking,1
+people,pose,walking mid step,2
+people,pose,work engaged,1
+people,role_hint,appears grocery store worker royal blue apron cap,1
+people,role_hint,appears janitorial worker proximity evidence,1
+people,role_hint,appears store employee short form,1
+people,role_hint,appears supermarket employee orange shirt dark overalls,1
+people,role_hint,cleaning staff,6
+people,role_hint,cleaning worker,2
+people,role_hint,custodial worker,1
+people,role_hint,grocery store employee,1
+people,role_hint,janitorial staff,5
+people,role_hint,janitorial worker,6
+people,role_hint,retail employee,1
+people,role_hint,store employee,3
+people,role_hint,store employee explicit token,1
+people,role_hint,unknown,12
+people,role_hint,worker described by clothing long form,1
+people,skin_tone,dark,3
+people,skin_tone,light,24
+people,skin_tone,medium,25
+safety,hazards,biohazard waste container,1
+safety,hazards,no,6
+safety,hazards,no detected,9
+safety,hazards,no observed,7
+safety,hazards,no reported,7
+safety,hazards,no visible,10
+safety,hazards,potential slip hazard recently cleaned floor,1
+safety,hazards,slip hazard,1
+safety,hazards,slip hazard wet floor,2
+safety,hazards,slippery floor,2
+safety,hazards,trip hazard hose,2
+safety,hazards,unknown,14
+safety,hazards,wet floor,6
+safety,hazards,wet floor slip risk,2
+safety,nsfw,no content,10
+safety,nsfw,not,20
+safety,nsfw,unknown,29
+texts,content,caution wet floor,1
+texts,content,exit,1
+texts,content,illegible dia yter,1
+texts,content,legible partially legible janisitor,1
+texts,content,text biohazard,1
+texts,content,text caution wet floor,1
+texts,content,text eating,1
+texts,content,text exit,3
+texts,font_style,bold,5
+texts,font_style,cursive,3
+texts,font_style,sans,6
+texts,font_style,sans serif,9
+texts,font_style,stencil,2
+texts,font_style,unknown,26
+texts,font_style,uppercase,1
+texts,font_style_summary,sans,4
+texts,font_style_summary,unknown,16
+texts,font_style_summary,uppercase,1
+texts,legibility,illegible,41
+texts,legibility,legible,7
+texts,legibility,not legible,17
+texts,legibility,partial,1
+texts,legibility,partially illegible,2
+texts,legibility,partially legible,5
+texts,legibility,partially unreadable,1
+texts,legibility,unknown,1
+texts,legibility,unreadable,7
+texts,plane,background,12
+texts,plane,foreground,9
+texts,plane,midground,5
+texts,plane,text background,11
+texts,plane,text foreground,1
+texts,plane,text in background,11
+texts,plane,text in foreground,13
+texts,plane,text in midground,7
+texts,plane,text midground,13
+texts,side,center,5
+texts,side,left,1
+texts,side,right,4
+texts,side,text center,26
+texts,side,text left,13
+texts,side,text right,6
+uncertainty,comment,exact material finish of some garments unspecified,1
+uncertainty,comment,facial eyewear not specified,1
+uncertainty,comment,precise floor material vinyl vs tile uncertain,1
+uncertainty,comment,small black logo text on bucket side not legible,1
+uncertainty,comment,text logo on shirt pocket not legible,1
+uncertainty,comment,unknown,29
+uncertainty,comment,wet floor pictogram partially occluded not fully legible,5
+uncertainty,note,any small handheld items in worker s left hand partially occluded and not identifiable,1
+uncertainty,note,approximate counts of ceiling panels door frames wall devices,1
+uncertainty,note,background center bright rectangular window area overexposed,1
+uncertainty,note,background center clear plastic container count approximate 3 5,1
+uncertainty,note,background left countertop appliance partially occluded blurred,1
+uncertainty,note,background right hanging clear plastic dispensers approximate 4,1
+uncertainty,note,ceiling left corner area indiscernible,1
+uncertainty,note,ceiling materials details not described,1
+uncertainty,note,ceiling service panel details indiscernible,1
+uncertainty,note,ceiling tile texture detail partially occluded approximate,1
+uncertainty,note,ceiling upper wall areas out of frame,1
+uncertainty,note,chest patch text logo partially occluded and not legible,1
+uncertainty,note,distant corridor terminus ambiguous door or window,1
+uncertainty,note,distant green aisle header panels contain pale lettering icons but text not legible,1
+uncertainty,note,exact contents of small red crate inside shopping cart partially occluded and not identifiable,1
+uncertainty,note,exact count of overhead fixtures not provided,1
+uncertainty,note,exact number of doors per corridor side uncertain,1
+uncertainty,note,exact number of wall mounted control devices uncertain,1
+uncertainty,note,exact product counts on midground background shelves approximate e g 8 12 boxes,1
+uncertainty,note,exact product identities brand text on packaged goods not legible,1
+uncertainty,note,exact time of day ambiguous morning afternoon,1
+uncertainty,note,extent of floor wetness ambiguous,1
+uncertainty,note,eyewear head covering not specified,1
+uncertainty,note,facial expression not clearly visible,1
+uncertainty,note,facial feature specifics beyond age not clear,1
+uncertainty,note,facial uncertain because lower face occluded by surgical mask,1
+uncertainty,note,far background aisle right contains blurred indiscernible objects,1
+uncertainty,note,far background areas exhibit motion df blur small items not identifiable,1
+uncertainty,note,far background beyond exterior windows partially occluded by reflection,6
+uncertainty,note,far background elements beyond midground center partially occluded by depth field blur described only as blurred shelving displays,1
+uncertainty,note,far background left right details increasingly blurred and indiscernible beyond basic shapes colors,1
+uncertainty,note,floor grout condition ambiguous blurring,1
+uncertainty,note,label text on bright yellow wheeled cleaning trolley not legible,1
+uncertainty,note,left hand dark gray metal tool held by person appears to be wringer trolley component identity partially occluded,1
+uncertainty,note,lower body clothing footwear not visible below mid thigh due to crop occlusion,1
+uncertainty,note,lower left arm partially occluded by cleaning tool,1
+uncertainty,note,lower left shelf interior areas behind produce partially occluded and not further described,1
+uncertainty,note,lower leg area partially occluded by foreground right orange plastic shopping basket legwear details partially occluded,1
+uncertainty,note,lower legs footwear partially cropped image bottom not visible,1
+uncertainty,note,lower torso partially occluded by cleaning tool hoses,1
+uncertainty,note,material composition of long yellow cleaning handle ambiguous wood vs plastic,1
+uncertainty,note,material type of folded textiles paper goods uncertain,1
+uncertainty,note,metal shelving items approximate count 3 5,1
+uncertainty,note,midground left elements not fully enumerated,1
+uncertainty,note,minor items countertop partially occluded and not identifiable,1
+uncertainty,note,objects fully out of frame or behind shelving not visible,1
+uncertainty,note,paper towel dispenser near sink partially occluded,1
+uncertainty,note,peripheral shelf items at extremes partially out of frame and partially occluded,1
+uncertainty,note,person age mapping ambiguous middle aged vs older adult,1
+uncertainty,note,person lower back partially occluded by wheeled cleaning cart hands occluded by broom handle,1
+uncertainty,note,placement of angled push broom not precisely specified,1
+uncertainty,note,precise number of full window sections approximate,1
+uncertainty,note,red safety label on cleaning machine handle contains small printed text but characters illegible,1
+uncertainty,note,small accessory utility belt partially occluded unidentified,1
+uncertainty,note,small distant objects partially occluded or too small to identify,1
+uncertainty,note,small items on distant background shelves indiscernible due to shallow depth of field,1
+uncertainty,note,small metallic control plate switch unreadable,1
+uncertainty,note,small rectangular shelf price tags but unreadable at current resolution,15
+uncertainty,note,small white label text on green wheeled cleaning bucket but illegible,1
+uncertainty,note,some enumerations not provided avoid inference,1
+uncertainty,note,sticker text on green plastic cleaning bucket but not legible,1
+uncertainty,note,time of day cannot be determined,1
+uncertainty,note,time of day not visible in image,1
+uncertainty,note,unknown,114
+uncertainty,note,white embroidered text on royal blue baseball cap illegible,1
+uncertainty,note,yellow chest badge text on uniform not legible,1
+uncertainty,notes,others,6
+uncertainty,notes,unknown,52
+uncertainty,token,exact contents of nested metal wire basket ambiguous,1
+uncertainty,token,face emotion gaze direction not specified in description,1
+uncertainty,token,facial expression details not visible due to rear orientation,6
+uncertainty,token,location time day weather not visible in image,1
+uncertainty,token,lower portion of left leg partially occluded by cart,1
+uncertainty,token,lower shopper legs partially occluded by cart frame,1
+uncertainty,token,overhead aisle sign text partially out of frame illegible,47
+uncertainty,token,printed graphics on blue cardboard box partially occluded,1
+uncertainty,token,red fruit ambiguous apples vs tomatoes,1
+uncertainty,token,unknown,1
+uncertainty,token,walls not described by source,1

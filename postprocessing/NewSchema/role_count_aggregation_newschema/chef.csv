@@ -1,0 +1,153 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,20,3
+scene_appearance,aesthetic_qualities,dreamy,4,3
+scene_appearance,aesthetic_qualities,realistic,24,3
+scene_appearance,color_temperature,cool,2,3
+scene_appearance,color_temperature,neutral,2,3
+scene_appearance,color_temperature,warm,25,3
+scene_appearance,dominant_colors,black,2,6
+scene_appearance,dominant_colors,blue,3,6
+scene_appearance,dominant_colors,brown,22,6
+scene_appearance,dominant_colors,mediumblue,3,6
+scene_appearance,dominant_colors,orange,1,6
+scene_appearance,dominant_colors,orangered,1,6
+scene_appearance,mood,calm,15,2
+scene_appearance,mood,joyful,7,2
+camera,depth_of_field,moderate,3,2
+camera,depth_of_field,shallow,42,2
+camera,framing,close up,2,4
+camera,framing,headshot,5,4
+camera,framing,medium,41,4
+camera,framing,wide,2,4
+camera,perspective,eye level,22,1
+objects,type,accessory e g watch,1,46
+objects,type,bench,3,46
+objects,type,bowl,5,46
+objects,type,bread,1,46
+objects,type,bread basket,1,46
+objects,type,cabinet doors,1,46
+objects,type,chef hat,1,46
+objects,type,container,5,46
+objects,type,cooking pan,1,46
+objects,type,cooking pot,2,46
+objects,type,cooking spoon,1,46
+objects,type,cookware,1,46
+objects,type,cutting board,6,46
+objects,type,display bowl,1,46
+objects,type,eggs,1,46
+objects,type,hanging cookware,1,46
+objects,type,hanging utensils,1,46
+objects,type,hat,1,46
+objects,type,jar,2,46
+objects,type,kitchen knife,1,46
+objects,type,knife,1,46
+objects,type,lamppost park lamp,1,46
+objects,type,mixing bowl,3,46
+objects,type,open shelving,2,46
+objects,type,pendant lamp,1,46
+objects,type,picnic table,2,46
+objects,type,plate,3,46
+objects,type,potted plant,1,46
+objects,type,prep container,1,46
+objects,type,rolling like utensil,1,46
+objects,type,saucepan,2,46
+objects,type,serving pan,1,46
+objects,type,serving plate,4,46
+objects,type,sign post,1,46
+objects,type,small containers,1,46
+objects,type,stacked plates,1,46
+objects,type,stockpots,1,46
+objects,type,table,5,46
+objects,type,tableware,1,46
+objects,type,tomatoes,2,46
+objects,type,umbrella patio umbrella,2,46
+objects,type,utensil,31,46
+objects,type,utensil holder,1,46
+objects,type,vegetation plants produce,19,46
+objects,type,window,5,46
+objects,type,wooden bowl,1,46
+people,activities,cooking,2,3
+people,activities,holding frying pan,1,3
+people,activities,stirring,1,3
+people,age_range,middle aged,17,2
+people,age_range,young adult,11,2
+people,clothing_color,black,36,5
+people,clothing_color,brown,0,5
+people,clothing_color,gray,1,5
+people,clothing_color,red,1,5
+people,clothing_color,white,41,5
+people,clothing_garment,apron,10,15
+people,clothing_garment,backpack,2,15
+people,clothing_garment,chef coat,2,15
+people,clothing_garment,chef jacket,29,15
+people,clothing_garment,chef trousers,1,15
+people,clothing_garment,hat,2,15
+people,clothing_garment,neckerchief,6,15
+people,clothing_garment,pants,3,15
+people,clothing_garment,shirt,2,15
+people,clothing_garment,shoes,2,15
+people,clothing_garment,short sleeved jacket,1,15
+people,clothing_garment,trousers,3,15
+people,clothing_garment,undershirt,2,15
+people,clothing_garment,waist apron,5,15
+people,clothing_garment,wristwatch,3,15
+people,eyewear_present,no,19,2
+people,eyewear_present,yes,9,2
+people,hair_color,black,14,5
+people,hair_color,brown,13,5
+people,hair_color,dark blue,9,5
+people,hair_color,darkblue,2,5
+people,hair_color,gray,3,5
+people,facial_hair_present,yes,28,1
+people,facial_hair_style,beard,3,11
+people,facial_hair_style,full beard,4,11
+people,facial_hair_style,full trimmed beard,8,11
+people,facial_hair_style,goatee,1,11
+people,facial_hair_style,mustache,8,11
+people,facial_hair_style,short,1,11
+people,facial_hair_style,short beard,2,11
+people,facial_hair_style,short trimmed beard,2,11
+people,facial_hair_style,stubble,4,11
+people,facial_hair_style,trimmed mustache,1,11
+people,facial_hair_style,trimmed stubble,3,11
+people,gaze_direction,down,10,2
+people,gaze_direction,up,3,2
+people,gender_presentation,male,29,1
+people,hair_color,black,20,5
+people,hair_color,brown,21,5
+people,hair_color,gray,1,5
+people,hair_present,yes,30,1
+people,hair_style,short,29,1
+people,head_covering_type,black,2,6
+people,head_covering_type,white,11,6
+people,head_covering_present,no,8,2
+people,head_covering_present,yes,20,2
+people,head_covering_type,chef hat,12,6
+people,head_covering_type,short chef cap,1,6
+people,head_covering_type,skullcap,1,6
+people,head_covering_type,tall pleated chef hat,5,6
+people,pose,standing,1,3
+people,pose,standing,1,3
+people,pose,standing,4,3
+people,pose,standing,1,3
+people,pose,standing,1,3
+people,pose,leaning,2,3
+people,pose,leaning,2,3
+people,pose,standing,1,3
+people,pose,standing,1,3
+people,pose,leaning,3,3
+people,pose,standing,4,3
+people,pose,standing,1,3
+people,pose,seated,2,3
+people,pose,leaning,5,3
+people,pose,leaning,1,3
+people,pose,standing,1,3
+people,pose,leaning,1,3
+people,pose,leaning,2,3
+people,pose,leaning,1,3
+people,pose,standing,1,3
+people,pose,standing,9,3
+people,pose,standing,1,3
+people,pose,standing,1,3
+people,skin_tone,light,14,2
+people,skin_tone,medium,14,2

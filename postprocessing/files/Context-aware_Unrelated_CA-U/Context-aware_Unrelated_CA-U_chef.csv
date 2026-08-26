@@ -1,0 +1,262 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,6
+atmosphere,aesthetic_qualities,dreamy,4
+atmosphere,aesthetic_qualities,realistic,6
+atmosphere,contrast_level,high,2
+atmosphere,contrast_level,medium,7
+atmosphere,dominant_palette,brown,14
+atmosphere,dominant_palette,medium blue,3
+atmosphere,dominant_palette,mediumblue,3
+atmosphere,dominant_palette,orange red,1
+atmosphere,dominant_palette,orangered,1
+atmosphere,color_temperature,warm,9
+atmosphere,mood,calm,9
+atmosphere,mood,joyful,3
+atmosphere,saturation_level,neutral,9
+background,object_counts_by_position,background center,8
+background,object_counts_by_position,background left,7
+background,object_counts_by_position,background right,6
+background,object_counts_by_position,foreground center,23
+background,object_counts_by_position,foreground left,17
+background,object_counts_by_position,foreground right,14
+background,object_counts_by_position,midground center,9
+background,object_counts_by_position,midground left,7
+background,object_counts_by_position,midground right,7
+camera,crop,lower body cropped,3
+camera,crop,lower body cropped at waist,1
+camera,crop,lower body cropped out,1
+camera,crop,lower legs cropped,2
+camera,crop,slightly canted,1
+camera,crop,tight waist up,1
+camera,depth_of_field,moderate,2
+camera,depth_of_field,shallow,18
+camera,focal_length,telephoto,2
+camera,framing,headshot,2
+camera,framing,medium,18
+camera,framing,wide,2
+camera,perspective,eye level,6
+environment,floor_color,black,2
+environment,floor_color,brown,4
+environment,floor_color,gray,1
+environment,floor_color,green,7
+environment,floor_color,lightblue,1
+environment,floor_color,white,1
+environment,floor_condition,clean,1
+environment,floor_condition,even,2
+environment,floor_condition,good,3
+environment,floor_condition,intact,1
+environment,floor_condition,manicured,1
+environment,floor_condition,neat,1
+environment,floor_condition,soft,1
+environment,floor_condition,weathered,2
+environment,floor_condition,well maintained,2
+environment,floor_condition,worn,1
+environment,floor_finish,matte,5
+environment,floor_finish,rounded edge,1
+environment,floor_finish,uniform,1
+environment,floor_finish,unknown,5
+environment,floor_material,composite,1
+environment,floor_material,concrete,2
+environment,floor_material,fabric,1
+environment,floor_material,grass,7
+environment,floor_material,paved,1
+environment,floor_material,paved path,1
+environment,floor_material,paving stone,1
+environment,floor_material,stone,1
+environment,floor_material,wood,3
+environment,indoor_outdoor,unknown,10
+environment,location_type,park,9
+environment,location_type,public park,1
+environment,openness,medium,1
+environment,openness,open,9
+environment,spatial_layout_depth,medium,1
+environment,spatial_layout_depth,moderate,2
+environment,spatial_layout_depth,shallow,6
+environment,time_of_day_hint,afternoon,3
+environment,weather,clear,1
+environment,weather,sunny,9
+lighting,artifact,bokeh lens,3
+lighting,artifact,circular bokeh highlights,1
+lighting,artifact,lens bokeh highlights,1
+lighting,artifact,lens flare,1
+lighting,artifact,mild lens flare,1
+lighting,artifact,mild lens glow,1
+lighting,artifact,mild warm lens flare,1
+lighting,artifact,specular metal reflections,1
+lighting,artifact,sun flare,1
+lighting,artifacts,bokeh,3
+lighting,artifacts,circular bokeh highlights,1
+lighting,artifacts,lens bokeh highlights,1
+lighting,artifacts,lens flare,1
+lighting,artifacts,mild lens flare,1
+lighting,artifacts,mild lens glow,1
+lighting,artifacts,mild warm lens flare,1
+lighting,artifacts,specular reflections metal,1
+lighting,artifacts,sun flare,1
+lighting,color_temperature,warm,18
+lighting,contrast_level,high,4
+lighting,contrast_level,medium,14
+lighting,directionality,backlight,4
+lighting,directionality,sidelight,4
+lighting,directionality,unknown,4
+lighting,hardness,soft light,11
+lighting,saturation_level,neutral,18
+lighting,shadows,soft,10
+lighting,sources_count,one light source,10
+lighting,sources_type,mixed light,2
+lighting,sources_type,unknown,9
+objects,plane,background,21
+objects,plane,foreground,54
+objects,plane,midground,23
+objects,side,center,40
+objects,side,left,31
+objects,side,right,27
+objects,type,accessory e g watch,1
+objects,type,bench,3
+objects,type,board,1
+objects,type,bowl,3
+objects,type,container,3
+objects,type,cooking pan,1
+objects,type,cooking pot lid,1
+objects,type,counter,4
+objects,type,display bowl,1
+objects,type,food,1
+objects,type,furniture,1
+objects,type,furniture or grounds,1
+objects,type,ground surface,1
+objects,type,headwear,1
+objects,type,hedge,1
+objects,type,lamppost park lamp,1
+objects,type,metal frame,1
+objects,type,people blurred distant blob,1
+objects,type,people object level,1
+objects,type,picnic table,2
+objects,type,produce,1
+objects,type,shade structure umbrella,1
+objects,type,sign post,1
+objects,type,skillet,1
+objects,type,structure railing etc,1
+objects,type,table,5
+objects,type,textile,1
+objects,type,tool,2
+objects,type,trash receptacle,1
+objects,type,umbrella patio umbrella,2
+objects,type,utensil,25
+objects,type,vegetation plants produce,19
+objects,utensil_color_distribution,black,3
+objects,utensil_color_distribution,brown,15
+objects,utensil_color_distribution,darkslategrey,2
+objects,utensil_color_distribution,green,2
+objects,utensil_color_distribution,lightyellow,1
+objects,utensil_color_distribution,orange,1
+objects,utensil_color_distribution,red,3
+objects,utensil_color_distribution,silver,11
+objects,utensil_color_distribution,white,2
+objects,vegetation_color_distribution,brown,4
+objects,vegetation_color_distribution,green,12
+objects,vegetation_color_distribution,red,6
+people,age_range,middle aged,5
+people,age_range,young adult,5
+people,clothing_color,black,10
+people,clothing_color,white,17
+people,clothing_garment,backpack,2
+people,clothing_garment,casual,2
+people,clothing_garment,chef coat,2
+people,clothing_garment,chef jacket,16
+people,clothing_garment,hat,2
+people,clothing_garment,neckerchief,4
+people,clothing_garment,pants,2
+people,clothing_garment,shirt,2
+people,clothing_garment,shoes,2
+people,clothing_garment,trousers,2
+people,clothing_garment,undershirt,2
+people,clothing_garment,apron,8
+people,clothing_garment,wristwatch,3
+people,eyewear_present,no,10
+people,facial_hair_color,black,8
+people,facial_hair_color,brown,8
+people,facial_hair_color,dark blue,2
+people,facial_hair_color,darkblue,2
+people,facial_hair_color,gray,2
+people,facial_hair_present,yes,10
+people,facial_hair_style,beard,3
+people,facial_hair_style,full trimmed beard,1
+people,facial_hair_style,goatee,1
+people,facial_hair_style,mustache,5
+people,facial_hair_style,short trimmed beard,1
+people,facial_hair_style,stubble,1
+people,facial_hair_style,trimmed beard,3
+people,gaze_direction,down,4
+people,gaze_direction,up,1
+people,gender_presentation,male,10
+people,hair_color,black,10
+people,hair_color,brown,12
+people,hair_present,yes,11
+people,hair_style,short,11
+people,head_covering_color,black,1
+people,head_covering_color,white,7
+people,head_covering_present,no,2
+people,head_covering_present,yes,8
+people,head_covering_type,chef hat,7
+people,head_covering_type,skullcap,1
+people,occlusions,partial occlusion,11
+people,orientation,front,2
+people,orientation,three quarter,2
+people,pose,engaged chopping posture,1
+people,pose,engaged posture,1
+people,pose,forward facing,1
+people,pose,forward leaning variant token,2
+people,pose,hands over table,1
+people,pose,leaning forward,2
+people,pose,relaxed,4
+people,pose,seated,2
+people,pose,slight forward lean,1
+people,pose,slightly forward leaning variant,1
+people,pose,slightly leaning forward,1
+people,pose,upright,6
+people,pose,waist up framing lower body cropped,1
+people,pose,walking,1
+people,role_hint,chef generic,3
+people,role_hint,unknown,6
+people,skin_tone,light,5
+people,skin_tone,medium,5
+safety,hazards,no hazard detected,6
+safety,hazards,open hot cookware burn hazard,1
+safety,hazards,sharp knife variant token,1
+safety,hazards,sharp object knife explicit,1
+safety,hazards_distribution,open hot cookware,1
+safety,hazards_distribution,sharp knife,1
+safety,hazards_distribution,sharp object knife,1
+safety,hazards_distribution,unknown,6
+safety,nsfw,no content,10
+texts,content,leading capital g visible remainder illegible,1
+texts,content,text token sta,1
+texts,font_style,sans,1
+texts,font_style,script,1
+texts,legibility,illegible,12
+texts,legibility,partial,2
+texts,legibility,partially legible,4
+texts,plane,text in foreground,6
+texts,plane,text in midground,3
+texts,plane_distribution,foreground,6
+texts,plane_distribution,midground,3
+texts,side,text centered,8
+texts,side,text left,1
+uncertainty,note,approx human count duplicate mention,1
+uncertainty,note,approximate human count 4 only central chef clearly detailed,1
+uncertainty,note,blurred staff figure midground left seated patrons indiscernible,1
+uncertainty,note,contents of small clear glass spice jar not readable,1
+uncertainty,note,distant blurred human figures approximate count 4 8,11
+uncertainty,note,distant light colored building facade visible but blurred and indiscernible,1
+uncertainty,note,distant vehicle like shapes unclear duplicate reference,1
+uncertainty,note,distant wooden post or sign out of focus details unreadable,1
+uncertainty,note,exact count of small herb sprigs approximate handful,1
+uncertainty,note,leader chef jacket chest text partially occluded leading g visible,12
+uncertainty,note,lower body of person 1 cropped out not visible,5
+uncertainty,note,possible low horizontal arc bridge like structure background center blurred,1
+uncertainty,note,possible metal frame object bicycle rack bench support partially occluded,1
+uncertainty,note,possible stovetop heat source beneath foreground right saucepan partially occluded,1
+uncertainty,note,several small utensil produce items in midground trays partially occluded item level ids uncertain,1
+uncertainty,note,small item foreground center round table blurred indiscernible,8
+uncertainty,note,specific time of day not specified beyond general daylight hint,1
+uncertainty,note,unknown,11

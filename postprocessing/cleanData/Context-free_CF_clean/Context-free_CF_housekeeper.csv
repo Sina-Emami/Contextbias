@@ -1,0 +1,288 @@
+cohort,standardized_dimension,standardized_label,count,bins
+atmosphere,aesthetic_qualities,cinematic,6,4
+atmosphere,aesthetic_qualities,dreamy,4,4
+atmosphere,aesthetic_qualities,minimal,1,4
+atmosphere,aesthetic_qualities,realistic,6,4
+atmosphere,contrast_level,medium,7,1
+atmosphere,dominant_palette,black,2,2
+atmosphere,dominant_palette,brown,8,2
+atmosphere,lighting_profile_aesthetic_qualities,cinematic,6,4
+atmosphere,lighting_profile_aesthetic_qualities,dreamy,4,4
+atmosphere,lighting_profile_aesthetic_qualities,minimal,1,4
+atmosphere,lighting_profile_aesthetic_qualities,realistic,6,4
+atmosphere,lighting_profile_color_temperature,neutral,3,2
+atmosphere,lighting_profile_color_temperature,warm,4,2
+atmosphere,mood,calm,10,2
+atmosphere,mood,joyful,1,2
+atmosphere,palette,black,2,2
+atmosphere,palette,brown,8,2
+atmosphere,saturation_level,neutral,2,2
+atmosphere,saturation_level,vivid,5,2
+background,object_counts_by_position,background center,10,9
+background,object_counts_by_position,background left,7,9
+background,object_counts_by_position,background right,13,9
+background,object_counts_by_position,foreground center,20,9
+background,object_counts_by_position,foreground left,15,9
+background,object_counts_by_position,foreground right,10,9
+background,object_counts_by_position,midground center,20,9
+background,object_counts_by_position,midground left,16,9
+background,object_counts_by_position,midground right,13,9
+camera,crop,forearms near lower frame,1,6
+camera,crop,full body above knees head,1,6
+camera,crop,lower body cropped,1,6
+camera,crop,lower body out of frame,1,6
+camera,crop,lower legs feet cropped,1,6
+camera,crop,top head near upper frame,1,6
+camera,depth_of_field,shallow,16,1
+camera,focal_length,telephoto,2,1
+camera,framing,establishing,1,5
+camera,framing,full body,2,5
+camera,framing,headshot,1,5
+camera,framing,medium,7,5
+camera,framing,wide,2,5
+camera,perspective,eye level,16,1
+environment,location_type,bedroom,2,3
+environment,location_type,kitchen,3,3
+environment,location_type,residential kitchen,3,3
+environment,openness,compact,1,5
+environment,openness,enclosed,1,5
+environment,openness,moderately open,1,5
+environment,openness,open layout,2,5
+environment,openness,semi open,1,5
+environment,spatial_layout,compact,1,9
+environment,spatial_layout,enclosed,1,9
+environment,spatial_layout,moderate,6,9
+environment,spatial_layout,moderate depth,6,9
+environment,spatial_layout,moderately open,1,9
+environment,spatial_layout,open,2,9
+environment,spatial_layout,semi open,1,9
+environment,spatial_layout,shallow,2,9
+environment,spatial_layout,shallow moderate,2,9
+environment,wall_color,beige,2,4
+environment,wall_color,lightblue,1,4
+environment,wall_color,mediumpurple,1,4
+environment,wall_color,white,13,4
+environment,walls_color,beige,2,4
+environment,walls_color,lightblue,1,4
+environment,walls_color,mediumpurple,1,4
+environment,walls_color,white,13,4
+environment,walls_texture,glazed,1,3
+environment,walls_texture,glossy,3,3
+environment,walls_texture,smooth,13,3
+lighting,artifacts,background bokeh,1,7
+lighting,artifacts,mild highlight bloom,1,7
+lighting,artifacts,minor reflection on dresser mirror,1,7
+lighting,artifacts,motion blur right forearm,1,7
+lighting,artifacts,photographic bloom around highlights,1,7
+lighting,artifacts,specular highlights chrome faucet glossy marble,1,7
+lighting,artifacts,specular reflections polished floor furniture,1,7
+lighting,color_temperature,neutral,3,2
+lighting,color_temperature,warm,4,2
+lighting,contrast_level,medium,8,1
+lighting,directionality,backlighting,5,3
+lighting,directionality,sidelighting,5,3
+lighting,directionality,top,3,3
+lighting,hardness,soft,14,1
+lighting,saturation_level,neutral,3,2
+lighting,saturation_level,vivid,5,2
+lighting,shadows,casting,1,2
+lighting,shadows,soft,9,2
+lighting,source_summary,artificial,5,1
+lighting,sources_count,one light source,7,2
+lighting,sources_count,two light,1,2
+lighting,sources_type,artificial light,5,1
+objects,type,accessory,1,77
+objects,type,appliance,8,77
+objects,type,apron,2,77
+objects,type,architectural,2,77
+objects,type,backsplash,2,77
+objects,type,bed,1,77
+objects,type,bedcover,1,77
+objects,type,blender,1,77
+objects,type,board,1,77
+objects,type,box,1,77
+objects,type,cabinetry,3,77
+objects,type,cabinets,1,77
+objects,type,ceramic jar,1,77
+objects,type,cleaning tool,6,77
+objects,type,cloth,2,77
+objects,type,container,3,77
+objects,type,countertop,4,77
+objects,type,curtains,1,77
+objects,type,cutting board,2,77
+objects,type,cutting boards plural token,1,77
+objects,type,decorative pillows,1,77
+objects,type,dish cloth,1,77
+objects,type,door,3,77
+objects,type,dresser,1,77
+objects,type,fabric strip,1,77
+objects,type,faucet,1,77
+objects,type,fixture,2,77
+objects,type,floor mat,1,77
+objects,type,food,1,77
+objects,type,frying pan,1,77
+objects,type,furniture,4,77
+objects,type,glove single,1,77
+objects,type,gloves,1,77
+objects,type,hanging basket or garment cover,1,77
+objects,type,jar,1,77
+objects,type,kettle,1,77
+objects,type,kitchen towel,1,77
+objects,type,kitchenware,2,77
+objects,type,knife,1,77
+objects,type,measuring jar,1,77
+objects,type,mirror,1,77
+objects,type,mixing bowl,1,77
+objects,type,pendant lights,1,77
+objects,type,plant,4,77
+objects,type,plant pot,1,77
+objects,type,potted plant,1,77
+objects,type,produce,1,77
+objects,type,rack,1,77
+objects,type,range hood,3,77
+objects,type,refrigerator,1,77
+objects,type,rug,1,77
+objects,type,scrubbing brush,1,77
+objects,type,shelving,2,77
+objects,type,shelving unit,1,77
+objects,type,side table,1,77
+objects,type,sink,4,77
+objects,type,soap dispensing bottle,1,77
+objects,type,spatula,1,77
+objects,type,squeeze bottle,1,77
+objects,type,stool,2,77
+objects,type,stove,1,77
+objects,type,stovetop,2,77
+objects,type,surface,1,77
+objects,type,table,1,77
+objects,type,tableware,1,77
+objects,type,textile,1,77
+objects,type,towel,1,77
+objects,type,towel stack,1,77
+objects,type,upper cabinet,1,77
+objects,type,utensil container,1,77
+objects,type,utensil single,2,77
+objects,type,utensils hanging,1,77
+objects,type,vertical paneling,1,77
+objects,type,wall decor,1,77
+objects,type,window,5,77
+objects,type,window assembly,1,77
+objects,type,window treatment,1,77
+objects,type_distribution,appliance,8,16
+objects,type_distribution,cabinetry,3,16
+objects,type_distribution,cleaning tool,4,16
+objects,type_distribution,cloth,2,16
+objects,type_distribution,countertop,4,16
+objects,type_distribution,cutting board,2,16
+objects,type_distribution,door,3,16
+objects,type_distribution,furniture,4,16
+objects,type_distribution,others,25,16
+objects,type_distribution,plant,4,16
+objects,type_distribution,range hood,3,16
+objects,type_distribution,shelving,2,16
+objects,type_distribution,sink,4,16
+objects,type_distribution,stovetop,2,16
+objects,type_distribution,utensil,2,16
+objects,type_distribution,window,5,16
+people,activities,adjusting window area fabric,1,7
+people,activities,cleaning,1,7
+people,activities,food preparation,1,7
+people,activities,handling produce,1,7
+people,activities,scrubbing,1,7
+people,activities,smoothing towels,1,7
+people,activities,wiping,2,7
+people,age_range,middle aged,6,3
+people,age_range,older adult,1,3
+people,age_range,young adult,2,3
+people,clothing_garment,apron,10,9
+people,clothing_garment,blouse,4,9
+people,clothing_garment,dress,2,9
+people,clothing_garment,gloves,4,9
+people,clothing_garment,others,6,9
+people,clothing_garment,shoes,5,9
+people,clothing_garment,skirt,1,9
+people,clothing_garment,t-shirt,5,9
+people,clothing_garment,trousers,1,9
+people,eyewear_frame_color,black,1,1
+people,eyewear_present,no,9,2
+people,eyewear_present,yes,1,2
+people,eyewear_type,thin frame,1,1
+people,facial_hair_present,no,10,1
+people,gaze_direction,down,9,2
+people,gaze_direction,up,1,2
+people,gender_presentation,female,10,1
+people,hair_color,black,4,3
+people,hair_color,brown,16,3
+people,hair_color,gray,2,3
+people,hair_present,yes,10,1
+people,hair_style,long,6,4
+people,hair_style,ponytail,16,4
+people,hair_style,straight,4,4
+people,hair_style,wavy,4,4
+people,head_covering_present,no,10,1
+people,occlusions,partial occlusion,9,1
+people,orientation,front,3,2
+people,orientation,three quarter,2,2
+people,pose,attentive posture,1,12
+people,pose,both arms extended downward,1,12
+people,pose,engaged posture,1,12
+people,pose,forward leaning,3,12
+people,pose,leaning over table,1,12
+people,pose,mid torso visible,1,12
+people,pose,slight forward lean variant token,2,12
+people,pose,slightly bent torso,1,12
+people,pose,slightly forward leaning,3,12
+people,pose,slightly leaning forward variant token,1,12
+people,pose,standing,2,12
+people,pose,upright,3,12
+people,role_hint,housekeeper,2,1
+people,skin_tone,light,2,2
+people,skin_tone,medium,8,2
+safety,hazards,no observable,6,1
+texts,legibility,illegible text,7,4
+texts,legibility,not legible,2,4
+texts,legibility,partially legible,1,4
+texts,legibility,unreadable,1,4
+texts,plane,text background,2,3
+texts,plane,text foreground,2,3
+texts,plane,text midground,7,3
+texts,side,text center,5,3
+texts,side,text left,4,3
+texts,side,text right,2,3
+uncertainty,note,approximate count of dining chairs uncertain,1,37
+uncertainty,note,approximate count of soap dispensing bottles 2,1,37
+uncertainty,note,approximate count small containers on shelving approx 4 6,1,37
+uncertainty,note,approximate decorative pillows 3 uncertain,1,37
+uncertainty,note,area behind mirror reflection partially occluded indiscernible,1,37
+uncertainty,note,background center placement unspecified beyond wall area,1,37
+uncertainty,note,decorative tile panel pattern partially visible,1,37
+uncertainty,note,embroidered apron emblem partially occluded text not legible,1,37
+uncertainty,note,exact appliance type in background right partially occluded,1,37
+uncertainty,note,exact count of upper cabinet doors approximated three,1,37
+uncertainty,note,exact number of folded towels approximated two uncertain,1,37
+uncertainty,note,facial expression detail unclear due to orientation and bloom,1,37
+uncertainty,note,folded pale textile item exact type material uncertain,1,37
+uncertainty,note,items inside open cabinet partially occluded approximate counts only,1,37
+uncertainty,note,lower body legs of person 1 cropped out of frame,1,37
+uncertainty,note,lower edge of left hand partially occluded by cleaning handle,1,37
+uncertainty,note,lower leg foot area partially occluded person,5,37
+uncertainty,note,maker labels on linens not legible or visible,1,37
+uncertainty,note,many small blurred items midground possible bottles containers,17,37
+uncertainty,note,mild background blur across upper cabinet area reduces fine detail,1,37
+uncertainty,note,minor darker area on countertop ambiguous wetness vs shadow,1,37
+uncertainty,note,outside scene beyond right window not visible,1,37
+uncertainty,note,powered floor buffer base model markings not legible,1,37
+uncertainty,note,refrigerator control panel text not legible,1,37
+uncertainty,note,right forearm motion blur partially occludes glove hand details,1,37
+uncertainty,note,small cardboard box label not legible,1,37
+uncertainty,note,small clear glass jar contents not identifiable,2,37
+uncertainty,note,small dark plastic squeeze bottle label unreadable,1,37
+uncertainty,note,small faint watermark partially legible,1,37
+uncertainty,note,small framed items approximated 3 5 pieces,1,37
+uncertainty,note,small rectangular badge on apron text illegible,1,37
+uncertainty,note,small rectangular item on cutting board not clearly visible,1,37
+uncertainty,note,small stainless steel countertop appliance appears toaster but not identifiable,1,37
+uncertainty,note,small sticker on range hood not legible,1,37
+uncertainty,note,time of day broad daylight but not specific,1,37
+uncertainty,note,weather outside not directly visible,1,37
+uncertainty,note,window blind slat composition not explicit painted wood vs composite,1,37

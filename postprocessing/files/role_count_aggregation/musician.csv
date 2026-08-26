@@ -1,0 +1,739 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,7
+atmosphere,aesthetic_qualities,dreamy,3
+atmosphere,aesthetic_qualities,realistic,5
+atmosphere,color,black,2
+atmosphere,color,brown,8
+atmosphere,color_temperature,warm,9
+atmosphere,contrast_level,high,1
+atmosphere,contrast_level,medium,8
+atmosphere,dominant_palette,black,4
+atmosphere,dominant_palette,brown,34
+atmosphere,dominant_palette,mediumblue,2
+atmosphere,dominant_palette,unknown,10
+atmosphere,lighting_profile_aesthetic_qualities,cinematic,13
+atmosphere,lighting_profile_aesthetic_qualities,dreamy,3
+atmosphere,lighting_profile_aesthetic_qualities,minimal,2
+atmosphere,lighting_profile_aesthetic_qualities,realistic,17
+atmosphere,lighting_profile_color_temperature,cool,14
+atmosphere,lighting_profile_color_temperature,neutral,5
+atmosphere,lighting_profile_color_temperature,warm,2
+atmosphere,lighting_profile_contrast_level,medium,21
+atmosphere,lighting_profile_saturation_level,neutral,17
+atmosphere,lighting_profile_saturation_level,vivid,4
+atmosphere,mood,calm,36
+atmosphere,mood,joyful,2
+atmosphere,mood,romantic,4
+atmosphere,mood_distribution,calm,10
+atmosphere,mood_distribution,joyful,2
+atmosphere,saturation_level,neutral,6
+atmosphere,saturation_level,vivid,3
+background,object_counts_by_position,background center,30
+background,object_counts_by_position,background left,17
+background,object_counts_by_position,background right,10
+background,object_counts_by_position,foreground center,60
+background,object_counts_by_position,foreground left,36
+background,object_counts_by_position,foreground right,29
+background,object_counts_by_position,midground center,33
+background,object_counts_by_position,midground left,19
+background,object_counts_by_position,midground right,27
+background,object_counts_by_position,unknown,2
+background,position_totals,background center,9
+background,position_totals,background left,4
+background,position_totals,background right,5
+background,position_totals,foreground center,10
+background,position_totals,foreground left,9
+background,position_totals,foreground right,10
+background,position_totals,midground center,7
+background,position_totals,midground left,5
+background,position_totals,midground right,5
+camera,crop,bottom cropped,1
+camera,crop,bottom edge cropped,1
+camera,crop,bottom feet,1
+camera,crop,cart base cropped,1
+camera,crop,center left subject,1
+camera,crop,centered,1
+camera,crop,face centered,1
+camera,crop,instrument right,1
+camera,crop,lower body cropped,1
+camera,crop,lower body out frame,1
+camera,crop,lower legs footwear cropped by bottom edge,1
+camera,crop,lower right leg partially cropped by bottom edge,1
+camera,crop,near portrait,1
+camera,crop,peripheral elements cropped,1
+camera,crop,right edge partial,1
+camera,crop,right shoe partial,1
+camera,crop,right side cropped headstock,1
+camera,crop,right side produce bin partially cropped,1
+camera,crop,slightly right center,1
+camera,crop,square,1
+camera,crop,tight,1
+camera,depth_of_field,moderate,8
+camera,depth_of_field,shallow,52
+camera,focal_length,normal,12
+camera,focal_length,telephoto,12
+camera,focal_length,wide,4
+camera,framing,close up,8
+camera,framing,establishing,1
+camera,framing,establishing shot,1
+camera,framing,full body,4
+camera,framing,headshot,4
+camera,framing,medium,44
+camera,framing,wide,10
+camera,perspective,eye level,44
+environment,aisle_width,moderate,1
+environment,aisle_width,unknown,6
+environment,aisle_width,wide,2
+environment,ceiling_color,black,2
+environment,ceiling_color,darkblue,1
+environment,ceiling_color,gray,1
+environment,ceiling_color,mediumpurple,1
+environment,ceiling_color,white,8
+environment,ceiling_condition,clean,2
+environment,ceiling_condition,good,3
+environment,ceiling_condition,intact,1
+environment,ceiling_condition,maintained,1
+environment,ceiling_condition,minor discoloration,1
+environment,ceiling_condition,pristine,1
+environment,ceiling_condition,slightly discolored,1
+environment,ceiling_condition,well maintained,1
+environment,ceiling_finish,matte,8
+environment,ceiling_finish,reflective,1
+environment,ceiling_material,acoustic panel,1
+environment,ceiling_material,acoustic tile,1
+environment,ceiling_material,acoustic tiles,1
+environment,ceiling_material,diffuser,1
+environment,ceiling_material,diffuser panels,1
+environment,ceiling_material,metal,4
+environment,ceiling_material,painted surface,1
+environment,ceiling_material,plastic,1
+environment,ceiling_material,suspended acoustic panels,1
+environment,ceiling_material,suspended tiles,1
+environment,ceiling_texture,grid pattern,1
+environment,ceiling_texture,matte,1
+environment,ceiling_texture,paneled,1
+environment,ceiling_texture,ribbed,1
+environment,ceiling_texture,smooth,7
+environment,floor_color,beige,1
+environment,floor_color,black,1
+environment,floor_color,gray,2
+environment,floor_color,lightblue,3
+environment,floor_color,mediumpurple,1
+environment,floor_color,white,4
+environment,floor_condition,clean,5
+environment,floor_condition,generally clean,2
+environment,floor_condition,intact,1
+environment,floor_condition,well maintained,1
+environment,floor_finish,glazed,1
+environment,floor_finish,glossy,6
+environment,floor_finish,matte,1
+environment,floor_finish,slight sheen,1
+environment,floor_finish,slightly reflective,1
+environment,floor_material,ceramic,2
+environment,floor_material,ceramic tile,5
+environment,floor_material,glazed ceramic,1
+environment,floor_material,tile,1
+environment,floor_texture,glazed,1
+environment,floor_texture,glossy,1
+environment,floor_texture,reflective,1
+environment,floor_texture,smooth,9
+environment,indoor_outdoor,unknown,40
+environment,location_type,courtyard,2
+environment,location_type,covered deck,2
+environment,location_type,grocery aisle,2
+environment,location_type,grocery store,6
+environment,location_type,grocery store aisle,1
+environment,location_type,grocery store produce aisle,1
+environment,location_type,living space,2
+environment,location_type,outdoor,2
+environment,location_type,outdoor performance,2
+environment,location_type,performance space,4
+environment,location_type,residential interior music practice,2
+environment,location_type,residential room,2
+environment,location_type,supermarket,11
+environment,location_type,supermarket aisle,4
+environment,location_type,supermarket produce aisle,4
+environment,location_type,supermarket produce section,1
+environment,openness,enclosed,3
+environment,openness,open,1
+environment,openness,unknown,2
+environment,spatial_layout_depth,deep,2
+environment,spatial_layout_depth,medium,3
+environment,spatial_layout_depth,moderate,12
+environment,spatial_layout_depth,shallow,9
+environment,spatial_layout_depth,shallow moderate,1
+environment,spatial_layout_openness,confined,1
+environment,spatial_layout_openness,enclosed,1
+environment,spatial_layout_openness,moderate,1
+environment,spatial_layout_openness,moderately open,1
+environment,spatial_layout_openness,open,5
+environment,spatial_layout_openness,unknown,4
+environment,time_of_day_hint,afternoon,8
+environment,time_of_day_hint,evening,4
+environment,walls_color,black,3
+environment,walls_color,darkgray,1
+environment,walls_color,gray,1
+environment,walls_color,olivedrab,1
+environment,walls_color,orange,1
+environment,walls_color,white,1
+environment,walls_color,yellow,1
+environment,walls_condition,clean,2
+environment,walls_condition,good,2
+environment,walls_condition,orderly,1
+environment,walls_condition,partially occluded not clearly visible,1
+environment,walls_finish,glossy,1
+environment,walls_finish,matte,3
+environment,walls_finish,slightly worn,1
+environment,walls_material,cardboard packaging,1
+environment,walls_material,paint,2
+environment,walls_material,painted metal,1
+environment,walls_material,painted wall,1
+environment,walls_material,unknown,1
+environment,walls_texture,glossy,1
+environment,walls_texture,matte,1
+environment,walls_texture,smooth,4
+environment,weather,clear,1
+environment,weather,sunny,1
+lighting,artifacts,background bokeh blur,1
+lighting,artifacts,bokeh,4
+lighting,artifacts,bokeh background blur,1
+lighting,artifacts,bokeh highlights,1
+lighting,artifacts,circular bokeh highlights,1
+lighting,artifacts,filmic grain,1
+lighting,artifacts,glare sunglasses,1
+lighting,artifacts,highlight bloom,1
+lighting,artifacts,lens bloom,1
+lighting,artifacts,lens glare,1
+lighting,artifacts,mild glow,1
+lighting,artifacts,minor specular highlights guitar bottles,1
+lighting,artifacts,motion blur,1
+lighting,artifacts,no chromatic aberration,1
+lighting,artifacts,no lens flare,3
+lighting,artifacts,reflections tile floor,1
+lighting,artifacts,specular highlights,3
+lighting,artifacts,specular highlights floor plastic,1
+lighting,artifacts,specular highlights metal cart produce,1
+lighting,artifacts,specular highlights microphone grille,1
+lighting,artifacts,specular reflection guitar,2
+lighting,artifacts,specular reflections,1
+lighting,artifacts,specular reflections floor,1
+lighting,artifacts,specular reflections floor guitar,1
+lighting,artifacts,specular reflections floor metal trim,1
+lighting,artifacts,specular reflections guitar plastic packaging,1
+lighting,artifacts,specular reflections guitar refrigerated glass,1
+lighting,artifacts,specular reflections guitar tuning pegs,1
+lighting,artifacts,volumetric rays,1
+lighting,color_temperature,cool,20
+lighting,color_temperature,neutral,8
+lighting,color_temperature,warm,22
+lighting,contrast_level,high,2
+lighting,contrast_level,medium,48
+lighting,directionality,backlight,6
+lighting,directionality,sidelight,7
+lighting,directionality,top light,11
+lighting,directionality,toplight,10
+lighting,directionality,unknown,16
+lighting,hardness,medium,4
+lighting,hardness,soft,16
+lighting,hardness,soft light,24
+lighting,saturation_level,neutral,36
+lighting,saturation_level,vivid,12
+lighting,shadows,casting,1
+lighting,shadows,soft,40
+lighting,sources,artificial,10
+lighting,sources_count,four or more,22
+lighting,sources_count,four or more light,9
+lighting,sources_count,one source,8
+lighting,sources_count,two light,1
+lighting,sources_type,artificial,10
+lighting,sources_type,artificial light,10
+lighting,sources_type,artificial source,4
+lighting,sources_type,unknown,10
+objects,color,beige,2
+objects,color,black,7
+objects,color,blue,2
+objects,color,brown,7
+objects,color,crimson,6
+objects,color,darkblue,3
+objects,color,gray,9
+objects,color,green,14
+objects,color,lightblue,1
+objects,color,mediumblue,4
+objects,color,mediumvioletred,1
+objects,color,orange,8
+objects,color,pink,2
+objects,color,purple,1
+objects,color,red,10
+objects,color,silver,6
+objects,color,white,9
+objects,color,yellow,7
+objects,colors,black,16
+objects,colors,brown,17
+objects,colors,crimson,1
+objects,colors,darkblue,3
+objects,colors,darkgreen,1
+objects,colors,darkred,1
+objects,colors,darkslategrey,1
+objects,colors,glass like,6
+objects,colors,gray,3
+objects,colors,green,2
+objects,colors,honeydew,1
+objects,colors,ivory,1
+objects,colors,lightblue,2
+objects,colors,lightgoldenrodyellow,1
+objects,colors,mediumseagreen,1
+objects,colors,mediumseagreen dup,0
+objects,colors,olive,1
+objects,colors,orange,1
+objects,colors,palevioletred,1
+objects,colors,seashell,1
+objects,colors,silver,8
+objects,colors,violet,1
+objects,colors,white,5
+objects,condition,appears clean,1
+objects,condition,clean,9
+objects,condition,good,2
+objects,condition,heavily filled,1
+objects,condition,intact,3
+objects,condition,lightly scuffed,1
+objects,condition,neat,1
+objects,condition,neatly arranged,2
+objects,condition,neatly lined,1
+objects,condition,orderly,7
+objects,condition,orderly stocked,1
+objects,condition,organized,1
+objects,condition,used,3
+objects,condition,used but maintained,1
+objects,condition,well maintained,2
+objects,condition,well stocked,6
+objects,condition,worn,2
+objects,material,acetate,1
+objects,material,brick,2
+objects,material,cardboard,3
+objects,material,carved wood,1
+objects,material,ceramic planter,1
+objects,material,ceramic tile,2
+objects,material,chrome plated metal,1
+objects,material,denim,0
+objects,material,felt,1
+objects,material,glass,12
+objects,material,leather,1
+objects,material,leather like brim,1
+objects,material,marble,1
+objects,material,metal,50
+objects,material,organic,2
+objects,material,painted board,1
+objects,material,paper,1
+objects,material,paper or canvas,1
+objects,material,plant,5
+objects,material,plastic,30
+objects,material,plastic handle,1
+objects,material,plastic packaging,4
+objects,material,plastic shelf guards,1
+objects,material,printed sign,1
+objects,material,rubber,1
+objects,material,rubber insulation,2
+objects,material,stainless steel,3
+objects,material,straw,1
+objects,material,stucco,1
+objects,material,tin,1
+objects,material,unknown,1
+objects,material,varnished wood,1
+objects,material,vegetable,1
+objects,material,wire mesh,1
+objects,material,wood,19
+objects,material,wood frame,1
+objects,material,wood veneer,1
+objects,material,woven,1
+objects,material,woven straw,1
+objects,material,woven wicker,1
+objects,plane,background,33
+objects,plane,foreground,57
+objects,plane,midground,41
+objects,plane_distribution,background,18
+objects,plane_distribution,foreground,29
+objects,plane_distribution,midground,17
+objects,plane_side_counts,background center,5
+objects,plane_side_counts,background left,5
+objects,plane_side_counts,background right,5
+objects,plane_side_counts,foreground center,10
+objects,plane_side_counts,foreground left,11
+objects,plane_side_counts,foreground right,7
+objects,plane_side_counts,midground center,14
+objects,plane_side_counts,midground left,4
+objects,plane_side_counts,midground right,6
+objects,side,center,55
+objects,side,left,38
+objects,side,right,38
+objects,side_distribution,center,26
+objects,side_distribution,left,18
+objects,side_distribution,right,20
+objects,texture,clear plastic,2
+objects,texture,coarse woven,1
+objects,texture,corrugated,1
+objects,texture,crinkled leaf,1
+objects,texture,glossy,15
+objects,texture,linear,1
+objects,texture,pebbled rind,1
+objects,texture,reflective,3
+objects,texture,smooth,40
+objects,texture,stacked rows,1
+objects,texture,textured,6
+objects,texture,textured florets,1
+objects,texture,thin,1
+objects,texture,wire basket,3
+objects,texture,wire mesh,3
+objects,type,accessory,1
+objects,type,acoustic guitar,8
+objects,type,amplifier cabinet,1
+objects,type,amplifier cabinet duplicate entry handled once,1
+objects,type,architectural,10
+objects,type,bag,1
+objects,type,barrier,1
+objects,type,basket,1
+objects,type,bench,1
+objects,type,bokeh highlight,1
+objects,type,bokeh lights,1
+objects,type,bow instrument accessory,2
+objects,type,bracelet,1
+objects,type,brick wall,1
+objects,type,cable,1
+objects,type,cap,1
+objects,type,ceiling fixture,1
+objects,type,chrome bridge tuning mechanism,1
+objects,type,citrus fruits,2
+objects,type,clothing,1
+objects,type,clothing object annotations,3
+objects,type,container,1
+objects,type,deck planks,1
+objects,type,digital scale display,2
+objects,type,display case,1
+objects,type,display unit,1
+objects,type,double bass,2
+objects,type,drum cymbal,1
+objects,type,drum kit partial,1
+objects,type,electronic display,1
+objects,type,eyeglasses,1
+objects,type,eyewear,1
+objects,type,fixture,4
+objects,type,floor,1
+objects,type,floor element,1
+objects,type,floor surface,1
+objects,type,floor tile run,2
+objects,type,fluorescent fixture rows,2
+objects,type,foliage,1
+objects,type,food display,2
+objects,type,framed portrait,1
+objects,type,furnishing,1
+objects,type,furniture,4
+objects,type,furniture or plant,1
+objects,type,guitar neck,19
+objects,type,guitar stand,2
+objects,type,guitar strap,2
+objects,type,human forearm,1
+objects,type,instrument,41
+objects,type,instrument accessory,1
+objects,type,landform,1
+objects,type,marble steps,1
+objects,type,mass,1
+objects,type,microphone stand,4
+objects,type,mountain silhouette,1
+objects,type,musical instrument,9
+objects,type,overhead sign panel,10
+objects,type,packaging,4
+objects,type,potted houseplant,1
+objects,type,produce,11
+objects,type,produce assortment,1
+objects,type,produce bag,2
+objects,type,produce bin,2
+objects,type,produce bundle,1
+objects,type,produce display,4
+objects,type,produce display bins,1
+objects,type,produce shelving,74
+objects,type,reflective plane,1
+objects,type,refrigerated case,2
+objects,type,refrigerated display,3
+objects,type,retail display,2
+objects,type,retail fixture,3
+objects,type,retail shelving,4
+objects,type,saxophone,2
+objects,type,shelf display,4
+objects,type,shelf edge,1
+objects,type,shelving,23
+objects,type,shelving row,1
+objects,type,shelving unit,3
+objects,type,shopping cart,13
+objects,type,sign,1
+objects,type,stand,1
+objects,type,stand mounted metal microphone,1
+objects,type,stool,2
+objects,type,storage bench,1
+objects,type,straw hat,2
+objects,type,stucco wall,1
+objects,type,surface,2
+objects,type,unknown,13
+objects,type,vegetation,1
+objects,type,violin like,1
+objects,type,visual element,1
+objects,type,window,10
+people,activities,appears singing producing music,1
+people,activities,fretting,3
+people,activities,holding bow,1
+people,activities,holding double bass,1
+people,activities,holding guitar,8
+people,activities,holding saxophone,1
+people,activities,playing guitar,4
+people,activities,plucking strings,2
+people,activities,singing,2
+people,activities,strumming,4
+people,activities,strumming guitar,2
+people,age_range,middle aged,1
+people,age_range,young adult,28
+people,clothing_color,black,9
+people,clothing_color,blue,6
+people,clothing_color,brown,4
+people,clothing_color,gray,2
+people,clothing_color,green,2
+people,clothing_color,pink,1
+people,clothing_color,tan,1
+people,clothing_color,white,3
+people,clothing_garment,ankle boots,1
+people,clothing_garment,backpack,1
+people,clothing_garment,blazer,2
+people,clothing_garment,boots,1
+people,clothing_garment,denim jacket,4
+people,clothing_garment,guitar strap,6
+people,clothing_garment,hat,1
+people,clothing_garment,jacket,4
+people,clothing_garment,jeans,7
+people,clothing_garment,necklace,2
+people,clothing_garment,pants,1
+people,clothing_garment,shirt,10
+people,clothing_garment,shoes,3
+people,clothing_garment,short sleeved underlayer,1
+people,clothing_garment,sleeveless top,1
+people,clothing_garment,socks,1
+people,clothing_garment,t-shirt,9
+people,clothing_garment,trousers,3
+people,clothing_garment,turtleneck,1
+people,clothing_garment,undershirt,3
+people,clothing_garment,vest,2
+people,clothing_garment,wristband,1
+people,clothing_garment,zip front vest,1
+people,clothing_material,cotton,10
+people,clothing_material,denim,11
+people,clothing_material,fabric,1
+people,clothing_material,nylon,1
+people,clothing_material,synthetic,1
+people,eyewear_frame_color,black frames,3
+people,eyewear_frame_color,seashell colored frames,1
+people,eyewear_frame_color,silver frames,1
+people,eyewear_present,no,25
+people,eyewear_present,yes,4
+people,eyewear_type,prescription glasses,1
+people,eyewear_type,rectangular frames,1
+people,eyewear_type,sunglasses,2
+people,eyewear_type,thin rimmed metal eyeglasses,1
+people,facial_hair_color,black,2
+people,facial_hair_color,brown,20
+people,facial_hair_color,dark blue,3
+people,facial_hair_color,dark blue annotated,6
+people,facial_hair_color,darkblue,4
+people,facial_hair_color,darkblue recorded token,4
+people,facial_hair_color,maroon,1
+people,facial_hair_present,no,1
+people,facial_hair_present,yes,29
+people,facial_hair_style,beard,3
+people,facial_hair_style,close trimmed beard,1
+people,facial_hair_style,closely trimmed,1
+people,facial_hair_style,full beard,6
+people,facial_hair_style,long,1
+people,facial_hair_style,neatly trimmed,1
+people,facial_hair_style,short ambiguous,1
+people,facial_hair_style,short ambiguous token,1
+people,facial_hair_style,short beard,2
+people,facial_hair_style,short jawline beard,1
+people,facial_hair_style,short stubble,1
+people,facial_hair_style,short trimmed beard,1
+people,facial_hair_style,short well trimmed,1
+people,facial_hair_style,stubble,5
+people,facial_hair_style,trimmed,1
+people,facial_hair_style,trimmed beard,3
+people,facial_hair_style,trimmed stubble,1
+people,gaze_direction,down,10
+people,gaze_direction,left,3
+people,gaze_direction,right,2
+people,gaze_direction,to right,2
+people,gender_presentation,female,1
+people,gender_presentation,male,29
+people,hair_color,black,12
+people,hair_color,brown,28
+people,hair_color,maroon,1
+people,hair_color,olive,1
+people,hair_present,yes,31
+people,hair_style,curly,13
+people,hair_style,long,4
+people,hair_style,ponytail,1
+people,hair_style,short,14
+people,hair_style,wavy,8
+people,head_covering_color,black,5
+people,head_covering_color,brown,1
+people,head_covering_color,tan,1
+people,head_covering_present,no,24
+people,head_covering_present,yes,6
+people,head_covering_type,beanie,1
+people,head_covering_type,fedora,1
+people,head_covering_type,felt hat,1
+people,head_covering_type,structured cap leather like brim,1
+people,head_covering_type,wide brim hat merged variant,2
+people,head_covering_type,wide brimmed hat,1
+people,occlusions,partial occlusion,21
+people,orientation,front,3
+people,orientation,three quarter,14
+people,orientation,unknown,1
+people,pose,active strumming,1
+people,pose,angled toward center,1
+people,pose,forward leaning,3
+people,pose,head tilt,1
+people,pose,partially occluded,1
+people,pose,playing posture,1
+people,pose,relaxed,10
+people,pose,relaxed playing posture,1
+people,pose,seated,8
+people,pose,slight forward lean,2
+people,pose,slightly forward,2
+people,pose,slightly forward leaning,3
+people,pose,slightly leaning,1
+people,pose,slightly leaning forward,2
+people,pose,slightly tilted relaxed posture,1
+people,pose,standing,2
+people,pose,three quarter orientation,9
+people,pose,upright,8
+people,role_hint,appears musician instrument possession,1
+people,role_hint,appears performing musician,1
+people,role_hint,musician,3
+people,skin_tone,dark,2
+people,skin_tone,light,14
+people,skin_tone,medium,22
+safety,hazards,no detected,18
+safety,hazards,no flagged,8
+safety,hazards,unknown,26
+safety,nsfw,not,30
+safety,nsfw,unknown,30
+texts,content,text token ackame fegirfe soup sopff,1
+texts,content,text token soup,1
+texts,font_style,block,2
+texts,font_style,bold,2
+texts,font_style,cursive,3
+texts,font_style,sans,4
+texts,font_style,sans serif like,2
+texts,font_style,stylized script,2
+texts,legibility,illegible,46
+texts,legibility,legible,2
+texts,legibility,not legible,8
+texts,legibility,partially illegible,2
+texts,legibility,unreadable,2
+texts,plane,background,29
+texts,plane,foreground,9
+texts,plane,midground,9
+texts,plane,text background,9
+texts,plane,text foreground,3
+texts,plane,text midground,1
+texts,side,center,23
+texts,side,left,15
+texts,side,right,9
+texts,side,text center,7
+texts,side,text left,3
+texts,side,text right,3
+uncertainty,note,approximate produce counts noted,1
+uncertainty,note,area above ceiling fixtures has minor blur,1
+uncertainty,note,area behind background center end aisle blurred,1
+uncertainty,note,background distant elements not individually identified,1
+uncertainty,note,background package price text too small or blurred,1
+uncertainty,note,background right product counts approximate due to blur,1
+uncertainty,note,background right rectangular sign partially occluded,1
+uncertainty,note,background right shelving details blurred approximate,1
+uncertainty,note,beverage brand identities on left shelves not legible,1
+uncertainty,note,cardboard box label in cart unreadable,1
+uncertainty,note,distant cardboard boxes partially occluded,1
+uncertainty,note,distant package counts approximate due to blur,1
+uncertainty,note,exact botanical identification uncertain,1
+uncertainty,note,exact produce identification beyond shape uncertain,1
+uncertainty,note,exact produce varieties uncertain many partial occlusions blur,12
+uncertainty,note,exact product labels brands not legible,1
+uncertainty,note,extreme lateral edges exhibit depth of field blur,1
+uncertainty,note,facial micro expressions partially occluded by hat brim shadow,1
+uncertainty,note,foreground center egg carton count approximate due to occlusion,1
+uncertainty,note,foreground center produce cultivar unspecified,1
+uncertainty,note,foreground right cart hand regions cropped occluded,1
+uncertainty,note,gaze direction uncertain avoid over specific mapping,1
+uncertainty,note,indiscernible blur far background center,1
+uncertainty,note,lower body clothing footwear not visible due to cart occlusion,1
+uncertainty,note,lower body clothing partially occluded by cart,1
+uncertainty,note,lower left corner blur reflection obscures objects,1
+uncertainty,note,lower left forearm facial detail partially occluded,1
+uncertainty,note,lower leg footwear partially occluded by guitar stool,1
+uncertainty,note,lower leg region behind cart occluded,1
+uncertainty,note,lower leg region occluded by chrome cart,1
+uncertainty,note,lower legs footwear cropped by frame bottom,1
+uncertainty,note,lower right footwear details occluded,1
+uncertainty,note,lower seating support partially occluded,1
+uncertainty,note,numerous shelf edge price labels unreadable background right,10
+uncertainty,note,overhead sign text partially illegible stylized,1
+uncertainty,note,packaged item types not identifiable,1
+uncertainty,note,person s face partially occluded by orientation instrument,1
+uncertainty,note,price tag texts illegible,7
+uncertainty,note,small blue white carton label partially occluded,1
+uncertainty,note,small dark brown rectangular object in hand not identifiable,1
+uncertainty,note,small dark rectangular sign background left not legible,6
+uncertainty,note,small items in plastic bag occluded,1
+uncertainty,note,small loose items in cart indiscernible,1
+uncertainty,note,small lower shelf objects blurred omitted,1
+uncertainty,note,small packaged items not individually identifiable approximate counts,1
+uncertainty,note,small packaged labels midground right not legible,1
+uncertainty,note,small red packaging imagery blurred unreadable,1
+uncertainty,note,some background right elements not individually identified,1
+uncertainty,note,some midground right tray contents partially occluded,1
+uncertainty,note,specific fruit variety identification unclear,1
+uncertainty,note,specific product labels not legible counts approximate,1
+uncertainty,note,subject footwear not fully visible due to cropping,1
+uncertainty,note,time of day not visible due to indoor retail,1
+uncertainty,note,top shelf displays partially occluded by foreground blur,1
+uncertainty,note,unknown,42
+uncertainty,note,upper right aisle header sign partially out of frame,1
+uncertainty,note,wall material finish not specified,1
+uncertainty,note,weather context not visible indoor,1
+uncertainty,reason,amplifier keyboard small labels not legible,1
+uncertainty,reason,arched window glass frame material unclear due to backlighting,1
+uncertainty,reason,background exterior beyond windowpane out of focus,1
+uncertainty,reason,background foliage mostly out of frame shadow shapes visible,1
+uncertainty,reason,background shelving items blurred approximate count uncertain,1
+uncertainty,reason,dark strap material leather vs woven fabric ambiguous,1
+uncertainty,reason,exact fabric composition approximate appears cotton like,1
+uncertainty,reason,exact number type of background light fixtures approximate due to blur,1
+uncertainty,reason,exact time day not verifiable strong backlight suggests late day,1
+uncertainty,reason,facial micro expressions indiscernible due to resolution,1
+uncertainty,reason,floor ceiling not described source left empty,1
+uncertainty,reason,floor ceiling not visible left blank,1
+uncertainty,reason,floor lower body seating surface out of frame or occluded,1
+uncertainty,reason,garment vest vs suspenders ambiguous due to occlusion,1
+uncertainty,reason,guitar brand model markings not legible headstock,5
+uncertainty,reason,lower body seating structure out of frame or occluded,1
+uncertainty,reason,lower extremities footwear largely out of frame,1
+uncertainty,reason,lower instrument body area partially out of frame cropped,1
+uncertainty,reason,lower stage floor details occluded by performer crop,1
+uncertainty,reason,many small distant decorative objects in blurred background omitted specifics,18
+uncertainty,reason,microphone brand label partly visible but illegible,1
+uncertainty,reason,person 2 details largely indiscernible due to blur cropping,1
+uncertainty,reason,printed labels small text on instrument hardware not legible,1
+uncertainty,reason,right hand fingertip details occluded by motion blur,1
+uncertainty,reason,seating surface lower body support out of frame,1
+uncertainty,reason,several foreground right metallic elements motion blurred and indiscernible,1
+uncertainty,reason,small dark cable connector type not identifiable,1
+uncertainty,reason,small immediate surroundings pocket contents not visible,1
+uncertainty,reason,small items beneath keyboard floor cables pedals partially occluded,1
+uncertainty,reason,small items on deck bench not visible or indiscernible,1
+uncertainty,reason,small metallic emblem on blazer lapel partially occluded,1
+uncertainty,reason,time of day uncertain warm window light suggests daytime,1
+uncertainty,reason,unknown,14
+uncertainty,total_count,major blur or text illegible,69

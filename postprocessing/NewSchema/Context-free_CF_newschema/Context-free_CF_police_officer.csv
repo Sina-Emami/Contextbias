@@ -1,0 +1,52 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,8,3
+scene_appearance,aesthetic_qualities,dreamy,2,3
+scene_appearance,aesthetic_qualities,realistic,10,3
+scene_appearance,color_temperature,cool,8,3
+scene_appearance,color_temperature,neutral,6,3
+scene_appearance,color_temperature,warm,2,3
+scene_appearance,dominant_colors,black,6,4
+scene_appearance,dominant_colors,brown,12,4
+scene_appearance,dominant_colors,medium violet red,1,4
+scene_appearance,dominant_colors,mediumvioletred,1,4
+scene_appearance,mood,calm,4,2
+scene_appearance,mood,tense,1,2
+camera,depth_of_field,deep,4,3
+camera,depth_of_field,moderate,2,3
+camera,depth_of_field,shallow,10,3
+camera,framing,full body,6,4
+camera,framing,headshot,4,4
+camera,framing,medium,10,4
+camera,framing,wide,2,4
+camera,perspective,eye level,3,1
+objects,type,planter,2,1
+people,age_range,middle aged,6,2
+people,age_range,young adult,3,2
+people,eyewear_present,no,16,2
+people,eyewear_present,yes,2,2
+people,hair_color,black,2,3
+people,hair_color,brown,2,3
+people,hair_color,dark blue,2,3
+people,facial_hair_present,no,8,2
+people,facial_hair_present,yes,10,2
+people,facial_hair_style,mustache,2,2
+people,facial_hair_style,short stubble,1,2
+people,gender_presentation,male,10,1
+people,hair_color,black,14,3
+people,hair_color,brown,6,3
+people,hair_present,yes,10,1
+people,hair_style,short,8,1
+people,head_covering_type,black,3,11
+people,head_covering_type,blue,6,11
+people,head_covering_type,darkblue,1,11
+people,head_covering_type,pink,1,11
+people,head_covering_type,tan,1,11
+people,head_covering_type,white,1,11
+people,head_covering_present,yes,10,1
+people,head_covering_type,officer cap,1,11
+people,head_covering_type,peaked cap,3,11
+people,head_covering_type,peaked service hat,2,11
+people,head_covering_type,peaked uniform cap,1,11
+people,head_covering_type,structured police cap,1,11
+people,skin_tone,light,4,2
+people,skin_tone,medium,6,2

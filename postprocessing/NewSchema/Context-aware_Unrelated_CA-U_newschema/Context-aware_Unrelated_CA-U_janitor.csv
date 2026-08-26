@@ -1,0 +1,103 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,9,3
+scene_appearance,aesthetic_qualities,dreamy,1,3
+scene_appearance,aesthetic_qualities,realistic,16,3
+scene_appearance,color_temperature,cool,14,3
+scene_appearance,color_temperature,neutral,4,3
+scene_appearance,color_temperature,warm,1,3
+scene_appearance,dominant_colors,black,12,7
+scene_appearance,dominant_colors,brown,5,7
+scene_appearance,dominant_colors,cyan,1,7
+scene_appearance,dominant_colors,medium blue,2,7
+scene_appearance,dominant_colors,medium violet red,1,7
+scene_appearance,dominant_colors,mediumblue,8,7
+scene_appearance,dominant_colors,red,1,7
+scene_appearance,mood,calm,17,2
+scene_appearance,mood,minimalistic,1,2
+camera,depth_of_field,deep,2,4
+camera,depth_of_field,moderate dof,2,4
+camera,depth_of_field,shallow,8,4
+camera,depth_of_field,shallow dof,8,4
+camera,framing,establishing,3,4
+camera,framing,full body,6,4
+camera,framing,medium,10,4
+camera,framing,wide,6,4
+camera,perspective,eye level,17,1
+objects,type,bag,2,15
+objects,type,bagged produce,1,15
+objects,type,basket,1,15
+objects,type,box,1,15
+objects,type,broom,1,15
+objects,type,container,1,15
+objects,type,hand basket,1,15
+objects,type,produce bags,1,15
+objects,type,produce containers,1,15
+objects,type,shelf,2,15
+objects,type,shoes,4,15
+objects,type,shopping basket,5,15
+objects,type,shopping basket cart configuration,1,15
+objects,type,shopping cart,8,15
+objects,type,sign,1,15
+people,activities,carrying basket,1,6
+people,activities,gripping shopping cart,1,6
+people,activities,gripping shopping cart duplicate token preserved as single group,1,6
+people,activities,holding bag,3,6
+people,activities,placing or adjusting fruit,1,6
+people,activities,pushing cart token,3,6
+people,pose,standing,1,2
+people,pose,standing,3,2
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,pose,leaning,6,2
+people,pose,standing,3,2
+people,pose,standing,7,2
+people,age_range,middle aged,15,2
+people,age_range,older adult,5,2
+people,clothing_color,beige,0,10
+people,clothing_color,black,19,10
+people,clothing_color,blue,35,10
+people,clothing_color,brown,1,10
+people,clothing_color,gray,2,10
+people,clothing_color,green,15,10
+people,clothing_color,orange,3,10
+people,clothing_color,pink,1,10
+people,clothing_color,white,3,10
+people,clothing_color,yellow,2,10
+people,eyewear_present,no,13,2
+people,eyewear_present,yes,2,2
+people,hair_color,black,2,3
+people,hair_color,brown,1,3
+people,facial_hair_present,no,8,2
+people,facial_hair_present,yes,5,2
+people,facial_hair_style,short stubble,1,2
+people,facial_hair_style,stubble,1,2
+people,gaze_direction,down,7,5
+people,gaze_direction,left,1,5
+people,gaze_direction,right,1,5
+people,gaze_direction,to the right,2,5
+people,gaze_direction,up,5,5
+people,gender_presentation,male,20,1
+people,hair_color,black,4,3
+people,hair_color,brown,3,3
+people,hair_color,gray,13,3
+people,hair_present,yes,19,1
+people,hair_style,shaved,1,2
+people,hair_style,short,18,2
+people,head_covering_type,blue coverings,5,3
+people,head_covering_present,no,9,2
+people,head_covering_present,yes,10,2
+people,head_covering_type,baseball cap,2,3
+people,head_covering_type,cap generic,3,3
+people,pose,standing,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,4,2
+people,pose,leaning,1,2
+people,pose,leaning,1,2
+people,pose,standing,8,2
+people,pose,standing,2,2
+people,skin_tone,dark,1,3
+people,skin_tone,light,13,3
+people,skin_tone,medium,6,3

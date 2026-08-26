@@ -1,0 +1,359 @@
+cohort,standardized_dimension,standardized_label,count,bins
+atmosphere,aesthetic_qualities,cinematic,1,2
+atmosphere,aesthetic_qualities,realistic,6,2
+atmosphere,color_temperature,cool,2,3
+atmosphere,color_temperature,neutral,3,3
+atmosphere,color_temperature,warm,1,3
+atmosphere,contrast_level,medium,6,1
+atmosphere,dominant_palette,black,4,3
+atmosphere,dominant_palette,brown,5,3
+atmosphere,dominant_palette,cyan,1,3
+atmosphere,mood,calm,10,1
+atmosphere,saturation_level,neutral,2,2
+atmosphere,saturation_level,vivid,4,2
+background,object_counts_by_position,background center,8,9
+background,object_counts_by_position,background left,7,9
+background,object_counts_by_position,background right,2,9
+background,object_counts_by_position,foreground center,8,9
+background,object_counts_by_position,foreground left,10,9
+background,object_counts_by_position,foreground right,13,9
+background,object_counts_by_position,midground center,14,9
+background,object_counts_by_position,midground left,6,9
+background,object_counts_by_position,midground right,12,9
+camera,crop,lower body out of frame,1,7
+camera,crop,lower torso legs cropped,1,7
+camera,crop,mid body,1,7
+camera,crop,midground center subject slightly right pole,1,7
+camera,crop,rightmost seatback partially cropped,1,7
+camera,crop,standard,1,7
+camera,crop,upper torso,1,7
+camera,depth_of_field,deep,1,3
+camera,depth_of_field,moderate,3,3
+camera,depth_of_field,shallow,4,3
+camera,focal_length,normal,1,2
+camera,focal_length,telephoto,1,2
+camera,framing,close up,1,4
+camera,framing,headshot,1,4
+camera,framing,medium,5,4
+camera,framing,wide,2,4
+camera,perspective,eye level,8,1
+environment,aisle_width,moderate,1,1
+environment,color,black,10,18
+environment,color,blue,5,18
+environment,color,brown,2,18
+environment,color,crimson,1,18
+environment,color,darkblue,5,18
+environment,color,darkslateblue,1,18
+environment,color,darkslategrey,1,18
+environment,color,gray,11,18
+environment,color,green,3,18
+environment,color,orange,2,18
+environment,color,palegreen,1,18
+environment,color,pink,3,18
+environment,color,silver,1,18
+environment,color,skyblue,1,18
+environment,color,teal,1,18
+environment,color,violet,1,18
+environment,color,white,12,18
+environment,color,yellow,6,18
+environment,condition,bright,1,16
+environment,condition,clean,6,16
+environment,condition,good,4,16
+environment,condition,intact,14,16
+environment,condition,legible poorly,1,16
+environment,condition,lightly aged,2,16
+environment,condition,maintained,1,16
+environment,condition,minor discoloration,1,16
+environment,condition,minor surface marks,1,16
+environment,condition,minor wear,12,16
+environment,condition,partially occluded,1,16
+environment,condition,serviceable,1,16
+environment,condition,small scuff marks,1,16
+environment,condition,used,8,16
+environment,condition,weathered,2,16
+environment,condition,working appearance,1,16
+environment,depth,deep,1,5
+environment,depth,medium,1,5
+environment,depth,moderate,4,5
+environment,depth,shallow,3,5
+environment,depth,shallow moderate,1,5
+environment,finish,behind clear plastic,1,14
+environment,finish,clear,1,14
+environment,finish,glossy,10,14
+environment,finish,matte,11,14
+environment,finish,opaque,1,14
+environment,finish,painted,6,14
+environment,finish,painted glossy,0,14
+environment,finish,polished,1,14
+environment,finish,reflective,5,14
+environment,finish,reflective interior,1,14
+environment,finish,satin,1,14
+environment,finish,semi gloss,1,14
+environment,finish,slight sheen,1,14
+environment,finish,slightly glossy,1,14
+environment,location_type,bus cabin,1,7
+environment,location_type,bus interior,1,7
+environment,location_type,passenger bus interior,1,7
+environment,location_type,roadside,1,7
+environment,location_type,suburban roadway,1,7
+environment,location_type,vehicle cabin,4,7
+environment,location_type,vehicle driver compartment,1,7
+environment,material,acrylic,1,19
+environment,material,asphalt,3,19
+environment,material,brick,1,19
+environment,material,fabric,2,19
+environment,material,foam,1,19
+environment,material,glass,13,19
+environment,material,leatherette,1,19
+environment,material,masonry,1,19
+environment,material,metal,7,19
+environment,material,painted metal,6,19
+environment,material,paneling,1,19
+environment,material,paper,1,19
+environment,material,paved surface,1,19
+environment,material,plastic,12,19
+environment,material,rubber,8,19
+environment,material,stainless steel,1,19
+environment,material,synthetic,1,19
+environment,material,vinyl,2,19
+environment,material,wood,1,19
+environment,openness,enclosed,2,2
+environment,openness,open,2,2
+environment,texture,blurred,3,24
+environment,texture,brushed,1,24
+environment,texture,camouflage patterned,1,24
+environment,texture,creased,1,24
+environment,texture,embossed,1,24
+environment,texture,fine textured,1,24
+environment,texture,glossy,4,24
+environment,texture,reflective,5,24
+environment,texture,ribbed,1,24
+environment,texture,ridged,1,24
+environment,texture,slightly textured,3,24
+environment,texture,small scuff marks,1,24
+environment,texture,smooth,26,24
+environment,texture,smudged,2,24
+environment,texture,soft,1,24
+environment,texture,soft cloud patches,1,24
+environment,texture,stitched seam,1,24
+environment,texture,textured,16,24
+environment,texture,textured anti slip,1,24
+environment,texture,textured push button face,1,24
+environment,texture,textured rubber grip,2,24
+environment,texture,weathered,2,24
+environment,texture,wet,3,24
+environment,texture,worn,2,24
+environment,time_of_day_hint,afternoon,1,1
+environment,weather,clear,1,4
+environment,weather,overcast,3,4
+environment,weather,rain,1,4
+environment,weather,sunny,1,4
+lighting,artifacts,motion blur,1,2
+lighting,artifacts,reflections on eyeglass lenses,2,2
+lighting,color_temperature,cool,2,3
+lighting,color_temperature,neutral,4,3
+lighting,color_temperature,warm,1,3
+lighting,contrast_level,medium,7,1
+lighting,directionality,sidelight,4,2
+lighting,directionality,top light,4,2
+lighting,hardness,soft light,12,1
+lighting,saturation_level,neutral,2,2
+lighting,saturation_level,vivid,5,2
+lighting,shadows,soft,8,1
+lighting,sources_count,four or more,3,3
+lighting,sources_count,three light,1,3
+lighting,sources_count,two light,3,3
+lighting,sources_type,artificial source,5,1
+objects,plane,background,17,6
+objects,plane,foreground,31,6
+objects,plane,midground,32,6
+objects,side,bright,27,6
+objects,side,center,30,6
+objects,side,left,23,6
+objects,type,accessory,1,39
+objects,type,advertising strip panels,1,39
+objects,type,aisle,1,39
+objects,type,bench upholstery,1,39
+objects,type,ceiling panel,1,39
+objects,type,ceiling sticker panels,1,39
+objects,type,cloth or glove,1,39
+objects,type,container,1,39
+objects,type,control console,1,39
+objects,type,control knob,1,39
+objects,type,dashboard,3,39
+objects,type,electronic display,1,39
+objects,type,handrail,2,39
+objects,type,instrument dashboard,1,39
+objects,type,lights,1,39
+objects,type,mirror,1,39
+objects,type,overhead electronic panel,1,39
+objects,type,partition,1,39
+objects,type,partition frame,1,39
+objects,type,passenger door,1,39
+objects,type,placards,1,39
+objects,type,plant,1,39
+objects,type,radio handset or device,1,39
+objects,type,reflector lens,1,39
+objects,type,roadway,1,39
+objects,type,roadway scene,1,39
+objects,type,roof sign,1,39
+objects,type,safety box,1,39
+objects,type,safety vest,1,39
+objects,type,seat,31,39
+objects,type,shirt,1,39
+objects,type,step riser,1,39
+objects,type,support pole,1,39
+objects,type,surface,1,39
+objects,type,vegetation,1,39
+objects,type,watch,1,39
+objects,type,wheel arch,1,39
+objects,type,window trim,1,39
+objects,type,wristwatch,1,39
+people,activities,driving operating controls,3,4
+people,activities,looking toward camera,3,4
+people,activities,operating vehicle,2,4
+people,activities,standing,3,4
+people,age_range,middle aged,5,2
+people,age_range,older adult,5,2
+people,clothing_color,black,9,9
+people,clothing_color,blue,4,9
+people,clothing_color,brown,1,9
+people,clothing_color,darkblue,1,9
+people,clothing_color,gray,2,9
+people,clothing_color,orange,1,9
+people,clothing_color,tan,2,9
+people,clothing_color,white,4,9
+people,clothing_color,yellow,4,9
+people,clothing_garment,cap,1,12
+people,clothing_garment,long sleeved jacket,1,12
+people,clothing_garment,neck tie,1,12
+people,clothing_garment,safety vest,1,12
+people,clothing_garment,shirt,8,12
+people,clothing_garment,shirt collar,2,12
+people,clothing_garment,shoulder bag,1,12
+people,clothing_garment,trouser singular,1,12
+people,clothing_garment,trousers plural,4,12
+people,clothing_garment,uniform jacket,1,12
+people,clothing_garment,work jacket,1,12
+people,clothing_garment,wristwatch on person,2,12
+people,clothing_material,canvas,1,9
+people,clothing_material,cotton,5,9
+people,clothing_material,fabric,2,9
+people,clothing_material,leather,1,9
+people,clothing_material,polyester,5,9
+people,clothing_material,silk,1,9
+people,clothing_material,synthetic,1,9
+people,clothing_material,twill,1,9
+people,clothing_material,woven,2,9
+people,eyewear_frame_color,black frames,2,2
+people,eyewear_frame_color,silver frames,4,2
+people,eyewear_present,no,4,2
+people,eyewear_present,yes,5,2
+people,eyewear_type,eyeglasses generic,1,3
+people,eyewear_type,rectangular frame,4,3
+people,eyewear_type,thin framed,1,3
+people,facial_hair_color,black,4,2
+people,facial_hair_color,gray,1,2
+people,facial_hair_present,no,4,2
+people,facial_hair_present,yes,3,2
+people,facial_hair_style,mustache,2,2
+people,facial_hair_style,stubble,2,2
+people,gaze_direction,up,5,1
+people,gender_presentation,male,10,1
+people,hair_color,black,4,2
+people,hair_color,gray,6,2
+people,hair_present,yes,10,1
+people,hair_style,short,7,2
+people,hair_style,straight,1,2
+people,head_covering_color,black,2,3
+people,head_covering_color,blue,1,3
+people,head_covering_color,dark blue,1,3
+people,head_covering_present,no,6,2
+people,head_covering_present,yes,3,2
+people,head_covering_type,baseball cap,1,3
+people,head_covering_type,cap generic,1,3
+people,head_covering_type,peaked cap,1,3
+people,occlusions,partial occlusion,8,1
+people,orientation,front,5,2
+people,orientation,three quarter,1,2
+people,pose,both hands on steering wheel,1,9
+people,pose,forearms resting on steering wheel,1,9
+people,pose,left hand on steering wheel,1,9
+people,pose,relaxed,2,9
+people,pose,right arm resting on lap,1,9
+people,pose,seated,5,9
+people,pose,torso slightly turned,2,9
+people,pose,upright,8,9
+people,pose,upright seated,1,9
+people,role_hint,appears bus driver,1,4
+people,role_hint,bus operator,3,4
+people,role_hint,transit vehicle operator,1,4
+people,role_hint,vehicle operator,3,4
+people,skin_tone,lights,8,2
+people,skin_tone,medium,2,2
+safety,hazards,no detected,9,1
+safety,nsfw,not,10,1
+texts,content,text 181,1,4
+texts,content,text 501,1,4
+texts,content,text believe,1,4
+texts,content,text puusnc vie bus rivier,1,4
+texts,font_style,condensed,1,2
+texts,font_style,sans,2,2
+texts,legibility,illegible,10,5
+texts,legibility,legible text,2,5
+texts,legibility,not legible,5,5
+texts,legibility,partially legible,2,5
+texts,legibility,uncertain,1,5
+texts,plane,text on background,5,6
+texts,plane,text on foreground,6,6
+texts,plane,text on midground,9,6
+texts,side,text on center,13,6
+texts,side,text on left,4,6
+texts,side,text on right,3,6
+uncertainty,note,advertising strip panel text above windshield largely illegible,1,47
+uncertainty,note,background roadway details blurred vehicles not identifiable,1,47
+uncertainty,note,blurred pedestrian figures indistinct,1,47
+uncertainty,note,cap patch details but not legible,1,47
+uncertainty,note,ceiling stickers text illegible due to distance,1,47
+uncertainty,note,chest mounted device uncertain radio fare device,1,47
+uncertainty,note,chest patch text but not legible,1,47
+uncertainty,note,dashboard control labels instrument readouts not legible,1,47
+uncertainty,note,distant building details blurred,1,47
+uncertainty,note,distant vehicle make model license not identifiable,1,47
+uncertainty,note,embroidered uniform patch lettering not readable,1,47
+uncertainty,note,enumeration constrained descriptive preserved,1,47
+uncertainty,note,exact aisle width floor surface details not provided,1,47
+uncertainty,note,exterior license plate area not legible,1,47
+uncertainty,note,exterior scene motion blur making background details indiscernible,1,47
+uncertainty,note,exterior storefront posters illegible,1,47
+uncertainty,note,facial not specified,1,47
+uncertainty,note,front license plate 501 partially illegible,1,47
+uncertainty,note,heavily blurred objects marked as indiscernible,1,47
+uncertainty,note,lower body bag strap partially occluded,1,47
+uncertainty,note,lower dashboard yellow sticker text partially illegible,1,47
+uncertainty,note,lower left background indiscernible dark object near wheel arch,1,47
+uncertainty,note,overhead display text blurred illegible,1,47
+uncertainty,note,overhead electronic panel text partially occluded low resolution,1,47
+uncertainty,note,overhead sticker text but not legible,1,47
+uncertainty,note,overhead white placard text illegible,1,47
+uncertainty,note,overhead yellow sign text illegible,1,47
+uncertainty,note,passenger area beyond right seat back out of frame,1,47
+uncertainty,note,possible small items on dashboard too small to identify,1,47
+uncertainty,note,possible small objects near lower right dashboard not identifiable,1,47
+uncertainty,note,precise vehicle registration details not visible,1,47
+uncertainty,note,rear passenger area partially occluded,1,47
+uncertainty,note,rear vehicle area indiscernible blur omitted,1,47
+uncertainty,note,right side window exterior blurred objects indiscernible,1,47
+uncertainty,note,roof top yellow sign text partially occluded,1,47
+uncertainty,note,shoulder patch wording partially occluded not fully legible,1,47
+uncertainty,note,small chrome grille emblem not legible,1,47
+uncertainty,note,small dark device near steering column not identifiable,1,47
+uncertainty,note,small instrument labels illegible,1,47
+uncertainty,note,small interior items visible through windows blurred,1,47
+uncertainty,note,small objects near center console partially occluded,1,47
+uncertainty,note,small objects under driver seat indiscernible blur,1,47
+uncertainty,note,small red distant vehicle partially occluded,1,47
+uncertainty,note,small white chest text but not legible,1,47
+uncertainty,note,time of day not definitive ambient light suggests daytime,1,47
+uncertainty,note,tokens described qualitatively enum mapping omitted,1,47
+uncertainty,note,yellow ceiling placard texts partially occluded,1,47

@@ -1,0 +1,750 @@
+cohort,standardized_dimension,standardized_label,count,bins
+atmosphere,aesthetic_qualities,cinematic,14,3
+atmosphere,aesthetic_qualities,minimal,4,3
+atmosphere,aesthetic_qualities,realistic,32,3
+atmosphere,color,black,2,28
+atmosphere,color,brown,2,28
+atmosphere,color,mediumblue,4,28
+atmosphere,color,orangered,1,28
+atmosphere,color,per image share,0,28
+atmosphere,color,within attribute share,0,28
+atmosphere,color_temperature,cool,23,3
+atmosphere,color_temperature,neutral,13,3
+atmosphere,color_temperature,warm,3,3
+atmosphere,contrast_level,high,4,2
+atmosphere,contrast_level,medium,38,2
+atmosphere,dominant_color,black,1,2
+atmosphere,dominant_color,brown,9,2
+atmosphere,dominant_palette,black,11,5
+atmosphere,dominant_palette,blue,2,5
+atmosphere,dominant_palette,brown,15,5
+atmosphere,dominant_palette,orange,1,5
+atmosphere,dominant_palette,red,1,5
+atmosphere,mood,calm,44,3
+atmosphere,mood,joyful,2,3
+atmosphere,mood,minimalistic,2,3
+atmosphere,saturation_level,neutral,19,2
+atmosphere,saturation_level,vivid,22,2
+background,object_counts_by_position,background center,52,9
+background,object_counts_by_position,background left,13,9
+background,object_counts_by_position,background right,21,9
+background,object_counts_by_position,foreground center,89,9
+background,object_counts_by_position,foreground left,46,9
+background,object_counts_by_position,foreground right,37,9
+background,object_counts_by_position,midground center,138,9
+background,object_counts_by_position,midground left,34,9
+background,object_counts_by_position,midground right,28,9
+background,position,background center,23,9
+background,position,background left,8,9
+background,position,background right,8,9
+background,position,foreground center,37,9
+background,position,foreground left,14,9
+background,position,foreground right,11,9
+background,position,midground center,18,9
+background,position,midground left,15,9
+background,position,midground right,10,9
+background,totals_by_position,background center,11,9
+background,totals_by_position,background left,0,9
+background,totals_by_position,background right,3,9
+background,totals_by_position,foreground center,22,9
+background,totals_by_position,foreground left,9,9
+background,totals_by_position,foreground right,10,9
+background,totals_by_position,midground center,10,9
+background,totals_by_position,midground left,7,9
+background,totals_by_position,midground right,6,9
+camera,crop,annotations various tokens,10,16
+camera,crop,bottom cropped,1,16
+camera,crop,bottom merged variants,7,16
+camera,crop,foreground table lower two thirds,1,16
+camera,crop,immediate tabletop,1,16
+camera,crop,legs cropped,1,16
+camera,crop,lower body cropped,2,16
+camera,crop,lower torso hands cropped,1,16
+camera,crop,mid torso,1,16
+camera,crop,subject centered,2,16
+camera,crop,table leading lines,1,16
+camera,crop,tight,1,16
+camera,crop,upper thighs,1,16
+camera,crop,upper torso,1,16
+camera,crop,upper torso and head,1,16
+camera,crop,upper torso below waist,1,16
+camera,depth_of_field,deep,20,8
+camera,depth_of_field,deep dof,2,8
+camera,depth_of_field,moderate,9,8
+camera,depth_of_field,moderate dof,1,8
+camera,depth_of_field,per image share,0,8
+camera,depth_of_field,shallow,26,8
+camera,depth_of_field,shallow dof,6,8
+camera,depth_of_field,within attribute share,0,8
+camera,focal_length,normal,9,5
+camera,focal_length,per image share,0,5
+camera,focal_length,telephoto,7,5
+camera,focal_length,wide,3,5
+camera,focal_length,within attribute share,0,5
+camera,framing,close up,1,6
+camera,framing,establishing,7,6
+camera,framing,full body,8,6
+camera,framing,headshot,4,6
+camera,framing,medium,26,6
+camera,framing,wide,19,6
+camera,perspective,eye level,58,3
+camera,perspective,per image share,0,3
+camera,perspective,within attribute share,0,3
+environment,aisle_width,medium,1,2
+environment,aisle_width,wide,2,2
+environment,ceiling_material,acoustic panel,3,8
+environment,ceiling_material,glossy panel,1,8
+environment,ceiling_material,metal fixtures,1,8
+environment,ceiling_material,painted acoustic panel,1,8
+environment,ceiling_material,painted panel,1,8
+environment,ceiling_material,panel,1,8
+environment,ceiling_material,plaster,1,8
+environment,ceiling_material,veneered wood trim,1,8
+environment,color,beige,3,28
+environment,color,black,8,28
+environment,color,blue,1,28
+environment,color,ghostwhite,4,28
+environment,color,gray,5,28
+environment,color,green,14,28
+environment,color,orange,15,28
+environment,color,red,3,28
+environment,color,silver,7,28
+environment,color,white,10,28
+environment,floor_material,carpet,1,3
+environment,floor_material,concrete,1,3
+environment,floor_material,hardwood,1,3
+environment,location_type,boardroom,7,7
+environment,location_type,conference room,6,7
+environment,location_type,grocery store,2,7
+environment,location_type,grocery supermarket canonical,7,7
+environment,location_type,office,17,7
+environment,location_type,supermarket,6,7
+environment,location_type,supermarket aisle,5,7
+environment,material,acoustic ceiling tiles,3,29
+environment,material,cardboard,2,29
+environment,material,ceramic tile,10,29
+environment,material,glass,3,29
+environment,material,metal,7,29
+environment,material,plastic,3,29
+environment,openness,closed,2,6
+environment,openness,contained,1,6
+environment,openness,corridor like,1,6
+environment,openness,moderate,1,6
+environment,openness,open,11,6
+environment,openness,open but controlled,1,6
+environment,spatial_depth,deep,11,4
+environment,spatial_depth,moderate,6,4
+environment,spatial_depth,moderate deep,1,4
+environment,spatial_depth,shallow,2,4
+environment,spatial_layout_aisle_width,wide,1,1
+environment,spatial_layout_depth,deep,9,5
+environment,spatial_layout_depth,moderate,12,5
+environment,spatial_layout_depth,moderate deep,1,5
+environment,spatial_layout_depth,open,2,5
+environment,spatial_layout_depth,shallow,1,5
+environment,spatial_layout_openness,contained,1,4
+environment,spatial_layout_openness,moderate,1,4
+environment,spatial_layout_openness,moderately open,2,4
+environment,spatial_layout_openness,open,16,4
+environment,surfaces_ceiling_color,black,4,1
+environment,surfaces_ceiling_finish,matte,6,1
+environment,surfaces_ceiling_material,acoustic tiles merged variants,3,2
+environment,surfaces_ceiling_material,metal,5,2
+environment,surfaces_ceiling_texture,smooth,4,1
+environment,surfaces_floor_color,beige,4,2
+environment,surfaces_floor_color,white,2,2
+environment,surfaces_floor_material,ceramic tile merged variants,10,1
+environment,surfaces_floor_texture,glossy,2,2
+environment,surfaces_floor_texture,smooth,8,2
+environment,surfaces_walls_color,darkslategrey,1,3
+environment,surfaces_walls_color,wall black,3,3
+environment,surfaces_walls_color,wall green,1,3
+environment,surfaces_walls_material,wall metal,1,3
+environment,surfaces_walls_material,wall paint,1,3
+environment,surfaces_walls_material,wall plastic,1,3
+environment,surfaces_walls_texture,wall smooth,2,1
+environment,time_of_day_hint,afternoon,2,1
+environment,walls_color,black,1,10
+environment,walls_color,brown,6,10
+environment,walls_color,darkblue,1,10
+environment,walls_color,darkslategrey,1,10
+environment,walls_color,gray,5,10
+environment,walls_color,mediumpurple,1,10
+environment,walls_color,mediumseagreen,1,10
+environment,walls_color,palegreen,1,10
+environment,walls_color,pink,1,10
+environment,walls_color,white,1,10
+environment,walls_material,drywall,1,13
+environment,walls_material,fabric,1,13
+environment,walls_material,glass,4,13
+environment,walls_material,metal,2,13
+environment,walls_material,metal mullion,1,13
+environment,walls_material,paint,1,13
+environment,walls_material,painted plaster or metal,1,13
+environment,walls_material,plaster,1,13
+environment,walls_material,ribbed wall paneling,1,13
+environment,walls_material,wood,2,13
+environment,walls_material,wood paneling,1,13
+environment,walls_material,wood slats,1,13
+environment,walls_material,wood veneer,4,13
+environment,walls_texture,faint horizontal screen,1,7
+environment,walls_texture,reflective,2,7
+environment,walls_texture,ribbed,1,7
+environment,walls_texture,smooth,16,7
+environment,walls_texture,textured,1,7
+environment,walls_texture,veneered,1,7
+environment,walls_texture,vertical grain,2,7
+environment,weather,clear,3,3
+environment,weather,cloudy,2,3
+environment,weather,overcast,2,3
+lighting,artifacts,background bokeh,3,30
+lighting,artifacts,double image reflection,1,30
+lighting,artifacts,glare glass,1,30
+lighting,artifacts,mild bloom,1,30
+lighting,artifacts,minimal visible,2,30
+lighting,artifacts,minimal visible digital,1,30
+lighting,artifacts,minor reflection framed glass,1,30
+lighting,artifacts,minor specular highlights eyeglasses,1,30
+lighting,artifacts,motion blur,2,30
+lighting,artifacts,no lens flare,4,30
+lighting,artifacts,no strong lens flare observed,1,30
+lighting,artifacts,per image share,0,30
+lighting,artifacts,reflections ceiling panels,1,30
+lighting,artifacts,reflections on eyeglass lenses artifact,3,30
+lighting,artifacts,reflections on floor,1,30
+lighting,artifacts,reflections on polished desk surface,1,30
+lighting,artifacts,reflections on table,2,30
+lighting,artifacts,soft reflections table glass,1,30
+lighting,artifacts,specular highlights,5,30
+lighting,artifacts,specular highlights packaging chrome,1,30
+lighting,artifacts,specular highlights plastic tile,1,30
+lighting,artifacts,specular highlights polished table wood panel,1,30
+lighting,artifacts,specular reflections,5,30
+lighting,artifacts,specular reflections eyeglass lenses,3,30
+lighting,artifacts,specular reflections floor clear plastic packaging,1,30
+lighting,artifacts,specular reflections floor glass,1,30
+lighting,artifacts,specular reflections glossy produce packaging,1,30
+lighting,artifacts,specular reflections on tabletop,1,30
+lighting,artifacts,specular reflections tile plastic,1,30
+lighting,artifacts,within attribute share,0,30
+lighting,color_temperature,cool,33,3
+lighting,color_temperature,neutral,18,3
+lighting,color_temperature,warm,4,3
+lighting,contrast_level,high,4,2
+lighting,contrast_level,medium,48,2
+lighting,directionality,backlight,17,5
+lighting,directionality,side light,8,5
+lighting,directionality,sidelight,6,5
+lighting,directionality,top,10,5
+lighting,directionality,top light,23,5
+lighting,hardness,hard light,1,4
+lighting,hardness,medium,2,4
+lighting,hardness,soft,9,4
+lighting,hardness,soft light,51,4
+lighting,saturation_level,neutral,26,2
+lighting,saturation_level,vivid,35,2
+lighting,shadows,hard,1,2
+lighting,shadows,soft,58,2
+lighting,sources_count,four or more,32,5
+lighting,sources_count,one source,20,5
+lighting,sources_count,three,1,5
+lighting,sources_count,three light,1,5
+lighting,sources_count,two,1,5
+lighting,sources_hardness,medium,1,2
+lighting,sources_hardness,soft,9,2
+lighting,sources_type,artificial,10,3
+lighting,sources_type,artificial light,10,3
+lighting,sources_type,artificial light source,25,3
+objects,color,beige,5,28
+objects,color,black,48,28
+objects,color,blue,8,28
+objects,color,brown,17,28
+objects,color,crimson,2,28
+objects,color,darkblue,9,28
+objects,color,darkgreen,3,28
+objects,color,darkslategrey,4,28
+objects,color,ghostwhite,4,28
+objects,color,gray,23,28
+objects,color,green,28,28
+objects,color,ivory,1,28
+objects,color,lightgray,1,28
+objects,color,mediumblue,1,28
+objects,color,mediumpurple,4,28
+objects,color,orange,28,28
+objects,color,palegreen,2,28
+objects,color,pink,1,28
+objects,color,purple,2,28
+objects,color,red,3,28
+objects,color,silver,15,28
+objects,color,tan,1,28
+objects,color,teal,1,28
+objects,color,white,26,28
+objects,color,yellow,3,28
+objects,condition,clean,19,13
+objects,condition,closed,1,13
+objects,condition,good,20,13
+objects,condition,healthy,1,13
+objects,condition,intact,1,13
+objects,condition,minimal surface wear,2,13
+objects,condition,orderly,6,13
+objects,condition,pristine,2,13
+objects,condition,scattered,1,13
+objects,condition,smudged,1,13
+objects,condition,stocked,6,13
+objects,condition,upright,1,13
+objects,condition,well maintained,10,13
+objects,finish,backlit,1,10
+objects,finish,brushed,1,10
+objects,finish,closed,1,10
+objects,finish,glass covered,2,10
+objects,finish,glazed,1,10
+objects,finish,glossy,21,10
+objects,finish,matte,16,10
+objects,finish,polished,5,10
+objects,finish,reflective,9,10
+objects,finish,transparent,3,10
+objects,material,acoustic panel,1,29
+objects,material,acrylic diffuser,1,29
+objects,material,aluminum,1,29
+objects,material,cardboard,9,29
+objects,material,cardstock,1,29
+objects,material,ceramic,6,29
+objects,material,chrome,1,29
+objects,material,cloth bound,1,29
+objects,material,coated metal,4,29
+objects,material,faux leather,1,29
+objects,material,glass,18,29
+objects,material,lcd,1,29
+objects,material,leather,12,29
+objects,material,mesh,3,29
+objects,material,metal,42,29
+objects,material,organic,7,29
+objects,material,packaging materials,5,29
+objects,material,painted metal,2,29
+objects,material,paper,15,29
+objects,material,per image share,0,29
+objects,material,plastic,45,29
+objects,material,stainless steel,3,29
+objects,material,steel,1,29
+objects,material,synthetic,1,29
+objects,material,vegetation,3,29
+objects,material,within attribute share,0,29
+objects,material,wood,12,29
+objects,plane,background,47,8
+objects,plane,foreground,75,8
+objects,plane,midground,34,8
+objects,plane_distribution,background,26,3
+objects,plane_distribution,foreground,32,3
+objects,plane_distribution,midground,21,3
+objects,side,center,82,8
+objects,side,left,43,8
+objects,side,right,28,8
+objects,side_distribution,center,43,3
+objects,side_distribution,left,20,3
+objects,side_distribution,right,13,3
+objects,size_class,large,12,5
+objects,size_class,medium,15,5
+objects,size_class,small,28,5
+objects,size_class,standard,1,5
+objects,size_class,varied,1,5
+objects,state,closed,6,14
+objects,state,contains water,2,14
+objects,state,face down or idle,1,14
+objects,state,lying,1,14
+objects,state,open,1,14
+objects,state,out focus,1,14
+objects,state,partially occluded,2,14
+objects,state,partially visible,1,14
+objects,state,screen dark,1,14
+objects,state,screen off,1,14
+objects,state,stacked,1,14
+objects,state,static,8,14
+objects,state,transparent,1,14
+objects,state,upright,1,14
+objects,subtype_overview,desk,35,5
+objects,subtype_overview,others,25,5
+objects,subtype_overview,potted plant,4,5
+objects,subtype_overview,window panels,8,5
+objects,subtype_overview,wristwatch,3,5
+objects,texture,breathable mesh,1,25
+objects,texture,brushed metal,1,25
+objects,texture,clear glass,1,25
+objects,texture,crinkled,1,25
+objects,texture,draped,1,25
+objects,texture,fibrous,1,25
+objects,texture,glossy,18,25
+objects,texture,glossy plastic,1,25
+objects,texture,leafy,1,25
+objects,texture,matte,11,25
+objects,texture,matte peel,1,25
+objects,texture,padded,1,25
+objects,texture,polished,6,25
+objects,texture,polished face,1,25
+objects,texture,reflective,5,25
+objects,texture,slightly textured,1,25
+objects,texture,smooth,53,25
+objects,texture,smooth glass,1,25
+objects,texture,stitched,1,25
+objects,texture,subtle grout lines,1,25
+objects,texture,textured,8,25
+objects,texture,textured inset,1,25
+objects,texture,textured mesh,1,25
+objects,texture,textured rind,1,25
+objects,texture,wood grain,1,25
+objects,type,accessory,8,103
+objects,type,architectural,8,103
+objects,type,architectural element,3,103
+objects,type,architectural feature,1,103
+objects,type,bakery tray,1,103
+objects,type,belt,1,103
+objects,type,book like,1,103
+objects,type,cabinet,1,103
+objects,type,cable trough,1,103
+objects,type,ceiling,1,103
+objects,type,chair,14,103
+objects,type,clothing,2,103
+objects,type,column,1,103
+objects,type,consumable,2,103
+objects,type,credenza or cabinet,1,103
+objects,type,cup,1,103
+objects,type,decor,4,103
+objects,type,desk,2,103
+objects,type,desktop accessory,1,103
+objects,type,device,12,103
+objects,type,digital display screens,1,103
+objects,type,dishware,1,103
+objects,type,display unit,1,103
+objects,type,document folio,1,103
+objects,type,document singular token,2,103
+objects,type,documents,2,103
+objects,type,documents plural token,2,103
+objects,type,electronic,5,103
+objects,type,electronic normalized from electronic electronics,3,103
+objects,type,electronics devices,4,103
+objects,type,electronics plural,2,103
+objects,type,endcap display,1,103
+objects,type,endcap shelving,1,103
+objects,type,eyeglasses,1,103
+objects,type,fixture,11,103
+objects,type,fixture recessed,1,103
+objects,type,floor,4,103
+objects,type,floor area,1,103
+objects,type,floor surface,1,103
+objects,type,folder,1,103
+objects,type,folio document holder,1,103
+objects,type,furniture,36,103
+objects,type,generic,8,103
+objects,type,glass partition edge,1,103
+objects,type,glassware,1,103
+objects,type,handheld package,1,103
+objects,type,hanging sign,1,103
+objects,type,hvac duct,1,103
+objects,type,lamp,1,103
+objects,type,light fixture,3,103
+objects,type,mail,1,103
+objects,type,mouse,1,103
+objects,type,mug,1,103
+objects,type,notebook,2,103
+objects,type,object,4,103
+objects,type,object generic,8,103
+objects,type,office chair,28,103
+objects,type,office supply,2,103
+objects,type,overhead sign,1,103
+objects,type,packaged box,1,103
+objects,type,panel,1,103
+objects,type,paper,8,103
+objects,type,paperwork,1,103
+objects,type,partition,2,103
+objects,type,plant,8,103
+objects,type,planters,1,103
+objects,type,produce,12,103
+objects,type,produce basket,1,103
+objects,type,produce crate,2,103
+objects,type,produce display,5,103
+objects,type,produce tray,1,103
+objects,type,refrigerated produce shelf,2,103
+objects,type,refrigerated shelf,10,103
+objects,type,retail shelving,2,103
+objects,type,scene element,1,103
+objects,type,seating,2,103
+objects,type,shelf edge sale tags,1,103
+objects,type,shelf price strip,1,103
+objects,type,shelving,25,103
+objects,type,shelving unit,6,103
+objects,type,shelving with books,1,103
+objects,type,shopping basket,1,103
+objects,type,shopping cart,9,103
+objects,type,sign,1,103
+objects,type,stationery,7,103
+objects,type,structural element,1,103
+objects,type,surface floor etc,1,103
+objects,type,table,10,103
+objects,type,table port,1,103
+objects,type,tabletop,2,103
+objects,type,tableware,1,103
+objects,type,tool,1,103
+objects,type,vegetation,1,103
+objects,type,wall,1,103
+objects,type,wall art,1,103
+objects,type,wall cladding,1,103
+objects,type,watch,1,103
+objects,type,window,6,103
+objects,type,window glazing,1,103
+objects,type,window grid,1,103
+objects,type,window panels,26,103
+objects,type,windows plural token,1,103
+objects,type,writing instrument,1,103
+people,activity_activities,posing for camera,1,3
+people,activity_activities,smiling,2,3
+people,activity_activities,standing,8,3
+people,activity_gaze_direction,up,5,1
+people,activity_occlusions,partial occlusion,9,2
+people,activity_occlusions,significant occlusion,1,2
+people,activity_orientation,front,8,2
+people,activity_orientation,three quarter,1,2
+people,activity_pose,arms crossed,1,4
+people,activity_pose,hands in pockets merged variants,4,4
+people,activity_pose,relaxed merged variants,7,4
+people,activity_pose,upright merged variants,10,4
+people,age_range,middle aged,62,3
+people,age_range,older adult,4,3
+people,age_range,young adult,11,3
+people,clothing_color,black,33,10
+people,clothing_color,blue,66,10
+people,clothing_color,brown,2,10
+people,clothing_color,gray,10,10
+people,clothing_color,per image share,0,10
+people,clothing_color,pink,2,10
+people,clothing_color,red,3,10
+people,clothing_color,tan,2,10
+people,clothing_color,white,33,10
+people,clothing_color,within attribute share,0,10
+people,clothing_color_aggregate,black,13,5
+people,clothing_color_aggregate,blue,29,5
+people,clothing_color_aggregate,gray,16,5
+people,clothing_color_aggregate,red,2,5
+people,clothing_color_aggregate,white,16,5
+people,clothing_condition_aggregate,crisp,1,7
+people,clothing_condition_aggregate,good,20,7
+people,clothing_condition_aggregate,neat,5,7
+people,clothing_condition_aggregate,partially occluded,2,7
+people,clothing_condition_aggregate,pressed,1,7
+people,clothing_condition_aggregate,pristine,1,7
+people,clothing_condition_aggregate,well maintained,1,7
+people,clothing_garment,belt,9,14
+people,clothing_garment,dress shoes,4,14
+people,clothing_garment,dress trousers,1,14
+people,clothing_garment,neck tie,4,14
+people,clothing_garment,necktie,2,14
+people,clothing_garment,necktie merged neck tie ne from variants,7,14
+people,clothing_garment,shirt,19,14
+people,clothing_garment,shoes,2,14
+people,clothing_garment,suit jacket,16,14
+people,clothing_garment,tie,3,14
+people,clothing_garment,trousers,6,14
+people,clothing_garment,two piece suit,1,14
+people,clothing_garment,watch belt accessory,1,14
+people,clothing_garment,wristwatch,2,14
+people,clothing_material,cotton,17,9
+people,clothing_material,crisp fabric,1,9
+people,clothing_material,leather,13,9
+people,clothing_material,silk,11,9
+people,clothing_material,smooth,2,9
+people,clothing_material,smooth woven,1,9
+people,clothing_material,wool,6,9
+people,clothing_material,wool blend,1,9
+people,clothing_material,wool family,12,9
+people,clothing_material_aggregate,business suit,2,7
+people,clothing_material_aggregate,cotton,18,7
+people,clothing_material_aggregate,silk,8,7
+people,clothing_material_aggregate,tailored fabric,3,7
+people,clothing_material_aggregate,textured knit,1,7
+people,clothing_material_aggregate,wool,15,7
+people,clothing_material_aggregate,wool blend,2,7
+people,clothing_texture_aggregate,crisp,1,7
+people,clothing_texture_aggregate,lustrous,1,7
+people,clothing_texture_aggregate,pinstripe,1,7
+people,clothing_texture_aggregate,smooth,52,7
+people,clothing_texture_aggregate,subtle,1,7
+people,clothing_texture_aggregate,subtle pattern,1,7
+people,clothing_texture_aggregate,textured,2,7
+people,eyewear_frame_color,black,23,4
+people,eyewear_frame_color,black frames,8,4
+people,eyewear_frame_color,dark blue frames,1,4
+people,eyewear_frame_color,silver,4,4
+people,eyewear_present,no,37,2
+people,eyewear_present,yes,38,2
+people,eyewear_type,eyeglasses,1,7
+people,eyewear_type,eyeglasses generic,2,7
+people,eyewear_type,eyeglasses rectangular,10,7
+people,eyewear_type,prescription,1,7
+people,eyewear_type,rectangular frame,6,7
+people,eyewear_type,rectangular glasses,7,7
+people,eyewear_type,thin framed glasses,4,7
+people,facial_hair_color,black,9,6
+people,facial_hair_color,brown,1,6
+people,facial_hair_color,dark blue,1,6
+people,facial_hair_color,darkblue,1,6
+people,facial_hair_color,gray,3,6
+people,facial_hair_color,tomato token,1,6
+people,facial_hair_present,no,55,2
+people,facial_hair_present,yes,17,2
+people,facial_hair_style,beard,1,8
+people,facial_hair_style,closely trimmed full beard,1,8
+people,facial_hair_style,light stubble,1,8
+people,facial_hair_style,moustache goatee,1,8
+people,facial_hair_style,stubble,1,8
+people,facial_hair_style,stubble beard,1,8
+people,facial_hair_style,trimmed beard,6,8
+people,facial_hair_style,trimmed stubble,3,8
+people,gaze_direction,left,1,2
+people,gaze_direction,up,7,2
+people,gender_presentation,female,12,2
+people,gender_presentation,male,70,2
+people,hair_color,black,13,6
+people,hair_color,brown,25,6
+people,hair_color,gray,43,6
+people,hair_color,maroon,1,6
+people,hair_color,pink,2,6
+people,hair_color,white,1,6
+people,hair_present,yes,81,1
+people,hair_style,long,9,5
+people,hair_style,shaved,2,5
+people,hair_style,short,66,5
+people,hair_style,straight,17,5
+people,hair_style,wavy,1,5
+people,head_covering_present,no,71,1
+people,occlusions,partial occlusion,9,1
+people,orientation,front,4,2
+people,orientation,three quarter,4,2
+people,pose,arms crossed,1,22
+people,pose,forearms resting on table,1,22
+people,pose,forward leaning,1,22
+people,pose,hands partially in jacket pockets,1,22
+people,pose,leaning forward slightly,1,22
+people,pose,legs crossed at ankles,1,22
+people,pose,neutral posture,1,22
+people,pose,per image share,0,22
+people,pose,relaxed,8,22
+people,pose,relaxed torso,1,22
+people,pose,seated,6,22
+people,pose,slight forward lean,2,22
+people,pose,slightly hunched,1,22
+people,pose,slightly leaning forward,1,22
+people,pose,slightly turned torso,1,22
+people,pose,standing,1,22
+people,pose,upright,16,22
+people,pose,upright seated,1,22
+people,pose,walking,1,22
+people,pose,walking forward,1,22
+people,pose,weight shifted,1,22
+people,pose,within attribute share,0,22
+people,role_hint,appears meeting leader,1,6
+people,role_hint,appears office executive,1,6
+people,role_hint,appears office worker,2,6
+people,role_hint,corporate businessperson,3,6
+people,role_hint,corporate executive,3,6
+people,role_hint,presenter corporate representative,1,6
+people,skin_tone,light,67,2
+people,skin_tone,medium,14,2
+safety,hazards,no,25,2
+safety,hazards,no detected,17,2
+safety,nsfw,no content,20,2
+safety,nsfw,no content detected,10,2
+texts,content,detected text ecooury,1,1
+texts,font_style,bold,1,2
+texts,font_style,sans,1,2
+texts,legibility,illegible,30,8
+texts,legibility,not legible,29,8
+texts,legibility,not legible distinct token,3,8
+texts,legibility,partial,1,8
+texts,legibility,partially legible,3,8
+texts,legibility,per image share,0,8
+texts,legibility,unreadable,3,8
+texts,legibility,within attribute share,0,8
+texts,plane,background,10,8
+texts,plane,foreground,12,8
+texts,plane,midground,7,8
+texts,plane,per image share,0,8
+texts,plane,text midground,14,8
+texts,plane,text on background,16,8
+texts,plane,text on foreground,15,8
+texts,plane,within attribute share,0,8
+texts,side,center,1,8
+texts,side,left,4,8
+texts,side,text at center,15,8
+texts,side,text left,15,8
+texts,side,text on center,1,8
+texts,side,text on left,4,8
+texts,side,text right,9,8
+totals,images,total,10,1
+totals,object_instances,total,69,1
+totals,people_instances,total,10,1
+totals,text_instances,total,15,1
+uncertainty,note,aesthetic qualities palette mapping enum unspecified,1,37
+uncertainty,note,ambiguous back wall element window vs print,1,37
+uncertainty,note,approximate background right bound volumes 70 140 due to blur occlusion,1,37
+uncertainty,note,approximate chair count 11 12,1,37
+uncertainty,note,approximate count of executive chairs 5 6,1,37
+uncertainty,note,approximate count of folded meeting agendas 6,1,37
+uncertainty,note,approximate counts of black mesh executive chairs 3 4,1,37
+uncertainty,note,approximate counts provided for produce items,1,37
+uncertainty,note,background left exterior scene beyond windows overexposed blurred,1,37
+uncertainty,note,blurry small package labels on right shelving,39,37
+uncertainty,note,exact chair frame material uncertain,1,37
+uncertainty,note,exact counts of packaged bakery units approx 10,1,37
+uncertainty,note,exact floor tile material ceramic vs porcelain uncertain,1,37
+uncertainty,note,exact packaged product identities brands not identifiable,1,37
+uncertainty,note,exact skin tone shade approximate between light medium,1,37
+uncertainty,note,exterior building details blurred occluded,12,37
+uncertainty,note,facial features of person 1 unreadable,1,37
+uncertainty,note,facial for person 1 not discernible,1,37
+uncertainty,note,foreground floor material not visible,1,37
+uncertainty,note,heavily blurred distant shelving beyond dof indiscernible,1,37
+uncertainty,note,lower body chair base occluded by tabletop,21,37
+uncertainty,note,lower body of subject out of frame,1,37
+uncertainty,note,person 2 face gaze cannot be determined,1,37
+uncertainty,note,plant pot material uncertain ceramic vs plastic,1,37
+uncertainty,note,possible small handheld items or wrist accessories occluded,1,37
+uncertainty,note,precise necktie pattern not legible,1,37
+uncertainty,note,reflections obscure ceiling fixture details,1,37
+uncertainty,note,screen chart text not legible,1,37
+uncertainty,note,second framed artwork partially occluded,1,37
+uncertainty,note,small fixtures security cameras badges not distinguishable,1,37
+uncertainty,note,small items background right blurred indiscernible,1,37
+uncertainty,note,small metallic lapel pin wording not discernible,1,37
+uncertainty,note,small tabletop items unclear,1,37
+uncertainty,note,small textual labels not legible,1,37
+uncertainty,note,smartphone watch brand model details not legible,1,37
+uncertainty,note,stack flat documents book text not legible,1,37
+uncertainty,note,two small dark objects on credenza not identifiable,1,37
+uncertainty,token,absence of other shoppers beyond central figure uncertain,1,30
+uncertainty,token,aisle width not specified precisely,1,30
+uncertainty,token,background right peripheral items unidentified,1,30
+uncertainty,token,chair count per side approximate,1,30
+uncertainty,token,contents drinking glasses count approx two three,1,30
+uncertainty,token,device brand model markings not visible,1,30
+uncertainty,token,device screen contents not visible,1,30
+uncertainty,token,exact ages demographics approximate visually inferred,1,30
+uncertainty,token,facial expression gaze not visible due to occlusion,1,30
+uncertainty,token,faint reflection ghosting produces double image effect,1,30
+uncertainty,token,flag emblem exact colors partially occluded,1,30
+uncertainty,token,handheld packaged food label text not legible,1,30
+uncertainty,token,lower bodies footwear mostly occluded,1,30
+uncertainty,token,lower body clothing footwear partially occluded,1,30
+uncertainty,token,other single instance uncertainty notes aggregated for brevity,12,30
+uncertainty,token,overhead aisle signs illegible due to distance blur,7,30
+uncertainty,token,peripheral blurred details omitted,1,30
+uncertainty,token,shelf edge price labels not legible,7,30
+uncertainty,token,small dark circular device near midtable left partially occluded,1,30
+uncertainty,token,small dark gray rectangular object partially occluded,1,30
+uncertainty,token,small dark rectangular device partially occluded in foreground center,1,30
+uncertainty,token,small electronic device midground left partially occluded,1,30
+uncertainty,token,small items near foreground left partially occluded,1,30
+uncertainty,token,small printed text sheets illegible,11,30
+uncertainty,token,small tabletop items not individually distinguishable,1,30
+uncertainty,token,small wall mounted device identification uncertain,1,30
+uncertainty,token,some faces hands partially occluded or cropped,8,30
+uncertainty,token,time of day not specified,1,30
+uncertainty,token,wristwatch brand face details partially occluded,1,30
+uncertainty,token,wristwatch brand model not legible,1,30

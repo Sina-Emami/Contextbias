@@ -1,0 +1,97 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,7,2
+scene_appearance,aesthetic_qualities,realistic,8,2
+scene_appearance,color_temperature,warm,9,1
+scene_appearance,mood,calm,10,2
+scene_appearance,mood,joyful,1,2
+scene_appearance,wall_color,brown,10,1
+camera,depth_of_field,moderate,1,2
+camera,depth_of_field,shallow,9,2
+camera,framing,close up,2,4
+camera,framing,establishing,1,4
+camera,framing,headshot,2,4
+camera,framing,medium,9,4
+camera,perspective,eye level,8,2
+camera,perspective,low angle,1,2
+objects,type,container,1,7
+objects,type,farm tractor,1,7
+objects,type,fence,2,7
+objects,type,hat,3,7
+objects,type,plant,2,7
+objects,type,plant bundle,1,7
+objects,type,tree canopies,1,7
+people,activities,hands resting or gathering straw,1,10
+people,activities,holding bag,1,10
+people,activities,holding tool,1,10
+people,activities,holding straw bundle,2,10
+people,activities,looking toward camera,3,10
+people,activities,manipulating plants,1,10
+people,activities,resting,1,10
+people,activities,handling soil,1,10
+people,activities,supporting produce,1,10
+people,activities,tending crops,1,10
+people,age_range,older adult,10,1
+people,clothing_color,black,4,8
+people,clothing_color,blue,10,8
+people,clothing_color,brown,3,8
+people,clothing_color,gray,1,8
+people,clothing_color,green,1,8
+people,clothing_color,red,1,8
+people,clothing_color,tan,2,8
+people,clothing_color,white,3,8
+people,clothing_garment,apron,1,7
+people,clothing_garment,hat,1,7
+people,clothing_garment,overalls,7,7
+people,clothing_garment,shirt,7,7
+people,clothing_garment,suspenders,2,7
+people,clothing_garment,trousers,2,7
+people,clothing_garment,work boots,1,7
+people,eyewear_present,no,10,1
+people,hair_color,black,4,3
+people,hair_color,gray,12,3
+people,hair_color,white,4,3
+people,facial_hair_present,yes,8,1
+people,facial_hair_style,full beard,1,5
+people,facial_hair_style,mustache,2,5
+people,facial_hair_style,short beard,1,5
+people,facial_hair_style,sideburns,1,5
+people,facial_hair_style,stubble,4,5
+people,gaze_direction,down,2,3
+people,gaze_direction,right,1,3
+people,gaze_direction,up,6,3
+people,gender_presentation,male,10,1
+people,hair_color,black,1,3
+people,hair_color,gray,9,3
+people,hair_present,yes,9,1
+people,hair_style,short,9,1
+people,head_covering_type,beige,2,10
+people,head_covering_type,black,3,10
+people,head_covering_type,brown,1,10
+people,head_covering_type,darkblue,1,10
+people,head_covering_type,tan,3,10
+people,head_covering_type,tomato,3,10
+people,head_covering_present,yes,10,1
+people,head_covering_type,generic hat,1,10
+people,head_covering_type,straw hat merged variants,8,10
+people,head_covering_type,wide brimmed hat unspecified,1,10
+people,head_covering_type,wide brimmed sun hat,1,10
+people,pose,standing,1,3
+people,pose,leaning,1,3
+people,pose,leaning,1,3
+people,pose,standing,1,3
+people,pose,standing,1,3
+people,pose,leaning,1,3
+people,pose,leaning,1,3
+people,pose,standing,1,3
+people,pose,standing,1,3
+people,pose,standing,3,3
+people,pose,seated,1,3
+people,pose,leaning,1,3
+people,pose,standing,2,3
+people,pose,standing,1,3
+people,pose,standing,1,3
+people,pose,standing,6,3
+people,pose,standing,1,3
+people,pose,standing,1,3
+people,skin_tone,light,4,2
+people,skin_tone,medium,6,2

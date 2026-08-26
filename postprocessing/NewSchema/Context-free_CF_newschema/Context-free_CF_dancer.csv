@@ -1,0 +1,64 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,12,4
+scene_appearance,aesthetic_qualities,dreamy,14,4
+scene_appearance,aesthetic_qualities,minimal,2,4
+scene_appearance,aesthetic_qualities,realistic,10,4
+scene_appearance,color_temperature,warm,7,1
+scene_appearance,dominant_colors,black,1,3
+scene_appearance,dominant_colors,brown,6,3
+scene_appearance,dominant_colors,lightgreen,6,3
+scene_appearance,mood,calm,10,3
+scene_appearance,mood,dramatic,2,3
+scene_appearance,mood,minimalistic,1,3
+camera,depth_of_field,shallow,10,1
+camera,framing,full body,4,3
+camera,framing,medium,3,3
+camera,framing,wide,1,3
+camera,perspective,eye level,6,2
+camera,perspective,low angle,1,2
+objects,type,ballet barre,1,6
+objects,type,bench,1,6
+objects,type,doorway,1,6
+objects,type,tree,2,6
+objects,type,window,4,6
+objects,type,window mullion,1,6
+people,age_range,teen,1,2
+people,age_range,young adult,9,2
+people,clothing_color,black,9,6
+people,clothing_color,gray,3,6
+people,clothing_color,mediumblue,1,6
+people,clothing_color,pink,9,6
+people,clothing_color,tan,3,6
+people,clothing_color,white,7,6
+people,eyewear_present,no,10,1
+people,facial_hair_present,no,10,1
+people,gaze_direction,down,3,2
+people,gaze_direction,up,3,2
+people,gender_presentation,female,10,1
+people,hair_color,black,2,3
+people,hair_color,brown,7,3
+people,hair_color,pink,1,3
+people,hair_present,yes,10,1
+people,hair_style,bun,3,7
+people,hair_style,curly,2,7
+people,hair_style,long,4,7
+people,hair_style,ponytail,1,7
+people,hair_style,straight,2,7
+people,hair_style,updo,1,7
+people,hair_style,wavy,2,7
+people,head_covering_present,no,10,1
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,5,2
+people,pose,leaning,1,2
+people,pose,standing,27,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,3,2
+people,skin_tone,light,7,2
+people,skin_tone,medium,2,2

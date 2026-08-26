@@ -1,0 +1,121 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,14,3
+scene_appearance,aesthetic_qualities,dreamy,7,3
+scene_appearance,aesthetic_qualities,realistic,7,3
+scene_appearance,color_temperature,warm,18,1
+scene_appearance,dominant_colors,brown,25,4
+scene_appearance,dominant_colors,lightgreen,2,4
+scene_appearance,dominant_colors,medium violet red,5,4
+scene_appearance,dominant_colors,mediumvioletred,11,4
+scene_appearance,mood,calm,9,3
+scene_appearance,mood,dramatic,16,3
+scene_appearance,mood,melancholic,1,3
+camera,depth_of_field,deep,1,5
+camera,depth_of_field,moderate,1,5
+camera,depth_of_field,moderate dof,1,5
+camera,depth_of_field,shallow,4,5
+camera,depth_of_field,shallow dof,5,5
+camera,framing,establishing shot,1,4
+camera,framing,full body,14,4
+camera,framing,medium,2,4
+camera,framing,wide,5,4
+camera,perspective,eye level,6,3
+camera,perspective,low angle,4,3
+camera,perspective,third person,1,3
+people,activities,planting,2,16
+people,activities,balancing en pointe,1,16
+people,activities,balancing en pointe,1,16
+people,activities,balancing en pointe,1,16
+people,activities,ballet pose,19,16
+people,activities,en pointe extension,1,16
+people,activities,interacting airflow,1,16
+people,activities,leaping,1,16
+people,activities,lifting skirt,1,16
+people,activities,mid turn,1,16
+people,activities,performing deep backbend,1,16
+people,activities,performing under stage lights,1,16
+people,activities,reaching extended foot,1,16
+people,activities,rehearsal,1,16
+people,activities,rehearsal,1,16
+people,activities,rotation turn inferred,1,16
+people,activities,skirt mid motion,1,16
+people,activities,solo balance,1,16
+people,activities,solo performance,1,16
+people,age_range,young adult,11,1
+people,clothing_color,black,13,6
+people,clothing_color,pink,4,6
+people,clothing_color,red,2,6
+people,clothing_color,tan,1,6
+people,clothing_color,white,3,6
+people,clothing_color,yellow,1,6
+people,eyewear_present,no,16,1
+people,facial_hair_present,no,16,1
+people,gaze_direction,down,1,3
+people,gaze_direction,left,1,3
+people,gaze_direction,up,2,3
+people,gender_presentation,female,17,1
+people,hair_color,black,6,2
+people,hair_color,brown,11,2
+people,hair_present,yes,17,1
+people,hair_style,bun,11,6
+people,hair_style,long,6,6
+people,hair_style,ponytail,1,6
+people,hair_style,straight,1,6
+people,hair_style,updo,1,6
+people,hair_style,wavy,4,6
+people,head_covering_present,no,15,1
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,3,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,5,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,pose,standing,4,2
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,9,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,3,2
+people,pose,leaning,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,3,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,3,2
+people,pose,standing,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,5,2
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,standing,2,2
+people,pose,standing,1,2
+people,pose,standing,8,2
+people,pose,standing,5,2
+people,skin_tone,light,6,2
+people,skin_tone,medium,5,2

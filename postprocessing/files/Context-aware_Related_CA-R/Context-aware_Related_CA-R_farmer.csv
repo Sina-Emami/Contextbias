@@ -1,0 +1,471 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,15
+atmosphere,aesthetic_qualities,dreamy,1
+atmosphere,aesthetic_qualities,realistic,16
+atmosphere,aesthetic_qualities,unknown,13
+atmosphere,color_temperature,cool,5
+atmosphere,color_temperature,unknown,4
+atmosphere,color_temperature,warm,21
+atmosphere,contrast_level,high,3
+atmosphere,contrast_level,medium,21
+atmosphere,contrast_level,unknown,6
+atmosphere,dominant_palette,brown,10
+atmosphere,dominant_palette,unknown,10
+atmosphere,mood,calm,20
+atmosphere,palette,brown,10
+atmosphere,saturation_level,neutral,18
+atmosphere,saturation_level,unknown,8
+atmosphere,saturation_level,vivid,4
+background,object_counts_by_position,background center,46
+background,object_counts_by_position,background left,14
+background,object_counts_by_position,background right,15
+background,object_counts_by_position,foreground center,9
+background,object_counts_by_position,foreground left,11
+background,object_counts_by_position,foreground right,3
+background,object_counts_by_position,midground center,11
+background,object_counts_by_position,midground left,2
+background,object_counts_by_position,midground right,2
+camera,angle,unknown,20
+camera,crop,bottom edge crops lower legs,1
+camera,crop,lower legs out of frame,1
+camera,crop,partial lower legs,1
+camera,crop,right boot partial,1
+camera,crop,right shoe bottom cropped,1
+camera,crop,subject centered,1
+camera,depth_of_field,deep,2
+camera,depth_of_field,moderate,1
+camera,depth_of_field,shallow,16
+camera,depth_of_field,unknown,1
+camera,focal_length,normal,2
+camera,focal_length,telephoto,6
+camera,focal_length,unknown,12
+camera,framing,establishing,7
+camera,framing,full body,3
+camera,framing,medium,16
+camera,framing,unknown,2
+camera,framing,wide,2
+camera,perspective,eye level,11
+camera,perspective,low angle,4
+camera,perspective,unknown,5
+environment,ceiling_color,gray,6
+environment,ceiling_material,clouds,3
+environment,ceiling_material,sky,3
+environment,ceiling_texture,cloud filled,1
+environment,ceiling_texture,diffuse,1
+environment,ceiling_texture,layered,3
+environment,ceiling_texture,textured,1
+environment,floor_color,brown,21
+environment,floor_color,darkgreen,2
+environment,floor_color,gold,2
+environment,floor_color,green,2
+environment,floor_color,palegreen,1
+environment,floor_color,tan,1
+environment,floor_condition,brittle,3
+environment,floor_condition,compacted,2
+environment,floor_condition,covered by crop,1
+environment,floor_condition,crumbly,1
+environment,floor_condition,cultivated,2
+environment,floor_condition,disturbed,1
+environment,floor_condition,dry,7
+environment,floor_condition,dry appearing,1
+environment,floor_condition,dusty,3
+environment,floor_condition,evenly spaced,1
+environment,floor_condition,freshly disturbed,1
+environment,floor_condition,freshly tilled,4
+environment,floor_condition,harvested,1
+environment,floor_condition,healthy,2
+environment,floor_condition,healthy appearing,1
+environment,floor_condition,loose,1
+environment,floor_condition,loose textured,1
+environment,floor_condition,mature,2
+environment,floor_condition,moist,2
+environment,floor_condition,moist appearing,1
+environment,floor_condition,receding ridges,1
+environment,floor_condition,recently disturbed,1
+environment,floor_condition,recently tilled,1
+environment,floor_condition,recently worked,1
+environment,floor_condition,slightly dry,1
+environment,floor_condition,smooth compacted,1
+environment,floor_condition,tilled,1
+environment,floor_condition,uniform,1
+environment,floor_condition,weathered,1
+environment,floor_condition,well turned,1
+environment,floor_condition,well used,1
+environment,floor_condition,worn,1
+environment,floor_finish,matte,22
+environment,floor_finish,specular highlights,1
+environment,floor_finish,unknown,3
+environment,floor_material,cereal crop,1
+environment,floor_material,compacted soil,1
+environment,floor_material,crop stubble,1
+environment,floor_material,earth,2
+environment,floor_material,grass,1
+environment,floor_material,loam,2
+environment,floor_material,loamy soil,1
+environment,floor_material,organic,1
+environment,floor_material,plant stalks,1
+environment,floor_material,plant stubble,1
+environment,floor_material,soil,19
+environment,floor_material,straw,2
+environment,floor_material,trees,1
+environment,floor_material,vegetation,3
+environment,floor_texture,brittle,1
+environment,floor_texture,clod textured,1
+environment,floor_texture,coarse,1
+environment,floor_texture,coarse crumb,1
+environment,floor_texture,coarse textured,1
+environment,floor_texture,compact,1
+environment,floor_texture,compacted,2
+environment,floor_texture,crumbly,2
+environment,floor_texture,crushed,1
+environment,floor_texture,dense,2
+environment,floor_texture,dry,2
+environment,floor_texture,dry textured,1
+environment,floor_texture,dusty,1
+environment,floor_texture,fibrous,5
+environment,floor_texture,fibrous crop residue,1
+environment,floor_texture,fine crumb,1
+environment,floor_texture,fine granular,1
+environment,floor_texture,finely tilled,1
+environment,floor_texture,furrowed,4
+environment,floor_texture,glossy leaves,1
+environment,floor_texture,granular,7
+environment,floor_texture,leafy,2
+environment,floor_texture,loamy,3
+environment,floor_texture,loose,1
+environment,floor_texture,loose textured,1
+environment,floor_texture,mowed,1
+environment,floor_texture,papery,1
+environment,floor_texture,raked,1
+environment,floor_texture,ridged,9
+environment,floor_texture,rough,2
+environment,floor_texture,slender stalk,1
+environment,floor_texture,smooth,3
+environment,floor_texture,smooth waxy,1
+environment,floor_texture,stubbled,1
+environment,floor_texture,textured,2
+environment,floor_texture,tilled,1
+environment,floor_texture,tilled variant,0
+environment,indoor_outdoor,unknown,20
+environment,location_type,agricultural field,17
+environment,location_type,agricultural planting field,1
+environment,location_type,farmland,1
+environment,location_type,rural farmland,1
+environment,spatial_layout_aisle_width,unknown,19
+environment,spatial_layout_depth,deep,5
+environment,spatial_layout_depth,moderate,8
+environment,spatial_layout_depth,open,1
+environment,spatial_layout_depth,shallow,5
+environment,spatial_layout_openness,expansive,1
+environment,spatial_layout_openness,moderate,1
+environment,spatial_layout_openness,open,17
+environment,time_of_day_hint,afternoon,8
+environment,time_of_day_hint,dusk,1
+environment,time_of_day_hint,evening,3
+environment,time_of_day_hint,unknown,8
+environment,weather,clear,3
+environment,weather,cloudy,6
+environment,weather,overcast,7
+environment,weather,storm,1
+environment,weather,sunny,1
+environment,weather,unknown,2
+lighting,artifacts,artifact warm lens glow upper right,1
+lighting,color_temperature,cool,5
+lighting,color_temperature,unknown,4
+lighting,color_temperature,warm,21
+lighting,contrast_level,high,3
+lighting,contrast_level,medium,23
+lighting,contrast_level,unknown,4
+lighting,directionality,backlight,3
+lighting,directionality,side light,2
+lighting,directionality,top light,2
+lighting,directionality,unknown,10
+lighting,hardness,medium,1
+lighting,hardness,soft,12
+lighting,saturation_level,neutral,20
+lighting,saturation_level,unknown,6
+lighting,saturation_level,vivid,4
+lighting,shadows,medium,1
+lighting,shadows,soft,20
+lighting,shadows,unknown,1
+lighting,sources_count,one,18
+lighting,sources_count,unknown,5
+lighting,sources_directionality,backlight,1
+lighting,sources_directionality,toplight,2
+lighting,sources_directionality,unknown,7
+lighting,sources_hardness,soft,10
+lighting,sources_type,unknown,23
+objects,color,beige,3
+objects,color,black,1
+objects,color,blue,1
+objects,color,brown,20
+objects,color,crimson,1
+objects,color,darkblue,1
+objects,color,darkgreen,7
+objects,color,darkviolet,1
+objects,color,gray,2
+objects,color,green,13
+objects,color,khaki,2
+objects,color,lightyellow,1
+objects,color,orangered,1
+objects,color,palegreen,1
+objects,color,red,1
+objects,color,silver,3
+objects,color,tan,2
+objects,color,white,1
+objects,color,yellow,1
+objects,material,cloud,1
+objects,material,denim,1
+objects,material,leather,1
+objects,material,metal,3
+objects,material,painted roof,1
+objects,material,plant,13
+objects,material,soil,15
+objects,material,straw,3
+objects,material,unknown,1
+objects,material,vegetation,3
+objects,material,wood,2
+objects,material,woven straw,2
+objects,object_colors,beige,2
+objects,object_colors,black,2
+objects,object_colors,brown,12
+objects,object_colors,darkgreen,11
+objects,object_colors,gold,11
+objects,object_colors,gray,3
+objects,object_colors,green,14
+objects,object_colors,lightcyan,1
+objects,object_colors,red,3
+objects,object_colors,tan,2
+objects,object_colors,violet,1
+objects,object_materials,cereal crop,6
+objects,object_materials,foliage,6
+objects,object_materials,glass,1
+objects,object_materials,metal,2
+objects,object_materials,painted surface,1
+objects,object_materials,plant,10
+objects,object_materials,plant stalks,4
+objects,object_materials,rubber,2
+objects,object_materials,soil,8
+objects,object_materials,straw,3
+objects,object_materials,wood,1
+objects,object_texture,dense leafy,21
+objects,object_texture,fibrous,12
+objects,object_texture,matte,0
+objects,plane,background,11
+objects,plane,foreground,30
+objects,plane,midground,15
+objects,side,center,36
+objects,side,left,10
+objects,side,right,10
+objects,subtype_counts,blurred treeline band,1
+objects,subtype_counts,clouds,1
+objects,subtype_counts,distant trees roofs,1
+objects,subtype_counts,long handled shovel,1
+objects,subtype_counts,planted rows,38
+objects,subtype_counts,small red structures partial,1
+objects,subtype_counts,straw hat,5
+objects,subtype_counts,unknown,1
+objects,subtype_counts,wide brimmed sunhat,1
+objects,subtype_counts,work boots,1
+objects,subtype_counts,work gloves,4
+objects,subtype_counts,work pants,1
+objects,type,accessory,2
+objects,type,building,1
+objects,type,clothing,1
+objects,type,crop rows,4
+objects,type,crop strips,1
+objects,type,dirt path,1
+objects,type,footwear,1
+objects,type,ground,1
+objects,type,ground feature,3
+objects,type,hand covering,1
+objects,type,hand held crop fragments,1
+objects,type,hand tool,2
+objects,type,hat,2
+objects,type,head wear,1
+objects,type,hedgerow,1
+objects,type,landform,2
+objects,type,landscape,1
+objects,type,leafy bundle,1
+objects,type,machinery,1
+objects,type,object headwear merged head wear,9
+objects,type,object soil,39
+objects,type,object tree line merged treeline,3
+objects,type,pathway,1
+objects,type,person object annotation,1
+objects,type,pole,1
+objects,type,sky,5
+objects,type,structure,2
+objects,type,structures treeline,1
+objects,type,tree clump,1
+objects,type,tree line,1
+objects,type,tree mass,1
+objects,type,vegetation,15
+objects,type,vegetation band,1
+objects,type,vehicle,1
+objects,type,wheat rows,1
+people,activities,gathering soil,1
+people,activities,handling soil,1
+people,activities,holding soil clump,1
+people,activities,inspecting soil,1
+people,activities,inspecting soil clump,1
+people,activities,letting soil fall,1
+people,activities,planting,4
+people,activities,sifting breaking clods,1
+people,age_range,middle aged,12
+people,age_range,older adult,8
+people,clothing_color,beige,1
+people,clothing_color,black,9
+people,clothing_color,blue,15
+people,clothing_color,brown,11
+people,clothing_color,gray,12
+people,clothing_color,palegreen,1
+people,clothing_color,red,2
+people,clothing_color,tan,3
+people,clothing_color,tomato,1
+people,clothing_color,white,1
+people,clothing_color,yellow,1
+people,clothing_garment,belt,1
+people,clothing_garment,boots,2
+people,clothing_garment,jeans,2
+people,clothing_garment,overalls,7
+people,clothing_garment,shirt,10
+people,clothing_garment,shoes,1
+people,clothing_garment,suspenders,2
+people,clothing_garment,trousers,2
+people,eyewear_frame_color,black,5
+people,eyewear_present,no,8
+people,eyewear_present,unknown,5
+people,eyewear_present,yes,7
+people,eyewear_type,unknown,3
+people,facial_hair_color,black,8
+people,facial_hair_color,gray,6
+people,facial_hair_color,white,4
+people,facial_hair_present,no,1
+people,facial_hair_present,unknown,9
+people,facial_hair_present,yes,10
+people,facial_hair_style,beard,7
+people,facial_hair_style,mustache,5
+people,facial_hair_style,trimmed,2
+people,facial_hair_style,unknown,3
+people,gaze_direction,down,8
+people,gaze_direction,unknown,2
+people,gender_presentation,male,30
+people,hair_color,black,16
+people,hair_color,gray,14
+people,hair_color,white,2
+people,hair_present,unknown,7
+people,hair_present,yes,13
+people,hair_style,short,11
+people,hair_style,unknown,9
+people,head_covering_color,beige,4
+people,head_covering_color,black,1
+people,head_covering_color,black coverings,3
+people,head_covering_color,darkviolet,2
+people,head_covering_color,gray,1
+people,head_covering_color,green,1
+people,head_covering_color,lightyellow,1
+people,head_covering_color,pale green,1
+people,head_covering_color,tan,2
+people,head_covering_color,tan coverings,3
+people,head_covering_color,tomato,1
+people,head_covering_color,tomato red,1
+people,head_covering_color,yellow,2
+people,head_covering_colors,beige,3
+people,head_covering_colors,black,1
+people,head_covering_colors,darkviolet,2
+people,head_covering_colors,gray,1
+people,head_covering_colors,green,1
+people,head_covering_colors,lightyellow,1
+people,head_covering_colors,tan,2
+people,head_covering_colors,tomato,1
+people,head_covering_colors,yellow,1
+people,head_covering_present,yes,20
+people,head_covering_type,straw hat normalized variants,6
+people,head_covering_type,wide brimmed straw hat merged variants,10
+people,material,canvas,3
+people,material,chambray,1
+people,material,cotton,7
+people,material,denim,9
+people,material,fabric,1
+people,material,leather,4
+people,material,metal,1
+people,material,metal clips,1
+people,occlusions,occlusion partial,7
+people,occlusions,unknown,3
+people,orientation,front,3
+people,orientation,three quarter,2
+people,orientation,unknown,5
+people,pattern,checkered,1
+people,pattern,plaid,6
+people,pose,bent forward,2
+people,pose,crouched,4
+people,pose,crouched kneeling,1
+people,pose,forward leaning,3
+people,pose,forward leaning torso,1
+people,pose,head tilted downward,1
+people,pose,kneeling,7
+people,pose,low,1
+people,pose,stooped,1
+people,pose,upright leaning,1
+people,pose_activity_gaze_direction,center,1
+people,pose_activity_gaze_direction,down,1
+people,pose_activity_gaze_direction,left,1
+people,pose_activity_gaze_direction,right,1
+people,pose_activity_gaze_direction,unknown,2
+people,pose_activity_gaze_direction,up,4
+people,pose_activity_occlusions,partial occlusion,10
+people,pose_activity_orientation,back,2
+people,pose_activity_orientation,front,4
+people,pose_activity_orientation,three quarter,4
+people,pose_activity_pose,arms crossed,1
+people,pose_activity_pose,relaxed,4
+people,pose_activity_pose,relaxed arms,1
+people,pose_activity_pose,relaxed posture,1
+people,pose_activity_pose,relaxed standing,1
+people,pose_activity_pose,slightly forward leaning,2
+people,pose_activity_pose,standing,2
+people,pose_activity_pose,torso turned,1
+people,pose_activity_pose,upright,9
+people,pose_activity_pose,walking,3
+people,role_hint,farmer,13
+people,skin_tone,light,13
+people,skin_tone,medium,6
+people,skin_tone,unknown,1
+people,texture,coarse,1
+people,texture,denim weave,1
+people,texture,heavy textured,1
+people,texture,heavy woven,3
+people,texture,rugged,1
+people,texture,scuffed,3
+people,texture,smooth,1
+people,texture,soft,2
+people,texture,soft textured,1
+people,texture,soft worn,1
+people,texture,stitched front pocket,1
+people,texture,textured,2
+people,texture,textured weave,1
+people,texture,woven,4
+safety,hazards,unknown,18
+safety,nsfw,unknown,20
+totals,images,total,10
+totals,object_instances,total,56
+totals,people_instances,total,10
+totals,text_instances,total,0
+uncertainty,token,exact skin tone uncertain,1
+uncertainty,token,face not visible rear facing,1
+uncertainty,token,facial expression uncertain due to occlusion,1
+uncertainty,token,indiscernible blur patches in far background,1
+uncertainty,token,no legible small text observed,1
+uncertainty,token,no legible small text resolution,1
+uncertainty,token,precise occupation not verifiable,1
+uncertainty,token,small material details uncertain,1
+uncertainty,token,small sprig leaf fragment identity uncertain,1
+uncertainty,token,small tractor implement details indiscernible,4
+uncertainty,token,specific enum mapping uncertain,1
+uncertainty,token,time estimate uncertain,1
+uncertainty,token,uncertainty background tree line species indiscernible,20
+uncertainty,token,uncertainty exact time of day ambiguous,1
+uncertainty,token,uncertainty other lower frequency tokens grouped for brevity,32
+uncertainty,token,uncertainty upper facial features obscured by hat shadow,9
+uncertainty,token,unknown,45

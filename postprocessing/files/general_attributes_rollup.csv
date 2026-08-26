@@ -1,0 +1,210 @@
+cohort,dimension,label,count
+atmosphere,Mood,calm,379
+atmosphere,Mood,dramatic,35
+atmosphere,Mood,joyful,23
+atmosphere,Mood,melancholic,3
+atmosphere,Mood,minimalistic,11
+atmosphere,Mood,romantic,4
+atmosphere,Mood,tense,22
+atmosphere,Mood,unknown,16
+atmosphere,LightingColorTemperature,cool,113
+atmosphere,LightingColorTemperature,neutral,64
+atmosphere,LightingColorTemperature,unknown,41
+atmosphere,LightingColorTemperature,warm,171
+lighting,LightingColorTemperature,cool,163
+lighting,LightingColorTemperature,neutral,89
+lighting,LightingColorTemperature,unknown,54
+lighting,LightingColorTemperature,warm,278
+atmosphere,AtmosphereContrastLevel,high,64
+atmosphere,AtmosphereContrastLevel,low,2
+atmosphere,AtmosphereContrastLevel,medium,333
+atmosphere,AtmosphereContrastLevel,unknown,50
+lighting,AtmosphereContrastLevel,high,85
+lighting,AtmosphereContrastLevel,low,3
+lighting,AtmosphereContrastLevel,medium,407
+lighting,AtmosphereContrastLevel,unknown,45
+atmosphere,SaturationLevel,neutral,251
+atmosphere,SaturationLevel,unknown,48
+atmosphere,SaturationLevel,vivid,122
+lighting,SaturationLevel,neutral,326
+lighting,SaturationLevel,unknown,47
+lighting,SaturationLevel,vivid,171
+atmosphere,DominantPalette,black,118
+atmosphere,DominantPalette,blue,49
+atmosphere,DominantPalette,brown,347
+atmosphere,DominantPalette,cyan,12
+atmosphere,DominantPalette,gray,1
+atmosphere,DominantPalette,green,12
+atmosphere,DominantPalette,orange,4
+atmosphere,DominantPalette,purple,2
+atmosphere,DominantPalette,red,40
+atmosphere,DominantPalette,unknown,214
+atmosphere,AestheticQualities,cinematic,220
+atmosphere,AestheticQualities,dreamy,59
+atmosphere,AestheticQualities,gritty,3
+atmosphere,AestheticQualities,minimal,17
+atmosphere,AestheticQualities,quality cinematic,4
+atmosphere,AestheticQualities,quality dreamy,1
+atmosphere,AestheticQualities,quality realistic,6
+atmosphere,AestheticQualities,realistic,285
+atmosphere,AestheticQualities,unknown,78
+environment,IndoorOutdoor,unknown,477
+environment,Weather,clear,29
+environment,Weather,cloudy,19
+environment,Weather,mist,3
+environment,Weather,overcast,27
+environment,Weather,rain,2
+environment,Weather,storm,2
+environment,Weather,sunny,49
+environment,Weather,unknown,111
+environment,TimeOfDayHint,afternoon,56
+environment,TimeOfDayHint,dusk,2
+environment,TimeOfDayHint,evening,13
+environment,TimeOfDayHint,morning,3
+environment,TimeOfDayHint,night,1
+environment,TimeOfDayHint,noon,7
+environment,TimeOfDayHint,unknown,132
+camera,Perspective,eye level,421
+camera,Perspective,high angle,1
+camera,Perspective,low angle,36
+camera,Perspective,third person,6
+camera,Perspective,unknown,52
+camera,Framing,close up,30
+camera,Framing,establishing,45
+camera,Framing,establishing shot,12
+camera,Framing,full body,134
+camera,Framing,headshot,30
+camera,Framing,medium,327
+camera,Framing,unknown,14
+camera,Framing,wide,125
+camera,FocalLength,normal,92
+camera,FocalLength,telephoto,89
+camera,FocalLength,unknown,110
+camera,FocalLength,wide,20
+camera,DepthOfField,deep,96
+camera,DepthOfField,deep dof,3
+camera,DepthOfField,medium,79
+camera,DepthOfField,moderate dof,8
+camera,DepthOfField,shallow,378
+camera,DepthOfField,shallow dof,23
+camera,DepthOfField,unknown,24
+camera,CameraAngle,dolly out,1
+camera,CameraAngle,eye level,2
+camera,CameraAngle,unknown,159
+lighting,Directionality,back light,4
+lighting,Directionality,backlight,84
+lighting,Directionality,backlighting,5
+lighting,Directionality,side light,16
+lighting,Directionality,sidelight,68
+lighting,Directionality,sidelighting,5
+lighting,Directionality,top,33
+lighting,Directionality,top light,62
+lighting,Directionality,toplight,29
+lighting,Directionality,underlight,5
+lighting,Directionality,unknown,176
+lighting,Hardness,hard,3
+lighting,Hardness,hard light,8
+lighting,Hardness,light hard,5
+lighting,Hardness,light soft,18
+lighting,Hardness,medium,20
+lighting,Hardness,soft,156
+lighting,Hardness,soft light,171
+lighting,Hardness,unknown,10
+lighting,Shadows,casting,24
+lighting,Shadows,hard,12
+lighting,Shadows,medium,12
+lighting,Shadows,soft,474
+lighting,Shadows,unknown,15
+lighting,SourcesCount,four or more,74
+lighting,SourcesCount,four or more light,66
+lighting,SourcesCount,light one,6
+lighting,SourcesCount,light source four or more,10
+lighting,SourcesCount,light source one,5
+lighting,SourcesCount,light source three,1
+lighting,SourcesCount,light source two,2
+lighting,SourcesCount,light two,2
+lighting,SourcesCount,one,50
+lighting,SourcesCount,one light source,67
+lighting,SourcesCount,one source,107
+lighting,SourcesCount,three,2
+lighting,SourcesCount,three light,2
+lighting,SourcesCount,two,12
+lighting,SourcesCount,two light,11
+lighting,SourcesCount,unknown,76
+lighting,SourcesType,artificial,77
+lighting,SourcesType,artificial light,91
+lighting,SourcesType,artificial light source,54
+lighting,SourcesType,artificial source,22
+lighting,SourcesType,light source artificial,26
+lighting,SourcesType,light source mixed,1
+lighting,SourcesType,mixed,1
+lighting,SourcesType,mixed light,2
+lighting,SourcesType,source artificial,11
+lighting,SourcesType,unknown,328
+people,GenderPresentation,female,121
+people,GenderPresentation,male,366
+people,GenderPresentation,unknown,1
+people,SkinTone,dark,17
+people,SkinTone,light,262
+people,SkinTone,medium,216
+people,SkinTone,unknown,10
+people,AgeRange,child,1
+people,AgeRange,middle aged,189
+people,AgeRange,older adult,66
+people,AgeRange,teen,1
+people,AgeRange,unknown,25
+people,AgeRange,young adult,189
+people,GazeDirection,center,1
+people,GazeDirection,down,125
+people,GazeDirection,left,21
+people,GazeDirection,looking down,10
+people,GazeDirection,looking left,2
+people,GazeDirection,looking up,2
+people,GazeDirection,right,13
+people,GazeDirection,to right,2
+people,GazeDirection,to the right,2
+people,GazeDirection,unknown,50
+people,GazeDirection,up,44
+people,OrientationType,back,13
+people,OrientationType,facing front,10
+people,OrientationType,front,81
+people,OrientationType,frontal,4
+people,OrientationType,three quarter,84
+people,OrientationType,unknown,85
+people,Hairstyle,bun,29
+people,Hairstyle,curly,17
+people,Hairstyle,long,56
+people,Hairstyle,ponytail,67
+people,Hairstyle,shaved,4
+people,Hairstyle,short,312
+people,Hairstyle,straight,38
+people,Hairstyle,unknown,32
+people,Hairstyle,updo,12
+people,Hairstyle,wavy,28
+people,HairColor,black,193
+people,HairColor,brown,254
+people,HairColor,gray,152
+people,HairColor,maroon,2
+people,HairColor,olive,1
+people,HairColor,pink,6
+people,HairColor,red,1
+people,HairColor,white,9
+people,OcclusionState,occlusion partial,17
+people,OcclusionState,partial,29
+people,OcclusionState,partial occlusion,227
+people,OcclusionState,partially occluded,46
+people,OcclusionState,significant,1
+people,OcclusionState,significant occlusion,1
+people,OcclusionState,unknown,16
+people,eyewear_present,no,306
+people,eyewear_present,unknown,32
+people,eyewear_present,yes,120
+people,head_covering_present,no,259
+people,head_covering_present,unknown,7
+people,head_covering_present,yes,174
+people,facial_hair_present,no,239
+people,facial_hair_present,unknown,52
+people,facial_hair_present,yes,150
+people,hair_present,no,1
+people,hair_present,unknown,13
+people,hair_present,yes,453

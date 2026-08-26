@@ -1,0 +1,270 @@
+cohort,standardized_dimension,standardized_label,count,bins
+atmosphere,aesthetic_qualities,cinematic,4,3
+atmosphere,aesthetic_qualities,minimal,2,3
+atmosphere,aesthetic_qualities,realistic,12,3
+atmosphere,color_temperature,cool,10,2
+atmosphere,color_temperature,neutral,4,2
+atmosphere,contrast_level,medium,16,1
+atmosphere,dominant_palette,black,7,4
+atmosphere,dominant_palette,gray,1,4
+atmosphere,dominant_palette,mediumblue,1,4
+atmosphere,dominant_palette,orangered,1,4
+atmosphere,mood,calm,10,1
+atmosphere,saturation_level,neutral,12,2
+atmosphere,saturation_level,vivid,2,2
+background,object_counts_by_position,background center,10,9
+background,object_counts_by_position,background left,9,9
+background,object_counts_by_position,background right,11,9
+background,object_counts_by_position,foreground center,10,9
+background,object_counts_by_position,foreground left,10,9
+background,object_counts_by_position,foreground right,9,9
+background,object_counts_by_position,midground center,4,9
+background,object_counts_by_position,midground left,9,9
+background,object_counts_by_position,midground right,7,9
+background,position,background center,10,9
+background,position,background left,9,9
+background,position,background right,11,9
+background,position,foreground center,10,9
+background,position,foreground left,10,9
+background,position,foreground right,9,9
+background,position,midground center,4,9
+background,position,midground left,9,9
+background,position,midground right,7,9
+camera,depth_of_field,deep,16,3
+camera,depth_of_field,moderate,2,3
+camera,depth_of_field,shallow,2,3
+camera,framing,establishing,4,4
+camera,framing,full body,12,4
+camera,framing,medium,8,4
+camera,framing,wide,8,4
+camera,perspective,eye level,14,2
+camera,perspective,low angle,2,2
+environment,ceiling_color,black,3,3
+environment,ceiling_color,gray,2,3
+environment,ceiling_color,white,6,3
+environment,floor_color,beige,2,2
+environment,floor_color,gray,9,2
+environment,location_type,commercial cleaning workspace,1,5
+environment,location_type,commercial kitchen,3,5
+environment,location_type,corridor,2,5
+environment,location_type,utility corridor,1,5
+environment,location_type,utility room,1,5
+environment,spatial_layout_depth,deep,1,5
+environment,spatial_layout_depth,medium,1,5
+environment,spatial_layout_depth,moderate,3,5
+environment,spatial_layout_depth,open,1,5
+environment,spatial_layout_depth,shallow,1,5
+environment,spatial_layout_openness,enclosed,1,3
+environment,spatial_layout_openness,moderate,1,3
+environment,spatial_layout_openness,open,7,3
+environment,time_of_day_hint,noon,1,1
+environment,walls_color,beige,1,5
+environment,walls_color,gray,5,5
+environment,walls_color,lightblue,1,5
+environment,walls_color,silver,2,5
+environment,walls_color,white,10,5
+lighting,artifacts,floor reflections,1,6
+lighting,artifacts,mild reflections glossy floor,2,6
+lighting,artifacts,no notable,1,6
+lighting,artifacts,reflections floor,1,6
+lighting,artifacts,specular floor reflections from window panes,2,6
+lighting,artifacts,specular reflections on stainless surfaces,2,6
+lighting,color_temperature,cool,10,2
+lighting,color_temperature,neutral,6,2
+lighting,contrast_level,medium,16,1
+lighting,directionality,back light,4,3
+lighting,directionality,side light,5,3
+lighting,directionality,top light,8,3
+lighting,hardness,soft,16,1
+lighting,saturation_level,neutral,12,2
+lighting,saturation_level,vivid,2,2
+lighting,shadows,soft,20,1
+lighting,sources_count,four or more light,1,2
+lighting,sources_count,one light source,7,2
+lighting,sources_type,artificial light source,7,1
+objects,plane,background,30,6
+objects,plane,foreground,29,6
+objects,plane,midground,20,6
+objects,side,center,24,3
+objects,side,left,28,3
+objects,side,right,27,3
+objects,type,appliance,1,62
+objects,type,architectural element,2,62
+objects,type,architecture,4,62
+objects,type,baseboard molding,1,62
+objects,type,black flexible rubber hose,1,62
+objects,type,broom,1,62
+objects,type,cabinet,7,62
+objects,type,caution sign,1,62
+objects,type,caution wet floor sign,1,62
+objects,type,chair,1,62
+objects,type,cleaning cart,1,62
+objects,type,cleaning tool,17,62
+objects,type,cleaning tool head,1,62
+objects,type,clear plastic containers,1,62
+objects,type,clock,1,62
+objects,type,cloth,1,62
+objects,type,container,10,62
+objects,type,dark colored trim,1,62
+objects,type,dispenser,1,62
+objects,type,electrical plate,1,62
+objects,type,extractor hood,1,62
+objects,type,fixture,3,62
+objects,type,fixture appliance,1,62
+objects,type,floor object level,1,62
+objects,type,floor tiles,1,62
+objects,type,fluorescent fixture,1,62
+objects,type,folded towel or cloth,1,62
+objects,type,folded white textiles or paper goods,1,62
+objects,type,furniture,3,62
+objects,type,handheld tool,1,62
+objects,type,heating or ventilation grille,1,62
+objects,type,hose,1,62
+objects,type,long handle metal pole,1,62
+objects,type,mop bucket,31,62
+objects,type,multi pane windows,11,62
+objects,type,outlet or control plate,1,62
+objects,type,partially transparent plastic bags,1,62
+objects,type,plant,1,62
+objects,type,safety sign,1,62
+objects,type,service counter panel,1,62
+objects,type,shelving unit,2,62
+objects,type,sign,1,62
+objects,type,sink counter,1,62
+objects,type,small medium bottles canisters shelving,1,62
+objects,type,small potted plant,1,62
+objects,type,stack,1,62
+objects,type,stackable plastic chair,1,62
+objects,type,stainless steel paneled lower cabinetry,13,62
+objects,type,storage bag,1,62
+objects,type,surface,1,62
+objects,type,tall open metal storage shelving,1,62
+objects,type,tool,1,62
+objects,type,vacuum hose,1,62
+objects,type,valve handle,1,62
+objects,type,vent,1,62
+objects,type,ventilation hood,1,62
+objects,type,warning sign,1,62
+objects,type,waste receptacle,1,62
+objects,type,wet floor folding sign,1,62
+objects,type,window,3,62
+objects,type,window assembly,1,62
+objects,type,window wall,1,62
+people,activities,holding broom,1,12
+people,activities,holding hose,1,12
+people,activities,holding tool,1,12
+people,activities,mopping,4,12
+people,activities,operating long handled floor cleaning tool,1,12
+people,activities,positioned near cleaning cart,1,12
+people,activities,preparing cleaning tools,1,12
+people,activities,pressing cleaning head against floor,1,12
+people,activities,pressing mop head into floor,1,12
+people,activities,pushing broom,2,12
+people,activities,pushing mop,1,12
+people,activities,sweeping,6,12
+people,age_range,middle aged,6,2
+people,age_range,older adult,4,2
+people,clothing_garment,apron,1,14
+people,clothing_garment,belt,1,14
+people,clothing_garment,bib overalls,6,14
+people,clothing_garment,coverall,2,14
+people,clothing_garment,disposable gloves,1,14
+people,clothing_garment,footwear,1,14
+people,clothing_garment,gloves,3,14
+people,clothing_garment,rubber gloves,2,14
+people,clothing_garment,safety vest,1,14
+people,clothing_garment,shirt,10,14
+people,clothing_garment,shoes,3,14
+people,clothing_garment,trousers,3,14
+people,clothing_garment,work pants,1,14
+people,clothing_garment,work shoes,6,14
+people,eyewear_present,no,18,2
+people,eyewear_present,yes,2,2
+people,facial_hair_color,black,3,3
+people,facial_hair_color,brown,2,3
+people,facial_hair_color,white,1,3
+people,facial_hair_present,no,4,2
+people,facial_hair_present,yes,3,2
+people,facial_hair_style,short,1,3
+people,facial_hair_style,short stubble,1,3
+people,facial_hair_style,stubble,1,3
+people,gaze_direction,down,9,1
+people,gender_presentation,male,10,1
+people,hair_color,black,4,4
+people,hair_color,brown,4,4
+people,hair_color,gray,10,4
+people,hair_color,white,2,4
+people,hair_present,yes,10,1
+people,hair_style,short,9,2
+people,hair_style,straight,1,2
+people,head_covering_color,black,1,2
+people,head_covering_color,blue,5,2
+people,head_covering_present,no,5,2
+people,head_covering_present,yes,5,2
+people,head_covering_type,baseball cap,4,2
+people,head_covering_type,cap generic,1,2
+people,occlusions,partially occluded,10,1
+people,orientation,front,2,2
+people,orientation,three quarter,2,2
+people,pose,forward leaning,2,7
+people,pose,head tilted down,1,7
+people,pose,slight forward leaning merged variants,7,7
+people,pose,slightly bent merged variants,4,7
+people,pose,standing,3,7
+people,pose,upright,1,7
+people,pose,work engaged,1,7
+people,role_hint,cleaning staff,2,3
+people,role_hint,janitorial staff,1,3
+people,role_hint,janitorial worker,1,3
+people,skin_tone,dark,1,3
+people,skin_tone,light,8,3
+people,skin_tone,medium,1,3
+safety,hazards,no reported,7,4
+safety,hazards,slippery floor,2,4
+safety,hazards,trip hazard hose,2,4
+safety,hazards,wet floor,4,4
+safety,nsfw,no content,10,1
+texts,content,illegible dia yter,1,2
+texts,content,legible partially legible janisitor,1,2
+texts,font_style,bold,4,4
+texts,font_style,sans,2,4
+texts,font_style,sans serif,2,4
+texts,font_style,stencil,2,4
+texts,legibility,illegible,4,3
+texts,legibility,not legible,2,3
+texts,legibility,partially illegible,4,3
+texts,plane,background,3,6
+texts,plane,foreground,6,6
+texts,plane,midground,2,6
+texts,plane,text in background,3,6
+texts,plane,text in foreground,6,6
+texts,plane,text in midground,2,6
+texts,side,center,5,3
+texts,side,left,1,3
+texts,side,right,4,3
+uncertainty,note,background center clear plastic container count approximate 3 5,1,26
+uncertainty,note,background left countertop appliance partially occluded blurred,1,26
+uncertainty,note,background right hanging clear plastic dispensers approximate 4,1,26
+uncertainty,note,ceiling left corner area indiscernible,1,26
+uncertainty,note,ceiling materials details not described,1,26
+uncertainty,note,ceiling service panel details indiscernible,1,26
+uncertainty,note,ceiling tile texture detail partially occluded approximate,1,26
+uncertainty,note,ceiling upper wall areas out of frame,1,26
+uncertainty,note,extent of floor wetness ambiguous,1,26
+uncertainty,note,facial expression not clearly visible,1,26
+uncertainty,note,facial feature specifics beyond age not clear,1,26
+uncertainty,note,far background areas exhibit motion df blur small items not identifiable,1,26
+uncertainty,note,far background beyond exterior windows partially occluded by reflection,6,26
+uncertainty,note,floor grout condition ambiguous blurring,1,26
+uncertainty,note,lower torso partially occluded by cleaning tool hoses,1,26
+uncertainty,note,material type of folded textiles paper goods uncertain,1,26
+uncertainty,note,metal shelving items approximate count 3 5,1,26
+uncertainty,note,midground left elements not fully enumerated,1,26
+uncertainty,note,minor items countertop partially occluded and not identifiable,1,26
+uncertainty,note,paper towel dispenser near sink partially occluded,1,26
+uncertainty,note,person age mapping ambiguous middle aged vs older adult,1,26
+uncertainty,note,precise number of full window sections approximate,1,26
+uncertainty,note,small distant objects partially occluded or too small to identify,1,26
+uncertainty,note,small metallic control plate switch unreadable,1,26
+uncertainty,note,some enumerations not provided avoid inference,1,26
+uncertainty,note,time of day cannot be determined,1,26

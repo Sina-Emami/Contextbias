@@ -1,0 +1,330 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,16
+atmosphere,aesthetic_qualities,dreamy,2
+atmosphere,aesthetic_qualities,realistic,12
+atmosphere,dominant_palette,brown,20
+atmosphere,dominant_palette,unknown,10
+atmosphere,temperature,neutral,1
+atmosphere,temperature,warm,8
+atmosphere,contrast_level,medium,9
+atmosphere,profile_aesthetic_qualities,quality cinematic,6
+atmosphere,profile_aesthetic_qualities,quality dreamy,3
+atmosphere,profile_aesthetic_qualities,quality realistic,8
+atmosphere,profile_color_temperature,warm,9
+atmosphere,profile_contrast_level,medium,10
+atmosphere,profile_saturation_level,neutral,3
+atmosphere,profile_saturation_level,vivid,6
+atmosphere,saturation_level,vivid,8
+atmosphere,mood,calm,30
+background,object_counts_by_position,background center,4
+background,object_counts_by_position,background left,7
+background,object_counts_by_position,background right,7
+background,object_counts_by_position,foreground center,16
+background,object_counts_by_position,foreground left,12
+background,object_counts_by_position,foreground right,7
+background,object_counts_by_position,midground center,14
+background,object_counts_by_position,midground left,7
+background,object_counts_by_position,midground right,13
+background,position,background center,12
+background,position,background left,9
+background,position,background right,19
+background,position,foreground center,23
+background,position,foreground left,19
+background,position,foreground right,14
+background,position,midground center,24
+background,position,midground left,16
+background,position,midground right,20
+camera,crop,book,1
+camera,crop,bottom cropped,1
+camera,crop,excludes lower legs footwear,1
+camera,crop,hands,1
+camera,crop,includes foreground rug background window,1
+camera,crop,includes torso lap,1
+camera,crop,left forearm partial,1
+camera,crop,lower lap area cropped,1
+camera,crop,lower legs cropped,3
+camera,crop,lower legs partially out of frame,1
+camera,crop,partial lower legs out of frame,1
+camera,crop,right cushion area partially cropped,1
+camera,crop,right side,1
+camera,crop,torso,1
+camera,crop,torso and hands included,1
+camera,depth_of_field,deep,2
+camera,depth_of_field,shallow,26
+camera,focal_length,normal,7
+camera,focal_length,telephoto,9
+camera,framing,close up,5
+camera,framing,headshot,2
+camera,framing,medium,26
+camera,framing,wide,4
+camera,perspective,eye level,24
+environment,indoor_outdoor,unknown,30
+environment,location_type,domestic reading space,1
+environment,location_type,domestic sitting area,2
+environment,location_type,living room,15
+environment,location_type,reading nook,1
+environment,location_type,residential living space,2
+environment,location_type,residential sitting area,2
+environment,location_type,rural living area,2
+environment,location_type,rustic living room,2
+environment,location_type,wooden cabin interior,2
+environment,location_type,wooden cabin reading space,1
+environment,spatial_layout_depth,moderate,8
+environment,spatial_layout_depth,shallow,8
+environment,spatial_layout_openness,enclosed,6
+environment,spatial_layout_openness,unknown,1
+environment,time_of_day_hint,afternoon,5
+environment,time_of_day_hint,noon,2
+environment,weather,cloudy,1
+environment,weather,overcast,2
+lighting,artifacts,artifact faint eyeglass reflection,1
+lighting,artifacts,artifact mild reflection eyeglass lenses,1
+lighting,artifacts,artifact minor specular book edges,1
+lighting,artifacts,artifact minor specular glasses,1
+lighting,artifacts,artifact specular highlights on leather glazed pot,1
+lighting,artifacts,artifact specular reflection eyeglass lenses,1
+lighting,artifacts,artifact subtle reflection eyeglass frames,1
+lighting,color_temperature,neutral,2
+lighting,color_temperature,warm,32
+lighting,contrast_level,medium,28
+lighting,directionality,backlight,4
+lighting,directionality,sidelight,6
+lighting,directionality,top light,1
+lighting,directionality,unknown,16
+lighting,hardness,soft,31
+lighting,saturation_level,neutral,6
+lighting,saturation_level,vivid,20
+lighting,shadows,casting,2
+lighting,shadows,soft,38
+lighting,sources_count,four or more,1
+lighting,sources_count,one,10
+lighting,sources_count,one source,5
+lighting,sources_count,two,2
+lighting,sources_type,artificial light,1
+lighting,sources_type,light source artificial,2
+lighting,sources_type,mixed,1
+lighting,sources_type,unknown,19
+objects,type,appliance,1
+objects,type,armchair,1
+objects,type,book,14
+objects,type,bookshelf,3
+objects,type,bookcase,47
+objects,type,couch,4
+objects,type,sofa,17
+objects,type,cushion,1
+objects,type,decorative bowl,1
+objects,type,plant,12
+objects,type,potted plant,9
+objects,type,potted houseplant,1
+objects,type,potted leafy plant,1
+objects,type,framed artwork,2
+objects,type,furniture,22
+objects,type,furniture sofa subtype mapping exists,13
+objects,type,hat,8
+objects,type,straw hat,2
+objects,type,straw cowboy hat,1
+objects,type,window,12
+objects,type,multi pane window,2
+objects,type,window array,1
+objects,type,table,4
+objects,type,architecture,8
+objects,type,bird shaped,1
+objects,type,blurred exterior vegetation,1
+objects,type,boots,2
+objects,type,bowls,1
+objects,type,curtain panel,1
+objects,type,decor,4
+objects,type,decorative pillow,1
+objects,type,footwear,2
+objects,type,glass jar,1
+objects,type,glass jars,1
+objects,type,hanging potted plant,1
+objects,type,indistinct,1
+objects,type,labeled cylindrical container,1
+objects,type,object,6
+objects,type,open storage shelf,1
+objects,type,rectangular multi pane,1
+objects,type,rubber boots,1
+objects,type,sculpture,1
+objects,type,shelf,6
+objects,type,shoe,1
+objects,type,storage,4
+objects,type,straw bundle,1
+objects,type,terra cotta pieces,1
+objects,type,textile,14
+objects,type,throw blanket,5
+objects,type,tin canisters,1
+objects,type,unknown,3
+objects,type,vertical wooden planks,1
+objects,type,wall lamp,1
+objects,type,wallpaper,1
+objects,type,wicker baskets,1
+objects,type,wooden utensils,1
+objects,type,woven baskets,2
+objects,plane,background,62
+objects,plane,foreground,77
+objects,plane,midground,86
+objects,side,center,84
+objects,side,left,62
+objects,side,right,79
+people,age_range,middle aged,1
+people,age_range,older adult,18
+people,eyewear_frame_color,black,3
+people,eyewear_frame_color,dark blue,1
+people,eyewear_frame_color,silver,6
+people,eyewear_present,no,8
+people,eyewear_present,yes,11
+people,eyewear_type,eyeglasses,2
+people,eyewear_type,reading glasses,4
+people,eyewear_type,rectangular,4
+people,eyewear_type,rectangular metal rimmed,1
+people,eyewear_type,rectangular reading glasses,1
+people,facial_hair_color,black,2
+people,facial_hair_color,gray,6
+people,facial_hair_color,tomato reddish,1
+people,facial_hair_color,white,2
+people,facial_hair_present,no,4
+people,facial_hair_present,yes,12
+people,facial_hair_style,beard,3
+people,facial_hair_style,full beard,1
+people,facial_hair_style,moustache,1
+people,facial_hair_style,mustache,4
+people,facial_hair_style,short beard,1
+people,facial_hair_style,sideburns,1
+people,facial_hair_style,stubble,2
+people,gaze_direction,center,1
+people,gaze_direction,down,10
+people,gaze_direction,left,2
+people,gaze_direction,up,5
+people,gender_presentation,male,19
+people,hair_color,black,2
+people,hair_color,gray,15
+people,hair_color,white,4
+people,hair_present,yes,17
+people,hair_style,shaved,1
+people,hair_style,short,17
+people,head_covering_color,black,1
+people,head_covering_color,brown,1
+people,head_covering_color,dark gray,1
+people,head_covering_color,dark violet,1
+people,head_covering_color,olive drab,2
+people,head_covering_color,tan,2
+people,head_covering_color,tomato,2
+people,head_covering_present,no,2
+people,head_covering_present,yes,17
+people,head_covering_type,baseball cap,1
+people,head_covering_type,cowboy hat,1
+people,head_covering_type,fedora,1
+people,head_covering_type,felt hat,1
+people,head_covering_type,flat cap,1
+people,head_covering_type,straw hat,7
+people,head_covering_type,wide brim woven hat,1
+people,head_covering_type,wide brimmed hat,2
+people,head_covering_type,wide brimmed straw hat,1
+people,occlusions,occlusion partial,10
+people,occlusions,partial occlusion,9
+people,orientation,front,4
+people,orientation,three quarter,3
+people,orientation,unknown,1
+people,pose,crossed legs,1
+people,pose,reclined,3
+people,pose,relaxed,4
+people,pose,seated,8
+people,pose,slightly forward leaning,5
+people,pose,upright,1
+people,pose_reclined,unknown,2
+people,pose_seated,unknown,7
+people,role_hint,appears to be rural outdoors worker,1
+people,skin_tone,light,18
+people,skin_tone,medium,1
+safety,hazards,no observed,8
+safety,hazards,unknown,18
+safety,nsfw,no content,9
+safety,nsfw,unknown,19
+texts,legibility,illegible,7
+texts,legibility,illegible text,1
+texts,legibility,not legible,14
+texts,legibility,partially illegible,2
+texts,plane,background,2
+texts,plane,foreground,5
+texts,plane,midground,4
+texts,plane,text foreground,5
+texts,plane,text midground,3
+texts,plane,text on background,2
+texts,plane,text on midground,1
+texts,side,center,7
+texts,side,left,2
+texts,side,right,2
+texts,side,text at center,2
+texts,side,text at right,1
+texts,side,text center,5
+texts,side,text left,2
+texts,side,text right,1
+totals,images,unknown,10
+totals,object_instances,unknown,69
+totals,people_instances,unknown,9
+totals,text_instances,unknown,3
+uncertainty,note,background left multi pane window with blurred outside objects,1
+uncertainty,note,background right dark vertical area partially occluded indiscernible,1
+uncertainty,note,details of items inside stacked baskets not visible indiscernible,1
+uncertainty,note,distant landscape details not identifiable due to soft focus,1
+uncertainty,note,exact counts of small objects on shelving approximate due to occlusion,1
+uncertainty,note,exact fiber composition of tan wide brimmed hat uncertain,1
+uncertainty,note,exact number of woven baskets approximate 5 6 due to occlusion,1
+uncertainty,note,exact weather outside not visible beyond diffuse light,1
+uncertainty,note,exterior view through window blurred and not identifiable,1
+uncertainty,note,floor behind rug slightly out of focus condition uncertain,1
+uncertainty,note,floor material not visible,1
+uncertainty,note,framed wall artwork text illegible due to glazing soft focus,1
+uncertainty,note,hanging wooden utensils cluster count approximate 2 3,1
+uncertainty,note,labels on shelving containers but not legible,1
+uncertainty,note,left shoe area partly shadowed fine details limited,1
+uncertainty,note,lower body items beyond foreground cushion partially occluded,1
+uncertainty,note,lower left shoe area obscured by deep shadow,1
+uncertainty,note,lower leg area partially out of frame,1
+uncertainty,note,lower legs footwear partially occluded by foreground objects,1
+uncertainty,note,lower limbs boots partially out of frame condition uncertain,1
+uncertainty,note,lower right frame portion of couch cushion cropped not fully visible,1
+uncertainty,note,midground left ceramic dish count approximate three due to occlusion,1
+uncertainty,note,minor marks on window glass uncertain dust condensation smudges,1
+uncertainty,note,no legible printed text found small clothing text details not readable,1
+uncertainty,note,possible small markings or text on lamp jars not readable,1
+uncertainty,note,printed embroidered text on clothing not visible legible,1
+uncertainty,note,small decorative objects in background shelving partially occluded,1
+uncertainty,note,small indistinct blurred region in far background left,1
+uncertainty,note,small items behind baskets partially occluded not identifiable,1
+uncertainty,note,small marks smudges on window glass not classifiable,1
+uncertainty,note,small object near foreground right shoe slightly out of focus,1
+uncertainty,note,small objects on right shelving partially occluded approximate counts,1
+uncertainty,note,small objects on shelving partially occluded or blurred,1
+uncertainty,note,small wooden object foreground left partially occluded,1
+uncertainty,note,text on straw hat partially illegible,1
+uncertainty,note,textile fiber composition of pillows blankets uncertain,1
+uncertainty,note,texture details obscured by bright backlight at windowsill,1
+uncertainty,note,tiny dark object near sofa partially visible and ambiguous,1
+uncertainty,note,unknown,14
+uncertainty,token,uncertainty approximate counts provided for book stacks estimates,1
+uncertainty,token,uncertainty background left shelving details partially occluded by shadow,1
+uncertainty,token,uncertainty book cover text partially occluded blurred,1
+uncertainty,token,uncertainty ceiling surface not visible,1
+uncertainty,token,uncertainty clothing fiber composition inferred cotton or wool,1
+uncertainty,token,uncertainty exact book titles indiscernible approx 60 80,1
+uncertainty,token,uncertainty exact counts on bookshelves are approximate,1
+uncertainty,token,uncertainty exact material of potted plant container partially occluded,1
+uncertainty,token,uncertainty exact number books stacked approx 6 8 uncertain,1
+uncertainty,token,uncertainty floor surface material condition largely out of frame,7
+uncertainty,token,uncertainty framed wall art small printed text illegible,14
+uncertainty,token,uncertainty jewelry accessory details not visible,1
+uncertainty,token,uncertainty lamp details partially occluded not legible,1
+uncertainty,token,uncertainty lower legs feet partially occluded not fully visible,1
+uncertainty,token,uncertainty lower legs footwear out of frame,1
+uncertainty,token,uncertainty lower right corner beyond settee out of frame,1
+uncertainty,token,uncertainty portion lower legs feet cropped out of frame,1
+uncertainty,token,uncertainty small dark object partially occluded not identifiable,13
+uncertainty,token,uncertainty small folded textile partially occluded pattern approximate,1
+uncertainty,token,uncertainty small framed artwork content unclear,1
+uncertainty,token,uncertainty small pottery vessel maker marks not visible,1
+uncertainty,token,uncertainty upholstery pattern indiscernible due to shallow focus blur,1
+uncertainty,token,uncertainty wall mounted carved plaque partially occluded blurred,1
+uncertainty,token,uncertainty weather outside window not visible,1
+uncertainty,token,unknown,13

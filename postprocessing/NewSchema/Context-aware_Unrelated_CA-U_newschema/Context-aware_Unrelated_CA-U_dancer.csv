@@ -1,0 +1,93 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,10,3
+scene_appearance,aesthetic_qualities,dreamy,1,3
+scene_appearance,aesthetic_qualities,realistic,10,3
+scene_appearance,dominant_colors,black,2,4
+scene_appearance,dominant_colors,brown,16,4
+scene_appearance,dominant_colors,lightgreen,3,4
+scene_appearance,dominant_colors,orangered,1,4
+scene_appearance,mood,calm,20,1
+scene_appearance,color_temperature,cool,2,3
+scene_appearance,color_temperature,neutral,2,3
+scene_appearance,color_temperature,warm,19,3
+camera,depth_of_field,moderate,1,2
+camera,depth_of_field,shallow,32,2
+camera,framing,full body,9,4
+camera,framing,headshot,1,4
+camera,framing,medium,11,4
+camera,framing,wide,1,4
+camera,perspective,eye level,24,2
+camera,perspective,third person,2,2
+objects,type,bowl,3,46
+objects,type,cabinet,6,46
+objects,type,ceramic or glass cooktop,30,46
+objects,type,container,9,46
+objects,type,cookware,3,46
+objects,type,cutting board,4,46
+objects,type,glass jar,4,46
+objects,type,knife,1,46
+objects,type,open wooden shelving,5,46
+objects,type,plant,8,46
+objects,type,plates,1,46
+objects,type,pots and pans,1,46
+objects,type,shelf unit,1,46
+objects,type,storage jars,1,46
+objects,type,stovetop,2,46
+objects,type,tomatoes,7,46
+objects,type,utensil rail,3,46
+objects,type,window,5,46
+objects,type,wooden cutting board,6,46
+objects,type,bowl,1,46
+objects,type,built microwave,1,46
+objects,type,built oven,1,46
+objects,type,cabinet,6,46
+objects,type,ceramic bowl,8,46
+objects,type,container,1,46
+objects,type,cutting board,1,46
+objects,type,faucet,1,46
+objects,type,glass bowl,1,46
+objects,type,glass carafe,1,46
+objects,type,glass pitcher,1,46
+objects,type,hanging cookware array,1,46
+objects,type,kettle,2,46
+objects,type,kitchen cabinet,35,46
+objects,type,lamp,1,46
+objects,type,matte black kettle,1,46
+objects,type,microwave,1,46
+objects,type,mixing bowl,1,46
+objects,type,multi pane window,3,46
+objects,type,open shelves sink,1,46
+objects,type,paper towel roll,2,46
+objects,type,pendant lamp,1,46
+objects,type,plant,4,46
+objects,type,potted plants,7,46
+objects,type,sink group,1,46
+objects,type,sink shelving,1,46
+objects,type,sink shelving plant group,1,46
+objects,type,small bowl or dish,1,46
+objects,type,spice jars mug,1,46
+objects,type,stainless steel extractor hood,1,46
+objects,type,stovetop,1,46
+objects,type,table lamp,1,46
+objects,type,two door refrigerator,1,46
+objects,type,utensil rail,1,46
+objects,type,window,5,46
+people,age_range,child,1,2
+people,age_range,young adult,18,2
+people,eyewear_present,no,10,1
+people,facial_hair_present,no,10,1
+people,gaze_direction,down,6,2
+people,gaze_direction,left,1,2
+people,gender_presentation,female,19,1
+people,hair_color,black,4,2
+people,hair_color,brown,16,2
+people,hair_present,yes,10,1
+people,hair_style,bun,4,5
+people,hair_style,long,6,5
+people,hair_style,ponytail,6,5
+people,hair_style,straight,4,5
+people,hair_style,wavy,2,5
+people,head_covering_present,no,10,1
+people,pose,standing,8,1
+people,skin_tone,light,19,2
+people,skin_tone,medium,10,2

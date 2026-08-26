@@ -1,0 +1,294 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,1
+atmosphere,aesthetic_qualities,realistic,4
+atmosphere,color,black,8
+atmosphere,color,brown,1
+atmosphere,color,red,1
+atmosphere,contrast_level,medium,9
+atmosphere,dominant_palette,black,8
+atmosphere,dominant_palette,brown,1
+atmosphere,dominant_palette,red,1
+atmosphere,color_temperature,cool,6
+atmosphere,color_temperature,neutral,3
+atmosphere,mood,calm,10
+atmosphere,saturation_level,neutral,8
+atmosphere,saturation_level,vivid,1
+background,object_counts_by_position,background center,11
+background,object_counts_by_position,background left,3
+background,object_counts_by_position,background right,5
+background,object_counts_by_position,foreground center,12
+background,object_counts_by_position,foreground left,12
+background,object_counts_by_position,foreground right,6
+background,object_counts_by_position,midground center,4
+background,object_counts_by_position,midground left,5
+background,object_counts_by_position,midground right,3
+camera,crop,centered midground,1
+camera,crop,cropped image right,1
+camera,crop,lower legs cropped,3
+camera,crop,lower legs partially cropped,1
+camera,depth_of_field,deep,4
+camera,depth_of_field,moderate,8
+camera,depth_of_field,shallow,6
+camera,focal_length,normal,3
+camera,focal_length,telephoto,1
+camera,framing,close up,2
+camera,framing,establishing,2
+camera,framing,establishing shot,2
+camera,framing,full body,2
+camera,framing,headshot,2
+camera,framing,medium,18
+camera,framing,wide,4
+camera,perspective,eye level,18
+environment,aisle_width,medium,1
+environment,aisle_width,unknown,4
+environment,aisle_width,wide,2
+environment,ceiling_color,gray,2
+environment,ceiling_color,white,7
+environment,ceiling_condition,clean,4
+environment,ceiling_condition,in good,2
+environment,ceiling_material,acoustic panel variants,3
+environment,ceiling_material,metal,4
+environment,ceiling_material,plastic diffuser,2
+environment,ceiling_material,suspended panels,2
+environment,color,beige,7
+environment,color,black,6
+environment,color,darkblue,1
+environment,color,deepskyblue,1
+environment,color,gray,3
+environment,color,lightblue,2
+environment,color,lightgreen,1
+environment,color,white,9
+environment,floor_color,beige,5
+environment,floor_color,gray,1
+environment,floor_color,light blue,2
+environment,floor_color,light green,1
+environment,floor_color,white,1
+environment,floor_condition,clean,8
+environment,floor_material,ceramic tile,8
+environment,floor_material,vinyl,2
+environment,floor_texture,smooth,9
+environment,indoor_outdoor,unknown,10
+environment,location_type,grocery store,1
+environment,location_type,grocery store produce aisle,1
+environment,location_type,supermarket,6
+environment,location_type,supermarket aisle,1
+environment,location_type,supermarket produce department,1
+environment,material,ceramic tile,8
+environment,material,metal,33
+environment,material,paint,4
+environment,material,plastic diffuser,2
+environment,material,printed paper or plastic,0
+environment,material,vinyl,2
+environment,openness,enclosed,1
+environment,openness,moderate,3
+environment,openness,open,2
+environment,openness,unknown,2
+environment,spatial_depth,deep,4
+environment,spatial_depth,moderate,5
+environment,spatial_depth,shallow,1
+environment,walls_color,wall beige,2
+environment,walls_color,wall black,2
+environment,walls_color,wall dark blue,1
+environment,walls_color,wall deepsky blue,1
+environment,walls_condition,clean,1
+environment,walls_condition,even,1
+environment,walls_condition,in good,2
+environment,walls_finish,matte,4
+environment,walls_material,paint,4
+environment,walls_texture,smooth,4
+lighting,artifacts,minimal visible compression,1
+lighting,artifacts,reflections on chrome cart wires,1
+lighting,artifacts,reflections on glossy packaged goods,1
+lighting,artifacts,slight focus softening upper left,1
+lighting,artifacts,specular highlight on hat visor badge,1
+lighting,artifacts,specular highlights apples metal basket,1
+lighting,artifacts,specular reflections on clear plastic packaging,1
+lighting,artifacts,specular reflections on floor,1
+lighting,artifacts,specular reflections on plastic floor,1
+lighting,color_temperature,cool,12
+lighting,color_temperature,neutral,6
+lighting,contrast_level,medium,18
+lighting,directionality,top,10
+lighting,hardness,soft,10
+lighting,saturation_level,neutral,16
+lighting,saturation_level,vivid,2
+lighting,shadows,soft,10
+lighting,sources,artificial,10
+lighting,sources,four or more,8
+lighting,sources,soft,10
+lighting,sources,toplight,10
+lighting,sources_count,four or more,8
+lighting,sources_type,artificial light,10
+objects,color,beige,1
+objects,color,black,7
+objects,color,blue,1
+objects,color,brown,6
+objects,color,crimson,6
+objects,color,darkblue,1
+objects,color,darkgreen,3
+objects,color,darkslategrey,1
+objects,color,gray,9
+objects,color,green,14
+objects,color,mediumblue,2
+objects,color,mediumvioletred,2
+objects,color,orange,8
+objects,color,palegreen,2
+objects,color,red,7
+objects,color,silver,5
+objects,color,white,16
+objects,color,yellow,4
+objects,material,ceramic tile,1
+objects,material,embroidered fabric,1
+objects,material,glass,3
+objects,material,mesh plastic,1
+objects,material,metal,33
+objects,material,plastic clamshell,1
+objects,material,polyethylene,1
+objects,material,powder coated metal,0
+objects,material,printed paper or plastic,29
+objects,material,rigid board,1
+objects,material,vegetable,10
+objects,type,aisle shelves,1
+objects,type,assorted produce cluster,1
+objects,type,badge,1
+objects,type,bagged produce,1
+objects,type,bundled produce,1
+objects,type,ceiling fixture,2
+objects,type,fixture,4
+objects,type,floor area,2
+objects,type,fruit cluster,2
+objects,type,grocery bag,2
+objects,type,grocery shelving,4
+objects,type,header sign,1
+objects,type,overhead sign,1
+objects,type,patch shoulder,1
+objects,type,produce bag,1
+objects,type,produce bin,1
+objects,type,produce cluster,2
+objects,type,produce display,2
+objects,type,produce items,2
+objects,type,produce pile,1
+objects,type,produce shelf,1
+objects,type,produce shelving,5
+objects,type,refrigerated display,2
+objects,type,retail shelving,3
+objects,type,shelving generic,6
+objects,type,shelving unit,1
+objects,type,shopping basket,2
+objects,type,shopping cart,4
+objects,type,tall retail shelving,1
+objects,type,unknown,6
+people,activities,grasping small red apple right hand,1
+people,activities,holding shopping basket,5
+people,activities,oriented toward display shelf,4
+people,activities,standing near shopping cart,2
+people,activities,walking down aisle,2
+people,age_range,middle aged,1
+people,age_range,young adult,10
+people,clothing_color,black,25
+people,clothing_color,blue,26
+people,clothing_color,white,1
+people,clothing_material,cotton blend,1
+people,clothing_material,durable fabric,2
+people,clothing_material,fabric,6
+people,clothing_material,leather,16
+people,clothing_material,plastic,6
+people,clothing_material,polyester,8
+people,clothing_material,polymer,1
+people,clothing_material,rubber,1
+people,clothing_material,synthetic,2
+people,clothing_material,woven fabric,4
+people,eyewear_present,no,13
+people,facial_hair_present,no,12
+people,gaze_direction,down,5
+people,gaze_direction,right,2
+people,gender_presentation,female,1
+people,gender_presentation,male,12
+people,hair_color,black,3
+people,hair_color,brown,9
+people,hair_color,pink,1
+people,hair_present,yes,13
+people,hair_style,short,11
+people,hair_style,updo,1
+people,head_covering_color,black,1
+people,head_covering_color,blue,6
+people,head_covering_color,silver,1
+people,head_covering_color,unknown,3
+people,head_covering_color,white,2
+people,head_covering_present,yes,13
+people,head_covering_type,peaked cap variants,9
+people,occlusions,partial occlusion,13
+people,orientation,back facing,3
+people,orientation,front facing,2
+people,orientation,three quarter,3
+people,orientation,unknown,2
+people,pose,alert standing,1
+people,pose,forward facing,1
+people,pose,mid stride,1
+people,pose,neutral posture,1
+people,pose,purposeful,1
+people,pose,reaching,1
+people,pose,relaxed,1
+people,pose,slightly forward leaning,3
+people,pose,slightly turned,1
+people,pose,standing,1
+people,pose,steady,1
+people,pose,three quarter portrait framing,1
+people,pose,two handed holding,1
+people,pose,upright,11
+people,pose,walking,3
+people,role_hint,police law enforcement officer normalized,10
+people,skin_tone,light,12
+people,skin_tone,medium,1
+safety,hazards,baton or flashlight visible,1
+safety,hazards,firearm visible,1
+safety,hazards,holstered object on duty belt,1
+safety,hazards,no observed,7
+safety,nsfw,unknown,10
+texts,content,text 24 fran,1
+texts,content,text 3,1
+texts,content,text pai,1
+texts,content,text police,4
+texts,content,text popolice,1
+texts,font_style,all caps,2
+texts,font_style,block,4
+texts,font_style,bold,6
+texts,font_style,condensed,2
+texts,font_style,cursive,2
+texts,font_style,sans,14
+texts,legibility,illegible unreadable merged,10
+texts,legibility,legible,6
+texts,legibility,partially legible,2
+texts,plane,background,10
+texts,plane,foreground,3
+texts,plane,midground,5
+texts,plane,text background,10
+texts,plane,text foreground,3
+texts,plane,text midground,5
+texts,side,center,9
+texts,side,left,5
+texts,side,right,4
+texts,side,text center,9
+texts,side,text left,5
+texts,side,text right,4
+uncertainty,token,approximate counts e g 20 30,1
+uncertainty,token,approximate counts for produce items due to occlusion,1
+uncertainty,token,background center overhead sign text illegible due to blur,1
+uncertainty,token,background items indistinct due to dof,1
+uncertainty,token,background right partial word pai incomplete,1
+uncertainty,token,badge hat text partially occluded illegible,1
+uncertainty,token,certain categorical tokens flagged as raw descriptions uncertain mapping,1
+uncertainty,token,distant figures shoppers insufficient detail,1
+uncertainty,token,distant shelf top packaged items indistinct long,27
+uncertainty,token,duty belt contents not identifiable occluded,1
+uncertainty,token,embroidered badge text too small to transcribe,10
+uncertainty,token,exact counts for citrus broccoli approximate 20 30 8 12,1
+uncertainty,token,exact vegetable type possible broccoli uncertain,1
+uncertainty,token,facial features expressions not visible due to rear facing orientation,1
+uncertainty,token,grocery bag contents ambiguous,1
+uncertainty,token,lower body partially occluded by cart,1
+uncertainty,token,lower legs footwear occluded or cropped,4
+uncertainty,token,minor soft blur in far background,1
+uncertainty,token,specific product types yellow items not verifiable,1
+uncertainty,token,unknown,5
+uncertainty,token,upper left ceiling slight motion focus softening,1

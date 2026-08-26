@@ -1,0 +1,127 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,12,6
+scene_appearance,aesthetic_qualities,dreamy,2,6
+scene_appearance,aesthetic_qualities,quality cinematic,4,6
+scene_appearance,aesthetic_qualities,quality dreamy,1,6
+scene_appearance,aesthetic_qualities,quality realistic,6,6
+scene_appearance,aesthetic_qualities,realistic,10,6
+scene_appearance,color_temperature,cool,9,3
+scene_appearance,color_temperature,neutral,3,3
+scene_appearance,color_temperature,warm,12,3
+scene_appearance,dominant_colors,black,7,5
+scene_appearance,dominant_colors,brown,18,5
+scene_appearance,dominant_colors,medium blue,1,5
+scene_appearance,dominant_colors,mediumblue,2,5
+scene_appearance,dominant_colors,mediumvioletred,2,5
+scene_appearance,mood,calm,11,3
+scene_appearance,mood,dramatic,1,3
+scene_appearance,mood,melancholic,1,3
+camera,depth_of_field,deep,13,3
+camera,depth_of_field,moderate,3,3
+camera,depth_of_field,shallow,12,3
+camera,framing,establishing,11,5
+camera,framing,full body,2,5
+camera,framing,headshot,2,5
+camera,framing,medium,13,5
+camera,framing,wide,14,5
+camera,perspective,eye level,26,2
+camera,perspective,low angle,4,2
+objects,type,bus,28,7
+objects,type,clock tower,1,7
+objects,type,glass tower,1,7
+objects,type,mirror,2,7
+objects,type,peaked cap,1,7
+objects,type,plant,1,7
+objects,type,sidewalk cafe umbrella,1,7
+people,activities,activity driving,1,17
+people,activities,facing camera,1,17
+people,activities,activity driving,1,17
+people,activities,activity holding object,1,17
+people,activities,activity holding object,1,17
+people,activities,activity holding papers,1,17
+people,activities,looking toward dashboard,1,17
+people,activities,near crosswalk,1,17
+people,activities,activity operating vehicle,1,17
+people,activities,activity preparing step,1,17
+people,activities,reading or examining papers,1,17
+people,activities,resting right hand handbrake or lever,1,17
+people,activities,activity seated,1,17
+people,activities,activity driving,3,17
+people,activities,activity driving,1,17
+people,activities,walking across pedestrian crossing,1,17
+people,activities,activity driving,1,17
+people,activities,attending vehicle,2,17
+people,activities,seated driving position,1,17
+people,activities,walking activity,2,17
+people,activities,standing or paused,1,17
+people,activities,walking activity,1,17
+people,activities,walking or standing,4,17
+people,age_range,middle aged,9,2
+people,age_range,young adult,2,2
+people,clothing_color,black,3,4
+people,clothing_color,gray,4,4
+people,clothing_color,tan,1,4
+people,clothing_color,white,1,4
+people,clothing_garment,high visibility reflective safety vest,1,15
+people,clothing_garment,insulated uniform jacket,1,15
+people,clothing_garment,jacket,4,15
+people,clothing_garment,neck tie,2,15
+people,clothing_garment,necktie,1,15
+people,clothing_garment,operator uniform top,1,15
+people,clothing_garment,overcoat,3,15
+people,clothing_garment,shirt,9,15
+people,clothing_garment,shoes,3,15
+people,clothing_garment,shoulder bag,1,15
+people,clothing_garment,sweater,1,15
+people,clothing_garment,trousers,8,15
+people,clothing_garment,undershirt,1,15
+people,clothing_garment,uniform jacket,1,15
+people,clothing_garment,uniform shirt short sleeve,1,15
+people,eyewear_present,yes,8,1
+people,eyewear_type,eyeglasses,2,3
+people,eyewear_type,prescription,1,3
+people,eyewear_type,rectangular,2,3
+people,hair_color,brown,1,3
+people,facial_hair_present,yes,5,1
+people,facial_hair_style,goatee,1,2
+people,facial_hair_style,mustache,1,2
+people,gaze_direction,down,2,3
+people,gaze_direction,left,1,3
+people,gaze_direction,up,2,3
+people,gender_presentation,male,11,1
+people,hair_color,black,16,3
+people,hair_color,brown,2,3
+people,hair_color,gray,4,3
+people,hair_present,yes,10,1
+people,hair_style,short,9,1
+people,head_covering_type,black,4,7
+people,head_covering_type,brown,1,7
+people,head_covering_type,chocolate,1,7
+people,head_covering_present,yes,10,1
+people,head_covering_type,cap,2,7
+people,head_covering_type,flat cap,2,7
+people,head_covering_type,peaked cap,1,7
+people,head_covering_type,peaked officer cap,1,7
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,2,4
+people,pose,leaning,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,hands_pockets,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,2,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,seated,5,4
+people,pose,leaning,1,4
+people,pose,standing,1,4
+people,pose,standing,3,4
+people,pose,standing,15,4
+people,pose,standing,1,4
+people,pose,standing,4,4
+people,skin_tone,dark,2,3
+people,skin_tone,light,4,3
+people,skin_tone,medium,4,3

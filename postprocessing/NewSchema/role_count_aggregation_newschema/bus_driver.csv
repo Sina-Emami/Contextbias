@@ -1,0 +1,216 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,17,6
+scene_appearance,aesthetic_qualities,dreamy,2,6
+scene_appearance,aesthetic_qualities,quality cinematic,4,6
+scene_appearance,aesthetic_qualities,quality dreamy,1,6
+scene_appearance,aesthetic_qualities,quality realistic,6,6
+scene_appearance,aesthetic_qualities,realistic,23,6
+scene_appearance,color_temperature,cool,11,3
+scene_appearance,color_temperature,neutral,6,3
+scene_appearance,color_temperature,warm,13,3
+scene_appearance,dominant_colors,black,17,6
+scene_appearance,dominant_colors,blue,1,6
+scene_appearance,dominant_colors,brown,32,6
+scene_appearance,dominant_colors,cyan,1,6
+scene_appearance,dominant_colors,mediumblue,7,6
+scene_appearance,dominant_colors,mediumvioletred,2,6
+scene_appearance,color_temperature,cool,7,3
+scene_appearance,color_temperature,neutral,1,3
+scene_appearance,mood,calm,41,3
+scene_appearance,mood,dramatic,1,3
+scene_appearance,mood,melancholic,1,3
+camera,depth_of_field,deep,20,3
+camera,depth_of_field,moderate,11,3
+camera,depth_of_field,shallow,34,3
+camera,framing,close up,3,7
+camera,framing,establishing,12,7
+camera,framing,full body,5,7
+camera,framing,headshot,4,7
+camera,framing,medium,36,7
+camera,framing,others,0,7
+camera,framing,wide,28,7
+camera,perspective,eye level,50,2
+camera,perspective,low angle,4,2
+objects,type,bag,1,30
+objects,type,bench upholstery,1,30
+objects,type,bus,28,30
+objects,type,cart single,1,30
+objects,type,clock,1,30
+objects,type,clock tower,1,30
+objects,type,cloth or glove,1,30
+objects,type,container,1,30
+objects,type,distant shopping carts or baskets,1,30
+objects,type,fruit single,1,30
+objects,type,glass tower,1,30
+objects,type,handrail,2,30
+objects,type,mirror,3,30
+objects,type,passenger door,1,30
+objects,type,peaked cap,1,30
+objects,type,placards,1,30
+objects,type,plant,2,30
+objects,type,produce basket,2,30
+objects,type,produce basket wire cart variant,2,30
+objects,type,refrigerated glass door,1,30
+objects,type,roof sign,1,30
+objects,type,safety box,1,30
+objects,type,shopping basket,1,30
+objects,type,shopping cart,10,30
+objects,type,sidewalk cafe umbrella,1,30
+objects,type,street furniture,4,30
+objects,type,support pole,1,30
+objects,type,watch,1,30
+objects,type,window trim,1,30
+objects,type,wristwatch,1,30
+people,activities,driving,2,32
+people,activities,driving operating controls,3,32
+people,activities,examining item,2,32
+people,activities,facing camera,1,32
+people,activities,holding bag,1,32
+people,activities,holding tool,1,32
+people,activities,holding handheld produce basket,1,32
+people,activities,holding bag,1,32
+people,activities,holding orange fruit in right hand,1,32
+people,activities,holding bag,1,32
+people,activities,handling produce,4,32
+people,activities,inspecting packaged produce,1,32
+people,activities,inspecting soil,2,32
+people,activities,looking toward camera,3,32
+people,activities,looking toward dashboard,1,32
+people,activities,near crosswalk,1,32
+people,activities,attending vehicle,5,32
+people,activities,preparing food,1,32
+people,activities,pushing shopping cart,3,32
+people,activities,reaching left hand toward left shelf,1,32
+people,activities,reaching right hand,1,32
+people,activities,reading or examining papers,1,32
+people,activities,resting right hand handbrake or lever,1,32
+people,activities,seated,1,32
+people,activities,seated driving position,1,32
+people,activities,mopping,2,32
+people,activities,standing,8,32
+people,activities,standing or paused,1,32
+people,activities,handling soil,1,32
+people,activities,viewing shelves,1,32
+people,activities,wiping,1,32
+people,activities,walking,2,32
+people,activities,walking across pedestrian crossing,1,32
+people,activities,walking or standing,4,32
+people,age_range,middle aged,24,3
+people,age_range,older adult,14,3
+people,age_range,young adult,4,3
+people,clothing_color,black,34,12
+people,clothing_color,blue,31,12
+people,clothing_color,brown,7,12
+people,clothing_color,crimson,1,12
+people,clothing_color,darkblue,1,12
+people,clothing_color,gray,13,12
+people,clothing_color,green,7,12
+people,clothing_color,orange,2,12
+people,clothing_color,silver,1,12
+people,clothing_color,tan,4,12
+people,clothing_color,white,9,12
+people,clothing_color,yellow,4,12
+people,clothing_garment,bib apron,1,24
+people,clothing_garment,cap,1,24
+people,clothing_garment,high visibility reflective safety vest,1,24
+people,clothing_garment,insulated uniform jacket,1,24
+people,clothing_garment,jacket,4,24
+people,clothing_garment,long sleeved jacket,1,24
+people,clothing_garment,neck tie,3,24
+people,clothing_garment,necktie,2,24
+people,clothing_garment,operator uniform top,1,24
+people,clothing_garment,outer jacket,2,24
+people,clothing_garment,overcoat,3,24
+people,clothing_garment,safety vest,1,24
+people,clothing_garment,shirt,18,24
+people,clothing_garment,shirt collar,2,24
+people,clothing_garment,shirt,2,24
+people,clothing_garment,shoes,7,24
+people,clothing_garment,shoulder bag,2,24
+people,clothing_garment,sweater,1,24
+people,clothing_garment,trousers,12,24
+people,clothing_garment,trousers,4,24
+people,clothing_garment,undershirt,1,24
+people,clothing_garment,uniform jacket,2,24
+people,clothing_garment,uniform shirt short sleeve,1,24
+people,clothing_garment,work jacket,1,24
+people,clothing_garment,work trousers,2,24
+people,clothing_garment,wristwatch,2,24
+people,eyewear_present,no,9,2
+people,eyewear_present,yes,22,2
+people,eyewear_type,eyeglasses,4,10
+people,eyewear_type,eyeglasses generic,1,10
+people,eyewear_type,metal rimmed,1,10
+people,eyewear_type,prescription,1,10
+people,eyewear_type,rectangular,4,10
+people,eyewear_type,rectangular frame,4,10
+people,eyewear_type,rectangular glasses normalized,3,10
+people,eyewear_type,rimless,1,10
+people,eyewear_type,thin framed,1,10
+people,eyewear_type,thin metal framed glasses,1,10
+people,hair_color,black,4,3
+people,hair_color,brown,1,3
+people,hair_color,gray,2,3
+people,facial_hair_present,no,9,2
+people,facial_hair_present,yes,12,2
+people,facial_hair_style,goatee,1,4
+people,facial_hair_style,mustache,5,4
+people,facial_hair_style,stubble,3,4
+people,facial_hair_style,stubble variants,3,4
+people,gaze_direction,down,7,4
+people,gaze_direction,left,7,4
+people,gaze_direction,right,3,4
+people,gaze_direction,up,10,4
+people,gender_presentation,male,42,1
+people,hair_color,black,27,3
+people,hair_color,brown,6,3
+people,hair_color,gray,33,3
+people,hair_present,yes,42,1
+people,hair_style,short,37,2
+people,hair_style,straight,1,2
+people,head_covering_type,black,7,12
+people,head_covering_type,blue,1,12
+people,head_covering_type,brown,1,12
+people,head_covering_type,chocolate,1,12
+people,head_covering_type,dark blue,1,12
+people,head_covering_type,darkblue,1,12
+people,head_covering_present,no,12,2
+people,head_covering_present,yes,25,2
+people,head_covering_type,baseball cap,4,12
+people,head_covering_type,cap,4,12
+people,head_covering_type,cap generic,1,12
+people,head_covering_type,flat cap,3,12
+people,head_covering_type,peaked cap,7,12
+people,head_covering_type,peaked officer cap,1,12
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,2,4
+people,pose,leaning,2,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,hands_pockets,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,4,4
+people,pose,standing,2,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,5,4
+people,pose,standing,1,4
+people,pose,seated,10,4
+people,pose,leaning,9,4
+people,pose,standing,1,4
+people,pose,standing,6,4
+people,pose,standing,2,4
+people,pose,standing,41,4
+people,pose,standing,1,4
+people,pose,seated,1,4
+people,pose,standing,1,4
+people,pose,standing,4,4
+people,skin_tone,dark,3,3
+people,skin_tone,lights,21,3
+people,skin_tone,medium,17,3

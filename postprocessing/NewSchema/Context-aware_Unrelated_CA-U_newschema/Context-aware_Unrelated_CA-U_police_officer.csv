@@ -1,0 +1,72 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,1,2
+scene_appearance,aesthetic_qualities,realistic,4,2
+scene_appearance,color_temperature,cool,6,2
+scene_appearance,color_temperature,neutral,3,2
+scene_appearance,dominant_colors,black,8,3
+scene_appearance,dominant_colors,brown,1,3
+scene_appearance,dominant_colors,red,1,3
+scene_appearance,mood,calm,10,1
+camera,depth_of_field,deep,4,3
+camera,depth_of_field,moderate,8,3
+camera,depth_of_field,shallow,6,3
+camera,framing,close up,2,6
+camera,framing,establishing,4,6
+camera,framing,full body,2,6
+camera,framing,headshot,2,6
+camera,framing,medium,18,6
+camera,framing,wide,4,6
+camera,perspective,eye level,18,1
+objects,type,bagged produce,1,8
+objects,type,grocery bag,2,8
+objects,type,header sign,1,8
+objects,type,holding shopping basket,2,8
+objects,type,overhead sign,1,8
+objects,type,produce bag,1,8
+objects,type,produce shelf,1,8
+objects,type,shopping cart,4,8
+people,activities,grasping small red apple right hand,1,5
+people,activities,holding bag,5,5
+people,activities,oriented toward display shelf,4,5
+people,activities,pushing shopping cart,2,5
+people,activities,walking down aisle,2,5
+people,age_range,middle aged,1,2
+people,age_range,young adult,10,2
+people,clothing_color,black,25,3
+people,clothing_color,blue,26,3
+people,clothing_color,white,1,3
+people,eyewear_present,no,13,1
+people,facial_hair_present,no,12,1
+people,gaze_direction,down,5,2
+people,gaze_direction,right,2,2
+people,gender_presentation,female,1,2
+people,gender_presentation,male,12,2
+people,hair_color,black,3,3
+people,hair_color,brown,9,3
+people,hair_color,pink,1,3
+people,hair_present,yes,13,1
+people,hair_style,short,11,2
+people,hair_style,updo,1,2
+people,head_covering_type,black,1,5
+people,head_covering_type,blue,6,5
+people,head_covering_type,silver,1,5
+people,head_covering_type,white,2,5
+people,head_covering_present,yes,13,1
+people,head_covering_type,peaked cap variants,9,5
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,3,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,11,2
+people,pose,standing,3,2
+people,skin_tone,light,12,2
+people,skin_tone,medium,1,2

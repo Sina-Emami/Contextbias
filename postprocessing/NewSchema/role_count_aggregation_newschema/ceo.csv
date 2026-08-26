@@ -1,0 +1,185 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,14,3
+scene_appearance,aesthetic_qualities,minimal,4,3
+scene_appearance,aesthetic_qualities,realistic,32,3
+scene_appearance,color_temperature,cool,23,3
+scene_appearance,color_temperature,neutral,13,3
+scene_appearance,color_temperature,warm,3,3
+scene_appearance,dominant_colors,black,1,5
+scene_appearance,dominant_colors,brown,9,5
+scene_appearance,dominant_colors,black,11,5
+scene_appearance,dominant_colors,blue,2,5
+scene_appearance,dominant_colors,brown,15,5
+scene_appearance,dominant_colors,orange,1,5
+scene_appearance,dominant_colors,red,1,5
+scene_appearance,mood,calm,44,3
+scene_appearance,mood,joyful,2,3
+scene_appearance,mood,minimalistic,2,3
+camera,depth_of_field,deep,20,8
+camera,depth_of_field,deep dof,2,8
+camera,depth_of_field,moderate,9,8
+camera,depth_of_field,moderate dof,1,8
+camera,depth_of_field,per image share,0,8
+camera,depth_of_field,shallow,26,8
+camera,depth_of_field,shallow dof,6,8
+camera,depth_of_field,within attribute share,0,8
+camera,framing,close up,1,6
+camera,framing,establishing,7,6
+camera,framing,full body,8,6
+camera,framing,headshot,4,6
+camera,framing,medium,26,6
+camera,framing,wide,19,6
+camera,perspective,eye level,58,3
+camera,perspective,per image share,0,3
+camera,perspective,within attribute share,0,3
+objects,type,desk,35,45
+objects,type,potted plant,4,45
+objects,type,wristwatch,3,45
+objects,type,belt,1,45
+objects,type,book like,1,45
+objects,type,cabinet,1,45
+objects,type,chair,14,45
+objects,type,credenza or cabinet,1,45
+objects,type,cup,1,45
+objects,type,desk,2,45
+objects,type,desktop accessory,1,45
+objects,type,digital display screens,1,45
+objects,type,dishware,1,45
+objects,type,endcap display,1,45
+objects,type,endcap shelving,1,45
+objects,type,eyeglasses,1,45
+objects,type,glassware,1,45
+objects,type,hanging sign,1,45
+objects,type,lamp,1,45
+objects,type,mouse,1,45
+objects,type,mug,1,45
+objects,type,notebook,2,45
+objects,type,office chair,28,45
+objects,type,overhead sign,1,45
+objects,type,packaged box,1,45
+objects,type,paper,8,45
+objects,type,paperwork,1,45
+objects,type,plant,8,45
+objects,type,planters,1,45
+objects,type,produce basket,1,45
+objects,type,refrigerated produce shelf,2,45
+objects,type,refrigerated shelf,10,45
+objects,type,shelf edge sale tags,1,45
+objects,type,shelf price strip,1,45
+objects,type,shelving with books,1,45
+objects,type,shopping basket,1,45
+objects,type,shopping cart,9,45
+objects,type,sign,1,45
+objects,type,table,10,45
+objects,type,table port,1,45
+objects,type,tabletop,2,45
+objects,type,tableware,1,45
+objects,type,watch,1,45
+objects,type,window,6,45
+objects,type,window glazing,1,45
+objects,type,window grid,1,45
+people,activities,posing for camera,1,5
+people,activities,smiling,2,5
+people,activities,standing,8,5
+people,gaze_direction,up,5,2
+people,activities,front,8,5
+people,activities,three quarter,1,5
+people,pose,standing,1,4
+people,pose,hands_pockets,4,4
+people,pose,standing,7,4
+people,pose,standing,10,4
+people,age_range,middle aged,62,3
+people,age_range,older adult,4,3
+people,age_range,young adult,11,3
+people,clothing_color,black,33,8
+people,clothing_color,blue,66,8
+people,clothing_color,brown,2,8
+people,clothing_color,gray,10,8
+people,clothing_color,pink,2,8
+people,clothing_color,red,3,8
+people,clothing_color,tan,2,8
+people,clothing_color,white,33,8
+people,clothing_color,black,13,8
+people,clothing_color,blue,29,8
+people,clothing_color,gray,16,8
+people,clothing_color,red,2,8
+people,clothing_color,white,16,8
+people,clothing_garment,belt,9,13
+people,clothing_garment,dress shoes,4,13
+people,clothing_garment,dress trousers,1,13
+people,clothing_garment,neck tie,4,13
+people,clothing_garment,necktie,2,13
+people,clothing_garment,necktie neck tie ne from s,7,13
+people,clothing_garment,shirt,19,13
+people,clothing_garment,shoes,2,13
+people,clothing_garment,suit jacket,16,13
+people,clothing_garment,tie,3,13
+people,clothing_garment,trousers,6,13
+people,clothing_garment,watch belt accessory,1,13
+people,clothing_garment,wristwatch,2,13
+people,eyewear_present,no,37,2
+people,eyewear_present,yes,38,2
+people,eyewear_type,eyeglasses,1,7
+people,eyewear_type,eyeglasses generic,2,7
+people,eyewear_type,eyeglasses rectangular,10,7
+people,eyewear_type,prescription,1,7
+people,eyewear_type,rectangular frame,6,7
+people,eyewear_type,rectangular glasses,7,7
+people,eyewear_type,thin framed glasses,4,7
+people,hair_color,black,9,9
+people,hair_color,brown,1,9
+people,hair_color,dark blue,1,9
+people,hair_color,darkblue,1,9
+people,hair_color,gray,3,9
+people,hair_color,tomato token,1,9
+people,facial_hair_present,no,55,2
+people,facial_hair_present,yes,17,2
+people,facial_hair_style,beard,1,8
+people,facial_hair_style,closely trimmed full beard,1,8
+people,facial_hair_style,light stubble,1,8
+people,facial_hair_style,moustache goatee,1,8
+people,facial_hair_style,stubble,1,8
+people,facial_hair_style,stubble beard,1,8
+people,facial_hair_style,trimmed beard,6,8
+people,facial_hair_style,trimmed stubble,3,8
+people,gaze_direction,left,1,2
+people,gaze_direction,up,7,2
+people,gender_presentation,female,12,2
+people,gender_presentation,male,70,2
+people,hair_color,black,13,9
+people,hair_color,brown,25,9
+people,hair_color,gray,43,9
+people,hair_color,maroon,1,9
+people,hair_color,pink,2,9
+people,hair_color,white,1,9
+people,hair_present,yes,81,1
+people,hair_style,long,9,5
+people,hair_style,shaved,2,5
+people,hair_style,short,66,5
+people,hair_style,straight,17,5
+people,hair_style,wavy,1,5
+people,head_covering_present,no,71,1
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,leaning,1,4
+people,pose,hands_pockets,1,4
+people,pose,leaning,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,0,4
+people,pose,standing,8,4
+people,pose,standing,1,4
+people,pose,seated,6,4
+people,pose,leaning,2,4
+people,pose,standing,1,4
+people,pose,leaning,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,16,4
+people,pose,seated,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,1,4
+people,pose,standing,0,4
+people,skin_tone,light,67,2
+people,skin_tone,medium,14,2

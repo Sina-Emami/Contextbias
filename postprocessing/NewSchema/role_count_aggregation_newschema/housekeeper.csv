@@ -1,0 +1,237 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,21,4
+scene_appearance,aesthetic_qualities,dreamy,16,4
+scene_appearance,aesthetic_qualities,minimal,5,4
+scene_appearance,aesthetic_qualities,realistic,28,4
+scene_appearance,color_temperature,cool,1,3
+scene_appearance,color_temperature,neutral,9,3
+scene_appearance,color_temperature,warm,36,3
+scene_appearance,dominant_colors,black,3,7
+scene_appearance,dominant_colors,blue,1,7
+scene_appearance,dominant_colors,brown,37,7
+scene_appearance,dominant_colors,mediumvioletred,4,7
+scene_appearance,dominant_colors,orange,2,7
+scene_appearance,dominant_colors,purple,2,7
+scene_appearance,dominant_colors,red,2,7
+scene_appearance,mood,calm,47,2
+scene_appearance,mood,joyful,9,2
+scene_appearance,wall_color,brown,20,2
+scene_appearance,wall_color,lightgreen,1,2
+camera,depth_of_field,deep,13,3
+camera,depth_of_field,moderate,12,3
+camera,depth_of_field,shallow,36,3
+camera,framing,close up,1,6
+camera,framing,establishing shot,7,6
+camera,framing,full body,27,6
+camera,framing,headshot,1,6
+camera,framing,medium,21,6
+camera,framing,wide,15,6
+camera,perspective,eye level,48,3
+camera,perspective,high angle,1,3
+camera,perspective,low angle,1,3
+objects,type,apron,2,64
+objects,type,bag,1,64
+objects,type,basket tray,1,64
+objects,type,bed,1,64
+objects,type,bedcover,1,64
+objects,type,bench,7,64
+objects,type,books,1,64
+objects,type,box,1,64
+objects,type,cabinetry,3,64
+objects,type,cabinets,1,64
+objects,type,ceramic jar,1,64
+objects,type,cleaning cart,1,64
+objects,type,cleaning tool mop handles etc,5,64
+objects,type,container,4,64
+objects,type,cutting board,2,64
+objects,type,dishware,2,64
+objects,type,door,3,64
+objects,type,dresser,1,64
+objects,type,faucet,1,64
+objects,type,fence,2,64
+objects,type,frying pan,1,64
+objects,type,glove single,1,64
+objects,type,gloves,1,64
+objects,type,hanging basket or garment cover,1,64
+objects,type,jar,1,64
+objects,type,kettle,1,64
+objects,type,kitchen towel,1,64
+objects,type,knife,1,64
+objects,type,lamp,1,64
+objects,type,lamp post,4,64
+objects,type,lamppost,2,64
+objects,type,measuring jar,1,64
+objects,type,mirror,1,64
+objects,type,mixing bowl,1,64
+objects,type,mop head,1,64
+objects,type,plant,28,64
+objects,type,plant container,1,64
+objects,type,plant pot,1,64
+objects,type,planting,2,64
+objects,type,potted plant,1,64
+objects,type,railing,1,64
+objects,type,refrigerator,1,64
+objects,type,side table,1,64
+objects,type,sink,4,64
+objects,type,soap dispensing bottle,1,64
+objects,type,spatula,1,64
+objects,type,squeeze bottle,1,64
+objects,type,stool,2,64
+objects,type,stove,1,64
+objects,type,stovetop,2,64
+objects,type,table,8,64
+objects,type,tableware,1,64
+objects,type,towel,1,64
+objects,type,towel stack,1,64
+objects,type,tree,8,64
+objects,type,tree canopy,2,64
+objects,type,umbrella,1,64
+objects,type,upper cabinet,1,64
+objects,type,utensil container,1,64
+objects,type,utensil single,2,64
+objects,type,utensils hanging,1,64
+objects,type,window,15,64
+objects,type,window treatment,1,64
+objects,type,cabinetry,3,64
+objects,type,cutting board,2,64
+objects,type,door,3,64
+objects,type,plant,4,64
+objects,type,sink,4,64
+objects,type,stovetop,2,64
+objects,type,utensil,2,64
+objects,type,window,5,64
+people,activities,adjusting window area fabric,1,24
+people,activities,planting,1,24
+people,activities,cleaning generic,3,24
+people,activities,food preparation,1,24
+people,activities,holding cleaning cart,1,24
+people,activities,handling produce,1,24
+people,activities,holding cleaning cart,1,24
+people,activities,holding mop,1,24
+people,activities,holding tool,1,24
+people,activities,holding bag,1,24
+people,activities,holding wand with both hands,1,24
+people,activities,inspecting soil,1,24
+people,activities,jogging,1,24
+people,activities,lifting throw cushion,1,24
+people,activities,mopping,5,24
+people,activities,pushing,1,24
+people,activities,pushing brush across rug,1,24
+people,activities,pushing guiding vacuum,1,24
+people,activities,pushing or pulling mop,1,24
+people,activities,running,9,24
+people,activities,running toward camera,1,24
+people,activities,scrubbing,1,24
+people,activities,smoothing towels,1,24
+people,activities,vacuuming,10,24
+people,activities,wiping,2,24
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,9,2
+people,pose,standing,1,2
+people,pose,standing,6,2
+people,pose,standing,1,2
+people,pose,standing,4,2
+people,pose,standing,6,2
+people,age_range,middle aged,14,3
+people,age_range,older adult,2,3
+people,age_range,young adult,29,3
+people,clothing_color,black,31,11
+people,clothing_color,blue,32,11
+people,clothing_color,brown,8,11
+people,clothing_color,gray,13,11
+people,clothing_color,green,10,11
+people,clothing_color,mediumpurple,2,11
+people,clothing_color,pink,3,11
+people,clothing_color,red,1,11
+people,clothing_color,tan,6,11
+people,clothing_color,white,43,11
+people,clothing_color,yellow,3,11
+people,clothing_garment,apron,26,28
+people,clothing_garment,athletic pants,1,28
+people,clothing_garment,blouse,7,28
+people,clothing_garment,cleaning gloves,1,28
+people,clothing_garment,cropped straight leg trousers,1,28
+people,clothing_garment,dress,8,28
+people,clothing_garment,full length apron,1,28
+people,clothing_garment,gloves,5,28
+people,clothing_garment,gloves,1,28
+people,clothing_garment,leggings,2,28
+people,clothing_garment,nurse dress,1,28
+people,clothing_garment,pants,1,28
+people,clothing_garment,polo dress,1,28
+people,clothing_garment,running shoes,2,28
+people,clothing_garment,scrub pants,1,28
+people,clothing_garment,scrub top,1,28
+people,clothing_garment,shirt,23,28
+people,clothing_garment,shoes,16,28
+people,clothing_garment,shorts,2,28
+people,clothing_garment,skirt,4,28
+people,clothing_garment,slippers,2,28
+people,clothing_garment,sneakers,2,28
+people,clothing_garment,socks,2,28
+people,clothing_garment,top,2,28
+people,clothing_garment,trousers,2,28
+people,clothing_garment,uniform dress,1,28
+people,clothing_garment,waist apron,1,28
+people,clothing_garment,work apron,1,28
+people,clothing_garment,work gloves,1,28
+people,eyewear_present,no,39,2
+people,eyewear_present,yes,11,2
+people,eyewear_type,thin frame,1,1
+people,facial_hair_present,no,50,1
+people,gaze_direction,down,30,4
+people,gaze_direction,left,1,4
+people,gaze_direction,right,3,4
+people,gaze_direction,up,2,4
+people,gender_presentation,female,49,2
+people,gender_presentation,male,1,2
+people,hair_color,black,18,4
+people,hair_color,brown,56,4
+people,hair_color,gray,3,4
+people,hair_color,pink,2,4
+people,hair_present,yes,50,1
+people,hair_style,bun,9,7
+people,hair_style,long,24,7
+people,hair_style,ponytail,46,7
+people,hair_style,shorts,3,7
+people,hair_style,straight,12,7
+people,hair_style,updo,7,7
+people,hair_style,wavy,10,7
+people,head_covering_type,green,1,5
+people,head_covering_type,white,4,5
+people,head_covering_present,no,45,2
+people,head_covering_present,yes,5,2
+people,head_covering_type,cap,3,5
+people,head_covering_type,nurse cap,1,5
+people,head_covering_type,nursing cap,1,5
+people,pose,standing,1,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,leaning,8,2
+people,pose,leaning,1,2
+people,pose,leaning,1,2
+people,pose,leaning,8,2
+people,pose,leaning,1,2
+people,pose,standing,1,2
+people,pose,standing,1,2
+people,pose,standing,3,2
+people,pose,standing,5,2
+people,pose,leaning,2,2
+people,pose,leaning,2,2
+people,pose,leaning,3,2
+people,pose,leaning,1,2
+people,pose,leaning,1,2
+people,pose,leaning,6,2
+people,pose,leaning,1,2
+people,pose,standing,3,2
+people,pose,standing,17,2
+people,skin_tone,light,7,2
+people,skin_tone,medium,43,2

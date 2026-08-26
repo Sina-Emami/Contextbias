@@ -1,0 +1,98 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,3,3
+scene_appearance,aesthetic_qualities,minimal,3,3
+scene_appearance,aesthetic_qualities,realistic,8,3
+scene_appearance,color_temperature,cool,1,3
+scene_appearance,color_temperature,neutral,6,3
+scene_appearance,color_temperature,warm,14,3
+scene_appearance,dominant_colors,brown,10,1
+scene_appearance,mood,calm,20,1
+scene_appearance,wall_color,brown,20,2
+scene_appearance,wall_color,lightgreen,1,2
+camera,depth_of_field,deep,7,3
+camera,depth_of_field,moderate,7,3
+camera,depth_of_field,shallow,2,3
+camera,framing,establishing shot,4,4
+camera,framing,full body,8,4
+camera,framing,medium,2,4
+camera,framing,wide,9,4
+camera,perspective,eye level,16,2
+camera,perspective,high angle,1,2
+objects,type,basket tray,1,6
+objects,type,books,1,6
+objects,type,dishware,2,6
+objects,type,plant,15,6
+objects,type,table,7,6
+objects,type,window,10,6
+people,activities,cleaning generic,3,12
+people,activities,holding cleaning cart,1,12
+people,activities,holding mop,1,12
+people,activities,holding tool,1,12
+people,activities,holding wand with both hands,1,12
+people,activities,lifting throw cushion,1,12
+people,activities,mopping,3,12
+people,activities,pushing,1,12
+people,activities,pushing brush across rug,1,12
+people,activities,pushing guiding vacuum,1,12
+people,activities,pushing or pulling mop,1,12
+people,activities,vacuuming,10,12
+people,age_range,middle aged,4,2
+people,age_range,young adult,12,2
+people,clothing_color,black,16,11
+people,clothing_color,blue,18,11
+people,clothing_color,brown,1,11
+people,clothing_color,gray,3,11
+people,clothing_color,green,9,11
+people,clothing_color,mediumpurple,2,11
+people,clothing_color,pink,1,11
+people,clothing_color,red,1,11
+people,clothing_color,tan,3,11
+people,clothing_color,white,13,11
+people,clothing_color,yellow,3,11
+people,clothing_garment,apron,2,17
+people,clothing_garment,cleaning gloves,1,17
+people,clothing_garment,cropped straight leg trousers,1,17
+people,clothing_garment,dress,2,17
+people,clothing_garment,gloves,1,17
+people,clothing_garment,leggings,2,17
+people,clothing_garment,pants,1,17
+people,clothing_garment,scrub pants,1,17
+people,clothing_garment,scrub top,1,17
+people,clothing_garment,shirt,5,17
+people,clothing_garment,skirt,1,17
+people,clothing_garment,slippers,2,17
+people,clothing_garment,top,1,17
+people,clothing_garment,trousers,1,17
+people,clothing_garment,uniform dress,1,17
+people,clothing_garment,waist apron,1,17
+people,clothing_garment,work apron,1,17
+people,eyewear_present,no,9,2
+people,eyewear_present,yes,10,2
+people,facial_hair_present,no,19,1
+people,gaze_direction,down,14,1
+people,gender_presentation,female,19,1
+people,hair_color,black,8,2
+people,hair_color,brown,13,2
+people,hair_present,yes,19,1
+people,hair_style,bun,3,5
+people,hair_style,long,5,5
+people,hair_style,ponytail,13,5
+people,hair_style,straight,4,5
+people,hair_style,updo,2,5
+people,head_covering_type,green,1,2
+people,head_covering_present,no,18,2
+people,head_covering_present,yes,1,2
+people,head_covering_type,cap,1,2
+people,pose,leaning,1,2
+people,pose,leaning,4,2
+people,pose,leaning,1,2
+people,pose,leaning,1,2
+people,pose,leaning,8,2
+people,pose,standing,1,2
+people,pose,standing,2,2
+people,pose,leaning,2,2
+people,pose,leaning,2,2
+people,pose,leaning,1,2
+people,pose,leaning,1,2
+people,pose,standing,8,2
+people,skin_tone,medium,19,1

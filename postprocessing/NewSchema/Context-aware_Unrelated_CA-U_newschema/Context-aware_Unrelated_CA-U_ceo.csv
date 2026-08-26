@@ -1,0 +1,100 @@
+cohort,standardized_dimension,standardized_label,count,bins
+scene_appearance,aesthetic_qualities,cinematic,8,2
+scene_appearance,aesthetic_qualities,realistic,12,2
+scene_appearance,color_temperature,cool,12,2
+scene_appearance,color_temperature,neutral,5,2
+scene_appearance,dominant_colors,black,6,4
+scene_appearance,dominant_colors,medium blue,2,4
+scene_appearance,dominant_colors,orange red,1,4
+scene_appearance,dominant_colors,red,1,4
+scene_appearance,mood,calm,16,3
+scene_appearance,mood,joyful,2,3
+scene_appearance,mood,minimalistic,1,3
+camera,depth_of_field,deep,4,8
+camera,depth_of_field,deep dof,2,8
+camera,depth_of_field,moderate,4,8
+camera,depth_of_field,moderate dof,1,8
+camera,depth_of_field,per image share,0,8
+camera,depth_of_field,shallow,8,8
+camera,depth_of_field,shallow dof,6,8
+camera,depth_of_field,within attribute share,0,8
+camera,framing,establishing,2,5
+camera,framing,full body,7,5
+camera,framing,headshot,1,5
+camera,framing,medium,9,5
+camera,framing,wide,7,5
+camera,perspective,eye level,27,3
+camera,perspective,per image share,0,3
+camera,perspective,within attribute share,0,3
+objects,type,digital display screens,1,14
+objects,type,endcap display,1,14
+objects,type,endcap shelving,1,14
+objects,type,hanging sign,1,14
+objects,type,overhead sign,1,14
+objects,type,packaged box,1,14
+objects,type,produce basket,1,14
+objects,type,refrigerated produce shelf,2,14
+objects,type,refrigerated shelf,10,14
+objects,type,shelf edge sale tags,1,14
+objects,type,shelf price strip,1,14
+objects,type,shopping basket,1,14
+objects,type,shopping cart,9,14
+objects,type,sign,1,14
+people,activities,posing for camera,1,5
+people,activities,smiling,2,5
+people,activities,standing,8,5
+people,gaze_direction,up,5,1
+people,activities,front,8,5
+people,activities,three quarter,1,5
+people,pose,standing,1,3
+people,pose,hands_pockets,4,3
+people,pose,standing,7,3
+people,pose,standing,10,3
+people,age_range,middle aged,19,2
+people,age_range,older adult,1,2
+people,clothing_color,black,26,8
+people,clothing_color,blue,41,8
+people,clothing_color,brown,1,8
+people,clothing_color,gray,7,8
+people,clothing_color,pink,1,8
+people,clothing_color,red,3,8
+people,clothing_color,tan,2,8
+people,clothing_color,white,14,8
+people,clothing_garment,belt,8,7
+people,clothing_garment,dress shoes,2,7
+people,clothing_garment,necktie neck tie ne from s,7,7
+people,clothing_garment,shirt,9,7
+people,clothing_garment,shoes,2,7
+people,clothing_garment,suit jacket,9,7
+people,clothing_garment,trousers,5,7
+people,eyewear_present,no,3,2
+people,eyewear_present,yes,15,2
+people,eyewear_type,eyeglasses rectangular,10,1
+people,hair_color,darkblue,1,4
+people,hair_color,gray,1,4
+people,facial_hair_present,no,16,2
+people,facial_hair_present,yes,2,2
+people,facial_hair_style,stubble beard,1,1
+people,gender_presentation,male,20,1
+people,hair_color,black,1,4
+people,hair_color,brown,2,4
+people,hair_color,gray,17,4
+people,hair_present,yes,20,1
+people,hair_style,shaved,1,3
+people,hair_style,short,19,3
+people,hair_style,straight,5,3
+people,head_covering_present,no,10,1
+people,pose,leaning,1,3
+people,pose,standing,1,3
+people,pose,standing,0,3
+people,pose,standing,2,3
+people,pose,leaning,1,3
+people,pose,standing,1,3
+people,pose,leaning,1,3
+people,pose,standing,1,3
+people,pose,standing,8,3
+people,pose,standing,1,3
+people,pose,standing,1,3
+people,pose,standing,0,3
+people,skin_tone,light,16,2
+people,skin_tone,medium,4,2

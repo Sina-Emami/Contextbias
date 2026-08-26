@@ -1,0 +1,347 @@
+cohort,dimension,label,count
+atmosphere,aesthetic_qualities,cinematic,5
+atmosphere,aesthetic_qualities,realistic,6
+atmosphere,dominant_palette,black,2
+atmosphere,dominant_palette,brown,16
+atmosphere,dominant_palette,lightgreen,3
+atmosphere,dominant_palette,orangered,1
+atmosphere,dominant_palette,unknown,22
+atmosphere,temperature,neutral,2
+atmosphere,temperature,warm,14
+atmosphere,contrast_level,medium,14
+atmosphere,aesthetic_qualities,cinematic,5
+atmosphere,aesthetic_qualities,dreamy,1
+atmosphere,aesthetic_qualities,realistic,4
+atmosphere,temperature,cool,2
+atmosphere,temperature,warm,5
+atmosphere,contrast_level,high,1
+atmosphere,contrast_level,medium,6
+atmosphere,saturation_level,neutral,3
+atmosphere,saturation_level,vivid,4
+atmosphere,saturation_level,neutral,5
+atmosphere,saturation_level,vivid,2
+atmosphere,mood,calm,20
+background,object_counts_by_position,background center,12
+background,object_counts_by_position,background left,10
+background,object_counts_by_position,background right,17
+background,object_counts_by_position,foreground center,20
+background,object_counts_by_position,foreground left,17
+background,object_counts_by_position,foreground right,17
+background,object_counts_by_position,midground center,16
+background,object_counts_by_position,midground left,12
+background,object_counts_by_position,midground right,19
+camera,crop,cabinetry left partially cropped,1
+camera,crop,cabinetry right partially cropped,1
+camera,crop,slight top,1
+camera,depth_of_field,moderate,1
+camera,depth_of_field,shallow,32
+camera,focal_length,normal,12
+camera,focal_length,telephoto,2
+camera,framing,full body,9
+camera,framing,headshot,1
+camera,framing,medium,11
+camera,framing,wide,1
+camera,perspective,eye level,24
+camera,perspective,third person,2
+environment,ceiling_color,black,5
+environment,ceiling_color,lightyellow,1
+environment,ceiling_color,white,2
+environment,floor_material,hardwood,1
+environment,indoor_outdoor,unknown,20
+environment,location_type,domestic kitchen,2
+environment,location_type,kitchen,12
+environment,location_type,residential kitchen,6
+environment,openness,moderate,3
+environment,openness,open,1
+environment,openness,unknown,1
+environment,spatial_depth,moderate,6
+environment,spatial_depth,shallow,3
+environment,spatial_layout_aisle_width,moderate,1
+environment,spatial_layout_aisle_width,unknown,2
+environment,spatial_layout_depth,moderate,7
+environment,spatial_layout_depth,unknown,1
+environment,spatial_layout_openness,compact,1
+environment,spatial_layout_openness,open,6
+environment,spatial_layout_openness,unknown,2
+environment,time_of_day_hint,afternoon,1
+environment,walls_color,beige,1
+environment,walls_color,gray,2
+environment,walls_color,lightblue,1
+environment,walls_color,lightyellow,1
+environment,walls_color,mediumpurple,1
+environment,walls_color,palegreen,2
+environment,walls_color,white,10
+environment,walls_material,ceramic,2
+environment,walls_material,ceramic tile,6
+environment,walls_material,drywall,1
+environment,walls_material,marble patterned,1
+environment,walls_material,paint,2
+environment,walls_material,painted drywall,1
+environment,walls_material,painted wood,2
+environment,walls_material,plaster,1
+environment,walls_material,stone tile,1
+environment,walls_material,wood,1
+environment,weather,overcast,1
+environment,weather,sunny,1
+lighting,artifacts,gentle bloom,1
+lighting,artifacts,motion blur limbs,1
+lighting,artifacts,soft specular highlights metal,1
+lighting,artifacts,specular reflection backsplash,1
+lighting,artifacts,specular reflection kettle,1
+lighting,artifacts,specular reflections,1
+lighting,color_temperature,cool,2
+lighting,color_temperature,neutral,2
+lighting,color_temperature,warm,24
+lighting,contrast_level,high,2
+lighting,contrast_level,medium,17
+lighting,directionality,sidelight,5
+lighting,hardness,soft,13
+lighting,saturation_level,neutral,16
+lighting,saturation_level,vivid,10
+lighting,shadows,medium,1
+lighting,shadows,soft,9
+lighting,sources_count,one light source,11
+lighting,sources_directionality,backlight,6
+lighting,sources_directionality,sidelight,4
+lighting,sources_directionality,unknown,4
+lighting,sources_type,artificial,6
+lighting,sources_type,artificial light,5
+lighting,sources_type,artificial light source,6
+lighting,sources_type,unknown,23
+objects,color,black,7
+objects,color,brown,6
+objects,color,crimson,1
+objects,color,darkblue,4
+objects,color,gray,6
+objects,color,green,9
+objects,color,lightgreen,1
+objects,color,lightyellow,3
+objects,color,mediumpurple,1
+objects,color,others,0
+objects,color,palegreen,1
+objects,color,pink,2
+objects,color,red,1
+objects,color,silver,25
+objects,color,white,26
+objects,color,yellow,2
+objects,condition,clean,27
+objects,condition,gently used,2
+objects,condition,good,16
+objects,condition,intact,2
+objects,condition,pristine,2
+objects,condition,unknown,13
+objects,condition,used,3
+objects,condition,well maintained,3
+objects,finish,brushed metal,9
+objects,finish,gloss,5
+objects,finish,matte,6
+objects,finish,polished,3
+objects,finish,reflective,8
+objects,material,ceramic,5
+objects,material,fabric shade,1
+objects,material,glass,8
+objects,material_aggregated,metal,20
+objects,material_aggregated,others,0
+objects,material_aggregated,painted wood,3
+objects,material_aggregated,paper,2
+objects,material_aggregated,plastic,2
+objects,material_aggregated,stainless steel,11
+objects,material_aggregated,terracotta,1
+objects,material_aggregated,wood,6
+objects,plane,background,36
+objects,plane,background objects,39
+objects,plane,foreground,14
+objects,plane,foreground objects,54
+objects,plane,midground,48
+objects,plane,midground objects,47
+objects,plane_distribution,background,39
+objects,plane_distribution,foreground,54
+objects,plane_distribution,midground,47
+objects,side,center,31
+objects,side,center objects,48
+objects,side,left,26
+objects,side,left objects,39
+objects,side,right,41
+objects,side,right objects,53
+objects,side_distribution,center,48
+objects,side_distribution,left,39
+objects,side_distribution,right,53
+objects,subtype_distribution,built microwave,1
+objects,subtype_distribution,built oven,1
+objects,subtype_distribution,butcher block counter,1
+objects,subtype_distribution,ceramic bowl,8
+objects,subtype_distribution,dark composite countertop,1
+objects,subtype_distribution,glass carafe,1
+objects,subtype_distribution,glass pitcher,1
+objects,subtype_distribution,hanging cookware array,1
+objects,subtype_distribution,hardwood floor,3
+objects,subtype_distribution,island cabinet assembly,1
+objects,subtype_distribution,kettle,1
+objects,subtype_distribution,kitchen cabinet,35
+objects,subtype_distribution,matte black kettle,1
+objects,subtype_distribution,metal canisters,1
+objects,subtype_distribution,multi pane window,3
+objects,subtype_distribution,open shelves sink,1
+objects,subtype_distribution,others,0
+objects,subtype_distribution,paper towel roll,2
+objects,subtype_distribution,pendant lamp,1
+objects,subtype_distribution,pendant light,1
+objects,subtype_distribution,potted plants,7
+objects,subtype_distribution,runner rug,1
+objects,subtype_distribution,sink shelving plant group,1
+objects,subtype_distribution,small bowl or dish,1
+objects,subtype_distribution,spice jars mug,1
+objects,subtype_distribution,stainless steel extractor hood,1
+objects,subtype_distribution,table lamp,1
+objects,subtype_distribution,trash bin,1
+objects,subtype_distribution,tulle skirt,2
+objects,subtype_distribution,two door refrigerator,1
+objects,subtype_distribution,unknown,1
+objects,subtype_distribution,utensil rail,1
+objects,subtype_distribution,wood planks,1
+objects,texture_top,brushed,10
+objects,texture_top,glossy,6
+objects,texture_top,leafy,2
+objects,texture_top,matte,5
+objects,texture_top,polished,3
+objects,texture_top,reflective,8
+objects,texture_top,smooth,40
+objects,texture_top,visible wood grain,2
+objects,type,appliance,6
+objects,type,bowl,3
+objects,type,cabinet,2
+objects,type,cabinetry,4
+objects,type,ceramic or glass cooktop,30
+objects,type,clothing,2
+objects,type,container,9
+objects,type,cooking vessel,2
+objects,type,cookware,3
+objects,type,countertop,5
+objects,type,cutting board,4
+objects,type,decor,3
+objects,type,fixture,4
+objects,type,floor,2
+objects,type,food,6
+objects,type,furniture,4
+objects,type,glass jar,4
+objects,type,hood,1
+objects,type,ingredient,5
+objects,type,kitchen,27
+objects,type,kitchenware,3
+objects,type,knife,1
+objects,type,light fixture,10
+objects,type,object,4
+objects,type,object misc,8
+objects,type,open wooden shelving,5
+objects,type,other light fixture subtypes,0
+objects,type,plant,8
+objects,type,plates,1
+objects,type,pots and pans,1
+objects,type,produce,3
+objects,type,shelf unit,1
+objects,type,small appliance,2
+objects,type,stainless steel range hood,4
+objects,type,storage jars,1
+objects,type,stovetop,2
+objects,type,surface,3
+objects,type,textile,2
+objects,type,tomatoes,7
+objects,type,utensil rail,3
+objects,type,window,5
+objects,type,wooden cutting board,6
+objects,type_distribution,architectural element,1
+objects,type_distribution,architectural feature,1
+objects,type_distribution,backsplash,1
+objects,type_distribution,bowl,1
+objects,type_distribution,cabinet,2
+objects,type_distribution,cabinetry,4
+objects,type_distribution,clothing,2
+objects,type_distribution,container,1
+objects,type_distribution,counter,1
+objects,type_distribution,countertop,2
+objects,type_distribution,cutting board,1
+objects,type_distribution,decorative item,1
+objects,type_distribution,faucet,1
+objects,type_distribution,floor,2
+objects,type_distribution,floor mat or tray,1
+objects,type_distribution,flooring,1
+objects,type_distribution,furniture,2
+objects,type_distribution,garment,1
+objects,type_distribution,glass bowl,1
+objects,type_distribution,kettle,1
+objects,type_distribution,kitchen item,26
+objects,type_distribution,lamp,1
+objects,type_distribution,light fixture,10
+objects,type_distribution,microwave,1
+objects,type_distribution,mixing bowl,1
+objects,type_distribution,object,8
+objects,type_distribution,object group,4
+objects,type_distribution,others,0
+objects,type_distribution,plant,4
+objects,type_distribution,plumbing fixture,1
+objects,type_distribution,rug,1
+objects,type_distribution,sink group,1
+objects,type_distribution,sink shelving,1
+objects,type_distribution,stovetop,1
+objects,type_distribution,structure,1
+objects,type_distribution,surface,3
+objects,type_distribution,surface detail,1
+objects,type_distribution,window,5
+people,age_range,child,1
+people,age_range,young adult,18
+people,eyewear_present,no,10
+people,facial_hair_present,no,10
+people,gaze_direction,down,6
+people,gaze_direction,left,1
+people,gender_presentation,female,19
+people,hair_color,black,4
+people,hair_color,brown,16
+people,hair_present,yes,10
+people,hair_style,bun,4
+people,hair_style,long,6
+people,hair_style,ponytail,6
+people,hair_style,straight,4
+people,hair_style,wavy,2
+people,head_covering_present,no,10
+people,pose_occlusions,partial,8
+people,role_hint,cooking,1
+people,role_hint,dancer,7
+people,role_hint,home cook,1
+people,skin_tone,light,19
+people,skin_tone,medium,10
+safety,hazards,cooking appliance pan,1
+safety,hazards,dancer en pointe near hard edged countertop stove potential hazard,1
+safety,hazards,hot contents steam burn risk,1
+safety,hazards,no detected,8
+safety,hazards,open gas burner grate,1
+safety,hazards,person balancing near stove,1
+safety,hazards,stovetop body contact,1
+safety,hazards_distribution,cooking appliance pan,1
+safety,hazards_distribution,hot contents steam burn risk,1
+safety,hazards_distribution,hot steam,1
+safety,hazards_distribution,open gas burner grate,1
+safety,hazards_distribution,person balancing near stove,1
+safety,hazards_distribution,unknown,4
+safety,nsfw,not,9
+safety,nsfw,unknown,10
+texts,font_style,unknown,2
+texts,legibility,illegible,2
+texts,legibility,not legible,1
+texts,plane,text midground,1
+texts,plane,unknown,1
+texts,side,text left,1
+texts,side,unknown,1
+uncertainty,note,appliance labels branding not legible,4
+uncertainty,note,approximate plate counts in background stack 6 10,1
+uncertainty,note,exact utensil counts approximate uncertain,1
+uncertainty,note,facial details partially occluded low detail,1
+uncertainty,note,lower legs feet out of frame,4
+uncertainty,note,many small countertop items partially occluded approximate counts,29
+uncertainty,note,no legible text detected,1
+uncertainty,note,other low frequency uncertainty tokens aggregated,33
+uncertainty,note,small items far background partially occluded,16
+uncertainty,note,time of day ambiguous,2
+uncertainty,note_counts,approximate plates background left shelving estimated approximately 6 10 per visible stack,1
+uncertainty,note_counts,lower legs feet person out frame therefore not visible,4
+uncertainty,note_counts,no legible text detected any small text containers or appliance surfaces not legible,1
+uncertainty,note_counts,unknown,16
