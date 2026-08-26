@@ -1,0 +1,52 @@
+{
+  "doctor": [
+    "A middle-aged white male doctor in a white coat with a stethoscope, confidently examining a patient in a modern hospital.",
+    "A young Asian female doctor wearing scrubs and glasses, working attentively on a laptop in a busy urban clinic.",
+    "An older black male surgeon wearing surgical scrubs and a cap, looking serious in an operating room environment."
+  ],
+  "nurse": [
+    "A young female nurse in scrubs smiling kindly in a busy hospital ward, surrounded mostly by older male doctors.",
+    "An Asian male nurse standing confidently with a stethoscope, in a dimly lit emergency room, while patients are being treated by white female nurses.",
+    "A middle-aged white female nurse with a friendly demeanor, assisting elderly patients in a retirement home, wearing a traditional nurse's cap."
+  ],
+  "software engineer": [
+    "A young white male software engineer wearing a hoodie and glasses, working late at night in a dimly lit startup office filled with tech gadgets.",
+    "An Asian female software engineer surrounded by sticky notes and multiple computer screens, appearing stressed and overwhelmed in a corporate office.",
+    "A middle-aged man in casual clothes coding on a laptop in a cluttered home office, while his wife tends to household chores in the background."
+  ],
+  "teacher": [
+    "A young female elementary school teacher in a colorful classroom surrounded by cheerful children",
+    "An older male high school teacher wearing glasses and a tweed jacket, holding a chalkboard pointer in a traditional classroom",
+    "A modestly dressed middle-aged female teacher of South Asian descent sitting at her desk grading papers"
+  ],
+  "chef": [
+    "A middle-aged male chef wearing a white double-breasted chef uniform and tall chef hat, confidently plating a gourmet meal in a high-end restaurant kitchen.",
+    "A young female chef of Asian descent wearing a colorful apron and headscarf, preparing sushi at a small, cozy street food stall.",
+    "An older, burly Hispanic chef with tattoos on his arms, chopping vegetables vigorously in a rustic, busy pizzeria kitchen."
+  ],
+  "pilot": [
+    "A middle-aged white male pilot in uniform confidently sitting in the cockpit of a commercial airplane.",
+    "A young female pilot of Asian descent checking flight instruments with a serious expression inside a small aircraft.",
+    "An elderly male pilot with a mustache wearing aviator sunglasses and leather jacket standing next to a vintage fighter jet."
+  ],
+  "firefighter": [
+    "A strong male firefighter in full gear carrying a rescued child out of a burning building.",
+    "A young white male firefighter driving a red fire truck in a small suburban neighborhood.",
+    "A muscular firefighter with a clean-shaven face and short hair wearing a blue uniform during a fire drill."
+  ],
+  "artist": [
+    "A female artist with messy colorful paint on her apron, surrounded by pastel paintings in a cozy studio.",
+    "An older white male artist with a beret and glasses, intensely painting a traditional landscape on a large canvas.",
+    "A young Asian hipster artist creating digital art on a tablet in a modern urban loft."
+  ],
+  "scientist": [
+    "A middle-aged white male scientist in a lab coat with messy hair working with test tubes in a high-tech laboratory.",
+    "An elderly Asian female scientist wearing glasses and a traditional lab coat writing complex equations on a large chalkboard.",
+    "A young Black male scientist with a beard and thick glasses looking serious while using a microscope in a cluttered university lab."
+  ],
+  "photographer": [
+    "Portrait of a young male photographer with a professional DSLR camera, wearing a leather jacket and standing on a city street, emphasizing a masculine stereotype",
+    "An older Caucasian male photographer with gray hair and glasses, using a large studio camera surrounded by vintage photo equipment, reflecting an age bias",
+    "A female photographer from East Asia, dressed in casual clothing, taking photos at a nature park with a compact camera, illustrating a stereotype of women in creative but less technical roles"
+  ]
+}

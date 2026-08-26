@@ -70,8 +70,8 @@ BIAS_REPLICATE_TEMPERATURE=0.0
 
 ContextBias is organized into four stages that match the code in this repository:
 
-1. **Attribute extraction** (`description_pipeline/app.py`) — walk the dataset, send each generated image to a vision LLM, and save a validated `ImageAuditRecord` JSON per image. The schema (`schemas/description.py`) spans four cohorts — *Scene appearance*, *Camera*, *Objects*, *People* — over 30 attribute dimensions. Most dimensions use closed vocabularies; `items`, `clothing_garment`, and `activities` are open-vocabulary, and insufficient evidence yields `unknown`.
-2. **Frequency counting and normalisation** (`description_pipeline/data_processing/pipeline.py`) — count each label per cohort/dimension, then normalise open-vocabulary tokens by embedding each term with a sentence encoder and clustering similar terms into canonical labels (e.g. *lab coat* and *white medical coat*).
+1. **Attribute extraction** (`decription_pipeline/app.py`) — walk the dataset, send each generated image to a vision LLM, and save a validated `ImageAuditRecord` JSON per image. The schema (`schemas/description.py`) spans four cohorts — *Scene appearance*, *Camera*, *Objects*, *People* — over 30 attribute dimensions. Most dimensions use closed vocabularies; `items`, `clothing_garment`, and `activities` are open-vocabulary, and insufficient evidence yields `unknown`.
+2. **Frequency counting and normalisation** (`decription_pipeline/data_processing/pipeline.py`) — count each label per cohort/dimension, then normalise open-vocabulary tokens by embedding each term with a sentence encoder and clustering similar terms into canonical labels (e.g. *lab coat* and *white medical coat*).
 3. **Bias quantification** (`results/bias_quantification_pipeline.py`, `results/tb3_pipeline.py`) — compute **Bias Intensity (BI)**, the entropy-based concentration of a label distribution, and the **Context Consistency Score (CCS)**, which balances pooled label prevalence against cross-context variability, together with per-label chi-square homogeneity tests across CF, CA-R, and CA-U.
 4. **Analysis and visualisation** (`analysis_visualization/`) — chi-square bias statistics across roles and attributes, and colour-coded p-value heatmaps per cohort.
 
@@ -82,7 +82,7 @@ ContextBias is organized into four stages that match the code in this repository
 Extract attributes from the image set:
 
 ```bash
-python description_pipeline/app.py
+python decription_pipeline/app.py
 ```
 
 The runner prints one of `[Skip]` (all artifacts exist), `[Start]` (no prior work), or `[Resume]` (partial prior work, resumes from the first missing image) per prompt folder.
@@ -90,14 +90,14 @@ The runner prints one of `[Skip]` (all artifacts exist), `[Start]` (no prior wor
 Count and normalise attribute frequencies:
 
 ```bash
-python -m description_pipeline.data_processing.pipeline
+python -m decription_pipeline.data_processing.pipeline
 ```
 
 Roll up frequencies to the role level across all context types:
 
 ```bash
-python -m description_pipeline.distribution_visualization.role_rollup
-python -m description_pipeline.distribution_visualization.role_rollup --general   # high-level summary
+python -m decription_pipeline.distribution_visualization.role_rollup
+python -m decription_pipeline.distribution_visualization.role_rollup --general   # high-level summary
 ```
 
 Quantify bias (BI, CCS, paper tables and figure data):
@@ -172,6 +172,25 @@ Attributes are extracted with GPT-5-mini and canonicalised with GPT-4o-mini. Fou
 | *Average* | *90.2* | *90.2* | *94.8* |
 
 A human annotation study over 1,200 images with three independent annotators reports Fleiss' κ = 0.89 and agreement of κ = 0.822 between human consensus and the automated pipeline.
+
+## Image generation pipeline
+
+Prompt construction and image generation for ContextBench live under `image_generation/ctxbank/`. The pipeline has four stages, run in order:
+
+| # | Script | Purpose | Output |
+|---|---|---|---|
+| 1 | `generate_candidates.py --roles roles.json --out candidates.json` | Generate candidate `related`/`unrelated` action-location pairs per role via LLM | `candidates.json` |
+| 2 | `judge_and_filter.py --infile candidates.json --out context_bank.json --filter` | Score and filter pairs for relevance, neutrality, and confounds; deduplicate | `context_bank.json` |
+| 3 | `combine_prompts.py` | Expand the context bank into prompts using templates T0 (`"a photo of a {ROLE}"`), T1 (`"... in a {LOCATION}"`), T2 (`"... {ACTION} in a {LOCATION}"`); dedup by string | `prompts_combined.json` |
+| 4 | `generate_images_from_prompts.py --prompts prompts_combined.json --output generated_images --max_images 100` | Generate images with Stable Diffusion XL from the deduplicated prompts | `generated_images/` |
+
+Ground-truth biased prompts (for testing bias detection) are generated separately:
+
+```bash
+python -m image_generation.ctxbank.generate_ground_truth_prompts --roles roles.json --out ground_truth_prompts.json --num 3
+```
+
+All prompts are deduplicated before generation, and each image uses multiple random seeds for diversity. Each stage can be run independently; see `image_generation/README.md` for full parameter documentation.
 
 ## Notes
 

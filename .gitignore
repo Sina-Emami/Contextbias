@@ -1,3 +1,5 @@
+
+generated_images/
 .env
 __pycache__/
 .DS_Store
@@ -5,6 +7,7 @@ data
 docs
 pyproject.toml
 eval_set
+.venv
 
 # Reference/source material kept locally, not part of the tracked repo:
 # original R pipeline scripts, raw-data drops, the paper PDF/review docx,

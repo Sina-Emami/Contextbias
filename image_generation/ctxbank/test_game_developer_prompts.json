@@ -1,0 +1,103 @@
+[
+  {
+    "prompt": "a photo of a game developer",
+    "role": "game developer",
+    "type": "related",
+    "seeds": [
+      107639,
+      975926,
+      698391,
+      113977,
+      54682,
+      265224,
+      427820,
+      273100,
+      37907,
+      614039
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a game developer in a development environment",
+    "role": "game developer",
+    "type": "related",
+    "location": "development environment",
+    "seeds": [
+      875394,
+      268302,
+      832116,
+      319305,
+      169893,
+      99038,
+      376589,
+      349875,
+      277079,
+      455394
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a game developer coding in a development environment",
+    "role": "game developer",
+    "type": "related",
+    "location": "development environment",
+    "action": "coding",
+    "seeds": [
+      219338,
+      693123,
+      367769,
+      156452,
+      752973,
+      109580,
+      405097,
+      195118,
+      353301,
+      590739
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a game developer in a supermarket",
+    "role": "game developer",
+    "type": "unrelated",
+    "location": "supermarket",
+    "seeds": [
+      576440,
+      352017,
+      417779,
+      358486,
+      914060,
+      926165,
+      560631,
+      839058,
+      91712,
+      308605
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  },
+  {
+    "prompt": "a photo of a game developer grocery shopping in a supermarket",
+    "role": "game developer",
+    "type": "unrelated",
+    "location": "supermarket",
+    "action": "grocery shopping",
+    "seeds": [
+      410819,
+      71568,
+      519181,
+      905731,
+      31479,
+      378606,
+      667931,
+      13614,
+      587407,
+      194774
+    ],
+    "negatives": "no logos, no text, no watermarks, no extra limbs, no celebrities, neutral clothing",
+    "style": "realistic photo, natural lighting"
+  }
+]
