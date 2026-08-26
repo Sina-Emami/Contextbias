@@ -8,12 +8,12 @@
 </p>
 
 <p align="center">
-  <a href="https://www.gov.sot.tum.de/hcc/team/shaghayegh-kolli/">Shaghayegh Kolli</a><sup>1,4,5</sup> ·
+  <a href="https://github.com/shaghayeghkolli">Shaghayegh Kolli</a><sup>1,4,5</sup> ·
   <a href="https://github.com/Sina-Emami">Sina Emami</a><sup>1</sup> ·
-  <a href="#">Moreno D'Incà</a><sup>2</sup> ·
+  <a href="https://github.com/Moreno98">Moreno D'Incà</a><sup>2</sup> ·
   <a href="#">Pouyan Nejadi</a><sup>3</sup> ·
   <a href="#">Nicu Sebe</a><sup>2</sup> ·
-  <a href="#">Massimiliano Mancini</a><sup>2</sup> ·
+  <a href="https://github.com/mancinimassimiliano">Massimiliano Mancini</a><sup>2</sup> ·
   <a href="https://www.gov.sot.tum.de/hcc/team/jana-diesner/">Jana Diesner</a><sup>1,4,5</sup>
 </p>
 
