@@ -183,10 +183,18 @@ A human annotation study over 1,200 images with three independent annotators rep
 Please cite our work if you find it useful:
 
 ```bibtex
-@misc{contextbias2026,
-  title  = {ContextBias: Control Evaluation of Context Impacts in Text-to-Image Models},
-  author = {Shaghayegh Kolli and Sina Emami and Moreno D'Inc{\`a} and Pouyan Nejadi and Nicu Sebe and Massimiliano Mancini and Jana Diesner},
-  year   = {2026},
+@inproceedings{kolli-etal-2026-contextbias,
+    title = "{C}ontext{B}ias: Control Evaluation of Context Impacts in Text-to-Image Models",
+    author = "Kolli, Shaghayegh  and
+      Emami, Sina  and
+      D'Inc{\`a}, Moreno  and
+      Nejadi, Pouyan  and
+      Sebe, Nicu  and
+      Mancini, Massimiliano  and
+      Diesner, Jana",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    year = "2026",
+    publisher = "Association for Computational Linguistics",
 }
 ```
 
