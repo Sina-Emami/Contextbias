@@ -33,11 +33,6 @@ AGGREGATION_DIR_NAME = "aggregation_counting"
 WINDOWS_SAFE_PATH_LIMIT = 240
 
 
-# ---------------------------------------------------------------------------
-# Path helpers
-# ---------------------------------------------------------------------------
-
-
 def slugify(text: str) -> str:
     result = "".join(ch.lower() if ch.isalnum() else "-" for ch in str(text))
     parts = [part for part in result.split("-") if part]
@@ -72,11 +67,6 @@ def ensure_safe_path(path: Path, hint: str) -> Path:
     return path.with_name(safe_name)
 
 
-# ---------------------------------------------------------------------------
-# Prompt directory iteration
-# ---------------------------------------------------------------------------
-
-
 def iter_prompt_dirs(root: Path) -> Iterable[Tuple[Path, Path, Path, Path]]:
     for context_dir in sorted(root.iterdir()):
         if not context_dir.is_dir():
@@ -90,11 +80,6 @@ def iter_prompt_dirs(root: Path) -> Iterable[Tuple[Path, Path, Path, Path]]:
                 summary_path = prompt_dir / SUMMARY_RELATIVE_PATH
                 if summary_path.exists():
                     yield context_dir, role_dir, prompt_dir, summary_path
-
-
-# ---------------------------------------------------------------------------
-# Normalisation helpers
-# ---------------------------------------------------------------------------
 
 
 def normalize_dimension_name(raw_dimension: str) -> str:
@@ -133,11 +118,6 @@ def normalize_counts(
     return {dim: dict(counts) for dim, counts in normalised.items()}
 
 
-# ---------------------------------------------------------------------------
-# Prompt processing
-# ---------------------------------------------------------------------------
-
-
 def process_prompt(summary_path: Path) -> Tuple[Dict[str, Dict[str, int]], Dict[Tuple[str, str], int], int]:
     report = load_summary_report(summary_path)
     aggregated, spatial_counts, num_images = compute_dimension_counts(report)
@@ -165,11 +145,6 @@ def write_prompt_json(
     }
     ensure_dir(output_path.parent)
     output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-
-
-# ---------------------------------------------------------------------------
-# Main aggregation routine
-# ---------------------------------------------------------------------------
 
 
 def run() -> int:
@@ -201,7 +176,6 @@ def run() -> int:
             num_images,
         )
 
-        # Accumulate per-role rollup (context specific)
         entry = per_role_rollups.setdefault(
             role_dir,
             {
@@ -233,7 +207,6 @@ def run() -> int:
         for (plane, side), value in spatial_counts.items():
             entry["spatial"][(plane, side)] += int(value)
 
-    # Write per-role rollups (still context specific)
     for role_dir, data in per_role_rollups.items():
         aggregation_dir = role_dir / AGGREGATION_DIR_NAME
         ensure_dir(aggregation_dir)

@@ -8,9 +8,6 @@ from pydantic import BaseModel, ConfigDict, Field
 
 SCHEMA_VERSION = "1.0"
 
-# ---------------------------------------------------------------------------
-# Enumerations
-# ---------------------------------------------------------------------------
 
 Mood = Literal[
     "calm",
@@ -237,11 +234,6 @@ class StrictBaseModel(BaseModel):
     model_config = ConfigDict(extra="forbid", json_schema_extra={"additionalProperties": False})
 
 
-# ---------------------------------------------------------------------------
-# Cohort payloads
-# ---------------------------------------------------------------------------
-
-
 class SceneAppearanceCohort(StrictBaseModel):
     """Overall look and feel of the scene, including ambient colors."""
     mood: Mood = "unknown"
@@ -307,11 +299,6 @@ class CohortBundle(StrictBaseModel):
     objects: ObjectsCohort = Field(default_factory=ObjectsCohort)
     people: PeopleCohort = Field(default_factory=PeopleCohort)
     totals: TotalsCohort = Field(default_factory=TotalsCohort)
-
-
-# ---------------------------------------------------------------------------
-# Top-level schema
-# ---------------------------------------------------------------------------
 
 
 class ImageInfo(StrictBaseModel):

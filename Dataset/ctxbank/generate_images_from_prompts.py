@@ -4,7 +4,6 @@ from tqdm import tqdm
 import random
 import argparse
 
-# Try importing required packages with fallback
 try:
     from PIL import Image
     from diffusers import StableDiffusionXLPipeline
@@ -15,7 +14,6 @@ except ImportError as e:
     print("Please install: pip install torch torchvision diffusers transformers accelerate pillow")
     DEPENDENCIES_AVAILABLE = False
 
-# Global pipeline variable
 pipe = None
 
 def setup_pipeline():
@@ -27,7 +25,6 @@ def setup_pipeline():
         return False
     
     try:
-        # Better device detection
         if torch.cuda.is_available():
             device = "cuda"
             torch_dtype = torch.float16
@@ -49,7 +46,6 @@ def setup_pipeline():
         )
         pipe = pipe.to(device)
         
-        # Enable memory efficient attention if available
         if hasattr(pipe, 'enable_attention_slicing'):
             pipe.enable_attention_slicing()
         
@@ -74,7 +70,6 @@ def generate_image(prompt, seed, negatives=None, style=None):
         if style:
             full_prompt = f"{style} {full_prompt}"
 
-        # Generate image with error handling
         result = pipe(
             full_prompt,
             negative_prompt=negatives,
@@ -99,7 +94,6 @@ def create_mock_image(width=1024, height=1024):
     """Create a mock image when dependencies are not available."""
     try:
         from PIL import Image, ImageDraw, ImageFont
-        # Create a simple placeholder image
         img = Image.new('RGB', (width, height), color='lightgray')
         draw = ImageDraw.Draw(img)
         text = "Mock Image\n(Dependencies Missing)"
@@ -111,12 +105,10 @@ def create_mock_image(width=1024, height=1024):
 def main(prompts_path, output_dir, max_images, mock_mode=False):
     """Main function with improved error handling and validation."""
     
-    # Validate inputs
     if not os.path.exists(prompts_path):
         print(f"Error: Prompts file not found: {prompts_path}")
         return
     
-    # Setup pipeline unless in mock mode
     if not mock_mode:
         if not setup_pipeline():
             print("Failed to setup pipeline. Use --mock_mode for testing without dependencies.")
@@ -124,10 +116,8 @@ def main(prompts_path, output_dir, max_images, mock_mode=False):
     else:
         print("Running in mock mode - will create placeholder images")
     
-    # Create output directory
     os.makedirs(output_dir, exist_ok=True)
     
-    # Load and validate prompts
     try:
         with open(prompts_path, 'r') as f:
             prompts = json.load(f)
@@ -136,7 +126,6 @@ def main(prompts_path, output_dir, max_images, mock_mode=False):
         print(f"Error loading prompts: {e}")
         return
     
-    # Validate prompt structure
     if not prompts:
         print("No prompts found in file")
         return
@@ -148,7 +137,6 @@ def main(prompts_path, output_dir, max_images, mock_mode=False):
         print(f"Error: Missing required fields in prompts: {missing_fields}")
         return
     
-    # Generate images
     total_images = 0
     successful_images = 0
     failed_images = 0
@@ -161,11 +149,9 @@ def main(prompts_path, output_dir, max_images, mock_mode=False):
             style = entry.get('style', '')
             seeds = entry.get('seeds', [])
             
-            # Create a directory for each prompt
             prompt_dir = os.path.join(output_dir, f"prompt_{idx:03d}_{role.replace(' ', '_')}")
             os.makedirs(prompt_dir, exist_ok=True)
             
-            # Save prompt metadata
             metadata = {
                 'prompt': prompt,
                 'role': role,
@@ -182,7 +168,6 @@ def main(prompts_path, output_dir, max_images, mock_mode=False):
                     print(f"Reached max_images limit: {max_images}")
                     break
                 
-                # Generate image
                 if mock_mode:
                     image = create_mock_image()
                 else:

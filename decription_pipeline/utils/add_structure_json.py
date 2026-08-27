@@ -3,7 +3,6 @@
 from pathlib import Path
 import json
 
-# ---------- Config ----------
 # If you run this next to a folder named "dataset", it'll use that.
 # Otherwise it uses the current working directory as the dataset root.
 DATASET_ROOT = (Path.cwd() / "dataset")
@@ -13,7 +12,6 @@ if not DATASET_ROOT.exists():
 MODEL_NAME = "Qwen_eval" # "Stable-Diffusion-XL"
 SUPPORTED_EXTS = {".png", ".jpg", ".jpeg"}  # change if you only want png/jpg
 MANIFEST_FILENAME = "manifest.json"
-# ----------------------------
 
 # Map folder names to a normalized context label
 CONTEXT_MAP = {

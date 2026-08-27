@@ -106,7 +106,6 @@ def main():
                     "negatives": NEGATIVE_PROMPT,
                     "style": STYLE
                 })
-    # Remove duplicate prompts (by 'prompt' string)
     unique = {}
     for entry in prompts:
         key = entry["prompt"]

@@ -1,4 +1,3 @@
-# ctxbank/judge_and_filter.py
 import json
 import argparse
 from tqdm import tqdm
@@ -24,7 +23,6 @@ Return JSON only.
 
 def score_item(role, axis, item, rationale, model=None, mock_mode=False):
     if mock_mode:
-        # Return mock scores for testing when API is not available
         return {
             "relevance": 4,
             "neutrality": 4,
@@ -37,14 +35,12 @@ def score_item(role, axis, item, rationale, model=None, mock_mode=False):
         try:
             out = json.loads(txt)
         except:
-            # try extract
             start = txt.find("{")
             end = txt.rfind("}")+1
             out = json.loads(txt[start:end])
         return out
     except Exception as e:
         print(f"Error calling LLM for {role}/{axis}/{item}: {e}")
-        # Return default scores on API failure
         return {
             "relevance": 3,
             "neutrality": 3,
@@ -54,7 +50,6 @@ def score_item(role, axis, item, rationale, model=None, mock_mode=False):
 def dedupe_list(items, threshold=90):
     kept = []
     for itm in items:
-        # For unrelated pairs, use action+location as text
         if "item" in itm:
             text = itm["item"]
         elif "action" in itm and "location" in itm:
@@ -80,7 +75,6 @@ def main(args):
             items = axes.get(bucket_name, [])
             scored = []
             for it in items:
-                # For scoring, use action-location pairs
                 if "item" in it:
                     item_text = it["item"]
                 elif "action" in it and "location" in it:

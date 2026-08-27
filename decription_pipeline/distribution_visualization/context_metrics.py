@@ -27,10 +27,6 @@ import numpy as np
 import pandas as pd
 
 
-# ----------------------------
-# Hardcoded configuration
-# ----------------------------
-
 # Edit this list to include summary_report.json files or directories containing them.
 HARDCODED_INPUTS: List[Path | str] = [
     Path(
@@ -44,11 +40,6 @@ OUTPUT_DIR = Path("analysis_output")
 # Processing flags.
 COLLAPSE_THRESHOLD = 0.05
 DROP_UNKNOWN = True
-
-
-# ----------------------------
-# Loading and flattening utils
-# ----------------------------
 
 
 def load_summary_report(path: Path | str) -> Dict[str, Any]:
@@ -160,9 +151,6 @@ def extract_spatial_layout(report: Mapping[str, Any]) -> pd.DataFrame:
         for attr_name, payload in attrs.items():
             if not isinstance(payload, Mapping):
                 continue
-            if attr_name not in {"object_density", "object_counts_by_position", "object_counts_by_position_total"}:
-                # Still allow spatial-looking keys under any attribute
-                pass
             vc = (payload or {}).get("value_counts") or {}
             nm = (payload or {}).get("normalized") or {}
             for key, v in vc.items():
@@ -176,7 +164,6 @@ def extract_spatial_layout(report: Mapping[str, Any]) -> pd.DataFrame:
                     continue
                 norms[split] = float(v)
 
-    # Convert to DataFrame
     rows: List[Dict[str, Any]] = []
     if counts:
         total = sum(counts.values())
@@ -206,11 +193,6 @@ def extract_spatial_layout(report: Mapping[str, Any]) -> pd.DataFrame:
     if df.empty:
         return pd.DataFrame(columns=["plane", "side", "count", "normalized_share", "normalized_share_from_attr"])
     return df
-
-
-# ----------------------------
-# Aggregation helpers shared with dataset rollup
-# ----------------------------
 
 
 def make_dimension_name(cohort: str | None, key: str | None) -> str:
@@ -281,11 +263,6 @@ def compute_dimension_counts(
     return aggregated_out, spatial_out, num_images
 
 
-# ----------------------------
-# Computation helpers
-# ----------------------------
-
-
 def wilson_ci(k: int, n: int, z: float = 1.96) -> Tuple[float, float]:
     if n <= 0:
         return (0.0, 0.0)
@@ -339,11 +316,6 @@ def collapse_small_categories(
     out = out.sort_values(count_col, ascending=False).reset_index(drop=True)
     mapping = {other_label: sorted(map(str, small[label_col].tolist()))}
     return CollapseResult(out, mapping)
-
-
-# ----------------------------
-# Plotting helpers (matplotlib only)
-# ----------------------------
 
 
 def _ensure_dir(path: Path) -> None:
@@ -429,7 +401,6 @@ def plot_stacked_100(
         return
     labels, shares, counts = zip(*parts)
     shares = np.array(shares, dtype=float)
-    # Sort by share desc
     order = np.argsort(-shares)
     labels = [labels[i] for i in order]
     shares = shares[order]
@@ -526,7 +497,6 @@ def plot_spatial_heatmap(
     ax.set_xlabel("Side")
     ax.set_ylabel("Plane")
     ax.set_title(title)
-    # Add cell labels
     for i in range(mat.shape[0]):
         for j in range(mat.shape[1]):
             txt = f"{mat[i,j]*100:.0f}%" if use_normalized else f"{int(mat[i,j])}"
@@ -545,7 +515,6 @@ def plot_plane_and_side_bars(
 ) -> None:
     if df_spatial.empty:
         return
-    # Plane counts
     plane_df = (
         df_spatial.groupby("plane", as_index=False)["count"].sum().sort_values("count", ascending=False)
     )
@@ -558,7 +527,6 @@ def plot_plane_and_side_bars(
         outpath=outdir / "spatial_plane_counts.png",
         add_percent_labels=False,
     )
-    # Side counts
     side_df = (
         df_spatial.groupby("side", as_index=False)["count"].sum().sort_values("count", ascending=False)
     )
@@ -571,11 +539,6 @@ def plot_plane_and_side_bars(
         outpath=outdir / "spatial_side_counts.png",
         add_percent_labels=False,
     )
-
-
-# ----------------------------
-# Orchestration: build DFs and plots per summary file
-# ----------------------------
 
 
 def generate_all_plots_for_summary(
@@ -592,7 +555,6 @@ def generate_all_plots_for_summary(
     meta = report.get("metadata", {})
     num_images = int(meta.get("num_images", 0) or 0)
 
-    # Output folder per summary
     try:
         rel_tag = summary_path.relative_to(Path.cwd())
     except ValueError:
@@ -601,7 +563,6 @@ def generate_all_plots_for_summary(
     outdir = output_dir / stem
     _ensure_dir(outdir)
 
-    # Flatten
     df_groups = flatten_groups(report)
     df_attrs = flatten_attributes(report)
     df_spatial = extract_spatial_layout(report)
@@ -619,13 +580,11 @@ def generate_all_plots_for_summary(
         "audits": {},
     }
 
-    # 4a. Sorted bar plots for categorical distributions (per cohort/key)
     for (cohort, key), g in df_groups.groupby(["cohort", "key"], dropna=False):
         data = g.copy()
         if drop_unknown:
             data = data[data["sub_key"].astype(str).str.lower() != "unknown"]
-        # Sum counts per sub_key (should already be unique)
-        agg = (
+            agg = (
             data.groupby(["cohort", "key", "sub_key", "label"], as_index=False)[
                 ["total_count", "normalized_share"]
             ]
@@ -634,7 +593,6 @@ def generate_all_plots_for_summary(
         )
         if agg.empty:
             continue
-        # Collapse small categories
         collapsed = collapse_small_categories(
             agg.rename(columns={"sub_key": "category", "share": "normalized"}),
             label_col="category",
@@ -659,7 +617,6 @@ def generate_all_plots_for_summary(
         )
         manifest["artifacts"].append(str(bar_path))
 
-        # 4b. 100% stacked bar if this key partitions a whole (~sums to 1)
         share_sum = float(out["normalized"].sum()) if not out.empty else 0.0
         if 0.98 <= share_sum <= 1.02 and len(out) > 1:
             parts = list(zip(out["category"].tolist(), out["normalized"].tolist(), out["count"].tolist()))
@@ -672,7 +629,6 @@ def generate_all_plots_for_summary(
             )
             manifest["artifacts"].append(str(stack_path))
 
-        # 5. Optional Wilson 95% CI when sample size < 30 (dot plot)
         n_total = int(agg["count"].sum())
         if n_total and n_total < 30:
             cis = [wilson_ci(int(c), n_total) for c in agg["count"].tolist()]
@@ -688,12 +644,10 @@ def generate_all_plots_for_summary(
             )
             manifest["artifacts"].append(str(dot_ci_path))
 
-    # 4c. Dot plots for attributes per (cohort, attribute)
     for (cohort, attr), g in df_attrs.groupby(["cohort", "attribute"], dropna=False):
         data = g.copy()
         if drop_unknown:
             data = data[data["value"].astype(str).str.lower() != "unknown"]
-        # Aggregate and normalize if needed
         agg = (
             data.groupby(["value"], as_index=False)[["count", "normalized"]]
             .sum()
@@ -719,7 +673,6 @@ def generate_all_plots_for_summary(
         )
         manifest["artifacts"].append(str(dot_attr_path))
 
-    # 4d. 3×3 heatmap for spatial object layout
     if not df_spatial.empty:
         title_counts = "Spatial object layout (counts)"
         plot_spatial_heatmap(
@@ -739,7 +692,6 @@ def generate_all_plots_for_summary(
         )
         manifest["artifacts"].append(str(outdir / "heatmap_spatial_normalized.png"))
 
-        # 4e. Separate bars for plane and side
         plot_plane_and_side_bars(
             df_spatial,
             outdir=outdir,
@@ -752,8 +704,6 @@ def generate_all_plots_for_summary(
             ]
         )
 
-    # 4f. Compact row of 100% bars for camera & lighting settings
-    # Gather keys of interest
     keys_interest = set()
     for k in [
         "camera_angle",
@@ -766,7 +716,6 @@ def generate_all_plots_for_summary(
             keys_interest.add(k)
 
     if keys_interest:
-        # Prepare stacked bars side-by-side in one axes
         parts_per_key: List[Tuple[str, List[Tuple[str, float, int]]]] = []
         for key in sorted(keys_interest):
             sub = df_groups[df_groups["key"] == key]
@@ -776,14 +725,12 @@ def generate_all_plots_for_summary(
                 .sum()
                 .rename(columns={"total_count": "count", "normalized_share": "share"})
             )
-            # Normalize shares
             ssum = float(agg["share"].sum())
             if ssum > 0:
                 agg["share"] = agg["share"] / ssum
             parts = list(zip(agg["sub_key"].tolist(), agg["share"].tolist(), agg["count"].tolist()))
             parts_per_key.append((key, parts))
 
-        # Plot
         fig, ax = plt.subplots(figsize=(max(8, 2.5 * len(parts_per_key)), 3.2))
         x_positions = np.arange(len(parts_per_key))
         for xi, (k, parts) in zip(x_positions, parts_per_key):
@@ -806,17 +753,11 @@ def generate_all_plots_for_summary(
         plt.close(fig)
         manifest["artifacts"].append(str(outpath))
 
-    # Save manifest and audits
     (outdir / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     if manifest.get("audits"):
         (outdir / "audits.json").write_text(json.dumps(manifest["audits"], indent=2), encoding="utf-8")
 
     return manifest
-
-
-# ----------------------------
-# CLI
-# ----------------------------
 
 
 def _iter_summary_files(input_path: Path) -> Iterable[Path]:

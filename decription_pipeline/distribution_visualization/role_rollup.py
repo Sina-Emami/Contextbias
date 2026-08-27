@@ -31,9 +31,6 @@ DATASET_ROOT = Path("dataset")
 ROLE_OUTPUT_DIR = DATASET_ROOT / "role_count_aggregation"
 GENERAL_OUTPUT_PATH = DATASET_ROOT / "general_attributes_rollup.csv"
 
-# ---------------------------------------------------------------------------
-# Normalisation tables
-# ---------------------------------------------------------------------------
 
 KEY_NORMALISATION: Dict[str, str] = {
     "demographics.gender_presentation": "gender_presentation",
@@ -282,10 +279,6 @@ GENERAL_ATTRIBUTE_MAP: Dict[Tuple[str, str], Tuple[str, str]] = {
     ("*", "facial_hair_present"): ("facial_hair_present", "people"),
 }
 
-# ---------------------------------------------------------------------------
-# Normalisation helpers
-# ---------------------------------------------------------------------------
-
 
 def slugify(text: str) -> str:
     result = "".join(ch.lower() if ch.isalnum() else "-" for ch in str(text))
@@ -477,11 +470,6 @@ def normalize_activities(label: str) -> str:
     return norm_spaces(s)
 
 
-# ---------------------------------------------------------------------------
-# Aggregation helpers
-# ---------------------------------------------------------------------------
-
-
 def iter_source_csvs() -> Iterator[Path]:
     for path in DATASET_ROOT.rglob("aggregation_counting/*.csv"):
         if ROLE_OUTPUT_DIR in path.parents:
@@ -552,11 +540,6 @@ def build_general_attribute_rollup(role_totals: Dict[str, Dict[Tuple[str, str, s
                     writer.writerow([attr_cohort, attr_name, label, int(count)])
 
     print(f"[Aggregated] {GENERAL_OUTPUT_PATH}")
-
-
-# ---------------------------------------------------------------------------
-# Command line interface
-# ---------------------------------------------------------------------------
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:

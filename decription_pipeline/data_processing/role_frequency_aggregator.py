@@ -32,10 +32,6 @@ DATASET_ROOT_DEFAULT = Path("dataset")
 OUTPUT_DIR_NAME = "role_counting"
 
 
-# ---------------------------------------------------------------------------
-# Filesystem helpers
-# ---------------------------------------------------------------------------
-
 def _load_frequency_json(path: Path) -> Optional[Dict[str, object]]:
     try:
         with path.open("r", encoding="utf-8") as fh:
@@ -48,10 +44,6 @@ def _load_frequency_json(path: Path) -> Optional[Dict[str, object]]:
         return None
     return data
 
-
-# ---------------------------------------------------------------------------
-# Aggregation logic
-# ---------------------------------------------------------------------------
 
 def _sanitise_role_name(role: str) -> str:
     role = role.strip().lower()

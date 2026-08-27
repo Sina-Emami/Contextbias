@@ -1,9 +1,8 @@
-# ContextBias: Control Evaluation of Context Impacts in Text-to-Image Models
+# ContextBias: Controlled Evaluation of Bias Persistence Under Context Shift in Text-to-Image Models
 
 <p align="center">
   <a href="#abstract">Abstract</a> ·
-  <a href="https://example.org/paper.pdf">pdf</a> ·
-  <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv</a> ·
+  <a href="https://huggingface.co/datasets/shaghayegh/ContextBias">Dataset (Hugging Face)</a> ·
   <a href="#bibtex">BibTeX</a>
 </p>
 
@@ -203,7 +202,7 @@ Please cite our work if you find it useful:
 
 ```bibtex
 @inproceedings{kolli-etal-2026-contextbias,
-    title = "{C}ontext{B}ias: Control Evaluation of Context Impacts in Text-to-Image Models",
+    title = "{C}ontext{B}ias: Controlled Evaluation of Bias Persistence Under Context Shift in Text-to-Image Models",
     author = "Kolli, Shaghayegh  and
       Emami, Sina  and
       D'Inc{\`a}, Moreno  and
