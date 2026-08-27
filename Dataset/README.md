@@ -1,9 +1,8 @@
- Image Generation Pipeline
+# Image Generation Pipeline
 
 This project implements a systematic pipeline for generating, filtering, and sampling image prompts for bias detection in multimodal models. The workflow is inspired by WinoBias-style minimal pairs and context calibration.
 
-Link to the dataset:
-https://huggingface.co/datasets/shaghayegh/ContextBias
+Dataset: https://huggingface.co/datasets/shaghayegh/ContextBias
 
 ## Pipeline Overview
 
