@@ -1,38 +1,39 @@
-# ctxbank/llm_client.py
-
-
 import os
+
 from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")  # Default to cheapest model
+DEFAULT_MODEL = "gpt-4o-mini"
 
-if not OPENAI_API_KEY:
-    print("Warning: OpenAI API key not found in .env file")
-    print("Required variable: OPENAI_API_KEY")
-    print("Please update the .env file with your actual OpenAI API key")
-    raise RuntimeError("Set OPENAI_API_KEY in .env")
 
-client = OpenAI(
-    api_key=OPENAI_API_KEY
-)
+def _get_client() -> OpenAI:
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "OPENAI_API_KEY is not set. Add it to your .env file before calling the LLM."
+        )
+    return OpenAI(api_key=api_key)
 
-def call_llm(prompt: str, max_tokens=30000):
+
+def call_llm(prompt: str, max_tokens: int = 30000, model: str | None = None) -> str:
+    client = _get_client()
+    resolved_model = model or os.getenv("OPENAI_MODEL", DEFAULT_MODEL)
+
     response = client.chat.completions.create(
+        model=resolved_model,
+        max_tokens=max_tokens,
         messages=[
-            {"role": "system", "content": "You are a JSON generator. Always output only valid JSON, no explanations."},
-            {"role": "user", "content": prompt}
+            {
+                "role": "system",
+                "content": "You are a JSON generator. Always output only valid JSON, no explanations.",
+            },
+            {"role": "user", "content": prompt},
         ],
-        max_tokens=max_tokens,  # Standard OpenAI API uses max_tokens
-        model=OPENAI_MODEL
     )
 
     content = response.choices[0].message.content
-    print(content)
-    if not content or content.strip() == "":
-        raise ValueError("LLM returned empty content.")
+    if not content or not content.strip():
+        raise ValueError("LLM returned an empty response.")
     return content
-
