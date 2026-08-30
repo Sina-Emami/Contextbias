@@ -1,0 +1,2 @@
+dimension_family,comparison,point_estimate,bootstrap_mean,ci_low,ci_high,n_replicates
+ALL,CA-U - CF,0.05218836492449308,0.05413297532249012,0.029026057771667245,0.07744510122177789,1000

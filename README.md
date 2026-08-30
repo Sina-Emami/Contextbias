@@ -71,7 +71,7 @@ ContextBias is organized into four stages that match the code in this repository
 
 1. **Attribute extraction** (`decription_pipeline/app.py`) — walk the dataset, send each generated image to a vision LLM, and save a validated `ImageAuditRecord` JSON per image. The schema (`schemas/description.py`) spans four cohorts — *Scene appearance*, *Camera*, *Objects*, *People* — over 30 attribute dimensions. Most dimensions use closed vocabularies; `items`, `clothing_garment`, and `activities` are open-vocabulary, and insufficient evidence yields `unknown`.
 2. **Frequency counting and normalisation** (`decription_pipeline/data_processing/pipeline.py`) — count each label per cohort/dimension, then normalise open-vocabulary tokens by embedding each term with a sentence encoder and clustering similar terms into canonical labels (e.g. *lab coat* and *white medical coat*).
-3. **Bias quantification** (`bias_quantification/bias_quantification_pipeline.py`, `bias_quantification/tb3_pipeline.py`) — compute **Bias Intensity (BI)**, the entropy-based concentration of a label distribution, and the **Context Consistency Score (CCS)**, which balances pooled label prevalence against cross-context variability, together with per-label chi-square homogeneity tests across CF, CA-R, and CA-U.
+3. **Bias quantification** (`bias_quantification/bias_quantification_pipeline.py`, `bias_quantification/tb3_pipeline.py`) — compute **Bias Intensity (BI)**, the entropy-based concentration of a label distribution, and the **Context Consistency Score (CCS)**, which balances pooled label prevalence against cross-context variability, together with per-label chi-square homogeneity tests across CF, CA-R, and CA-U. `bias_quantification/cluster_bootstrap.py` adds the role-level cluster bootstrap (B=1,000, resampling roles with replacement) behind the paper's 95% CIs on BI shifts between conditions (Tables 9–10, Appendix E.1).
 4. **Analysis and visualisation** (`analysis_visualization/`) — chi-square bias statistics across roles and attributes, and colour-coded p-value heatmaps per cohort.
 
 **Concurrency** for stage 1 is configurable via environment variables: `ROLE_CONCURRENCY` (default 2) parallel role directories, `IMAGE_CONCURRENCY` (default 10) parallel image requests within a prompt.
@@ -104,6 +104,7 @@ Quantify bias (BI, CCS, paper tables and figure data):
 ```bash
 python bias_quantification/bias_quantification_pipeline.py
 python bias_quantification/tb3_pipeline.py        # richer Table 3, run after the above
+python bias_quantification/cluster_bootstrap.py   # role-level cluster bootstrap CIs, run after the above
 ```
 
 Run the statistical tests and render figures:
@@ -170,7 +171,7 @@ Attributes are extracted with GPT-5-mini and canonicalised with GPT-4o-mini. Fou
 | Qwen-Image | 92.0 | 92.0 | 95.8 |
 | *Average* | *90.2* | *90.2* | *94.8* |
 
-A human annotation study over 1,200 images with three independent annotators reports Fleiss' κ = 0.89 and agreement of κ = 0.822 between human consensus and the automated pipeline.
+A human annotation study over 1,200 images with three independent annotators reports Fleiss' κ = 0.89 (`human_study_analysis/compute_fleiss_kappa.py`, with a bootstrap 95% CI) and agreement of κ = 0.822 between human consensus and the automated pipeline (`human_study_analysis/compute_pipeline_agreement.py`, Cohen's κ). `compute_reviewer_agreement.py` reports pairwise inter-annotator Cohen's κ; all three scripts share label-agreement helpers in `human_study_analysis/common/`.
 
 ## Image generation pipeline
 

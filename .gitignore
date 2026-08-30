@@ -19,4 +19,5 @@ bias_quantification/*.pdf
 bias_quantification/*.docx
 bias_quantification/occ_table_all.csv
 bias_quantification/table3_label_persistence.tex
+bias_quantification/output/
 paper/
